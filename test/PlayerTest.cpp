@@ -12,4 +12,6 @@ TEST(Player, DefaultConstructor) {
     ASSERT_EQ(0, p.getAngle()); //check initial angle
     ASSERT_GE(p.getTotalCoin(), 0); //check initial amount of money
     ASSERT_GT(p.getUsername().length(), 3); //check the length of the username > 3
+
+    //TODO:
 }

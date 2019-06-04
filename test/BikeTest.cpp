@@ -4,3 +4,6 @@
 
 #include "gtest/gtest.h"
 #include "../Bike.h"
+
+
+//TODO: add tests
