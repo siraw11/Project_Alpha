@@ -1,4 +1,3 @@
-cmake_minimum_required(VERSION 3.10)
 set(BOX2D_Collision_SRCS
 	Collision/b2BroadPhase.cpp
 	Collision/b2CollideCircle.cpp
