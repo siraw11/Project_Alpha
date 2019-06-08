@@ -4,7 +4,8 @@
 
 #include "Bike.h"
 
-Bike::Bike(std::string _name, std::string _color, int _speed, int _usability, int _price, bool _isUnlocked):name(_name),color(_color),speed(_speed),usability(_usability),price(_price),isUnlocked(_isUnlocked){}
+Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, int _price, bool _isUnlocked) : name(
+        _name), color(_color), speed(_speed), usability(_usability), price(_price), isUnlocked(_isUnlocked) {}
 
 const std::string &Bike::getName() const {
     return name;
@@ -22,11 +23,11 @@ void Bike::setColor(const std::string &color) {
     Bike::color = color;
 }
 
-int Bike::getSpeed() const {
+float Bike::getSpeed() const {
     return speed;
 }
 
-void Bike::setSpeed(int speed) {
+void Bike::setSpeed(float speed) {
     Bike::speed = speed;
 }
 
@@ -54,4 +55,8 @@ bool Bike::getIsUnlocked() const {
 
 void Bike::setIsUnlocked(bool isUnlocked) {
     Bike::isUnlocked = isUnlocked;
+}
+
+Bike::~Bike() {
+
 }

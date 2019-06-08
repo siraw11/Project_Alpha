@@ -56,3 +56,7 @@ void Player::setBike(Bike *bike) {
     Player::bike = bike;
 }
 
+Player::~Player() {
+
+}
+

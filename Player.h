@@ -12,7 +12,7 @@ class Player {
 public:
     Player(std::string username = "Player1", int totalCoin = 0, float posX = 0, float posY = 0, float angle = 0, Bike* bike = nullptr);
 
-    ~Player();
+    virtual ~Player();
 
     const std::string &getUsername() const;
 

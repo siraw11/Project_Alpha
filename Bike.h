@@ -11,8 +11,9 @@
 
 class Bike {
 public:
-    Bike(std::string name, std::string color, int speed, int usability, int price, bool isUnlocked);
-    ~Bike();
+    Bike(std::string nam = "n/d", std::string color = "red", float speed = 0., int usability = 0, int price = 0, bool isUnlocked = false);
+
+    virtual ~Bike();
 
     const std::string &getName() const;
 
@@ -22,9 +23,9 @@ public:
 
     void setColor(const std::string &color);
 
-    int getSpeed() const;
+    float getSpeed() const;
 
-    void setSpeed(int speed);
+    void setSpeed(float speed);
 
     int getUsability() const;
 
@@ -42,7 +43,7 @@ public:
 private:
     std::string name;
     std::string color;
-    int speed;
+    float speed;
     int usability;
     int price;
     bool isUnlocked;
