@@ -10,19 +10,18 @@
 
 class Map {
 public:
-    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<float> mapPoints );
+    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<float> mapPoints = {});
     //TODO smart pointer Item
-    ~Map();
 
-
+    virtual ~Map();
 
 
 public:
-    bool isCompleted1() const;
+    bool getIsCompleted() const;
 
     void setIsCompleted(bool isCompleted);
 
-    bool isUnlocked1() const;
+    bool getIsUnlocked() const;
 
     void setIsUnlocked(bool isUnlocked);
 

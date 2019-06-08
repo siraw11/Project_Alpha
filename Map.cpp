@@ -6,7 +6,7 @@
 
 Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<float> _mapPoints):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints) {}
 
-bool Map::isCompleted1() const {
+bool Map::getIsCompleted() const {
     return isCompleted;
 }
 
@@ -14,7 +14,7 @@ void Map::setIsCompleted(bool isCompleted) {
     Map::isCompleted = isCompleted;
 }
 
-bool Map::isUnlocked1() const {
+bool Map::getIsUnlocked() const {
     return isUnlocked;
 }
 
@@ -36,4 +36,8 @@ const std::list<float> &Map::getMapPoints() const {
 
 void Map::setMapPoints(const std::list<float> &mapPoints) {
     Map::mapPoints = mapPoints;
+}
+
+Map::~Map() {
+
 }
