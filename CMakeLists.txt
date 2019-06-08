@@ -9,3 +9,9 @@ set(SOURCE_FILES Player.cpp Player.h Bike.cpp Bike.h Map.cpp Map.h Item.cpp Item
 add_executable(Motocross2D main.cpp )
 add_library(core ${SOURCE_FILES})
 target_link_libraries(Motocross2D core)
+
+
+#include Box2D
+find_library(libBox2D Box2D /)
+target_link_libraries(Motocross2D Box2D libBox2D.a)
+#-------------
