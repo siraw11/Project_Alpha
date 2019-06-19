@@ -7,15 +7,16 @@
 
 #include <iostream>
 #include <list>
+#include "Player.h"
+#include "Observer.h"
+#include "Subject.h"
 
-#include <SFML/Graphics.hpp>
-#include "Box2D/Box2D.h"
 
-class Map {
+
+class Map:Observer {
 public:
-    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<float> mapPoints = {});
+    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<float> mapPoints = {}, Player* p= nullptr);
     //TODO smart pointer Item
-
     virtual ~Map();
     virtual void update() override;
     virtual void attach() override;

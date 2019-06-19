@@ -7,10 +7,8 @@
 #include "Observer.h"
 #include "Subject.h"
 
-#include <SFML/Graphics.hpp>
-#include "Box2D/Box2D.h"
-
-Player::Player(std::string _username, int _totalCoin, float _posX, float _posY, float _angle, Bike* _bike):username(_username),totalCoin(_totalCoin),posX(_posX),posY(_posY),angle(_angle),bike(_bike){}
+Player::Player(std::string _username, int _totalCoin, float _posX, float _posY, float _angle, Bike *_bike) : username(
+        _username), totalCoin(_totalCoin), posX(_posX), posY(_posY), angle(_angle), bike(_bike) {}
 
 
 const std::string &Player::getUsername() const {
@@ -72,7 +70,7 @@ void Player::move(float x, float y, float a) {
 }
 
 void Player::registerObserver(Observer *o) {
-     observers.push_back(o);
+    observers.push_back(o);
 }
 
 void Player::removeObserver(Observer *o) {
@@ -88,4 +86,3 @@ void Player::notifyObservers() {
 Player::~Player() {
 
 }
-
