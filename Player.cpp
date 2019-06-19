@@ -4,8 +4,11 @@
 
 #include "Player.h"
 #include "Bike.h"
+#include "Observer.h"
+#include "Subject.h"
 
-Player::Player(std::string _username, int _totalCoin, float _posX, float _posY, float _angle, Bike* _bike):username(_username),totalCoin(_totalCoin),posX(_posX),posY(_posY),angle(_angle),bike(_bike){}
+Player::Player(std::string _username, int _totalCoin, float _posX, float _posY, float _angle, Bike *_bike) : username(
+        _username), totalCoin(_totalCoin), posX(_posX), posY(_posY), angle(_angle), bike(_bike) {}
 
 
 const std::string &Player::getUsername() const {
@@ -30,6 +33,7 @@ float Player::getPosX() const {
 
 void Player::setPosX(float posX) {
     Player::posX = posX;
+    notifyObservers();
 }
 
 float Player::getPosY() const {
@@ -38,6 +42,7 @@ float Player::getPosY() const {
 
 void Player::setPosY(float posY) {
     Player::posY = posY;
+    notifyObservers();
 }
 
 float Player::getAngle() const {
@@ -46,6 +51,7 @@ float Player::getAngle() const {
 
 void Player::setAngle(float angle) {
     Player::angle = angle;
+    notifyObservers();
 }
 
 Bike *Player::getBike() const {
@@ -54,6 +60,27 @@ Bike *Player::getBike() const {
 
 void Player::setBike(Bike *bike) {
     Player::bike = bike;
+}
+
+void Player::move(float x, float y, float a) {
+    posX += x;
+    posY += y;
+    angle += a;
+    notifyObservers();
+}
+
+void Player::registerObserver(Observer *o) {
+     observers.push_back(o);
+}
+
+void Player::removeObserver(Observer *o) {
+    observers.remove(o);
+}
+
+void Player::notifyObservers() {
+    for( auto itr = std::begin(observers);itr != std::end (observers); itr++) {
+        (*itr)->update();
+    }
 }
 
 Player::~Player() {

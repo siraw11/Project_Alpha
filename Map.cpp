@@ -3,8 +3,10 @@
 //
 
 #include "Map.h"
+#include "Observer.h"
+#include "Subject.h"
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<float> _mapPoints):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints) {}
+Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<float> _mapPoints, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints), p(_p) {}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
@@ -38,6 +40,10 @@ void Map::setMapPoints(const std::list<float> &mapPoints) {
     Map::mapPoints = mapPoints;
 }
 
-Map::~Map() {
+void Map::update() {
 
+}
+
+Map::~Map() {
+    detach();
 }

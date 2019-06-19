@@ -6,11 +6,15 @@
 #define MOTOCROSS2D_PLAYER_H
 
 #include <iostream>
+#include <list>
 #include "Bike.h"
+#include "Observer.h"
+#include "Subject.h"
 
-class Player {
+class Player : public Subject {
 public:
-    Player(std::string username = "Player1", int totalCoin = 0, float posX = 0, float posY = 0, float angle = 0, Bike* bike = nullptr);
+    Player(std::string username = "Player1", int totalCoin = 0, float posX = 0, float posY = 0, float angle = 0,
+           Bike *bike = nullptr);
 
     virtual ~Player();
 
@@ -38,14 +42,23 @@ public:
 
     void setBike(Bike *bike);
 
+    virtual void registerObserver(Observer *o) override ;
+
+    virtual void removeObserver(Observer *o) override ;
+
+    virtual void notifyObservers() override ;
+
+    void move(float x, float y, float a);
+
 private:
     std::string username;
     int totalCoin;
     float posX;
     float posY;
     float angle;
-    Bike* bike;
+    Bike *bike;
 
+    std::list<Observer*> observers;
 };
 
 
