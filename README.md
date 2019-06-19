@@ -1,5 +1,4 @@
 # Game_exam
 progetto esame programmazione
 tette
-matteo caccaùjsjssù
-culooooooooooo
+michele è morto
