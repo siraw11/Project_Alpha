@@ -10,6 +10,8 @@
 #include "Bike.h"
 #include "Observer.h"
 #include "Subject.h"
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
 
 class Player : public Subject {
 public:
@@ -42,23 +44,14 @@ public:
 
     void setBike(Bike *bike);
 
-    virtual void registerObserver(Observer *o) override ;
-
-    virtual void removeObserver(Observer *o) override ;
-
-    virtual void notifyObservers() override ;
-
-    void move(float x, float y, float a);
-
 private:
     std::string username;
     int totalCoin;
     float posX;
     float posY;
     float angle;
-    Bike *bike;
+    Bike* bike;
 
-    std::list<Observer*> observers;
 };
 
 

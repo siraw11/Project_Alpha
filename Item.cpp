@@ -5,6 +5,9 @@
 #include "Item.h"
 #include <iostream>
 
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
+
 Item::Item(double _posX, double _posY, double _width, double _height):posX(_posX),posY(_posY),width(_width),height(_height) {}
 
 

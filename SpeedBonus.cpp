@@ -22,4 +22,6 @@ void SpeedBonus::setSpeedIncrement(double speedIncrement) {
     SpeedBonus::speedIncrement = speedIncrement;
 }
 
-//todo doSpecial();
+void SpeedBonus::doSpecial() {
+    //TODO: implement
+}

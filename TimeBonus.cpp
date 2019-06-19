@@ -12,4 +12,6 @@ double TimeBonus::getTimeEarned() const {
 void TimeBonus::setTimeEarned(double timeEarned) {
     TimeBonus::timeEarned = timeEarned;
 }
+
+void TimeBonus::doSpecial() {}
 //todo doSpecial();

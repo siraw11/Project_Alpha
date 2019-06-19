@@ -7,13 +7,13 @@
 
 #include <iostream>
 #include <list>
-#include "Player.h"
-#include "Observer.h"
-#include "Subject.h"
 
-class Map:Observer {
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
+
+class Map {
 public:
-    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<float> mapPoints = {}, Player* p= nullptr);
+    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<float> mapPoints = {});
     //TODO smart pointer Item
 
     virtual ~Map();

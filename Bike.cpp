@@ -4,6 +4,9 @@
 
 #include "Bike.h"
 
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
+
 Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, int _price, bool _isUnlocked) : name(
         _name), color(_color), speed(_speed), usability(_usability), price(_price), isUnlocked(_isUnlocked) {}
 
@@ -56,6 +59,8 @@ bool Bike::getIsUnlocked() const {
 void Bike::setIsUnlocked(bool isUnlocked) {
     Bike::isUnlocked = isUnlocked;
 }
+
+
 
 Bike::~Bike() {
 

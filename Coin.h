@@ -7,6 +7,9 @@
 
 #include "Item.h"
 
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
+
 class Coin : public Item {
 
 public:

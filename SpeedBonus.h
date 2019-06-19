@@ -8,6 +8,9 @@
 
 #include "Item.h"
 
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
+
 class SpeedBonus: public Item {
 public:
     SpeedBonus(double seconds=0,double speedIncrement=0);

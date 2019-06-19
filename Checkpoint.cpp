@@ -3,4 +3,6 @@
 //
 
 #include "Checkpoint.h"
-//todo doSpecial();
+void Checkpoint::doSpecial() {
+
+}

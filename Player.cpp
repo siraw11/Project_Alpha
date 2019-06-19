@@ -7,8 +7,10 @@
 #include "Observer.h"
 #include "Subject.h"
 
-Player::Player(std::string _username, int _totalCoin, float _posX, float _posY, float _angle, Bike *_bike) : username(
-        _username), totalCoin(_totalCoin), posX(_posX), posY(_posY), angle(_angle), bike(_bike) {}
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
+
+Player::Player(std::string _username, int _totalCoin, float _posX, float _posY, float _angle, Bike* _bike):username(_username),totalCoin(_totalCoin),posX(_posX),posY(_posY),angle(_angle),bike(_bike){}
 
 
 const std::string &Player::getUsername() const {

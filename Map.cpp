@@ -3,10 +3,13 @@
 //
 
 #include "Map.h"
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
 #include "Observer.h"
 #include "Subject.h"
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<float> _mapPoints, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints), p(_p) {}
+
+Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<float> _mapPoints):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints) {}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
