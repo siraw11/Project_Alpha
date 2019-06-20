@@ -11,6 +11,12 @@
 #include "Observer.h"
 #include "Subject.h"
 
+
+struct Position {
+    float posX;
+    float posY;
+};
+
 class Player : public Subject {
 public:
     Player(std::string username = "Player1", int totalCoin = 0, float posX = 0, float posY = 0, float angle = 0,

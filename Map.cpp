@@ -6,7 +6,7 @@
 #include "Observer.h"
 #include "Subject.h"
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<float> _mapPoints, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints), p(_p) {}
+Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints), p(_p) {}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
@@ -32,13 +32,14 @@ void Map::setRecord(double record) {
     Map::record = record;
 }
 
-const std::list<float> &Map::getMapPoints() const {
+const std::list<Position> &Map::getMapPoints() const {
     return mapPoints;
 }
 
-void Map::setMapPoints(const std::list<float> &mapPoints) {
+void Map::setMapPoints(const std::list<Position> &mapPoints) {
     Map::mapPoints = mapPoints;
 }
+
 
 void Map::update() {
 
@@ -55,3 +56,4 @@ void Map::detach() {
 Map::~Map() {
     detach();
 }
+
