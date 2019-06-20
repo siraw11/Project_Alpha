@@ -7,7 +7,7 @@ include_directories(.)
 
 set(EXECUTABLE_NAME Motocross2D)
 
-set(SOURCE_FILES Player.cpp Player.h Bike.cpp Bike.h GameEngine.h GameEngine.cpp Item.h Item.cpp Map.h Map.cpp Coin.cpp Coin.h SpeedBonus.cpp SpeedBonus.h Checkpoint.cpp Checkpoint.h TimeBonus.cpp TimeBonus.h Subject.cpp Subject.h Observer.cpp Observer.h)
+set(SOURCE_FILES Player.cpp Player.h Bike.cpp Bike.h GameEngine.h GameEngine.cpp Item.h Item.cpp Map.h Map.cpp Coin.cpp Coin.h SpeedBonus.cpp SpeedBonus.h Checkpoint.cpp Checkpoint.h TimeBonus.cpp TimeBonus.h Subject.cpp Subject.h Observer.cpp Observer.h Match.cpp Match.h)
 add_executable(${EXECUTABLE_NAME} main.cpp ${SOURCE_FILES})
 
 
