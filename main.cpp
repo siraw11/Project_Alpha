@@ -1,6 +1,9 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-int main() {
+#include "GameEngine.h"
 
+int main() {
+    GameEngine *engine = new GameEngine();
+    engine->run();
     return 0;
 }
