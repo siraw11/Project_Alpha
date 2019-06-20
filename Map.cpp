@@ -5,6 +5,9 @@
 #include "Map.h"
 #include "Observer.h"
 #include "Subject.h"
+#include "Player.h"
+
+const float SCALE = 200.f;
 
 Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints), p(_p) {}
 
@@ -55,5 +58,23 @@ void Map::detach() {
 
 Map::~Map() {
     detach();
+}
+
+void Map::draw(sf::RenderWindow *window) {
+    sf::ConvexShape terrain;
+
+    terrain.setPosition(0, window->getSize().y/1.3);
+    terrain.setPointCount(mapPoints.size()+2);
+
+    int i = 0;
+    for(Position point : mapPoints) {
+        terrain.setPoint(i, sf::Vector2f((point.posX-=0.1) * SCALE, -point.posY * SCALE));
+        i++;
+    }
+    terrain.setPoint(i, sf::Vector2f(50*SCALE,0));
+    terrain.setPoint(i+1, sf::Vector2f(0, 50*SCALE));
+    terrain.setFillColor(sf::Color(168, 75, 0));
+
+    window->draw(terrain);
 }
 

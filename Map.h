@@ -14,7 +14,10 @@
 
 
 class Map:Observer {
+
 public:
+
+
     Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<Position> mapPoints = {}, Player* p= nullptr);
     //TODO smart pointer Item
     virtual ~Map();
@@ -38,6 +41,8 @@ public:
     const std::list<Position> &getMapPoints() const;
 
     void setMapPoints(const std::list<Position> &mapPoints);
+
+    void draw(sf::RenderWindow* window);
 
 
 private:

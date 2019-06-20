@@ -3,6 +3,8 @@
 //
 
 #include "GameEngine.h"
+#include "Player.h"
+#include "Map.h"
 
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
@@ -10,15 +12,23 @@
 GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video,int _framerate):gravity(_gravity),video(_video),framerate(_framerate) {}
 
 void GameEngine::run() {
-    sf::Window window(video, "Motocross 2D",sf::Style::Default);
-    window.setFramerateLimit(framerate);
+    sf::RenderWindow window(video, "Motocross 2D",sf::Style::Default);//Create window withe default resolution
+    window.setFramerateLimit(framerate);//Set framerate limit
+
+
+    std::list<Position> level1Points = {{0,0},{3,0},{5,-0.3},{8,0},{10,1},{15,1}};
+    Map level1(false,true,1,level1Points, nullptr);
+
+
     while (window.isOpen()) {
+        window.clear(sf::Color(255, 255, 255));//clear all,new frame!
         sf::Event Event;
         while (window.pollEvent(Event)) {
             if (Event.type == sf::Event::Closed)
                 window.close();
         }
-        window.display();
+        level1.draw(&window);
+        window.display();//display frame
     }
 }
 

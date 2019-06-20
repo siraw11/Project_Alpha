@@ -19,7 +19,7 @@ public:
     b2World world = b2World(gravity);
     int framerate;
     sf::VideoMode video;
-    sf::Window window;
+    sf::RenderWindow window;
 
 
     void run();
