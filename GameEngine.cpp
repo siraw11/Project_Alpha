@@ -11,6 +11,7 @@ GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video,int _framerate):gra
 
 void GameEngine::run() {
     sf::Window window(video, "Motocross 2D",sf::Style::Default);
+    window.setFramerateLimit(framerate);
     while (window.isOpen()) {
         sf::Event Event;
         while (window.pollEvent(Event)) {
