@@ -57,3 +57,7 @@ Bike *Match::getB() const {
 void Match::setB(Bike *b) {
     Match::b = b;
 }
+
+Match::~Match() {
+
+}
