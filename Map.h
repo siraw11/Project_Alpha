@@ -15,7 +15,7 @@
 
 class Map:Observer {
 public:
-    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<float> mapPoints = {}, Player* p= nullptr);
+    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<Position> mapPoints = {}, Player* p= nullptr);
     //TODO smart pointer Item
     virtual ~Map();
     virtual void update() override;
@@ -35,15 +35,16 @@ public:
 
     void setRecord(double record);
 
-    const std::list<float> &getMapPoints() const;
+    const std::list<Position> &getMapPoints() const;
 
-    void setMapPoints(const std::list<float> &mapPoints);
+    void setMapPoints(const std::list<Position> &mapPoints);
+
 
 private:
     bool isCompleted;
     bool isUnlocked;
     double record;
-    std::list<float> mapPoints;
+    std::list<Position> mapPoints;
     Player* p;
 
 };
