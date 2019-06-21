@@ -111,8 +111,8 @@ void GameEngine::run() {
         wheelLDraw.setPosition(positionL.x-(wheelSize* SCALE), positionL.y-(wheelSize* SCALE));
         wheelRDraw.setPosition(positionR.x-(wheelSize* SCALE), positionR.y-(wheelSize* SCALE));
         //FIXME:rotation
-        wheelLDraw.rotate(angleL);
-        wheelRDraw.rotate(angleR);
+        //wheelLDraw.rotate(angleL);
+        //wheelRDraw.rotate(angleR);
 
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
