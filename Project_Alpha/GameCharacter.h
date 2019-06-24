@@ -4,23 +4,25 @@
 
 #ifndef EXAM_PROJECT_GAMECHARACTER_H
 #define EXAM_PROJECT_GAMECHARACTER_H
- private{
 
-int Life;
-int Strenght;
-int Speed;
+class GameCharacter{
+
+private:
+
+int life;
+int strenght;
+int speed;
 
 
-}
+public:
 
-public{
-int PosX;
-int PosY;
-Weapon* Weapon;
+int posX;
+int posY;
+Weapon* weapon;
 
 void Attack();
 bool TakeDamage();
 
-}
+};
 
 #endif //EXAM_PROJECT_GAMECHARACTER_H
