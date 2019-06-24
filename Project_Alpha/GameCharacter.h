@@ -4,11 +4,12 @@
 
 #ifndef EXAM_PROJECT_GAMECHARACTER_H
 #define EXAM_PROJECT_GAMECHARACTER_H
-private{
+ private{
 
 int Life;
 int Strenght;
 int Speed;
+int tette;
 
 }
 
