@@ -9,7 +9,7 @@
 int Life;
 int Strenght;
 int Speed;
-int tette;
+
 
 }
 
