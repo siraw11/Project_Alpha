@@ -10,10 +10,14 @@
 
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
+#include "GameEngine.h"
 
 class Bike {
 public:
-    Bike(std::string nam = "n/d", std::string color = "red", float speed = 0., int usability = 0, int price = 0, bool isUnlocked = false);
+    b2Body* wheelL;
+    b2Body* wheelR;
+
+    Bike(std::string nam = "n/d", std::string color = "red", float speed = 0., int usability = 0, int price = 0, bool isUnlocked = false,GameEngine *engine= nullptr,b2Body* wheelL = nullptr,b2Body* wheelR = nullptr);
 
     virtual ~Bike();
 
@@ -41,6 +45,7 @@ public:
 
     void setIsUnlocked(bool isUnlocked);
 
+    void draw(sf::RenderWindow* window);
 
 private:
     std::string name;
@@ -49,6 +54,9 @@ private:
     int usability;
     int price;
     bool isUnlocked;
+    GameEngine * engine;
+
+
 };
 
 

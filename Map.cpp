@@ -7,9 +7,8 @@
 #include "Subject.h"
 #include "Player.h"
 
-const float SCALE = 200.f;
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints,b2World*_world, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints),world(_world), p(_p) {}
+Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints,GameEngine* _engine, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints),engine(_engine), p(_p) {}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
@@ -63,7 +62,7 @@ Map::~Map() {
 void Map::draw(sf::RenderWindow *window) {
     b2BodyDef groundBodyDef;
     groundBodyDef.position.Set(0, window->getSize().y/1.3);
-    b2Body *groundBody = world->CreateBody(&groundBodyDef);
+    b2Body *groundBody = engine->world.CreateBody(&groundBodyDef);
 
 
 
@@ -75,13 +74,13 @@ void Map::draw(sf::RenderWindow *window) {
     int i = 0;
     b2Vec2 vs[mapPoints.size()];//box2D map points
     for(Position point : mapPoints) {
-        vs[i].Set(point.posX*SCALE, -point.posY*SCALE);
-        terrain.setPoint(i, sf::Vector2f((point.posX-=0.1) * SCALE, -point.posY * SCALE));//SFML map points
+        vs[i].Set(point.posX*engine->SCALE, -point.posY*engine->SCALE);
+        terrain.setPoint(i, sf::Vector2f((point.posX-=0.1) * engine->SCALE, -point.posY * engine->SCALE));//SFML map points
         i++;
     }
     //addition SFML points to close the shape
-    terrain.setPoint(i, sf::Vector2f(50*SCALE,0));
-    terrain.setPoint(i+1, sf::Vector2f(0, 50*SCALE));
+    terrain.setPoint(i, sf::Vector2f(50*engine->SCALE,0));
+    terrain.setPoint(i+1, sf::Vector2f(0, 50*engine->SCALE));
     terrain.setFillColor(sf::Color(168, 75, 0));
 
 

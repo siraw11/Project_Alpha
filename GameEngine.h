@@ -20,6 +20,7 @@ public:
     int framerate;
     sf::VideoMode video;
     sf::RenderWindow window;
+    const float SCALE = 200.f;
 
 
     void run();
