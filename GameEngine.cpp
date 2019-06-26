@@ -19,7 +19,7 @@ GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video, int _framerate) : 
 
 void GameEngine::run() {
     sf::RenderWindow window(video, "Motocross 2D", sf::Style::Default);//Create window withe default resolution
-    window.setFramerateLimit(240);//Set framerate limit
+    window.setFramerateLimit(framerate);//Set framerate limit
 
 
     std::list<Position> level1Points = {{0,  0},
@@ -66,7 +66,7 @@ void GameEngine::run() {
         level1.draw(&window);
         bike.draw(&window);
 
-        window.display();//display frame
+        window.display();
     }
 }
 
