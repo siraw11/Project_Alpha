@@ -11,16 +11,18 @@ class GameCharacter{
 
 private:
 
-int life;
-int strength;
-int speed;
+    int life;
+    int strength;
+    int speed;
 
 
 public:
     GameCharacter(int hp, int s, int sp);
     void addWeapon(Weapon& w);
+    int posX;
+    int posY;
 
-int posX;
+    Weapon* weapon;
 
     int getLife() const {
         return life;
@@ -34,11 +36,8 @@ int posX;
         return speed;
     }
 
-    int posY;
-Weapon* weapon;
-
-void Attack();
-bool TakeDamage();
+    void Attack();
+    bool TakeDamage();
 
 };
 

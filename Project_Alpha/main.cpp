@@ -2,6 +2,16 @@
 
 #include "Map.h"
 #include "GameCharacter.h"
+#include "Archer.h"
+#include "Boss.h"
+#include "Chest.h"
+#include "Enemy.h"
+#include "Hero.h"
+#include "Item.h"
+#include "Knight.h"
+#include "Mage.h"
+#include "Tile.h"
+#include "Weapon.h"
 
 enum class GameEvent {
     quit, left, up, down, right, fight, noop

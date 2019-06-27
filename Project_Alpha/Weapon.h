@@ -6,6 +6,18 @@
 #define EXAM_PROJECT_WEAPON_H
 
 class Weapon{
+private:
+    int strength;
+
+
+public:
+    Weapon(int s,int l);
+
+    void setStrength(int strength);
+
+    int getStrength() const;
+
+    int level;
 
 };
 
