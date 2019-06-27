@@ -5,19 +5,36 @@
 #ifndef EXAM_PROJECT_GAMECHARACTER_H
 #define EXAM_PROJECT_GAMECHARACTER_H
 
+#include "Weapon.h"
+
 class GameCharacter{
 
 private:
 
 int life;
-int strenght;
+int strength;
 int speed;
 
 
 public:
+    GameCharacter(int hp, int s, int sp);
+    void addWeapon(Weapon& w);
 
 int posX;
-int posY;
+
+    int getLife() const {
+        return life;
+    }
+
+    int getStrength() const {
+        return strength;
+    }
+
+    int getSpeed() const {
+        return speed;
+    }
+
+    int posY;
 Weapon* weapon;
 
 void Attack();
