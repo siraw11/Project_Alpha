@@ -29,7 +29,7 @@ void GameEngine::run() {
                                         {10, 1},
                                         {15, 1}};
     Map level1(false, true, 1, level1Points, this, nullptr);
-    Bike bike("","",0,0,0,true,this, nullptr, nullptr);
+    Bike bike("","",10,0,0,true,this, nullptr, nullptr);
 
     while (window.isOpen()) {
         window.clear(sf::Color(255, 255, 255));//clear all,new frame!
@@ -47,16 +47,22 @@ void GameEngine::run() {
             if (event.type == sf::Event::TextEntered) {
                 char keyPressed = static_cast<char>(event.text.unicode);
 
+
                 switch (keyPressed) {
                     case 'd'://vai a destra
-                        (bike.wheelL->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x + 100, bike.wheelL->GetLinearVelocity().y)));
-                        (bike.wheelR->SetLinearVelocity(b2Vec2(bike.wheelR->GetLinearVelocity().x + 100, bike.wheelR->GetLinearVelocity().y)));
+
+                        (bike.wheelL->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x + 200.f, bike.wheelL->GetLinearVelocity().y)));
+
+                        (bike.wheelR->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x + 200.f, bike.wheelR->GetLinearVelocity().y)));
+                        std::cout <<bike.wheelL->GetLinearVelocity().x  << "----" <<bike.wheelR->GetLinearVelocity().x << std::endl;
+
                         break;
                     case 'a'://vai a sinistra
-                        (bike.wheelL->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x - 100, bike.wheelL->GetLinearVelocity().y)));
-                        (bike.wheelR->SetLinearVelocity(b2Vec2(bike.wheelR->GetLinearVelocity().x - 100, bike.wheelR->GetLinearVelocity().y)));
+                        (bike.wheelL->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x - 200, bike.wheelL->GetLinearVelocity().y)));
+                        (bike.wheelR->SetLinearVelocity(b2Vec2(bike.wheelR->GetLinearVelocity().x - 200, bike.wheelR->GetLinearVelocity().y)));
+
                         break;
-                    case char(32)://(spazio) salta
+                    case char(32)://(spazio) freno
                         (bike.wheelL->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x, -30)));
                         break;
                 }

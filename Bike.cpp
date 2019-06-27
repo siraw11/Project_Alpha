@@ -47,7 +47,7 @@ Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, 
     //altre caratteristiche fisiche della ruota
     b2FixtureDef fixtureDefR;
     fixtureDefR.shape = &dynamicWheelR;
-    fixtureDefR.density = 1.f;
+    fixtureDefR.density = 0.1;
     fixtureDefR.friction = 0.3f;//attrito
     fixtureDefR.restitution = 0.5f;//rimbalzo
     wheelR->CreateFixture(&fixtureDefR);
@@ -62,6 +62,7 @@ Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, 
     jointDef.localAnchorB.Set(0,0);
     jointDef.length = 125;
     engine->world.CreateJoint(&jointDef);
+
 }
 
 const std::string &Bike::getName() const {
@@ -141,17 +142,21 @@ void Bike::draw(sf::RenderWindow *window){
 
 
 
-    wheelLDraw.setPosition(positionL.x, positionL.y - WHEEL_SIZE* engine->SCALE/2);
-    wheelRDraw.setPosition(positionR.x, positionR.y- WHEEL_SIZE* engine->SCALE/2);
+    wheelLDraw.setPosition(positionL.x, positionL.y);
+    wheelRDraw.setPosition(positionR.x, positionR.y);
 
-    //TODO:Add wheel rotation and fix position
+    float origin = WHEEL_SIZE*engine->SCALE;
+
+    wheelLDraw.setOrigin(origin,origin);
+    wheelRDraw.setOrigin(origin,origin);
+
+    wheelLDraw.rotate(angleL*40);
+    wheelRDraw.rotate(angleR*40);
 
     window->draw(wheelLDraw);
     window->draw(wheelRDraw);
-
-
 }
 
 Bike::~Bike() {
-
+    //TODO: implement
 }
