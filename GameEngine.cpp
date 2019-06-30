@@ -54,7 +54,7 @@ void GameEngine::run() {
                         (bike.wheelL->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x + 200.f, bike.wheelL->GetLinearVelocity().y)));
 
                         (bike.wheelR->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x + 200.f, bike.wheelR->GetLinearVelocity().y)));
-                        std::cout <<bike.wheelL->GetLinearVelocity().x  << "----" <<bike.wheelR->GetLinearVelocity().x << std::endl;
+                        //std::cout <<bike.wheelL->GetLinearVelocity().x  << "----" <<bike.wheelR->GetLinearVelocity().x << std::endl;
 
                         break;
                     case 'a'://vai a sinistra
