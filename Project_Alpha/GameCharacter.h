@@ -8,21 +8,13 @@
 #include "Weapon.h"
 
 class GameCharacter{
-
-private:
-
-    int life;
-    int strength;
-    int speed;
-
-
 public:
     GameCharacter(int hp, int s, int sp);
-    void addWeapon(Weapon& w);
-    int posX;
-    int posY;
 
-    Weapon* weapon;
+
+
+    Weapon *getWeapon() const;
+    void setWeapon(Weapon* weapon);
 
     int getLife() const {
         return life;
@@ -36,8 +28,18 @@ public:
         return speed;
     }
 
-    void Attack();
-    bool TakeDamage();
+    void Attack(Enemy& enemy);
+    void TakeDamage(int point);
+
+protected:
+
+    int life;
+    int strength;
+    int speed;
+    int posX;
+    int posY;
+
+    Weapon* weapon;
 
 };
 

@@ -15,6 +15,8 @@ Weapon::Weapon(int s, int l) {
 
 }
 
+
+
 int Weapon::getStrength() const {
     return strength;
 }

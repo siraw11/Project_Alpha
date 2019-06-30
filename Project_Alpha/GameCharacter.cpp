@@ -18,16 +18,23 @@ GameCharacter::GameCharacter(int hp, int s, int sp): posX(0), posY(0), weapon(nu
     }
 };
 
-void GameCharacter::addWeapon(Weapon &w) {
-    weapon = &w;
+Weapon* GameCharacter::getWeapon() const {
+    return weapon;
 }
 
-void GameCharacter::Attack(int s, int& point) {
+void GameCharacter::setWeapon(Weapon *weapon) {
+    this->weapon = weapon;
+}
+
+void GameCharacter::Attack(Enemy& enemy) {
+    int point=strength;
     if(weapon!=nullptr)
-        point=s+weapon->getStrength();
-
+        point+=weapon->getStrength();
+    TakeDamage(point);
 }
 
-bool GameCharacter::TakeDamage() {
-
+void GameCharacter::TakeDamage(int point) {
+    life-=point;
+    return true;
 }
+
