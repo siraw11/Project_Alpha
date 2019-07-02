@@ -25,8 +25,8 @@ void GameEngine::run() {
                                         {-1,10},//back limit
                                         {0,0},
                                         {3,0},
-                                        {6,-1},
-                                        {7,-1},
+                                        {6,-0.5},
+                                        {7,-0.5},
                                         {11,3},
                                         {13,1},
                                         {15,2},
@@ -35,7 +35,7 @@ void GameEngine::run() {
     Map level1(false, true, 1, level1Points, nullptr);
     Map* level = &level1;
 
-    Bike bike1("","",10,0,0,true, nullptr, nullptr);
+    Bike bike1("","",2,0,0,true, nullptr, nullptr);
     Bike* bike = &bike1;
     initBike(bike);
 
@@ -57,29 +57,21 @@ void GameEngine::run() {
             if (event.type == sf::Event::TextEntered) {
                 char keyPressed = static_cast<char>(event.text.unicode);
                 std::cout << bike->getSpeed() << std::endl;
-                b2Vec2 force;
                 switch (keyPressed) {
                     case 'd'://vai a destra
-                        force = b2Vec2(10,0);
-                        //bike->wheelL->ApplyForceToCenter(force,true);
-                        //bike->wheelR->ApplyForceToCenter(force,true);
-                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x +2.f, bike->wheelL->GetLinearVelocity().y)));
-
-                        //(bike.wheelR->SetLinearVelocity(b2Vec2(bike.wheelL->GetLinearVelocity().x +20.f, bike.wheelR->GetLinearVelocity().y)));
-                        //std::cout <<bike.wheelL->GetLinearVelocity().x  << "----" <<bike.wheelR->GetLinearVelocity().x << std::endl;
-
+                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x +bike->getSpeed(), bike->wheelL->GetLinearVelocity().y)));
                         break;
                     case 'a'://vai a sinistra
-                        force = b2Vec2(-10,0);
-                        bike->wheelL->ApplyForceToCenter(force,true);
-                        //bike->wheelR->ApplyForceToCenter(force,true);
-                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x - 2, bike->wheelL->GetLinearVelocity().y)));
-                        //(bike.wheelR->SetLinearVelocity(b2Vec2(bike.wheelR->GetLinearVelocity().x - 20, bike.wheelR->GetLinearVelocity().y)));
-
+                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x - bike->getSpeed(), bike->wheelL->GetLinearVelocity().y)));
                         break;
-                    case char(32)://(spazio) salto
-                        force = b2Vec2(10,10);
-                        bike->wheelL->ApplyForceToCenter(force,true);
+                    case 'w'://vai a su
+                        (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, bike->wheelR->GetLinearVelocity().y - bike->getSpeed())));
+                        break;
+                    case 's'://vai a giu
+                        (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, bike->wheelR->GetLinearVelocity().y + bike->getSpeed())));
+                        break;
+                    case char(32)://(spazio) freno
+                        (bike->wheelL->SetLinearVelocity(b2Vec2(0,0)));
                         break;
                 }
 
@@ -271,8 +263,8 @@ void GameEngine::drawBike(Bike * bike){
     wheelLDraw.setOrigin(origin,origin);
     wheelRDraw.setOrigin(origin,origin);
 
-    wheelLDraw.rotate(angleL*M_PI_4);
-    wheelRDraw.rotate(angleR*M_PI_4);
+    wheelLDraw.rotate(angleL*SCALE/2);
+    wheelRDraw.rotate(angleR*SCALE/2);
 
 
     window->draw(wheelLDraw);
