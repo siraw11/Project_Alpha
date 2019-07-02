@@ -10,59 +10,8 @@
 const float WHEEL_SIZE = 0.2;
 
 
-Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, int _price, bool _isUnlocked,GameEngine* _engine,b2Body* _wheelL,b2Body* _wheelR) : name(
-        _name), color(_color), speed(_speed), usability(_usability), price(_price), isUnlocked(_isUnlocked),engine(_engine),wheelL(_wheelL),wheelR(_wheelR) {
-
-
-    b2BodyDef wheelLDef;
-    wheelLDef.type = b2_dynamicBody;
-    wheelLDef.position.Set(150.f, engine->window.getSize().y/1.7);//initial position
-
-    wheelL = engine->world.CreateBody(&wheelLDef);
-    b2CircleShape dynamicWheel;
-    dynamicWheel.m_p.Set(0, 0);
-    dynamicWheel.m_radius = WHEEL_SIZE*engine->SCALE;
-    //altre caratteristiche fisiche della ruota
-    b2FixtureDef fixtureDef;
-    fixtureDef.shape = &dynamicWheel;
-    fixtureDef.density = 1.f;
-    fixtureDef.friction = 0.3f;//attrito
-    fixtureDef.restitution = 0.5f;//rimbalzo
-    wheelL->CreateFixture(&fixtureDef);
-    //disegno la ruota
-
-
-
-    b2BodyDef wheelRDef;
-    wheelRDef.type = b2_dynamicBody;
-    wheelRDef.position.Set(300.f, engine->window.getSize().y/1.7);//initial position
-
-
-    wheelR = engine->world.CreateBody(&wheelRDef);
-
-    //creo la ruota come sfera(sempre Box2D)
-    b2CircleShape dynamicWheelR;
-    dynamicWheelR.m_p.Set(0, 0);
-    dynamicWheelR.m_radius = WHEEL_SIZE*engine->SCALE;
-    //altre caratteristiche fisiche della ruota
-    b2FixtureDef fixtureDefR;
-    fixtureDefR.shape = &dynamicWheelR;
-    fixtureDefR.density = 0.1;
-    fixtureDefR.friction = 0.3f;//attrito
-    fixtureDefR.restitution = 0.5f;//rimbalzo
-    wheelR->CreateFixture(&fixtureDefR);
-    //disegno la ruota
-
-
-    b2DistanceJointDef jointDef;
-    jointDef.Initialize(wheelL, wheelR, wheelL->GetLocalCenter(), wheelL->GetLocalCenter()); jointDef.collideConnected = true;
-    jointDef.bodyA = wheelL;
-    jointDef.bodyB = wheelR;
-    jointDef.localAnchorA.Set(2,2);
-    jointDef.localAnchorB.Set(0,0);
-    jointDef.length = 125;
-    engine->world.CreateJoint(&jointDef);
-
+Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, int _price, bool _isUnlocked,b2Body* _wheelL,b2Body* _wheelR) : name(
+        _name), color(_color), speed(_speed), usability(_usability), price(_price), isUnlocked(_isUnlocked),wheelL(_wheelL),wheelR(_wheelR) {
 }
 
 const std::string &Bike::getName() const {
@@ -115,47 +64,7 @@ void Bike::setIsUnlocked(bool isUnlocked) {
     Bike::isUnlocked = isUnlocked;
 }
 
-void Bike::draw(sf::RenderWindow *window){
-    sf::Texture texture;
-    if(!texture.loadFromFile("../textures/wheel.png"))
-        std::cout << "Cannot load texture"<< std::endl;
-    sf::Sprite sprite;
-    sprite.setTexture(texture);
 
-    sf::CircleShape wheelLDraw(WHEEL_SIZE* engine->SCALE);
-    wheelLDraw.setFillColor(sf::Color(255, 187, 0));
-    wheelLDraw.setTexture(&texture);
-
-
-    sf::CircleShape wheelRDraw(WHEEL_SIZE* engine->SCALE);
-    wheelRDraw.setFillColor(sf::Color(255, 187, 0));
-    wheelRDraw.setTexture(&texture);
-
-
-    b2Vec2 positionL = wheelL->GetPosition();//new position of the body
-    float32 angleL = wheelL->GetAngle();
-    b2Vec2 speedL = wheelL->GetLinearVelocity();
-
-    b2Vec2 positionR = wheelR->GetPosition();//new position of the body
-    float32 angleR = wheelR->GetAngle();
-    b2Vec2 speedR = wheelR->GetLinearVelocity();
-
-
-
-    wheelLDraw.setPosition(positionL.x, positionL.y);
-    wheelRDraw.setPosition(positionR.x, positionR.y);
-
-    float origin = WHEEL_SIZE*engine->SCALE;
-
-    wheelLDraw.setOrigin(origin,origin);
-    wheelRDraw.setOrigin(origin,origin);
-
-    wheelLDraw.rotate(angleL*40);
-    wheelRDraw.rotate(angleR*40);
-
-    window->draw(wheelLDraw);
-    window->draw(wheelRDraw);
-}
 
 Bike::~Bike() {
     //TODO: implement

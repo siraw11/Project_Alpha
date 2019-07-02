@@ -8,19 +8,21 @@
 
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
+#include "Map.h"
 
 class GameEngine {
 public:
-    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 98), sf::VideoMode video = sf::VideoMode::getDesktopMode(),int framerate= 480);
+    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 98), sf::VideoMode video = sf::VideoMode::getDesktopMode(),int framerate = 30);
     float32 timeStep = 1.0f / 60.0f;
-    int32 velocityIterations = 2;
+    int32 velocityIterations = 1;
     int32 positionIterations = 6;
     b2Vec2 gravity;
     b2World world = b2World(gravity);
     int framerate;
     sf::VideoMode video;
-    sf::RenderWindow window;
+    sf::RenderWindow * window;
     const float SCALE = 200.f;
+    const float WHEEL_SIZE = 0.2;
 
 
     void run();
@@ -52,6 +54,12 @@ public:
     const sf::VideoMode &getVideo() const;
 
     void setVideo(const sf::VideoMode &video);
+
+    void drawMap(Map * level);
+
+    void drawBike(Bike * bike);
+
+    void initBike(Bike * bike);
 
 private:
 

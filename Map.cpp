@@ -8,7 +8,7 @@
 #include "Player.h"
 
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints,GameEngine* _engine, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints),engine(_engine), p(_p) {}
+Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints), p(_p) {}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
@@ -58,38 +58,3 @@ void Map::detach() {
 Map::~Map() {
     detach();
 }
-
-void Map::draw(sf::RenderWindow *window) {
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0, window->getSize().y/1.3);
-    b2Body *groundBody = engine->world.CreateBody(&groundBodyDef);
-
-
-
-
-    sf::ConvexShape terrain;
-    terrain.setPosition(0, window->getSize().y/1.3);
-    terrain.setPointCount(mapPoints.size()+2);
-
-    int i = 0;
-    b2Vec2 vs[mapPoints.size()];//box2D map points
-    for(Position point : mapPoints) {
-        vs[i].Set(point.posX*engine->SCALE, -point.posY*engine->SCALE);
-        terrain.setPoint(i, sf::Vector2f((point.posX-=0.1) * engine->SCALE, -point.posY * engine->SCALE));//SFML map points
-        i++;
-    }
-    //addition SFML points to close the shape
-    terrain.setPoint(i, sf::Vector2f(50*engine->SCALE,0));
-    terrain.setPoint(i+1, sf::Vector2f(0, 50*engine->SCALE));
-    terrain.setFillColor(sf::Color(168, 75, 0));
-
-
-
-    //Unisco tutti i punti con delle rette
-    b2ChainShape chain;
-    chain.CreateChain(vs, mapPoints.size());
-    groundBody->CreateFixture(&chain, 0.0f);//0.0f->mass of solid
-
-    window->draw(terrain);
-}
-
