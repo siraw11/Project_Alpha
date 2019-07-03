@@ -12,7 +12,7 @@
 
 class GameEngine {
 public:
-    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 98), sf::VideoMode video = sf::VideoMode::getDesktopMode(),int framerate = 30);
+    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 18), sf::VideoMode video = sf::VideoMode::getDesktopMode(),int framerate = 30);
     float32 timeStep = 1.0f / 60.0f;
     int32 velocityIterations = 3;
     int32 positionIterations = 6;
@@ -23,6 +23,8 @@ public:
     sf::RenderWindow * window;
     const float SCALE = 200.f;
     const float WHEEL_SIZE = 0.2;
+    float LINE;
+
 
 
     void run();

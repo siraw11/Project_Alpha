@@ -20,6 +20,7 @@ void GameEngine::run() {
     sf::RenderWindow window(video, "Motocross 2D", sf::Style::Default);//Create window withe default resolution
     window.setFramerateLimit(framerate);//Set framerate limit
     this->window = &window;
+    LINE =(window.getSize().y/SCALE)/1.3+0.01;
 
     std::list<Position> level1Points = {
             {-1, 10},//back limit
@@ -142,10 +143,11 @@ void GameEngine::setFramerate(int framerate) {
     GameEngine::framerate = framerate;
 }
 
+
+
 void GameEngine::drawMap(Map *level) {
     b2BodyDef groundBodyDef;
-
-    groundBodyDef.position.Set(0, 6.6);//TODO:get dinamycally that value
+    groundBodyDef.position.Set(0, LINE);//TODO:get dinamycally that value
     b2Body *groundBody = world.CreateBody(&groundBodyDef);
 
     //sf::VertexArray terrain;
@@ -210,7 +212,7 @@ void GameEngine::initBike(Bike *bike) {
 
     b2BodyDef wheelLDef;
     wheelLDef.type = b2_dynamicBody;
-    wheelLDef.position.Set(1, 6.6 - WHEEL_SIZE);//initial position
+    wheelLDef.position.Set(1, LINE - WHEEL_SIZE);//initial position
 
     bike->wheelL = world.CreateBody(&wheelLDef);
     b2CircleShape dynamicWheel;
@@ -229,7 +231,7 @@ void GameEngine::initBike(Bike *bike) {
 
     b2BodyDef wheelRDef;
     wheelRDef.type = b2_dynamicBody;
-    wheelRDef.position.Set(2, 6.6 - WHEEL_SIZE);//initial position
+    wheelRDef.position.Set(2, LINE - WHEEL_SIZE);//initial position
 
 
     bike->wheelR = world.CreateBody(&wheelRDef);
