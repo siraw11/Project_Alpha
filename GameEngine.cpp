@@ -33,14 +33,22 @@ void GameEngine::run() {
             {0,  0},
             {3,  0},
             {8,  1},
-            {8,  -1},
+            {11,  0},
             {15, -1},
-            {15, 10},//front limit
+            {20,0},
+            {25,0},
+            {30,0.5},
+            {35,-2},
+            {40,0},
+            {43,0},
+            {45,1},
+            {55,1},
+            {55, 10}//front limit
     };
     Map level1(false, true, 1, level1Points, nullptr);
     Map *level = &level1;
 
-    Bike bike1("", "", 2, 0, 0, true, nullptr, nullptr);
+    Bike bike1("", "", 1.5, 0, 0, true, nullptr, nullptr);
     Bike *bike = &bike1;
     initBike(bike);
 
