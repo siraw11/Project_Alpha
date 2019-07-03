@@ -14,7 +14,7 @@ class GameEngine {
 public:
     GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 98), sf::VideoMode video = sf::VideoMode::getDesktopMode(),int framerate = 30);
     float32 timeStep = 1.0f / 60.0f;
-    int32 velocityIterations = 1;
+    int32 velocityIterations = 3;
     int32 positionIterations = 6;
     b2Vec2 gravity;
     b2World world = b2World(gravity);
