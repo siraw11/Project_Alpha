@@ -20,7 +20,13 @@ void GameEngine::run() {
     sf::RenderWindow window(video, "Motocross 2D", sf::Style::Default);//Create window withe default resolution
     window.setFramerateLimit(framerate);//Set framerate limit
     this->window = &window;
-    LINE =(window.getSize().y/SCALE)/1.3+0.01;
+
+    LINE = (window.getSize().y / SCALE) / 1.3 + 0.01;
+
+    sf::View view;
+    view.reset(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+    window.setView(view);
+
 
     std::list<Position> level1Points = {
             {-1, 10},//back limit
@@ -34,10 +40,9 @@ void GameEngine::run() {
     Map level1(false, true, 1, level1Points, nullptr);
     Map *level = &level1;
 
-    Bike bike1("", "", 3, 0, 0, true, nullptr, nullptr);
+    Bike bike1("", "", 2, 0, 0, true, nullptr, nullptr);
     Bike *bike = &bike1;
     initBike(bike);
-
 
     while (window.isOpen()) {
         window.clear(sf::Color(255, 255, 255));//clear all,new frame!
@@ -45,6 +50,14 @@ void GameEngine::run() {
 
 
         world.Step(timeStep, velocityIterations, positionIterations);//calculate world simulation step
+
+        std::cout <<bike->wheelL->GetPosition().x * SCALE<<std::endl;
+
+        if((bike->wheelL->GetPosition().x * SCALE)>(window.getSize().x/2)){     //camera start moving when bike is in the center
+            view.setCenter(bike->wheelL->GetPosition().x * SCALE, (bike->wheelL->GetPosition().y-1) * SCALE); //camera moving on bike
+            window.setView(view);
+        }
+
 
 
         //std::cout << "Speed:" << bike->wheelL->GetLinearVelocity().x << "  |  " << bike->wheelL->GetLinearVelocity().y << std::endl;
@@ -56,6 +69,7 @@ void GameEngine::run() {
             if (event.type == sf::Event::TextEntered) {
                 char keyPressed = static_cast<char>(event.text.unicode);
                 std::cout << bike->getSpeed() << std::endl;
+
                 switch (keyPressed) {
                     case 'd'://vai a destra
                         (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x + bike->getSpeed(),
@@ -75,7 +89,6 @@ void GameEngine::run() {
                         (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x, -10)));
                         break;
                 }
-
             }
         }
         drawMap(level);
@@ -142,7 +155,6 @@ int GameEngine::getFramerate() const {
 void GameEngine::setFramerate(int framerate) {
     GameEngine::framerate = framerate;
 }
-
 
 
 void GameEngine::drawMap(Map *level) {
