@@ -52,9 +52,10 @@ void GameEngine::run() {
         world.Step(timeStep, velocityIterations, positionIterations);//calculate world simulation step
 
         std::cout <<bike->wheelL->GetPosition().x * SCALE<<std::endl;
-
-        if((bike->wheelL->GetPosition().x * SCALE)>(window.getSize().x/2)){     //camera start moving when bike is in the center
-            view.setCenter(bike->wheelL->GetPosition().x * SCALE, (bike->wheelL->GetPosition().y-1) * SCALE); //camera moving on bike
+        float offsetX=3;
+        float offsetY=1;
+        if(((bike->wheelL->GetPosition().x+offsetX) * SCALE)>(window.getSize().x/2)){     //camera start moving when bike is in the center
+            view.setCenter((bike->wheelL->GetPosition().x+offsetX) * SCALE, (bike->wheelL->GetPosition().y-offsetY) * SCALE); //camera moving on bike
             window.setView(view);
         }
 
