@@ -12,6 +12,7 @@ public:
     Knight(int a , int hp, int s , int sp);
 
     void fight(Enemy& enemy);
+    void TakeDamage(int damage)override;
 
 protected:
     int armor;

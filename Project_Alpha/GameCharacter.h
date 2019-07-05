@@ -29,7 +29,7 @@ public:
     }
 
     void Attack(Enemy& enemy);
-    void TakeDamage(int point);
+    virtual void TakeDamage(int point);
 
 protected:
 
