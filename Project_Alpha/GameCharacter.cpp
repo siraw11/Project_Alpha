@@ -35,6 +35,5 @@ void GameCharacter::Attack(Enemy& enemy) {
 
  void GameCharacter::TakeDamage(int point) {
     life-=point;
-    return true;
-}
+    }
 
