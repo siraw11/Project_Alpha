@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project_Alpha"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Project_Alpha\;CMake Files\Project_Alpha\test\;CMake Files\Project_Alpha\test\lib\;CMake Files\Project_Alpha\test\lib\googletest\;CMake Files\Project_Alpha\test\lib\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project_Alpha">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 Project_Alpha"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project_Alpha/fast">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 Project_Alpha/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 core"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core/fast">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 core/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runGameTests">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/runGameTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 runGameTests"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runGameTests/fast">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/runGameTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 runGameTests/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Archer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Archer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Boss.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Boss.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Chest.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Chest.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Enemy.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Enemy.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/GameCharacter.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/GameCharacter.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Hero.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Hero.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Item.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Item.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Knight.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Knight.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Mage.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Mage.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Map.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Map.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Tile.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Tile.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Weapon.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/Weapon.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/main.cpp">
+			<Option target="Project_Alpha"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/GameCharacterTest.cpp">
+			<Option target="runGameTests"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/runAllTests.cpp">
+			<Option target="runGameTests"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Project_Alpha\test\"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Project_Alpha\test\lib\googletest\"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Project_Alpha/test/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\Project_Alpha\test\lib\googletest\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

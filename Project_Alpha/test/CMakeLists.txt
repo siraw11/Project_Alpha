@@ -7,3 +7,4 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 set(TEST_SOURCE_FILES runAllTests.cpp GameCharacterTest.cpp)
 add_executable(runGameTests ${TEST_SOURCE_FILES})
 target_link_libraries(runGameTests gtest gtest_main core)
+
