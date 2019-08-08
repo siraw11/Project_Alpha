@@ -1,9 +1,13 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.12)
 project(Exam_Project)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Exam_Project main.cpp ../Map.cpp ../Map.h ../Archer.cpp ../Archer.h ../Mage.cpp ../Mage.h ../Knight.cpp ../Knight.h ../Boss.cpp ../Boss.h ../Enemy.cpp ../Enemy.h ../Hero.cpp ../Hero.h ../Weapon.cpp ../Weapon.h ../Chest.cpp ../Chest.h ../Tile.cpp ../Tile.h ../Item.cpp ../Item.h)
+set(EXECUTABLE_NAME Project_Alpha)
 
-set(SFML_ROOT /home/matteo/Documenti/libraries/SFML)
-set(SFML_STATIC_LIBRARIES TRUE)
+add_executable(${EXECUTABLE_NAME} main.cpp ../Map.cpp ../Map.h ../Archer.cpp ../Archer.h ../Mage.cpp ../Mage.h ../Knight.cpp ../Knight.h ../Boss.cpp ../Boss.h ../Enemy.cpp ../Enemy.h ../Hero.cpp ../Hero.h ../Weapon.cpp ../Weapon.h ../Chest.cpp ../Chest.h ../Tile.cpp ../Tile.h ../Item.cpp ../Item.h)
+
+find_package(SFML 2 COMPONENTS network audio graphics window system REQUIRED)
+if(SFML_FOUND)
+    target_link_libraries(${EXECUTABLE_NAME} sfml-graphics sfml-window sfml-system)
+endif()
