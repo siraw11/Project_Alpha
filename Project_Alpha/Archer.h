@@ -6,6 +6,7 @@
 #define EXAM_PROJECT_ARCHER_H
 
 #include "GameCharacter.h"
+#include "Enemy.h"
 
 class Archer : public GameCharacter{
 public:

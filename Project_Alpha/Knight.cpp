@@ -32,3 +32,11 @@ void Knight::TakeDamage(int damage) {
 
 
 }
+
+int Knight::getArmor() const {
+    return armor;
+}
+
+void Knight::setArmor(int armor) {
+    Knight::armor = armor;
+}

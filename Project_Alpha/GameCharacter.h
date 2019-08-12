@@ -6,6 +6,7 @@
 #define EXAM_PROJECT_GAMECHARACTER_H
 
 #include "Weapon.h"
+#include "Enemy.h"
 
 class GameCharacter{
 public:
@@ -19,11 +20,13 @@ public:
     int getLife() const {
         return life;
     }
+    void setLife(int life);
 
     int getStrength() const {
         return strength;
     }
 
+    void setStrength(int strength);
     int getSpeed() const {
         return speed;
     }
@@ -38,7 +41,6 @@ protected:
     int speed;
     int posX;
     int posY;
-
     Weapon* weapon;
 
 };

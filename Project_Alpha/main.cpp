@@ -42,4 +42,35 @@ GameEvent getEvent(){
 }
 
 
+bool updateGame(const GameEvent &gameEvent, Hero &hero, Enemy &enemy, const Map &map){
+    switch (gameEvent) {
+        case GameEvent::quit: //
+            return true;
+        case GameEvent::up: {
+            hero.Move(0,-1);
+            break;
+        }
+        case GameEvent::left:{
+            hero.Move(-1,0);
+            break;
+        }
+        case GameEvent::down:{
+            hero.Move(0,1);
+            break;
+        }
+        case GameEvent::right:{
+            hero.Move(1,0);
+            break;
+        }
+        case GameEvent::fight:{
+            hero.fight(enemy)//TODO:fix it setting class fight
+            break;
+        }
+        case GameEvent::noop:{
+            std::cout<<"Press: w,a,s,d,f or Q to quit"<<std::endl;
+            break;
+        }
+    }
+    return false;
+}
 

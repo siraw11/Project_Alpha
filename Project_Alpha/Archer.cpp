@@ -3,6 +3,7 @@
 //
 
 #include "Archer.h"
+#include "Enemy.h"
 
 Archer::Archer(int hp, int s, int sp): GameCharacter(hp, s, sp), range(3), arrows(10){
     

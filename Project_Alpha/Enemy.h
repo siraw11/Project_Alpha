@@ -5,4 +5,18 @@
 #ifndef EXAM_PROJECT_ENEMY_H
 #define EXAM_PROJECT_ENEMY_H
 
+#include "Knight.h"
+#include "Mage.h"
+#include "Archer.h"
+
+class Enemy: public Knight, public Archer, public Mage{
+public:
+    Enemy(int hp,int s, int sp);
+
+    bool Move(int posX, int posY);
+
+
+
+};
+
 #endif //EXAM_PROJECT_ENEMY_H

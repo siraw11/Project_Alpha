@@ -3,3 +3,6 @@
 //
 
 #include "Enemy.h"
+
+Enemy::Enemy(int hp, int s, int sp):GameCharacter(hp,s,sp){}
+

@@ -4,6 +4,7 @@
 
 #include "GameCharacter.h"
 #include "Weapon.h"
+#include "Enemy.h"
 #include <stdexcept>
 
 using namespace std;
@@ -36,4 +37,12 @@ void GameCharacter::Attack(Enemy& enemy) {
  void GameCharacter::TakeDamage(int point) {
     life-=point;
     }
+
+void GameCharacter::setStrength(int strength) {
+    GameCharacter::strength = strength;
+}
+
+void GameCharacter::setLife(int life) {
+    GameCharacter::life = life;
+}
 

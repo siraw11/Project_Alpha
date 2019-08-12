@@ -6,6 +6,8 @@
 #define EXAM_PROJECT_MAGE_H
 
 #include "GameCharacter.h"
+#include "Enemy.h"
+
 class Mage:public GameCharacter{
 
 public:
@@ -18,6 +20,8 @@ public:
     int getMana() const;
 
     void setMana(int mana);
+
+    void fight(Enemy &enemy);
 
 private:
 

@@ -4,6 +4,7 @@
 
 #include "Mage.h"
 #include "GameCharacter.h"
+#include "Enemy.h"
 
 Mage::Mage(int hp, int s, int sp): GameCharacter(hp, s, sp), range(3), mana(20) {}
 
@@ -21,4 +22,11 @@ int Mage::getMana() const {
 
 void Mage::setMana(int mana) {
     Mage::mana = mana;
+}
+
+void Mage::fight(Enemy &enemy){
+    if(mana>0){
+        Attack(Enemy &enemy)
+        mana--;
+    }
 }
