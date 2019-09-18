@@ -1,3 +1,0 @@
-/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Exam_Project.dir
-/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/edit_cache.dir
