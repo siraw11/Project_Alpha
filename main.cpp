@@ -1,4 +1,5 @@
 #include <iostream>
+#include <SFML/Graphics.hpp>
 #include "Archer.h"
 #include "GameCharacter.h"
 #include "Enemy.h"
@@ -15,9 +16,9 @@
 
  */
 
-enum class GameEvent {
-    quit, left, up, down, right, fight, noop
-};
+//enum class GameEvent {
+  //  quit, left, up, down, right, fight, noop
+//};
 
 /*GameEvent getEvent(){
 
@@ -80,7 +81,24 @@ bool updateGame(const GameEvent &gameEvent, Hero &hero, Enemy &enemy, const Map 
 }*/
 
 int main() {
-    std::cout << "NON SCRIVERE MENTRE GUIDI";
+    sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Red);
+
+    while(window.isOpen())
+    {
+        sf::Event event{};
+        while (window.pollEvent(event))
+        {
+            if(event.type==sf::Event::Closed)
+                window.close();
+        }
+        window.clear(sf::Color::Magenta);
+        window.draw(shape);
+        window.display();
+    }
+
+
 }
 
 

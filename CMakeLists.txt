@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 3.12)
 project(Project_Alpha)
+
 set(CMAKE_CXX_STANDARD 11)
-#add_subdirectory(Project_Alpha/test)
+
 include_directories(Project_Alpha)
-set(SOURCE_FILES main.cpp GameCharacter.cpp Archer.cpp Weapon.cpp Knight.cpp Mage.cpp Enemy.cpp Hero.cpp Item.cpp Boss.cpp Map.cpp Tile.cpp Chest.cpp)
-add_executable(Project_Alpha_ROOT ${SOURCE_FILES})
-add_library(core ${SOURCE_FILES})
+set(SOURCE_FILE  Archer.cpp Boss.cpp Chest.cpp Enemy.cpp GameCharacter.cpp Hero.cpp Item.cpp Knight.cpp Mage.cpp main.cpp Map.cpp Tile.cpp Weapon.cpp)
+add_executable(Project_Alpha_ROOT ${SOURCE_FILE})
+add_library(core ${SOURCE_FILE})
 find_package(SFML 2 COMPONENTS network audio graphics window system REQUIRED)
-if(SFML_FOUND)
+if (SFML_FOUND)
     target_link_libraries(Project_Alpha_ROOT sfml-graphics sfml-window sfml-system)
-endif()
+
+endif ()

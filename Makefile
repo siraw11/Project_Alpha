@@ -48,10 +48,10 @@ RM = /opt/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matteo/CLionProjects/Project_Alpha
+CMAKE_SOURCE_DIR = /home/waris/CLionProjects/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matteo/CLionProjects/Project_Alpha
+CMAKE_BINARY_DIR = /home/waris/CLionProjects/Project_Alpha
 
 #=============================================================================
 # Targets provided globally by CMake.
