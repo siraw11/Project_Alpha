@@ -84,7 +84,7 @@ bool updateGame(const GameEvent &gameEvent, Hero &hero, Enemy &enemy, const Map 
 int main() {
 
 
-        sf::RenderWindow window(sf::VideoMode(800,800),"Project_Alpha");
+        sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
         Hero hero(3,5,1,1);
         hero.setPosition(100,100);
         auto heroTexture = new sf::Texture;
