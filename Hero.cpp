@@ -15,7 +15,5 @@ void Hero::setItem(Item *item) {
     Hero::item = item;
 }
 
-void Hero::Move(int x, int y) {
-    posX += x;
-    posY += y;
-    }
+
+
