@@ -6,8 +6,8 @@
 #define EXAM_PROJECT_GAMECHARACTER_H
 
 #include "Weapon.h"
-
-class GameCharacter {
+#include <SFML/Graphics.hpp>
+class GameCharacter:public sf::Sprite {
 public:
     GameCharacter(int hp, int s, int sp);
 
@@ -38,8 +38,7 @@ protected:
     int life;
     int strength;
     int speed;
-    int posX;
-    int posY;
+
     Weapon* weapon;
 
 };

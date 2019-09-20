@@ -1,5 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <zconf.h>
 #include "Archer.h"
 #include "GameCharacter.h"
 #include "Enemy.h"
@@ -88,6 +89,10 @@ int main() {
         Hero hero(3,5,1,1);
         shape.setFillColor(sf::Color::Red);
         shape.setPosition(600,500);
+        hero.setPosition(100,100);
+        auto heroTexture = new sf::Texture;
+        heroTexture->loadFromFile("/home/matteo/CLionProjects/Project_Alpha/Sprites/warisgay.png");
+        hero.setTexture(*heroTexture);
 
 
         while (window.isOpen())
@@ -106,24 +111,24 @@ int main() {
                 }
                 if(event.type == sf::Event::KeyPressed){
                     if(event.key.code == sf::Keyboard::RShift)
-                        hero.Move(1,2);
+                        hero.move(sf::Vector2f(-10.f,10.f));
                     if(event.key.code== sf::Keyboard::Tab)
                         shape.move(sf::Vector2f(-30.f,30.f));
                     if(event.key.code == sf::Keyboard::A )
-                        hero.Move(-10,0);
+                        hero.move(sf::Vector2f(-10.f,0.f));
                     if(event.key.code== sf::Keyboard::S)
-                        hero.Move(0,10);
+                        hero.move(sf::Vector2f(0.f,10.f));
                     if(event.key.code== sf::Keyboard::D)
-                        hero.Move(10,0);
+                        hero.move(sf::Vector2f(10.f,0.f));
                     if(event.key.code==sf::Keyboard::W)
-                        hero.Move(0,-10);
+                        hero.move(sf::Vector2f(0.f,-10.f));
 
                 }
             }
 
             window.clear(sf::Color::White);
-            window.draw(shape);
 
+            window.draw(hero);
             window.display();
 
 
