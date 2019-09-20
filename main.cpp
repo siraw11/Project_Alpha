@@ -84,11 +84,8 @@ bool updateGame(const GameEvent &gameEvent, Hero &hero, Enemy &enemy, const Map 
 int main() {
 
 
-        sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
-        sf::CircleShape shape(400.f);
+        sf::RenderWindow window(sf::VideoMode(800,800),"Project_Alpha");
         Hero hero(3,5,1,1);
-        shape.setFillColor(sf::Color::Red);
-        shape.setPosition(600,500);
         hero.setPosition(100,100);
         auto heroTexture = new sf::Texture;
         heroTexture->loadFromFile("Sprites/warisgay.png");
@@ -106,14 +103,8 @@ int main() {
                     sf::View temp=window.getView();
                     temp.setSize(window.getSize().x,window.getSize().y);
                     window.setView(temp);
-
-
                 }
                 if(event.type == sf::Event::KeyPressed){
-                    if(event.key.code == sf::Keyboard::RShift)
-                        hero.move(sf::Vector2f(-10.f,10.f));
-                    if(event.key.code== sf::Keyboard::Tab)
-                        shape.move(sf::Vector2f(-30.f,30.f));
                     if(event.key.code == sf::Keyboard::A )
                         hero.move(sf::Vector2f(-10.f,0.f));
                     if(event.key.code== sf::Keyboard::S)
@@ -127,7 +118,6 @@ int main() {
             }
 
             window.clear(sf::Color::White);
-
             window.draw(hero);
             window.display();
 
