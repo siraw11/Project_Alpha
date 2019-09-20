@@ -91,7 +91,7 @@ int main() {
         shape.setPosition(600,500);
         hero.setPosition(100,100);
         auto heroTexture = new sf::Texture;
-        heroTexture->loadFromFile("/home/matteo/CLionProjects/Project_Alpha/Sprites/warisgay.png");
+        heroTexture->loadFromFile("/home/waris/CLionProjects/Project_Alpha/Sprites/warisgay.png");
         hero.setTexture(*heroTexture);
 
 
