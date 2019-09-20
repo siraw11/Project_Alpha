@@ -17,7 +17,7 @@
  */
 
 //enum class GameEvent {
-  //  quit, left, up, down, right, fight, noop
+ //   quit, left, up, down, right, fight, noop
 //};
 
 /*GameEvent getEvent(){
@@ -81,25 +81,57 @@ bool updateGame(const GameEvent &gameEvent, Hero &hero, Enemy &enemy, const Map 
 }*/
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Red);
 
-    while(window.isOpen())
-    {
-        sf::Event event{};
-        while (window.pollEvent(event))
+
+        sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
+        sf::CircleShape shape(400.f);
+        Hero hero(3,5,1,1);
+        shape.setFillColor(sf::Color::Red);
+        shape.setPosition(600,500);
+
+
+        while (window.isOpen())
         {
-            if(event.type==sf::Event::Closed)
-                window.close();
+            sf::Event event{};
+            while (window.pollEvent(event))
+            {
+                if(event.type==sf::Event::Closed)
+                    window.close();
+                if(event.type==sf::Event::Resized){
+                    sf::View temp=window.getView();
+                    temp.setSize(window.getSize().x,window.getSize().y);
+                    window.setView(temp);
+
+
+                }
+                if(event.type == sf::Event::KeyPressed){
+                    if(event.key.code == sf::Keyboard::RShift)
+                        hero.Move(1,2);
+                    if(event.key.code== sf::Keyboard::Tab)
+                        shape.move(sf::Vector2f(-30.f,30.f));
+                    if(event.key.code == sf::Keyboard::A )
+                        hero.Move(-10,0);
+                    if(event.key.code== sf::Keyboard::S)
+                        hero.Move(0,10);
+                    if(event.key.code== sf::Keyboard::D)
+                        hero.Move(10,0);
+                    if(event.key.code==sf::Keyboard::W)
+                        hero.Move(0,-10);
+
+                }
+            }
+
+            window.clear(sf::Color::White);
+            window.draw(shape);
+
+            window.display();
+
+
+
         }
-        window.clear(sf::Color::Magenta);
-        window.draw(shape);
-        window.display();
+        return 0;
     }
 
-
-}
 
 
 
