@@ -88,8 +88,12 @@ int main() {
         Hero hero(3,5,1,1);
         hero.setPosition(100,100);
         auto heroTexture = new sf::Texture;
-        heroTexture->loadFromFile("Sprites/warisgay.png");
+        heroTexture->loadFromFile("Sprites/luca.png");
         hero.setTexture(*heroTexture);
+        hero.setScale(sf::Vector2f(2.f,2.f));
+        hero.setTextureRect(sf::IntRect(32,0,32,32));
+        int counterWalking=0;
+
 
 
         while (window.isOpen())
@@ -104,20 +108,47 @@ int main() {
                     temp.setSize(window.getSize().x,window.getSize().y);
                     window.setView(temp);
                 }
-                if(event.type == sf::Event::KeyPressed){
-                    if(event.key.code == sf::Keyboard::A )
-                        hero.move(sf::Vector2f(-10.f,0.f));
-                    if(event.key.code== sf::Keyboard::S)
-                        hero.move(sf::Vector2f(0.f,10.f));
-                    if(event.key.code== sf::Keyboard::D)
-                        hero.move(sf::Vector2f(10.f,0.f));
-                    if(event.key.code==sf::Keyboard::W)
-                        hero.move(sf::Vector2f(0.f,-10.f));
 
-                }
             }
 
-            window.clear(sf::Color::White);
+            window.clear(sf::Color::Black);
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+            {
+                hero.move(0,-hero.getSpeed());
+
+                hero.setTextureRect(sf::IntRect(32*counterWalking,32*3,32,32));
+
+            }
+
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+            {
+                hero.move(0,hero.getSpeed());
+
+                hero.setTextureRect(sf::IntRect(32*counterWalking,0,32,32));
+
+            }
+
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+            {
+                hero.move(-hero.getSpeed(),0);
+
+                hero.setTextureRect(sf::IntRect(32*counterWalking,32,32,32));
+
+            }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+
+            {
+                hero.move(hero.getSpeed(),0);
+
+                hero.setTextureRect(sf::IntRect(32*counterWalking,32*2,32,32));
+
+            }
+
+            counterWalking++;
+            if(counterWalking ==2)
+            {counterWalking = 0;
+            }
+
             window.draw(hero);
             window.display();
 
