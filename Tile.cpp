@@ -3,3 +3,8 @@
 //
 
 #include "Tile.h"
+Tile::Tile() {}
+
+void Tile::isLegalCell(Tile &tile) {
+    if()
+}
