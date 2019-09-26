@@ -12,7 +12,7 @@
 #include "Map.h"
 #include "Boss.h"
 #include "Chest.h"
-#include "Tile.h"
+
 
 
 
@@ -20,15 +20,23 @@ int main() {
 
 
         sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
-        Hero hero(3,5,1,3);
+        //set hero
+        Hero hero(3,5,1,6);
         hero.setPosition(100,100);
         auto heroTexture = new sf::Texture;
         heroTexture->loadFromFile("Sprites/luca.png");
         hero.setTexture(*heroTexture);
-        hero.setScale(sf::Vector2f(3.f,3.f));
+        hero.setScale(sf::Vector2f(4.f,4.f));
         hero.setTextureRect(sf::IntRect(32,0,32,32));
         int counterWalking=0;
 
+        //set map texture
+        Map map;
+        map.setPosition(0,0);
+        auto mapTexture = new sf::Texture;
+        mapTexture->loadFromFile("Sprites/test3.png");
+        map.setTexture(*mapTexture);
+        map.setScale(sf::Vector2f(3.f,3.f));
 
 
 
@@ -75,10 +83,9 @@ int main() {
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 
             {
-                hero.move(hero.getSpeed(),0);
-
-                hero.setTextureRect(sf::IntRect(32*counterWalking,32*2,32,32));
-
+                //if(( )
+                {hero.move(hero.getSpeed(),0);
+                hero.setTextureRect(sf::IntRect(32*counterWalking,32*2,32,32));}
             }
 
 
@@ -89,6 +96,7 @@ int main() {
             }
 
 
+            window.draw(map);
             window.draw(hero);
             window.display();
 
