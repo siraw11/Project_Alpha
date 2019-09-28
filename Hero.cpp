@@ -14,6 +14,9 @@ Item *Hero::getItem() const {
 void Hero::setItem(Item *item) {
     Hero::item = item;
 }
+//void Hero::isLegalTile(Map &map) {
+    //if()
+//}
 
 
 

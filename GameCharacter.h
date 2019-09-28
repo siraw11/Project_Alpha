@@ -6,6 +6,7 @@
 #define EXAM_PROJECT_GAMECHARACTER_H
 
 #include "Weapon.h"
+#include "Map.h"
 #include <SFML/Graphics.hpp>
 class GameCharacter:public sf::Sprite {
 public:
@@ -32,6 +33,8 @@ public:
 
     void Attack(GameCharacter* enemy);
     virtual void TakeDamage(int point);
+
+
 
 protected:
 

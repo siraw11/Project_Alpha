@@ -47,3 +47,5 @@ void GameCharacter::setLife(int life) {
     GameCharacter::life = life;
 }
 
+
+

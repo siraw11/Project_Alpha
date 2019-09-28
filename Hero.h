@@ -14,11 +14,11 @@ class Hero: public Knight, public Archer, public Mage{
 public:
     Hero(int a,int hp,int s, int sp);
 
-    void Move(int x, int y);
-
     Item* getItem() const;
 
     void setItem(Item *item);
+
+    //void isLegalTile(Map &map);
 
 private:
     Item* item;
