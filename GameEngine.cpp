@@ -378,7 +378,7 @@ void GameEngine::drawBike(Bike *bike) {
 
 
     sf::Texture cartTexture;
-    if (!cartTexture.loadFromFile("../textures/cart-3.png"))
+    if (!cartTexture.loadFromFile("../textures/cart.png"))
         std::cout << "Cannot load texture" << std::endl;
     sf::Sprite cartSprite;
     cartSprite.setTexture(cartTexture);
