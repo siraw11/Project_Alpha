@@ -22,7 +22,7 @@ public:
     sf::VideoMode video;
     sf::RenderWindow * window;
     const float SCALE = 200.f;
-    const float WHEEL_SIZE = 0.2;
+    const float WHEEL_SIZE = 0.23;
     float LINE;
 
 
@@ -64,7 +64,7 @@ public:
     void initBike(Bike * bike);
 
 private:
-
+    float degToGrad(float deg);
 };
 
 
