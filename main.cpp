@@ -66,6 +66,12 @@ int main() {
         return -1;
     map.setScale(sf::Vector2f(1.f*SCALE,1.f*SCALE));
 
+    sf::View view;
+    view.reset(sf::FloatRect(0,0,3840.0,2160.0));
+    view.setViewport(sf::FloatRect(0,0,1.0f,1.0f));
+    sf::Vector2f position (0,0);
+
+
 
     while (window.isOpen())
         {
@@ -147,7 +153,16 @@ int main() {
                 counterWalking++;
             }
 
+            position.x = hero.getPosition().x +20 - (3840.0/2);
+            position.y = hero.getPosition().y +20 - (2160.0/2);
 
+            if(position.x < 0)
+                position.x =0;
+            if (position.y < 0)
+                position.y =0;
+            view.reset(sf::FloatRect(position.x, position.y, 3840, 2160));
+
+            window.setView(view);
             window.draw(map);
             window.draw(hero);
             window.display();
