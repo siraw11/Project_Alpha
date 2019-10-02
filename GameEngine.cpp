@@ -53,7 +53,7 @@ void GameEngine::run() {
     Map level1(false, true, 1, level1Points, nullptr);
     Map *level = &level1;
 
-    Bike bike1("", "", 1.5, 0, 0, true, nullptr, nullptr, nullptr);
+    Bike bike1("", "", 20, 0, 0, true, nullptr, nullptr, nullptr);
     Bike *bike = &bike1;
     initBike(bike);
 
@@ -87,37 +87,48 @@ void GameEngine::run() {
                 float speed;
 
                 switch (keyPressed) {
-                    case 'd'://vai a destra
-                    /*
-                        (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x + bike->getSpeed(),
-                                                                bike->wheelR->GetLinearVelocity().y)));
-                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x + bike->getSpeed(),
-                                                                bike->wheelL->GetLinearVelocity().y)));
-                    */
+                    case 'd'://right
                         speed = wheelJointL->GetMotorSpeed();
-                        wheelJointL->SetMotorSpeed(speed+=1);
-                        wheelJointR->SetMotorSpeed(speed+=1);
+                        if(speed>=0){
+                            wheelJointL->SetMotorSpeed(speed+ bike->getSpeed());
+                            wheelJointR->SetMotorSpeed(speed+ bike->getSpeed());
+                        }else{
+                            if(speed<-0.2){
+                                wheelJointL->SetMotorSpeed(speed/2);
+                                wheelJointR->SetMotorSpeed(speed/2);
+                            }else{
+                                wheelJointL->SetMotorSpeed(0);
+                                wheelJointR->SetMotorSpeed(0);
+                            }
+                        }
                         break;
-                    case 'a'://vai a sinistra
-                    /*
-                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x - bike->getSpeed(),
-                                                                bike->wheelL->GetLinearVelocity().y)));
-                        (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x - bike->getSpeed(),
-                                                                bike->wheelR->GetLinearVelocity().y)));
-                    */
-
+                    case 'a'://left
                         speed = wheelJointL->GetMotorSpeed();
-                        wheelJointL->SetMotorSpeed(speed-=1);
-                        wheelJointR->SetMotorSpeed(speed-=1);
+                        if(speed>0){//frenata post accellerazione
+                            if(speed>0.2){
+                                wheelJointL->SetMotorSpeed(speed/2);
+                                wheelJointR->SetMotorSpeed(speed/2);
+                            }else{
+                                wheelJointL->SetMotorSpeed(0);
+                                wheelJointR->SetMotorSpeed(0);
+                            }
+                        }else{//retromarcia
+                            wheelJointL->SetMotorSpeed(-(abs(speed)+ bike->getSpeed()));
+                            wheelJointR->SetMotorSpeed(-(abs(speed)+ bike->getSpeed()));
+                        }
                         break;
-                    case char(32)://(spazio) freno
-                        (bike->wheelL->SetLinearVelocity(b2Vec2(0, 0)));
+                    case char(32)://hard brake
+                        wheelJointL->SetMotorSpeed(0);
+                        wheelJointR->SetMotorSpeed(0);
                         break;
                     case 'w'://vai a su
-                        (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, -10)));
+                        //(bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, -10)));
                         break;
                     case 's'://vai a giu
-                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x, -10)));
+                        //(bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x, -10)));
+                        break;
+
+                    case 'r'://vai a giu
                         break;
                 }
             }
@@ -289,84 +300,34 @@ void GameEngine::initBike(Bike *bike) {
 
 
     /*  JOINTS  */
-
     /*distance joint to connect the left wheel with the right wheel*/
     b2DistanceJointDef dJointDefR_L;
     dJointDefR_L.Initialize(bike->wheelL, bike->wheelR,b2Vec2(0,0),b2Vec2(0,0));
     dJointDefR_L.collideConnected = true;
     dJointDefR_L.localAnchorA.Set(0, 0);
     dJointDefR_L.localAnchorB.Set(0, 0);
-    dJointDefR_L.length = 1.2;
+    dJointDefR_L.length = 1;
     world.CreateJoint(&dJointDefR_L);
     //-------------------
 
 
-
-/*
-    b2WheelJointDef wheelJointDef;
-    wheelJointDef.bodyA = bike->cart;
-    wheelJointDef.bodyB = bike->wheelL;
-    wheelJointDef.localAnchorA.Set(-100*1/SCALE,50*1/SCALE);
-    wheelJointDef.localAnchorB.Set(0,0);
-    wheelJointDef.enableMotor = true;
-    wheelJointDef.maxMotorTorque = 100;
-    wheelJointDef.motorSpeed = 0;
-    wheelJointDef.dampingRatio = 1.0;
-    world.CreateJoint(&wheelJointDef);
-
-
-
-    wheelJointDef.bodyB = bike->wheelR;
-    wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
-    world.CreateJoint(&wheelJointDef);
-*/
-
-
+    //wheel joints
     b2WheelJointDef wheelJointDef;
     wheelJointDef.bodyA = bike->cart;
     wheelJointDef.bodyB = bike->wheelR;
     wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
     wheelJointDef.localAnchorB.Set(0,0);
     wheelJointDef.enableMotor = true;
-    wheelJointDef.maxMotorTorque = 100;
+    wheelJointDef.maxMotorTorque = 1000;
     wheelJointDef.motorSpeed = 0;
     wheelJointDef.dampingRatio = 1.0;
     wheelJointR = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
-
-
 
 
     wheelJointDef.bodyB = bike->wheelL;
     wheelJointDef.localAnchorA.Set(-100*1/SCALE,50*1/SCALE);
     wheelJointL = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
 
-
-    /*
-     * QUASI OK
-     *
-    b2DistanceJointDef dJointDefR_C;
-    dJointDefR_C.Initialize(bike->wheelR, bike->cart,b2Vec2(0,0),b2Vec2(0,0));
-    dJointDefR_C.collideConnected = true;
-    dJointDefR_C.localAnchorA.Set(0, 0);
-    dJointDefR_C.localAnchorB.Set(0, 0);
-    dJointDefR_C.length = 1;
-    dJointDefR_C.frequencyHz = 0;
-    dJointDefR_C.dampingRatio = 0;
-    world.CreateJoint(&dJointDefR_C);
-
-    b2DistanceJointDef dJointDefL_C;
-    dJointDefL_C.Initialize(bike->wheelL, bike->cart,b2Vec2(0,0),b2Vec2(0,0));
-    dJointDefL_C.collideConnected = true;
-    dJointDefL_C.localAnchorA.Set(0, 0);
-    dJointDefL_C.localAnchorB.Set(0, 0);
-    dJointDefL_C.length = 1;
-    dJointDefL_C.frequencyHz = 0;
-    dJointDefL_C.dampingRatio = 0;
-    world.CreateJoint(&dJointDefL_C);
-    */
-
-
-    //-------------------
 }
 
 void GameEngine::drawBike(Bike *bike) {
@@ -408,7 +369,12 @@ void GameEngine::drawBike(Bike *bike) {
 
     wheelLDraw.setPosition(positionL.x * SCALE, positionL.y * SCALE);
     wheelRDraw.setPosition(positionR.x * SCALE, positionR.y * SCALE);
+
     cartDraw.setPosition(bike->cart->GetPosition().x * SCALE, (bike->cart->GetPosition().y - cartY) * SCALE);
+
+    float speed = wheelJointL->GetMotorSpeed();
+    wheelJointL->SetMotorSpeed(speed*0.9);
+    wheelJointR->SetMotorSpeed(speed*0.9);
 
     float origin = WHEEL_SIZE * SCALE;
 
@@ -420,13 +386,7 @@ void GameEngine::drawBike(Bike *bike) {
     //Draw rotations
     wheelLDraw.rotate(degToGrad(angleL));
     wheelRDraw.rotate(degToGrad(angleR));
-
-
-    float cartAngle = degToGrad(bike->cart->GetAngle());
-    if(abs(cartAngle)>0){
-        //std::cout << cartAngle << std::endl;
-        cartDraw.rotate(degToGrad(bike->cart->GetAngle()));
-    }
+    cartDraw.rotate(degToGrad(bike->cart->GetAngle()));
 
 
 
