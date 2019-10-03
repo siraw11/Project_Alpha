@@ -22,7 +22,7 @@ int main() {
 
         sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
         //set hero
-        Hero hero(3,5,1,8);
+        Hero hero(3,5,1,16);
         auto heroTexture = new sf::Texture;
     heroTexture->loadFromFile("Sprites/archer.png");
     hero.setTexture(*heroTexture);
@@ -172,7 +172,7 @@ int main() {
                }
 
 
-                //hero.setTextureRect(sf::IntRect(32*counterWalking,96,32,32));
+
                hero.setTextureRect(sf::IntRect(64*counterWalking,0,64,64));
 
             }
@@ -233,6 +233,8 @@ int main() {
                 position.y =0;
             view.reset(sf::FloatRect(position.x, position.y, 3840, 2160));
 
+
+            window.setFramerateLimit(30);
             window.setView(view);
             window.draw(map);
             window.draw(hero);
