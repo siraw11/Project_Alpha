@@ -24,7 +24,7 @@ int main() {
         //set hero
         Hero hero(3,5,1,8);
         auto heroTexture = new sf::Texture;
-    heroTexture->loadFromFile("Sprites/skeletoncomplete1.png");
+    heroTexture->loadFromFile("Sprites/archer.png");
     hero.setTexture(*heroTexture);
 
     hero.setTextureRect(sf::IntRect(0,128,64,64));
@@ -132,7 +132,7 @@ int main() {
 
     // create the tilemap from the level definition
     Map map;
-    if (!map.load("Sprites/plof.png", sf::Vector2u(32, 32), level, 120, 84))
+    if (!map.load("Sprites/map.png", sf::Vector2u(32, 32), level, 120, 84))
         return -1;
     map.setScale(sf::Vector2f(1.f*SCALE,1.f*SCALE));
 
