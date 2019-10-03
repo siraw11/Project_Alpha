@@ -7,11 +7,9 @@
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
 
-const float WHEEL_SIZE = 0.2;
 
-
-Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, int _price, bool _isUnlocked,b2Body* _wheelL,b2Body* _wheelR) : name(
-        _name), color(_color), speed(_speed), usability(_usability), price(_price), isUnlocked(_isUnlocked),wheelL(_wheelL),wheelR(_wheelR) {
+Bike::Bike(std::string _name, std::string _color, float _speed, int _usability, int _price, bool _isUnlocked,b2Body* _wheelL,b2Body* _wheelR,b2Body* _cart) : name(
+        _name), color(_color), speed(_speed), usability(_usability), price(_price), isUnlocked(_isUnlocked),wheelL(_wheelL),wheelR(_wheelR),cart(_cart) {
 }
 
 const std::string &Bike::getName() const {
