@@ -5,7 +5,7 @@
 #include "Hero.h"
 #include "Item.h"
 
-Hero::Hero(int a,int hp, int s, int sp):GameCharacter(hp,s,sp),Knight(a,hp,s,sp),Archer(hp,s,sp),Mage(hp,s,sp), item(nullptr){}
+Hero::Hero(int a,int hp, int s, float sp):GameCharacter(hp,s,sp),Knight(a,hp,s,sp),Archer(hp,s,sp),Mage(hp,s,sp), item(nullptr){}
 
 Item *Hero::getItem() const {
     return item;

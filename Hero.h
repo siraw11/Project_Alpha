@@ -12,7 +12,7 @@
 
 class Hero: public Knight, public Archer, public Mage{
 public:
-    Hero(int a,int hp,int s, int sp);
+    Hero(int a,int hp,int s, float sp);
 
     Item* getItem() const;
 
