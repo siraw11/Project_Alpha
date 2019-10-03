@@ -22,15 +22,15 @@ int main() {
 
         sf::RenderWindow window(sf::VideoMode::getDesktopMode(),"Project_Alpha");
         //set hero
-        Hero hero(3,5,1,8);
+        Hero hero(3,5,1,7);
         auto heroTexture = new sf::Texture;
-    heroTexture->loadFromFile("Sprites/skeletoncomplete1.png");
+    heroTexture->loadFromFile("Sprites/knightcomplete.png");
     hero.setTexture(*heroTexture);
 
     hero.setTextureRect(sf::IntRect(0,128,64,64));
     hero.setOrigin(hero.getPosition().x + hero.getGlobalBounds().width/4 ,hero.getPosition().y + hero.getGlobalBounds().height/2);
     hero.setPosition(32*3,32*30);
-    hero.setScale(sf::Vector2f(1.f*2,1.f*2.2));
+    hero.setScale(sf::Vector2f(1.f*2.5,1.f*2.5));
         int counterWalking=0;
         int x;
         int y;
@@ -163,30 +163,53 @@ int main() {
 
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
             {
-                 x = (int)(hero.getPosition().x)/32/SCALE;
-                 y = (int)((hero.getPosition().y-1)/32/SCALE);
+                 x = static_cast<int>(hero.getPosition().x)/32/SCALE;
+                 y = static_cast<int>((hero.getPosition().y-1)/32/SCALE);
 
-               if(level[120*y+x]==0){
+               if(level[120*y+x]==0)
+               {
                    std::cout<<x<<" "<<y<<std::endl;
                    hero.move(0,-hero.getSpeed());
                }
+               else
+               {
+                   float offset = 0;
+                   while(1){
+                       offset += 0.01;
+                       y = static_cast<int>((hero.getPosition().y + offset)/32/SCALE);
+                       if(level[120*y+x]==0) {
+                           hero.move(0, offset);
+                           break;
+                       }
+                   }
+               }
 
-
-                //hero.setTextureRect(sf::IntRect(32*counterWalking,96,32,32));
                hero.setTextureRect(sf::IntRect(64*counterWalking,0,64,64));
 
             }
 
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
             {
-                 x = (int)(hero.getPosition().x)/32/SCALE;
-                 y = (int)((hero.getPosition().y)/32/SCALE)+1;
-                if(level[120*y+x]==0){
-
+                 x = static_cast<int>(hero.getPosition().x)/32/SCALE;
+                 y = static_cast<int>(((hero.getPosition().y)/32/SCALE)+1);
+                if(level[120*y+x]==0)
+                {
                     std::cout<<x<<" "<<y<<std::endl;
                     hero.move(0,hero.getSpeed());
 
+                }
+                else
+                {
+                    float offset = 0;
+                    while(1){
+                        offset += 0.01;
+                        y = static_cast<int>((hero.getPosition().y - offset)/32/SCALE);
+                        if(level[120*y+x]==0) {
+                            hero.move(0, -offset);
+                            break;
+                        }
                     }
+                }
 
                 hero.setTextureRect(sf::IntRect(64*counterWalking,128,64,64));
 
@@ -195,25 +218,50 @@ int main() {
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 
             {
-                 x = (int)((hero.getPosition().x-1)/32/SCALE);
-                 y = (int)(hero.getPosition().y)/32/SCALE;
-                if(level[120*y+x]==0){
+                 x = static_cast<int>(((hero.getPosition().x-1)/32/SCALE));
+                 y = static_cast<int>(hero.getPosition().y)/32/SCALE;
+                if(level[120*y+x]==0)
+                {
+                    std::cout<<level[120*y+x]<<std::endl;
                     std::cout<<x<<" "<<y<<std::endl;
                     hero.move(-hero.getSpeed(),0);
                 }
-
-
+                else
+                {
+                    float offset = 0;
+                    while(1){
+                        offset += 0.01;
+                        x = static_cast<int>((hero.getPosition().x + offset)/32/SCALE);
+                        if(level[120*y+x]==0) {
+                            hero.move(offset, 0);
+                            break;
+                        }
+                    }
+                }
                 hero.setTextureRect(sf::IntRect(64*counterWalking,64,64,64));
 
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 
             {
-                x = (int)((hero.getPosition().x)/32/SCALE)+1;
-                y = (int)(hero.getPosition().y)/32/SCALE;
-                if(level[120*y+x]==0){
+                x = static_cast<int>(((hero.getPosition().x)/32/SCALE)+1);
+                y = static_cast<int>(hero.getPosition().y)/32/SCALE;
+                if(level[120*y+x]==0)
+                {
                     std::cout<<x<<" "<<y<<std::endl;
-                    hero.move(hero.getSpeed(),0);}
+                    hero.move(hero.getSpeed(),0);
+                }else
+                {
+                    float offset = 0;
+                    while(1){
+                        offset += 0.01;
+                        x = static_cast<int>((hero.getPosition().x - offset)/32/SCALE);
+                        if(level[120*y+x]==0) {
+                            hero.move(-offset,0);
+                            break;
+                        }
+                    }
+                }
                 hero.setTextureRect(sf::IntRect(64*counterWalking,192,64,64));
             }
 
