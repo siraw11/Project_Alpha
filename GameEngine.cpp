@@ -50,7 +50,20 @@ void GameEngine::run() {
             {55, 1},
             {55, 10}//front limit
     };
+
+
+    std::list<Position> level2Points = {
+            {-1, 10},//back limit
+            {0,  0},
+            {1000, 0},
+            {1000, 10}//front limit
+    };
+
+
     Map level1(false, true, 1, level1Points, nullptr);
+    Map level2(false, true, 1, level2Points, nullptr);
+
+
     Map *level = &level1;
 
     Bike bike1("", "", 20, 0, 0, true, nullptr, nullptr, nullptr);
@@ -80,8 +93,10 @@ void GameEngine::run() {
         //std::cout << "Position:" << bike.wheelL->GetPosition().x << "  |  " << bike.wheelL->GetPosition().y << std::endl;
 
         while (window.pollEvent(event)) {
+
             if (event.type == sf::Event::Closed)
                 window.close();
+
             if (event.type == sf::Event::TextEntered) {
                 char keyPressed = static_cast<char>(event.text.unicode);
                 float speed;
@@ -89,13 +104,15 @@ void GameEngine::run() {
                 switch (keyPressed) {
                     case 'd'://right
                         speed = wheelJointL->GetMotorSpeed();
-                        if(speed>=0){
+                        if(speed>=0&&speed<=200){
                             wheelJointL->SetMotorSpeed(speed+ bike->getSpeed());
                             wheelJointR->SetMotorSpeed(speed+ bike->getSpeed());
                         }else{
                             if(speed<-0.2){
                                 wheelJointL->SetMotorSpeed(speed/2);
                                 wheelJointR->SetMotorSpeed(speed/2);
+                            }else if(speed>200){
+
                             }else{
                                 wheelJointL->SetMotorSpeed(0);
                                 wheelJointR->SetMotorSpeed(0);
@@ -122,10 +139,10 @@ void GameEngine::run() {
                         wheelJointR->SetMotorSpeed(0);
                         break;
                     case 'w'://vai a su
-                        //(bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, -10)));
+                        (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, -10)));
                         break;
                     case 's'://vai a giu
-                        //(bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x, -10)));
+                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x, -10)));
                         break;
 
                     case 'r'://vai a giu
@@ -230,7 +247,6 @@ void GameEngine::drawMap(Map *level) {
     b2ChainShape chain;
     chain.CreateChain(vs, level->getMapPoints().size());
     groundBody->CreateFixture(&chain, 0.0f);//0.0f->mass of solid
-
     window->draw(terrain);
 }
 
@@ -239,7 +255,7 @@ void GameEngine::initBike(Bike *bike) {
     b2BodyDef cartBodyDef;
 
     cartBodyDef.type = b2_dynamicBody; //this will be a dynamic body
-    cartBodyDef.position.Set(1, LINE - cartY - WHEEL_SIZE -2); //set the starting position
+    cartBodyDef.position.Set(1, LINE - cartY - WHEEL_SIZE ); //set the starting position
 
     bike->cart = world.CreateBody(&cartBodyDef);
     b2PolygonShape cartShape;
@@ -267,7 +283,7 @@ void GameEngine::initBike(Bike *bike) {
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &dynamicWheel;
     fixtureDef.density = 10;
-    fixtureDef.friction = 5;//attrito
+    fixtureDef.friction = 50;//attrito
     fixtureDef.restitution = 0;//rimbalzo
     //fixtureDef.filter.groupIndex = -1;
     bike->wheelL->CreateFixture(&fixtureDef);
@@ -298,36 +314,39 @@ void GameEngine::initBike(Bike *bike) {
 
 
 
-
-    /*  JOINTS  */
+    /*
+     * Bike JOINTS
+     */
     /*distance joint to connect the left wheel with the right wheel*/
     b2DistanceJointDef dJointDefR_L;
     dJointDefR_L.Initialize(bike->wheelL, bike->wheelR,b2Vec2(0,0),b2Vec2(0,0));
     dJointDefR_L.collideConnected = true;
     dJointDefR_L.localAnchorA.Set(0, 0);
     dJointDefR_L.localAnchorB.Set(0, 0);
-    dJointDefR_L.length = 1;
+    dJointDefR_L.length = .95;
     world.CreateJoint(&dJointDefR_L);
-    //-------------------
 
 
-    //wheel joints
+
+    //Left wheel joint
     b2WheelJointDef wheelJointDef;
     wheelJointDef.bodyA = bike->cart;
     wheelJointDef.bodyB = bike->wheelR;
     wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
     wheelJointDef.localAnchorB.Set(0,0);
     wheelJointDef.enableMotor = true;
-    wheelJointDef.maxMotorTorque = 1000;
+    wheelJointDef.maxMotorTorque = 10;
     wheelJointDef.motorSpeed = 0;
     wheelJointDef.dampingRatio = 1.0;
     wheelJointR = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
 
 
+    //Right wheel joint
     wheelJointDef.bodyB = bike->wheelL;
     wheelJointDef.localAnchorA.Set(-100*1/SCALE,50*1/SCALE);
     wheelJointL = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
 
+    //---------------------------------
 }
 
 void GameEngine::drawBike(Bike *bike) {
@@ -369,12 +388,13 @@ void GameEngine::drawBike(Bike *bike) {
 
     wheelLDraw.setPosition(positionL.x * SCALE, positionL.y * SCALE);
     wheelRDraw.setPosition(positionR.x * SCALE, positionR.y * SCALE);
-
     cartDraw.setPosition(bike->cart->GetPosition().x * SCALE, (bike->cart->GetPosition().y - cartY) * SCALE);
 
     float speed = wheelJointL->GetMotorSpeed();
-    wheelJointL->SetMotorSpeed(speed*0.9);
-    wheelJointR->SetMotorSpeed(speed*0.9);
+    //std::cout << speed << std::endl;
+
+    //wheelJointL->SetMotorSpeed(speed*0.9);
+    //wheelJointR->SetMotorSpeed(speed*0.9);
 
     float origin = WHEEL_SIZE * SCALE;
 
