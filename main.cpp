@@ -24,7 +24,7 @@ int main() {
         //set hero
         Hero hero(3,5,1,16);
         auto heroTexture = new sf::Texture;
-    heroTexture->loadFromFile("Sprites/archer.png");
+    heroTexture->loadFromFile("Sprites/knightcomplete.png");
     hero.setTexture(*heroTexture);
 
     hero.setTextureRect(sf::IntRect(0,128,64,64));
@@ -170,6 +170,18 @@ int main() {
                    std::cout<<x<<" "<<y<<std::endl;
                    hero.move(0,-hero.getSpeed());
                }
+               else{
+                   float offset=0;
+                   while(1){
+                       offset+= 0.01;
+                       y= static_cast<int>((hero.getPosition().y+offset)/32/SCALE);
+                       if(level[120*y+x]==0){
+                           hero.move(0, offset);
+                           break;
+                       }
+                   }
+
+               }
 
 
 
@@ -186,7 +198,18 @@ int main() {
                     std::cout<<x<<" "<<y<<std::endl;
                     hero.move(0,hero.getSpeed());
 
+                    }else{
+                    float offset=0;
+                    while(1){
+                        offset+= 0.01;
+                        y= static_cast<int>((hero.getPosition().y-offset)/32/SCALE);
+                        if(level[120*y+x]==0){
+                            hero.move(0, -offset);
+                            break;
+                        }
                     }
+
+                }
 
                 hero.setTextureRect(sf::IntRect(64*counterWalking,128,64,64));
 
@@ -200,6 +223,17 @@ int main() {
                 if(level[120*y+x]==0){
                     std::cout<<x<<" "<<y<<std::endl;
                     hero.move(-hero.getSpeed(),0);
+                }else{
+                    float offset=0;
+                    while(1){
+                        offset+= 0.01;
+                        x= static_cast<int>((hero.getPosition().x+offset)/32/SCALE);
+                        if(level[120*y+x]==0){
+                            hero.move(offset, 0);
+                            break;
+                        }
+                    }
+
                 }
 
 
@@ -213,7 +247,19 @@ int main() {
                 y = (int)(hero.getPosition().y)/32/SCALE;
                 if(level[120*y+x]==0){
                     std::cout<<x<<" "<<y<<std::endl;
-                    hero.move(hero.getSpeed(),0);}
+                    hero.move(hero.getSpeed(),0);
+                }else{
+                    float offset=0;
+                    while(1){
+                        offset+= 0.01;
+                        x= static_cast<int>((hero.getPosition().x-offset)/32/SCALE);
+                        if(level[120*y+x]==0){
+                            hero.move(-offset, 0);
+                            break;
+                        }
+                    }
+
+                }
                 hero.setTextureRect(sf::IntRect(64*counterWalking,192,64,64));
             }
 
