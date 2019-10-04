@@ -24,7 +24,7 @@ int main() {
         //set hero
         Hero hero(3,5,1,16);
         auto heroTexture = new sf::Texture;
-    heroTexture->loadFromFile("Sprites/knightcomplete.png");
+    heroTexture->loadFromFile("Sprites/archer.png");
     hero.setTexture(*heroTexture);
 
     hero.setTextureRect(sf::IntRect(0,128,64,64));
@@ -82,7 +82,6 @@ int main() {
                     3, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 2,           3, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 2,              3, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 2,
                     5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 12, 0, 0, 10, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6,           5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 12, 0, 0, 10, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6,              5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 12, 0, 0, 10, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6,
 
-
                     7, 1, 11, 1, 1, 1, 9, 1, 1, 1, 11, 1, 1, 1, 11, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 11, 1, 1, 1, 11, 1, 1, 1, 9, 1, 1, 1, 11, 1, 8,       7, 1, 11, 1, 1, 1, 9, 1, 1, 1, 11, 1, 1, 1, 11, 1, 1, 1, 1, 17, 18, 1, 1, 1, 1, 11, 1, 1, 1, 11, 1, 1, 1, 9, 1, 1, 1, 11, 1, 8,        7, 1, 11, 1, 1, 1, 9, 1, 1, 1, 11, 1, 1, 1, 11, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 11, 1, 1, 1, 11, 1, 1, 1, 9, 1, 1, 1, 11, 1, 8,
                     3, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15,              2, 3, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 2,           3, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 2,
                     3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,             3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,                3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
@@ -126,7 +125,6 @@ int main() {
                     21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,         3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,              21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
                     21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,         3, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 2,            21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
                     21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,         5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6,              21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
-
                     };
 
 
@@ -161,7 +159,7 @@ int main() {
             window.clear(sf::Color::Black);
 
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
             {
                  x = (int)(hero.getPosition().x)/32/SCALE;
                  y = (int)((hero.getPosition().y-1)/32/SCALE);
@@ -187,9 +185,7 @@ int main() {
 
                hero.setTextureRect(sf::IntRect(64*counterWalking,0,64,64));
 
-            }
-
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
             {
                  x = (int)(hero.getPosition().x)/32/SCALE;
                  y = (int)((hero.getPosition().y)/32/SCALE)+1;
@@ -213,9 +209,7 @@ int main() {
 
                 hero.setTextureRect(sf::IntRect(64*counterWalking,128,64,64));
 
-            }
-
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 
             {
                  x = (int)((hero.getPosition().x-1)/32/SCALE);
@@ -239,8 +233,7 @@ int main() {
 
                 hero.setTextureRect(sf::IntRect(64*counterWalking,64,64,64));
 
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 
             {
                 x = (int)((hero.getPosition().x)/32/SCALE)+1;
@@ -262,6 +255,46 @@ int main() {
                 }
                 hero.setTextureRect(sf::IntRect(64*counterWalking,192,64,64));
             }
+
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {   //right attack
+                if((sf::Mouse::getPosition().x>hero.getPosition().x)&&(sf::Mouse::getPosition().y >hero.getPosition().y-32)&&(sf::Mouse::getPosition().y< hero.getPosition().y+32*4))
+                    for (int i = 0;  i<10 ; ++i)
+                    {
+                        hero.setTextureRect(sf::IntRect(64 * i, 64 * 7, 64, 64));
+                        window.draw(map);
+                        window.draw(hero);
+                        window.display();
+                    }
+                //down attack
+               if((sf::Mouse::getPosition().y>hero.getPosition().y)&&(sf::Mouse::getPosition().x> hero.getPosition().x-32)&&(sf::Mouse::getPosition().x< hero.getPosition().x+32*4))
+                    for (int i = 0;  i<10 ; ++i)
+                    {
+                        hero.setTextureRect(sf::IntRect(64 * i, 64 * 6, 64, 64));
+                        window.draw(map);
+                        window.draw(hero);
+                        window.display();
+                    }
+               // left attack
+                if((sf::Mouse::getPosition().x<hero.getPosition().x)&&(sf::Mouse::getPosition().y> hero.getPosition().y-32)&&(sf::Mouse::getPosition().y< hero.getPosition().y+32*4))
+                    for (int i = 0;  i<10 ; ++i)
+                    {
+                        hero.setTextureRect(sf::IntRect(64 * i, 64 * 5, 64, 64));
+                        window.draw(map);
+                        window.draw(hero);
+                        window.display();
+                    }
+                if((sf::Mouse::getPosition().y<hero.getPosition().y)&&(sf::Mouse::getPosition().x> hero.getPosition().x-32)&&(sf::Mouse::getPosition().x< hero.getPosition().x+32*4))
+                    for (int i = 0;  i<10 ; ++i)
+                     {
+                        hero.setTextureRect(sf::IntRect(64 * i, 64 * 4, 64, 64));
+                        window.draw(map);
+                        window.draw(hero);
+                        window.display();
+                     }
+            //hero.isLegalAttack()
+            }
+
 
 
             if(counterWalking ==8){
