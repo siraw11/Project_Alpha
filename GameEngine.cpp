@@ -12,10 +12,15 @@
 #include "Player.h"
 #include "Bike.h"
 
+
 float cartX = 0.8;
 float cartY = 0.4;
 b2WheelJoint *wheelEngineL;
 b2WheelJoint *wheelEngineR;
+sf::Texture wheelTexture;
+sf::Texture cartTexture;
+float flipAngle = 0;
+int countFlips = 0;
 
 
 GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video, int _framerate) : gravity(_gravity), video(_video),
@@ -42,7 +47,7 @@ void GameEngine::run() {
             {20, 0},
             {25, 0},
             {30, 0.5},
-            {35, -2},
+            {35, -1},
             {40, 0},
             {43, 0},
             {45, 1},
@@ -52,8 +57,11 @@ void GameEngine::run() {
 
 
     std::list<Position> level2Points = {
-            {-1, 10},//back limit
-            {0,  0},
+            {-1,   10},//back limit
+            {0,    0},
+            {10,   0},
+            {20,   30},
+            {20,   0},
             {1000, 0},
             {1000, 10}//front limit
     };
@@ -68,6 +76,8 @@ void GameEngine::run() {
 
     Bike bike1("", "", 10, 0, 0, true, nullptr, nullptr, nullptr);
     Bike *bike = &bike1;
+
+
     initBike(bike);
 
     while (window.isOpen()) {
@@ -80,52 +90,52 @@ void GameEngine::run() {
 
         float offsetX = 3;
         float offsetY = 1;
+
+
         if (((bike->wheelL->GetPosition().x + offsetX) * SCALE) >
-            (window.getSize().x / 2)) {     //camera start moving when bike is in the center
+            (window.getSize().x / 2)) {     //la camera inizia il movimento una volta superata la metà schermo
             view.setCenter((bike->wheelL->GetPosition().x + offsetX) * SCALE,
-                           (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera moving on bike
+                           (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera segue il veicolo
             window.setView(view);
         }
 
+        wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
+        wheelEngineR->EnableMotor(false);//impedisce il blocco delle ruote
+
+        float speed = wheelEngineL->GetMotorSpeed();//Calcolo l'attuale velocità del motore
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+            //Accellerazione a Destra
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            wheelEngineL->SetMotorSpeed(speed + bike->getSpeed());
+            wheelEngineR->SetMotorSpeed(speed + bike->getSpeed());
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+            //Accellerazione a Sinistra
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            wheelEngineL->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
+            wheelEngineR->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+            //Freno a mano
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            wheelEngineL->SetMotorSpeed(0);
+            wheelEngineR->SetMotorSpeed(0);
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            window.close();
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
+            initBike(bike);
+
+        }
+
+
 
         while (window.pollEvent(event)) {
-
             if (event.type == sf::Event::Closed)
                 window.close();
-
-            wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
-
-            if (event.type == sf::Event::TextEntered) {
-                char keyPressed = static_cast<char>(event.text.unicode);
-                float speed;
-
-                switch (keyPressed) {
-                    case 'd'://right
-                        wheelEngineL->EnableMotor(true);
-                        speed = wheelEngineL->GetMotorSpeed();
-                        wheelEngineL->SetMotorSpeed(speed + bike->getSpeed());
-                        break;
-                    case 'a'://left
-                        wheelEngineL->EnableMotor(true);
-                        speed = wheelEngineL->GetMotorSpeed();
-                        wheelEngineL->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
-                        break;
-                    case char(32)://hard brake
-                        wheelEngineL->EnableMotor(true);
-                        wheelEngineL->SetMotorSpeed(0);
-                        break;
-                    case 'w'://vai a su
-                        (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, -5)));
-                        break;
-                    case 's'://vai a giu
-                        (bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x, -5)));
-                        break;
-
-                    case 'r'://vai a giu
-                        break;
-                }
-            }
         }
+
 
         drawMap(level);
         drawBike(bike);
@@ -195,7 +205,9 @@ void GameEngine::setFramerate(int framerate) {
 
 void GameEngine::drawMap(Map *level) {
     b2BodyDef groundBodyDef;
+    groundBodyDef.type = b2_staticBody;
     groundBodyDef.position.Set(0, LINE);
+
     b2Body *groundBody = world.CreateBody(&groundBodyDef);
 
     //sf::VertexArray terrain;
@@ -222,7 +234,8 @@ void GameEngine::drawMap(Map *level) {
     //Unisco tutti i punti con delle rette
     b2ChainShape chain;
     chain.CreateChain(vs, level->getMapPoints().size());
-    groundBody->CreateFixture(&chain, 0.0f);//0.0f->mass of solid
+    groundBody->CreateFixture(&chain, 0.0f);//0.0f->massa solido
+
     window->draw(terrain);
 }
 
@@ -265,9 +278,9 @@ void GameEngine::initBike(Bike *bike) {
     //Definizione caratteristiche fisiche delle ruote
     b2FixtureDef wheelFixtureDef;
     wheelFixtureDef.shape = &dynamicWheel;
-    wheelFixtureDef.density = 10;
+    wheelFixtureDef.density = 20;
     wheelFixtureDef.friction = 5;//attrito
-    wheelFixtureDef.restitution = 0;//rimbalzo
+    wheelFixtureDef.restitution = 0.3;//rimbalzo
     //wheelFixtureDef.filter.groupIndex = -1;
 
     //Inizializzazione ruota sinistra
@@ -303,7 +316,7 @@ void GameEngine::initBike(Bike *bike) {
     wheelJointDef.enableMotor = true;
     wheelJointDef.maxMotorTorque = 30;
     wheelJointDef.motorSpeed = 0;
-    wheelJointDef.dampingRatio = 1.0;
+    wheelJointDef.dampingRatio = .8;
 
     //Inizializzazione Wheel Joint ruota sinistra
     wheelJointDef.bodyB = bike->wheelL;
@@ -316,60 +329,57 @@ void GameEngine::initBike(Bike *bike) {
     wheelJointDef.enableMotor = false; //se attivo impedirebbe il movimento
     wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
     wheelEngineR = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
+
+
+    //Caricamento Texture Ruote moto
+    bool wheelTextureFound = false;
+    wheelTextureFound = wheelTexture.loadFromFile("../textures/wheel.png");
+    if (!wheelTextureFound)
+        std::cout << "Impossibile caricare texture Ruote - Moto" << std::endl;
+    //-----------------------
+
+    //Caricamento Texture Cart moto
+    bool cartTextureFound = false;
+    cartTextureFound = cartTexture.loadFromFile("../textures/cart.png");
+    if (!cartTextureFound)
+        std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
+
+    //------------------------
 }
 
 void GameEngine::drawBike(Bike *bike) {
-    //Caricamento sprite Ruote moto
-    sf::Texture wheelTexture;
-    bool wheelTextureFound = wheelTexture.loadFromFile("../textures/wheel.png");
-    if (!wheelTextureFound)
-        std::cout << "Impossibile caricare texture Ruote - Moto" << std::endl;
-    sf::Sprite spriteWheel;
-    spriteWheel.setTexture(wheelTexture);
-    //-----------------------
-
-    //Caricamento sprite Cart moto
-    sf::Texture cartTexture;
-    bool cartTextureFound = cartTexture.loadFromFile("../textures/cart.png");
-    if (!cartTextureFound)
-        std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
-    sf::Sprite cartSprite;
-    cartSprite.setTexture(cartTexture);
-    //------------------------
-
-
-    //Disegno ruota sinistra con sprite
+    //Disegno ruota sinistra con Texture
     sf::CircleShape wheelLDraw(WHEEL_SIZE * SCALE);
-    wheelLDraw.setFillColor(sf::Color(255, 187, 0));
+    wheelLDraw.setFillColor(sf::Color(255, 255, 255));
     wheelLDraw.setTexture(&wheelTexture);
 
 
-    //Disegno ruota destra con sprite
+    //Disegno ruota destra con Texture
     sf::CircleShape wheelRDraw(WHEEL_SIZE * SCALE);
-    wheelRDraw.setFillColor(sf::Color(255, 187, 0));
+    wheelRDraw.setFillColor(sf::Color(255, 255, 255));
     wheelRDraw.setTexture(&wheelTexture);
 
-    //Disegno cart con sprite
+    //Disegno cart con Texture
     sf::RectangleShape cartDraw(sf::Vector2f(cartX * 2 * SCALE, cartY * 3 * SCALE));
-    cartDraw.setFillColor(sf::Color(255, 187, 0));
+    cartDraw.setFillColor(sf::Color(255, 255, 255));
     cartDraw.setTexture(&cartTexture);
 
 
     //Ricavo nuovi dati fisici ruota sinistra
-    b2Vec2 positionWheelL = bike->wheelL->GetPosition();     //posizione
-    float32 angleWheelL = bike->wheelL->GetAngle();          //angolo
-    b2Vec2 speedWheelL = bike->wheelL->GetLinearVelocity();  //velocità
+    b2Vec2 positionWheelL = bike->wheelL->GetPosition();                //posizione
+    float32 angleWheelL = ceil(degToGrad(bike->wheelL->GetAngle()));    //angolo
+    b2Vec2 speedWheelL = bike->wheelL->GetLinearVelocity();             //velocità
 
     //Ricavo nuovi dati fisici ruota destra
-    b2Vec2 positionWheelR = bike->wheelR->GetPosition();     //posizione
-    float32 angleWheelR = bike->wheelR->GetAngle();          //angolo
-    b2Vec2 speedWheelR = bike->wheelR->GetLinearVelocity();  //velocità
+    b2Vec2 positionWheelR = bike->wheelR->GetPosition();                //posizione
+    float32 angleWheelR = ceil(degToGrad(bike->wheelR->GetAngle()));    //angolo
+    b2Vec2 speedWheelR = bike->wheelR->GetLinearVelocity();             //velocità
 
 
     //Ricavo nuovi dati fisici cart
-    b2Vec2 positionCart = bike->cart->GetPosition();     //posizione
-    float32 angleCart = bike->cart->GetAngle();          //angolo
-    b2Vec2 speedCart = bike->cart->GetLinearVelocity();  //velocità
+    b2Vec2 positionCart = bike->cart->GetPosition();                    //posizione
+    float32 angleCart = ceil(degToGrad(bike->cart->GetAngle()));        //angolo
+    b2Vec2 speedCart = bike->cart->GetLinearVelocity();                 //velocità
 
 
 
@@ -380,21 +390,35 @@ void GameEngine::drawBike(Bike *bike) {
     float origin = WHEEL_SIZE * SCALE;
     wheelLDraw.setOrigin(origin, origin);
     wheelRDraw.setOrigin(origin, origin);
-    cartDraw.setOrigin(cartX * SCALE, cartY * SCALE);
+    cartDraw.setOrigin((cartX) * SCALE, (cartY) * SCALE);
 
 
     //Aggiorno la posizione degli oggetti disegnati
     wheelLDraw.setPosition(positionWheelL.x * SCALE, positionWheelL.y * SCALE);
     wheelRDraw.setPosition(positionWheelR.x * SCALE, positionWheelR.y * SCALE);
-    cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y - cartY) * SCALE);
 
 
     //Aggiorno la rotazione degli oggetti disegnati
-    wheelLDraw.rotate(degToGrad(angleWheelL));
-    wheelRDraw.rotate(degToGrad(angleWheelR));
-    cartDraw.rotate(degToGrad(angleCart));
+    wheelLDraw.rotate(angleWheelL);
+    wheelRDraw.rotate(angleWheelR);
+    cartDraw.rotate(angleCart);
 
 
+    flipAngle = abs(angleCart) - (360 * countFlips);
+
+    //FIXME:Fixare la posizione del cart in caso di ribaltamento, questa soluzione attuale non è ottimale
+    if (flipAngle > 90) {
+        cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y + cartY) * SCALE);
+    } else {
+        cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y - cartY) * SCALE);
+    }
+
+
+    if (flipAngle > 350 && flipAngle < 370) {
+        countFlips++;
+        flipAngle = 0;
+        std::cout << countFlips << " Flip!" << std::endl;
+    }
 
     //Disegno gli oggetti
     window->draw(cartDraw);

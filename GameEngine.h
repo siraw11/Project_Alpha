@@ -63,6 +63,7 @@ public:
 
     void initBike(Bike * bike);
 
+
 private:
     float degToGrad(float deg);
 };
