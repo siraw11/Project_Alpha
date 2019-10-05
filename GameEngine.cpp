@@ -14,8 +14,8 @@
 
 float cartX = 0.8;
 float cartY = 0.4;
-b2WheelJoint* wheelJointL;
-b2WheelJoint* wheelJointR;
+b2WheelJoint *wheelEngineL;
+b2WheelJoint *wheelEngineR;
 
 
 GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video, int _framerate) : gravity(_gravity), video(_video),
@@ -66,7 +66,7 @@ void GameEngine::run() {
 
     Map *level = &level1;
 
-    Bike bike1("", "", 50, 0, 0, true, nullptr, nullptr, nullptr);
+    Bike bike1("", "", 10, 0, 0, true, nullptr, nullptr, nullptr);
     Bike *bike = &bike1;
     initBike(bike);
 
@@ -93,25 +93,26 @@ void GameEngine::run() {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            wheelJointL->SetMotorSpeed(0);
-            wheelJointR->SetMotorSpeed(0);
+            wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
+
             if (event.type == sf::Event::TextEntered) {
                 char keyPressed = static_cast<char>(event.text.unicode);
                 float speed;
 
                 switch (keyPressed) {
                     case 'd'://right
-                            wheelJointL->SetMotorSpeed(speed+ bike->getSpeed());
-                            wheelJointR->SetMotorSpeed(speed+ bike->getSpeed());
+                        wheelEngineL->EnableMotor(true);
+                        speed = wheelEngineL->GetMotorSpeed();
+                        wheelEngineL->SetMotorSpeed(speed + bike->getSpeed());
                         break;
                     case 'a'://left
-                            speed = wheelJointL->GetMotorSpeed();
-                            wheelJointL->SetMotorSpeed(-(abs(speed)+ bike->getSpeed()));
-                            wheelJointR->SetMotorSpeed(-(abs(speed)+ bike->getSpeed()));
+                        wheelEngineL->EnableMotor(true);
+                        speed = wheelEngineL->GetMotorSpeed();
+                        wheelEngineL->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
                         break;
                     case char(32)://hard brake
-                            wheelJointL->SetMotorSpeed(0);
-                            wheelJointR->SetMotorSpeed(0);
+                        wheelEngineL->EnableMotor(true);
+                        wheelEngineL->SetMotorSpeed(0);
                         break;
                     case 'w'://vai a su
                         (bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, -5)));
@@ -300,20 +301,21 @@ void GameEngine::initBike(Bike *bike) {
     wheelJointDef.bodyA = bike->cart;
     wheelJointDef.localAnchorB.Set(0,0);
     wheelJointDef.enableMotor = true;
-    wheelJointDef.maxMotorTorque = 10;
+    wheelJointDef.maxMotorTorque = 30;
     wheelJointDef.motorSpeed = 0;
     wheelJointDef.dampingRatio = 1.0;
 
     //Inizializzazione Wheel Joint ruota sinistra
     wheelJointDef.bodyB = bike->wheelL;
     wheelJointDef.localAnchorA.Set(-125*1/SCALE,50*1/SCALE);
-    wheelJointL = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
+    wheelEngineL = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
 
 
     //Inizializzazione Wheel Joint ruota destra
     wheelJointDef.bodyB = bike->wheelR;
+    wheelJointDef.enableMotor = false; //se attivo impedirebbe il movimento
     wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
-    wheelJointR = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
+    wheelEngineR = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
 }
 
 void GameEngine::drawBike(Bike *bike) {
@@ -371,7 +373,7 @@ void GameEngine::drawBike(Bike *bike) {
 
 
 
-    float speed = wheelJointL->GetMotorSpeed();
+    float speed = wheelEngineL->GetMotorSpeed();
     //std::cout << speed << std::endl;
 
 
