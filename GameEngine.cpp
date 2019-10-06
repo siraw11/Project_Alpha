@@ -11,6 +11,8 @@
 #include "Match.h"
 #include "Player.h"
 #include "Bike.h"
+#include "Item.h"
+#include "Coin.h"
 
 
 float cartX = 0.8;
@@ -60,6 +62,15 @@ void GameEngine::run() {
             {-1,   10},//back limit
             {0,    0},
             {10,   0},
+            {10.1, .1},
+            {19.2, .2},
+            {19.3, .3},
+            {19.4, .4},
+            {19.5, .5},
+            {19.6, 29.6},
+            {19.7, 29.7},
+            {19.8, 29.8},
+            {19.9, 29.9},
             {20,   30},
             {20,   0},
             {1000, 0},
@@ -70,12 +81,13 @@ void GameEngine::run() {
 
     Map level1(false, true, 1, level1Points, nullptr);
     Map level2(false, true, 1, level2Points, nullptr);
+    Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
-    Map *level = &level1;
-
-    Bike bike1("", "", 10, 0, 0, true, nullptr, nullptr, nullptr);
+    Map *level = &level2;
     Bike *bike = &bike1;
+
+    Item *item1 = new Item(3, .2, .7, .7);
 
 
     initBike(bike);
@@ -108,12 +120,18 @@ void GameEngine::run() {
             //Accellerazione a Destra
             wheelEngineL->EnableMotor(true);
             wheelEngineR->EnableMotor(true);
+            if (speed < 0) {
+                speed = 0;
+            }
             wheelEngineL->SetMotorSpeed(speed + bike->getSpeed());
             wheelEngineR->SetMotorSpeed(speed + bike->getSpeed());
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
             //Accellerazione a Sinistra
             wheelEngineL->EnableMotor(true);
             wheelEngineR->EnableMotor(true);
+            if (speed > 0) {
+                speed = 0;
+            }
             wheelEngineL->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
             wheelEngineR->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
@@ -125,11 +143,11 @@ void GameEngine::run() {
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             window.close();
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
-            initBike(bike);
 
         }
 
 
+        //std::cout << bike->cart->GetContactList() <<std::endl;
 
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
@@ -137,7 +155,25 @@ void GameEngine::run() {
         }
 
 
+
+        //controllo collisione con Items
+        float r1x = bike->cart->GetPosition().x;
+        float r1y = bike->cart->GetPosition().y;
+        float r1w = cartX;
+        float r1h = cartY;
+        float r2x = item1->getPosX();
+        float r2y = LINE + item1->getPosY();//posizione NON oggetto fisico, c'è bisogno di aggiungere il LINE
+        float r2w = item1->getWidth();
+        float r2h = item1->getHeight();
+        bool collided = checkCollision(r1x, r1y, r1w, r1h, r2x, r2y, r2w, r2h);
+        if (collided) {
+            item1->doSpecial();
+            std::cout << "collided" << std::endl;
+            //delete[] item1;//TODO:implement destructor
+        }
+
         drawMap(level);
+        drawItem(item1);
         drawBike(bike);
 
         window.display();
@@ -145,6 +181,13 @@ void GameEngine::run() {
 
 }
 
+bool
+GameEngine::checkCollision(float r1x, float r1y, float r1w, float r1h, float r2x, float r2y, float r2w, float r2h) {
+    if ((r1x + r1w >= r2x && r1x <= r2x + r2w) && ((r1y < r2y && r2y + r2h > r1y))) {//TODO:fix height intersection
+        return true;
+    }
+    return false;
+}
 
 float32 GameEngine::getTimeStep() const {
     return timeStep;
@@ -209,9 +252,9 @@ void GameEngine::drawMap(Map *level) {
     groundBodyDef.position.Set(0, LINE);
 
     b2Body *groundBody = world.CreateBody(&groundBodyDef);
-
     //sf::VertexArray terrain;
     sf::VertexArray terrain(sf::TriangleStrip, level->getMapPoints().size() * 2);
+
 
     int i = 0;
     int j = 0;
@@ -230,10 +273,11 @@ void GameEngine::drawMap(Map *level) {
         j++;
         i++;
     }
-
     //Unisco tutti i punti con delle rette
     b2ChainShape chain;
     chain.CreateChain(vs, level->getMapPoints().size());
+
+
     groundBody->CreateFixture(&chain, 0.0f);//0.0f->massa solido
 
     window->draw(terrain);
@@ -257,7 +301,7 @@ void GameEngine::initBike(Bike *bike) {
     cartFixtureDef.density = 2;
     cartFixtureDef.friction = 0.5;
     cartFixtureDef.restitution = 0.2;
-    cartFixtureDef.filter.groupIndex = 1;
+    cartFixtureDef.filter.groupIndex = 2;
 
     //Inizializzazione Cart
     bike->cart = world.CreateBody(&cartBodyDef);
@@ -281,7 +325,7 @@ void GameEngine::initBike(Bike *bike) {
     wheelFixtureDef.density = 20;
     wheelFixtureDef.friction = 5;//attrito
     wheelFixtureDef.restitution = 0.3;//rimbalzo
-    //wheelFixtureDef.filter.groupIndex = -1;
+    wheelFixtureDef.filter.groupIndex = -1;
 
     //Inizializzazione ruota sinistra
     wheelDef.position.Set(1, LINE - WHEEL_SIZE);//Posizione iniziale ruota sinistra
@@ -304,7 +348,7 @@ void GameEngine::initBike(Bike *bike) {
     dJointDefR_L.collideConnected = false;
     dJointDefR_L.localAnchorA.Set(0, 0);
     dJointDefR_L.localAnchorB.Set(0, 0);
-    dJointDefR_L.length = .95;
+    dJointDefR_L.length = 1.1;
     world.CreateJoint(&dJointDefR_L);
 
 
@@ -332,15 +376,13 @@ void GameEngine::initBike(Bike *bike) {
 
 
     //Caricamento Texture Ruote moto
-    bool wheelTextureFound = false;
-    wheelTextureFound = wheelTexture.loadFromFile("../textures/wheel.png");
+    bool wheelTextureFound = wheelTexture.loadFromFile("../textures/wheel.png");
     if (!wheelTextureFound)
         std::cout << "Impossibile caricare texture Ruote - Moto" << std::endl;
     //-----------------------
 
     //Caricamento Texture Cart moto
-    bool cartTextureFound = false;
-    cartTextureFound = cartTexture.loadFromFile("../textures/cart.png");
+    bool cartTextureFound = cartTexture.loadFromFile("../textures/cart.png");
     if (!cartTextureFound)
         std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
 
@@ -424,6 +466,24 @@ void GameEngine::drawBike(Bike *bike) {
     window->draw(cartDraw);
     window->draw(wheelLDraw);
     window->draw(wheelRDraw);
+}
+
+void GameEngine::drawItem(Item *item) {
+    sf::RectangleShape rect;
+
+    rect.setPosition(item->getPosX() * SCALE, (LINE - item->getPosY()) * SCALE);
+
+    rect.setSize(sf::Vector2f(item->getWidth() * SCALE, -item->getHeight() * SCALE));
+
+    sf::Texture itemTexture;
+    //Caricamento Texture Cart moto
+    bool itemTextureFound = itemTexture.loadFromFile("../textures/coin.png");
+    if (!itemTextureFound)
+        std::cout << "Impossibile caricare texture Item" << std::endl;
+    rect.setTexture(&itemTexture);
+
+
+    window->draw(rect);
 }
 
 
