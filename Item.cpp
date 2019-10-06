@@ -43,3 +43,7 @@ double Item::getHeight() const {
 void Item::setHeight(double height) {
     Item::height = height;
 }
+
+Item::~Item() {}
+
+void Item::doSpecial() {}

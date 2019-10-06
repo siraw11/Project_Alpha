@@ -30,7 +30,7 @@ public:
 
     void setHeight(double height);
 
-    virtual void doSpecial() = 0;
+    virtual void doSpecial();
 
 private:
     double posX;
