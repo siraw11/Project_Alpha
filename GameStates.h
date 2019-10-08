@@ -6,17 +6,11 @@
 #define GAME_GAMESTATES_H
 
 //Classe con i vari stati di gioco cosi da poterli cambiare all'occorrenza
-class GameStates {
-public:
-    GameStates();
-
-    enum States {
+enum class GameStates {
         Main_menu,
         Level,
         Pause,
         Dead
-    };
-    States states;
 };
 
 

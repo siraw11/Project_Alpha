@@ -5,7 +5,7 @@
 #include "Level.h"
 #include "GameLogic.h"
 
-Level::Level(int levelArray[500]) {
+Level::Level(int levelArray[], int column, int row) {
 
     size_of_enemy.x = 32;
     size_of_enemy.y = 32;
@@ -22,60 +22,60 @@ Level::Level(int levelArray[500]) {
 
 //-----Creazione vettori di oggetti----------------//
 
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 50; j++) {
-            if (levelArray[(i * 50) + j] == 7) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
+            if (levelArray[(i * column) + j] == type_enemy_octopus) {
                 Enemy newEnemy;
-                newEnemy.init(j * 32, i * 32, size_of_enemy);
+                newEnemy.init(j * size_of_tile, i * size_of_tile, size_of_enemy);
                 vector_of_enemy.push_back(newEnemy);
             }
 
-            if (levelArray[(i * 50) + j] == 2) {
-                Platform newPlatform(2);
-                newPlatform.init(j * 32, i * 32, size_of_platform);
+            if (levelArray[(i * column) + j] == type_grass) {
+                Platform newPlatform(type_grass);
+                newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
                 vector_of_platform.push_back(newPlatform);
             }
 
-            if (levelArray[(i * 50) + j] == 3) {
-                Platform newPlatform(3);
-                newPlatform.init(j * 32, i * 32, size_of_platform);
+            if (levelArray[(i * column) + j] == type_dirt) {
+                Platform newPlatform(type_dirt);
+                newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
                 vector_of_platform.push_back(newPlatform);
             }
 
-            if (levelArray[(i * 50) + j] == 10) {
-                Platform newPlatform(10);
-                newPlatform.init(j * 32, i * 32, size_of_platform);
+            if (levelArray[(i * column) + j] == type_platform_left) {
+                Platform newPlatform(type_platform_left);
+                newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
                 vector_of_platform.push_back(newPlatform);
             }
-            if (levelArray[(i * 50) + j] == 11) {
-                Platform newPlatform(11);
-                newPlatform.init(j * 32, i * 32, size_of_platform);
+            if (levelArray[(i * column) + j] == type_platform) {
+                Platform newPlatform(type_platform_right);
+                newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
                 vector_of_platform.push_back(newPlatform);
             }
-            if (levelArray[(i * 50) + j] == 12) {
-                Platform newPlatform(12);
-                newPlatform.init(j * 32, i * 32, size_of_platform);
+            if (levelArray[(i * column) + j] == type_platform_right) {
+                Platform newPlatform(type_platform_right);
+                newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
                 vector_of_platform.push_back(newPlatform);
             }
-            if (levelArray[(i * 50) + j] == 1) {
-                Platform newPlatform(1);
-                newPlatform.init(j * 32, i * 32, size_of_platform);
+            if (levelArray[(i * column) + j] == type_log) {
+                Platform newPlatform(type_log);
+                newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
                 vector_of_platform.push_back(newPlatform);
             }
 
-            if (levelArray[(i * 50) + j] == 5) {
-                PowerUp newPowerUp(5);
-                newPowerUp.init(j * 32, i * 32, size_of_powerUp);
+            if (levelArray[(i * column) + j] == type_powerUpBullet) {
+                PowerUp newPowerUp(type_powerUpBullet);
+                newPowerUp.init(j * size_of_tile, i * size_of_tile, size_of_powerUp);
                 vector_of_powerUp.push_back(newPowerUp);
             }
-            if (levelArray[(i * 50) + j] == 6) {
-                PowerUp newPowerUp(6);
-                newPowerUp.init(j * 32, i * 32, size_of_powerUp);
+            if (levelArray[(i * column) + j] == type_powerUpSpeed) {
+                PowerUp newPowerUp(type_powerUpSpeed);
+                newPowerUp.init(j * size_of_tile, i * size_of_tile, size_of_powerUp);
                 vector_of_powerUp.push_back(newPowerUp);
             }
 
-            if (levelArray[(i * 50) + j] == 9) {
-                player.init(j * 32, i * 32, size_of_player);
+            if (levelArray[(i * column) + j] == type_player) {
+                player.init(j * size_of_tile, i * size_of_tile, size_of_player);
             }
         }
     }
@@ -197,24 +197,24 @@ void Level::setTextures() {
     }
 
     for (int i = 0; i < vector_of_platform.size(); i++) {
-        if (vector_of_platform[i].t == 2)
+        if (vector_of_platform[i].t == type_dirt)
             vector_of_platform[i].setTexture("../textures/Platform/4.png");
-        if (vector_of_platform[i].t == 1)
+        if (vector_of_platform[i].t == type_grass)
             vector_of_platform[i].setTexture("../textures/Platform/2.png");
-        if (vector_of_platform[i].t == 3)
+        if (vector_of_platform[i].t == type_log)
             vector_of_platform[i].setTexture("../textures/Platform/49.png");
-        if (vector_of_platform[i].t == 10)
+        if (vector_of_platform[i].t == type_platform_left)
             vector_of_platform[i].setTexture("../textures/Platform/26.png");
-        if (vector_of_platform[i].t == 11)
+        if (vector_of_platform[i].t == type_platform)
             vector_of_platform[i].setTexture("../textures/Platform/28.png");
-        if (vector_of_platform[i].t == 12)
+        if (vector_of_platform[i].t == type_platform_right)
             vector_of_platform[i].setTexture("../textures/Platform/29.png");
     }
 
     for (int i = 0; i < vector_of_powerUp.size(); i++) {
-        if (vector_of_powerUp[i].type == 5)
+        if (vector_of_powerUp[i].type == type_powerUpBullet)
             vector_of_powerUp[i].setTexture("../textures/Antidote 1.png");
-        if (vector_of_powerUp[i].type == 6)
+        if (vector_of_powerUp[i].type == type_powerUpSpeed)
             vector_of_powerUp[i].setTexture("../textures/Health Potion 1.png");
     }
     for (int i = 0; i < vector_of_bullet.size(); i++) {

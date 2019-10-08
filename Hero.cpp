@@ -5,7 +5,7 @@
 #include "Hero.h"
 
 Hero::Hero() { //Setting dei parametri iniziali e texture
-    setAnimation("../textures/tux_from_linux.png", 3, 9);
+    setAnimation("../textures/tux_from_linux.png", frame_x, frame_y);
 
     isPowerBullet = false;
     moveSpeed = 1.8f;
@@ -48,7 +48,7 @@ void Hero::update(bool W, bool A, bool S, bool D) {
     }
 
     // Updating the texture based on the animation
-    animation.Update(row, 1.0f / 60.0f, facingRight);
+    animation.Update(row, delta_time, facingRight);
     rectShape.setTextureRect(animation.uvRect);
 }
 

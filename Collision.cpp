@@ -6,6 +6,9 @@
 
 void Collision::checkCollision(std::vector<Platform> *platform, Hero *player) {
 
+    int movementStopper = 0;
+    int movementCheck = 0;
+
     // Checking the collision on the x axis
     player->x += player->velocity.x * player->getMoveSpeed();
 
@@ -14,15 +17,15 @@ void Collision::checkCollision(std::vector<Platform> *platform, Hero *player) {
             player->y<(*platform)[i].hitBottom
                       && player->y + player->height>(*platform)[i].hitTop) {
 
-            if (player->velocity.x > 0) {
+            if (player->velocity.x > movementCheck) {
                 // Moving right so I'm hitting the left border of the platform
                 player->x = (*platform)[i].hitLeft - player->width;
-                player->velocity.x = 0;
+                player->velocity.x = movementStopper;
             }
-            if (player->velocity.x < 0) {
+            if (player->velocity.x < movementCheck) {
                 // Moving left so I'm hitting the right border of the platform
                 player->x = (*platform)[i].hitRight;
-                player->velocity.x = 0;
+                player->velocity.x = movementStopper;
             }
         }
     }
@@ -35,16 +38,16 @@ void Collision::checkCollision(std::vector<Platform> *platform, Hero *player) {
         if (player->x + player->width > (*platform)[i].hitLeft && player->x < (*platform)[i].hitRight &&
             player->y<(*platform)[i].hitBottom
                       && player->y + player->height>(*platform)[i].hitTop) {
-            if (player->velocity.y > 0) {
+            if (player->velocity.y > movementCheck) {
                 // Falling so I'm hitting the top border of the platform, I'm grounded
                 player->y = (*platform)[i].hitTop - player->height;
-                player->velocity.y = 0;
+                player->velocity.y = movementStopper;
                 player->isOnGround = true;
             }
-            if (player->velocity.y < 0) {
+            if (player->velocity.y < movementCheck) {
                 // Jumping so I'm hitting the bottom border of the platform
                 player->y = (*platform)[i].hitBottom;
-                player->velocity.y = 0;
+                player->velocity.y = movementStopper;
             }
         }
     }

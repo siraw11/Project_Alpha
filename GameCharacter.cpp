@@ -17,8 +17,8 @@ void GameCharacter::setMoveSpeed(float moveSpeed) {
     GameCharacter::moveSpeed = moveSpeed;
 }
 
-void GameCharacter::setAnimation(const std::string &textureDir, int xFrames, int yFrames) {
+void GameCharacter::setAnimation(const std::string &textureDir, unsigned int xFrames, unsigned int yFrames) {
     Object::setTexture(textureDir);
     // SetAnimation need a texture, number of frames and an update frequency
-    animation.setAnimation(&rectTexture, sf::Vector2u(xFrames, yFrames), 0.1f);
+    animation.setAnimation(&rectTexture, sf::Vector2u(xFrames, yFrames), switch_time);
 }

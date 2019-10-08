@@ -15,7 +15,7 @@ public:
 
     float getMoveSpeed() const;//getter velocità
     void setMoveSpeed(float moveSpeed);//setter velocità
-    void setAnimation(const std::string &textureDir, int xFrames, int yFrames);//setta l'animazione
+    void setAnimation(const std::string &textureDir, unsigned int xFrames, unsigned int yFrames);//setta l'animazione
     bool isOnGround;
     sf::Vector2f velocity;
 protected:
@@ -33,6 +33,7 @@ protected:
     Animation animation;
     bool facingRight;
     int row;
+    float switch_time = 1.f;
 };
 
 

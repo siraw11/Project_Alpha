@@ -3,7 +3,3 @@
 //
 
 #include "GameStates.h"
-
-GameStates::GameStates() {
-    states = Level;
-}

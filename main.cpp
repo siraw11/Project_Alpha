@@ -1,15 +1,20 @@
 #include <SFML/Graphics.hpp>
 #include <GameStates.h>
 #include <Level.h>
+#include <iostream>
+
+#define arrayRow 10
+#define arrayColumn 50
 
 int main() {
-
-    GameStates gameStates; //Creazione stati di gioco
+    GameStates stateChecker = GameStates::Level;
     //Menu menu;
     sf::Event event{};
+    unsigned int length = 1600;
+    unsigned int height = 320;
 
     //-----Livello 1-------//
-    int levelArray[50 * 10] = {
+    int levelArray[arrayColumn * arrayRow] = {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -32,11 +37,11 @@ int main() {
             2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
     };
 
-    Level level(levelArray);
+    Level level(levelArray, arrayColumn, arrayRow);
 
     //---------Loop di gioco------------//
 
-    sf::RenderWindow window(sf::VideoMode(50 * 32, 10 * 32), "Game");
+    sf::RenderWindow window(sf::VideoMode(length, height), "Game");
 
     while (window.isOpen()) {
 
@@ -45,13 +50,12 @@ int main() {
                 window.close();
         }
 
-        switch (gameStates.states) {
-            case gameStates.Main_menu: {
-            }
-            case gameStates.Level: {
+        if (stateChecker == GameStates::Main_menu) {
+            std::cout << "Sono nel menu" << std::endl;
+        }
+        if (stateChecker == GameStates::Level) {
 
-                level.Update(&window, &event);
-            }
+            level.Update(&window, &event);
         }
         window.display();
     }

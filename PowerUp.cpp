@@ -5,12 +5,16 @@
 #include "PowerUp.h"
 
 PowerUp::PowerUp(int t) {
+
     type = t;
     //bulletLifeIncr = 3.0f;
 }
 
 void PowerUp::setPower(Hero *hero, int type) {
-    if (type == 5) hero->setMoveSpeed(hero->getMoveSpeed() * 1.2f);
-    if (type == 6) hero->setIsPowerBullet(true);
+    int typeBulletLife = 5;
+    int typeSpeed = 6;
+    float movementSpeedMultiplier = 1.2f;
+    if (type == typeBulletLife) hero->setMoveSpeed(hero->getMoveSpeed() * movementSpeedMultiplier);
+    if (type == typeSpeed) hero->setIsPowerBullet(true);
 }
 
