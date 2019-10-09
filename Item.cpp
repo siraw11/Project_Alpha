@@ -46,4 +46,6 @@ void Item::setHeight(double height) {
 
 Item::~Item() {}
 
-void Item::doSpecial() {}
+void Item::doSpecial() {
+    std::cout << "Special!" << std::endl;
+}
