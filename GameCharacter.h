@@ -5,11 +5,11 @@
 #ifndef GAME_GAMECHARACTER_H
 #define GAME_GAMECHARACTER_H
 
-#include "Object.h"
+#include "RectangleShape.h"
 #include "Animation.h"
 
 //Classe derivata per nemici e per il player implementa il movimento e le animazioni
-class GameCharacter : public Object {
+class GameCharacter : public RectangleShape {
 public:
     GameCharacter();
 

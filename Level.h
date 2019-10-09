@@ -35,7 +35,7 @@ public:
     void setTextures();//Get texture globale
 public:
     //-----Vettori di oggetti------//
-    std::vector<Object> gian;
+    std::vector<RectangleShape> gian;
     std::vector<Platform> vector_of_platform;
     std::vector<Enemy> vector_of_enemy;
     std::vector<PowerUp> vector_of_powerUp;

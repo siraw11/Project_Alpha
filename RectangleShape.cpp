@@ -2,9 +2,9 @@
 // Created by andreatadde on 16/09/19.
 //
 
-#include "Object.h"
+#include "RectangleShape.h"
 
-void Object::init(float xInit, float yInit, sf::Vector2f size) {
+void RectangleShape::init(float xInit, float yInit, sf::Vector2f size) {
 
     x = xInit;
     y = yInit;
@@ -22,7 +22,7 @@ void Object::init(float xInit, float yInit, sf::Vector2f size) {
     rectShape.setSize(sf::Vector2f(width, height));
 }
 
-void Object::setTexture(const std::string &textureDir) {
+void RectangleShape::setTexture(const std::string &textureDir) {
 
     rectTexture.loadFromFile(textureDir);
     rectShape.setTexture(&rectTexture);
