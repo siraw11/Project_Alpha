@@ -160,17 +160,18 @@ void GameEngine::run() {
 
         drawMap(level);
 
+        //itero la lista degli Items nella mappa
         std::list<Item *> items = level->getMapItems();
         for (std::list<Item *>::iterator it = items.begin(); it != items.end(); it++) {
-            Item *item = *it;
+            //controllo se collidono
             bool collided = checkCollision(bike->cart->GetPosition().x, bike->cart->GetPosition().y, cartX, cartY,
-                                           item->getPosX(), LINE + item->getPosY(), item->getWidth(),
-                                           item->getHeight());
+                                           (*it)->getPosX(), LINE + (*it)->getPosY(), (*it)->getWidth(),
+                                           (*it)->getHeight());
             if (collided) {
-                item->doSpecial();
-                level->removeMapItem(*it);
+                (*it)->doSpecial();//eseguo la special
+                level->removeMapItem(*it);//rimuovo l'item in quanto già usato
             } else {
-                drawItem(*it);
+                drawItem(*it);//altrimenti disegno l'item
             }
         }
         std::cout << std::endl;

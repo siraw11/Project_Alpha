@@ -54,10 +54,8 @@ void Map::setMapItems(const std::list<Item *> &mapItems) {
 }
 
 bool Map::removeMapItem(Item *item) {
-    std::cout << "removing " << item << std::endl;
     mapItems.remove(item);
-    //delete item;
-
+    delete item;
 }
 
 
