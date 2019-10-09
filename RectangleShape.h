@@ -6,7 +6,7 @@
 
 //Classe base per tutti gli oggetti di gioco
 
-class Object {
+class RectangleShape {
 public:
 
     sf::RectangleShape rectShape;//HitBox

@@ -5,11 +5,11 @@
 #ifndef GAME_POWERUP_H
 #define GAME_POWERUP_H
 
-#include "Object.h"
+#include "RectangleShape.h"
 #include "Hero.h"
 #include "Bullet.h"
 
-class PowerUp : public Object {
+class PowerUp : public RectangleShape {
 public:
     PowerUp(int t);
 

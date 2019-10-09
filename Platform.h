@@ -5,11 +5,11 @@
 #ifndef GAME_PLATFORM_H
 #define GAME_PLATFORM_H
 
-#include "Object.h"
+#include "RectangleShape.h"
 
 //Oggetto per i tile di gioco
 
-class Platform : public Object {
+class Platform : public RectangleShape {
 public:
     Platform(int type);//Prende un intero in ingresso solo per sapere quale texture applicare
 public:

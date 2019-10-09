@@ -2,13 +2,13 @@
 #include <SFML/System.hpp>
 #include "../Hero.h"
 #include "../GameCharacter.h"
-#include "../Object.h"
+#include "../RectangleShape.h"
 #include "../Bullet.h"
 //
 // Created by davide on 28/09/19.
 
-TEST(Object,checkInitObject){
-    Object  o1;
+TEST(Bullet, checkInitObject) {
+    RectangleShape o1;
     o1.init(90,100,sf::Vector2f(10,20));
     ASSERT_EQ(90,o1.x);
     ASSERT_EQ(100,o1.y);

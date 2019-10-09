@@ -5,10 +5,10 @@
 #ifndef GAME_BULLET_H
 #define GAME_BULLET_H
 
-#include "Object.h"
+#include "RectangleShape.h"
 
 //Classe proiettile
-class Bullet : public Object {
+class Bullet : public RectangleShape {
 public:
     explicit Bullet(bool isPoweredUp, sf::Vector2f shootingDirectionInput);
 
