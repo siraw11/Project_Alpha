@@ -78,16 +78,19 @@ void GameEngine::run() {
     };
 
 
+    std::list<Item *> mapItemsLevel2;
+    mapItemsLevel2.push_back(new Item(3, .2, .7, .7));
+    mapItemsLevel2.push_back(new Item(4, .2, .7, .7));
 
-    Map level1(false, true, 1, level1Points, nullptr);
-    Map level2(false, true, 1, level2Points, nullptr);
+
+    Map level1(false, true, 1, level1Points, nullptr, {});
+    Map level2(false, true, 1, level2Points, nullptr, mapItemsLevel2);
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
     Map *level = &level2;
     Bike *bike = &bike1;
 
-    Item *item1 = new Item(3, .2, .7, .7);
 
 
     initBike(bike);
@@ -155,25 +158,23 @@ void GameEngine::run() {
         }
 
 
-
-        //controllo collisione con Items
-        float r1x = bike->cart->GetPosition().x;
-        float r1y = bike->cart->GetPosition().y;
-        float r1w = cartX;
-        float r1h = cartY;
-        float r2x = item1->getPosX();
-        float r2y = LINE + item1->getPosY();//posizione NON oggetto fisico, c'è bisogno di aggiungere il LINE
-        float r2w = item1->getWidth();
-        float r2h = item1->getHeight();
-        bool collided = checkCollision(r1x, r1y, r1w, r1h, r2x, r2y, r2w, r2h);
-        if (collided) {
-            item1->doSpecial();
-            std::cout << "collided" << std::endl;
-            //delete[] item1;//TODO:implement destructor
-        }
-
         drawMap(level);
-        drawItem(item1);
+
+        std::list<Item *> items = level->getMapItems();
+        for (std::list<Item *>::iterator it = items.begin(); it != items.end(); it++) {
+            Item *item = *it;
+            bool collided = checkCollision(bike->cart->GetPosition().x, bike->cart->GetPosition().y, cartX, cartY,
+                                           item->getPosX(), LINE + item->getPosY(), item->getWidth(),
+                                           item->getHeight());
+            if (collided) {
+                item->doSpecial();
+                level->removeMapItem(*it);
+            } else {
+                drawItem(*it);
+            }
+        }
+        std::cout << std::endl;
+
         drawBike(bike);
 
         window.display();

@@ -8,7 +8,9 @@
 #include "Player.h"
 
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player* _p):isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked), mapPoints(_mapPoints), p(_p) {}
+Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player *_p,
+         std::list<Item *> _mapItems) : isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked),
+                                        mapPoints(_mapPoints), p(_p), mapItems(_mapItems) {}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
@@ -40,6 +42,22 @@ const std::list<Position> &Map::getMapPoints() const {
 
 void Map::setMapPoints(const std::list<Position> &mapPoints) {
     Map::mapPoints = mapPoints;
+}
+
+
+const std::list<Item *> &Map::getMapItems() const {
+    return mapItems;
+}
+
+void Map::setMapItems(const std::list<Item *> &mapItems) {
+    Map::mapItems = mapItems;
+}
+
+bool Map::removeMapItem(Item *item) {
+    std::cout << "removing " << item << std::endl;
+    mapItems.remove(item);
+    //delete item;
+
 }
 
 
