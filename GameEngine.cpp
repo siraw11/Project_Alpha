@@ -41,8 +41,8 @@ void GameEngine::run() {
 
     std::list<Position> level1Points = {
             {-1, 10},//back limit
-            {0,  0},
-            {3,  0},
+            {0,  0.},
+            {3,  0.},
             {8,  1},
             {11, 0},
             {15, -1},
@@ -62,15 +62,15 @@ void GameEngine::run() {
             {-1,   10},//back limit
             {0,    0},
             {10,   0},
-            {10.1, .1},
-            {19.2, .2},
-            {19.3, .3},
-            {19.4, .4},
-            {19.5, .5},
-            {19.6, 29.6},
-            {19.7, 29.7},
-            {19.8, 29.8},
-            {19.9, 29.9},
+            {10.1, .05},
+            {19.,  .1},
+            {19.5, .15},
+            {20,   .2},
+            {20.5, .25},
+            {21.,  29.3},
+            {21.5, 29.35},
+            {22.,  29.4},
+            {22.5, 29.45},
             {20,   30},
             {20,   0},
             {1000, 0},
@@ -88,12 +88,12 @@ void GameEngine::run() {
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
+    //TODO:valori del puntatore verranno dalle scelte del menu
     Map *level = &level2;
     Bike *bike = &bike1;
 
 
-
-    initBike(bike);
+    initBike(bike);//inizializzo la fisica del gioco
 
     while (window.isOpen()) {
         window.clear(sf::Color(255, 255, 255));//ripulisco nuovo frame
@@ -158,7 +158,7 @@ void GameEngine::run() {
         }
 
 
-        drawMap(level);
+        drawMap(level);//disegno la mappa del livello
 
         //itero la lista degli Items nella mappa
         std::list<Item *> items = level->getMapItems();
@@ -174,11 +174,9 @@ void GameEngine::run() {
                 drawItem(*it);//altrimenti disegno l'item
             }
         }
-        std::cout << std::endl;
 
-        drawBike(bike);
-
-        window.display();
+        drawBike(bike);//disegno la moto
+        window.display();//mostro il disegno nella finestra di gioco
     }
 
 }
