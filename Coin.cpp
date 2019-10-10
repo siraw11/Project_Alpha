@@ -8,7 +8,13 @@
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
 
-Coin::Coin(int _value):value(_value) {}
+
+Coin::Coin(double _posX, double _posY, double _width, double _height, int _value, std::string _texture) : Item(_posX,
+                                                                                                               _posY,
+                                                                                                               _width,
+                                                                                                               _height,
+                                                                                                               _texture),
+                                                                                                          value(_value) {}
 
 int Coin::getValue() const {
     return value;
@@ -19,5 +25,5 @@ void Coin::setValue(int value) {
 }
 
 void Coin::doSpecial(){
-
+    std::cout << "Special! Addedd:" << value << " coins" << std::endl;
 }
