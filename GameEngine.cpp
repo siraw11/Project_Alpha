@@ -61,16 +61,11 @@ void GameEngine::run() {
     std::list<Position> level2Points = {
             {-1,   10},//back limit
             {0,    0},
-            {10,   0},
-            {10.1, .05},
-            {19.,  .1},
-            {19.5, .15},
-            {20,   .2},
-            {20.5, .25},
-            {21.,  29.3},
-            {21.5, 29.35},
-            {22.,  29.4},
-            {22.5, 29.45},
+            {4.9,  0},
+            {5,    .05},
+            {5,    0},
+            {11,   -2},
+            {15,   -2},
             {20,   30},
             {20,   0},
             {1000, 0},
@@ -80,7 +75,8 @@ void GameEngine::run() {
 
     std::list<Item *> mapItemsLevel2;
     mapItemsLevel2.push_back(new Item(3, .2, .7, .7));
-    mapItemsLevel2.push_back(new Item(4, .2, .7, .7));
+    mapItemsLevel2.push_back(new Coin(5, .2, .7, .7, 50));
+    mapItemsLevel2.push_back(new Coin(10, .3, .7, .7, 30));
 
 
     Map level1(false, true, 1, level1Points, nullptr, {});
@@ -88,7 +84,7 @@ void GameEngine::run() {
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
-    //TODO:valori del puntatore verranno dalle scelte del menu
+    //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
     Map *level = &level2;
     Bike *bike = &bike1;
 
@@ -477,10 +473,11 @@ void GameEngine::drawItem(Item *item) {
 
     sf::Texture itemTexture;
     //Caricamento Texture Cart moto
-    bool itemTextureFound = itemTexture.loadFromFile("../textures/coin.png");
+    bool itemTextureFound = itemTexture.loadFromFile(item->getTexture());
     if (!itemTextureFound)
         std::cout << "Impossibile caricare texture Item" << std::endl;
-    rect.setTexture(&itemTexture);
+    else
+        rect.setTexture(&itemTexture);
 
 
     window->draw(rect);
