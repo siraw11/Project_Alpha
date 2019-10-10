@@ -41,8 +41,8 @@ void GameEngine::run() {
 
     std::list<Position> level1Points = {
             {-1, 10},//back limit
-            {0,  0},
-            {3,  0},
+            {0,  0.},
+            {3,  0.},
             {8,  1},
             {11, 0},
             {15, -1},
@@ -61,16 +61,11 @@ void GameEngine::run() {
     std::list<Position> level2Points = {
             {-1,   10},//back limit
             {0,    0},
-            {10,   0},
-            {10.1, .1},
-            {19.2, .2},
-            {19.3, .3},
-            {19.4, .4},
-            {19.5, .5},
-            {19.6, 29.6},
-            {19.7, 29.7},
-            {19.8, 29.8},
-            {19.9, 29.9},
+            {4.9,  0},
+            {5,    .05},
+            {5,    0},
+            {11,   -2},
+            {15,   -2},
             {20,   30},
             {20,   0},
             {1000, 0},
@@ -78,19 +73,23 @@ void GameEngine::run() {
     };
 
 
+    std::list<Item *> mapItemsLevel2;
+    mapItemsLevel2.push_back(new Item(3, .2, .7, .7));
+    mapItemsLevel2.push_back(new Coin(5, .2, .7, .7, 50));
+    mapItemsLevel2.push_back(new Coin(10, .3, .7, .7, 30));
 
-    Map level1(false, true, 1, level1Points, nullptr);
-    Map level2(false, true, 1, level2Points, nullptr);
+
+    Map level1(false, true, 1, level1Points, nullptr, {});
+    Map level2(false, true, 1, level2Points, nullptr, mapItemsLevel2);
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
+    //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
     Map *level = &level2;
     Bike *bike = &bike1;
 
-    Item *item1 = new Item(3, .2, .7, .7);
 
-
-    initBike(bike);
+    initBike(bike);//inizializzo la fisica del gioco
 
     while (window.isOpen()) {
         window.clear(sf::Color(255, 255, 255));//ripulisco nuovo frame
@@ -155,28 +154,25 @@ void GameEngine::run() {
         }
 
 
+        drawMap(level);//disegno la mappa del livello
 
-        //controllo collisione con Items
-        float r1x = bike->cart->GetPosition().x;
-        float r1y = bike->cart->GetPosition().y;
-        float r1w = cartX;
-        float r1h = cartY;
-        float r2x = item1->getPosX();
-        float r2y = LINE + item1->getPosY();//posizione NON oggetto fisico, c'è bisogno di aggiungere il LINE
-        float r2w = item1->getWidth();
-        float r2h = item1->getHeight();
-        bool collided = checkCollision(r1x, r1y, r1w, r1h, r2x, r2y, r2w, r2h);
-        if (collided) {
-            item1->doSpecial();
-            std::cout << "collided" << std::endl;
-            //delete[] item1;//TODO:implement destructor
+        //itero la lista degli Items nella mappa
+        std::list<Item *> items = level->getMapItems();
+        for (std::list<Item *>::iterator it = items.begin(); it != items.end(); it++) {
+            //controllo se collidono
+            bool collided = checkCollision(bike->cart->GetPosition().x, bike->cart->GetPosition().y, cartX, cartY,
+                                           (*it)->getPosX(), LINE + (*it)->getPosY(), (*it)->getWidth(),
+                                           (*it)->getHeight());
+            if (collided) {
+                (*it)->doSpecial();//eseguo la special
+                level->removeMapItem(*it);//rimuovo l'item in quanto già usato
+            } else {
+                drawItem(*it);//altrimenti disegno l'item
+            }
         }
 
-        drawMap(level);
-        drawItem(item1);
-        drawBike(bike);
-
-        window.display();
+        drawBike(bike);//disegno la moto
+        window.display();//mostro il disegno nella finestra di gioco
     }
 
 }
@@ -477,10 +473,11 @@ void GameEngine::drawItem(Item *item) {
 
     sf::Texture itemTexture;
     //Caricamento Texture Cart moto
-    bool itemTextureFound = itemTexture.loadFromFile("../textures/coin.png");
+    bool itemTextureFound = itemTexture.loadFromFile(item->getTexture());
     if (!itemTextureFound)
         std::cout << "Impossibile caricare texture Item" << std::endl;
-    rect.setTexture(&itemTexture);
+    else
+        rect.setTexture(&itemTexture);
 
 
     window->draw(rect);
