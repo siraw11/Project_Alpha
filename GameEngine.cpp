@@ -29,15 +29,12 @@ GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video, int _framerate) : 
                                                                                 framerate(_framerate) {}
 
 void GameEngine::run() {
-    sf::RenderWindow window(video, "Motocross 2D", sf::Style::Default);//Create window withe default resolution
-    window.setFramerateLimit(framerate);//Imposto framerate limit
-    this->window = &window;
 
-    LINE = (window.getSize().y / SCALE) / 1.3 + 0.01;
+    LINE = (window->getSize().y / SCALE) / 1.3 + 0.01;
 
     sf::View view;
-    view.reset(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
-    window.setView(view);
+    view.reset(sf::FloatRect(0, 0, window->getSize().x, window->getSize().y));
+    window->setView(view);
 
     std::list<Position> level1Points = {
             {-1, 10},//back limit
@@ -91,8 +88,8 @@ void GameEngine::run() {
 
     initBike(bike);//inizializzo la fisica del gioco
 
-    while (window.isOpen()) {
-        window.clear(sf::Color(255, 255, 255));//ripulisco nuovo frame
+    while (window->isOpen()) {
+        window->clear(sf::Color(255, 255, 255));//ripulisco nuovo frame
         sf::Event event;
 
 
@@ -104,10 +101,10 @@ void GameEngine::run() {
 
 
         if (((bike->wheelL->GetPosition().x + offsetX) * SCALE) >
-            (window.getSize().x / 2)) {     //la camera inizia il movimento una volta superata la metà schermo
+            (window->getSize().x / 2)) {     //la camera inizia il movimento una volta superata la metà schermo
             view.setCenter((bike->wheelL->GetPosition().x + offsetX) * SCALE,
                            (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera segue il veicolo
-            window.setView(view);
+            window->setView(view);
         }
 
         wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
@@ -140,7 +137,7 @@ void GameEngine::run() {
             wheelEngineL->SetMotorSpeed(0);
             wheelEngineR->SetMotorSpeed(0);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-            window.close();
+            window->close();
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
 
         }
@@ -148,9 +145,9 @@ void GameEngine::run() {
 
         //std::cout << bike->cart->GetContactList() <<std::endl;
 
-        while (window.pollEvent(event)) {
+        while (window->pollEvent(event)) {
             if (event.type == sf::Event::Closed)
-                window.close();
+                window->close();
         }
 
 
@@ -172,7 +169,7 @@ void GameEngine::run() {
         }
 
         drawBike(bike);//disegno la moto
-        window.display();//mostro il disegno nella finestra di gioco
+        window->display();//mostro il disegno nella finestra di gioco
     }
 
 }
