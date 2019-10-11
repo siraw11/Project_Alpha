@@ -42,6 +42,7 @@ protected:
     int strength;
     int speed;
 
+
     Weapon* weapon;
 
 };

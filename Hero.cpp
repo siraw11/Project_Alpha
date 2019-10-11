@@ -14,9 +14,22 @@ Item *Hero::getItem() const {
 void Hero::setItem(Item *item) {
     Hero::item = item;
 }
-//void Hero::isLegalTile(Map &map) {
-    //if()
-//}
 
+void Hero::animationControl(int typeAnimation){
+   setTextureRect(sf::IntRect(0,64*typeAnimation,64,64));
 
+}
+
+int Hero::animation(int n, int direction) {
+
+    if(n>0 ){
+        int k=n-1;
+        setTextureRect((sf::IntRect(64*k,64*direction,64,64)));
+        n++;
+    }
+     
+
+return n;
+
+}
 

@@ -10,16 +10,15 @@
 #include "Item.h"
 
 
-class Hero: public Knight, public Archer, public Mage{
+class Hero : public Knight, public Archer, public Mage{
 public:
     Hero(int a,int hp,int s, float sp);
 
     Item* getItem() const;
-
     void setItem(Item *item);
 
-    //void isLegalTile(Map &map);
-
+   void animationControl(int typeAnimation);//7=right,6=down,5=left,4=up
+   int animation(int n, int diretion);
 private:
     Item* item;
 
