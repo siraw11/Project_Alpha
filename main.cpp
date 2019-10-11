@@ -351,10 +351,6 @@ int main() {
 
                                     }
 
-                                    std::cout << "Select class button has been pressed"
-                                              << std::endl;
-
-                                    break;
                                 }
                                 case 2:
                                     window.close();
