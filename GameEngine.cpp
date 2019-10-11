@@ -470,13 +470,15 @@ void GameEngine::drawItem(Item *item) {
 
     sf::Texture itemTexture;
     //Caricamento Texture Cart moto
-    bool itemTextureFound = itemTexture.loadFromFile(item->getTexture());
-    if (!itemTextureFound)
-        std::cout << "Impossibile caricare texture Item" << std::endl;
-    else
-        rect.setTexture(&itemTexture);
+    if (item->getTexture() != "") {
+        bool itemTextureFound = itemTexture.loadFromFile(item->getTexture());
+        if (!itemTextureFound)
+            std::cout << "Impossibile caricare texture Item" << std::endl;
+        else
+            rect.setTexture(&itemTexture);
 
 
+    }
     window->draw(rect);
 }
 
