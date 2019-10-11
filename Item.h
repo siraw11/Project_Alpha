@@ -9,7 +9,11 @@
 
 class Item {
 public:
-    Item(double posX = 0, double posY = 0, double width = 0, double height = 0);
+    Item(double posX = 0, double posY = 0, double width = 0, double height = 0, std::string texture = "");
+
+    const std::string &getTexture() const;
+
+    void setTexture(const std::string &texture);
 
     ~Item();
 
@@ -30,13 +34,14 @@ public:
 
     void setHeight(double height);
 
-    virtual void doSpecial() = 0;
+    virtual void doSpecial();
 
 private:
     double posX;
     double posY;
     double width;
     double height;
+    std::string texture;
 };
 
 

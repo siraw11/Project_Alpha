@@ -10,6 +10,7 @@
 #include "Player.h"
 #include "Observer.h"
 #include "Subject.h"
+#include "Item.h"
 
 
 
@@ -18,8 +19,9 @@ class Map:Observer {
 public:
 
 
-    Map(bool isCompleted=0, bool isUnlocked=0, double record=1, std::list<Position> mapPoints = {}, Player* p= nullptr);
-    //TODO smart pointer Item
+    Map(bool isCompleted = 0, bool isUnlocked = 0, double record = 0, std::list<Position> mapPoints = {},
+        Player *p = nullptr, std::list<Item *> mapItems = {});
+
     virtual ~Map();
     virtual void update() override;
     virtual void attach() override;
@@ -42,6 +44,12 @@ public:
 
     void setMapPoints(const std::list<Position> &mapPoints);
 
+    const std::list<Item *> &getMapItems() const;
+
+    void setMapItems(const std::list<Item *> &mapItems);
+
+    bool removeMapItem(Item *item);
+
 
 
 private:
@@ -49,6 +57,7 @@ private:
     bool isUnlocked;
     double record;
     std::list<Position> mapPoints;
+    std::list<Item *> mapItems;
     Player* p;
 
 };

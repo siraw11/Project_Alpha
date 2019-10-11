@@ -11,59 +11,45 @@
 #include "Match.h"
 #include "Player.h"
 #include "Bike.h"
+#include "Item.h"
+#include "Coin.h"
+
 
 float cartX = 0.8;
 float cartY = 0.4;
-b2WheelJoint* wheelJointL;
-b2WheelJoint* wheelJointR;
+b2WheelJoint *wheelEngineL;
+b2WheelJoint *wheelEngineR;
+sf::Texture wheelTexture;
+sf::Texture cartTexture;
+float flipAngle = 0;
+int countFlips = 0;
 
 
 GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video, int _framerate) : gravity(_gravity), video(_video),
                                                                                 framerate(_framerate) {}
 
 void GameEngine::run() {
-    LINE = (window->getSize().y / SCALE) / 1.3 + 0.01;
+    sf::RenderWindow window(video, "Motocross 2D", sf::Style::Default);//Create window withe default resolution
+    window.setFramerateLimit(framerate);//Imposto framerate limit
+    this->window = &window;
+
+    LINE = (window.getSize().y / SCALE) / 1.3 + 0.01;
 
     sf::View view;
-    view.reset(sf::FloatRect(0, 0, window->getSize().x, window->getSize().y));
-    window->setView(view);
-
+    view.reset(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+    window.setView(view);
 
     std::list<Position> level1Points = {
-            {-1,  10},//back limit
-            {0,   0},
-            {3,   0},
-            {8,   1},
-            {8.1, 1.1},
-            {8.2, 1.2},
-            {8.3, 1.3},
-            {8.4, 1.2},
-            {8.5, 1.1},
-            {8.6, 1},
-            {11,  0},
-            {15,  -1},
-            {20,  0},
-            {25,  0},
-            {30,  0.5},
-            {35,  -2},
-            {40,  0},
-            {43,  0},
-            {45,  1},
-            {55,  1},
-            {55,  10}//front limit
-    };
-
-    std::list<Position> level2Points = {
             {-1, 10},//back limit
-            {0,  3},
-            {3,  3},
-            {8,  -1},
+            {0,  0.},
+            {3,  0.},
+            {8,  1},
             {11, 0},
             {15, -1},
             {20, 0},
             {25, 0},
             {30, 0.5},
-            {35, -2},
+            {35, -1},
             {40, 0},
             {43, 0},
             {45, 1},
@@ -71,99 +57,133 @@ void GameEngine::run() {
             {55, 10}//front limit
     };
 
-    Map level1(false, true, 1, level1Points, nullptr);
-    Map *level = &level1;
+
+    std::list<Position> level2Points = {
+            {-1,   10},//back limit
+            {0,    0},
+            {4.9,  0},
+            {5,    .05},
+            {5,    0},
+            {11,   -2},
+            {15,   -2},
+            {20,   30},
+            {20,   0},
+            {1000, 0},
+            {1000, 10}//front limit
+    };
 
 
-    Bike bike1("", "", 20, 0, 0, true, nullptr, nullptr, nullptr);
+    std::list<Item *> mapItemsLevel2;
+    mapItemsLevel2.push_back(new Item(3, .2, .7, .7));
+    mapItemsLevel2.push_back(new Coin(5, .2, .7, .7, 50));
+    mapItemsLevel2.push_back(new Coin(10, .3, .7, .7, 30));
+
+
+    Map level1(false, true, 1, level1Points, nullptr, {});
+    Map level2(false, true, 1, level2Points, nullptr, mapItemsLevel2);
+    Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
+
+
+    //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
+    Map *level = &level2;
     Bike *bike = &bike1;
-    initBike(bike);
 
-    while (window->isOpen()) {
-        window->clear(sf::Color(255, 255, 255));//clear all,new frame!
+
+    initBike(bike);//inizializzo la fisica del gioco
+
+    while (window.isOpen()) {
+        window.clear(sf::Color(255, 255, 255));//ripulisco nuovo frame
         sf::Event event;
 
 
-        world.Step(timeStep, velocityIterations, positionIterations);//calculate world simulation step
+        world.Step(timeStep, velocityIterations, positionIterations);
 
 
         float offsetX = 3;
         float offsetY = 1;
+
+
         if (((bike->wheelL->GetPosition().x + offsetX) * SCALE) >
-            (window->getSize().x / 2)) {     //camera start moving when bike is in the center
+            (window.getSize().x / 2)) {     //la camera inizia il movimento una volta superata la metà schermo
             view.setCenter((bike->wheelL->GetPosition().x + offsetX) * SCALE,
-                           (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera moving on bike
-            window->setView(view);
+                           (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera segue il veicolo
+            window.setView(view);
+        }
+
+        wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
+        wheelEngineR->EnableMotor(false);//impedisce il blocco delle ruote
+
+        float speed = wheelEngineL->GetMotorSpeed();//Calcolo l'attuale velocità del motore
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+            //Accellerazione a Destra
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            if (speed < 0) {
+                speed = 0;
+            }
+            wheelEngineL->SetMotorSpeed(speed + bike->getSpeed());
+            wheelEngineR->SetMotorSpeed(speed + bike->getSpeed());
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+            //Accellerazione a Sinistra
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            if (speed > 0) {
+                speed = 0;
+            }
+            wheelEngineL->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
+            wheelEngineR->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+            //Freno a mano
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            wheelEngineL->SetMotorSpeed(0);
+            wheelEngineR->SetMotorSpeed(0);
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            window.close();
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
+
         }
 
 
+        //std::cout << bike->cart->GetContactList() <<std::endl;
 
-        //std::cout << "Speed:" << bike->wheelL->GetLinearVelocity().x << "  |  " << bike->wheelL->GetLinearVelocity().y << std::endl;
-        //std::cout << "Position:" << bike.wheelL->GetPosition().x << "  |  " << bike.wheelL->GetPosition().y << std::endl;
-
-        while (window->pollEvent(event)) {
+        while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
-                window->close();
-            if (event.type == sf::Event::TextEntered) {
-                char keyPressed = static_cast<char>(event.text.unicode);
-                float speed;
+                window.close();
+        }
 
-                switch (keyPressed) {
-                    case 'd'://right
-                        speed = wheelJointL->GetMotorSpeed();
-                        if(speed>=0){
-                            wheelJointL->SetMotorSpeed(speed+ bike->getSpeed());
-                            wheelJointR->SetMotorSpeed(speed+ bike->getSpeed());
-                        }else{
-                            if(speed<-0.2){
-                                wheelJointL->SetMotorSpeed(speed/2);
-                                wheelJointR->SetMotorSpeed(speed/2);
-                            }else{
-                                wheelJointL->SetMotorSpeed(0);
-                                wheelJointR->SetMotorSpeed(0);
-                            }
-                        }
-                        break;
-                    case 'a'://left
-                        speed = wheelJointL->GetMotorSpeed();
-                        if(speed>0){//frenata post accellerazione
-                            if(speed>0.2){
-                                wheelJointL->SetMotorSpeed(speed/2);
-                                wheelJointR->SetMotorSpeed(speed/2);
-                            }else{
-                                wheelJointL->SetMotorSpeed(0);
-                                wheelJointR->SetMotorSpeed(0);
-                            }
-                        }else{//retromarcia
-                            wheelJointL->SetMotorSpeed(-(abs(speed)+ bike->getSpeed()));
-                            wheelJointR->SetMotorSpeed(-(abs(speed)+ bike->getSpeed()));
-                        }
-                        break;
-                    case char(32)://hard brake
-                        wheelJointL->SetMotorSpeed(0);
-                        wheelJointR->SetMotorSpeed(0);
-                        break;
-                    case 'w'://vai a su
-                        //(bike->wheelR->SetLinearVelocity(b2Vec2(bike->wheelR->GetLinearVelocity().x, -10)));
-                        break;
-                    case 's'://vai a giu
-                        //(bike->wheelL->SetLinearVelocity(b2Vec2(bike->wheelL->GetLinearVelocity().x, -10)));
-                        break;
 
-                    case 'r'://vai a giu
-                        break;
-                }
+        drawMap(level);//disegno la mappa del livello
+
+        //itero la lista degli Items nella mappa
+        std::list<Item *> items = level->getMapItems();
+        for (std::list<Item *>::iterator it = items.begin(); it != items.end(); it++) {
+            //controllo se collidono
+            bool collided = checkCollision(bike->cart->GetPosition().x, bike->cart->GetPosition().y, cartX, cartY,
+                                           (*it)->getPosX(), LINE + (*it)->getPosY(), (*it)->getWidth(),
+                                           (*it)->getHeight());
+            if (collided) {
+                (*it)->doSpecial();//eseguo la special
+                level->removeMapItem(*it);//rimuovo l'item in quanto già usato
+            } else {
+                drawItem(*it);//altrimenti disegno l'item
             }
         }
 
-        drawMap(level);
-        drawBike(bike);
-
-        window->display();
+        drawBike(bike);//disegno la moto
+        window.display();//mostro il disegno nella finestra di gioco
     }
 
 }
 
+bool
+GameEngine::checkCollision(float r1x, float r1y, float r1w, float r1h, float r2x, float r2y, float r2w, float r2h) {
+    if ((r1x + r1w >= r2x && r1x <= r2x + r2w) && ((r1y < r2y && r2y + r2h > r1y))) {//TODO:fix height intersection
+        return true;
+    }
+    return false;
+}
 
 float32 GameEngine::getTimeStep() const {
     return timeStep;
@@ -224,11 +244,13 @@ void GameEngine::setFramerate(int framerate) {
 
 void GameEngine::drawMap(Map *level) {
     b2BodyDef groundBodyDef;
+    groundBodyDef.type = b2_staticBody;
     groundBodyDef.position.Set(0, LINE);
-    b2Body *groundBody = world.CreateBody(&groundBodyDef);
 
+    b2Body *groundBody = world.CreateBody(&groundBodyDef);
     //sf::VertexArray terrain;
     sf::VertexArray terrain(sf::TriangleStrip, level->getMapPoints().size() * 2);
+
 
     int i = 0;
     int j = 0;
@@ -247,178 +269,222 @@ void GameEngine::drawMap(Map *level) {
         j++;
         i++;
     }
-
     //Unisco tutti i punti con delle rette
     b2ChainShape chain;
     chain.CreateChain(vs, level->getMapPoints().size());
-    groundBody->CreateFixture(&chain, 0.0f);//0.0f->mass of solid
+
+
+    groundBody->CreateFixture(&chain, 0.0f);//0.0f->massa solido
 
     window->draw(terrain);
 }
 
 void GameEngine::initBike(Bike *bike) {
 
-    b2BodyDef cartBodyDef;
-
-    cartBodyDef.type = b2_dynamicBody; //this will be a dynamic body
-    cartBodyDef.position.Set(1, LINE - cartY - WHEEL_SIZE -2); //set the starting position
-
-    bike->cart = world.CreateBody(&cartBodyDef);
+    /*----------------------------------------
+     * Definizione Cart Moto
+     */
+    //Definizione oggetto fisico del Cart
     b2PolygonShape cartShape;
     cartShape.SetAsBox(cartX, cartY);
+    b2BodyDef cartBodyDef;
+    cartBodyDef.type = b2_dynamicBody;
+    cartBodyDef.position.Set(1, LINE - cartY - WHEEL_SIZE ); //posizione iniziale
+
+    //Definizione caratteristiche fisiche
     b2FixtureDef cartFixtureDef;
     cartFixtureDef.shape = &cartShape;
     cartFixtureDef.density = 2;
     cartFixtureDef.friction = 0.5;
     cartFixtureDef.restitution = 0.2;
-    cartFixtureDef.filter.groupIndex = 1;
+    cartFixtureDef.filter.groupIndex = 2;
+
+    //Inizializzazione Cart
+    bike->cart = world.CreateBody(&cartBodyDef);
     bike->cart->CreateFixture(&cartFixtureDef);
 
 
+    /*----------------------------------------
+     * Definizione Ruote Moto
+     */
 
-    b2BodyDef wheelLDef;
-    wheelLDef.type = b2_dynamicBody;
-    //wheelLDef.position.Set(1, LINE - WHEEL_SIZE);//initial position
-    wheelLDef.position.Set(1, LINE - WHEEL_SIZE);//initial position
-
-    bike->wheelL = world.CreateBody(&wheelLDef);
+    //Definizione oggetto fisico delle ruote
     b2CircleShape dynamicWheel;
     dynamicWheel.m_p.Set(0, 0);
     dynamicWheel.m_radius = WHEEL_SIZE;
-    //altre caratteristiche fisiche della ruota
-    b2FixtureDef fixtureDef;
-    fixtureDef.shape = &dynamicWheel;
-    fixtureDef.density = 10;
-    fixtureDef.friction = 5;//attrito
-    fixtureDef.restitution = 0;//rimbalzo
-    //fixtureDef.filter.groupIndex = -1;
-    bike->wheelL->CreateFixture(&fixtureDef);
-    //disegno la ruota
+    b2BodyDef wheelDef;
+    wheelDef.type = b2_dynamicBody;
+
+    //Definizione caratteristiche fisiche delle ruote
+    b2FixtureDef wheelFixtureDef;
+    wheelFixtureDef.shape = &dynamicWheel;
+    wheelFixtureDef.density = 20;
+    wheelFixtureDef.friction = 5;//attrito
+    wheelFixtureDef.restitution = 0.3;//rimbalzo
+    wheelFixtureDef.filter.groupIndex = -1;
+
+    //Inizializzazione ruota sinistra
+    wheelDef.position.Set(1, LINE - WHEEL_SIZE);//Posizione iniziale ruota sinistra
+    bike->wheelL = world.CreateBody(&wheelDef);
+    bike->wheelL->CreateFixture(&wheelFixtureDef);
+
+    //Inizializzazione ruota destra
+    wheelDef.position.Set(3, LINE - WHEEL_SIZE);//Posizione iniziale ruota destra
+    bike->wheelR = world.CreateBody(&wheelDef);
+    bike->wheelR->CreateFixture(&wheelFixtureDef);
 
 
+    /*
+     * Definizione Joints Moto
+     */
 
-    b2BodyDef wheelRDef;
-    wheelRDef.type = b2_dynamicBody;
-    //wheelRDef.position.Set(2, LINE - WHEEL_SIZE);//initial position
-    wheelRDef.position.Set(3, LINE - WHEEL_SIZE);//initial position
-
-
-    bike->wheelR = world.CreateBody(&wheelRDef);
-
-    //creo la ruota come sfera(sempre Box2D)
-    b2CircleShape dynamicWheelR;
-    dynamicWheelR.m_p.Set(0, 0);
-    dynamicWheelR.m_radius = WHEEL_SIZE;
-    //altre caratteristiche fisiche della ruota
-    b2FixtureDef fixtureDefR;
-    fixtureDefR.shape = &dynamicWheelR;
-    fixtureDefR.density = 10;
-    fixtureDefR.friction = 5;//attrito
-    fixtureDefR.restitution = 0;//rimbalzo
-    //fixtureDefR.filter.groupIndex = -1;
-    bike->wheelR->CreateFixture(&fixtureDefR);
-
-
-
-
-    /*  JOINTS  */
-    /*distance joint to connect the left wheel with the right wheel*/
+    //Distance joint per connettere la ruota destra e quella sinistra
     b2DistanceJointDef dJointDefR_L;
     dJointDefR_L.Initialize(bike->wheelL, bike->wheelR,b2Vec2(0,0),b2Vec2(0,0));
-    dJointDefR_L.collideConnected = true;
+    dJointDefR_L.collideConnected = false;
     dJointDefR_L.localAnchorA.Set(0, 0);
     dJointDefR_L.localAnchorB.Set(0, 0);
-    dJointDefR_L.length = 1;
+    dJointDefR_L.length = 1.1;
     world.CreateJoint(&dJointDefR_L);
-    //-------------------
 
 
-    //wheel joints
+
+    //Definizione Caratteristiche Wheel Joint
     b2WheelJointDef wheelJointDef;
     wheelJointDef.bodyA = bike->cart;
-    wheelJointDef.bodyB = bike->wheelR;
-    wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
     wheelJointDef.localAnchorB.Set(0,0);
     wheelJointDef.enableMotor = true;
-    wheelJointDef.maxMotorTorque = 1000;
+    wheelJointDef.maxMotorTorque = 30;
     wheelJointDef.motorSpeed = 0;
-    wheelJointDef.dampingRatio = 1.0;
-    wheelJointR = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
+    wheelJointDef.dampingRatio = .8;
 
-
+    //Inizializzazione Wheel Joint ruota sinistra
     wheelJointDef.bodyB = bike->wheelL;
-    wheelJointDef.localAnchorA.Set(-100*1/SCALE,50*1/SCALE);
-    wheelJointL = (b2WheelJoint*)world.CreateJoint(&wheelJointDef);
+    wheelJointDef.localAnchorA.Set(-125*1/SCALE,50*1/SCALE);
+    wheelEngineL = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
 
+
+    //Inizializzazione Wheel Joint ruota destra
+    wheelJointDef.bodyB = bike->wheelR;
+    wheelJointDef.enableMotor = false; //se attivo impedirebbe il movimento
+    wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
+    wheelEngineR = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
+
+
+    //Caricamento Texture Ruote moto
+    bool wheelTextureFound = wheelTexture.loadFromFile("../textures/wheel.png");
+    if (!wheelTextureFound)
+        std::cout << "Impossibile caricare texture Ruote - Moto" << std::endl;
+    //-----------------------
+
+    //Caricamento Texture Cart moto
+    bool cartTextureFound = cartTexture.loadFromFile("../textures/cart.png");
+    if (!cartTextureFound)
+        std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
+
+    //------------------------
 }
 
 void GameEngine::drawBike(Bike *bike) {
-    sf::Texture wheelTexture;
-    if (!wheelTexture.loadFromFile("../textures/wheel.png"))
-        std::cout << "Cannot load texture" << std::endl;
-    sf::Sprite spriteWheel;
-    spriteWheel.setTexture(wheelTexture);
-
-
-    sf::Texture cartTexture;
-    if (!cartTexture.loadFromFile("../textures/cart.png"))
-        std::cout << "Cannot load texture" << std::endl;
-    sf::Sprite cartSprite;
-    cartSprite.setTexture(cartTexture);
-
+    //Disegno ruota sinistra con Texture
     sf::CircleShape wheelLDraw(WHEEL_SIZE * SCALE);
-    wheelLDraw.setFillColor(sf::Color(255, 187, 0));
+    wheelLDraw.setFillColor(sf::Color(255, 255, 255));
     wheelLDraw.setTexture(&wheelTexture);
 
 
+    //Disegno ruota destra con Texture
     sf::CircleShape wheelRDraw(WHEEL_SIZE * SCALE);
-    wheelRDraw.setFillColor(sf::Color(255, 187, 0));
+    wheelRDraw.setFillColor(sf::Color(255, 255, 255));
     wheelRDraw.setTexture(&wheelTexture);
 
-    //sf::RectangleShape cartDraw(sf::Vector2f(cartX * 2 * SCALE, cartY * 4 * SCALE));
+    //Disegno cart con Texture
     sf::RectangleShape cartDraw(sf::Vector2f(cartX * 2 * SCALE, cartY * 3 * SCALE));
-    cartDraw.setFillColor(sf::Color(255, 187, 0));
+    cartDraw.setFillColor(sf::Color(255, 255, 255));
     cartDraw.setTexture(&cartTexture);
 
-    b2Vec2 positionL = bike->wheelL->GetPosition();//new position of the body
-    float32 angleL = bike->wheelL->GetAngle();
-    b2Vec2 speedL = bike->wheelL->GetLinearVelocity();
 
-    b2Vec2 positionR = bike->wheelR->GetPosition();//new position of the body
-    float32 angleR = bike->wheelR->GetAngle();
-    b2Vec2 speedR = bike->wheelR->GetLinearVelocity();
+    //Ricavo nuovi dati fisici ruota sinistra
+    b2Vec2 positionWheelL = bike->wheelL->GetPosition();                //posizione
+    float32 angleWheelL = ceil(degToGrad(bike->wheelL->GetAngle()));    //angolo
+    b2Vec2 speedWheelL = bike->wheelL->GetLinearVelocity();             //velocità
+
+    //Ricavo nuovi dati fisici ruota destra
+    b2Vec2 positionWheelR = bike->wheelR->GetPosition();                //posizione
+    float32 angleWheelR = ceil(degToGrad(bike->wheelR->GetAngle()));    //angolo
+    b2Vec2 speedWheelR = bike->wheelR->GetLinearVelocity();             //velocità
 
 
-    wheelLDraw.setPosition(positionL.x * SCALE, positionL.y * SCALE);
-    wheelRDraw.setPosition(positionR.x * SCALE, positionR.y * SCALE);
+    //Ricavo nuovi dati fisici cart
+    b2Vec2 positionCart = bike->cart->GetPosition();                    //posizione
+    float32 angleCart = ceil(degToGrad(bike->cart->GetAngle()));        //angolo
+    b2Vec2 speedCart = bike->cart->GetLinearVelocity();                 //velocità
 
-    cartDraw.setPosition(bike->cart->GetPosition().x * SCALE, (bike->cart->GetPosition().y - cartY) * SCALE);
 
-    float speed = wheelJointL->GetMotorSpeed();
-    wheelJointL->SetMotorSpeed(speed*0.9);
-    wheelJointR->SetMotorSpeed(speed*0.9);
+
+    float speed = wheelEngineL->GetMotorSpeed();
+    //std::cout << speed << std::endl;
+
 
     float origin = WHEEL_SIZE * SCALE;
-
     wheelLDraw.setOrigin(origin, origin);
     wheelRDraw.setOrigin(origin, origin);
-    cartDraw.setOrigin(cartX * SCALE, cartY * SCALE);
+    cartDraw.setOrigin((cartX) * SCALE, (cartY) * SCALE);
 
 
-    //Draw rotations
-    wheelLDraw.rotate(degToGrad(angleL));
-    wheelRDraw.rotate(degToGrad(angleR));
-    cartDraw.rotate(degToGrad(bike->cart->GetAngle()));
+    //Aggiorno la posizione degli oggetti disegnati
+    wheelLDraw.setPosition(positionWheelL.x * SCALE, positionWheelL.y * SCALE);
+    wheelRDraw.setPosition(positionWheelR.x * SCALE, positionWheelR.y * SCALE);
 
 
+    //Aggiorno la rotazione degli oggetti disegnati
+    wheelLDraw.rotate(angleWheelL);
+    wheelRDraw.rotate(angleWheelR);
+    cartDraw.rotate(angleCart);
 
+
+    flipAngle = abs(angleCart) - (360 * countFlips);
+
+    //FIXME:Fixare la posizione del cart in caso di ribaltamento, questa soluzione attuale non è ottimale
+    if (flipAngle > 90) {
+        cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y + cartY) * SCALE);
+    } else {
+        cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y - cartY) * SCALE);
+    }
+
+
+    if (flipAngle > 350 && flipAngle < 370) {
+        countFlips++;
+        flipAngle = 0;
+        std::cout << countFlips << " Flip!" << std::endl;
+    }
+
+    //Disegno gli oggetti
     window->draw(cartDraw);
     window->draw(wheelLDraw);
     window->draw(wheelRDraw);
 }
 
+void GameEngine::drawItem(Item *item) {
+    sf::RectangleShape rect;
 
-//degrees to gradients conversion
+    rect.setPosition(item->getPosX() * SCALE, (LINE - item->getPosY()) * SCALE);
+
+    rect.setSize(sf::Vector2f(item->getWidth() * SCALE, -item->getHeight() * SCALE));
+
+    sf::Texture itemTexture;
+    //Caricamento Texture Cart moto
+    bool itemTextureFound = itemTexture.loadFromFile(item->getTexture());
+    if (!itemTextureFound)
+        std::cout << "Impossibile caricare texture Item" << std::endl;
+    else
+        rect.setTexture(&itemTexture);
+
+
+    window->draw(rect);
+}
+
+
+//Conversione Radianti -> Gradi
 float GameEngine::degToGrad(float deg) {
     return deg*(180/M_PI);
 }

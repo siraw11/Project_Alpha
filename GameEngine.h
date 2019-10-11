@@ -9,6 +9,7 @@
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
 #include "Map.h"
+#include "Item.h"
 
 class GameEngine {
 public:
@@ -57,14 +58,20 @@ public:
 
     void setVideo(const sf::VideoMode &video);
 
-    void drawMap(Map * level);
 
-    void drawBike(Bike * bike);
-
-    void initBike(Bike * bike);
 
 private:
     float degToGrad(float deg);
+
+    void drawMap(Map *level);
+
+    void drawBike(Bike *bike);
+
+    void drawItem(Item *item);
+
+    void initBike(Bike *bike);
+
+    bool checkCollision(float r1x, float r1y, float r1w, float r1h, float r2x, float r2y, float r2w, float r2h);
 };
 
 
