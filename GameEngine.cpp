@@ -22,22 +22,42 @@ GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video, int _framerate) : 
                                                                                 framerate(_framerate) {}
 
 void GameEngine::run() {
-    sf::RenderWindow window(video, "Motocross 2D", sf::Style::Default);//Create window withe default resolution
-    window.setFramerateLimit(framerate);//Set framerate limit
-    this->window = &window;
-
-    LINE = (window.getSize().y / SCALE) / 1.3 + 0.01;
+    LINE = (window->getSize().y / SCALE) / 1.3 + 0.01;
 
     sf::View view;
-    view.reset(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
-    window.setView(view);
+    view.reset(sf::FloatRect(0, 0, window->getSize().x, window->getSize().y));
+    window->setView(view);
 
 
     std::list<Position> level1Points = {
+            {-1,  10},//back limit
+            {0,   0},
+            {3,   0},
+            {8,   1},
+            {8.1, 1.1},
+            {8.2, 1.2},
+            {8.3, 1.3},
+            {8.4, 1.2},
+            {8.5, 1.1},
+            {8.6, 1},
+            {11,  0},
+            {15,  -1},
+            {20,  0},
+            {25,  0},
+            {30,  0.5},
+            {35,  -2},
+            {40,  0},
+            {43,  0},
+            {45,  1},
+            {55,  1},
+            {55,  10}//front limit
+    };
+
+    std::list<Position> level2Points = {
             {-1, 10},//back limit
-            {0,  0},
-            {3,  0},
-            {8,  1},
+            {0,  3},
+            {3,  3},
+            {8,  -1},
             {11, 0},
             {15, -1},
             {20, 0},
@@ -50,15 +70,17 @@ void GameEngine::run() {
             {55, 1},
             {55, 10}//front limit
     };
+
     Map level1(false, true, 1, level1Points, nullptr);
     Map *level = &level1;
+
 
     Bike bike1("", "", 20, 0, 0, true, nullptr, nullptr, nullptr);
     Bike *bike = &bike1;
     initBike(bike);
 
-    while (window.isOpen()) {
-        window.clear(sf::Color(255, 255, 255));//clear all,new frame!
+    while (window->isOpen()) {
+        window->clear(sf::Color(255, 255, 255));//clear all,new frame!
         sf::Event event;
 
 
@@ -68,10 +90,10 @@ void GameEngine::run() {
         float offsetX = 3;
         float offsetY = 1;
         if (((bike->wheelL->GetPosition().x + offsetX) * SCALE) >
-            (window.getSize().x / 2)) {     //camera start moving when bike is in the center
+            (window->getSize().x / 2)) {     //camera start moving when bike is in the center
             view.setCenter((bike->wheelL->GetPosition().x + offsetX) * SCALE,
                            (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera moving on bike
-            window.setView(view);
+            window->setView(view);
         }
 
 
@@ -79,9 +101,9 @@ void GameEngine::run() {
         //std::cout << "Speed:" << bike->wheelL->GetLinearVelocity().x << "  |  " << bike->wheelL->GetLinearVelocity().y << std::endl;
         //std::cout << "Position:" << bike.wheelL->GetPosition().x << "  |  " << bike.wheelL->GetPosition().y << std::endl;
 
-        while (window.pollEvent(event)) {
+        while (window->pollEvent(event)) {
             if (event.type == sf::Event::Closed)
-                window.close();
+                window->close();
             if (event.type == sf::Event::TextEntered) {
                 char keyPressed = static_cast<char>(event.text.unicode);
                 float speed;
@@ -137,7 +159,7 @@ void GameEngine::run() {
         drawMap(level);
         drawBike(bike);
 
-        window.display();
+        window->display();
     }
 
 }
