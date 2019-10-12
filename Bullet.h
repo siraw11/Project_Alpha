@@ -14,7 +14,7 @@ public:
 
     void fire();//Metodo per muovere il proiettile
 public:
-
+    int damage = 1;
     float bulletLife = 100.f;//distanza massima proiettile
 
 private:

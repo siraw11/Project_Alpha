@@ -20,9 +20,12 @@ public:
     float x, y, spawnX, spawnY;
     float hitTop, hitBottom, hitLeft, hitRight;
     float width, height;
+    RectangleShape *ptr = this;
 protected:
 
     sf::Texture rectTexture;
+public:
+    ~RectangleShape();
 
 };
 

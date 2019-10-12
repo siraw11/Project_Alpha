@@ -12,14 +12,23 @@
 #include "PowerUp.h"
 #include "Hero.h"
 #include "Collision.h"
-#include "Level.h"
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 
 //Classe per la gestione degli eventi fra oggetti
 
 class GameLogic {
 public:
-    GameLogic(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, std::vector<Platform> *platform,
-              Hero *player, std::vector<PowerUp> *powerUp);
+    GameLogic();
+
+    void Update(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, std::vector<Platform> *platform,
+                Hero *player, std::vector<PowerUp> *powerUp, sf::Clock *clock);
+
+private:
+    int playerCollisionEnemy;
+    sf::Vector2i enemyCollisionBullet;
+    int playerCollisionPowerUp;
+    int bulletCollisionMap;
 };
 
 

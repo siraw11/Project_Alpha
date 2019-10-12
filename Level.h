@@ -12,9 +12,10 @@
 #include "Hero.h"
 #include "PowerUp.h"
 #include <SFML/Graphics.hpp>
+#include "GameLogic.h"
 
 //Classe per la creazione del livello
-
+class GameLogic;
 
 class Level {
 public:
@@ -42,7 +43,8 @@ public:
     std::vector<Bullet> vector_of_bullet;
     //--------------//
     Hero player;
-    sf::Clock clock;//Clock per la frequenza di fuoco
+
+
 private:
     sf::Vector2f size_of_enemy;
     sf::Vector2f size_of_platform;
@@ -60,7 +62,9 @@ private:
     int type_powerUpSpeed = 6;
     int type_player = 9;
     int type_enemy_octopus = 7;
-
+    GameLogic *logic;
+    sf::Clock clock;//Clock per la frequenza di fuoco
+    sf::Time shoot_time;
 };
 
 

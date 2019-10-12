@@ -4,6 +4,7 @@
 
 #include "Level.h"
 #include "GameLogic.h"
+#include <iostream>
 
 Level::Level(int levelArray[], int column, int row) {
 
@@ -79,14 +80,16 @@ Level::Level(int levelArray[], int column, int row) {
             }
         }
     }
+    GameLogic start;
+    this->logic = &start;
+    shoot_time = sf::seconds(0);
 }
 
 void Level::Update(sf::RenderWindow *window, sf::Event *event) {
 
-
-    sf::Time shoot_time;
+    sf::Time shoot_delay;
     sf::Vector2f shotDir;
-    shoot_time = sf::seconds(0.5);
+    shoot_delay = sf::seconds(0.5);
     bool shoot = false;
 
 //----Aggiornamento parametri da input-----//
@@ -112,16 +115,14 @@ void Level::Update(sf::RenderWindow *window, sf::Event *event) {
         shoot = true;
     }
     //-----Creazione priettili------------//
-
-    if (shoot && shoot_time <= clock.getElapsedTime()) {
-
+    if (shoot && clock.getElapsedTime() - shoot_time >= shoot_delay) {
         Bullet newBullet(player.getIsPowerBullet(), shotDir);
         newBullet.init(player.rectShape.getPosition().x + player.rectShape.getSize().x / 2 -
                        newBullet.rectShape.getSize().x / 2,
                        player.rectShape.getPosition().y + player.rectShape.getSize().y / 2 -
                        newBullet.rectShape.getSize().y / 2, size_of_bullet);
         vector_of_bullet.push_back(newBullet);
-        clock.restart();
+        shoot_time = clock.getElapsedTime();
     }
 
     /*
@@ -138,8 +139,7 @@ void Level::Update(sf::RenderWindow *window, sf::Event *event) {
     */
 
     //------Passa gli oggetti al gestore della logica di gioco (per collisioni ed eventi)-------//
-
-    GameLogic gameLogic(&vector_of_enemy, &vector_of_bullet, &vector_of_platform, &player, &vector_of_powerUp);
+    logic->Update(&vector_of_enemy, &vector_of_bullet, &vector_of_platform, &player, &vector_of_powerUp, &clock);
 
     //----Draw globale-----------//
 

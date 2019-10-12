@@ -27,3 +27,5 @@ void RectangleShape::setTexture(const std::string &textureDir) {
     rectTexture.loadFromFile(textureDir);
     rectShape.setTexture(&rectTexture);
 }
+
+RectangleShape::~RectangleShape() = default;

@@ -15,7 +15,7 @@
 TEST(Bullet,
      TestBulletCollisionMap) {//Test per verificare se all'impatto con la mappa il priettile viene distrutto e se
     //la mappa rimane invariata
-
+    int ceckcoll = -1;
     Bullet bullet(false, sf::Vector2f(1, 0));
     std::vector<Bullet> vectorBullet;
     std::vector<Platform> vectorPlat;
@@ -31,12 +31,10 @@ TEST(Bullet,
     for (int i = 0; i < 6; i++) {
         vectorBullet[0].fire();
         ASSERT_EQ(vectorBullet.size(), 1);
-        Collision::checkCollision(&vectorBullet, &vectorPlat);
-
+        ceckcoll = Collision::checkCollision(&vectorBullet, &vectorPlat);
     }
+    ASSERT_EQ(ceckcoll, 0);
 
-    ASSERT_EQ(vectorBullet.size(), 0);
-    ASSERT_EQ(vectorPlat.size(), 1);
 }
 
 TEST(Bullet,
@@ -45,7 +43,9 @@ TEST(Bullet,
     Bullet bullet(false, sf::Vector2f(1, 0));
     std::vector<Bullet> vectorBullet;
     std::vector<Enemy> vectorEnemy;
-
+    sf::Vector2i checkColl;
+    checkColl.x = -1;
+    checkColl.y = -1;
     bullet.init(100, 100, sf::Vector2f(10, 10));
 
     Enemy enemy;
@@ -58,8 +58,8 @@ TEST(Bullet,
         vectorBullet[0].fire();
         ASSERT_EQ(vectorBullet.size(), 1);
         ASSERT_EQ(vectorEnemy.size(), 1);
-        Collision::checkCollision(&vectorBullet, &vectorEnemy);
+        checkColl = Collision::checkCollision(&vectorBullet, &vectorEnemy);
     }
-    ASSERT_EQ(vectorBullet.size(), 0);
-    ASSERT_EQ(vectorEnemy.size(), 0);
+    ASSERT_EQ(checkColl.x, 0);
+    ASSERT_EQ(checkColl.y, 0);
 }

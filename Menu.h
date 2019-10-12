@@ -4,18 +4,20 @@
 
 #ifndef GAME_MENU_H
 #define GAME_MENU_H
+#define SIZE 2
 
 #include <SFML/Graphics.hpp>
 
-class Menu { //TODO risolvere bug memoria
+class Menu {
 
 public:
-    Menu();
+    Menu();//TODO Implmetare menu
 
     void drawMenu(sf::RenderWindow *window);
 
 public:
-    sf::Text *menu;
+    sf::Text menu[SIZE];
+    sf::Font Font, Font2;
 };
 
 

@@ -2,11 +2,11 @@
 #include <GameStates.h>
 #include <Level.h>
 #include <iostream>
-
+#include <Menu.h>
 #define arrayRow 10
 #define arrayColumn 50
 
-int main() {
+int main() {//TODO Implmentare achivement
     GameStates stateChecker = GameStates::Level;
     //Menu menu;
     sf::Event event{};
@@ -51,7 +51,7 @@ int main() {
         }
 
         if (stateChecker == GameStates::Main_menu) {
-            std::cout << "Sono nel menu" << std::endl;
+            //menu.drawMenu(&window);
         }
         if (stateChecker == GameStates::Level) {
 

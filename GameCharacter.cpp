@@ -22,3 +22,5 @@ void GameCharacter::setAnimation(const std::string &textureDir, unsigned int xFr
     // SetAnimation need a texture, number of frames and an update frequency
     animation.setAnimation(&rectTexture, sf::Vector2u(xFrames, yFrames), switch_time);
 }
+
+GameCharacter::~GameCharacter() = default;

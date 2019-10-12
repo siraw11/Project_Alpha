@@ -11,6 +11,9 @@ class Enemy : public GameCharacter {
 public:
     Enemy();
     //TODO implementare aggro
+    int HP = 2;
+public:
+    int damage = 1;
 };
 
 

@@ -1,6 +1,3 @@
-//
-// Created by andreatadde on 18/09/19.
-//
 
 #ifndef GAME_GAMECHARACTER_H
 #define GAME_GAMECHARACTER_H
@@ -19,7 +16,6 @@ public:
     bool isOnGround;
     sf::Vector2f velocity;
 protected:
-    int HP; //TODO implement Hp
 
     // Movement parameters
     float moveSpeed;
@@ -31,6 +27,10 @@ protected:
 
     // Animation parameters
     Animation animation;
+public:
+    virtual ~GameCharacter();
+
+protected:
     bool facingRight;
     int row;
     float switch_time = 1.f;

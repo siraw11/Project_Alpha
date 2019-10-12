@@ -60,3 +60,6 @@ void Hero::setIsPowerBullet(bool isPowerBullet) {
     Hero::isPowerBullet = isPowerBullet;
 }
 
+Hero::~Hero() = default;
+
+

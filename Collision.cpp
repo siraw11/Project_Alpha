@@ -1,8 +1,7 @@
-//
-// Created by andreatadde on 17/09/19.
-//
+
 #include "Collision.h"
 #include <math.h>
+#include <iostream>
 
 void Collision::checkCollision(std::vector<Platform> *platform, Hero *player) {
 
@@ -55,18 +54,22 @@ void Collision::checkCollision(std::vector<Platform> *platform, Hero *player) {
     player->rectShape.setPosition(player->x, player->y); // Updating the position of the player
 }
 
-void Collision::checkCollision(std::vector<PowerUp> *powerUp, Hero *player) {
+int Collision::checkCollision(std::vector<PowerUp> *powerUp, Hero *player) {
+    int collisioncheck = -1;
     for (int i = 0; i < powerUp->size(); i++) {
         if (player->x + player->width > (*powerUp)[i].hitLeft && player->x < (*powerUp)[i].hitRight &&
             player->y<(*powerUp)[i].hitBottom
                       && player->y + player->height>(*powerUp)[i].hitTop) {
-            PowerUp::setPower(player, (*powerUp)[i].type);
-            powerUp->erase(powerUp->begin() + i);
+            collisioncheck = i;
         }
     }
+    return collisioncheck;
 }
 
-void Collision::checkCollision(std::vector<Bullet> *bullet, std::vector<Enemy> *enemy) {
+sf::Vector2i Collision::checkCollision(std::vector<Bullet> *bullet, std::vector<Enemy> *enemy) {
+    sf::Vector2i collisioncheck;
+    collisioncheck.x = -1;
+    collisioncheck.y = -1;
     for (int i = 0; i < bullet->size(); i++) {
         (*bullet)[i].fire();
         if ((fabs((*bullet)[i].rectShape.getPosition().x - (*bullet)[i].spawnX)) <= (*bullet)[i].bulletLife &&
@@ -74,24 +77,38 @@ void Collision::checkCollision(std::vector<Bullet> *bullet, std::vector<Enemy> *
             for (int j = 0; j < enemy->size(); j++) {
 
                 if ((*bullet)[i].rectShape.getGlobalBounds().intersects((*enemy)[j].rectShape.getGlobalBounds())) {
-                    (*bullet).erase((*bullet).begin() + i);
-                    (*enemy).erase((*enemy).begin() + j);
+                    collisioncheck.x = i;
+                    collisioncheck.y = j;
                 }
             }
-        } else (*bullet).erase((*bullet).begin() + i);
+        }
     }
+    return collisioncheck;
 }
 
-void Collision::checkCollision(std::vector<Bullet> *bullet, std::vector<Platform> *platform) {
+int Collision::checkCollision(std::vector<Bullet> *bullet, std::vector<Platform> *platform) {
+    int collisioncheck = -1;
     for (int i = 0; i < bullet->size(); i++) {
         (*bullet)[i].fire();
         if ((fabs((*bullet)[i].rectShape.getPosition().x - (*bullet)[i].spawnX)) <= (*bullet)[i].bulletLife &&
             (fabs((*bullet)[i].rectShape.getPosition().y - (*bullet)[i].spawnY)) <= (*bullet)[i].bulletLife) {
             for (int j = 0; j < platform->size(); j++) {
                 if ((*bullet)[i].rectShape.getGlobalBounds().intersects((*platform)[j].rectShape.getGlobalBounds())) {
-                    (*bullet).erase((*bullet).begin() + i);
+                    collisioncheck = i;
                 }
             }
         } else (*bullet).erase((*bullet).begin() + i);
     }
+    return collisioncheck;
+}
+
+int Collision::checkCollision(Hero *hero, std::vector<Enemy> *enemy) {
+    int collisioncheck = -1;
+    for (int i = 0; i < enemy->size(); i++) {
+
+        if ((*enemy)[i].rectShape.getGlobalBounds().intersects(hero->rectShape.getGlobalBounds())) {
+            collisioncheck = i;
+        }
+    }
+    return collisioncheck;
 }
