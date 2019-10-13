@@ -34,22 +34,22 @@ sprite.setScale(1.f / 2, 1.f / 2);
 sprite1.setScale(1.f / 2, 1.f / 2);
 
 
-Menu menu(window.getSize().x, window.getSize().y);
- while (window.isOpen()) {
-   sf::Event event{};
-    while (window.pollEvent(event)) {
-     switch (event.type) {
-      case sf::Event::KeyReleased:
-       switch (event.key.code) {
-        case sf::Keyboard::Up:
-         menu.MoveUp();
-          break;
-           case sf::Keyboard::Down:
-            menu.MoveDown();
-             break;
-              case sf::Keyboard::Return:
-               switch (menu.GetPressedItem()) {
-                //Play case
+    Menu menu(window.getSize().x, window.getSize().y);
+    while (window.isOpen()) {
+        sf::Event event{};
+        while (window.pollEvent(event)) {
+            switch (event.type) {
+                case sf::Event::KeyReleased:
+                    switch (event.key.code) {
+                        case sf::Keyboard::Up:
+                            menu.MoveUp();
+                            break;
+                        case sf::Keyboard::Down:
+                            menu.MoveDown();
+                            break;
+                        case sf::Keyboard::Return:
+                            switch (menu.GetPressedItem()) {
+                                //Play case
                    case 0:
                        std::cout << "Play button has been pressed" << std::endl;
                        {
