@@ -13,7 +13,9 @@
 
 class GameEngine {
 public:
-    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 30), sf::VideoMode video = sf::VideoMode::getDesktopMode(),int framerate = 60);
+    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 30), sf::VideoMode video = sf::VideoMode::getDesktopMode(),
+               int framerate = 60);
+
     float32 timeStep = 1.0f / 60.0f;
     int32 velocityIterations = 3;
     int32 positionIterations = 6;
@@ -21,11 +23,10 @@ public:
     b2World world = b2World(gravity);
     int framerate;
     sf::VideoMode video;
-    sf::RenderWindow * window;
+    sf::RenderWindow *window;
     const float SCALE = 200.f;
     const float WHEEL_SIZE = 0.23;
     float LINE;
-
 
 
     void run();
@@ -59,8 +60,14 @@ public:
     void setVideo(const sf::VideoMode &video);
 
 
+    bool isPause() const;
+
+    void setPause(bool pause);
+
 
 private:
+    bool pause = false;
+
     float degToGrad(float deg);
 
     void drawMap(Map *level);
