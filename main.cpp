@@ -47,6 +47,9 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                         case sf::Keyboard::Down:
                             menu.MoveDown();
                             break;
+                        case sf::Keyboard::Escape:
+                            window.close();
+                            break;
                         case sf::Keyboard::Return:
                             switch (menu.GetPressedItem()) {
                                 //Play case
@@ -124,6 +127,8 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                                sf::Event event2{};
                                while (window.pollEvent(event2)) {
                                    if (event2.type == sf::Event::Closed)
+                                       window.close();
+                                   if(event2.type == sf::Event::Closed || event2.key.code == sf::Keyboard::Escape)
                                        window.close();
                                    if (event2.type == sf::Event::Resized) {
                                        sf::View temp = window.getView();
@@ -256,7 +261,6 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                                    //hero.animationControl(4);
                                    attackAnimation = 4;
                                    projectile.direction = 3;
-
                                    projectile.counterAttack = 1;
                                }
 
@@ -292,14 +296,11 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                                    window.draw(iter);
                                }
                                window.display();
-
                            }
-
                        }
 
                        // Select class menu
                    case 1: {
-                       std::cout << "Select class button has been pressed"<< std::endl;
                        Menu1 menu1(window.getSize().x, window.getSize().y);
                        while (window.isOpen()) {
                            sf::Event event1{};
@@ -332,8 +333,8 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                        // Exit case
                    case 2:
                        window.close();
-                       std::cout << "Exit button has been pressed" << std::endl;
                        break;
+
                }
                break;
        }
