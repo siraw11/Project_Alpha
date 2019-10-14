@@ -125,14 +125,7 @@ void GameEngine::run() {
     std::list<Position> level2Points = {
             {-1,   10},//back limit
             {0,    0},
-            {4.9,  0},
-            {5,    .05},
-            {5,    0},
-            {11,   -6},
-            {15,   -6},
-            {40,   30},
-            {40,   0},
-            {1000, 0},
+            {100,  -100},
             {1000, 10}//front limit
     };
 
@@ -148,7 +141,7 @@ void GameEngine::run() {
 
 
     //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
-    Map *level = &level2;
+    Map *level = &level1;
     Bike *bike = &bike1;
 
 
