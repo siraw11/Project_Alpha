@@ -148,7 +148,7 @@ void GameEngine::run() {
 
 
     //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
-    Map *level = &level2;
+    Map *level = &level1;       //scelta del livello
     Bike *bike = &bike1;
 
 
@@ -238,6 +238,21 @@ void GameEngine::run() {
             menu.open();
         } else {
         }
+
+
+        flipAngle = abs(degToGrad(bike->cart->GetAngle())) - (360 * countFlips);
+
+        if (flipAngle > 350 && flipAngle < 370) {
+            countFlips++;
+            flipAngle = 0;
+            std::cout << countFlips << " Flip!" << std::endl;
+        }
+
+        if (flipAngle > 160 && flipAngle < 220 && bike->cart->GetLinearVelocity().x<=0 && bike->cart->GetLinearVelocity().y<=0) {
+            std::cout << " Morto!" << std::endl;
+            menu.open();
+        }
+
 
         window->display();//mostro il disegno nella finestra di gioco
     }
@@ -459,20 +474,12 @@ void GameEngine::drawBike(Bike *bike) {
     cartDraw.rotate(angleCart);
 
 
-    flipAngle = abs(angleCart) - (360 * countFlips);
 
     //FIXME:Fixare la posizione del cart in caso di ribaltamento, questa soluzione attuale non è ottimale
     if (flipAngle > 90) {
         cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y + cartY) * SCALE);
     } else {
         cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y - cartY) * SCALE);
-    }
-
-
-    if (flipAngle > 350 && flipAngle < 370) {
-        countFlips++;
-        flipAngle = 0;
-        std::cout << countFlips << " Flip!" << std::endl;
     }
 
     //Disegno gli oggetti
