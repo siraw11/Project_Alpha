@@ -1,31 +1,13 @@
 //
-// Created by waris on 09/10/19.
+// Created by Luca Graziotti on 2019-10-12.
 //
-
 #include <MacTypes.h>
 #include "Menu.h"
 
-
-Menu::Menu(float width, float height) {
-    if (!font.loadFromFile("../fonts/arial.ttf")) {
-        // handle error
-    }
-
-    menu[0].setFont(font);
-    menu[0].setColor(sf::Color::Red);
-    menu[0].setString("Play");
-    menu[0].setPosition(sf::Vector2f(width / D, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
-
-    menu[1].setFont(font);
-    menu[1].setColor(sf::Color::White);
-    menu[1].setString("Options");
-    menu[1].setPosition(sf::Vector2f(width / D, height / (MAX_NUMBER_OF_ITEMS + 1) * 2));
-
-    menu[2].setFont(font);
-    menu[2].setColor(sf::Color::White);
-    menu[2].setString("Exit");
-    menu[2].setPosition(sf::Vector2f(width / D, height / (MAX_NUMBER_OF_ITEMS + 1) * 3));
-
+Menu::Menu(MenuType _type, std::vector<MenuOption *> _options = {}, GameEngine *_engine = nullptr) : type(_type),
+                                                                                                     options(
+                                                                                                             _options),
+                                                                                                     engine(_engine) {
     selectedItemIndex = 0;
 }
 
@@ -33,24 +15,125 @@ Menu::Menu(float width, float height) {
 Menu::~Menu() {
 }
 
-void Menu::draw(sf::RenderWindow &window) {
-    for (int i = 0; i < MAX_NUMBER_OF_ITEMS; i++) {
-        window.draw(menu[i]);
+void Menu::draw(sf::RenderWindow *window) {
+    std::vector<MenuOption *>::iterator it;
+    float width = window->getSize().x;
+    float height = window->getSize().y;
+    int i = 0;
+    for (it = options.begin(); it != options.end(); it++, i++) {
+        (*it)->option.setPosition(
+                sf::Vector2f(width / MENU_OFFSET_X, (height / (MENU_MAX_NUMBER_OF_ITEMS + 1) * i) + MENU_OFFSET_Y));
+        if (i == selectedItemIndex) {
+            (*it)->option.setColor(sf::Color::Red);
+        }
+
+        window->draw((*it)->option);
     }
 }
 
 void Menu::MoveUp() {
-    if (selectedItemIndex - 1 >= 0) {
-        menu[selectedItemIndex].setColor(sf::Color::White);
-        selectedItemIndex--;
-        menu[selectedItemIndex].setColor(sf::Color::Red);
+    if (options.size() > 0) {
+        if (selectedItemIndex - 1 >= 0) {
+            options[selectedItemIndex]->option.setColor(sf::Color::White);
+            selectedItemIndex--;
+            options[selectedItemIndex]->option.setColor(sf::Color::Red);
+        }
     }
 }
 
 void Menu::MoveDown() {
-    if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS) {
-        menu[selectedItemIndex].setColor(sf::Color::White);
-        selectedItemIndex++;
-        menu[selectedItemIndex].setColor(sf::Color::Red);
+    if (options.size() > 0) {
+        if (selectedItemIndex + 1 < 3) {
+            options[selectedItemIndex]->option.setColor(sf::Color::White);
+            selectedItemIndex++;
+            options[selectedItemIndex]->option.setColor(sf::Color::Red);
+        }
     }
 }
+
+int Menu::getSelectedItemIndex() const {
+    return selectedItemIndex;
+}
+
+void Menu::setSelectedItemIndex(int selectedItemIndex) {
+    Menu::selectedItemIndex = selectedItemIndex;
+}
+
+
+void Menu::open() {
+    sf::RenderWindow *window = engine->window;
+    while (window->isOpen()) {
+        sf::Event event;
+
+        while (window->pollEvent(event)) {
+            if (true) {
+                switch (event.type) {
+                    case sf::Event::KeyReleased:
+                        switch (event.key.code) {
+                            case sf::Keyboard::Up:
+                                this->MoveUp();
+                                break;
+
+                            case sf::Keyboard::Down:
+                                this->MoveDown();
+                                break;
+
+                            case sf::Keyboard::Return:
+                                switch (type) {
+                                    case Home:
+                                        switch (this->getSelectedItemIndex()) {
+                                            case 0:
+                                                std::cout << "Play button has been pressed" << std::endl;
+                                                engine->run();
+                                                break;
+                                            case 1:
+                                                std::cout << "Option button has been pressed" << std::endl;
+                                                break;
+                                            case 2:
+                                                window->close();
+                                                break;
+                                        }
+                                        break;
+                                    case Pause:
+                                        switch (this->getSelectedItemIndex()) {
+                                            case 0:
+                                                std::cout << "Resume button has been pressed" << std::endl;
+                                                engine->setPause(false);
+                                                return;
+                                                break;
+                                            case 1:
+                                                window->close();
+                                                break;
+                                        }
+                                        break;
+                                }
+
+
+                                break;
+                        }
+                        break;
+                    case sf::Event::Closed:
+                        window->close();
+
+                        break;
+
+                }
+            }
+
+        }
+
+        this->draw(window);
+
+
+        window->display();
+    }
+}
+
+MenuType Menu::getType() const {
+    return type;
+}
+
+void Menu::setType(MenuType type) {
+    Menu::type = type;
+}
+

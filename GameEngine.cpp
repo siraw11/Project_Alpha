@@ -13,6 +13,7 @@
 #include "Bike.h"
 #include "Item.h"
 #include "Coin.h"
+#include "Menu.h"
 
 
 float cartX = 0.8;
@@ -28,163 +29,6 @@ int countFlips = 0;
 GameEngine::GameEngine(b2Vec2 _gravity, sf::VideoMode _video, int _framerate) : gravity(_gravity), video(_video),
                                                                                 framerate(_framerate) {}
 
-void GameEngine::run() {
-
-    LINE = (window->getSize().y / SCALE) / 1.3 + 0.01;
-
-    sf::View view;
-    view.reset(sf::FloatRect(0, 0, window->getSize().x, window->getSize().y));
-    window->setView(view);
-
-    std::list<Position> level1Points = {
-            {-1, 10},//back limit
-            {0,  0.},
-            {3,  0.},
-            {8,  1},
-            {11, 0},
-            {15, -1},
-            {20, 0},
-            {25, 0},
-            {30, 0.5},
-            {35, -1},
-            {40, 0},
-            {43, 0},
-            {45, 1},
-            {55, 1},
-            {55, 10}//front limit
-    };
-
-
-    std::list<Position> level2Points = {
-            {-1,   10},//back limit
-            {0,    0},
-            {4.9,  0},
-            {5,    .05},
-            {5,    0},
-            {11,   -2},
-            {15,   -2},
-            {20,   30},
-            {20,   0},
-            {1000, 0},
-            {1000, 10}//front limit
-    };
-
-
-    std::list<Item *> mapItemsLevel2;
-    mapItemsLevel2.push_back(new Item(3, .2, .7, .7));
-    mapItemsLevel2.push_back(new Coin(5, .2, .7, .7, 50));
-    mapItemsLevel2.push_back(new Coin(10, .3, .7, .7, 30));
-
-
-    Map level1(false, true, 1, level1Points, nullptr, {});
-    Map level2(false, true, 1, level2Points, nullptr, mapItemsLevel2);
-    Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
-
-
-    //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
-    Map *level = &level2;
-    Bike *bike = &bike1;
-
-
-    initBike(bike);//inizializzo la fisica del gioco
-
-    while (window->isOpen()) {
-        window->clear(sf::Color(255, 255, 255));//ripulisco nuovo frame
-        sf::Event event;
-
-
-        world.Step(timeStep, velocityIterations, positionIterations);
-
-
-        float offsetX = 3;
-        float offsetY = 1;
-
-
-        if (((bike->wheelL->GetPosition().x + offsetX) * SCALE) >
-            (window->getSize().x / 2)) {     //la camera inizia il movimento una volta superata la metà schermo
-            view.setCenter((bike->wheelL->GetPosition().x + offsetX) * SCALE,
-                           (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera segue il veicolo
-            window->setView(view);
-        }
-
-        wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
-        wheelEngineR->EnableMotor(false);//impedisce il blocco delle ruote
-
-        float speed = wheelEngineL->GetMotorSpeed();//Calcolo l'attuale velocità del motore
-
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-            //Accellerazione a Destra
-            wheelEngineL->EnableMotor(true);
-            wheelEngineR->EnableMotor(true);
-            if (speed < 0) {
-                speed = 0;
-            }
-            wheelEngineL->SetMotorSpeed(speed + bike->getSpeed());
-            wheelEngineR->SetMotorSpeed(speed + bike->getSpeed());
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-            //Accellerazione a Sinistra
-            wheelEngineL->EnableMotor(true);
-            wheelEngineR->EnableMotor(true);
-            if (speed > 0) {
-                speed = 0;
-            }
-            wheelEngineL->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
-            wheelEngineR->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-            //Freno a mano
-            wheelEngineL->EnableMotor(true);
-            wheelEngineR->EnableMotor(true);
-            wheelEngineL->SetMotorSpeed(0);
-            wheelEngineR->SetMotorSpeed(0);
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-            window->close();
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
-
-        }
-
-
-        //std::cout << bike->cart->GetContactList() <<std::endl;
-
-        while (window->pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window->close();
-        }
-
-
-        drawMap(level);//disegno la mappa del livello
-
-        //itero la lista degli Items nella mappa
-        std::list<Item *> items = level->getMapItems();
-        for (std::list<Item *>::iterator it = items.begin(); it != items.end(); it++) {
-            //controllo se collidono
-            bool collided = checkCollision(bike->cart->GetPosition().x, bike->cart->GetPosition().y, cartX, cartY,
-                                           (*it)->getPosX(), LINE + (*it)->getPosY(), (*it)->getWidth(),
-                                           (*it)->getHeight());
-            if (collided) {
-                (*it)->doSpecial();//eseguo la special
-                level->removeMapItem(*it);//rimuovo l'item in quanto già usato
-            } else {
-                drawItem(*it);//altrimenti disegno l'item
-            }
-        }
-
-        drawBike(bike);//disegno la moto
-        window->display();//mostro il disegno nella finestra di gioco
-    }
-
-}
-
-bool
-GameEngine::checkCollision(float r1x, float r1y, float r1w, float r1h, float r2x, float r2y, float r2w, float r2h) {
-    if ((r1x + r1w >= r2x && r1x <= r2x + r2w) && ((r1y < r2y && r2y + r2h > r1y))) {//TODO:fix height intersection
-        return true;
-    }
-    return false;
-}
-
-float32 GameEngine::getTimeStep() const {
-    return timeStep;
-}
 
 void GameEngine::setTimeStep(float32 timeStep) {
     GameEngine::timeStep = timeStep;
@@ -238,6 +82,181 @@ void GameEngine::setFramerate(int framerate) {
     GameEngine::framerate = framerate;
 }
 
+bool GameEngine::isPause() const {
+    return pause;
+}
+
+void GameEngine::setPause(bool pause) {
+    this->pause = pause;
+    if (pause) {
+        this->timeStep = 0;
+    } else {
+        this->timeStep = 1 / 60.f;
+    }
+}
+
+
+void GameEngine::run() {
+    LINE = (window->getSize().y / SCALE) / 1.3 + 0.01;
+
+    sf::View view;
+    view.reset(sf::FloatRect(0, 0, window->getSize().x, window->getSize().y));
+    window->setView(view);
+
+    std::list<Position> level1Points = {
+            {-1, 10},//back limit
+            {0,  0.},
+            {3,  0.},
+            {8,  1},
+            {11, 0},
+            {15, -1},
+            {20, 0},
+            {25, 0},
+            {30, 0.5},
+            {35, -1},
+            {40, 0},
+            {43, 0},
+            {45, 1},
+            {55, 1},
+            {55, 10}//front limit
+    };
+
+
+    std::list<Position> level2Points = {
+            {-1,   10},//back limit
+            {0,    0},
+            {4.9,  0},
+            {5,    .05},
+            {5,    0},
+            {11,   -6},
+            {15,   -6},
+            {40,   30},
+            {40,   0},
+            {1000, 0},
+            {1000, 10}//front limit
+    };
+
+
+    std::list<Item *> mapItemsLevel2;
+    mapItemsLevel2.push_back(new Coin(5, .2, .7, .7, 50));
+    mapItemsLevel2.push_back(new Coin(7, .1, .7, .7, 30));
+
+
+    Map level1(false, true, 1, level1Points, nullptr, {});
+    Map level2(false, true, 1, level2Points, nullptr, mapItemsLevel2);
+    Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
+
+
+    //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
+    Map *level = &level2;
+    Bike *bike = &bike1;
+
+
+    Menu menu(MenuType::Pause, MenuOption::loadPauseMenuOptions(), this);
+
+    initBike(bike);//inizializzo la fisica del gioco
+
+    while (window->isOpen()) {
+        window->clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
+        sf::Event event;
+
+
+        world.Step(timeStep, velocityIterations, positionIterations);
+
+
+        float offsetX = 3;
+        float offsetY = 1;
+
+
+        if (((bike->wheelL->GetPosition().x + offsetX) * SCALE) >
+            (window->getSize().x / 2)) {     //la camera inizia il movimento una volta superata la metà schermo
+            view.setCenter((bike->wheelL->GetPosition().x + offsetX) * SCALE,
+                           (bike->wheelL->GetPosition().y - offsetY) * SCALE); //camera segue il veicolo
+            window->setView(view);
+        }
+
+        wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
+        wheelEngineR->EnableMotor(false);//impedisce il blocco delle ruote
+
+        float speed = wheelEngineL->GetMotorSpeed();//Calcolo l'attuale velocità del motore
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+            //Accellerazione a Destra
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            if (speed < 0) {
+                speed = 0;
+            }
+            wheelEngineL->SetMotorSpeed(speed + bike->getSpeed());
+            wheelEngineR->SetMotorSpeed(speed + bike->getSpeed());
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+            //Accellerazione a Sinistra
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            if (speed > 0) {
+                speed = 0;
+            }
+            wheelEngineL->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
+            wheelEngineR->SetMotorSpeed(-(abs(speed) + bike->getSpeed()));
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+            //Freno a mano
+            wheelEngineL->EnableMotor(true);
+            wheelEngineR->EnableMotor(true);
+            wheelEngineL->SetMotorSpeed(0);
+            wheelEngineR->SetMotorSpeed(0);
+        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            this->setPause(true);
+        }
+
+
+        while (window->pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                window->close();
+        }
+
+
+        drawMap(level);//disegno la mappa del livello
+
+        //itero la lista degli Items nella mappa
+        std::list<Item *> items = level->getMapItems();
+        for (std::list<Item *>::iterator it = items.begin(); it != items.end(); it++) {
+            //controllo se collidono
+            bool collided = checkCollision(bike->cart->GetPosition().x, bike->cart->GetPosition().y, cartX, cartY,
+                                           (*it)->getPosX(), LINE + (*it)->getPosY(), (*it)->getWidth(),
+                                           (*it)->getHeight());
+            if (collided) {
+                (*it)->doSpecial();//eseguo la special
+                level->removeMapItem(*it);//rimuovo l'item in quanto già usato
+            } else {
+                drawItem(*it);//altrimenti disegno l'item
+            }
+        }
+
+
+        drawBike(bike);//disegno la moto
+        if (isPause()) {
+            menu.open();
+        } else {
+        }
+
+        window->display();//mostro il disegno nella finestra di gioco
+    }
+
+
+}
+
+bool
+GameEngine::checkCollision(float r1x, float r1y, float r1w, float r1h, float r2x, float r2y, float r2w, float r2h) {
+    if ((r1x + r1w >= r2x && r1x <= r2x + r2w) && ((r1y < r2y && r2y + r2h > r1y))) {//TODO:fix height intersection
+        return true;
+    }
+    return false;
+}
+
+float32 GameEngine::getTimeStep() const {
+    return timeStep;
+}
+
 
 void GameEngine::drawMap(Map *level) {
     b2BodyDef groundBodyDef;
@@ -273,6 +292,7 @@ void GameEngine::drawMap(Map *level) {
 
     groundBody->CreateFixture(&chain, 0.0f);//0.0f->massa solido
 
+
     window->draw(terrain);
 }
 
@@ -286,7 +306,7 @@ void GameEngine::initBike(Bike *bike) {
     cartShape.SetAsBox(cartX, cartY);
     b2BodyDef cartBodyDef;
     cartBodyDef.type = b2_dynamicBody;
-    cartBodyDef.position.Set(1, LINE - cartY - WHEEL_SIZE ); //posizione iniziale
+    cartBodyDef.position.Set(1, LINE - cartY - WHEEL_SIZE); //posizione iniziale
 
     //Definizione caratteristiche fisiche
     b2FixtureDef cartFixtureDef;
@@ -337,7 +357,7 @@ void GameEngine::initBike(Bike *bike) {
 
     //Distance joint per connettere la ruota destra e quella sinistra
     b2DistanceJointDef dJointDefR_L;
-    dJointDefR_L.Initialize(bike->wheelL, bike->wheelR,b2Vec2(0,0),b2Vec2(0,0));
+    dJointDefR_L.Initialize(bike->wheelL, bike->wheelR, b2Vec2(0, 0), b2Vec2(0, 0));
     dJointDefR_L.collideConnected = false;
     dJointDefR_L.localAnchorA.Set(0, 0);
     dJointDefR_L.localAnchorB.Set(0, 0);
@@ -349,7 +369,7 @@ void GameEngine::initBike(Bike *bike) {
     //Definizione Caratteristiche Wheel Joint
     b2WheelJointDef wheelJointDef;
     wheelJointDef.bodyA = bike->cart;
-    wheelJointDef.localAnchorB.Set(0,0);
+    wheelJointDef.localAnchorB.Set(0, 0);
     wheelJointDef.enableMotor = true;
     wheelJointDef.maxMotorTorque = 30;
     wheelJointDef.motorSpeed = 0;
@@ -357,14 +377,14 @@ void GameEngine::initBike(Bike *bike) {
 
     //Inizializzazione Wheel Joint ruota sinistra
     wheelJointDef.bodyB = bike->wheelL;
-    wheelJointDef.localAnchorA.Set(-125*1/SCALE,50*1/SCALE);
+    wheelJointDef.localAnchorA.Set(-125 * 1 / SCALE, 50 * 1 / SCALE);
     wheelEngineL = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
 
 
     //Inizializzazione Wheel Joint ruota destra
     wheelJointDef.bodyB = bike->wheelR;
     wheelJointDef.enableMotor = false; //se attivo impedirebbe il movimento
-    wheelJointDef.localAnchorA.Set(125*1/SCALE,50*1/SCALE);
+    wheelJointDef.localAnchorA.Set(125 * 1 / SCALE, 50 * 1 / SCALE);
     wheelEngineR = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
 
 
@@ -485,5 +505,5 @@ void GameEngine::drawItem(Item *item) {
 
 //Conversione Radianti -> Gradi
 float GameEngine::degToGrad(float deg) {
-    return deg*(180/M_PI);
+    return deg * (180 / M_PI);
 }

@@ -14,7 +14,6 @@ Item::Item(double _posX, double _posY, double _width, double _height, std::strin
                                                                                               texture(_texture) {}
 
 
-
 double Item::getPosX() const {
     return posX;
 }
@@ -49,9 +48,7 @@ void Item::setHeight(double height) {
 
 Item::~Item() {}
 
-void Item::doSpecial() {
-    std::cout << "Special!" << std::endl;
-}
+void Item::doSpecial() {}
 
 const std::string &Item::getTexture() const {
     return texture;
