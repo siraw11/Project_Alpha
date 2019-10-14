@@ -8,11 +8,6 @@ Archer::Archer(int hp, int s, int sp): GameCharacter(hp, s, sp), range(3), arrow
     
 }
 
-
-
-
-
-
 int Archer::getRange() const {
     return range;
 }

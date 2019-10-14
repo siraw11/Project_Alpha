@@ -7,7 +7,6 @@ Projectile::Projectile()  {
     auto projectileTexture = new sf::Texture;
     projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
     setTexture(*projectileTexture);
-    //setTextureRect(sf::IntRect(0,64,50,50));
     setScale(sf::Vector2f(1.f,1.f));
 }
 
