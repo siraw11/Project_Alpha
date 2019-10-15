@@ -17,6 +17,9 @@
 #include "Projectile.h"
 #include "Menu.h"
 #include "Menu1.h"
+#include "PlayerType.h"
+
+#
 
 
 int main() {
@@ -30,16 +33,19 @@ sf::Sprite sprite;
 sf::Sprite sprite1;
 sprite.setTexture(texture);
 sprite1.setTexture(texture1);
-sprite.setScale(1.f / 2, 1.f / 2);
-sprite1.setScale(1.f / 2, 1.f / 2);
+sprite.setScale(1.f , 1.f);
+sprite1.setScale(1.f, 1.f);
 
-
+//hero class choice
+PlayerType playerType;
+label:
     Menu menu(window.getSize().x, window.getSize().y);
     while (window.isOpen()) {
         sf::Event event{};
         while (window.pollEvent(event)) {
             switch (event.type) {
                 case sf::Event::KeyReleased:
+
                     switch (event.key.code) {
                         case sf::Keyboard::Up:
                             menu.MoveUp();
@@ -56,6 +62,7 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                             switch (menu.GetPressedItem()) {
                                 //Play case
                    case 0:
+                       //label:
                        std::cout << "Play button has been pressed" << std::endl;
                        {
                            const int SCALE = 3;
@@ -63,8 +70,20 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                            //set hero
                            Hero hero(3, 5, 1, 16);
                            auto heroTexture = new sf::Texture;
-                           heroTexture->loadFromFile("../Resources/Sprites/Hero/archer.png");
-                           hero.setTexture(*heroTexture);
+                           switch(playerType){
+                               case PlayerType ::ARCHER:
+                                   heroTexture->loadFromFile("../Resources/Sprites/Hero/archer.png");
+                                   hero.setTexture(*heroTexture);
+                                   break;
+                               case PlayerType::KNIGHT:
+                                   heroTexture->loadFromFile("../Resources/Sprites/Hero/knight.png");
+                                   hero.setTexture(*heroTexture);
+                                   break;
+                               case PlayerType ::MAGE:
+                                   heroTexture->loadFromFile("../Resources/Sprites/Hero/mage.png");
+                                   hero.setTexture(*heroTexture);
+                           }
+
                            hero.setTextureRect(sf::IntRect(0, 128, 64, 64));
                            hero.setOrigin(hero.getPosition().x +hero.getGlobalBounds().width / 4,hero.getPosition().y +hero.getGlobalBounds().height / 2);
                            hero.setPosition(32 * 3, 32 * 30);
@@ -86,7 +105,7 @@ sprite1.setScale(1.f / 2, 1.f / 2);
 
                            //set projectile
                            std::vector<Projectile> projectileArray;
-                           Projectile projectile;
+                           Projectile projectile(playerType);
 
                            //animation variable
                            int attackAnimation = 0;
@@ -318,7 +337,17 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                                                window.close();
                                                break;
                                            case sf::Keyboard::Return:
-                                               switch (menu1.GetPressedItem1())
+                                               switch (menu1.GetPressedItem1()){
+                                                   case 0:
+                                                       playerType= PlayerType::ARCHER;
+                                                       goto label;
+                                                   case 1:
+                                                       playerType= PlayerType::KNIGHT;
+                                                       goto label;
+                                                   case 2:
+                                                       playerType= PlayerType ::MAGE;
+                                                       goto label;
+                                               }
                                                    break;
                                        }
                                }

@@ -3,10 +3,19 @@
 //
 
 #include "Projectile.h"
-Projectile::Projectile()  {
+Projectile::Projectile(PlayerType type)  {
     auto projectileTexture = new sf::Texture;
-    projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
-    setTexture(*projectileTexture);
+    switch (type){
+        case PlayerType::ARCHER:
+            projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
+            setTexture(*projectileTexture);
+            break;
+        case PlayerType::MAGE:
+            projectileTexture->loadFromFile("../Resources/Sprites/item/fireball.png");
+            setTexture(*projectileTexture);
+            break;
+    }
+
     setScale(sf::Vector2f(1.f,1.f));
 }
 

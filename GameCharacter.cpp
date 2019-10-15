@@ -47,5 +47,8 @@ void GameCharacter::setLife(int life) {
     GameCharacter::life = life;
 }
 
-
+GameCharacter::~GameCharacter() {
+    if(weapon!= nullptr)
+        delete weapon;
+}
 
