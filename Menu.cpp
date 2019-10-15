@@ -17,12 +17,12 @@ Menu::~Menu() {
 
 void Menu::draw(sf::RenderWindow *window) {
     std::vector<MenuOption *>::iterator it;
-    float width = window->getSize().x;
-    float height = window->getSize().y;
+    float width = window->getView().getCenter().x;
+    float height = window->getView().getCenter().y;
     int i = 0;
     for (it = options.begin(); it != options.end(); it++, i++) {
         (*it)->option.setPosition(
-                sf::Vector2f(width / MENU_OFFSET_X, (height / (MENU_MAX_NUMBER_OF_ITEMS + 1) * i) + MENU_OFFSET_Y));
+                sf::Vector2f(width+500, height+i*100));
         if (i == selectedItemIndex) {
             (*it)->option.setColor(sf::Color::Red);
         }
