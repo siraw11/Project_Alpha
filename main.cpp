@@ -33,8 +33,8 @@ sf::Sprite sprite;
 sf::Sprite sprite1;
 sprite.setTexture(texture);
 sprite1.setTexture(texture1);
-sprite.setScale(1.f , 1.f);
-sprite1.setScale(1.f, 1.f);
+sprite.setScale(1.f /2 , 1.f /2);
+sprite1.setScale(1.f /2, 1.f /2);
 
 //hero class choice
 PlayerType playerType;
@@ -306,7 +306,7 @@ label:
                                //fire projectile
                                if (projectile.counterAttack == 11) {
                                    projectile.setPosition(hero.getPosition().x, hero.getPosition().y);
-                                   projectile.setTextureRect (sf::IntRect(0, 48 * projectile.direction, 48, 48));
+                                   projectile.setTextureRect (sf::IntRect(0, 64 * projectile.direction, 64, 64));
                                    projectileArray.push_back(projectile);
                                    projectile.counterAttack = 0;
                                }
