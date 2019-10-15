@@ -49,6 +49,8 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                             break;
                         case sf::Keyboard::Escape:
                             window.close();
+                            if (event.type == sf::Event::Closed)
+                                window.close();
                             break;
                         case sf::Keyboard::Return:
                             switch (menu.GetPressedItem()) {
@@ -90,7 +92,7 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                            int attackAnimation = 0;
 
                            // Create matrix
-                           int level[10080] = {};//TODO: aggiungere riallocazione dinamica
+                           int level[10080] = {};//TODO: Dynamic allocation
 
                            //Load map from Resources
                            std::fstream fin("../Resources/Map/map.txt", std::fstream::in);
@@ -263,8 +265,6 @@ sprite1.setScale(1.f / 2, 1.f / 2);
                                    projectile.direction = 3;
                                    projectile.counterAttack = 1;
                                }
-
-
 
                                //camera settings
                                position.x =hero.getPosition().x + 20 - (3840.0 / 2);
