@@ -34,6 +34,8 @@ public:
     void Attack(GameCharacter* enemy);
     virtual void TakeDamage(int point);
 
+    int animation(int n, int diretion);
+
 
 
 protected:

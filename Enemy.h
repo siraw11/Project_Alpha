@@ -13,6 +13,8 @@ class Enemy: public Knight, public Archer, public Mage{
 public:
     Enemy(int hp,int s, int sp, int a);
 
+    int direction;
+
 
 
 

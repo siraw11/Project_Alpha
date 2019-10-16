@@ -52,3 +52,14 @@ GameCharacter::~GameCharacter() {
         delete weapon;
 }
 
+int GameCharacter::animation(int n, int direction) {
+
+    if (n > 0) {
+        int k = n - 1;
+        setTextureRect((sf::IntRect(64 * k, 64 * direction, 64, 64)));
+        n++;
+    }
+
+    return n;
+
+}

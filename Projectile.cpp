@@ -13,6 +13,7 @@ Projectile::Projectile(PlayerType type)  {
         case PlayerType::MAGE:
             projectileTexture->loadFromFile("../Resources/Sprites/item/fireball.png");
             setTexture(*projectileTexture);
+
             break;
     }
 
