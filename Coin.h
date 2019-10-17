@@ -14,7 +14,8 @@
 class Coin : public Item {
 
 public:
-    Coin(double posX = 0, double posY = 0, double width = 0, double height = 0, int value = 0,
+    Coin(double posX = 0, double posY = 0, double width = 0,
+            double height = 0, int value = 0,
          std::string texture = "../textures/coin.png");
     ~Coin();
 
