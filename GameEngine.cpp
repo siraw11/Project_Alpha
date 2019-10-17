@@ -13,6 +13,7 @@
 #include "Bike.h"
 #include "Item.h"
 #include "Coin.h"
+#include "SpeedBonus.h"
 #include "Menu.h"
 
 
@@ -136,13 +137,18 @@ void GameEngine::run() {
             {1000, 10}//front limit
     };
 
+    std::list<Item *> mapItemsLevel1;
+    mapItemsLevel1.push_back(new Coin(5, 0.8, .7, .7, 50));
+    mapItemsLevel1.push_back(new Coin(7, 1, .7, .7, 30));
+    mapItemsLevel1.push_back(new SpeedBonus(10,1, 10, .7, .7, .7));
+
 
     std::list<Item *> mapItemsLevel2;
     mapItemsLevel2.push_back(new Coin(5, .2, .7, .7, 50));
     mapItemsLevel2.push_back(new Coin(7, .1, .7, .7, 30));
 
 
-    Map level1(false, true, 1, level1Points, nullptr, {});
+    Map level1(false, true, 1, level1Points, nullptr, mapItemsLevel1);
     Map level2(false, true, 1, level2Points, nullptr, mapItemsLevel2);
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
