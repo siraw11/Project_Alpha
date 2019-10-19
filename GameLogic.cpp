@@ -11,7 +11,8 @@ sf::Time lastHitTime = sf::seconds(0);
 GameLogic::GameLogic() = default;
 
 void GameLogic::Update(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, std::vector<Platform> *platform,
-                       Hero *player, std::vector<PowerUp> *powerUp, sf::Clock *clock) {
+                       Hero *player, std::vector<PowerUp> *powerUp, sf::Clock *clock, GameStates *state,
+                       Input input, sf::RenderWindow *window) {
 
     const sf::Time invulnerabilityTime = sf::seconds(2);
     bool W, A, S, D;
@@ -51,9 +52,13 @@ void GameLogic::Update(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, s
     }
 
     if (player->HP <= 0) {
-
+        player->HP = player->initialHP;
+        (*state) = GameStates::Main_menu;
     }
-    //TODO implementare cambio di scena (Game Over)
-    //TODO se sorge la necessità di elimiare gli oggetti ricorda di cambiale la creazione usado new/malloc
+    if (input == Input::Escape) {
+        (*state) = GameStates::Pause;
+    }
+    //TODO sistemare tutti i distruttori
+    //perchè sennò alla morte o al ritorno la menu principale in gioco non si resetta
 }
 

@@ -15,6 +15,7 @@ public:
     void update(bool W, bool A, bool S, bool D);//Gestisce il movimento da input da tastiera
 
     int HP = 5;
+    int initialHP = HP;
 private:
     bool isPowerBullet;
     //---Animation variables--//

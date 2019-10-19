@@ -2,9 +2,9 @@
 // Created by davide on 18/09/19.
 //
 
-#include "Level.h"
 #include "GameLogic.h"
 #include <iostream>
+#include "Input.h"
 
 Level::Level(int levelArray[], int column, int row) {
 
@@ -85,7 +85,7 @@ Level::Level(int levelArray[], int column, int row) {
     shoot_time = sf::seconds(0);
 }
 
-void Level::Update(sf::RenderWindow *window, sf::Event *event) {
+void Level::Update(sf::RenderWindow *window, Input input, GameStates *state) {
 
     sf::Time shoot_delay;
     sf::Vector2f shotDir;
@@ -139,11 +139,11 @@ void Level::Update(sf::RenderWindow *window, sf::Event *event) {
     */
 
     //------Passa gli oggetti al gestore della logica di gioco (per collisioni ed eventi)-------//
-    logic->Update(&vector_of_enemy, &vector_of_bullet, &vector_of_platform, &player, &vector_of_powerUp, &clock);
+    logic->Update(&vector_of_enemy, &vector_of_bullet, &vector_of_platform, &player, &vector_of_powerUp, &clock, state,
+                  input, window);
 
     //----Draw globale-----------//
 
-    window->clear(sf::Color(10, 108, 180));
     setTextures();
     //window->draw(spiteBack);
     drawBullet(window);

@@ -14,15 +14,18 @@
 #include "Collision.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
+#include "GameStates.h"
+#include "Input.h"
 
-//Classe per la gestione degli eventi fra oggetti
+//Classe per la gestione degli eventi fra oggetti + eventi in input, tasi premuti ecc..
 
 class GameLogic {
 public:
     GameLogic();
 
     void Update(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, std::vector<Platform> *platform,
-                Hero *player, std::vector<PowerUp> *powerUp, sf::Clock *clock);
+                Hero *player, std::vector<PowerUp> *powerUp, sf::Clock *clock, GameStates *state, Input input,
+                sf::RenderWindow *window);
 
 private:
     int playerCollisionEnemy;

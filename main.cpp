@@ -3,15 +3,22 @@
 #include <Level.h>
 #include <iostream>
 #include <Menu.h>
+#include <Input.h>
+#include "Pause.h"
+
 #define arrayRow 10
 #define arrayColumn 50
 
 int main() {//TODO Implmentare achivement
-    GameStates stateChecker = GameStates::Level;
-    //Menu menu;
+    //TODO Fare il fullscreen del gioco
+    GameStates stateChecker = GameStates::Main_menu;
+    Menu menu;
+    Pause pauseMenu;
     sf::Event event{};
-    unsigned int length = 1600;
-    unsigned int height = 320;
+    Input KeyBoardInput;
+    sf::Vector2u sizeMenu;
+    sizeMenu.x = 1600;
+    sizeMenu.y = 320;
 
     //-----Livello 1-------//
     int levelArray[arrayColumn * arrayRow] = {
@@ -41,22 +48,49 @@ int main() {//TODO Implmentare achivement
 
     //---------Loop di gioco------------//
 
-    sf::RenderWindow window(sf::VideoMode(length, height), "Game");
+    sf::RenderWindow window(sf::VideoMode(sizeMenu.x, sizeMenu.y), "Game");
 
     while (window.isOpen()) {
-
         while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed) {
                 window.close();
+            }
+            //----Gestione input----//
+            if (event.type == sf::Event::KeyPressed) {
+                KeyBoardInput = Input::Null;
+                if (event.key.code == sf::Keyboard::Down) {
+                    KeyBoardInput = Input::Down;
+                }
+                if (event.key.code == sf::Keyboard::Up) {
+                    KeyBoardInput = Input::Up;
+                }
+                if (event.key.code == sf::Keyboard::Enter) {
+                    KeyBoardInput = Input::Enter;
+                }
+                if (event.key.code == sf::Keyboard::Escape) {
+                    KeyBoardInput = Input::Escape;
+                }
+                //----Update dei menù solo in caso di input avvenuto----//
+                if (stateChecker == GameStates::Main_menu) {
+                    menu.update(KeyBoardInput, &stateChecker, &window);
+                }
+                if (stateChecker == GameStates::Pause) {
+                    pauseMenu.update(KeyBoardInput, &stateChecker, &window);
+                }
+            }
+
         }
 
-        if (stateChecker == GameStates::Main_menu) {
-            //menu.drawMenu(&window);
-        }
         if (stateChecker == GameStates::Level) {
-
-            level.Update(&window, &event);
+            level.Update(&window, KeyBoardInput, &stateChecker);
+        }
+        if (stateChecker == GameStates::Main_menu) {
+            menu.drawMenu(&window);
+        }
+        if (stateChecker == GameStates::Pause) {
+            pauseMenu.drawMenu(&window);
         }
         window.display();
+        window.clear(sf::Color(10, 108, 180));
     }
 }
