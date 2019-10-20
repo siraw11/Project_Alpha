@@ -13,6 +13,7 @@
 int main() {//TODO Implmentare achivement
     //TODO Fare il fullscreen del gioco
     GameStates stateChecker = GameStates::Main_menu;
+    GameLogic logic;
     Menu menu;
     Pause pauseMenu;
     DeathScreen deathScreen;
@@ -46,7 +47,7 @@ int main() {//TODO Implmentare achivement
             2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
     };
 
-    Level *level = new Level(levelArray, arrayColumn, arrayRow);
+    Level *level = new Level(levelArray, arrayColumn, arrayRow, &logic);
 
     //---------Loop di gioco------------//
 
@@ -79,14 +80,16 @@ int main() {//TODO Implmentare achivement
                 if (stateChecker == GameStates::Pause) {
                     pauseMenu.update(KeyBoardInput, &stateChecker, &window);
                     if ((deathScreen.selected == 1 || deathScreen.selected == 0) && KeyBoardInput == Input::Enter) {
-                        Level *levelR = new Level(levelArray, arrayColumn, arrayRow);
+                        Level *levelR = new Level(levelArray, arrayColumn, arrayRow, &logic);
+                        logic.lastHitTime = sf::seconds(0);
                         level = levelR;
                     }
                 }
                 if (stateChecker == GameStates::Dead) {
                     deathScreen.update(KeyBoardInput, &stateChecker, &window);
                     if ((deathScreen.selected == 1 || deathScreen.selected == 0) && KeyBoardInput == Input::Enter) {
-                        Level *levelR = new Level(levelArray, arrayColumn, arrayRow);
+                        Level *levelR = new Level(levelArray, arrayColumn, arrayRow, &logic);
+                        logic.lastHitTime = sf::seconds(0);
                         level = levelR;
                     }
                 }

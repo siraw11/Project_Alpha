@@ -6,12 +6,14 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-sf::Time lastHitTime = sf::seconds(0);
-
 GameLogic::GameLogic() = default;
 
 void GameLogic::Update(Level *level, GameStates *state, Input input, sf::RenderWindow *window) {
-
+    playerCollisionEnemy = -1;
+    playerCollisionPowerUp = -1;
+    bulletCollisionMap = -1;
+    enemyCollisionBullet.x = -1;
+    enemyCollisionBullet.y = -1;
     const sf::Time invulnerabilityTime = sf::seconds(2);
     bool W, A, S, D;
 
@@ -44,6 +46,7 @@ void GameLogic::Update(Level *level, GameStates *state, Input input, sf::RenderW
             level->vector_of_enemy.erase(level->vector_of_enemy.begin() + enemyCollisionBullet.y);
         }
     }
+
     if (playerCollisionEnemy >= 0 && level->clock.getElapsedTime() - lastHitTime >= invulnerabilityTime &&
         level->player.HP > 0) {
         level->player.HP = level->player.HP - level->vector_of_enemy[playerCollisionEnemy].damage;

@@ -27,6 +27,7 @@ public:
 
     void Update(Level *level, GameStates *state, Input input, sf::RenderWindow *window);
 
+    sf::Time lastHitTime = sf::seconds(0);
 private:
     int playerCollisionEnemy;
     sf::Vector2i enemyCollisionBullet;

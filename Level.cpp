@@ -6,7 +6,7 @@
 #include <iostream>
 #include "Input.h"
 
-Level::Level(int levelArray[], int column, int row) {
+Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
 
     size_of_enemy.x = 32;
     size_of_enemy.y = 32;
@@ -81,9 +81,9 @@ Level::Level(int levelArray[], int column, int row) {
         }
     }
     reset = false;
-    GameLogic start;
-    this->logic = &start;
+    this->logic = gameLogic;
     shoot_time = sf::seconds(0);
+    clock.restart();
 }
 
 void Level::Update(sf::RenderWindow *window, Input input, GameStates *state) {
