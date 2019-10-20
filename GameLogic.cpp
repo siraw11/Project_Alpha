@@ -10,9 +10,7 @@ sf::Time lastHitTime = sf::seconds(0);
 
 GameLogic::GameLogic() = default;
 
-void GameLogic::Update(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, std::vector<Platform> *platform,
-                       Hero *player, std::vector<PowerUp> *powerUp, sf::Clock *clock, GameStates *state,
-                       Input input, sf::RenderWindow *window) {
+void GameLogic::Update(Level *level, GameStates *state, Input input, sf::RenderWindow *window) {
 
     const sf::Time invulnerabilityTime = sf::seconds(2);
     bool W, A, S, D;
@@ -21,44 +19,46 @@ void GameLogic::Update(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, s
     A = sf::Keyboard::isKeyPressed(sf::Keyboard::A);
     S = sf::Keyboard::isKeyPressed(sf::Keyboard::S);
     D = sf::Keyboard::isKeyPressed(sf::Keyboard::D);
-    player->update(W, A, S, D);
+    level->player.update(W, A, S, D);
 
-    Collision::checkCollision(platform, player);
-    playerCollisionPowerUp = Collision::checkCollision(powerUp, player);
-    bulletCollisionMap = Collision::checkCollision(bullet, platform);
-    enemyCollisionBullet = Collision::checkCollision(bullet, enemy);
-    playerCollisionEnemy = Collision::checkCollision(player, enemy);
+    Collision::checkCollision(&level->vector_of_platform, &level->player);
+    playerCollisionPowerUp = Collision::checkCollision(&level->vector_of_powerUp, &level->player);
+    bulletCollisionMap = Collision::checkCollision(&level->vector_of_bullet, &level->vector_of_platform);
+    enemyCollisionBullet = Collision::checkCollision(&level->vector_of_bullet, &level->vector_of_enemy);
+    playerCollisionEnemy = Collision::checkCollision(&level->player, &level->vector_of_enemy);
     //-----Vari casi di esecuzione a seconda delle collisioni avvenute---//
     if (bulletCollisionMap >= 0) {
-        (*bullet).erase((*bullet).begin() + bulletCollisionMap);
+        level->vector_of_bullet.erase(level->vector_of_bullet.begin() + bulletCollisionMap);
     }
     if (playerCollisionPowerUp >= 0) {
-        PowerUp::setPower(player, (*powerUp)[playerCollisionPowerUp].type);
-        powerUp->erase(powerUp->begin() + playerCollisionPowerUp);
+        PowerUp::setPower(&level->player, level->vector_of_powerUp[playerCollisionPowerUp].type);
+        level->vector_of_powerUp.erase(level->vector_of_powerUp.begin() + playerCollisionPowerUp);
     }
     if (enemyCollisionBullet.x >= 0 && enemyCollisionBullet.y >= 0) {
-        (*bullet).erase((*bullet).begin() + enemyCollisionBullet.x);
-        (*enemy)[enemyCollisionBullet.y].HP =
-                (*enemy)[enemyCollisionBullet.y].HP - (*bullet)[enemyCollisionBullet.x].damage;
-        std::cout << "Enemy HP: " << (*enemy)[enemyCollisionBullet.y].HP << std::endl;
-        if ((*enemy)[enemyCollisionBullet.y].HP <= 0) {
-            (*enemy).erase((*enemy).begin() + enemyCollisionBullet.y);
+        level->vector_of_bullet.erase(level->vector_of_bullet.begin() + enemyCollisionBullet.x);
+        level->vector_of_enemy[enemyCollisionBullet.y].HP =
+                level->vector_of_enemy[enemyCollisionBullet.y].HP -
+                level->vector_of_bullet[enemyCollisionBullet.x].damage;
+        std::cout << "Enemy HP: " << level->vector_of_enemy[enemyCollisionBullet.y].HP << std::endl;
+        if (level->vector_of_enemy[enemyCollisionBullet.y].HP <= 0) {
+            level->vector_of_enemy.erase(level->vector_of_enemy.begin() + enemyCollisionBullet.y);
         }
     }
-    if (playerCollisionEnemy >= 0 && clock->getElapsedTime() - lastHitTime >= invulnerabilityTime && player->HP > 0) {
-        player->HP = player->HP - (*enemy)[playerCollisionEnemy].damage;
-        std::cout << "Player HP: " << player->HP << std::endl;
-        lastHitTime = clock->getElapsedTime();
+    if (playerCollisionEnemy >= 0 && level->clock.getElapsedTime() - lastHitTime >= invulnerabilityTime &&
+        level->player.HP > 0) {
+        level->player.HP = level->player.HP - level->vector_of_enemy[playerCollisionEnemy].damage;
+        std::cout << "Player HP: " << level->player.HP << std::endl;
+        lastHitTime = level->clock.getElapsedTime();
     }
 
-    if (player->HP <= 0) {
-        player->HP = player->initialHP;
-        (*state) = GameStates::Main_menu;
+    if (level->player.HP <= 0) {
+        level->reset = true;
     }
     if (input == Input::Escape) {
         (*state) = GameStates::Pause;
     }
     //TODO sistemare tutti i distruttori
-    //perchè sennò alla morte o al ritorno la menu principale in gioco non si resetta
+    //perchè sennò alla morte o al ritorno al menu principale in gioco non si resetta se non cancello gli oggetti vecchi
 }
+
 

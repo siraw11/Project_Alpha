@@ -16,16 +16,16 @@
 #include <SFML/System.hpp>
 #include "GameStates.h"
 #include "Input.h"
+#include "Level.h"
 
 //Classe per la gestione degli eventi fra oggetti + eventi in input, tasi premuti ecc..
+class Level;
 
 class GameLogic {
 public:
     GameLogic();
 
-    void Update(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet, std::vector<Platform> *platform,
-                Hero *player, std::vector<PowerUp> *powerUp, sf::Clock *clock, GameStates *state, Input input,
-                sf::RenderWindow *window);
+    void Update(Level *level, GameStates *state, Input input, sf::RenderWindow *window);
 
 private:
     int playerCollisionEnemy;

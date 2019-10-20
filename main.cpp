@@ -5,6 +5,7 @@
 #include <Menu.h>
 #include <Input.h>
 #include "Pause.h"
+#include "DeathScreen.h"
 
 #define arrayRow 10
 #define arrayColumn 50
@@ -14,6 +15,7 @@ int main() {//TODO Implmentare achivement
     GameStates stateChecker = GameStates::Main_menu;
     Menu menu;
     Pause pauseMenu;
+    DeathScreen deathScreen;
     sf::Event event{};
     Input KeyBoardInput;
     sf::Vector2u sizeMenu;
@@ -44,7 +46,7 @@ int main() {//TODO Implmentare achivement
             2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
     };
 
-    Level level(levelArray, arrayColumn, arrayRow);
+    Level *level = new Level(levelArray, arrayColumn, arrayRow);
 
     //---------Loop di gioco------------//
 
@@ -76,19 +78,37 @@ int main() {//TODO Implmentare achivement
                 }
                 if (stateChecker == GameStates::Pause) {
                     pauseMenu.update(KeyBoardInput, &stateChecker, &window);
+                    if ((deathScreen.selected == 1 || deathScreen.selected == 0) && KeyBoardInput == Input::Enter) {
+                        Level *levelR = new Level(levelArray, arrayColumn, arrayRow);
+                        level = levelR;
+                    }
+                }
+                if (stateChecker == GameStates::Dead) {
+                    deathScreen.update(KeyBoardInput, &stateChecker, &window);
+                    if ((deathScreen.selected == 1 || deathScreen.selected == 0) && KeyBoardInput == Input::Enter) {
+                        Level *levelR = new Level(levelArray, arrayColumn, arrayRow);
+                        level = levelR;
+                    }
                 }
             }
 
         }
 
         if (stateChecker == GameStates::Level) {
-            level.Update(&window, KeyBoardInput, &stateChecker);
+            level->Update(&window, KeyBoardInput, &stateChecker);
+            if (level->reset) {
+                delete level;
+                stateChecker = GameStates::Dead;
+            }
         }
         if (stateChecker == GameStates::Main_menu) {
             menu.drawMenu(&window);
         }
         if (stateChecker == GameStates::Pause) {
             pauseMenu.drawMenu(&window);
+        }
+        if (stateChecker == GameStates::Dead) {
+            deathScreen.drawMenu(&window);
         }
         window.display();
         window.clear(sf::Color(10, 108, 180));

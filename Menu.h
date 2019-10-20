@@ -19,11 +19,13 @@ public:
     void drawMenu(sf::RenderWindow *window);
 
 private:
+    sf::Text title;
     sf::Text menu[SIZE];
     sf::Font Font;
     int selected = 0;
     sf::Vector2i text1Pos;
     sf::Vector2i text2Pos;
+    sf::Vector2i titlePos;
     unsigned int textSize = 30;
 };
 

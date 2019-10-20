@@ -10,6 +10,9 @@ Menu::Menu() {
     text1Pos.y = 100;
     text2Pos.x = 100;
     text2Pos.y = 130;
+    titlePos.x = 150;
+    titlePos.y = 50;
+
     this->Font.loadFromFile("../textures/arial_narrow_7.ttf");
 
     menu[0].setFont(this->Font);
@@ -23,6 +26,12 @@ Menu::Menu() {
     menu[1].setFillColor(sf::Color::White);
     menu[1].setPosition(text2Pos.x, text2Pos.y);
     menu[1].setString("EXIT");
+
+    title.setFont(this->Font);
+    title.setCharacterSize(textSize);
+    title.setFillColor(sf::Color::Black);
+    title.setPosition(titlePos.x, titlePos.y);
+    title.setString("OCTOPUS KILLER");
 }
 
 void Menu::drawMenu(sf::RenderWindow *window) {
@@ -30,6 +39,7 @@ void Menu::drawMenu(sf::RenderWindow *window) {
     for (int i = 0; i < SIZE; i++) {
         window->draw(this->menu[i]);
     }
+    window->draw(title);
 }
 
 void Menu::update(Input input, GameStates *state, sf::RenderWindow *window) {

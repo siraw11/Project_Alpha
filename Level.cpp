@@ -80,6 +80,7 @@ Level::Level(int levelArray[], int column, int row) {
             }
         }
     }
+    reset = false;
     GameLogic start;
     this->logic = &start;
     shoot_time = sf::seconds(0);
@@ -139,8 +140,7 @@ void Level::Update(sf::RenderWindow *window, Input input, GameStates *state) {
     */
 
     //------Passa gli oggetti al gestore della logica di gioco (per collisioni ed eventi)-------//
-    logic->Update(&vector_of_enemy, &vector_of_bullet, &vector_of_platform, &player, &vector_of_powerUp, &clock, state,
-                  input, window);
+    logic->Update(this, state, input, window);
 
     //----Draw globale-----------//
 

@@ -6,11 +6,6 @@
 #define GAME_LEVEL_H
 
 #include <vector>
-#include "Platform.h"
-#include "Enemy.h"
-#include "Bullet.h"
-#include "Hero.h"
-#include "PowerUp.h"
 #include <SFML/Graphics.hpp>
 #include "GameLogic.h"
 #include "Input.h"
@@ -27,6 +22,7 @@ public:
     void Update(sf::RenderWindow *window, Input input, GameStates *state);//Prende l'input da tastiera
     //--Draw di tutti gli oggetti--//
     void drawBullet(sf::RenderWindow *Window);
+
 
     void drawEnemy(sf::RenderWindow *Window);
 
@@ -46,7 +42,8 @@ public:
     std::vector<Bullet> vector_of_bullet;
     //--------------//
     Hero player;
-
+    sf::Clock clock;
+    bool reset;
 
 private:
     sf::Vector2f size_of_enemy;
@@ -66,7 +63,8 @@ private:
     int type_player = 9;
     int type_enemy_octopus = 7;
     GameLogic *logic;
-    sf::Clock clock;//Clock per la frequenza di fuoco
+
+
     sf::Time shoot_time;
 };
 

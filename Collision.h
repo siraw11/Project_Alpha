@@ -5,10 +5,6 @@
 #ifndef GAME_COLLISION_H
 #define GAME_COLLISION_H
 
-#include "Platform.h"
-#include "Bullet.h"
-#include "Enemy.h"
-#include "Hero.h"
 #include "Level.h"
 
 class Collision {//Classe statica per la gestione delle collisioni
