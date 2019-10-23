@@ -11,7 +11,7 @@
 
 int generateRandom(int max);
 
-sf::Vector2f generateRandomPos();
+sf::Vector2f generateRandomPos(int *level);
 
 int generatePosX();
 

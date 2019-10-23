@@ -69,27 +69,19 @@ PlayerType playerType;
                                         const int SCALE = 3;
 
                                         //set hero
-                                        Hero hero(3, 5,2, 16, playerType);
+                                        Hero hero(3, 5, 2, 34, playerType);
                                         int counterWalking = 0;
 
                                         //collision variable
                                         int x;
                                         int y;
 
-
-                                        //set enemy
-                                        Enemy enemy(3, 1, 4, 0);
                                         //vector of enemy
                                         std::vector<Enemy> enemyArray;
+                                        //set enemy
+                                        Enemy enemy(3, 1, 4, 0);
                                         //initializing vector
-                                        if(enemyArray.empty()){
-                                            for (int i = 0; i <20 ; ++i) {
-                                                enemy.spawnPosition=generateRandomPos();
-                                                enemy.setPosition(enemy.spawnPosition);
-                                                enemyArray.push_back(enemy);
-                                                std::cout << enemyArray[i].getPosition().x<<" "<<enemyArray[i].getPosition().y<<std:: endl;
-                                            }
-                                        }
+
 
 
                                         int walkingRate=0;
@@ -125,6 +117,17 @@ PlayerType playerType;
                                             }
                                         }
                                         fin.close();
+
+                                        //charging enemyArray
+                                        if(enemyArray.empty()){
+                                            for (int i = 0; i <20 ; ++i) {
+                                                enemy.spawnPosition=generateRandomPos(level);
+                                                enemy.setPosition(enemy.spawnPosition);
+                                                enemyArray.push_back(enemy);
+
+                                            }
+
+                                        }
 
                                         // Create the Map
                                         Map map;
@@ -249,49 +252,6 @@ PlayerType playerType;
                                                     hero.setTextureRect(sf::IntRect(64 * counterWalking, 192, 64, 64));
                                                 }
                                             }
-
-
-                                            //enemy movement, random direction
-                                            if(walkingRate==24)
-                                            {
-                                                enemy.direction= generateRandom(4);//1=right, 2=down, 3=left, 4=up
-                                                walkingRate=0;
-                                            }
-                                            else{
-                                                walkingRate++;
-                                            }
-                                            //right movement
-                                           if(enemy.getPosition().x!=enemy.spawnPosition.x+64*5 && enemy.direction==1) {
-                                                enemy.move(32, 0);
-                                                enemy.setTextureRect(sf::IntRect(64*counterWalking,64*3,64,64));
-                                                //enemy.direction=0;
-                                            }
-                                            if(enemy.getPosition().y!=enemy.spawnPosition.y+64*5 && enemy.direction==2){
-                                                enemy.move(0,32);
-                                                enemy.setTextureRect(sf::IntRect(64*counterWalking,64*2,64,64));
-                                               // enemy.direction=0;
-                                            }
-                                            if(enemy.getPosition().x!=enemy.spawnPosition.x-64*5 && enemy.direction==3) {
-                                                enemy.move(-32, 0);
-                                                enemy.setTextureRect(sf::IntRect(64*counterWalking,64,64,64));
-                                               // enemy.direction=0;
-                                            }
-                                            if(enemy.getPosition().y!=enemy.spawnPosition.y-64*5 && enemy.direction==4){
-                                                enemy.move(0,-32);
-                                                enemy.setTextureRect(sf::IntRect(64*counterWalking,0,64,64));
-                                               // enemy.direction=0;
-                                            }
-
-                                            //reset walking animation
-                                            if (counterWalking == 8) {
-                                                counterWalking = 0;
-                                                enemy.direction=0;
-                                            } else {
-
-                                                counterWalking++;
-                                            }
-
-
                                             //attack animation
                                             //right attack
                                             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
@@ -328,30 +288,28 @@ PlayerType playerType;
 
 
                                             projectile.counterAttack = hero.animation(projectile.counterAttack,attackAnimation);
-
-                                            window.draw(hero);
-                                            window.setFramerateLimit(30);
-                                            window.setView(view);
-
                                             //fire projectile
                                             if ((projectile.counterAttack == 11)&&(playerType!= PlayerType::KNIGHT)) {
                                                 projectile.setPosition(hero.getPosition().x, hero.getPosition().y);
                                                 projectile.setTextureRect (sf::IntRect(0, 64 * projectile.direction, 64, 64));
                                                 projectileArray.push_back(projectile);
                                                 projectile.counterAttack = 0;
-                                                //startPosition=projectile.getPosition();
                                             }
                                             else if(projectile.counterAttack==11){
                                                 projectile.counterAttack=0;
                                             }
 
 
+                                            window.draw(hero);
+                                            window.setFramerateLimit(30);
+                                            window.setView(view);
+
                                             //pojectile collision and draw
                                             for (auto i = projectileArray.begin(); i != projectileArray.end() ; ++i) {
                                                 i->update();
                                                 window.draw(*i);
 
-                                                if (i->counterProjectile==64){
+                                                if (i->counterProjectile==32){
                                                     projectileArray.erase(i);
                                                     i--;
                                                     i->counterProjectile=0;
@@ -365,9 +323,22 @@ PlayerType playerType;
                                                 else {i->counterProjectile++;}
                                             }
 
-                                            for(auto i=enemyArray.end(); i != enemyArray.end(); i++){
-                                                window.draw(*i);
+                                            //draw enemy and movement
+                                            for(auto & i : enemyArray){
+
+                                                i.movement(level);
+                                                window.draw(i);
+
                                             }
+                                            //reset walking animation
+                                            if (counterWalking == 8) {
+                                                counterWalking = 0;
+                                                //enemy.direction=0;
+                                            } else {
+
+                                                counterWalking++;
+                                            }
+
                                             window.display();
                                         }
                                     }

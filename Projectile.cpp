@@ -10,10 +10,10 @@ Projectile::Projectile(PlayerType type)  {
             projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
             setTexture(*projectileTexture);
             break;
+
         case PlayerType::MAGE:
             projectileTexture->loadFromFile("../Resources/Sprites/item/fireball.png");
             setTexture(*projectileTexture);
-
             break;
     }
 

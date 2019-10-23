@@ -12,25 +12,31 @@ int generateRandom(int max){
     return random;
 }
 
-sf::Vector2f generateRandomPos() {
+sf::Vector2f generateRandomPos(int *level) {
+    bool test=false;
+    int x;
+    int y;
 
-
-    int x = generatePosX()*32*3;
-    int y = generatePosY()*32*3;
-    sf::Vector2f randomPos(x, y);
+    while(!test){
+        x = generatePosX();
+        y = generatePosY();
+        if(level[120 * y + x]==0)
+            test=true;
+    }
+    sf::Vector2f randomPos(x*32*3, y*32*3);
     return randomPos;
 }
 
 int generatePosX(){
 
     int randomNumber=std::rand();
-    int random=(randomNumber % 84);
+    int random=(randomNumber % 120);
     return random;
 }
 
 int generatePosY(){
 
     int randomNumber=std::rand();
-    int random=(randomNumber % 120);
+    int random=(randomNumber % 84);
     return random;
 }
