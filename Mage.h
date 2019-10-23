@@ -12,6 +12,7 @@ class Mage:virtual public GameCharacter{
 
 public:
     Mage(int hp, int s, int sp);
+    ~Mage() override;
 
     int getRange() const;
 

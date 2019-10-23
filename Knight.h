@@ -10,6 +10,7 @@
 class Knight : virtual public GameCharacter {
 public:
     Knight(int a , int hp, int s , int sp);
+    ~Knight() override;
 
     void fight(GameCharacter* enemy);
     void TakeDamage(int damage) override;

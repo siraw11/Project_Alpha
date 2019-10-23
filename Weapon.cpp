@@ -14,7 +14,7 @@ Weapon::Weapon(int s, int l) {
 
 }
 
-
+Weapon::~Weapon() {}
 
 int Weapon::getStrength() const {
     return strength;

@@ -12,10 +12,11 @@
 class Enemy: public Knight, public Archer, public Mage{
 public:
     Enemy(int hp,int s, int sp, int a);
+    ~Enemy() override;
+    //void TakeDamage(int point) override;
 
     int direction;
-
-
+    sf::Vector2f spawnPosition;
 
 
 

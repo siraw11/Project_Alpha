@@ -11,9 +11,9 @@ Knight::Knight(int a, int hp, int s, int sp): GameCharacter(hp, s, sp) {
     }else{
         armor=a;
     }
-    
-
 }
+
+Knight::~Knight() {}
 
 void Knight::fight(GameCharacter* enemy) {
     int damage=0;

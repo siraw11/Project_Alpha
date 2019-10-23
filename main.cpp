@@ -18,18 +18,13 @@
 #include "Menu.h"
 #include "Menu1.h"
 #include "PlayerType.h"
+#include "Random.h"
 
-int generateRandom(int max){
-
-    int randomNumber= rand();
-    int random=(randomNumber % max)+1;
-
-    return random;
-}
 
 
 int main() {
 //Main window creation
+std::srand(std::time(nullptr));
 sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Project_Alpha!");
 sf::Texture texture;
 sf::Texture texture1;
@@ -74,47 +69,38 @@ PlayerType playerType;
                                         const int SCALE = 3;
 
                                         //set hero
-                                        Hero hero(3, 5, 1, 16);
-                                        auto heroTexture = new sf::Texture;
-                                        switch(playerType){
-                                            case PlayerType ::ARCHER:
-                                                heroTexture->loadFromFile("../Resources/Sprites/Hero/archer.png");
-                                                hero.setTexture(*heroTexture);
-                                                break;
-                                            case PlayerType::KNIGHT:
-                                                heroTexture->loadFromFile("../Resources/Sprites/Hero/knight.png");
-                                                hero.setTexture(*heroTexture);
-                                                break;
-                                            case PlayerType ::MAGE:
-                                                heroTexture->loadFromFile("../Resources/Sprites/Hero/mage.png");
-                                                hero.setTexture(*heroTexture);
-                                        }
-
-                                        hero.setTextureRect(sf::IntRect(0, 128, 64, 64));
-                                        hero.setOrigin(hero.getPosition().x +hero.getGlobalBounds().width / 4,hero.getPosition().y +hero.getGlobalBounds().height / 2);
-                                        hero.setPosition(32 * 3, 32 * 30);
-                                        hero.setScale(sf::Vector2f(1.f * 2, 1.f * 2));
+                                        Hero hero(3, 5,2, 16, playerType);
                                         int counterWalking = 0;
 
                                         //collision variable
                                         int x;
                                         int y;
 
+
                                         //set enemy
                                         Enemy enemy(3, 1, 4, 0);
-                                        auto enemyTexture = new sf::Texture;
-                                        enemyTexture->loadFromFile("../Resources/Sprites/Enemy/gargoyle.png");
-                                        enemy.setTexture(*enemyTexture);
-                                        enemy.setTextureRect(sf::IntRect(0, 64 * 3, 64, 64));
-                                        enemy.setPosition(1200, 1200);
-                                        enemy.setScale(sf::Vector2f(3.f, 3.f));
-                                        sf::Vector2f spawnPosition=enemy.getPosition();
+                                        //vector of enemy
+                                        std::vector<Enemy> enemyArray;
+                                        //initializing vector
+                                        if(enemyArray.empty()){
+                                            for (int i = 0; i <20 ; ++i) {
+                                                enemy.spawnPosition=generateRandomPos();
+                                                enemy.setPosition(enemy.spawnPosition);
+                                                enemyArray.push_back(enemy);
+                                                std::cout << enemyArray[i].getPosition().x<<" "<<enemyArray[i].getPosition().y<<std:: endl;
+                                            }
+                                        }
+
+
                                         int walkingRate=0;
 
 
                                         //set projectile
                                         std::vector<Projectile> projectileArray;
                                         Projectile projectile(playerType);
+                                       // int counterProjectile;
+
+
 
                                         //animation variable
                                         int attackAnimation = 0;
@@ -130,7 +116,6 @@ PlayerType playerType;
                                         while (fin >> std::noskipws >> c) {
                                             if (c != ',') {
                                                 tmp += c;
-                                                std::cout << c << std::endl;
                                             }
                                             else
                                             {
@@ -169,7 +154,7 @@ PlayerType playerType;
                                             }
                                             window.clear(sf::Color::Black);
                                             window.draw(map);
-                                            window.draw(enemy);
+                                           // window.draw(enemy);
 
                                             //hero movement and collision
                                             if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
@@ -276,22 +261,22 @@ PlayerType playerType;
                                                 walkingRate++;
                                             }
                                             //right movement
-                                            if(enemy.getPosition().x!=spawnPosition.x+64*5 && enemy.direction==1) {
+                                           if(enemy.getPosition().x!=enemy.spawnPosition.x+64*5 && enemy.direction==1) {
                                                 enemy.move(32, 0);
                                                 enemy.setTextureRect(sf::IntRect(64*counterWalking,64*3,64,64));
                                                 //enemy.direction=0;
                                             }
-                                            if(enemy.getPosition().y!=spawnPosition.y+64*5 && enemy.direction==2){
+                                            if(enemy.getPosition().y!=enemy.spawnPosition.y+64*5 && enemy.direction==2){
                                                 enemy.move(0,32);
                                                 enemy.setTextureRect(sf::IntRect(64*counterWalking,64*2,64,64));
                                                // enemy.direction=0;
                                             }
-                                            if(enemy.getPosition().x!=spawnPosition.x-64*5 && enemy.direction==3) {
+                                            if(enemy.getPosition().x!=enemy.spawnPosition.x-64*5 && enemy.direction==3) {
                                                 enemy.move(-32, 0);
                                                 enemy.setTextureRect(sf::IntRect(64*counterWalking,64,64,64));
                                                // enemy.direction=0;
                                             }
-                                            if(enemy.getPosition().y!=spawnPosition.y-64*5 && enemy.direction==4){
+                                            if(enemy.getPosition().y!=enemy.spawnPosition.y-64*5 && enemy.direction==4){
                                                 enemy.move(0,-32);
                                                 enemy.setTextureRect(sf::IntRect(64*counterWalking,0,64,64));
                                                // enemy.direction=0;
@@ -310,27 +295,21 @@ PlayerType playerType;
                                             //attack animation
                                             //right attack
                                             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-                                                //hero.animationControl(7);
                                                 attackAnimation = 7;
                                                 projectile.direction = 2;
-
                                                 projectile.counterAttack = 1;
-
                                             }//down attack
                                             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-                                                //hero.animationControl(6);
                                                 attackAnimation = 6;
                                                 projectile.direction = 0;
                                                 projectile.counterAttack = 1;
                                             }// left attack
                                             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-                                                // hero.animationControl(5);
                                                 attackAnimation = 5;
                                                 projectile.direction = 1;
                                                 projectile.counterAttack = 1;
                                             }// up attack
                                             else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-                                                //hero.animationControl(4);
                                                 attackAnimation = 4;
                                                 projectile.direction = 3;
                                                 projectile.counterAttack = 1;
@@ -360,13 +339,34 @@ PlayerType playerType;
                                                 projectile.setTextureRect (sf::IntRect(0, 64 * projectile.direction, 64, 64));
                                                 projectileArray.push_back(projectile);
                                                 projectile.counterAttack = 0;
+                                                //startPosition=projectile.getPosition();
                                             }
                                             else if(projectile.counterAttack==11){
                                                 projectile.counterAttack=0;
                                             }
-                                            for (auto &iter : projectileArray) {
-                                                iter.update();
-                                                window.draw(iter);
+
+
+                                            //pojectile collision and draw
+                                            for (auto i = projectileArray.begin(); i != projectileArray.end() ; ++i) {
+                                                i->update();
+                                                window.draw(*i);
+
+                                                if (i->counterProjectile==64){
+                                                    projectileArray.erase(i);
+                                                    i--;
+                                                    i->counterProjectile=0;
+                                                }
+                                                else if(i->getGlobalBounds().intersects(enemy.getGlobalBounds()))
+                                                {
+                                                    projectileArray.erase(i);
+                                                    i--;
+                                                    hero.fightA(&enemy);
+                                                }
+                                                else {i->counterProjectile++;}
+                                            }
+
+                                            for(auto i=enemyArray.end(); i != enemyArray.end(); i++){
+                                                window.draw(*i);
                                             }
                                             window.display();
                                         }

@@ -5,6 +5,7 @@
 #include "Mage.h"
 
 Mage::Mage(int hp, int s, int sp): GameCharacter(hp, s, sp), range(3), mana(20) {}
+Mage::~Mage() {}
 
 int Mage::getRange() const {
     return range;
@@ -24,7 +25,7 @@ void Mage::setMana(int mana) {
 
 void Mage::fight(GameCharacter* enemy){
     if(mana>0){
-        Attack(enemy);
+        Attack(*enemy);
         mana--;
     }
 }

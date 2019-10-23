@@ -15,7 +15,7 @@ GameCharacter::GameCharacter(int hp, int s, int sp): weapon(nullptr){
         strength = s;
         speed = sp;
     }
-};
+}
 
 
 void GameCharacter::setStrength(int strength) {
@@ -31,23 +31,22 @@ void GameCharacter::setWeapon(Weapon *weapon) {
     this->weapon = weapon;
 }
 
-void GameCharacter::Attack(GameCharacter* enemy) {
+void GameCharacter::Attack(GameCharacter &enemy) {
     int point=strength;
     if(weapon!=nullptr)
         point+=weapon->getStrength();
-    TakeDamage(point);
 }
 
 
 void GameCharacter::TakeDamage(int point) {
-    life-=point;
+    life -= point;
 }
 
 void GameCharacter::setLife(int life) {
     GameCharacter::life = life;
 }
 
-GameCharacter::~GameCharacter() {
+GameCharacter::~GameCharacter(){
     if(weapon!= nullptr)
         delete weapon;
 }

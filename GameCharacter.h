@@ -11,7 +11,7 @@
 class GameCharacter:public sf::Sprite {
 public:
     GameCharacter(int hp, int s, int sp);
-    ~GameCharacter()override;
+    virtual ~GameCharacter();
 
 
     Weapon *getWeapon() const;
@@ -31,10 +31,10 @@ public:
         return speed;
     }
 
-    void Attack(GameCharacter* enemy);
+    void Attack(GameCharacter &enemy);
     virtual void TakeDamage(int point);
 
-    int animation(int n, int diretion);
+    int animation(int n, int direction);
 
 
 

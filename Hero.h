@@ -8,11 +8,12 @@
 #include "Mage.h"
 #include "Archer.h"
 #include "Item.h"
+#include "PlayerType.h"
 
 
 class Hero : public Knight, public Archer, public Mage{
 public:
-    Hero(int a,int hp,int s, float sp);
+    Hero(int a,int hp,int s, float sp, PlayerType playerType);
 
     Item* getItem() const;
     void setItem(Item *item);

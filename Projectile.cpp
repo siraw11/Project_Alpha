@@ -34,3 +34,5 @@ void Projectile::update() {
     if(direction==3)
         move(0,-attackSpeed);
 }
+
+Projectile:: ~Projectile() {}

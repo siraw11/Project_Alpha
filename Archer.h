@@ -11,6 +11,7 @@
 class Archer : virtual public GameCharacter{
 public:
     Archer( int hp, int s, int sp);
+    ~Archer() override;
 
     int getArrows() const;
 
@@ -20,7 +21,7 @@ public:
 
     int getRange() const;
     
-    void fight(GameCharacter *enemy);
+    void fightA(GameCharacter *enemy);
 
    
 
