@@ -17,11 +17,8 @@ public:
 
     Item* getItem() const;
     void setItem(Item *item);
-
-
-
-
-
+    void heroMovement(int *level);
+    int direction=0; //1=up
 
 private:
     Item* item;

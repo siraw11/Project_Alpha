@@ -69,7 +69,7 @@ PlayerType playerType;
                                         const int SCALE = 3;
 
                                         //set hero
-                                        Hero hero(3, 5, 2, 34, playerType);
+                                        Hero hero(3, 5, 2, 16, playerType);
                                         int counterWalking = 0;
 
                                         //collision variable
@@ -82,9 +82,6 @@ PlayerType playerType;
                                         Enemy enemy(3, 1, 4, 0);
                                         //initializing vector
 
-
-
-                                        int walkingRate=0;
 
 
                                         //set projectile
@@ -161,97 +158,38 @@ PlayerType playerType;
 
                                             //hero movement and collision
                                             if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-                                                if (projectile.counterAttack == 0) {
-                                                    // up movement
-                                                    x = (int) (hero.getPosition().x) / 32 / SCALE;
-                                                    y = (int) ((hero.getPosition().y - 1) / 32 / SCALE);
+                                                hero.direction=1;
+                                                if (projectile.counterAttack == 0)
+                                                    hero.heroMovement(level);
+                                                hero.setTextureRect(sf::IntRect(64 * counterWalking, 0, 64, 64));
 
-                                                    if (level[120 * y + x] == 0) {
-                                                        hero.move(0, -hero.getSpeed());
-                                                    }
-                                                    else
-                                                    {//wall up problem fix
-                                                        float offset = 0;
-                                                        while (true) {
-                                                            offset += 0.01;
-                                                            y = static_cast<int>((hero.getPosition().y + offset) / 32 /SCALE);
-                                                            if (level[120 * y + x] == 0) {
-                                                                hero.move(0, offset);
-                                                                break;
-                                                            }
-                                                        }
-                                                    }
-                                                    hero.setTextureRect(sf::IntRect(64 * counterWalking, 0, 64, 64));
-                                                }
 
                                             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+                                                hero.direction=2;
                                                 //down movement
-                                                if (projectile.counterAttack == 0) {
-                                                    x = (int) (hero.getPosition().x) / 32 / SCALE;
-                                                    y = (int) ((hero.getPosition().y) / 32 / SCALE) + 1;
-                                                    if (level[120 * y + x] == 0) {
-                                                        hero.move(0, hero.getSpeed());
-                                                    } else {
-                                                        //wall down problem fix
-                                                        float offset = 0;
-                                                        while (true) {
-                                                            offset += 0.01;
-                                                            y = static_cast<int>((hero.getPosition().y - offset) / 32 /SCALE);
-                                                            if (level[120 * y + x] == 0) {
-                                                                hero.move(0, -offset);
-                                                                break;
-                                                            }
-                                                        }
-                                                    }
-                                                    hero.setTextureRect(sf::IntRect(64*counterWalking,128,64,64));
-                                                }
+                                                if (projectile.counterAttack == 0)
+                                                    hero.heroMovement(level);
 
-                                            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+                                                hero.setTextureRect(sf::IntRect(64*counterWalking,128,64,64));
+
+                                            }else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+                                                hero.direction=3;
                                                 //left movement
-                                                if (projectile.counterAttack == 0) {
-                                                    x = (int) ((hero.getPosition().x - 1) / 32 / SCALE);
-                                                    y = (int) (hero.getPosition().y) / 32 / SCALE;
-                                                    if (level[120 * y + x] == 0) {
-                                                        hero.move(-hero.getSpeed(), 0);
-                                                    } else {
-                                                        //wall left problem fix
-                                                        float offset = 0;
-                                                        while (true) {
-                                                            offset += 0.01;
-                                                            x = static_cast<int>((hero.getPosition().x + offset) / 32 /
-                                                                                 SCALE);
-                                                            if (level[120 * y + x] == 0) {
-                                                                hero.move(offset, 0);
-                                                                break;
-                                                            }
-                                                        }
-                                                    }
-                                                    hero.setTextureRect(sf::IntRect(64 * counterWalking, 64, 64, 64));
-                                                }
+                                                if (projectile.counterAttack == 0)
+                                                    hero.heroMovement(level);
+
+                                                hero.setTextureRect(sf::IntRect(64 * counterWalking, 64, 64, 64));
+
 
                                             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+                                                hero.direction=4;
                                                 // right movement
-                                                if (projectile.counterAttack == 0) {
-                                                    x = (int) ((hero.getPosition().x) / 32 / SCALE) + 1;
-                                                    y = (int) (hero.getPosition().y) / 32 / SCALE;
-                                                    if (level[120 * y + x] == 0) {
+                                                if (projectile.counterAttack == 0)
+                                                    hero.heroMovement(level);
 
-                                                        hero.move(hero.getSpeed(), 0);
-                                                    } else {
-                                                        //wall right problem fix
-                                                        float offset = 0;
-                                                        while (true) {
-                                                            offset += 0.01;
-                                                            x = static_cast<int>((hero.getPosition().x - offset) / 32 /SCALE);
-                                                            if (level[120 * y + x] == 0) {
-                                                                hero.move(-offset, 0);
-                                                                break;
-                                                            }
-                                                        }
-                                                    }
-                                                    hero.setTextureRect(sf::IntRect(64 * counterWalking, 192, 64, 64));
-                                                }
+                                                hero.setTextureRect(sf::IntRect(64 * counterWalking, 192, 64, 64));
                                             }
+
                                             //attack animation
                                             //right attack
                                             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
