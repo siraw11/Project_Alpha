@@ -6,14 +6,18 @@
 #include <Input.h>
 #include "Pause.h"
 #include "DeathScreen.h"
+#include "AchievementScreen.h"
 
 #define arrayRow 10
 #define arrayColumn 50
 
-int main() {//TODO Implmentare achivement
+int main() {
     //TODO Fare il fullscreen del gioco
     GameStates stateChecker = GameStates::Main_menu;
+    AchievementScreen achievementScreen;
     GameLogic logic;
+    int resetcheckMenu = 1;
+    int resetcheckRestart = 0;
     Menu menu;
     Pause pauseMenu;
     DeathScreen deathScreen;
@@ -73,21 +77,28 @@ int main() {//TODO Implmentare achivement
                 if (event.key.code == sf::Keyboard::Escape) {
                     KeyBoardInput = Input::Escape;
                 }
+
+
                 //----Update dei menù solo in caso di input avvenuto----//
-                if (stateChecker == GameStates::Main_menu) {
-                    menu.update(KeyBoardInput, &stateChecker, &window);
+                if (stateChecker == GameStates::AchievementScreen) {
+                    achievementScreen.update(&KeyBoardInput, &stateChecker);
                 }
+                if (stateChecker == GameStates::Main_menu) {
+                    menu.update(&KeyBoardInput, &stateChecker, &window);
+                }
+
                 if (stateChecker == GameStates::Pause) {
-                    pauseMenu.update(KeyBoardInput, &stateChecker, &window);
-                    if ((deathScreen.selected == 1 || deathScreen.selected == 0) && KeyBoardInput == Input::Enter) {
+                    pauseMenu.update(&KeyBoardInput, &stateChecker, &window);
+                    if ((pauseMenu.selected == resetcheckMenu) && KeyBoardInput == Input::Enter) {
                         Level *levelR = new Level(levelArray, arrayColumn, arrayRow, &logic);
                         logic.lastHitTime = sf::seconds(0);
                         level = levelR;
                     }
                 }
                 if (stateChecker == GameStates::Dead) {
-                    deathScreen.update(KeyBoardInput, &stateChecker, &window);
-                    if ((deathScreen.selected == 1 || deathScreen.selected == 0) && KeyBoardInput == Input::Enter) {
+                    deathScreen.update(&KeyBoardInput, &stateChecker, &window);
+                    if ((deathScreen.selected == resetcheckMenu || deathScreen.selected == resetcheckRestart)
+                        && KeyBoardInput == Input::Enter) {
                         Level *levelR = new Level(levelArray, arrayColumn, arrayRow, &logic);
                         logic.lastHitTime = sf::seconds(0);
                         level = levelR;
@@ -98,10 +109,11 @@ int main() {//TODO Implmentare achivement
         }
 
         if (stateChecker == GameStates::Level) {
-            level->Update(&window, KeyBoardInput, &stateChecker);
+            level->Update(&window, &KeyBoardInput, &stateChecker);
             if (level->reset) {
                 delete level;
                 stateChecker = GameStates::Dead;
+                level->reset = false;
             }
         }
         if (stateChecker == GameStates::Main_menu) {
@@ -112,6 +124,9 @@ int main() {//TODO Implmentare achivement
         }
         if (stateChecker == GameStates::Dead) {
             deathScreen.drawMenu(&window);
+        }
+        if (stateChecker == GameStates::AchievementScreen) {
+            achievementScreen.drawAchievements(&logic.achievementNotifier, &window);
         }
         window.display();
         window.clear(sf::Color(10, 108, 180));

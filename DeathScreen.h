@@ -14,7 +14,7 @@ class DeathScreen {
 public:
     DeathScreen();
 
-    void update(Input input, GameStates *state, sf::RenderWindow *window);
+    void update(Input *input, GameStates *state, sf::RenderWindow *window);
 
     void drawMenu(sf::RenderWindow *window);
 

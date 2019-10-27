@@ -17,6 +17,8 @@
 #include "GameStates.h"
 #include "Input.h"
 #include "Level.h"
+#include "AchievementNotifier.h"
+#include "AchievementScreen.h"
 
 //Classe per la gestione degli eventi fra oggetti + eventi in input, tasi premuti ecc..
 class Level;
@@ -25,14 +27,18 @@ class GameLogic {
 public:
     GameLogic();
 
-    void Update(Level *level, GameStates *state, Input input, sf::RenderWindow *window);
+    void Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window);
 
     sf::Time lastHitTime = sf::seconds(0);
+    AchievementNotifier achievementNotifier;
 private:
     int playerCollisionEnemy;
     sf::Vector2i enemyCollisionBullet;
     int playerCollisionPowerUp;
     int bulletCollisionMap;
+    int enemyKilled = 0;
+    int deathcounter = 0;
+    int potionUsed = 0;
 };
 
 

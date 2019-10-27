@@ -19,7 +19,7 @@ class Level {
 public:
     explicit Level(int levelArray[], int colomun, int row, GameLogic *gameLogic);//Crea il livello mettendo tutti i tipi
     // di oggetti nei vettori assegnati e ne setta le propietà
-    void Update(sf::RenderWindow *window, Input input, GameStates *state);//Prende l'input da tastiera
+    void Update(sf::RenderWindow *window, Input *input, GameStates *state);//Prende l'input da tastiera
     //--Draw di tutti gli oggetti--//
     void drawBullet(sf::RenderWindow *Window);
 
@@ -35,7 +35,6 @@ public:
     void setTextures();//Get texture globale
 public:
     //-----Vettori di oggetti------//
-    std::vector<RectangleShape> gian;
     std::vector<Platform> vector_of_platform;
     std::vector<Enemy> vector_of_enemy;
     std::vector<PowerUp> vector_of_powerUp;

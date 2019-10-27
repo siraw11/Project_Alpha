@@ -40,8 +40,8 @@ DeathScreen::DeathScreen() {
     dead.setString("GAME OVER");
 }
 
-void DeathScreen::update(Input input, GameStates *state, sf::RenderWindow *window) {
-    if (input == Input::Down) {
+void DeathScreen::update(Input *input, GameStates *state, sf::RenderWindow *window) {
+    if (*input == Input::Down) {
         selected++;
         if (selected < SIZE) {
             pause[selected - 1].setFillColor(sf::Color::White);
@@ -50,7 +50,7 @@ void DeathScreen::update(Input input, GameStates *state, sf::RenderWindow *windo
         }
         pause[selected].setFillColor(sf::Color::Red);
     }
-    if (input == Input::Up) {
+    if (*input == Input::Up) {
         selected--;
         if (selected >= 0) {
             pause[selected + 1].setFillColor(sf::Color::White);
@@ -59,7 +59,7 @@ void DeathScreen::update(Input input, GameStates *state, sf::RenderWindow *windo
         }
         pause[selected].setFillColor(sf::Color::Red);
     }
-    if (input == Input::Enter) {
+    if (*input == Input::Enter) {
 
         if (selected == 0) {
             (*state) = GameStates::Level;

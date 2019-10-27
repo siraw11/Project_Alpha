@@ -10,7 +10,6 @@ void Collision::checkCollision(std::vector<Platform> *platform, Hero *player) {
 
     // Checking the collision on the x axis
     player->x += player->velocity.x * player->getMoveSpeed();
-
     for (int i = 0; i < platform->size(); i++) {
         if (player->x + player->width > (*platform)[i].hitLeft && player->x < (*platform)[i].hitRight &&
             player->y<(*platform)[i].hitBottom

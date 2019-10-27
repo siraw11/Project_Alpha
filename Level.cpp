@@ -86,7 +86,7 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
     clock.restart();
 }
 
-void Level::Update(sf::RenderWindow *window, Input input, GameStates *state) {
+void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state) {
 
     sf::Time shoot_delay;
     sf::Vector2f shotDir;

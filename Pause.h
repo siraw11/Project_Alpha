@@ -13,15 +13,15 @@ class Pause {
 public:
     Pause();
 
-    void update(Input input, GameStates *state, sf::RenderWindow *window);
+    void update(Input *input, GameStates *state, sf::RenderWindow *window);
 
     void drawMenu(sf::RenderWindow *window);
 
+    int selected = 0;
 private:
     sf::Text text;
     sf::Text pause[SIZE];
     sf::Font Font;
-    int selected = 0;
     sf::Vector2i text1Pos;
     sf::Vector2i text2Pos;
     sf::Vector2i text3Pos;

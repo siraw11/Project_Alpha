@@ -4,7 +4,7 @@
 
 #ifndef GAME_MENU_H
 #define GAME_MENU_H
-#define SIZE 2
+#define SIZE 3
 
 #include <SFML/Graphics.hpp>
 #include "Input.h"
@@ -15,7 +15,7 @@ class Menu {
 public:
     Menu();
 
-    void update(Input input, GameStates *state, sf::RenderWindow *window);
+    void update(Input *input, GameStates *state, sf::RenderWindow *window);
     void drawMenu(sf::RenderWindow *window);
 
 private:
@@ -25,6 +25,7 @@ private:
     int selected = 0;
     sf::Vector2i text1Pos;
     sf::Vector2i text2Pos;
+    sf::Vector2i text3Pos;
     sf::Vector2i titlePos;
     unsigned int textSize = 30;
 };
