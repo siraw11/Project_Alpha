@@ -4,6 +4,7 @@
 
 #include "GameCharacter.h"
 #include <stdexcept>
+#include <iostream>
 
 using namespace std;
 
@@ -33,8 +34,10 @@ void GameCharacter::setWeapon(Weapon *weapon) {
 
 void GameCharacter::Attack(GameCharacter &enemy) {
     int point=strength;
+    //cout<<point<<endl;
     if(weapon!=nullptr)
         point+=weapon->getStrength();
+    enemy.TakeDamage(point);
 }
 
 

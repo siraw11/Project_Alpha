@@ -17,7 +17,7 @@ Enemy::Enemy(int hp, int s, int sp, int a) :GameCharacter(hp,s,sp), Mage(hp,s,sp
 }
 
 
-Enemy::~Enemy() {}
+//Enemy::~Enemy() {}
 
 void Enemy::movement(int *level){
     //enemy movement, random direction
@@ -32,7 +32,7 @@ void Enemy::movement(int *level){
     int x, y;
 
     //right movement
-    if(getPosition().x!=spawnPosition.x+64*5 && direction==1 ) {
+    if(getPosition().x!=spawnPosition.x+64*5 && direction==1 && counterDeath==0) {
         x = (int) ((getPosition().x) / 32 / 3) + 1;
         y = (int) (getPosition().y) / 32 / 3;
         if (level[120 * y + x] == 0) {
@@ -41,7 +41,7 @@ void Enemy::movement(int *level){
         }
     }
     //down movement
-    if(getPosition().y!=spawnPosition.y+64*5 && direction==2){
+    if(getPosition().y!=spawnPosition.y+64*5 && direction==2 && counterDeath==0){
         x = (int) (getPosition().x) / 32 / 3;
         y = (int) ((getPosition().y) / 32 / 3) + 1;
         if (level[120 * y + x] == 0) {
@@ -50,7 +50,7 @@ void Enemy::movement(int *level){
         }
     }
     //left movement
-    if(getPosition().x!=spawnPosition.x-64*5 && direction==3) {
+    if(getPosition().x!=spawnPosition.x-64*5 && direction==3 && counterDeath==0) {
         x = (int) ((getPosition().x - 1) / 32 / 3);
         y = (int) (getPosition().y) / 32 / 3;
         if (level[120 * y + x] == 0) {
@@ -59,7 +59,7 @@ void Enemy::movement(int *level){
         }
     }//
     //up movement
-    if(getPosition().y!=spawnPosition.y-64*5 && direction==4){
+    if(getPosition().y!=spawnPosition.y-64*5 && direction==4 && counterDeath==0){
         x = (int) (getPosition().x) / 32 / 3;
         y = (int) ((getPosition().y - 1) / 32 / 3);
         if (level[120 * y + x] == 0) {

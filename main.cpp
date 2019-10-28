@@ -37,6 +37,8 @@ sprite1.setTexture(texture1);
 sprite.setScale(1.f  , 1.f );
 sprite1.setScale(1.f , 1.f );
 
+
+
 //hero class choice
 PlayerType playerType;
     label:
@@ -80,9 +82,6 @@ PlayerType playerType;
                                         std::vector<Enemy> enemyArray;
                                         //set enemy
                                         Enemy enemy(3, 1, 4, 0);
-                                        //initializing vector
-
-
 
                                         //set projectile
                                         std::vector<Projectile> projectileArray;
@@ -115,7 +114,7 @@ PlayerType playerType;
                                         }
                                         fin.close();
 
-                                        //charging enemyArray
+                                        //loading enemyArray
                                         if(enemyArray.empty()){
                                             for (int i = 0; i <20 ; ++i) {
                                                 enemy.spawnPosition=generateRandomPos(level);
@@ -243,29 +242,48 @@ PlayerType playerType;
                                             window.setView(view);
 
                                             //pojectile collision and draw
-                                            for (auto i = projectileArray.begin(); i != projectileArray.end() ; ++i) {
-                                                i->update();
-                                                window.draw(*i);
-
-                                                if (i->counterProjectile==32){
-                                                    projectileArray.erase(i);
-                                                    i--;
-                                                    i->counterProjectile=0;
-                                                }
-                                                else if(i->getGlobalBounds().intersects(enemy.getGlobalBounds()))
-                                                {
-                                                    projectileArray.erase(i);
-                                                    i--;
-                                                    hero.fightA(&enemy);
-                                                }
-                                                else {i->counterProjectile++;}
+                                            for (auto & i : projectileArray) {
+                                                i.update();
+                                                window.draw(i);
                                             }
 
-                                            //draw enemy and movement
-                                            for(auto & i : enemyArray){
+                                            for(auto i=projectileArray.begin(); i!= projectileArray.end(); ++i){
+                                                for(auto j=enemyArray.begin(); j!= enemyArray.end(); ++j){
+                                                    if (i->counterProjectile==640){
+                                                        projectileArray.erase(i);
+                                                        i--;
+                                                        i->counterProjectile=0;
+                                                        break;
+                                                    }else if(i->getGlobalBounds().intersects(j->getGlobalBounds())){
 
-                                                i.movement(level);
-                                                window.draw(i);
+                                                        hero.Attack(*j);
+                                                        projectileArray.erase(i);
+                                                        i--;
+                                                        break;
+                                                    }else {
+                                                        i->counterProjectile++;
+                                                    }
+                                                }
+                                            }
+                                            int counter=0;
+
+                                            //draw enemy and movement
+                                            for( auto i=enemyArray.begin(); i!=enemyArray.end(); ++i){
+                                                i->movement(level);
+                                                window.draw(*i);
+
+                                                //std::cout<<"nemico"<< counter<<" "<<hero.getLife()<<std::endl;
+                                                counter++;
+                                                if(i->getLife()<=0){
+                                                    i->setTextureRect(sf::IntRect(64*i->counterDeath,64*8,64,64));
+                                                    i->counterDeath++;
+                                                    if(i->counterDeath==5){
+                                                        enemyArray.erase(i);
+                                                        i--;
+                                                        i->counterDeath=0;
+                                                    }
+                                                }
+
 
                                             }
                                             //reset walking animation

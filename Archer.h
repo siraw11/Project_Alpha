@@ -21,7 +21,7 @@ public:
 
     int getRange() const;
     
-    void fightA(GameCharacter *enemy);
+    void fightA(GameCharacter enemy);
 
    
 
