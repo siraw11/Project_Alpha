@@ -14,9 +14,9 @@ class Projectile : public sf::Sprite{
 
 public:
     explicit Projectile(PlayerType type);
-    //~Projectile()override;
+    ~Projectile()override;
     int attackSpeed=20;
-    int direction;//right=2,down=0,left=1,up=3
+    int direction{};//right=2,down=0,left=1,up=3
     int counterAttack=0;
     int counterProjectile;
     void update();

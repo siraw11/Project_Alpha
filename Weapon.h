@@ -10,7 +10,6 @@
 class Weapon{
 public:
     Weapon(int s,int l);
-    ~Weapon();
 
     void setStrength(int strength);
 

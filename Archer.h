@@ -20,14 +20,14 @@ public:
     void setRange(int range);
 
     int getRange() const;
-    
-    void fightA(GameCharacter enemy);
 
-   
+    void fightA(GameCharacter *enemy);
+
+
 
 
 private:
-    
+
     int range;
     int arrows;
 

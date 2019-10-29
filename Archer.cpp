@@ -24,9 +24,9 @@ void Archer::setArrows(int arrows) {
     Archer::arrows = arrows;
 }
 
-void Archer::fightA(GameCharacter enemy){
+void Archer::fightA(GameCharacter* enemy){
     if(arrows>0){
-        Attack(enemy);
+        Attack(*enemy);
         arrows--;
     }
 
