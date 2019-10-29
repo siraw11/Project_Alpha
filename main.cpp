@@ -120,6 +120,7 @@ PlayerType playerType;
                                                 enemy.spawnPosition=generateRandomPos(level);
                                                 enemy.setPosition(enemy.spawnPosition);
                                                 enemyArray.push_back(enemy);
+                                                new Archer()
 
                                             }
 
@@ -277,7 +278,7 @@ PlayerType playerType;
                                                 if(i->getLife()<=0){
                                                     i->setTextureRect(sf::IntRect(64*i->counterDeath,64*8,64,64));
                                                     i->counterDeath++;
-                                                    if(i->counterDeath==5){
+                                                    if(i->counterDeath==11){
                                                         enemyArray.erase(i);
                                                         i--;
                                                         i->counterDeath=0;
