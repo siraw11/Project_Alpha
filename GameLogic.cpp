@@ -14,7 +14,6 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
     bulletCollisionMap = -1;
     enemyCollisionBullet.x = -1;
     enemyCollisionBullet.y = -1;
-    const sf::Time invulnerabilityTime = sf::seconds(2);
     bool W, A, S, D;
 
     W = sf::Keyboard::isKeyPressed(sf::Keyboard::W);
@@ -48,12 +47,8 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
             enemyKilled++;
         }
     }
-
-    if (playerCollisionEnemy >= 0 && level->clock.getElapsedTime() - lastHitTime >= invulnerabilityTime &&
-        level->player.HP > 0) {
-        level->player.HP = level->player.HP - level->vector_of_enemy[playerCollisionEnemy].damage;
-        std::cout << "Player HP: " << level->player.HP << std::endl;
-        lastHitTime = level->clock.getElapsedTime();
+    for(int i = 0; i < level->vector_of_enemy.size();i++){
+        level->vector_of_enemy[i].aggroManager(&(level->player), &(level->clock));
     }
 
     if (level->player.HP <= 0) {

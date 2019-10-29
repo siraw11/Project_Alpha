@@ -10,7 +10,8 @@ add_executable(game main.cpp GameStates.cpp GameStates.h Menu.cpp Menu.h Rectang
         GameCharacter.cpp GameCharacter.h Hero.cpp Hero.h PowerUp.cpp PowerUp.h
         GameLogic.cpp GameLogic.h Enemy.cpp Enemy.h Animation.cpp Animation.h Input.cpp Input.h Pause.cpp Pause.h
         DeathScreen.cpp DeathScreen.h AchievementNotifier.cpp AchievementNotifier.h
-        Achievements/Achievement.cpp Achievements/Achievement.h Achievements/FirstBlood.cpp Achievements/FirstBlood.h AchievementScreen.cpp AchievementScreen.h Achievements/FirstDeath.cpp Achievements/FirstDeath.h Achievements/PotionAchievement.cpp Achievements/PotionAchievement.h)
+        Achievements/Achievement.cpp Achievements/Achievement.h Achievements/FirstBlood.cpp Achievements/FirstBlood.h AchievementScreen.cpp AchievementScreen.h Achievements/FirstDeath.cpp Achievements/FirstDeath.h Achievements/PotionAchievement.cpp Achievements/PotionAchievement.h
+        Aggro.cpp Aggro.h Idle.cpp Idle.h Catch.cpp Catch.h Attack.cpp Attack.h Reset.cpp Reset.h Context.cpp Context.h)
 
 target_include_directories(game PUBLIC "${SFML_INCLUDE_DIRS}")
 

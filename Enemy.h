@@ -1,5 +1,5 @@
 //
-// Created by davide on 19/09/19.
+// Created by andreatadde on 23/10/19.
 //
 
 #ifndef GAME_ENEMY_H
@@ -7,13 +7,23 @@
 
 #include "GameCharacter.h"
 
+#include "Context.h"
+#include "Hero.h"
+#include "SFML/Graphics.hpp"
+
+
+class Context;
 class Enemy : public GameCharacter {
 public:
     Enemy();
-    //TODO implementare aggro
+    Context* context;
     int HP = 2;
-public:
     int damage = 1;
+    sf::Vector2f range;
+    sf::Time lastAttackTime = sf::seconds(0);
+    sf::Time attackReload = sf::seconds(2);
+public:
+    void aggroManager(Hero* player, sf::Clock* clock);
 };
 
 

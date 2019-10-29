@@ -1,7 +1,42 @@
 //
-// Created by davide on 19/09/19.
+// Created by andreatadde on 23/10/19.
 //
 
-#include "Enemy.h"
 
-Enemy::Enemy() = default;
+#include "Enemy.h"
+#include <cmath>
+
+#include "Idle.h"
+#include "Catch.h"
+#include "Attack.h"
+#include "Reset.h"
+
+Enemy::Enemy() : context(new Context(new Idle())){
+    range.x = 130.f;
+    range.y = 50.f;
+    moveSpeed = 1.1f;
+}
+
+void Enemy::aggroManager(Hero* player, sf::Clock* clock) {
+    if(this->velocity.x == 0 && this->velocity.y == 0 && this->rectShape.getPosition().x == spawnX && this->rectShape.getPosition().y == spawnY)
+    {
+        context = new Context(new Idle());
+    }
+
+    if(fabs(player->x-this->spawnX) < range.x && fabs(player->y-this->spawnY) < range.y){
+        context = new Context(new Catch());
+        //TODO Manage collision with ground
+    }
+    else if(this->rectShape.getPosition().x != spawnX && this->rectShape.getPosition().y != spawnY)
+    {
+        context = new Context(new Reset());
+        //TODO Manage collision with ground
+    }
+
+    if(this->rectShape.getGlobalBounds().intersects(player->rectShape.getGlobalBounds()) && clock->getElapsedTime() - lastAttackTime >= attackReload){
+        context = new Context(new Attack());
+        lastAttackTime = clock->getElapsedTime();
+    }
+
+    context->executeAggro(this,player);
+}
