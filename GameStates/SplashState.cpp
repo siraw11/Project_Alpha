@@ -44,8 +44,13 @@ namespace Alpha
 	}
 
 	void SplashState::Draw()
+
 	{
+        sf::View view;
+        view.reset(sf::FloatRect(0, 0, 1920.0, 1080.0));
 		this->_data->window.clear();
+
+		this->_data->window.setView(view);
 
 		this->_data->window.draw( this->_background );
 

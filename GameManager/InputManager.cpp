@@ -3,7 +3,7 @@
 
 namespace Alpha
 {
-	bool InputManager::IsSpriteClicked(sf::Sprite object, sf::Mouse::Button button, sf::RenderWindow &window)
+	bool InputManager::IsSpriteClicked(const sf::Sprite& object, sf::Mouse::Button button, sf::RenderWindow &window)
 	{
 		if (sf::Mouse::isButtonPressed(button))
 		{
@@ -18,8 +18,8 @@ namespace Alpha
 		return false;
 	}
 
-	sf::Vector2i InputManager::GetMousePosition(sf::RenderWindow &window)
+	/*sf::Vector2i InputManager::GetMousePosition(sf::RenderWindow &window)
 	{
 		return sf::Mouse::getPosition(window);
-	}
+	}*/
 }
