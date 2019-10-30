@@ -120,7 +120,7 @@ PlayerType playerType;
                                                 enemy.spawnPosition=generateRandomPos(level);
                                                 enemy.setPosition(enemy.spawnPosition);
                                                 enemyArray.push_back(enemy);
-                                                new Archer()
+
 
                                             }
 
