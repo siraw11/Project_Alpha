@@ -4,9 +4,8 @@
 
 #include <iostream>
 #include "Catch.h"
-#include "Collision.h"
 
-void Catch::behaviour(Enemy* enemy, Hero* hero, std::vector<Platform> *platform) {
+void Catch::behaviour(Enemy* enemy, Hero* hero) {
     //std::cout<<"In Catch state"<<std::endl;
     if(hero->x < enemy->x){
         enemy->velocity.x = -1.f;
@@ -14,15 +13,13 @@ void Catch::behaviour(Enemy* enemy, Hero* hero, std::vector<Platform> *platform)
     else{
         enemy->velocity.x = 1.f;
     }
-
+    enemy->x += enemy->velocity.x * enemy->getMoveSpeed();
     if(hero->y < enemy->y){
         enemy->velocity.y = -1.f;
     }
     else{
         enemy->velocity.y = 1.f;
     }
-
-    // Checking for collision before setting the new position
-    Collision::checkCollision(platform, enemy);
+    enemy->y += enemy->velocity.y * enemy->getMoveSpeed();
     enemy->rectShape.setPosition(enemy->x,enemy->y);
 }

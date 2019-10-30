@@ -19,7 +19,7 @@ public:
 private:
     bool isPowerBullet;
     //---Animation variables--//
-    float delta_time = 1.0f / 60.0f;
+    float delta_time = 1.0f;
     unsigned int frame_x = 3;
     unsigned int frame_y = 9;
 public:

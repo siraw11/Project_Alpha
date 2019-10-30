@@ -13,12 +13,12 @@ class AchievementNotifier {
 public:
     AchievementNotifier();
 
-    void update(sf::Clock *clock, sf::RenderWindow *window, int enemyKilled, int potionCounter, int deathCounter);
+    void update(sf::Clock *clock, sf::RenderWindow *window, int enemyKilled, int potionCounter, int deathCounter,sf::View* camera);
 
 public:
     FirstBlood firstBlood;
     FirstDeath firstDeath;
-    PotionAchievement potionAchievement;
+    PotionAchievement potionUsed;
     sf::Clock *clock;
 };
 

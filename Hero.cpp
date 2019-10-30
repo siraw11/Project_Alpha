@@ -8,10 +8,10 @@ Hero::Hero() { //Setting dei parametri iniziali e texture
     setAnimation("../textures/tux_from_linux.png", frame_x, frame_y);
 
     isPowerBullet = false;
-    moveSpeed = 1.8f;
-    jumpPower = 8.f;
-    gravityAcc = 0.5f;
-    gravityMax = 2.0f;
+    moveSpeed = 0.4f;
+    jumpPower = 6.5f;
+    gravityAcc = 0.1f;
+    gravityMax = 1.1f;//ricaduta
     facingRight = true;
     row = 0;
 }

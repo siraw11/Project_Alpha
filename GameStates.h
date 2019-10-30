@@ -10,8 +10,9 @@ enum class GameStates {
         Main_menu,
         Level,
         Pause,
-    Dead,
-    AchievementScreen
+        Dead,
+        AchievementScreen,
+        Level_next
 };
 
 

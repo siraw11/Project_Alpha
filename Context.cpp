@@ -4,8 +4,8 @@
 
 #include "Context.h"
 
-void Context::executeAggro(Enemy* enemy,Hero* hero, std::vector<Platform> *platform) {
-    aggro->behaviour(enemy, hero, platform);
+void Context::executeAggro(Enemy* enemy,Hero* hero) {
+    aggro->behaviour(enemy, hero);
 }
 
 Context::Context(Aggro *aggro) {

@@ -6,5 +6,5 @@
 
 FirstBlood::FirstBlood() {
     textPopUp.setString("New Achievement : First Blood");
-    description.setString("First Blood :  You killed the fist enemy");
+    description.setString("First Blood :  You killed the first enemy");
 }

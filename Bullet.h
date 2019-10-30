@@ -18,7 +18,7 @@ public:
     float bulletLife = 100.f;//distanza massima proiettile
 
 private:
-    float bulletSpeed = 2.f;//velocità del proiettile
+    float bulletSpeed = 0.4f;//velocità del proiettile
 private:
     sf::Vector2f shootingDirection;//direzione
     int spriteDirectionLeft = 180;

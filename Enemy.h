@@ -9,7 +9,6 @@
 
 #include "Context.h"
 #include "Hero.h"
-#include "Platform.h"
 #include "SFML/Graphics.hpp"
 
 
@@ -24,7 +23,7 @@ public:
     sf::Time lastAttackTime = sf::seconds(0);
     sf::Time attackReload = sf::seconds(2);
 public:
-    void aggroManager(Hero* player, sf::Clock* clock, std::vector<Platform> *platform);
+    void aggroManager(Hero* player, sf::Clock* clock);
 };
 
 

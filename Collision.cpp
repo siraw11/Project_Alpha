@@ -89,14 +89,11 @@ int Collision::checkCollision(std::vector<Bullet> *bullet, std::vector<Platform>
     int collisioncheck = -1;
     for (int i = 0; i < bullet->size(); i++) {
         (*bullet)[i].fire();
-        if ((fabs((*bullet)[i].rectShape.getPosition().x - (*bullet)[i].spawnX)) <= (*bullet)[i].bulletLife &&
-            (fabs((*bullet)[i].rectShape.getPosition().y - (*bullet)[i].spawnY)) <= (*bullet)[i].bulletLife) {
             for (int j = 0; j < platform->size(); j++) {
                 if ((*bullet)[i].rectShape.getGlobalBounds().intersects((*platform)[j].rectShape.getGlobalBounds())) {
                     collisioncheck = i;
                 }
             }
-        } else (*bullet).erase((*bullet).begin() + i);
     }
     return collisioncheck;
 }
@@ -110,48 +107,4 @@ int Collision::checkCollision(Hero *hero, std::vector<Enemy> *enemy) {
         }
     }
     return collisioncheck;
-}
-
-void Collision::checkCollision(std::vector<Platform> *platform, Enemy *enemy) {
-    int movementStopper = 0;
-    int movementCheck = 0;
-
-    // Checking the collision on the x axis
-    enemy->x += enemy->velocity.x * enemy->getMoveSpeed();
-    for (int j = 0; j < platform->size(); j++) {
-        if (enemy->x + enemy->width > (*platform)[j].hitLeft && enemy->x < (*platform)[j].hitRight &&
-            enemy->y<(*platform)[j].hitBottom
-                      && enemy->y + enemy->height>(*platform)[j].hitTop) {
-
-            if (enemy->velocity.x > movementCheck) {
-                // Moving right so the enemy is hitting the left border of the platform
-                enemy->x = (*platform)[j].hitLeft - enemy->width;
-                enemy->velocity.x = movementStopper;
-            }
-            if (enemy->velocity.x < movementCheck) {
-                // Moving left so the enemy is hitting the right border of the platform
-                enemy->x = (*platform)[j].hitRight;
-                enemy->velocity.x = movementStopper;
-            }
-        }
-    }
-    // Checking the collision on the y axis
-    enemy->y += enemy->velocity.y * enemy->getMoveSpeed();
-
-    for (int j = 0; j < platform->size(); j++) {
-        if (enemy->x + enemy->width > (*platform)[j].hitLeft && enemy->x < (*platform)[j].hitRight &&
-            enemy->y<(*platform)[j].hitBottom
-                     && enemy->y + enemy->height>(*platform)[j].hitTop) {
-            if (enemy->velocity.y > movementCheck) {
-                // Falling so the enemy is hitting the top border of the platform
-                enemy->y = (*platform)[j].hitTop - enemy->height;
-                enemy->velocity.y = movementStopper;
-            }
-            if (enemy->velocity.y < movementCheck) {
-                // Jumping so the enemy is hitting the bottom border of the platform
-                enemy->y = (*platform)[j].hitBottom;
-                enemy->velocity.y = movementStopper;
-            }
-        }
-    }
 }

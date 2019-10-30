@@ -5,7 +5,7 @@
 #include "GameLogic.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
+#include "cmath"
 GameLogic::GameLogic() = default;
 
 void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window) {
@@ -27,9 +27,18 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
     bulletCollisionMap = Collision::checkCollision(&level->vector_of_bullet, &level->vector_of_platform);
     enemyCollisionBullet = Collision::checkCollision(&level->vector_of_bullet, &level->vector_of_enemy);
     playerCollisionEnemy = Collision::checkCollision(&level->player, &level->vector_of_enemy);
+
+    for(int i=0;i<level->vector_of_bullet.size();i++) {
+        if (fabs(level->vector_of_bullet[i].spawnX-level->vector_of_bullet[i].x)>=level->vector_of_bullet[i].bulletLife||
+                fabs(level->vector_of_bullet[i].spawnY-level->vector_of_bullet[i].y)>=level->vector_of_bullet[i].bulletLife){
+            level->vector_of_bullet.erase(level->vector_of_bullet.begin()+i);
+            level->setTextures();
+        }
+    }
     //-----Vari casi di esecuzione a seconda delle collisioni avvenute---//
     if (bulletCollisionMap >= 0) {
         level->vector_of_bullet.erase(level->vector_of_bullet.begin() + bulletCollisionMap);
+        level->setTextures();
     }
     if (playerCollisionPowerUp >= 0) {
         PowerUp::setPower(&level->player, level->vector_of_powerUp[playerCollisionPowerUp].type);
@@ -46,9 +55,10 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
             level->vector_of_enemy.erase(level->vector_of_enemy.begin() + enemyCollisionBullet.y);
             enemyKilled++;
         }
+        level->setTextures();
     }
     for(int i = 0; i < level->vector_of_enemy.size();i++){
-        level->vector_of_enemy[i].aggroManager(&(level->player), &(level->clock), &(level->vector_of_platform));
+        level->vector_of_enemy[i].aggroManager(&(level->player), &(level->clock));
     }
 
     if (level->player.HP <= 0) {
@@ -58,8 +68,14 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
     if (*input == Input::Escape) {
         (*state) = GameStates::Pause;
     }
+    if((*level).vector_of_enemy.empty()){
+        (*state) = GameStates ::Level_next;
+    }
     *input = Input::Null;
-    achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathcounter);
+    if((*state)==GameStates::Level) {
+        level->camera.setCenter(level->player.x,-25);
+    }
+    achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathcounter,&level->camera);
 }
 
 

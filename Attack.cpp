@@ -6,7 +6,7 @@
 #include "Attack.h"
 #include "Enemy.h"
 
-void Attack::behaviour(Enemy* enemy, Hero* hero, std::vector<Platform> *platform) {
+void Attack::behaviour(Enemy* enemy, Hero* hero) {
     //std::cout<<"In Attack state"<<std::endl;
     if(hero->HP > 0){
         hero->HP -= enemy->damage;

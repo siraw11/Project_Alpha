@@ -47,8 +47,8 @@ void AchievementScreen::drawAchievements(AchievementNotifier *achievementNotifie
     achievementNotifier->firstBlood.unlocked.setPosition(firstBloodPos.x + 500, firstBloodPos.y);
     achievementNotifier->firstDeath.description.setPosition(firstDeathPos.x, firstDeathPos.y);
     achievementNotifier->firstDeath.unlocked.setPosition(firstDeathPos.x + 500, firstDeathPos.y);
-    achievementNotifier->potionAchievement.description.setPosition(potionAchivPos.x, potionAchivPos.y);
-    achievementNotifier->potionAchievement.unlocked.setPosition(potionAchivPos.x + 500, potionAchivPos.y);
+    achievementNotifier->potionUsed.description.setPosition(potionAchivPos.x, potionAchivPos.y);
+    achievementNotifier->potionUsed.unlocked.setPosition(potionAchivPos.x + 500, potionAchivPos.y);
     for (int i = 0; i < SIZE; i++) {
         window->draw(this->back[i]);
     }
@@ -57,6 +57,6 @@ void AchievementScreen::drawAchievements(AchievementNotifier *achievementNotifie
     window->draw(achievementNotifier->firstBlood.unlocked);
     window->draw(achievementNotifier->firstDeath.description);
     window->draw(achievementNotifier->firstDeath.unlocked);
-    window->draw(achievementNotifier->potionAchievement.description);
-    window->draw(achievementNotifier->potionAchievement.unlocked);
+    window->draw(achievementNotifier->potionUsed.description);
+    window->draw(achievementNotifier->potionUsed.unlocked);
 }

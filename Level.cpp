@@ -18,7 +18,6 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
     size_of_player.y = 32;
     size_of_powerUp.x = 32;
     size_of_powerUp.y = 32;
-
     //TODO Riordinare i vari numeri per l'assegnazione delle texture
 
 //-----Creazione vettori di oggetti----------------//
@@ -84,6 +83,12 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
     this->logic = gameLogic;
     shoot_time = sf::seconds(0);
     clock.restart();
+
+    cameraSize.x=1300;
+    cameraSize.y=1000;
+    camera.setSize(cameraSize);
+    camera.zoom(cameraZoom);
+    setTextures();
 }
 
 void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state) {
@@ -123,6 +128,7 @@ void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state) {
                        player.rectShape.getPosition().y + player.rectShape.getSize().y / 2 -
                        newBullet.rectShape.getSize().y / 2, size_of_bullet);
         vector_of_bullet.push_back(newBullet);
+        setTextures();
         shoot_time = clock.getElapsedTime();
     }
 
@@ -144,7 +150,6 @@ void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state) {
 
     //----Draw globale-----------//
 
-    setTextures();
     //window->draw(spiteBack);
     drawBullet(window);
     drawPlatform(window);
@@ -173,15 +178,7 @@ void Level::drawPlatform(sf::RenderWindow *Window) {
 }
 
 void Level::drawPlayer(sf::RenderWindow *Window) {
-    sf::View viewPlayer;
-    /*
-    if(player.velocity.y == 0) viewPlayer.setCenter(player.x + player.width / 2, player.y + player.height / 2);
-    else viewPlayer.setCenter(player.x + player.width / 2, 0);
-
-    viewPlayer.setCenter(player.x + player.width / 2, player.y + player.height / 2);    //TODO camera follows player
-    viewPlayer.zoom(0.3f);
-    Window->setView(viewPlayer);
-    */
+    Window->setView(camera);
     Window->draw(player.rectShape);
 }
 
@@ -210,6 +207,7 @@ void Level::setTextures() {
         if (vector_of_platform[i].t == type_platform_right)
             vector_of_platform[i].setTexture("../textures/Platform/29.png");
     }
+
 
     for (int i = 0; i < vector_of_powerUp.size(); i++) {
         if (vector_of_powerUp[i].type == type_powerUpBullet)

@@ -33,6 +33,7 @@ public:
     void drawPowerUp(sf::RenderWindow *Window);
 
     void setTextures();//Get texture globale
+    sf::View camera;
 public:
     //-----Vettori di oggetti------//
     std::vector<Platform> vector_of_platform;
@@ -62,8 +63,8 @@ private:
     int type_player = 9;
     int type_enemy_octopus = 7;
     GameLogic *logic;
-
-
+    float cameraZoom=0.75;
+    sf::Vector2f cameraSize;
     sf::Time shoot_time;
 };
 
