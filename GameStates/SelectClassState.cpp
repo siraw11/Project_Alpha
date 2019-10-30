@@ -28,10 +28,10 @@ namespace Alpha {
         this->_mageButton.setTexture(this->_data->assets.GetTexture("Mage"));
         this->_title.setTexture(this->_data->assets.GetTexture("Game Title"));
 
-        this->_archerButton.setPosition((SCREEN_WIDTH / 2.0) - (this->_archerButton.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 4.1) - (this->_archerButton.getGlobalBounds().height / 4.1));
-        this->_knightButton.setPosition((SCREEN_WIDTH /2.0) - (this->_knightButton.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2.5) - (this->_knightButton.getGlobalBounds().height / 2.5));
-        this->_mageButton.setPosition((SCREEN_WIDTH /2.0) - (this->_mageButton.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 1.8) - (this->_mageButton.getGlobalBounds().height / 1.8));
-        this->_title.setPosition((SCREEN_WIDTH / 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
+        this->_archerButton.setPosition((sf::VideoMode::getDesktopMode().width / 2.0) - (this->_archerButton.getGlobalBounds().width / 2), (sf::VideoMode::getDesktopMode().height/ 4.1) - (this->_archerButton.getGlobalBounds().height / 4.1));
+        this->_knightButton.setPosition((sf::VideoMode::getDesktopMode().width /2.0) - (this->_knightButton.getGlobalBounds().width / 2), (sf::VideoMode::getDesktopMode().height / 2.5) - (this->_knightButton.getGlobalBounds().height / 2.5));
+        this->_mageButton.setPosition((sf::VideoMode::getDesktopMode().width/2.0) - (this->_mageButton.getGlobalBounds().width / 2), (sf::VideoMode::getDesktopMode().height/ 1.8) - (this->_mageButton.getGlobalBounds().height / 1.8));
+        this->_title.setPosition((sf::VideoMode::getDesktopMode().width / 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
     }
 
     void SelectClassState::HandleInput() {

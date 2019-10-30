@@ -3,6 +3,6 @@
 
 int main()
 {
-	Alpha::Game(SCREEN_WIDTH, SCREEN_HEIGHT, "Alpha_Project");
+	Alpha::Game( "Alpha_Project");
 }
 

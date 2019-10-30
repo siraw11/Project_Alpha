@@ -22,7 +22,7 @@ namespace Alpha
 	class Game
 	{
 	public:
-		Game(int width, int height, const std::string& title);
+		Game( const std::string& title);
 
 	private:
 		// Updates run at 60 per second.

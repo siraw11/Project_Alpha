@@ -3,9 +3,9 @@
 
 namespace Alpha
 {
-	Game::Game(int width, int height, const std::string& title)
+	Game::Game( const std::string& title)
 	{
-		_data->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
+		_data->window.create(sf::VideoMode::getDesktopMode(), title);
 		_data->machine.AddState(StateRef(new SplashState(this->_data)));
 
 		this->Run();

@@ -19,6 +19,7 @@ public:
     int direction{};//right=2,down=0,left=1,up=3
     int counterAttack=0;
     int counterProjectile;
+    sf::Vector2f projectileStart;
     void update();
 };
 

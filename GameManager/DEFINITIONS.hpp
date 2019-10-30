@@ -1,8 +1,6 @@
-#define SCREEN_WIDTH 1920
 
-#define SCREEN_HEIGHT 1080
 
-#define SPLASH_STATE_SHOW_TIME 0.8
+#define SPLASH_STATE_SHOW_TIME 0.2
 
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
 

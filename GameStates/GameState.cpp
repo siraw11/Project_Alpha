@@ -209,7 +209,8 @@ namespace Alpha {
 
             //fire projectile
             if ((projectile.counterAttack == 11) && (playerType != PlayerType::KNIGHT)) {
-                projectile.setPosition(hero.getPosition().x, hero.getPosition().y);
+                projectile.projectileStart=hero.getPosition();
+                projectile.setPosition(projectile.projectileStart);
                 projectile.setTextureRect(sf::IntRect(0, 64 * projectile.direction, 64, 64));
                 projectileArray.push_back(projectile);
                 projectile.counterAttack = 0;
@@ -225,6 +226,19 @@ namespace Alpha {
                 counterWalking++;
             }
 
+            //projectile collision
+            for(auto i=projectileArray.begin(); i!= projectileArray.end(); ++i){
+                for(auto j=enemyArray.begin(); j!= enemyArray.end(); ++j){
+                    if (i->getPosition().x-i->projectileStart.x==64 || i->getPosition().y-i->projectileStart.y==64){
+                        projectileArray.erase(i);
+                        i--;
+                    }else if(i->getGlobalBounds().intersects(j->getGlobalBounds())){
+                        hero.Attack(*j);
+                        projectileArray.erase(i);
+                        i--;
+                    }
+                }
+            }
             //Draw on window
 
             this->_data->window.setView(view);
@@ -239,29 +253,10 @@ namespace Alpha {
             this->_data->window.draw(hero);
 
 
-            //pojectile collision and draw
+            //pojectile draw
             for (auto & i : projectileArray) {
                 i.update();
                 this->_data->window.draw(i);
-            }
-
-            for(auto i=projectileArray.begin(); i!= projectileArray.end(); ++i){
-                for(auto j=enemyArray.begin(); j!= enemyArray.end(); ++j){ std:: cout<< i->counterProjectile << std:: endl;
-                    if (i->counterProjectile==6400){
-                        projectileArray.erase(i);
-                        i--;
-                        i->counterProjectile=0;
-                        break;
-                    }else if(i->getGlobalBounds().intersects(j->getGlobalBounds())){
-
-                        hero.Attack(*j);
-                        projectileArray.erase(i);
-                        i--;
-                        break;
-                    }else {
-                        i->counterProjectile++;
-                    }
-                }
             }
             //draw enemy and movement
             for( auto i=enemyArray.begin(); i!=enemyArray.end(); ++i){

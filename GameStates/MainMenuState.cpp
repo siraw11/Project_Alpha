@@ -7,6 +7,7 @@
 #include "SelectClassState.h"
 
 #include <iostream>
+#include <ieee754.h>
 
 namespace Alpha
 {
@@ -27,9 +28,9 @@ namespace Alpha
         this->_selectClass.setTexture(this->_data->assets.GetTexture("Select Class"));
 		this->_title.setTexture(this->_data->assets.GetTexture("Game Title"));
 
-		this->_playButton.setPosition((SCREEN_WIDTH / 2.0) - (this->_playButton.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 3) - (this->_playButton.getGlobalBounds().height / 3));
-		this->_selectClass.setPosition((SCREEN_WIDTH /2.0) - (this->_selectClass.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (this->_selectClass.getGlobalBounds().height / 2));
-		this->_title.setPosition((SCREEN_WIDTH / 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
+		this->_playButton.setPosition((sf::VideoMode::getDesktopMode().width/ 2.0) - (this->_playButton.getGlobalBounds().width / 2), ((int)(sf::VideoMode::getDesktopMode().height / 3)) - (this->_playButton.getGlobalBounds().height / 3));
+		this->_selectClass.setPosition((sf::VideoMode::getDesktopMode().width/2.0) - (this->_selectClass.getGlobalBounds().width / 2), ((int)(sf::VideoMode::getDesktopMode().height / 2)) - (this->_selectClass.getGlobalBounds().height / 2));
+		this->_title.setPosition((sf::VideoMode::getDesktopMode().width/ 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
 	}
 
 	void MainMenuState::HandleInput()
