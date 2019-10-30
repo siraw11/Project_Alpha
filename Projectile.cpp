@@ -1,7 +1,3 @@
-//
-// Created by matteo on 07/10/19.
-//
-
 #include "Projectile.h"
 Projectile::Projectile(PlayerType type)  {
     auto projectileTexture = new sf::Texture;
@@ -21,20 +17,18 @@ Projectile::Projectile(PlayerType type)  {
 }
 
 void Projectile::update() {
-    //down
-    if(direction==0) {
-        move(0,attackSpeed);
-    }
-    //left
-    if(direction==1) {
-        move(-attackSpeed,0);
-    }
     //right
     if(direction==2)
         move(attackSpeed,0);
+    //down
+    if(direction==0)
+        move(0,attackSpeed);
+    //left
+    if(direction==1)
+        move(-attackSpeed,0);
     //up
     if(direction==3)
         move(0,-attackSpeed);
 }
 
-//Projectile:: ~Projectile() {}
+Projectile:: ~Projectile() {}
