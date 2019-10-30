@@ -9,13 +9,14 @@
 
 #include "Hero.h"
 #include "Enemy.h"
+#include "Platform.h"
 
 class Enemy;
 
 class Aggro {
 public:
     //virtual ~Aggro() = 0;
-    virtual void behaviour(Enemy* enemy,Hero* hero) = 0;
+    virtual void behaviour(Enemy* enemy,Hero* hero, std::vector<Platform> *platform) = 0;
 };
 
 

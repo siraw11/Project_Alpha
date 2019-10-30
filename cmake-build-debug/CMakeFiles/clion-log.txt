@@ -17,8 +17,8 @@
 -- Found PythonInterp: /usr/bin/python (found version "2.7.15") 
 -- Looking for pthread.h
 -- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
 -- Looking for pthread_create in pthreads
 -- Looking for pthread_create in pthreads - not found
 -- Looking for pthread_create in pthread

@@ -10,7 +10,7 @@
 
 class Reset : public Aggro {
 public:
-    void behaviour(Enemy* enemy, Hero* hero);
+    void behaviour(Enemy* enemy, Hero* hero, std::vector<Platform> *platform);
 
 private:
     float spawnRange = 5.f; // spawnRange is used to reset the position of the enemy

@@ -598,12 +598,24 @@
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h">
+			<Option target="game"/>
+		</Unit>
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Menu.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Menu.h">
 			<Option target="core"/>
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/NextLevelScreen.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/NextLevelScreen.h">
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Pause.cpp">
