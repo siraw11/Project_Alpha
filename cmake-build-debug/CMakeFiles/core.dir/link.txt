@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcore.a  CMakeFiles/core.dir/GameStates.cpp.o CMakeFiles/core.dir/Menu.cpp.o CMakeFiles/core.dir/RectangleShape.cpp.o CMakeFiles/core.dir/Collision.cpp.o CMakeFiles/core.dir/Bullet.cpp.o CMakeFiles/core.dir/Level.cpp.o CMakeFiles/core.dir/Platform.cpp.o CMakeFiles/core.dir/GameCharacter.cpp.o CMakeFiles/core.dir/Hero.cpp.o CMakeFiles/core.dir/PowerUp.cpp.o CMakeFiles/core.dir/GameLogic.cpp.o CMakeFiles/core.dir/Enemy.cpp.o CMakeFiles/core.dir/Animation.cpp.o
+/usr/bin/ranlib libcore.a

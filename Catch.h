@@ -9,7 +9,7 @@
 
 class Catch : public Aggro{
 public:
-    void behaviour(Enemy* enemy, Hero* hero);
+    void behaviour(Enemy* enemy, Hero* hero, std::vector<Platform> *platform);
 };
 
 

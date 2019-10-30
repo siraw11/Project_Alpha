@@ -48,7 +48,7 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
         }
     }
     for(int i = 0; i < level->vector_of_enemy.size();i++){
-        level->vector_of_enemy[i].aggroManager(&(level->player), &(level->clock));
+        level->vector_of_enemy[i].aggroManager(&(level->player), &(level->clock), &(level->vector_of_platform));
     }
 
     if (level->player.HP <= 0) {

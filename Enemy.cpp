@@ -17,7 +17,7 @@ Enemy::Enemy() : context(new Context(new Idle())){
     moveSpeed = 1.1f;
 }
 
-void Enemy::aggroManager(Hero* player, sf::Clock* clock) {
+void Enemy::aggroManager(Hero* player, sf::Clock* clock, std::vector<Platform> *platform) {
     if(this->velocity.x == 0 && this->velocity.y == 0 && this->rectShape.getPosition().x == spawnX && this->rectShape.getPosition().y == spawnY)
     {
         context = new Context(new Idle());
@@ -25,12 +25,10 @@ void Enemy::aggroManager(Hero* player, sf::Clock* clock) {
 
     if(fabs(player->x-this->spawnX) < range.x && fabs(player->y-this->spawnY) < range.y){
         context = new Context(new Catch());
-        //TODO Manage collision with ground
     }
     else if(this->rectShape.getPosition().x != spawnX && this->rectShape.getPosition().y != spawnY)
     {
         context = new Context(new Reset());
-        //TODO Manage collision with ground
     }
 
     if(this->rectShape.getGlobalBounds().intersects(player->rectShape.getGlobalBounds()) && clock->getElapsedTime() - lastAttackTime >= attackReload){
@@ -38,5 +36,5 @@ void Enemy::aggroManager(Hero* player, sf::Clock* clock) {
         lastAttackTime = clock->getElapsedTime();
     }
 
-    context->executeAggro(this,player);
+    context->executeAggro(this, player, platform);
 }

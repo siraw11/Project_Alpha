@@ -8,6 +8,7 @@
 
 #include "Aggro.h"
 #include "Enemy.h"
+#include "Platform.h"
 
 
 class Aggro;
@@ -19,7 +20,7 @@ private:
 public:
     //Context() = default;
     Context(Aggro* aggro);
-    void executeAggro(Enemy* enemy, Hero* hero);
+    void executeAggro(Enemy* enemy, Hero* hero, std::vector<Platform> *platform);
 };
 
 
