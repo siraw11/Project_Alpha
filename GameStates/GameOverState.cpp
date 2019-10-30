@@ -52,12 +52,12 @@ namespace Alpha
 		}
 	}
 
-	void GameOverState::Update(float dt)
+	void GameOverState::Update()
 	{
 
 	}
 
-	void GameOverState::Draw(float dt)
+	void GameOverState::Draw()
 	{
 		this->_data->window.clear(sf::Color::Red);
 

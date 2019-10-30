@@ -61,11 +61,11 @@ namespace Alpha {
 
     }
 
-    void SelectClassState::Update(float dt) {
+    void SelectClassState::Update() {
 
     }
 
-    void SelectClassState::Draw(float dt) {
+    void SelectClassState::Draw() {
 
         this->_data->window.clear();
         this->_data->window.draw(this->_background);

@@ -58,12 +58,12 @@ namespace Alpha
 
 	}
 
-	void MainMenuState::Update(float dt)
+	void MainMenuState::Update()
 	{
 
 	}
 
-	void MainMenuState::Draw(float dt)
+	void MainMenuState::Draw()
 	{
 		this->_data->window.clear();
 

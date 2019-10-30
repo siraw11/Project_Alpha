@@ -10,13 +10,13 @@ namespace Alpha
 	class GameState : public State
 	{
 	public:
-		GameState(GameDataRef data);
+		explicit GameState(GameDataRef data);
 
-		void Init();
+		void Init() override;
 
-		void HandleInput();
-		void Update(float dt);
-		void Draw(float dt);
+		void HandleInput()override ;
+		void Update() override;
+		void Draw() override;
 
 	private:
 

@@ -39,7 +39,7 @@ namespace Alpha {
         }
     }
 
-    void GameState::Update(float dt) {
+    void GameState::Update() {
         if (STATE_LOSE == gameState || STATE_WON == gameState) {
             if (this->_clock.getElapsedTime().asSeconds() > TIME_BEFORE_SHOWING_GAME_OVER) {
 
@@ -52,7 +52,7 @@ namespace Alpha {
 
     PlayerType playerType;
 
-    void GameState::Draw(float dt) {
+    void GameState::Draw() {
 
         int SCALE = 3;
 

@@ -9,13 +9,13 @@ namespace Alpha
 	class MainMenuState : public State
 	{
 	public:
-		MainMenuState(GameDataRef data);
+		explicit MainMenuState(GameDataRef data);
 
-		void Init();
+		void Init() override;
 
-		void HandleInput();
-		void Update(float dt);
-		void Draw(float dt);
+		void HandleInput() override;
+		void Update() override;
+		void Draw() override;
 
 	private:
 		GameDataRef _data;

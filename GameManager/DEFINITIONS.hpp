@@ -1,6 +1,6 @@
 
 
-#define SPLASH_STATE_SHOW_TIME 0.2
+#define SPLASH_STATE_SHOW_TIME 0.5
 
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
 

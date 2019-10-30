@@ -57,12 +57,12 @@ namespace Alpha
 		}
 	}
 
-	void PauseState::Update(float dt)
+	void PauseState::Update()
 	{
 
 	}
 
-	void PauseState::Draw(float dt)
+	void PauseState::Draw()
 	{
 		this->_data->window.clear(sf::Color::Red);
 

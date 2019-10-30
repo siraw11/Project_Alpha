@@ -9,13 +9,13 @@ namespace Alpha
     class SelectClassState : public State
     {
     public:
-        SelectClassState(GameDataRef data);
+        explicit SelectClassState(GameDataRef data);
 
-        void Init();
+        void Init() override;
 
-        void HandleInput();
-        void Update(float dt);
-        void Draw(float dt);
+        void HandleInput() override;
+        void Update() override;
+        void Draw() override;
 
     private:
        GameDataRef _data;
