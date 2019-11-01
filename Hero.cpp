@@ -11,7 +11,7 @@ Hero::Hero() { //Setting dei parametri iniziali e texture
     moveSpeed = 0.4f;
     jumpPower = 6.5f;
     gravityAcc = 0.1f;
-    gravityMax = 1.1f;//ricaduta
+    gravityMax = 1.5f;//ricaduta
     facingRight = true;
     row = 0;
 }

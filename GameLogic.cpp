@@ -41,7 +41,8 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
         level->setTextures();
     }
     if (playerCollisionPowerUp >= 0) {
-        PowerUp::setPower(&level->player, level->vector_of_powerUp[playerCollisionPowerUp].type);
+        if(level->vector_of_powerUp[playerCollisionPowerUp].type == powerUpBullet) level->player.setIsPowerBullet(true);
+        if(level->vector_of_powerUp[playerCollisionPowerUp].type == powerUpSpeed) level->player.setMoveSpeed(level->player.getMoveSpeed() * moveSpeedMux);
         level->vector_of_powerUp.erase(level->vector_of_powerUp.begin() + playerCollisionPowerUp);
         potionUsed++;
     }

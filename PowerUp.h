@@ -11,13 +11,9 @@
 
 class PowerUp : public RectangleShape {
 public:
-    PowerUp(int t);
-
-    static void setPower(Hero *hero, int t);
-
+    explicit PowerUp(int type);
 public:
     int type;
-    //float bulletLifeIncr;
 };
 
 
