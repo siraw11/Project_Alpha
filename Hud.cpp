@@ -19,7 +19,7 @@ Hud::Hud() {
     hp.setString("HP :");
     invulnerabilityTime.setFont(font);
     invulnerabilityTime.setCharacterSize(textSize);
-    invulnerabilityTime.setString("Invulerable");
+    invulnerabilityTime.setString("Invulnerable");
 };
 
 void Hud::update(sf::RenderWindow *window, Level *level) {

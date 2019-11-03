@@ -6,13 +6,14 @@
 #define GAME_HERO_H
 
 #include "GameCharacter.h"
+#include "Platform.h"
 
 //Classe addebita alla gestione del giocatore
 class Hero : public GameCharacter {
 public:
     Hero();
 
-    void update(bool W, bool A, bool S, bool D);//Gestisce il movimento da input da tastiera
+    void update(bool W, bool A, bool S, bool D, std::vector<Platform> *platform);//Gestisce il movimento da input da tastiera
 
     int HP = 5;
     int initialHP = HP;

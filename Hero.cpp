@@ -3,6 +3,7 @@
 //
 
 #include "Hero.h"
+#include "Collision.h"
 
 Hero::Hero() { //Setting dei parametri iniziali e texture
     setAnimation("../textures/tux_from_linux.png", frame_x, frame_y);
@@ -16,7 +17,7 @@ Hero::Hero() { //Setting dei parametri iniziali e texture
     row = 0;
 }
 
-void Hero::update(bool W, bool A, bool S, bool D) {
+void Hero::update(bool W, bool A, bool S, bool D,  std::vector<Platform> *platform) {
     x = this->rectShape.getPosition().x;
     y = this->rectShape.getPosition().y;
 
@@ -46,6 +47,8 @@ void Hero::update(bool W, bool A, bool S, bool D) {
         velocity.x = 0.f;
         row = 0;
     }
+    Collision::checkCollision(platform, this); // Managing the collisions with the map
+    this->rectShape.setPosition(this->x, this->y); // Updating the position of the player
 
     // Updating the texture based on the animation
     animation.Update(row, delta_time, facingRight);

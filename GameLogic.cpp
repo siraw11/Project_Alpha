@@ -21,9 +21,9 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
     A = sf::Keyboard::isKeyPressed(sf::Keyboard::A);
     S = sf::Keyboard::isKeyPressed(sf::Keyboard::S);
     D = sf::Keyboard::isKeyPressed(sf::Keyboard::D);
-    level->player.update(W, A, S, D);
 
-    Collision::checkCollision(&level->vector_of_platform, &level->player);
+    level->player.update(W, A, S, D, &level->vector_of_platform);
+
     playerCollisionPowerUp = Collision::checkCollision(&level->vector_of_powerUp, &level->player);
     bulletCollisionMap = Collision::checkCollision(&level->vector_of_bullet, &level->vector_of_platform);
     enemyCollisionBullet = Collision::checkCollision(&level->vector_of_bullet, &level->vector_of_enemy);
