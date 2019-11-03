@@ -9,6 +9,7 @@
 #include "AchievementScreen.h"
 #include "NextLevelScreen.h"
 #include "LevelManager.h"
+#include "Hud.h"
 
 
 int main() {
@@ -21,6 +22,7 @@ int main() {
     int nextLevel = 0;
     Menu menu;
     Pause pauseMenu;
+    Hud hud;
     DeathScreen deathScreen;
     NextLevelScreen nextLevelScreen;
     AchievementScreen achievementScreen;
@@ -88,7 +90,7 @@ int main() {
         }
 
         if (stateChecker == GameStates::Level) {
-            levelManager.currentLevel->Update(&window, &KeyBoardInput, &stateChecker);
+            levelManager.currentLevel->Update(&window, &KeyBoardInput, &stateChecker, &hud);
             if (levelManager.currentLevel->reset) {
                 stateChecker = GameStates::Dead;
                 levelManager.resetLevel();
@@ -101,6 +103,7 @@ int main() {
             pauseMenu.drawMenu(&window);
         }
         if (stateChecker == GameStates::Dead) {
+            levelManager.currentLevel->camera.setCenter(400, 300);
             deathScreen.drawMenu(&window);
         }
         if (stateChecker == GameStates::AchievementScreen) {

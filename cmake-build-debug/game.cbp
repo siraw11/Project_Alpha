@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\usr\lib\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="core">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 core"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 core"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="core/fast">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -77,30 +77,30 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 core/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 core/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="game">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -111,20 +111,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 game"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 game"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="game/fast">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -135,51 +135,51 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 game/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 game/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game_test">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Game_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Game_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -190,21 +190,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Game_test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Game_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game_test/fast">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Game_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Game_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -215,23 +215,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Game_test/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Game_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -242,23 +242,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -269,23 +269,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -296,23 +296,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -323,21 +323,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -348,21 +348,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -373,21 +373,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -398,21 +398,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
+				<Option output="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
-					<Add directory="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/include"/>
+					<Add directory="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -423,286 +423,292 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/AchievementNotifier.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/AchievementNotifier.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/AchievementScreen.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/AchievementScreen.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/AchievementScreen.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/AchievementScreen.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstBlood.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstDeath.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstDeath.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Aggro.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Aggro.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Aggro.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Aggro.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Animation.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Animation.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Animation.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Animation.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Attack.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Attack.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Attack.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Attack.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Bullet.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Bullet.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Bullet.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Catch.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Catch.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Catch.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Catch.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Collision.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Collision.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Collision.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Collision.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Context.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Context.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Context.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Context.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/DeathScreen.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/DeathScreen.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/DeathScreen.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/DeathScreen.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Enemy.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Enemy.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Enemy.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Enemy.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/GameCharacter.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/GameCharacter.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/GameLogic.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/GameLogic.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/GameStates.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/GameStates.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/GameStates.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/GameStates.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestCollision.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/TestCollision.cpp">
 			<Option target="Game_test"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestObjects.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/TestObjects.cpp">
 			<Option target="Game_test"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/src/gmock-all.cc">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/src/gmock_main.cc">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/src/gtest-all.cc">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/src/gtest_main.cc">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Hero.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Hero.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Hero.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Hero.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Idle.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Hud.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Idle.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Hud.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Input.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Idle.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Input.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Idle.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Level.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Input.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Input.h">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Level.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Level.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Level.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/LevelManager.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/LevelManager.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Menu.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Menu.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Menu.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Menu.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/NextLevelScreen.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/NextLevelScreen.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/NextLevelScreen.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/NextLevelScreen.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Pause.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Pause.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Pause.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Pause.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Platform.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Platform.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Platform.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Platform.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/PowerUp.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/PowerUp.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/RectangleShape.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/RectangleShape.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Reset.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Reset.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Reset.h">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Reset.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/main.cpp">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/main.cpp">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/CMakeLists.txt">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/CMakeLists.txt">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/CMakeLists.txt">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\lib\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/CMakeLists.txt">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/CMakeLists.txt">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/Config.cmake.in">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLConfig.cmake">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLConfigDependencies.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLConfigVersion.cmake">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLSharedTargets.cmake">
+		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/../../../../usr/lib/cmake/SFML/SFMLSharedTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\cmake\SFML\"/>
 		</Unit>
 	</Project>

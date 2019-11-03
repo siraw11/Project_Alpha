@@ -6,9 +6,10 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "cmath"
+
 GameLogic::GameLogic() = default;
 
-void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window) {
+void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window, Hud *hud) {
     playerCollisionEnemy = -1;
     playerCollisionPowerUp = -1;
     bulletCollisionMap = -1;
@@ -45,6 +46,7 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
         if(level->vector_of_powerUp[playerCollisionPowerUp].type == powerUpSpeed) level->player.setMoveSpeed(level->player.getMoveSpeed() * moveSpeedMux);
         level->vector_of_powerUp.erase(level->vector_of_powerUp.begin() + playerCollisionPowerUp);
         potionUsed++;
+        level->setTextures();
     }
     if (enemyCollisionBullet.x >= 0 && enemyCollisionBullet.y >= 0) {
         level->vector_of_bullet.erase(level->vector_of_bullet.begin() + enemyCollisionBullet.x);
@@ -77,6 +79,7 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
         level->camera.setCenter(level->player.x,-25);
     }
     achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathcounter,&level->camera);
+    hud->update(window, level);
 }
 
 

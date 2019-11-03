@@ -84,14 +84,15 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
     shoot_time = sf::seconds(0);
     clock.restart();
 
-    cameraSize.x=1300;
+    cameraSize.x = 1400;
     cameraSize.y=1000;
     camera.setSize(cameraSize);
     camera.zoom(cameraZoom);
     setTextures();
+
 }
 
-void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state) {
+void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state, Hud *hud) {
 
     sf::Time shoot_delay;
     sf::Vector2f shotDir;
@@ -146,7 +147,7 @@ void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state) {
     */
 
     //------Passa gli oggetti al gestore della logica di gioco (per collisioni ed eventi)-------//
-    logic->Update(this, state, input, window);
+    logic->Update(this, state, input, window, hud);
 
     //----Draw globale-----------//
 

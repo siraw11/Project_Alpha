@@ -19,15 +19,17 @@
 #include "Level.h"
 #include "AchievementNotifier.h"
 #include "AchievementScreen.h"
+#include "Hud.h"
 
 //Classe per la gestione degli eventi fra oggetti + eventi in input, tasi premuti ecc..
 class Level;
 
+class Hud;
 class GameLogic {
 public:
     GameLogic();
 
-    void Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window);
+    void Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window, Hud *hud);
 
     sf::Time lastHitTime = sf::seconds(0);
     AchievementNotifier achievementNotifier;
