@@ -8,7 +8,7 @@
 #include "cmath"
 
 GameLogic::GameLogic() {
-    deathBuffer.loadFromFile("../Music/death-sound-test.wav");
+    deathBuffer.loadFromFile("../Music/death-sound.wav");
     deathSound.setBuffer(deathBuffer);
 }
 
