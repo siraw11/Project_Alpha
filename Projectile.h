@@ -21,6 +21,7 @@ public:
     int counterProjectile;
     sf::Vector2f projectileStart;
     void update();
+    bool controlCollision(const int *level);
 };
 
 #endif //PROJECT_ALPHA_PROJECTILE_H

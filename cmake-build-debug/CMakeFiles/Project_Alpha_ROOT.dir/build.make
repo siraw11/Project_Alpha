@@ -265,22 +265,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Weapon.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s
 
-CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Knight.cpp
-
-CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Knight.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i
-
-CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Knight.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s
-
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Archer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Archer.cpp
 
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i: cmake_force
@@ -290,6 +277,19 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i: cmake_force
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Archer.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
+
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Knight.cpp
+
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Knight.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i
+
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Knight.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s
 
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Mage.cpp
@@ -343,6 +343,19 @@ CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Random.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s
 
+CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Classes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Classes.cpp
+
+CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Classes.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.i
+
+CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Classes.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.s
+
 # Object files for target Project_Alpha_ROOT
 Project_Alpha_ROOT_OBJECTS = \
 "CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o" \
@@ -361,12 +374,13 @@ Project_Alpha_ROOT_OBJECTS = \
 "CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o" \
-"CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o" \
+"CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o" \
-"CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o"
+"CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o" \
+"CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o"
 
 # External object files for target Project_Alpha_ROOT
 Project_Alpha_ROOT_EXTERNAL_OBJECTS =
@@ -387,18 +401,19 @@ Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
-Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/build.make
 Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-graphics.so.2.5.1
 Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-window.so.2.5.1
 Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-system.so.2.5.1
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable Project_Alpha_ROOT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable Project_Alpha_ROOT"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_Alpha_ROOT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

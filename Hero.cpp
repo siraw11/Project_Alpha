@@ -5,7 +5,7 @@
 #include "Hero.h"
 
 
-Hero::Hero(int a,int hp, int s, float sp, PlayerType playerType):GameCharacter(hp,s,sp),Knight(a,hp,s,sp),Archer(hp,s,sp),Mage(hp,s,sp), item(nullptr){
+Hero::Hero(int hp, int s, float sp, PlayerType playerType):GameCharacter(hp,s,sp),item(nullptr){
 
     auto heroTexture = new sf::Texture;
     switch(playerType){
@@ -59,6 +59,7 @@ void Hero::heroMovement(int *level) {
             }
         }
     } else if (direction == 2) {
+        //down movement
         x = (int) (getPosition().x) / 32 / SCALE;
         y = (int) ((getPosition().y) / 32 / SCALE) + 1;
         if (level[120 * y + x] == 0) {
@@ -76,6 +77,7 @@ void Hero::heroMovement(int *level) {
             }
         }
     }else if(direction==3){
+        // left movement
         x = (int) ((getPosition().x - 1) / 32 / SCALE);
         y = (int) (getPosition().y) / 32 / SCALE;
         if (level[120 * y + x] == 0) {
@@ -93,6 +95,7 @@ void Hero::heroMovement(int *level) {
             }
         }
     }else if(direction==4){
+        //right movement
         x = (int) ((getPosition().x) / 32 / SCALE) + 1;
         y = (int) (getPosition().y) / 32 / SCALE;
         if (level[120 * y + x] == 0) {

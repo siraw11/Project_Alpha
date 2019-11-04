@@ -7,13 +7,13 @@
 
 #include "GameCharacter.h"
 
-class Knight : virtual public GameCharacter {
+class Knight  {
 public:
     Knight(int a , int hp, int s , int sp);
-    ~Knight() override;
+    ~Knight() ;
 
-    void fight(GameCharacter* enemy);
-    void TakeDamage(int damage) override;
+   /* void fight(GameCharacter* enemy);
+    void TakeDamage(int damage);*/
 
     int getArmor() const;
 

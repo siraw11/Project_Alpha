@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/matteo/CLionProjects/Project_Alpha/Archer.cpp" "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
+  "/home/matteo/CLionProjects/Project_Alpha/Classes.cpp" "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o"
   "/home/matteo/CLionProjects/Project_Alpha/Enemy.cpp" "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o"
   "/home/matteo/CLionProjects/Project_Alpha/GameCharacter.cpp" "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o"
   "/home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp" "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o"

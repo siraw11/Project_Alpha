@@ -150,6 +150,33 @@ Archer.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
 .PHONY : Archer.cpp.s
 
+Classes.o: Classes.cpp.o
+
+.PHONY : Classes.o
+
+# target to build an object file
+Classes.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o
+.PHONY : Classes.cpp.o
+
+Classes.i: Classes.cpp.i
+
+.PHONY : Classes.i
+
+# target to preprocess a source file
+Classes.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.i
+.PHONY : Classes.cpp.i
+
+Classes.s: Classes.cpp.s
+
+.PHONY : Classes.s
+
+# target to generate assembly for a file
+Classes.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.s
+.PHONY : Classes.cpp.s
+
 Enemy.o: Enemy.cpp.o
 
 .PHONY : Enemy.o
@@ -729,6 +756,9 @@ help:
 	@echo "... Archer.o"
 	@echo "... Archer.i"
 	@echo "... Archer.s"
+	@echo "... Classes.o"
+	@echo "... Classes.i"
+	@echo "... Classes.s"
 	@echo "... Enemy.o"
 	@echo "... Enemy.i"
 	@echo "... Enemy.s"

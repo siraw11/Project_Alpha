@@ -68,6 +68,7 @@ namespace Alpha {
     void SelectClassState::Draw() {
 
         this->_data->window.clear();
+
         this->_data->window.draw(this->_background);
         this->_data->window.draw(this->_archerButton);
         this->_data->window.draw(this->_knightButton);

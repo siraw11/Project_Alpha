@@ -4,32 +4,26 @@
 
 #include "Archer.h"
 
-Archer::Archer(int hp, int s, int sp): GameCharacter(hp, s, sp), range(3), arrows(10){
+Archer::Archer() {
+
 }
 
-Archer::~Archer() {}
-
-int Archer::getRange() const {
-    return range;
-}
-
-void Archer::setRange(int range) {
-    Archer::range = range;
-}
 int Archer::getArrows() const {
-    return arrows;
+    return 0;
 }
 
 void Archer::setArrows(int arrows) {
-    Archer::arrows = arrows;
-}
-
-void Archer::fightA(GameCharacter* enemy){
-    if(arrows>0){
-        Attack(*enemy);
-        arrows--;
-    }
-
 
 }
 
+void Archer::setRange(int range) {
+
+}
+
+int Archer::getRange() const {
+    return 0;
+}
+
+void Archer::fightA(GameCharacter *enemy) {
+
+}

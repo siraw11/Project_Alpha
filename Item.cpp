@@ -55,7 +55,7 @@ void Item::setKey(bool key) {
     Key = key;
 }
 
-void Item::use(Item &item, GameCharacter* hero) {
+/*void Item::use(Item &item, GameCharacter* hero) {
     Hero *ptr = dynamic_cast<Hero *>(hero);
     if (ptr != nullptr) {
         if (item.isStrenght())
@@ -71,4 +71,4 @@ void Item::use(Item &item, GameCharacter* hero) {
         if (item.isKey()){}
         //Todo:open the gate
     }
-}
+}*/

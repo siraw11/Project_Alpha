@@ -8,11 +8,11 @@
 #include "GameCharacter.h"
 
 
-class Mage:virtual public GameCharacter{
+class Mage{
 
 public:
     Mage(int hp, int s, int sp);
-    ~Mage() override;
+    ~Mage();
 
     int getRange() const;
 
@@ -22,7 +22,7 @@ public:
 
     void setMana(int mana);
 
-    void fight(GameCharacter* enemy);
+    //void fight(GameCharacter* enemy);
 
 private:
 

@@ -8,10 +8,9 @@
 #include "GameCharacter.h"
 
 
-class Archer : virtual public GameCharacter{
+class Archer {
 public:
-    Archer( int hp, int s, int sp);
-    ~Archer() override;
+    Archer();
 
     int getArrows() const;
 

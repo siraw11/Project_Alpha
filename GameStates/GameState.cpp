@@ -88,21 +88,14 @@ namespace Alpha {
 
 
         //set hero
-        Hero hero(3, 5, 2, 16, playerType);
+        Hero hero( 5, 2, 16, playerType);
         int counterWalking = 0;
-
-        //collision variable
-        int x;
-        int y;
 
         //vector of enemy
         std::vector<Enemy> enemyArray;
 
         //set enemy
         Enemy enemy(3, 1, 4, 0);
-
-
-
 
         //set projectile
         std::vector<Projectile> projectileArray;
@@ -229,7 +222,12 @@ namespace Alpha {
             //projectile collision
             for(auto i=projectileArray.begin(); i!= projectileArray.end(); ++i){
                 for(auto j=enemyArray.begin(); j!= enemyArray.end(); ++j){
-                    if (i->getPosition().x-i->projectileStart.x==64 || i->getPosition().y-i->projectileStart.y==64){
+
+                    if(i->controlCollision(level)){
+                        projectileArray.erase(i);
+                        i--;
+
+                    }else if (std::abs(i->getPosition().x-i->projectileStart.x)>=640 || std::abs(i->getPosition().y-i->projectileStart.y)>=640){
                         projectileArray.erase(i);
                         i--;
                     }else if(i->getGlobalBounds().intersects(j->getGlobalBounds())){

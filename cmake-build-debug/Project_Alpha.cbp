@@ -94,6 +94,12 @@
 		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Archer.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Classes.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Classes.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
 		<Unit filename="/home/matteo/CLionProjects/Project_Alpha/Enemy.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>

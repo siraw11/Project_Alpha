@@ -6,8 +6,8 @@
 #include "Enemy.h"
 #include "Random.h"
 
-Enemy::Enemy(int hp, int s, int sp, int a) :GameCharacter(hp,s,sp), Mage(hp,s,sp),Archer(hp,s,sp),Knight(a,hp,s,sp){
-    auto enemyTexture = new sf::Texture;
+Enemy::Enemy(int hp, int s, int sp) :GameCharacter(hp,s,sp) {
+        auto enemyTexture = new sf::Texture;
     enemyTexture->loadFromFile("../Resources/Sprites/Enemy/gargoyle(spear).png");
     setTexture(*enemyTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
