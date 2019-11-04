@@ -17,7 +17,7 @@ int main() {
     GameStates stateChecker = GameStates::Main_menu;
     sf::Music menuMusic;
     sf::Music levelMusic;
-    float volume = 50.f;
+    float volume = 40.f;
     GameLogic logic;
     LevelManager levelManager(&logic);
     bool playingMenu = false;
@@ -37,7 +37,7 @@ int main() {
 
     //---------Loop di gioco------------//
 
-    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Game");
+    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Game", sf::Style::Fullscreen);
     menuMusic.openFromFile("../Music/buttercup .ogg");
     menuMusic.setVolume(volume);
     levelMusic.openFromFile("../Music/Megalovania8bit.ogg");

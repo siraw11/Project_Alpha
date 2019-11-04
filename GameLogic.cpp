@@ -7,7 +7,10 @@
 #include <SFML/Graphics.hpp>
 #include "cmath"
 
-GameLogic::GameLogic() = default;
+GameLogic::GameLogic() {
+    deathBuffer.loadFromFile("../Music/death-sound.wav");
+    deathSound.setBuffer(deathBuffer);
+}
 
 void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window, Hud *hud) {
     playerCollisionEnemy = -1;
@@ -57,13 +60,14 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
         if (level->vector_of_enemy[enemyCollisionBullet.y].HP <= 0) {
             level->vector_of_enemy.erase(level->vector_of_enemy.begin() + enemyCollisionBullet.y);
             enemyKilled++;
+            deathSound.play();
         }
         level->setTextures();
     }
     for(int i = 0; i < level->vector_of_enemy.size();i++){
         level->vector_of_enemy[i].aggroManager(&(level->player), &(level->clock), &(level->vector_of_platform));
     }
-
+    if(level->player.y >= level->vector_of_platform[level->vector_of_platform.size()-1].y) level->player.HP = 0;
     if (level->player.HP <= 0) {
         level->reset = true;
         deathcounter++;

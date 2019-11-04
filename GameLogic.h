@@ -14,6 +14,7 @@
 #include "Collision.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Audio.hpp>
 #include "GameStates.h"
 #include "Input.h"
 #include "Level.h"
@@ -44,6 +45,8 @@ private:
     int powerUpBullet = 6;
     int powerUpSpeed = 5;
     float moveSpeedMux = 1.2f;
+    sf::SoundBuffer deathBuffer;
+    sf::Sound deathSound;
 };
 
 

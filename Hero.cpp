@@ -49,7 +49,6 @@ void Hero::update(bool W, bool A, bool S, bool D,  std::vector<Platform> *platfo
     }
     Collision::checkCollision(platform, this); // Managing the collisions with the map
     this->rectShape.setPosition(this->x, this->y); // Updating the position of the player
-
     // Updating the texture based on the animation
     animation.Update(row, delta_time, facingRight);
     rectShape.setTextureRect(animation.uvRect);
