@@ -118,6 +118,7 @@ int main() {
             achievementScreen.drawAchievements(&logic.achievementNotifier, &window);
         }
         if (stateChecker == GameStates::Level_next) {
+            levelManager.currentLevel->camera.setCenter(400, 300);
             nextLevelScreen.drawMenu(&window);
         }
         window.display();
