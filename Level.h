@@ -53,6 +53,7 @@ private:
     sf::Vector2f size_of_player;
     sf::Vector2f size_of_powerUp;
     int size_of_tile = 32;
+    int type_invisible = 99;
     int type_grass = 1;
     int type_dirt = 2;
     int type_platform_left = 10;

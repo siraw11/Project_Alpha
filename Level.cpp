@@ -42,6 +42,12 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
                 vector_of_platform.push_back(newPlatform);
             }
 
+            if (levelArray[(i * column) + j] == type_invisible) {
+                Platform newPlatform(type_invisible);
+                newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
+                vector_of_platform.push_back(newPlatform);
+            }
+
             if (levelArray[(i * column) + j] == type_platform_left) {
                 Platform newPlatform(type_platform_left);
                 newPlatform.init(j * size_of_tile, i * size_of_tile, size_of_platform);
@@ -207,6 +213,8 @@ void Level::setTextures() {
             vector_of_platform[i].setTexture("../textures/Platform/28.png");
         if (vector_of_platform[i].t == type_platform_right)
             vector_of_platform[i].setTexture("../textures/Platform/29.png");
+        if (vector_of_platform[i].t == type_invisible)
+            vector_of_platform[i].setTexture("../textures/Platform/blank.png");
     }
 
 

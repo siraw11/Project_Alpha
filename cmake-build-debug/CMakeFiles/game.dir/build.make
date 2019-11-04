@@ -546,6 +546,7 @@ game: CMakeFiles/game.dir/Hud.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: /usr/lib/libsfml-graphics.so.2.5.1
 game: /usr/lib/libsfml-window.so.2.5.1
+game: /usr/lib/libsfml-audio.so.2.5.1
 game: /usr/lib/libsfml-system.so.2.5.1
 game: libcore.a
 game: CMakeFiles/game.dir/link.txt

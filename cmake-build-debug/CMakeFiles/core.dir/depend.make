@@ -78,10 +78,28 @@ CMakeFiles/core.dir/GameLogic.cpp.o: ../RectangleShape.h
 CMakeFiles/core.dir/GameStates.cpp.o: ../GameStates.cpp
 CMakeFiles/core.dir/GameStates.cpp.o: ../GameStates.h
 
+CMakeFiles/core.dir/Hero.cpp.o: ../AchievementNotifier.h
+CMakeFiles/core.dir/Hero.cpp.o: ../AchievementScreen.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Achievements/Achievement.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Achievements/FirstBlood.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Achievements/FirstDeath.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Achievements/PotionAchievement.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Aggro.h
 CMakeFiles/core.dir/Hero.cpp.o: ../Animation.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Bullet.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Collision.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Context.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Enemy.h
 CMakeFiles/core.dir/Hero.cpp.o: ../GameCharacter.h
+CMakeFiles/core.dir/Hero.cpp.o: ../GameLogic.h
+CMakeFiles/core.dir/Hero.cpp.o: ../GameStates.h
 CMakeFiles/core.dir/Hero.cpp.o: ../Hero.cpp
 CMakeFiles/core.dir/Hero.cpp.o: ../Hero.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Hud.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Input.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Level.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Platform.h
+CMakeFiles/core.dir/Hero.cpp.o: ../PowerUp.h
 CMakeFiles/core.dir/Hero.cpp.o: ../RectangleShape.h
 
 CMakeFiles/core.dir/Level.cpp.o: ../AchievementNotifier.h
@@ -121,6 +139,7 @@ CMakeFiles/core.dir/PowerUp.cpp.o: ../Animation.h
 CMakeFiles/core.dir/PowerUp.cpp.o: ../Bullet.h
 CMakeFiles/core.dir/PowerUp.cpp.o: ../GameCharacter.h
 CMakeFiles/core.dir/PowerUp.cpp.o: ../Hero.h
+CMakeFiles/core.dir/PowerUp.cpp.o: ../Platform.h
 CMakeFiles/core.dir/PowerUp.cpp.o: ../PowerUp.cpp
 CMakeFiles/core.dir/PowerUp.cpp.o: ../PowerUp.h
 CMakeFiles/core.dir/PowerUp.cpp.o: ../RectangleShape.h

@@ -10,13 +10,18 @@
 #include "NextLevelScreen.h"
 #include "LevelManager.h"
 #include "Hud.h"
-
-
+#include "SFML/Audio.hpp"
+#include "SFML/System.hpp"
 int main() {
 
     GameStates stateChecker = GameStates::Main_menu;
+    sf::Music menuMusic;
+    sf::Music levelMusic;
+    float volume = 50.f;
     GameLogic logic;
     LevelManager levelManager(&logic);
+    bool playingMenu = false;
+    bool playingLevel = false;
     int resetcheckMenu = 1;
     int resetcheckRestart = 0;
     int nextLevel = 0;
@@ -33,7 +38,10 @@ int main() {
     //---------Loop di gioco------------//
 
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Game");
-
+    menuMusic.openFromFile("../Music/buttercup .ogg");
+    menuMusic.setVolume(volume);
+    levelMusic.openFromFile("../Music/Megalovania8bit.ogg");
+    levelMusic.setVolume(volume);
     while (window.isOpen()) {
         window.setView(levelManager.currentLevel->camera);
         while (window.pollEvent(event)) {
@@ -114,5 +122,17 @@ int main() {
         }
         window.display();
         window.clear(sf::Color(10, 108, 180));
+        if (stateChecker != GameStates::Level && !playingMenu) {
+            levelMusic.stop();
+            menuMusic.play();
+            playingMenu = true;
+            playingLevel = false;
+        }
+        if (stateChecker == GameStates::Level && !playingLevel) {
+            menuMusic.stop();
+            levelMusic.play();
+            playingLevel = true;
+            playingMenu = false;
+        }
     }
 }

@@ -16,7 +16,7 @@ add_executable(game main.cpp GameStates.cpp GameStates.h Menu.cpp Menu.h Rectang
 target_include_directories(game PUBLIC "${SFML_INCLUDE_DIRS}")
 
 if (SFML_FOUND)
-    target_link_libraries(game sfml-graphics sfml-window sfml-system)
+    target_link_libraries(game sfml-graphics sfml-window sfml-audio sfml-system)
 endif ()
 
 add_subdirectory(Google_tests)
