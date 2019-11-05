@@ -10,6 +10,7 @@
 #include "../Enemy.h"
 #include "../Random.h"
 #include "../PlayerType.h"
+#include "../Classes.h"
 
 #include <iostream>
 #include <fstream>
@@ -88,14 +89,27 @@ namespace Alpha {
 
 
         //set hero
-        Hero hero( 5, 2, 16, playerType);
-        int counterWalking = 0;
+        Hero* hero;
+        playerType=PlayerType ::ARCHER;
+        switch(playerType){
+            case PlayerType::ARCHER:
+                hero= new Classes<Archer>(5,2,16);
+                break;
+            case PlayerType::KNIGHT:
+                hero= new Classes<Knight> ( 5, 2, 16);
+                break;
+            case PlayerType::MAGE:
+                hero= new Classes<Mage> (5, 2,16);
+                break;
+        }
 
+
+        int counterWalking = 0;
         //vector of enemy
         std::vector<Enemy> enemyArray;
 
         //set enemy
-        Enemy enemy(3, 1, 4, 0);
+        Enemy enemy(3, 1, 4);
 
         //set projectile
         std::vector<Projectile> projectileArray;
@@ -131,36 +145,28 @@ namespace Alpha {
 
             //hero movement and collision
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-                hero.direction = 1;
+                hero->direction = 1;
                 if (projectile.counterAttack == 0)
-                    hero.heroMovement(level);
-                hero.setTextureRect(sf::IntRect(64 * counterWalking, 0, 64, 64));
-
-
+                    hero->heroMovement(level);
+                hero->setTextureRect(sf::IntRect(64 * counterWalking, 0, 64, 64));
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-                hero.direction = 2;
+                hero->direction = 2;
                 //down movement
                 if (projectile.counterAttack == 0)
-                    hero.heroMovement(level);
-
-                hero.setTextureRect(sf::IntRect(64 * counterWalking, 128, 64, 64));
-
+                    hero->heroMovement(level);
+                hero->setTextureRect(sf::IntRect(64 * counterWalking, 128, 64, 64));
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-                hero.direction = 3;
+                hero->direction = 3;
                 //left movement
                 if (projectile.counterAttack == 0)
-                    hero.heroMovement(level);
-
-                hero.setTextureRect(sf::IntRect(64 * counterWalking, 64, 64, 64));
-
-
+                    hero->heroMovement(level);
+                hero->setTextureRect(sf::IntRect(64 * counterWalking, 64, 64, 64));
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-                hero.direction = 4;
+                hero->direction = 4;
                 // right movement
                 if (projectile.counterAttack == 0)
-                    hero.heroMovement(level);
-
-                hero.setTextureRect(sf::IntRect(64 * counterWalking, 192, 64, 64));
+                    hero->heroMovement(level);
+                hero->setTextureRect(sf::IntRect(64 * counterWalking, 192, 64, 64));
             }
 
             //attack animation
@@ -188,8 +194,8 @@ namespace Alpha {
             }
 
             //camera settings
-            position.x = hero.getPosition().x + 20 - (3840.0 / 2);
-            position.y = hero.getPosition().y + 20 - (2160.0 / 2);
+            position.x = hero->getPosition().x + 20 - (3840.0 / 2);
+            position.y = hero->getPosition().y + 20 - (2160.0 / 2);
 
             if (position.x < 0)
                 position.x = 0;
@@ -198,11 +204,11 @@ namespace Alpha {
 
             view.reset(sf::FloatRect(position.x, position.y, 3840, 2160));
 
-            projectile.counterAttack = hero.animation(projectile.counterAttack, attackAnimation);
+            projectile.counterAttack = hero->animation(projectile.counterAttack, attackAnimation);
 
             //fire projectile
             if ((projectile.counterAttack == 11) && (playerType != PlayerType::KNIGHT)) {
-                projectile.projectileStart=hero.getPosition();
+                projectile.projectileStart=hero->getPosition();
                 projectile.setPosition(projectile.projectileStart);
                 projectile.setTextureRect(sf::IntRect(0, 64 * projectile.direction, 64, 64));
                 projectileArray.push_back(projectile);
@@ -221,18 +227,21 @@ namespace Alpha {
 
             //projectile collision
             for(auto i=projectileArray.begin(); i!= projectileArray.end(); ++i){
-                for(auto j=enemyArray.begin(); j!= enemyArray.end(); ++j){
+                for(auto & j : enemyArray){
 
                     if(i->controlCollision(level)){
                         projectileArray.erase(i);
+                        std::cout<<"cazzosi"<<std::endl;
                         i--;
 
                     }else if (std::abs(i->getPosition().x-i->projectileStart.x)>=640 || std::abs(i->getPosition().y-i->projectileStart.y)>=640){
                         projectileArray.erase(i);
+                        std::cout<<"cazzosisssssss"<<std::endl;
                         i--;
-                    }else if(i->getGlobalBounds().intersects(j->getGlobalBounds())){
-                        hero.Attack(*j);
+                    }else if(i->getGlobalBounds().intersects(j.getGlobalBounds())){
+                        hero->Attack(j);
                         projectileArray.erase(i);
+                        std::cout<<"cazzosiluca"<<std::endl;
                         i--;
                     }
                 }
@@ -245,10 +254,9 @@ namespace Alpha {
 
             this->_data->window.clear();
 
-
             this->_data->window.draw(map);
 
-            this->_data->window.draw(hero);
+            this->_data->window.draw(*hero);
 
 
             //pojectile draw

@@ -5,12 +5,15 @@
 #ifndef PROJECT_ALPHA_CLASSES_H
 #define PROJECT_ALPHA_CLASSES_H
 
-#include "GameCharacter.h"
+
 #include "Archer.h"
+#include "Knight.h"
+#include "Mage.h"
+#include "Hero.h"
 
 template <typename T>
 
-class Classes: public GameCharacter{
+class Classes: public Hero{
 public:
     Classes<T>(int hp, int s, int sp);
 

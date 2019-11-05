@@ -28,9 +28,7 @@ namespace Alpha
         this->_selectClass.setTexture(this->_data->assets.GetTexture("Select Class"));
 		this->_title.setTexture(this->_data->assets.GetTexture("Game Title"));
 
-        this->_playButton.setOrigin(this->_playButton.getPosition().x+this->_playButton.getGlobalBounds().width/2,this->_playButton.getPosition().y+this->_playButton.getGlobalBounds().height/2);
-
-        this->_playButton.setPosition(SCREEN_WIDTH/ 2.0 , (int)(SCREEN_HEIGHT / 3));
+		this->_playButton.setPosition(SCREEN_WIDTH/ 2.0-(this->_playButton.getGlobalBounds().width/2) , (int)(SCREEN_HEIGHT / 3)-(this->_playButton.getGlobalBounds().height/2));
         this->_selectClass.setPosition((SCREEN_WIDTH/ 2.0) - (this->_selectClass.getGlobalBounds().width / 2), ((int)(SCREEN_HEIGHT / 2)) - (this->_selectClass.getGlobalBounds().height / 2));
         this->_title.setPosition((SCREEN_WIDTH/ 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
 
@@ -69,7 +67,11 @@ namespace Alpha
 
 	void MainMenuState::Draw()
 	{
+        sf::View view;
+        view.reset(sf::FloatRect(0, 0, 3840.0, 2160.0));
 		this->_data->window.clear();
+
+        this->_data->window.setView(view);
 
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_playButton);

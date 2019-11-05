@@ -9,7 +9,7 @@
 #include "Mage.h"
 #include "Archer.h"
 
-class Enemy: public Knight, public Archer, public Mage{
+class Enemy: public GameCharacter{
 public:
     Enemy(int hp,int s, int sp);
     // ~Enemy() override;

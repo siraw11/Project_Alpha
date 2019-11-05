@@ -6,12 +6,12 @@
 #define EXAM_PROJECT_GAMECHARACTER_H
 
 #include "Weapon.h"
-#include "Map.h"
+//#include "Map.h"
 #include <SFML/Graphics.hpp>
 class GameCharacter:public sf::Sprite {
 public:
     GameCharacter(int hp, int s, int sp);
-    virtual ~GameCharacter();
+    ~GameCharacter() override;
 
 
     Weapon *getWeapon() const;
