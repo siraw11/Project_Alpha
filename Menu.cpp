@@ -15,7 +15,7 @@ Menu::Menu() {
     titlePos.x = 150;
     titlePos.y = 50;
 
-    this->Font.loadFromFile("../textures/arial_narrow_7.ttf");
+    this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
     menu[0].setFont(this->Font);
     menu[0].setCharacterSize(textSize);

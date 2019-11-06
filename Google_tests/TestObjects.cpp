@@ -32,13 +32,14 @@ TEST(GameCharacter,checkCharacterInit){
 TEST(Hero,checkHeroUpdate){
     Hero h1;
     h1.init(10,10,sf::Vector2f(32,32));
+    std::vector<Platform> platform;
     h1.setMoveSpeed(30);
     h1.isOnGround= true;
-    h1.update(false, false, false, true);
+    h1.update(false, false, false, true, &platform);
     ASSERT_EQ(h1.velocity.x,1);
-    h1.update(false, true, false, false);
+    h1.update(false, true, false, false, &platform);
     ASSERT_EQ(h1.velocity.x,-1);
-    h1.update(true, false, false, false);
+    h1.update(true, false, false, false, &platform);
     ASSERT_EQ(h1.velocity.y,-8);
 }
 

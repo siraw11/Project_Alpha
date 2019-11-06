@@ -197,35 +197,35 @@ void Level::drawPowerUp(sf::RenderWindow *Window) {
 
 void Level::setTextures() {
     for (int i = 0; i < vector_of_enemy.size(); i++) {
-        vector_of_enemy[i].setTexture("../textures/octopus-4.png");
+        vector_of_enemy[i].setTexture("textures/octopus-4.png");
     }
 
     for (int i = 0; i < vector_of_platform.size(); i++) {
         if (vector_of_platform[i].t == type_dirt)
-            vector_of_platform[i].setTexture("../textures/Platform/4.png");
+            vector_of_platform[i].setTexture("textures/Platform/4.png");
         if (vector_of_platform[i].t == type_grass)
-            vector_of_platform[i].setTexture("../textures/Platform/2.png");
+            vector_of_platform[i].setTexture("textures/Platform/2.png");
         if (vector_of_platform[i].t == type_log)
-            vector_of_platform[i].setTexture("../textures/Platform/49.png");
+            vector_of_platform[i].setTexture("textures/Platform/49.png");
         if (vector_of_platform[i].t == type_platform_left)
-            vector_of_platform[i].setTexture("../textures/Platform/26.png");
+            vector_of_platform[i].setTexture("textures/Platform/26.png");
         if (vector_of_platform[i].t == type_platform)
-            vector_of_platform[i].setTexture("../textures/Platform/28.png");
+            vector_of_platform[i].setTexture("textures/Platform/28.png");
         if (vector_of_platform[i].t == type_platform_right)
-            vector_of_platform[i].setTexture("../textures/Platform/29.png");
+            vector_of_platform[i].setTexture("textures/Platform/29.png");
         if (vector_of_platform[i].t == type_invisible)
-            vector_of_platform[i].setTexture("../textures/Platform/blank.png");
+            vector_of_platform[i].setTexture("textures/Platform/blank.png");
     }
 
 
     for (int i = 0; i < vector_of_powerUp.size(); i++) {
         if (vector_of_powerUp[i].type == type_powerUpBullet)
-            vector_of_powerUp[i].setTexture("../textures/Antidote 1.png");
+            vector_of_powerUp[i].setTexture("textures/Antidote 1.png");
         if (vector_of_powerUp[i].type == type_powerUpSpeed)
-            vector_of_powerUp[i].setTexture("../textures/Health Potion 1.png");
+            vector_of_powerUp[i].setTexture("textures/Health Potion 1.png");
     }
     for (int i = 0; i < vector_of_bullet.size(); i++) {
-        vector_of_bullet[i].setTexture("../textures/bullet3.png");
+        vector_of_bullet[i].setTexture("textures/bullet3.png");
     }
     //player.setTexture("../textures/tux_from_linux.png"); // TODO try to set the textures into the c-tor, don't update here otherwise animation won't work
 }

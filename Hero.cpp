@@ -6,7 +6,7 @@
 #include "Collision.h"
 
 Hero::Hero() { //Setting dei parametri iniziali e texture
-    setAnimation("../textures/tux_from_linux.png", frame_x, frame_y);
+    setAnimation("textures/tux_from_linux.png", frame_x, frame_y);
 
     isPowerBullet = false;
     moveSpeed = 0.4f;
@@ -17,7 +17,7 @@ Hero::Hero() { //Setting dei parametri iniziali e texture
     row = 0;
 }
 
-void Hero::update(bool W, bool A, bool S, bool D,  std::vector<Platform> *platform) {
+void Hero::update(bool W, bool A, bool S, bool D, std::vector<Platform> *platform) {
     x = this->rectShape.getPosition().x;
     y = this->rectShape.getPosition().y;
 

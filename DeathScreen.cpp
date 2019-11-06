@@ -13,7 +13,7 @@ DeathScreen::DeathScreen() {
     text3Pos.y = 160;
     deadPos.x = 150;
     deadPos.y = 50;
-    this->Font.loadFromFile("../textures/arial_narrow_7.ttf");
+    this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
     pause[0].setFont(this->Font);
     pause[0].setCharacterSize(textSize);

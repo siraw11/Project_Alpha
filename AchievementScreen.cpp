@@ -17,7 +17,7 @@ AchievementScreen::AchievementScreen() {
     titlePos.x = 150;
     titlePos.y = 50;
 
-    this->Font.loadFromFile("../textures/arial_narrow_7.ttf");
+    this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
     back[0].setFont(this->Font);
     back[0].setCharacterSize(textSize);

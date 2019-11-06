@@ -7,9 +7,9 @@
 #include "SFML/Graphics.hpp"
 
 Hud::Hud() {
-    font.loadFromFile("../textures/arial_narrow_7.ttf");
-    texture.loadFromFile("../textures/red_heart.png");
-    texture2.loadFromFile("../textures/green_heart.png");
+    font.loadFromFile("textures/arial_narrow_7.ttf");
+    texture.loadFromFile("textures/red_heart.png");
+    texture2.loadFromFile("textures/green_heart.png");
     sizeHeart.x = 30;
     sizeHeart.y = 30;
     offset.x = -450;

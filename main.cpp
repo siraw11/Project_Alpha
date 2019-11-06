@@ -38,9 +38,9 @@ int main() {
     //---------Loop di gioco------------//
 
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Game", sf::Style::Fullscreen);
-    menuMusic.openFromFile("../Music/buttercup .ogg");
+    menuMusic.openFromFile("Music/buttercup .ogg");
     menuMusic.setVolume(volume);
-    levelMusic.openFromFile("../Music/Megalovania8bit.ogg");
+    levelMusic.openFromFile("Music/Megalovania8bit.ogg");
     levelMusic.setVolume(volume);
     while (window.isOpen()) {
         window.setView(levelManager.currentLevel->camera);

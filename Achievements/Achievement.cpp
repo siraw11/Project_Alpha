@@ -7,7 +7,7 @@
 #include "iostream"
 
 Achievement::Achievement() {
-    font.loadFromFile("../textures/arial_narrow_7.ttf");
+    font.loadFromFile("textures/arial_narrow_7.ttf");
     textPopUp.setPosition(boxPos);
     textPopUp.setFillColor(sf::Color(255, 255, 255, 0));
     textPopUp.setFont(font);

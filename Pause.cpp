@@ -14,7 +14,7 @@ Pause::Pause() {
     textPos.x = 150;
     textPos.y = 50;
 
-    this->Font.loadFromFile("../textures/arial_narrow_7.ttf");
+    this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
     pause[0].setFont(this->Font);
     pause[0].setCharacterSize(textSize);
