@@ -1,4 +1,3 @@
-
 #include "Collision.h"
 #include <math.h>
 
@@ -55,8 +54,7 @@ int Collision::checkCollision(std::vector<PowerUp> *powerUp, Hero *player) {
     int collisioncheck = -1;
     for (int i = 0; i < powerUp->size(); i++) {
         if (player->x + player->width > (*powerUp)[i].hitLeft && player->x < (*powerUp)[i].hitRight &&
-            player->y<(*powerUp)[i].hitBottom
-                      && player->y + player->height>(*powerUp)[i].hitTop) {
+            player->y<(*powerUp)[i].hitBottom && player->y + player->height>(*powerUp)[i].hitTop) {
             collisioncheck = i;
         }
     }

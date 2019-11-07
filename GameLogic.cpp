@@ -8,7 +8,7 @@
 #include "cmath"
 
 GameLogic::GameLogic() {
-    deathBuffer.loadFromFile("Music/death-sound-test.wav");
+    deathBuffer.loadFromFile("Music/death-sound.wav");
     deathSound.setBuffer(deathBuffer);
 }
 
@@ -65,7 +65,7 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
         level->setTextures();
     }
     for(int i = 0; i < level->vector_of_enemy.size();i++){
-        level->vector_of_enemy[i].aggroManager(&(level->player), &(level->clock), &(level->vector_of_platform));
+        level->vector_of_enemy[i].aggroUpdate(&(level->player), &(level->clock), &(level->vector_of_platform));
     }
     if(level->player.y >= level->vector_of_platform[level->vector_of_platform.size()-1].y) level->player.HP = 0;
     if (level->player.HP <= 0) {

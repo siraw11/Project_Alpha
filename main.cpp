@@ -31,6 +31,9 @@ int main() {
     DeathScreen deathScreen;
     NextLevelScreen nextLevelScreen;
     AchievementScreen achievementScreen;
+    sf::Image icon;
+    icon.loadFromFile("textures/gameIcon.png");
+
 
     sf::Event event{};
     Input KeyBoardInput;
@@ -38,6 +41,7 @@ int main() {
     //---------Loop di gioco------------//
 
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Game", sf::Style::Fullscreen);
+    window.setIcon(icon.getSize().x,icon.getSize().y,icon.getPixelsPtr());
     menuMusic.openFromFile("Music/buttercup .ogg");
     menuMusic.setVolume(volume);
     levelMusic.openFromFile("Music/Megalovania8bit.ogg");
@@ -121,6 +125,7 @@ int main() {
             levelManager.currentLevel->camera.setCenter(400, 300);
             nextLevelScreen.drawMenu(&window);
         }
+
         window.display();
         window.clear(sf::Color(10, 108, 180));
         if (stateChecker != GameStates::Level && !playingMenu) {

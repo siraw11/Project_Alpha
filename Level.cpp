@@ -18,7 +18,6 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
     size_of_player.y = 32;
     size_of_powerUp.x = 32;
     size_of_powerUp.y = 32;
-    //TODO Riordinare i vari numeri per l'assegnazione delle texture
 
 //-----Creazione vettori di oggetti----------------//
 
@@ -227,5 +226,4 @@ void Level::setTextures() {
     for (int i = 0; i < vector_of_bullet.size(); i++) {
         vector_of_bullet[i].setTexture("textures/bullet3.png");
     }
-    //player.setTexture("../textures/tux_from_linux.png"); // TODO try to set the textures into the c-tor, don't update here otherwise animation won't work
 }
