@@ -9,7 +9,7 @@
 
 class Item{
 public:
-    void use(Item &item, GameCharacter* hero);
+   // void use(Item &item, GameCharacter* hero);
 
     Item(bool S, bool M, bool arm, bool arw, bool HP, bool K);
 

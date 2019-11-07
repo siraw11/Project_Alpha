@@ -12,8 +12,8 @@ namespace Alpha
 	class StateMachine
 	{
 	public:
-		StateMachine() { }
-		~StateMachine() { }
+		StateMachine() = default;
+		~StateMachine() = default;
 
 		void AddState(StateRef newState, bool isReplacing = true);
 		void RemoveState();
@@ -26,7 +26,7 @@ namespace Alpha
 		std::stack<StateRef> _states;
 		StateRef _newState;
 
-		bool _isRemoving;
-		bool _isAdding, _isReplacing;
+		bool _isRemoving{};
+		bool _isAdding{}, _isReplacing{};
 	};
 }

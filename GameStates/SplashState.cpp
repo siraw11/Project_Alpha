@@ -1,3 +1,5 @@
+#include <utility>
+
 
 
 #include <sstream>
@@ -9,7 +11,7 @@
 
 namespace Alpha
 {
-	SplashState::SplashState(GameDataRef data) : _data(data)
+	SplashState::SplashState(GameDataRef data) : _data(std::move(data))
 	{
 
 	}
@@ -23,7 +25,7 @@ namespace Alpha
 
 	void SplashState::HandleInput()
 	{
-		sf::Event event;
+		sf::Event event{};
 
 		while (this->_data->window.pollEvent(event))
 		{

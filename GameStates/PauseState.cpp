@@ -1,3 +1,5 @@
+#include <utility>
+
 
 
 #include "PauseState.hpp"
@@ -9,7 +11,7 @@
 
 namespace Alpha
 {
-	PauseState::PauseState(GameDataRef data) : _data(data)
+	PauseState::PauseState(GameDataRef data) : _data(std::move(data))
 	{
 
 	}
@@ -24,8 +26,8 @@ namespace Alpha
 		this->_resumeButton.setTexture(this->_data->assets.GetTexture("Resume Button"));
 		this->_homeButton.setTexture(this->_data->assets.GetTexture("Home Button"));
 
-		this->_resumeButton.setPosition((this->_data->window.getSize().x / 2) - (this->_resumeButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3) - (this->_resumeButton.getLocalBounds().height / 2));
-		this->_homeButton.setPosition((this->_data->window.getSize().x / 2) - (this->_homeButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3 * 2) - (this->_homeButton.getLocalBounds().height / 2));
+		this->_resumeButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_resumeButton.getLocalBounds().width / 2.0), (this->_data->window.getSize().y / 3.0) - (this->_resumeButton.getLocalBounds().height / 2.0));
+		this->_homeButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_homeButton.getLocalBounds().width / 2.0), (this->_data->window.getSize().y / 3.0 * 2.0) - (this->_homeButton.getLocalBounds().height / 2.0));
 	}
 
 	void PauseState::HandleInput()

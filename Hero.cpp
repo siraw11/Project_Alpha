@@ -18,7 +18,7 @@ void Hero::setItem(Item *item) {
     Hero::item = item;
 }*/
 
-void Hero::heroMovement(int *level) {
+void Hero::heroMovement(const int *level) {
     int x, y;
     const int SCALE = 3;
 

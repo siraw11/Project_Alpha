@@ -4,9 +4,7 @@
 
 #include "Archer.h"
 
-Archer::Archer() {
-
-}
+Archer::Archer() = default;
 
 int Archer::getArrows() const {
     return 0;
