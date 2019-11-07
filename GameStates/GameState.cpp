@@ -16,7 +16,8 @@
 #include <fstream>
 
 namespace Alpha {
-    GameState::GameState(GameDataRef data) : _data(data) {
+    GameState::GameState(GameDataRef data,PlayerType playertype) : _data(data) {
+        playerType=playertype;
 
     }
 
@@ -25,7 +26,7 @@ namespace Alpha {
     }
 
     void GameState::HandleInput() {
-        sf::Event event;
+        sf::Event event{};
 
         while (this->_data->window.pollEvent(event)) {
             if (sf::Event::Closed == event.type) {
@@ -51,14 +52,12 @@ namespace Alpha {
         }
     }
 
-    PlayerType playerType;
-
     void GameState::Draw() {
 
         int SCALE = 3;
 
         // Create matrix
-        int level[10080] = {};//TODO: Dynamic allocation
+        int level[10080] = {};
 
         //Load map from Resources
         std::fstream fin("../Resources/Map/map.txt", std::fstream::in);
@@ -90,9 +89,8 @@ namespace Alpha {
 
         //set hero
         Hero* hero;
-        playerType=PlayerType ::ARCHER;
         switch(playerType){
-            case PlayerType::ARCHER:
+            case PlayerType ::ARCHER:
                 hero= new Classes<Archer>(5,2,16);
                 break;
             case PlayerType::KNIGHT:
@@ -113,7 +111,7 @@ namespace Alpha {
 
         //set projectile
         std::vector<Projectile> projectileArray;
-        Projectile projectile(playerType);
+        Projectile projectile(this->playerType);
 
         if(enemyArray.empty()){
             for (int i = 0; i <200 ; ++i) {
@@ -231,17 +229,17 @@ namespace Alpha {
 
                     if(i->controlCollision(level)){
                         projectileArray.erase(i);
-                        std::cout<<"cazzosi"<<std::endl;
+                        //std::cout<<"cazzosi"<<std::endl;
                         i--;
 
                     }else if (std::abs(i->getPosition().x-i->projectileStart.x)>=640 || std::abs(i->getPosition().y-i->projectileStart.y)>=640){
                         projectileArray.erase(i);
-                        std::cout<<"cazzosisssssss"<<std::endl;
+                        //std::cout<<"cazzosisssssss"<<std::endl;
                         i--;
                     }else if(i->getGlobalBounds().intersects(j.getGlobalBounds())){
                         hero->Attack(j);
                         projectileArray.erase(i);
-                        std::cout<<"cazzosiluca"<<std::endl;
+                        //std::cout<<"cazzosiluca"<<std::endl;
                         i--;
                     }
                 }

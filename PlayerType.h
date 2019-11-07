@@ -4,6 +4,8 @@
 
 #ifndef PROJECT_ALPHA_PLAYERTYPE_H
 #define PROJECT_ALPHA_PLAYERTYPE_H
+
+
 enum class PlayerType {
     ARCHER, MAGE, KNIGHT
 };

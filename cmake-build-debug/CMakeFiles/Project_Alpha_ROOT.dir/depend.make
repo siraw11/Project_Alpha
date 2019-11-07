@@ -4,7 +4,6 @@
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Archer.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Archer.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../GameCharacter.h
-CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Map.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -85,7 +84,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Archer.h
 CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Classes.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Classes.h
 CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../GameCharacter.h
-CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Map.h
+CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Knight.h
+CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Mage.h
 CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -168,7 +169,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Knight.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Mage.h
-CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Map.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Random.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
@@ -248,7 +248,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Wind
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../GameCharacter.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../GameCharacter.h
-CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Map.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -409,6 +408,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameManager/InputMa
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/SplashState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -571,6 +571,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/MainMenuState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -647,6 +648,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Archer.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Classes.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameManager/AssetManager.hpp
@@ -661,7 +663,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/Paus
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Hero.h
-CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Item.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Knight.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Mage.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Map.h
@@ -754,6 +755,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -839,6 +841,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/Pau
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/PauseState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1010,6 +1013,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/Sp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/SplashState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1088,13 +1092,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameStates/StateMachine.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../PlayerType.h
 
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Hero.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Hero.h
-CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Item.h
-CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Map.h
-CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -1175,8 +1177,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Item.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Item.h
-CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Map.h
-CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -1256,7 +1256,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /opt/SFML-2.5.1/include/SFML/Windo
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.h
-CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Map.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -1336,7 +1335,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /opt/SFML-2.5.1/include/SFML/Win
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Mage.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Mage.h
-CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Map.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -1460,6 +1458,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Map.cpp.o: /opt/SFML-2.5.1/include/SFML/System
 CMakeFiles/Project_Alpha_ROOT.dir/Map.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Export.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Map.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/GlResource.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../Projectile.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../Projectile.h
@@ -1522,6 +1521,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp

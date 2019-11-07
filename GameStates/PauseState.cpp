@@ -30,7 +30,7 @@ namespace Alpha
 
 	void PauseState::HandleInput()
 	{
-		sf::Event event;
+		sf::Event event{};
 
 		while (this->_data->window.pollEvent(event))
 		{

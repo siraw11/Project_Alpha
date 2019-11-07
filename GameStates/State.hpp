@@ -1,5 +1,8 @@
 #pragma once
 
+#include "../PlayerType.h"
+
+
 namespace Alpha
 {
 	class State

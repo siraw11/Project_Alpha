@@ -1,7 +1,9 @@
 #include "Projectile.h"
-Projectile::Projectile(PlayerType type)  {
+#include "GameManager/DEFINITIONS.hpp"
+
+Projectile::Projectile(PlayerType playerType)  {
     auto projectileTexture = new sf::Texture;
-    switch (type){
+    switch (playerType){
         case PlayerType::ARCHER:
             projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
             setTexture(*projectileTexture);

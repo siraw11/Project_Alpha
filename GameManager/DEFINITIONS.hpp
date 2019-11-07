@@ -1,3 +1,6 @@
+//#include "../PlayerType.h"
+
+
 #define SCREEN_WIDTH 3840
 
 #define SCREEN_HEIGHT 2160
@@ -35,3 +38,5 @@
 #define STATE_LOSE 2
 
 #define  STATE_PLAYING 0
+
+

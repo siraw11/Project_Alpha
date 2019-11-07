@@ -1,3 +1,5 @@
+#include <utility>
+
 
 
 #include <sstream>
@@ -8,10 +10,13 @@
 #include "../GameManager/DEFINITIONS.hpp"
 #include "../PlayerType.h"
 
+
+
+
 #include <iostream>
 
 namespace Alpha {
-    SelectClassState::SelectClassState(GameDataRef data) : _data(data) {
+    SelectClassState::SelectClassState(GameDataRef data) : _data(std::move(data)) {
 
     }
 
@@ -35,27 +40,30 @@ namespace Alpha {
     }
 
     void SelectClassState::HandleInput() {
-        //PlayerType playerType;
 
-        sf::Event event;
 
+        sf::Event event{};
         while (this->_data->window.pollEvent(event)) {
             if (sf::Event::Closed == event.type) {
                 this->_data->window.close();
             }
 
-            if (this->_data->input.IsSpriteClicked(this->_archerButton, sf::Mouse::Left, this->_data->window)){
 
+            if (this->_data->input.IsSpriteClicked(this->_archerButton, sf::Mouse::Left, this->_data->window)){
                 // Switch To Game State
 
-                this->_data->machine.AddState(StateRef(new GameState(_data)), true);
+
+                this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::ARCHER)), true);
+
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
                 // Switch To Main Menu State
-                this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+
+                this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::KNIGHT)), true);
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
                 // Switch To Main Menu State
-                this->_data->machine.AddState(StateRef(new PauseState(_data)), true);
+
+                this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::MAGE)), true);
             }
         }
 

@@ -5,12 +5,13 @@
 #include "../GameManager/Game.hpp"
 
 
+
 namespace Alpha
 {
 	class GameState : public State
 	{
 	public:
-		explicit GameState(GameDataRef data);
+		explicit GameState(GameDataRef data,PlayerType playerType);
 
 		void Init() override;
 
@@ -19,10 +20,11 @@ namespace Alpha
 		void Draw() override;
 
 	private:
+	    PlayerType playerType;
 
 	    GameDataRef _data;
 
-	    int gameState;
+	    int gameState{};
 
 		sf::Clock _clock;
 	};

@@ -11,6 +11,7 @@ namespace Alpha
 {
 	struct GameData
 	{
+        int playerType;
 		StateMachine machine;
 		sf::RenderWindow window;
 		AssetManager assets;
@@ -22,7 +23,7 @@ namespace Alpha
 	class Game
 	{
 	public:
-		Game( const std::string& title);
+		explicit Game( const std::string& title);
 
 	private:
 		// Updates run at 60 per second.

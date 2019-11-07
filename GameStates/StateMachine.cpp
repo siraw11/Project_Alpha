@@ -6,7 +6,6 @@ namespace Alpha
 	{
 		this->_isAdding = true;
 		this->_isReplacing = isReplacing;
-
 		this->_newState = std::move(newState);
 	}
 
