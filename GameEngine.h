@@ -11,25 +11,15 @@
 #include "Map.h"
 #include "Item.h"
 
+
 class GameEngine {
 public:
-    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 30), sf::VideoMode video = sf::VideoMode::getDesktopMode(),
+    GameEngine(b2Vec2 gravity = b2Vec2(0.0f, 30),
                int framerate = 60);
-
-    float32 timeStep = 1.0f / 60.0f;
-    int32 velocityIterations = 3;
-    int32 positionIterations = 6;
-    b2Vec2 gravity;
-    b2World world = b2World(gravity);
-    int framerate;
-    sf::VideoMode video;
-    sf::RenderWindow *window;
-    const float SCALE = 200.f;
-    const float WHEEL_SIZE = 0.23;
-    float LINE;
 
 
     void run();
+
 
     float32 getTimeStep() const;
 
@@ -55,30 +45,42 @@ public:
 
     void setWorld(const b2World &world);
 
-    const sf::VideoMode &getVideo() const;
-
-    void setVideo(const sf::VideoMode &video);
-
-
     bool isPause() const;
 
     void setPause(bool pause);
 
-
 private:
-    bool pause = false;
+    sf::RenderWindow *window;
+    sf::View view;
 
-    float degToGrad(float deg);
+    int framerate;
+    float32 timeStep = 1.0f / 60.0f;
+    int32 velocityIterations = 3;
+    int32 positionIterations = 6;
 
-    void drawMap(Map *level);
+    b2WheelJoint *wheelEngineL;
+    b2WheelJoint *wheelEngineR;
+    b2Vec2 gravity = b2Vec2(0, 9.8);
+    b2World world = b2World(gravity);
+    Map level = {};
+    Bike bike = {};
 
-    void drawBike(Bike *bike);
+    const float SCALE = 200.;
+    const float WHEEL_SIZE = 0.23;
+    float LINE{};
+    bool pause{};
+
+    static float degToGrad(float deg);
+
+    void drawMap();
+
+    void drawBike();
 
     void drawItem(Item *item);
 
-    void initBike(Bike *bike);
+    void initBike();
 
-    bool checkCollision(float r1x, float r1y, float r1w, float r1h, float r2x, float r2y, float r2w, float r2h);
+    static bool checkCollision(float r1x, float r1y, float r1w, float r2x, float r2y, float r2w, float r2h);
 };
 
 
