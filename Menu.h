@@ -1,6 +1,7 @@
 //
 // Created by Luca Graziotti on 2019-10-12.
 //
+#pragma once
 #include "SFML/Graphics.hpp"
 #include <vector>
 #include "MenuOption.h"
@@ -15,7 +16,7 @@ enum MenuType {
 
 class Menu {
 public:
-    Menu(MenuType type, std::vector<MenuOption *> options, GameEngine *engine);
+    Menu(MenuType type, std::vector<MenuOption *> options);
 
     ~Menu();
 
@@ -23,6 +24,8 @@ public:
     void MoveUp();
 
     void MoveDown();
+
+    void draw();
 
     int getSelectedItemIndex() const;
 
@@ -36,17 +39,9 @@ public:
 
     void open();
 
-private:
-    GameEngine *engine;
-    MenuType type;
-public:
-    MenuType getType() const;
-
-    void setType(MenuType type);
-
-private:
-    int selectedItemIndex;
     std::vector<MenuOption *> options;
 
-    void draw(sf::RenderWindow *window);
+private:
+    MenuType type;
+    int selectedItemIndex;
 };
