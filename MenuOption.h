@@ -15,7 +15,7 @@ public:
 
     virtual ~MenuOption();
 
-    MenuOption(std::string text);
+    MenuOption(const std::string &text);
 
 private:
     sf::Font font;
