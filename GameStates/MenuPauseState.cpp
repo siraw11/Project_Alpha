@@ -5,7 +5,6 @@
 #include <iostream>
 #include <Game.h>
 #include "MenuPauseState.h"
-#include "GameState.h"
 #include "StateMachine.h"
 #include "Menu.h"
 #include "MenuHomeState.h"
