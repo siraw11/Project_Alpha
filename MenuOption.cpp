@@ -23,7 +23,7 @@ std::vector<MenuOption *> MenuOption::loadMainMenuOptions() {
     options.push_back(option);
     option = new MenuOption("Settings");
     options.push_back(option);
-    option = new MenuOption("Exit");
+    option = new MenuOption("Exit Game");
     options.push_back(option);
     return options;
 }
