@@ -37,7 +37,6 @@ public:
 
     const sf::Text *getMenu() const;
 
-    void open();
 
     std::vector<MenuOption *> options;
 
