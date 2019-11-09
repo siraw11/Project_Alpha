@@ -8,6 +8,7 @@
 #include "GameState.h"
 #include "StateMachine.h"
 #include "Menu.h"
+#include "SelectLevelState.h"
 
 static Menu menu(MenuType::Home, MenuOption::loadMainMenuOptions());
 
@@ -43,7 +44,8 @@ void MenuHomeState::handleInput(sf::Event event) {
                     switch (menu.getSelectedItemIndex()) {
                         case 0:
                             std::cout << "Play" << std::endl;
-                            Game::gameData->machine.push_state(StateRef(new GameState(true)));
+                            //Game::gameData->machine.push_state(StateRef(new GameState(true)));
+                            Game::gameData->machine.push_state(StateRef(new SelectLevelState()));
                             break;
                         case 1:
                             std::cout << "Settings" << std::endl;
