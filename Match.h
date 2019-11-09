@@ -6,19 +6,15 @@
 #define MOTOCROSS2D_MATCH_H
 #include "Bike.h"
 #include "Player.h"
-
-
+#include "Map.h"
 
 
 class Match {
 public:
-    Match(Position p, int lifes, float time, int money, Player* player, Bike* b);
+    Match(Map *map = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0);
 
     virtual ~Match();
 
-    const Position &getP() const;
-
-    void setP(const Position &p);
 
     int getLifes() const;
 
@@ -41,12 +37,12 @@ public:
     void setB(Bike *b);
 
 private:
-    Position p;
     int lifes;
     float time;
     int money;
     Player* player;
-    Bike* b;
+    Bike *bike;
+    Map *map;
 
 };
 
