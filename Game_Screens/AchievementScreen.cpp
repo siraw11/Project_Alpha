@@ -4,6 +4,7 @@
 
 #include "AchievementScreen.h"
 #include "iostream"
+#include "StateMachine/State_Main.h"
 
 AchievementScreen::AchievementScreen() {
     text1Pos.x = 100;
@@ -32,14 +33,13 @@ AchievementScreen::AchievementScreen() {
     title.setString("ACHIEVEMENT LIST");
 }
 
-void AchievementScreen::update(Input *input, GameStates *state) {
+void AchievementScreen::update(Input input, StateManager *state) {
 
-    if (*input == Input::Enter) {
+    if (input == Input::Enter) {
         if (selected == 0) {
-            (*state) = GameStates::Main_menu;
+            state->setState(new State_Main(state));
         }
     }
-    *input = Input::Null;
 }
 
 void AchievementScreen::drawAchievements(AchievementNotifier *achievementNotifier, sf::RenderWindow *window) {
@@ -49,7 +49,7 @@ void AchievementScreen::drawAchievements(AchievementNotifier *achievementNotifie
     achievementNotifier->firstDeath.unlocked.setPosition(firstDeathPos.x + 500, firstDeathPos.y);
     achievementNotifier->potionUsed.description.setPosition(potionAchivPos.x, potionAchivPos.y);
     achievementNotifier->potionUsed.unlocked.setPosition(potionAchivPos.x + 500, potionAchivPos.y);
-    for (int i = 0; i < SIZE; i++) {
+    for (int i = 0; i < SIZEACHIVE; i++) {
         window->draw(this->back[i]);
     }
     window->draw(title);

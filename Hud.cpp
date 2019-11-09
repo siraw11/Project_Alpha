@@ -5,6 +5,7 @@
 #include "Hud.h"
 #include "iostream"
 #include "SFML/Graphics.hpp"
+#include "Level.h"
 
 Hud::Hud() {
     font.loadFromFile("textures/arial_narrow_7.ttf");
@@ -23,7 +24,7 @@ Hud::Hud() {
 };
 
 void Hud::update(sf::RenderWindow *window, Level *level) {
-    if (vector_of_hearts.size() < level->player.HP) {
+    while (vector_of_hearts.size() < level->player.HP) {
         sf::RectangleShape heart;
         heart.setTexture(&texture);
         heart.setSize(sizeHeart);
@@ -47,9 +48,7 @@ void Hud::update(sf::RenderWindow *window, Level *level) {
     for (int i = 0; i < vector_of_hearts.size(); i++) {
         vector_of_hearts[i].setPosition(level->camera.getCenter().x + (sizeHeart.x * i) + offset.x,
                                         level->camera.getCenter().y + offset.y);
-        if (i < level->player.HP) {
             window->draw(vector_of_hearts[i]);
-        }
     }
     for (int i = 0; i < vector_of_enemyhp.size(); i++) {
         for (int j = 0; j < level->vector_of_enemy[i].HP; j++) {

@@ -5,22 +5,20 @@
 #ifndef GAME_LEVEL_H
 #define GAME_LEVEL_H
 
-#include <vector>
-#include <SFML/Graphics.hpp>
-#include "GameLogic.h"
-#include "Input.h"
-#include "GameStates.h"
-#include "Hud.h"
-
+#include "SFML/Graphics.hpp"
+#include "Platform.h"
+#include "Enemy.h"
+#include "Hero.h"
+#include "PowerUp.h"
+#include "Bullet.h"
 
 //Classe per la creazione del livello
-class GameLogic;
 
 class Level {
 public:
-    explicit Level(int levelArray[], int colomun, int row, GameLogic *gameLogic);//Crea il livello mettendo tutti i tipi
+    explicit Level(int levelArray[], int colomun, int row);//Crea il livello mettendo tutti i tipi
     // di oggetti nei vettori assegnati e ne setta le propietà
-    void Update(sf::RenderWindow *window, Input *input, GameStates *state, Hud *hud);//Prende l'input da tastiera
+    void Update(sf::RenderWindow *window);//Prende l'input da tastiera
     //--Draw di tutti gli oggetti--//
     void drawBullet(sf::RenderWindow *Window);
 
@@ -64,7 +62,6 @@ private:
     int type_powerUpSpeed = 6;
     int type_player = 9;
     int type_enemy_octopus = 7;
-    GameLogic *logic;
     float cameraZoom=0.75;
     sf::Vector2f cameraSize;
     sf::Time shoot_time;

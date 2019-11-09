@@ -1,19 +1,22 @@
 //
 // Created by davide on 19/10/19.
 //
-#include <SFML/Graphics.hpp>
-#include "Input.h"
-#include "GameStates.h"
+
 
 #ifndef GAME_PAUSE_H
 #define GAME_PAUSE_H
+
+#include <SFML/Graphics.hpp>
+#include "../Input.h"
+
 #define SIZE 3
 
+class StateManager;
 class Pause {
 public:
     Pause();
 
-    void update(Input *input, GameStates *state, sf::RenderWindow *window);
+    void update(Input input, StateManager *state, sf::RenderWindow *window);
 
     void drawMenu(sf::RenderWindow *window);
 

@@ -4,15 +4,19 @@
 
 #include "GameLogic.h"
 #include <iostream>
-#include <SFML/Graphics.hpp>
 #include "cmath"
+#include "Collision.h"
+#include "StateMachine/State_Main.h"
+#include "StateMachine/State_Death.h"
+#include "StateMachine/State_NextLevel.h"
+#include "StateMachine/State_Pause.h"
 
 GameLogic::GameLogic() {
     deathBuffer.loadFromFile("Music/death-sound.wav");
     deathSound.setBuffer(deathBuffer);
 }
 
-void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::RenderWindow *window, Hud *hud) {
+void GameLogic::Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud) {
     playerCollisionEnemy = -1;
     playerCollisionPowerUp = -1;
     bulletCollisionMap = -1;
@@ -69,21 +73,19 @@ void GameLogic::Update(Level *level, GameStates *state, Input *input, sf::Render
     }
     if(level->player.y >= level->vector_of_platform[level->vector_of_platform.size()-1].y) level->player.HP = 0;
     if (level->player.HP <= 0) {
-        level->reset = true;
+        state->setState(new State_Death(state));
         deathcounter++;
     }
-    if (*input == Input::Escape) {
-        (*state) = GameStates::Pause;
+    if (input == Input::Escape) {
+        state->setState(new State_Pause(state));
     }
     if((*level).vector_of_enemy.empty()){
-        (*state) = GameStates ::Level_next;
+        state->setState(new State_NextLevel(state));
     }
-    *input = Input::Null;
-    if((*state)==GameStates::Level) {
-        level->camera.setCenter(level->player.x,-25);
-    }
+    level->camera.setCenter(level->player.x, -25);
     achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathcounter,&level->camera);
     hud->update(window, level);
+
 }
 
 

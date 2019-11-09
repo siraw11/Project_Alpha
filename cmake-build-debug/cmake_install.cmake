@@ -1,4 +1,4 @@
-# Install script for directory: /home/andreatadde/Scrivania/Esame_Programmazione
+# Install script for directory: /home/davide/Scrivania/Esame_Programmazione
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/cmake_install.cmake")
+  include("/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,20 +1,21 @@
 //
 // Created by davide on 20/10/19.
 //
-#include "SFML/Graphics.hpp"
-#include "Input.h"
-#include "GameStates.h"
 
 #ifndef GAME_DEATHSCREEN_H
 #define GAME_DEATHSCREEN_H
 #define SIZE 3
 
+#include "SFML/Graphics.hpp"
+#include "../Input.h"
+
+class StateManager;
 class DeathScreen {
 
 public:
     DeathScreen();
 
-    void update(Input *input, GameStates *state, sf::RenderWindow *window);
+    void update(Input input, StateManager *state, sf::RenderWindow *window);
 
     void drawMenu(sf::RenderWindow *window);
 

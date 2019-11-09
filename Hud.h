@@ -6,7 +6,6 @@
 #define GAME_HUD_H
 
 #include "SFML/Graphics.hpp"
-#include "Level.h"
 #include "vector"
 
 class Level;

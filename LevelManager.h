@@ -8,11 +8,10 @@
 #define arrayColumn 50
 
 #include "Level.h"
-#include "GameLogic.h"
 
 class LevelManager {
 public:
-    LevelManager(GameLogic* gameLogic);
+    LevelManager();
     void resetLevel();
     void nextLevel();
 
@@ -20,7 +19,6 @@ public:
     Level* currentLevel;
 
 private:
-    GameLogic* logic;
     int levelNumber;
     int levelArray1[arrayColumn * arrayRow] = {
             99, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,

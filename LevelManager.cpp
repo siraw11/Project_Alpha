@@ -6,22 +6,19 @@
 #include "stdlib.h"
 #include "iostream"
 
-LevelManager::LevelManager(GameLogic* gameLogic) {
-
-    logic=gameLogic;
-    currentLevel=new Level(levelArray1, arrayColumn, arrayRow, logic);
+LevelManager::LevelManager() {
+    currentLevel = new Level(levelArray1, arrayColumn, arrayRow);
     levelNumber=1;
 }
 
 void LevelManager::resetLevel() {
-
     delete currentLevel;
     if(levelNumber==1){
-        Level* levelS= new Level(levelArray1, arrayColumn, arrayRow, logic);
+        Level *levelS = new Level(levelArray1, arrayColumn, arrayRow);
         currentLevel=levelS;
     }
     if(levelNumber>=2){
-        Level *level = new Level(levelArray2, arrayColumn, arrayRow, logic);
+        Level *level = new Level(levelArray2, arrayColumn, arrayRow);
         currentLevel=level;
     }
     currentLevel->reset= false;

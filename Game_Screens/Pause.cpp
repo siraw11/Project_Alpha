@@ -1,25 +1,28 @@
 //
-// Created by davide on 20/10/19.
+// Created by davide on 19/10/19.
 //
 
-#include "DeathScreen.h"
+#include "Pause.h"
+#include "StateMachine/State_Level.h"
+#include "StateMachine/State_Main.h"
 
-DeathScreen::DeathScreen() {
+Pause::Pause() {
     text1Pos.x = 100;
     text1Pos.y = 100;
     text2Pos.x = 100;
     text2Pos.y = 130;
     text3Pos.x = 100;
     text3Pos.y = 160;
-    deadPos.x = 150;
-    deadPos.y = 50;
+    textPos.x = 150;
+    textPos.y = 50;
+
     this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
     pause[0].setFont(this->Font);
     pause[0].setCharacterSize(textSize);
     pause[0].setFillColor(sf::Color::Red);
     pause[0].setPosition(text1Pos.x, text1Pos.y);
-    pause[0].setString("RESTART");
+    pause[0].setString("RESUME");
 
     pause[1].setFont(this->Font);
     pause[1].setCharacterSize(textSize);
@@ -33,15 +36,15 @@ DeathScreen::DeathScreen() {
     pause[2].setPosition(text3Pos.x, text3Pos.y);
     pause[2].setString("EXIT");
 
-    dead.setFont(this->Font);
-    dead.setCharacterSize(textSize);
-    dead.setFillColor(sf::Color::Black);
-    dead.setPosition(deadPos.x, deadPos.y);
-    dead.setString("GAME OVER");
+    text.setFont(this->Font);
+    text.setCharacterSize(textSize);
+    text.setFillColor(sf::Color::Black);
+    text.setPosition(textPos.x, textPos.y);
+    text.setString("PAUSE");
 }
 
-void DeathScreen::update(Input *input, GameStates *state, sf::RenderWindow *window) {
-    if (*input == Input::Down) {
+void Pause::update(Input input, StateManager *state, sf::RenderWindow *window) {
+    if (input == Input::Down) {
         selected++;
         if (selected < SIZE) {
             pause[selected - 1].setFillColor(sf::Color::White);
@@ -50,7 +53,7 @@ void DeathScreen::update(Input *input, GameStates *state, sf::RenderWindow *wind
         }
         pause[selected].setFillColor(sf::Color::Red);
     }
-    if (*input == Input::Up) {
+    if (input == Input::Up) {
         selected--;
         if (selected >= 0) {
             pause[selected + 1].setFillColor(sf::Color::White);
@@ -59,14 +62,13 @@ void DeathScreen::update(Input *input, GameStates *state, sf::RenderWindow *wind
         }
         pause[selected].setFillColor(sf::Color::Red);
     }
-    if (*input == Input::Enter) {
-
+    if (input == Input::Enter) {
         if (selected == 0) {
-            (*state) = GameStates::Level;
+            state->setState(new State_Level(state));
         }
 
         if (selected == 1) {
-            (*state) = GameStates::Main_menu;
+            state->setState(new State_Main(state));
         }
         if (selected == 2) {
             window->close();
@@ -74,10 +76,10 @@ void DeathScreen::update(Input *input, GameStates *state, sf::RenderWindow *wind
     }
 }
 
-void DeathScreen::drawMenu(sf::RenderWindow *window) {
+void Pause::drawMenu(sf::RenderWindow *window) {
 
     for (int i = 0; i < SIZE; i++) {
         window->draw(this->pause[i]);
     }
-    window->draw(dead);
+    window->draw(text);
 }

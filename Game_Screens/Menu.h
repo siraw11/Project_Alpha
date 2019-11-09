@@ -6,17 +6,19 @@
 #define GAME_MENU_H
 #define SIZE 3
 
-#include <SFML/Graphics.hpp>
-#include "Input.h"
-#include "GameStates.h"
+#include "../Input.h"
+#include "../StateMachine/StateManager.h"
+#include "SFML/Graphics.hpp"
 
 class Menu {
 
 public:
     Menu();
 
-    void update(Input *input, GameStates *state, sf::RenderWindow *window);
+    void update(Input input, StateManager *state, sf::RenderWindow *window);
     void drawMenu(sf::RenderWindow *window);
+
+    virtual ~Menu();
 
 private:
     sf::Text title;

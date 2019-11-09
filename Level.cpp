@@ -1,12 +1,11 @@
 //
 // Created by davide on 18/09/19.
 //
-
-#include "GameLogic.h"
+#include "Level.h"
 #include <iostream>
 #include "Input.h"
 
-Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
+Level::Level(int levelArray[], int column, int row) {
 
     size_of_enemy.x = 32;
     size_of_enemy.y = 32;
@@ -18,6 +17,7 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
     size_of_player.y = 32;
     size_of_powerUp.x = 32;
     size_of_powerUp.y = 32;
+    //TODO Riordinare i vari numeri per l'assegnazione delle texture
 
 //-----Creazione vettori di oggetti----------------//
 
@@ -85,7 +85,6 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
         }
     }
     reset = false;
-    this->logic = gameLogic;
     shoot_time = sf::seconds(0);
     clock.restart();
 
@@ -97,7 +96,7 @@ Level::Level(int levelArray[], int column, int row, GameLogic *gameLogic) {
 
 }
 
-void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state, Hud *hud) {
+void Level::Update(sf::RenderWindow *window) {
 
     sf::Time shoot_delay;
     sf::Vector2f shotDir;
@@ -152,7 +151,6 @@ void Level::Update(sf::RenderWindow *window, Input *input, GameStates *state, Hu
     */
 
     //------Passa gli oggetti al gestore della logica di gioco (per collisioni ed eventi)-------//
-    logic->Update(this, state, input, window, hud);
 
     //----Draw globale-----------//
 
@@ -226,4 +224,5 @@ void Level::setTextures() {
     for (int i = 0; i < vector_of_bullet.size(); i++) {
         vector_of_bullet[i].setTexture("textures/bullet3.png");
     }
+    //player.setTexture("../textures/tux_from_linux.png"); // TODO try to set the textures into the c-tor, don't update here otherwise animation won't work
 }

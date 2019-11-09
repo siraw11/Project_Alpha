@@ -1,11 +1,12 @@
 //
-// Created by davide on 29/10/19.
+// Created by davide on 16/09/19.
 //
 
-#include "NextLevelScreen.h"
-#include "iostream"
+#include "Menu.h"
+#include "../StateMachine/State_Level.h"
+#include "../StateMachine/State_Achivement.h"
 
-NextLevelScreen::NextLevelScreen() {
+Menu::Menu() {
     text1Pos.x = 100;
     text1Pos.y = 100;
     text2Pos.x = 100;
@@ -21,7 +22,7 @@ NextLevelScreen::NextLevelScreen() {
     menu[0].setCharacterSize(textSize);
     menu[0].setFillColor(sf::Color::Red);
     menu[0].setPosition(text1Pos.x, text1Pos.y);
-    menu[0].setString("NEXT LEVEL");
+    menu[0].setString("START");
 
     menu[2].setFont(this->Font);
     menu[2].setCharacterSize(textSize);
@@ -33,17 +34,25 @@ NextLevelScreen::NextLevelScreen() {
     menu[1].setCharacterSize(textSize);
     menu[1].setFillColor(sf::Color::White);
     menu[1].setPosition(text2Pos.x, text2Pos.y);
-    menu[1].setString("MAIN MENU");
+    menu[1].setString("ACHIEVEMENT SCREEN");
 
     title.setFont(this->Font);
     title.setCharacterSize(textSize);
     title.setFillColor(sf::Color::Black);
     title.setPosition(titlePos.x, titlePos.y);
-    title.setString("LEVEL COMPLETED");
+    title.setString("OCTOPUS KILLER");
 }
 
-void NextLevelScreen::update(Input *input, GameStates *state, sf::RenderWindow *window) {
-    if (*input == Input::Down) {
+void Menu::drawMenu(sf::RenderWindow *window) {
+
+    for (int i = 0; i < SIZE; i++) {
+        window->draw(this->menu[i]);
+    }
+    window->draw(title);
+}
+
+void Menu::update(Input input, StateManager *state, sf::RenderWindow *window) {
+    if (input == Input::Down) {
         selected++;
         if (selected < SIZE) {
             menu[selected - 1].setFillColor(sf::Color::White);
@@ -52,7 +61,7 @@ void NextLevelScreen::update(Input *input, GameStates *state, sf::RenderWindow *
         }
         menu[selected].setFillColor(sf::Color::Red);
     }
-    if (*input == Input::Up) {
+    if (input == Input::Up) {
         selected--;
         if (selected >= 0) {
             menu[selected + 1].setFillColor(sf::Color::White);
@@ -61,12 +70,12 @@ void NextLevelScreen::update(Input *input, GameStates *state, sf::RenderWindow *
         }
         menu[selected].setFillColor(sf::Color::Red);
     }
-    if (*input == Input::Enter) {
+    if (input == Input::Enter) {
         if (selected == 0) {
-            (*state) = GameStates::Level;
+            state->setState(new State_Level(state));
         }
         if (selected == 1) {
-            (*state) = GameStates::Main_menu;
+            state->setState(new State_Achivement(state));
         }
         if (selected == 2) {
             window->close();
@@ -74,9 +83,6 @@ void NextLevelScreen::update(Input *input, GameStates *state, sf::RenderWindow *
     }
 }
 
-void NextLevelScreen::drawMenu(sf::RenderWindow *window) {
-    for (int i = 0; i < SIZE; i++) {
-        window->draw(this->menu[i]);
-    }
-    window->draw(title);
+Menu::~Menu() {
+
 }

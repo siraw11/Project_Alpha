@@ -6,15 +6,15 @@
 #define GAME_NEXTLEVELSCREEN_H
 #define SIZE 3
 
-#include "Input.h"
+#include "../Input.h"
 #include "SFML/Graphics.hpp"
-#include "GameStates.h"
 
+class StateManager;
 class NextLevelScreen {
 public:
     NextLevelScreen();
 
-    void update(Input *input, GameStates *state, sf::RenderWindow *window);
+    void update(Input input, StateManager *state, sf::RenderWindow *window);
     void drawMenu(sf::RenderWindow *window);
 
     int selected = 0;
