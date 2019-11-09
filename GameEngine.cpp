@@ -9,8 +9,6 @@
 #include "GameEngine.h"
 #include "Player.h"
 #include "Map.h"
-#include "Match.h"
-#include "Player.h"
 #include "Bike.h"
 #include "Item.h"
 #include "Coin.h"
@@ -255,8 +253,6 @@ void GameEngine::drawMap() {
 
 
 void GameEngine::initBike() {
-    std::cout << "init bike" << std::endl;
-
     /*----------------------------------------
      * Definizione Cart Moto
      */
