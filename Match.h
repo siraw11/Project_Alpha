@@ -13,6 +13,8 @@ class Match {
 public:
     Match(Map *map = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0);
 
+    Map *map;
+
     virtual ~Match();
 
 
@@ -36,13 +38,20 @@ public:
 
     void setB(Bike *b);
 
+    Bike *getBike() const;
+
+    void setBike(Bike *bike);
+
+    Map *getMap() const;
+
+    void setMap(Map *map);
+
 private:
     int lifes;
     float time;
     int money;
     Player* player;
     Bike *bike;
-    Map *map;
 
 };
 
