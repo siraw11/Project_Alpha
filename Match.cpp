@@ -41,6 +41,22 @@ void Match::setPlayer(Player *player) {
     Match::player = player;
 }
 
+Bike *Match::getBike() const {
+    return bike;
+}
+
+void Match::setBike(Bike *bike) {
+    Match::bike = bike;
+}
+
+Map *Match::getMap() const {
+    return map;
+}
+
+void Match::setMap(Map *map) {
+    Match::map = map;
+}
+
 Bike *Match::getB() const {
     return bike;
 }
