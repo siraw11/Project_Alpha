@@ -4,9 +4,39 @@
 CMakeFiles/core.dir/Animation.cpp.o: ../Animation.cpp
 CMakeFiles/core.dir/Animation.cpp.o: ../Animation.h
 
+CMakeFiles/core.dir/Attack.cpp.o: ../Aggro.h
+CMakeFiles/core.dir/Attack.cpp.o: ../Animation.h
+CMakeFiles/core.dir/Attack.cpp.o: ../Attack.cpp
+CMakeFiles/core.dir/Attack.cpp.o: ../Attack.h
+CMakeFiles/core.dir/Attack.cpp.o: ../Enemy.h
+CMakeFiles/core.dir/Attack.cpp.o: ../GameCharacter.h
+CMakeFiles/core.dir/Attack.cpp.o: ../Hero.h
+CMakeFiles/core.dir/Attack.cpp.o: ../Platform.h
+CMakeFiles/core.dir/Attack.cpp.o: ../RectangleShape.h
+
 CMakeFiles/core.dir/Bullet.cpp.o: ../Bullet.cpp
 CMakeFiles/core.dir/Bullet.cpp.o: ../Bullet.h
 CMakeFiles/core.dir/Bullet.cpp.o: ../RectangleShape.h
+
+CMakeFiles/core.dir/Catch.cpp.o: ../AchievementNotifier.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Achievements/Achievement.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Achievements/FirstBlood.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Achievements/FirstDeath.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Achievements/PotionAchievement.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Aggro.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Animation.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Catch.cpp
+CMakeFiles/core.dir/Catch.cpp.o: ../Catch.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Collision.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Enemy.h
+CMakeFiles/core.dir/Catch.cpp.o: ../GameCharacter.h
+CMakeFiles/core.dir/Catch.cpp.o: ../GameLogic.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Hero.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Hud.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Input.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Level.h
+CMakeFiles/core.dir/Catch.cpp.o: ../Platform.h
+CMakeFiles/core.dir/Catch.cpp.o: ../RectangleShape.h
 
 CMakeFiles/core.dir/Collision.cpp.o: ../AchievementNotifier.h
 CMakeFiles/core.dir/Collision.cpp.o: ../Achievements/Achievement.h
@@ -97,6 +127,16 @@ CMakeFiles/core.dir/Hero.cpp.o: ../Level.h
 CMakeFiles/core.dir/Hero.cpp.o: ../Platform.h
 CMakeFiles/core.dir/Hero.cpp.o: ../RectangleShape.h
 
+CMakeFiles/core.dir/Idle.cpp.o: ../Aggro.h
+CMakeFiles/core.dir/Idle.cpp.o: ../Animation.h
+CMakeFiles/core.dir/Idle.cpp.o: ../Enemy.h
+CMakeFiles/core.dir/Idle.cpp.o: ../GameCharacter.h
+CMakeFiles/core.dir/Idle.cpp.o: ../Hero.h
+CMakeFiles/core.dir/Idle.cpp.o: ../Idle.cpp
+CMakeFiles/core.dir/Idle.cpp.o: ../Idle.h
+CMakeFiles/core.dir/Idle.cpp.o: ../Platform.h
+CMakeFiles/core.dir/Idle.cpp.o: ../RectangleShape.h
+
 CMakeFiles/core.dir/Level.cpp.o: ../AchievementNotifier.h
 CMakeFiles/core.dir/Level.cpp.o: ../Achievements/Achievement.h
 CMakeFiles/core.dir/Level.cpp.o: ../Achievements/FirstBlood.h
@@ -123,4 +163,24 @@ CMakeFiles/core.dir/PowerUp.cpp.o: ../RectangleShape.h
 
 CMakeFiles/core.dir/RectangleShape.cpp.o: ../RectangleShape.cpp
 CMakeFiles/core.dir/RectangleShape.cpp.o: ../RectangleShape.h
+
+CMakeFiles/core.dir/Reset.cpp.o: ../AchievementNotifier.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Achievements/Achievement.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Achievements/FirstBlood.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Achievements/FirstDeath.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Achievements/PotionAchievement.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Aggro.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Animation.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Collision.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Enemy.h
+CMakeFiles/core.dir/Reset.cpp.o: ../GameCharacter.h
+CMakeFiles/core.dir/Reset.cpp.o: ../GameLogic.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Hero.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Hud.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Input.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Level.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Platform.h
+CMakeFiles/core.dir/Reset.cpp.o: ../RectangleShape.h
+CMakeFiles/core.dir/Reset.cpp.o: ../Reset.cpp
+CMakeFiles/core.dir/Reset.cpp.o: ../Reset.h
 

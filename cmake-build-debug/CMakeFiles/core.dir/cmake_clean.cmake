@@ -11,6 +11,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/core.dir/GameLogic.cpp.o"
   "CMakeFiles/core.dir/Enemy.cpp.o"
   "CMakeFiles/core.dir/Animation.cpp.o"
+  "CMakeFiles/core.dir/Idle.cpp.o"
+  "CMakeFiles/core.dir/Catch.cpp.o"
+  "CMakeFiles/core.dir/Reset.cpp.o"
+  "CMakeFiles/core.dir/Attack.cpp.o"
   "libcore.pdb"
   "libcore.a"
 )

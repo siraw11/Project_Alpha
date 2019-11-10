@@ -29,5 +29,6 @@ add_subdirectory(Google_tests)
 
 add_library(core Game_Screens/Menu.cpp Game_Screens/Menu.h RectangleShape.cpp RectangleShape.h Collision.cpp Collision.h
         Bullet.cpp Bullet.h Level.cpp Level.h Platform.cpp Platform.h GameCharacter.cpp GameCharacter.h
-        Hero.cpp Hero.h PowerUp.cpp PowerUp.h GameLogic.cpp GameLogic.h Enemy.cpp Enemy.h Animation.cpp Animation.h)
+        Hero.cpp Hero.h PowerUp.cpp PowerUp.h GameLogic.cpp GameLogic.h Enemy.cpp Enemy.h Animation.cpp Animation.h Idle.cpp Idle.h
+        Catch.cpp Catch.h Reset.h Reset.cpp Attack.cpp Attack.h)
 target_link_libraries(game core)

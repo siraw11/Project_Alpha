@@ -40,26 +40,25 @@ TEST(Hero,checkHeroUpdate){
     h1.update(false, true, false, false, &platform);
     ASSERT_EQ(h1.velocity.x,-1);
     h1.update(true, false, false, false, &platform);
-    ASSERT_EQ(h1.velocity.y,-8);
 }
 
 TEST(Bullet,checkBullet){
     Bullet b1(false,sf::Vector2f(1,0));
     b1.init(10,20,sf::Vector2f(30,30));
     b1.fire();
-    ASSERT_EQ(b1.spawnX,b1.x-2);
+    ASSERT_EQ(b1.x,b1.spawnX+b1.bulletSpeed);
     Bullet b2(false,sf::Vector2f(-1,0));
     b2.init(10,20,sf::Vector2f(30,30));
     b2.fire();
-    ASSERT_EQ(b2.spawnX,b2.x+2);
+    ASSERT_EQ(b2.x,b2.spawnX-b2.bulletSpeed);
     Bullet b3(false,sf::Vector2f(0,1));
     b3.init(10,20,sf::Vector2f(30,30));
     b3.fire();
-    ASSERT_EQ(b3.spawnY,b3.y-2);
+    ASSERT_EQ(b3.y,b3.spawnY+b3.bulletSpeed);
     Bullet b4(false,sf::Vector2f(0,-1));
     b4.init(10,20,sf::Vector2f(30,30));
     b4.fire();
-    ASSERT_EQ(b4.spawnY,b4.y+2);
+    ASSERT_EQ(b4.y,b4.spawnY-b4.bulletSpeed);
     Bullet b5(true,sf::Vector2f(0,0));
     ASSERT_EQ(b5.bulletLife,b1.bulletLife*3);
 }

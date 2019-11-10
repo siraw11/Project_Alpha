@@ -6,10 +6,10 @@
 int main() {
 
     GameLogic logic;
-    LevelManager levelManager;
+    LevelManager* levelManager=new LevelManager;
     sf::Event event{};
     Input KeyBoardInput;
-    StateManager stateManager;
+    StateManager* stateManager=new StateManager;
     bool keypressed = false;
 
     //---------Loop di gioco------------//
@@ -43,7 +43,7 @@ int main() {
             keypressed = false;
         }
 
-        stateManager.run(&window, KeyBoardInput, &levelManager, &logic);
+        stateManager->run(&window, KeyBoardInput, levelManager, &logic);
         KeyBoardInput = Input::Null;
         window.display();
         window.clear(sf::Color(10, 108, 180));

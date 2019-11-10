@@ -213,6 +213,58 @@ CMakeFiles/core.dir/Animation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Animation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davide/Scrivania/Esame_Programmazione/Animation.cpp -o CMakeFiles/core.dir/Animation.cpp.s
 
+CMakeFiles/core.dir/Idle.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Idle.cpp.o: ../Idle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/core.dir/Idle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Idle.cpp.o -c /home/davide/Scrivania/Esame_Programmazione/Idle.cpp
+
+CMakeFiles/core.dir/Idle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Idle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davide/Scrivania/Esame_Programmazione/Idle.cpp > CMakeFiles/core.dir/Idle.cpp.i
+
+CMakeFiles/core.dir/Idle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Idle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davide/Scrivania/Esame_Programmazione/Idle.cpp -o CMakeFiles/core.dir/Idle.cpp.s
+
+CMakeFiles/core.dir/Catch.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Catch.cpp.o: ../Catch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/core.dir/Catch.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Catch.cpp.o -c /home/davide/Scrivania/Esame_Programmazione/Catch.cpp
+
+CMakeFiles/core.dir/Catch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Catch.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davide/Scrivania/Esame_Programmazione/Catch.cpp > CMakeFiles/core.dir/Catch.cpp.i
+
+CMakeFiles/core.dir/Catch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Catch.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davide/Scrivania/Esame_Programmazione/Catch.cpp -o CMakeFiles/core.dir/Catch.cpp.s
+
+CMakeFiles/core.dir/Reset.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Reset.cpp.o: ../Reset.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/core.dir/Reset.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Reset.cpp.o -c /home/davide/Scrivania/Esame_Programmazione/Reset.cpp
+
+CMakeFiles/core.dir/Reset.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Reset.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davide/Scrivania/Esame_Programmazione/Reset.cpp > CMakeFiles/core.dir/Reset.cpp.i
+
+CMakeFiles/core.dir/Reset.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Reset.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davide/Scrivania/Esame_Programmazione/Reset.cpp -o CMakeFiles/core.dir/Reset.cpp.s
+
+CMakeFiles/core.dir/Attack.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Attack.cpp.o: ../Attack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/core.dir/Attack.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Attack.cpp.o -c /home/davide/Scrivania/Esame_Programmazione/Attack.cpp
+
+CMakeFiles/core.dir/Attack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Attack.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/davide/Scrivania/Esame_Programmazione/Attack.cpp > CMakeFiles/core.dir/Attack.cpp.i
+
+CMakeFiles/core.dir/Attack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Attack.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/davide/Scrivania/Esame_Programmazione/Attack.cpp -o CMakeFiles/core.dir/Attack.cpp.s
+
 # Object files for target core
 core_OBJECTS = \
 "CMakeFiles/core.dir/Game_Screens/Menu.cpp.o" \
@@ -226,7 +278,11 @@ core_OBJECTS = \
 "CMakeFiles/core.dir/PowerUp.cpp.o" \
 "CMakeFiles/core.dir/GameLogic.cpp.o" \
 "CMakeFiles/core.dir/Enemy.cpp.o" \
-"CMakeFiles/core.dir/Animation.cpp.o"
+"CMakeFiles/core.dir/Animation.cpp.o" \
+"CMakeFiles/core.dir/Idle.cpp.o" \
+"CMakeFiles/core.dir/Catch.cpp.o" \
+"CMakeFiles/core.dir/Reset.cpp.o" \
+"CMakeFiles/core.dir/Attack.cpp.o"
 
 # External object files for target core
 core_EXTERNAL_OBJECTS =
@@ -243,9 +299,13 @@ libcore.a: CMakeFiles/core.dir/PowerUp.cpp.o
 libcore.a: CMakeFiles/core.dir/GameLogic.cpp.o
 libcore.a: CMakeFiles/core.dir/Enemy.cpp.o
 libcore.a: CMakeFiles/core.dir/Animation.cpp.o
+libcore.a: CMakeFiles/core.dir/Idle.cpp.o
+libcore.a: CMakeFiles/core.dir/Catch.cpp.o
+libcore.a: CMakeFiles/core.dir/Reset.cpp.o
+libcore.a: CMakeFiles/core.dir/Attack.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 

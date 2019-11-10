@@ -475,9 +475,11 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Attack.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Attack.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Bullet.cpp">
@@ -489,9 +491,11 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Catch.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Catch.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Collision.cpp">
@@ -591,9 +595,11 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Idle.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Idle.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Input.cpp">
@@ -641,9 +647,11 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Reset.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Reset.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State.cpp">

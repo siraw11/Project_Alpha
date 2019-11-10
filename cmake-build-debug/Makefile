@@ -445,6 +445,7 @@ Attack.o: Attack.cpp.o
 
 # target to build an object file
 Attack.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Attack.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Attack.cpp.o
 .PHONY : Attack.cpp.o
 
@@ -454,6 +455,7 @@ Attack.i: Attack.cpp.i
 
 # target to preprocess a source file
 Attack.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Attack.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Attack.cpp.i
 .PHONY : Attack.cpp.i
 
@@ -463,6 +465,7 @@ Attack.s: Attack.cpp.s
 
 # target to generate assembly for a file
 Attack.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Attack.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Attack.cpp.s
 .PHONY : Attack.cpp.s
 
@@ -502,6 +505,7 @@ Catch.o: Catch.cpp.o
 
 # target to build an object file
 Catch.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Catch.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Catch.cpp.o
 .PHONY : Catch.cpp.o
 
@@ -511,6 +515,7 @@ Catch.i: Catch.cpp.i
 
 # target to preprocess a source file
 Catch.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Catch.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Catch.cpp.i
 .PHONY : Catch.cpp.i
 
@@ -520,6 +525,7 @@ Catch.s: Catch.cpp.s
 
 # target to generate assembly for a file
 Catch.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Catch.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Catch.cpp.s
 .PHONY : Catch.cpp.s
 
@@ -844,6 +850,7 @@ Idle.o: Idle.cpp.o
 
 # target to build an object file
 Idle.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Idle.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Idle.cpp.o
 .PHONY : Idle.cpp.o
 
@@ -853,6 +860,7 @@ Idle.i: Idle.cpp.i
 
 # target to preprocess a source file
 Idle.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Idle.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Idle.cpp.i
 .PHONY : Idle.cpp.i
 
@@ -862,6 +870,7 @@ Idle.s: Idle.cpp.s
 
 # target to generate assembly for a file
 Idle.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Idle.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Idle.cpp.s
 .PHONY : Idle.cpp.s
 
@@ -1045,6 +1054,7 @@ Reset.o: Reset.cpp.o
 
 # target to build an object file
 Reset.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Reset.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Reset.cpp.o
 .PHONY : Reset.cpp.o
 
@@ -1054,6 +1064,7 @@ Reset.i: Reset.cpp.i
 
 # target to preprocess a source file
 Reset.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Reset.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Reset.cpp.i
 .PHONY : Reset.cpp.i
 
@@ -1063,6 +1074,7 @@ Reset.s: Reset.cpp.s
 
 # target to generate assembly for a file
 Reset.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Reset.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Reset.cpp.s
 .PHONY : Reset.cpp.s
 
