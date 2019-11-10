@@ -38,57 +38,15 @@ GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
     this->window->setFramerateLimit(this->framerate);
     this->window->clear(sf::Color(0, 0, 0));
 
-    std::list<Position> level1Points = {
-            {-1, 10},//back limit
-            {0,  0.},
-            {3,  0.},
-            {8,  1},
-            {11, 0},
-            {15, -1},
-            {20, 0},
-            {25, 0},
-            {30, 0.5},
-            {35, -1},
-            {40, 0},
-            {43, 0},
-            {45, 1},
-            {55, 1},
-            {55, 10}//front limit
-    };
 
 
-    std::list<Position> level2Points = {
-            {-1,   10},//back limit
-            {0,    0},
-            {4.9,  0},
-            {5,    .05},
-            {5,    0},
-            {11,   -6},
-            {15,   -6},
-            {40,   30},
-            {40,   0},
-            {1000, 0},
-            {1000, 10}//front limit
-    };
 
-    std::list<Item *> mapItemsLevel1;
-    mapItemsLevel1.push_back(new Coin(5, 0.8, .7, .7, 50));
-    mapItemsLevel1.push_back(new Coin(7, 1, .7, .7, 30));
-    mapItemsLevel1.push_back(new SpeedBonus(10, 1, 10, .7, .7, .7));
-
-
-    std::list<Item *> mapItemsLevel2;
-    mapItemsLevel2.push_back(new Coin(5, .2, .7, .7, 50));
-    mapItemsLevel2.push_back(new Coin(7, .1, .7, .7, 30));
-
-
-    Map level1(false, true, 1, level1Points, nullptr, mapItemsLevel1);
-    Map level2(false, true, 1, level2Points, nullptr, mapItemsLevel2);
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
     //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
-    this->level = level1;       //scelta del livello
+    //this->level = level1;       //scelta del livello
+    this->level = *Game::gameData->match->map;
     this->bike = bike1;
 
     initBike();//inizializzo la fisica del gioco
