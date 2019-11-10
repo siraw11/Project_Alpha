@@ -82,11 +82,13 @@ void SelectLevelState::handleInput(sf::Event event) {
                     switch (menu->getSelectedItemIndex()) {
                         case 0://Level 1
                             std::cout << "Level 1 selected" << std::endl;
+                            Game::gameData->match->map = new Map();
                             Game::gameData->match->map->loadLevel1();
                             Game::gameData->machine.push_state(StateRef(new GameState(true)));
                             break;
                         case 1://Level 2
                             std::cout << "Level 2 selected" << std::endl;
+                            Game::gameData->match->map = new Map();
                             Game::gameData->match->map->loadLevel2();
                             Game::gameData->machine.push_state(StateRef(new GameState(true)));
                             break;
