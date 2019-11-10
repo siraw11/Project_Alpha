@@ -10,11 +10,25 @@
 
 class SelectLevelState : public State {
 private:
+
+
     void update() override;
 
     void draw() override;
 
     void handleInput(sf::Event event) override;
+
+    std::list<int> lockedLevelsIndexes;
+
+    std::vector<MenuOption *> loadLevelsOptions();
+
+    Menu *menu;
+
+public:
+    SelectLevelState();
+
+    virtual ~SelectLevelState();
+
 };
 
 

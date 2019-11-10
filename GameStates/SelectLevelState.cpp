@@ -8,30 +8,38 @@
 #include "GameState.h"
 #include "MenuHomeState.h"
 
+SelectLevelState::SelectLevelState() {
+    this->menu = new Menu(MenuType::Home, SelectLevelState::loadLevelsOptions());
+}
 
-static std::vector<MenuOption *> loadLevelsOptions() {
+SelectLevelState::~SelectLevelState() {
+
+}
+
+
+std::vector<MenuOption *> SelectLevelState::loadLevelsOptions() {
     std::vector<MenuOption *> options;
     MenuOption *option;
 
-    //TODO: devono essere caricati in automatico
+
     option = new MenuOption("Level 1");
     options.push_back(option);
+
+    //TODO: aggiungere riconoscimento se mappa bloccata
     option = new MenuOption("Level 2");
     options.push_back(option);
-    option = new MenuOption("Level 3");
+    option = new MenuOption("Level 3 (locked)");
     options.push_back(option);
-
+    lockedLevelsIndexes.push_front(2);
 
     option = new MenuOption("Back");
     options.push_back(option);
     return options;
 }
 
-static Menu menu(MenuType::Home, loadLevelsOptions());
 
 
 void SelectLevelState::update() {
-
 }
 
 void SelectLevelState::draw() {
@@ -40,11 +48,21 @@ void SelectLevelState::draw() {
     float width = Game::gameData->window.getView().getCenter().x;
     float height = Game::gameData->window.getView().getCenter().y;
     int i = 0;
-    for (it = menu.options.begin(); it != menu.options.end(); it++, i++) {
-        (*it)->option.setPosition(
-                sf::Vector2f(width, height + i * 100));
-        if (i == menu.getSelectedItemIndex()) {
-            (*it)->option.setColor(sf::Color::Red);
+
+    for (it = menu->options.begin(); it != menu->options.end(); it++, i++) {
+        (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
+        bool isLockedLevel =
+                std::find(lockedLevelsIndexes.begin(), lockedLevelsIndexes.end(), i) != lockedLevelsIndexes.end();
+        if (i == menu->getSelectedItemIndex()) {
+            if (!isLockedLevel) {
+                (*it)->option.setColor(sf::Color::Red);
+            } else {
+                (*it)->option.setColor(sf::Color(100, 10, 100));
+            }
+        } else {
+            if (isLockedLevel) {
+                (*it)->option.setColor(sf::Color(10, 10, 100));
+            }
         }
         Game::gameData->window.draw((*it)->option);
     }
@@ -55,20 +73,22 @@ void SelectLevelState::handleInput(sf::Event event) {
         case sf::Event::KeyPressed:
             switch (event.key.code) {
                 case sf::Keyboard::Down:
-                    menu.MoveDown();
+                    menu->MoveDown();
                     break;
                 case sf::Keyboard::Up:
-                    menu.MoveUp();
+                    menu->MoveUp();
                     break;
                 case sf::Keyboard::Enter:
-                    switch (menu.getSelectedItemIndex()) {
+                    switch (menu->getSelectedItemIndex()) {
                         case 0://Level 1
                             std::cout << "Level 1 selected" << std::endl;
+                            Game::gameData->match->map->loadLevel1();
                             Game::gameData->machine.push_state(StateRef(new GameState(true)));
                             break;
                         case 1://Level 2
                             std::cout << "Level 2 selected" << std::endl;
-                            std::cout << "Settings" << std::endl;
+                            Game::gameData->match->map->loadLevel2();
+                            Game::gameData->machine.push_state(StateRef(new GameState(true)));
                             break;
                         case 2://Level 3
                             std::cout << "Level 3 selected" << std::endl;
