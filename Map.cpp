@@ -6,11 +6,60 @@
 #include "Observer.h"
 #include "Subject.h"
 #include "Player.h"
+#include "Coin.h"
+#include "SpeedBonus.h"
 
 
 Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player *_p,
          std::list<Item *> _mapItems) : isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked),
                                         mapPoints(_mapPoints), p(_p), mapItems(_mapItems) {}
+
+
+void Map::loadLevel1() {
+
+    this->mapPoints = {
+            {-1, 10},//back limit
+            {0,  0.},
+            {3,  0.},
+            {8,  1},
+            {11, 0},
+            {15, -1},
+            {20, 0},
+            {25, 0},
+            {30, 0.5},
+            {35, -1},
+            {40, 0},
+            {43, 0},
+            {45, 1},
+            {55, 1},
+            {55, 10}//front limit
+    };
+
+    mapItems.push_back(new Coin(5, 0.8, .7, .7, 50));
+    mapItems.push_back(new Coin(7, 1, .7, .7, 30));
+    mapItems.push_back(new SpeedBonus(10, 1, 10, .7, .7, .7));
+
+}
+
+void Map::loadLevel2() {
+    mapPoints = {
+            {-1,   10},//back limit
+            {0,    0},
+            {4.9,  0},
+            {5,    .05},
+            {5,    0},
+            {11,   -6},
+            {15,   -6},
+            {40,   30},
+            {40,   0},
+            {1000, 0},
+            {1000, 10}//front limit
+    };
+
+    mapItems.push_back(new Coin(5, .2, .7, .7, 50));
+    mapItems.push_back(new Coin(7, .1, .7, .7, 30));
+
+}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
