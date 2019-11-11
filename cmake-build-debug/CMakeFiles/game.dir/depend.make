@@ -124,10 +124,6 @@ CMakeFiles/game.dir/GameLogic.cpp.o: ../StateMachine/State_Main.h
 CMakeFiles/game.dir/GameLogic.cpp.o: ../StateMachine/State_NextLevel.h
 CMakeFiles/game.dir/GameLogic.cpp.o: ../StateMachine/State_Pause.h
 
-CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../StateMachine/State_Main.h
-CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Game_Screens/Menu.h
-CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../StateMachine/State.h
-CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../StateMachine/StateManager.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../AchievementNotifier.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Achievements/Achievement.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Achievements/FirstBlood.h
@@ -140,6 +136,7 @@ CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../GameCharacter.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../GameLogic.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Game_Screens/AchievementScreen.cpp
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Game_Screens/AchievementScreen.h
+CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Game_Screens/Menu.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Hero.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Hud.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Input.h
@@ -148,11 +145,10 @@ CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../LevelManager.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../Platform.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../RectangleShape.h
+CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../StateMachine/State.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../StateMachine/StateManager.h
 CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o: ../StateMachine/State_Main.h
 
-CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../StateMachine/State_Level.h
-CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../StateMachine/State_Main.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../AchievementNotifier.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Achievements/Achievement.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Achievements/FirstBlood.h
@@ -163,6 +159,8 @@ CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Bullet.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Enemy.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../GameCharacter.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../GameLogic.h
+CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Game_Screens/DeathScreen.cpp
+CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Game_Screens/DeathScreen.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Game_Screens/Menu.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Hero.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Hud.h
@@ -174,9 +172,8 @@ CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../StateMachine/State.h
 CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../StateMachine/StateManager.h
-CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Game_Screens/DeathScreen.cpp
-CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Game_Screens/DeathScreen.h
-CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../Input.h
+CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../StateMachine/State_Level.h
+CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o: ../StateMachine/State_Main.h
 
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../AchievementNotifier.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../Achievements/Achievement.h
@@ -205,8 +202,6 @@ CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State_Achivement.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State_Level.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State_Main.h
 
-CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../StateMachine/State_Level.h
-CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../StateMachine/State_Main.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../AchievementNotifier.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Achievements/Achievement.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Achievements/FirstBlood.h
@@ -218,6 +213,8 @@ CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Enemy.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../GameCharacter.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../GameLogic.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Game_Screens/Menu.h
+CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Game_Screens/NextLevelScreen.cpp
+CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Game_Screens/NextLevelScreen.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Hero.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Hud.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Input.h
@@ -228,12 +225,9 @@ CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../StateMachine/State.h
 CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../StateMachine/StateManager.h
-CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Game_Screens/NextLevelScreen.cpp
-CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Game_Screens/NextLevelScreen.h
-CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../Input.h
+CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../StateMachine/State_Level.h
+CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o: ../StateMachine/State_Main.h
 
-CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../StateMachine/State_Level.h
-CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../StateMachine/State_Main.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../AchievementNotifier.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Achievements/Achievement.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Achievements/FirstBlood.h
@@ -245,6 +239,8 @@ CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Enemy.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../GameCharacter.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../GameLogic.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Game_Screens/Menu.h
+CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Game_Screens/Pause.cpp
+CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Game_Screens/Pause.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Hero.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Hud.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Input.h
@@ -255,9 +251,8 @@ CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../StateMachine/State.h
 CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../StateMachine/StateManager.h
-CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Game_Screens/Pause.cpp
-CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Game_Screens/Pause.h
-CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../Input.h
+CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../StateMachine/State_Level.h
+CMakeFiles/game.dir/Game_Screens/Pause.cpp.o: ../StateMachine/State_Main.h
 
 CMakeFiles/game.dir/Hero.cpp.o: ../Animation.h
 CMakeFiles/game.dir/Hero.cpp.o: ../Bullet.h
