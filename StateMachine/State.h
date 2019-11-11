@@ -10,15 +10,6 @@
 #include "../LevelManager.h"
 #include "StateManager.h"
 #include "../GameLogic.h"
-class DeathScreen;
-
-class AchievementScreen;
-
-class GameLogic;
-
-class NextLevelScreen;
-
-class Pause;
 
 class State {
 public:

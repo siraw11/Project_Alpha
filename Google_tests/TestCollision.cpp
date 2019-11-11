@@ -9,10 +9,11 @@
 #include "../Bullet.h"
 #include "../Platform.h"
 #include "../Collision.h"
+#include "../GameLogic.h"
 #include <vector>
 #include <iostream>
 
-TEST(Bullet,TestBulletCollisionMap) {//Test per verificare se all'impatto con la mappa il priettile viene distrutto e se
+TEST(Bullet,TestBulletCheckCollisionMap) {//Test per verificare se all'impatto con la mappa il priettile viene distrutto e se
     //la mappa rimane invariata
     int ceckcoll = -1;
     Bullet bullet(false, sf::Vector2f(1, 0));
@@ -38,7 +39,7 @@ TEST(Bullet,TestBulletCollisionMap) {//Test per verificare se all'impatto con la
     ASSERT_EQ(ceckcoll,0);
 }
 
-TEST(Bullet,TestBulletCollisionEnemy) {//Test per verificare se all'impatto con un nemico il priettile viene distrutto  se
+TEST(Bullet,TestBulletCheckCollisionEnemy) {//Test per verificare se all'impatto con un nemico il priettile viene distrutto  se
     //insieme al nemico
     Bullet bullet(false, sf::Vector2f(1, 0));
     std::vector<Bullet> vectorBullet;
@@ -69,6 +70,22 @@ TEST(Bullet,TestBulletCollisionEnemy) {//Test per verificare se all'impatto con 
     ASSERT_EQ(checkColl.y, 0);
 }
 
+TEST(Hero,TestCeckCollPowerUp){
+    int checkColl=-1;
+    PowerUp powerUp(6);
+    powerUp.init(120,100,sf::Vector2f(10,10));
+    std::vector<PowerUp> vectorPowerUp;
+    Hero hero;
+    hero.init(100,100,sf::Vector2f(10,10));
+    vectorPowerUp.push_back(powerUp);
+    checkColl=Collision::checkCollision(&vectorPowerUp,&hero);
+    ASSERT_EQ(checkColl,-1);
+    vectorPowerUp[0].init(100,100,sf::Vector2f(10,10));
+    std::cout<<vectorPowerUp[0].x<<" "<<vectorPowerUp[0].y<<std::endl;
+    checkColl=Collision::checkCollision(&vectorPowerUp,&hero);
+    ASSERT_EQ(checkColl,0);
+}
+
 TEST(Hero,TestCollisionPlatform){
     Platform platform(0);
     platform.init(100,110,sf::Vector2f(10,10));
@@ -84,3 +101,43 @@ TEST(Hero,TestCollisionPlatform){
     }
     ASSERT_EQ(hero.hitBottom,platform.hitTop);
 }
+
+TEST(Hero,TestCollisionPowerUp){
+    Hero hero;
+    std::vector<PowerUp> vectorPower;
+    hero.init(100,100,sf::Vector2f(10,10));
+    PowerUp powerUp1(6);
+    powerUp1.init(100,100,sf::Vector2f(10,10));
+    PowerUp powerUp2(5);
+    vectorPower.push_back(powerUp1);
+    vectorPower.push_back(powerUp2);
+    powerUp1.init(200,100,sf::Vector2f(10,10));
+    GameLogic gameLogic;
+    gameLogic.playerCollisionPowerUp=0;
+    gameLogic.powerUpEffect(&hero,&vectorPower);
+    //ASSERT_EQ TODO verificare che il range sia aumentato
+    gameLogic.playerCollisionPowerUp=1;
+    float prevMovementSpeed=hero.getMoveSpeed();
+    gameLogic.powerUpEffect(&hero,&vectorPower);
+    ASSERT_EQ(hero.getMoveSpeed(),prevMovementSpeed*gameLogic.moveSpeedMux);
+}
+
+TEST(Enemy,TestCollisionBullet){
+    Bullet bullet(false,sf::Vector2f(10,10));
+    bullet.init(100, 100, sf::Vector2f(10, 10));
+    Enemy enemy;
+    int initialHP;
+    initialHP=enemy.HP;
+    enemy.init(100,100,sf::Vector2f(10,10));
+    std::vector<Enemy> vectorEnemy;
+    std::vector<Bullet> vectorBullet;
+    vectorEnemy.push_back(enemy);
+    vectorBullet.push_back(bullet);
+    GameLogic gameLogic;
+    gameLogic.enemyCollisionBullet.x=0;
+    gameLogic.enemyCollisionBullet.y=0;
+    gameLogic.enemyDamageCalculator(&vectorEnemy,&vectorBullet);
+    ASSERT_EQ(vectorEnemy[0].HP,initialHP-bullet.damage);
+}
+
+//TODO verificare perdita hp con collisione col nemico

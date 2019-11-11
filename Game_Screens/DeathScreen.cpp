@@ -3,8 +3,8 @@
 //
 
 #include "DeathScreen.h"
-#include "StateMachine/State_Level.h"
-#include "StateMachine/State_Main.h"
+#include "../StateMachine/State_Level.h"
+#include "../StateMachine/State_Main.h"
 #include "iostream"
 
 DeathScreen::DeathScreen() {

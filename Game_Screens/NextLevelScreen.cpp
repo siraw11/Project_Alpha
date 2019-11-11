@@ -4,8 +4,8 @@
 
 #include "NextLevelScreen.h"
 #include "iostream"
-#include "StateMachine/State_Main.h"
-#include "StateMachine/State_Level.h"
+#include "../StateMachine/State_Main.h"
+#include "../StateMachine/State_Level.h"
 
 NextLevelScreen::NextLevelScreen() {
     text1Pos.x = 100;

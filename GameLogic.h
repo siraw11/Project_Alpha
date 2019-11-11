@@ -20,20 +20,26 @@ public:
 
     void Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud);
 
+    void enemyDamageCalculator(std::vector<Enemy>* enemy,std::vector<Bullet>* bullet);
+
+    void powerUpEffect(Hero* hero,std::vector<PowerUp>* powerUp);
     AchievementNotifier achievementNotifier;
 private:
-    int playerCollisionEnemy;
-    sf::Vector2i enemyCollisionBullet;
-    int playerCollisionPowerUp;
-    int bulletCollisionMap;
+
     int enemyKilled = 0;
     int deathcounter = 0;
     int potionUsed = 0;
     int powerUpBullet = 6;
     int powerUpSpeed = 5;
-    float moveSpeedMux = 1.2f;
+
     sf::SoundBuffer deathBuffer;
     sf::Sound deathSound;
+public:
+    float moveSpeedMux = 1.2f;
+    int playerCollisionEnemy;
+    sf::Vector2i enemyCollisionBullet;
+    int playerCollisionPowerUp;
+    int bulletCollisionMap;
 };
 
 

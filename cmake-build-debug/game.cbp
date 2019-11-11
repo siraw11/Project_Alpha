@@ -431,39 +431,51 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/AchievementNotifier.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/AchievementNotifier.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstBlood.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstDeath.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Aggro.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Aggro.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Animation.cpp">
@@ -531,15 +543,19 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/DeathScreen.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/DeathScreen.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/Menu.cpp">
@@ -551,15 +567,19 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/Pause.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Game_Screens/Pause.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Google_tests/TestCollision.cpp">
@@ -589,9 +609,11 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Hud.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Hud.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Idle.cpp">
@@ -603,9 +625,11 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Input.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Input.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Level.cpp">
@@ -617,9 +641,11 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/LevelManager.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/LevelManager.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/Platform.cpp">
@@ -655,51 +681,67 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/StateManager.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/StateManager.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Achivement.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Achivement.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Death.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Death.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Level.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Level.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Main.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Main.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_NextLevel.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_NextLevel.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Pause.cpp">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Pause.h">
+			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/davide/Scrivania/Esame_Programmazione/main.cpp">

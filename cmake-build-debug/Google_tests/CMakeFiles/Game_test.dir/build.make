@@ -99,8 +99,9 @@ Google_tests/Game_test: lib/libgtest_maind.a
 Google_tests/Game_test: libcore.a
 Google_tests/Game_test: /usr/lib/libsfml-graphics.so.2.5.1
 Google_tests/Game_test: /usr/lib/libsfml-window.so.2.5.1
-Google_tests/Game_test: /usr/lib/libsfml-system.so.2.5.1
+Google_tests/Game_test: /usr/lib/libsfml-audio.so.2.5.1
 Google_tests/Game_test: lib/libgtestd.a
+Google_tests/Game_test: /usr/lib/libsfml-system.so.2.5.1
 Google_tests/Game_test: Google_tests/CMakeFiles/Game_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Game_test"
 	cd /home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Game_test.dir/link.txt --verbose=$(VERBOSE)

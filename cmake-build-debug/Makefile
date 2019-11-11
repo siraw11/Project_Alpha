@@ -253,6 +253,7 @@ AchievementNotifier.o: AchievementNotifier.cpp.o
 
 # target to build an object file
 AchievementNotifier.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/AchievementNotifier.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/AchievementNotifier.cpp.o
 .PHONY : AchievementNotifier.cpp.o
 
@@ -262,6 +263,7 @@ AchievementNotifier.i: AchievementNotifier.cpp.i
 
 # target to preprocess a source file
 AchievementNotifier.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/AchievementNotifier.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/AchievementNotifier.cpp.i
 .PHONY : AchievementNotifier.cpp.i
 
@@ -271,6 +273,7 @@ AchievementNotifier.s: AchievementNotifier.cpp.s
 
 # target to generate assembly for a file
 AchievementNotifier.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/AchievementNotifier.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/AchievementNotifier.cpp.s
 .PHONY : AchievementNotifier.cpp.s
 
@@ -280,6 +283,7 @@ Achievements/Achievement.o: Achievements/Achievement.cpp.o
 
 # target to build an object file
 Achievements/Achievement.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/Achievement.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/Achievement.cpp.o
 .PHONY : Achievements/Achievement.cpp.o
 
@@ -289,6 +293,7 @@ Achievements/Achievement.i: Achievements/Achievement.cpp.i
 
 # target to preprocess a source file
 Achievements/Achievement.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/Achievement.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/Achievement.cpp.i
 .PHONY : Achievements/Achievement.cpp.i
 
@@ -298,6 +303,7 @@ Achievements/Achievement.s: Achievements/Achievement.cpp.s
 
 # target to generate assembly for a file
 Achievements/Achievement.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/Achievement.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/Achievement.cpp.s
 .PHONY : Achievements/Achievement.cpp.s
 
@@ -307,6 +313,7 @@ Achievements/FirstBlood.o: Achievements/FirstBlood.cpp.o
 
 # target to build an object file
 Achievements/FirstBlood.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/FirstBlood.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/FirstBlood.cpp.o
 .PHONY : Achievements/FirstBlood.cpp.o
 
@@ -316,6 +323,7 @@ Achievements/FirstBlood.i: Achievements/FirstBlood.cpp.i
 
 # target to preprocess a source file
 Achievements/FirstBlood.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/FirstBlood.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/FirstBlood.cpp.i
 .PHONY : Achievements/FirstBlood.cpp.i
 
@@ -325,6 +333,7 @@ Achievements/FirstBlood.s: Achievements/FirstBlood.cpp.s
 
 # target to generate assembly for a file
 Achievements/FirstBlood.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/FirstBlood.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/FirstBlood.cpp.s
 .PHONY : Achievements/FirstBlood.cpp.s
 
@@ -334,6 +343,7 @@ Achievements/FirstDeath.o: Achievements/FirstDeath.cpp.o
 
 # target to build an object file
 Achievements/FirstDeath.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/FirstDeath.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/FirstDeath.cpp.o
 .PHONY : Achievements/FirstDeath.cpp.o
 
@@ -343,6 +353,7 @@ Achievements/FirstDeath.i: Achievements/FirstDeath.cpp.i
 
 # target to preprocess a source file
 Achievements/FirstDeath.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/FirstDeath.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/FirstDeath.cpp.i
 .PHONY : Achievements/FirstDeath.cpp.i
 
@@ -352,6 +363,7 @@ Achievements/FirstDeath.s: Achievements/FirstDeath.cpp.s
 
 # target to generate assembly for a file
 Achievements/FirstDeath.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/FirstDeath.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/FirstDeath.cpp.s
 .PHONY : Achievements/FirstDeath.cpp.s
 
@@ -361,6 +373,7 @@ Achievements/PotionAchievement.o: Achievements/PotionAchievement.cpp.o
 
 # target to build an object file
 Achievements/PotionAchievement.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/PotionAchievement.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/PotionAchievement.cpp.o
 .PHONY : Achievements/PotionAchievement.cpp.o
 
@@ -370,6 +383,7 @@ Achievements/PotionAchievement.i: Achievements/PotionAchievement.cpp.i
 
 # target to preprocess a source file
 Achievements/PotionAchievement.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/PotionAchievement.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/PotionAchievement.cpp.i
 .PHONY : Achievements/PotionAchievement.cpp.i
 
@@ -379,6 +393,7 @@ Achievements/PotionAchievement.s: Achievements/PotionAchievement.cpp.s
 
 # target to generate assembly for a file
 Achievements/PotionAchievement.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Achievements/PotionAchievement.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Achievements/PotionAchievement.cpp.s
 .PHONY : Achievements/PotionAchievement.cpp.s
 
@@ -388,6 +403,7 @@ Aggro.o: Aggro.cpp.o
 
 # target to build an object file
 Aggro.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Aggro.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Aggro.cpp.o
 .PHONY : Aggro.cpp.o
 
@@ -397,6 +413,7 @@ Aggro.i: Aggro.cpp.i
 
 # target to preprocess a source file
 Aggro.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Aggro.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Aggro.cpp.i
 .PHONY : Aggro.cpp.i
 
@@ -406,6 +423,7 @@ Aggro.s: Aggro.cpp.s
 
 # target to generate assembly for a file
 Aggro.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Aggro.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Aggro.cpp.s
 .PHONY : Aggro.cpp.s
 
@@ -655,6 +673,7 @@ Game_Screens/AchievementScreen.o: Game_Screens/AchievementScreen.cpp.o
 
 # target to build an object file
 Game_Screens/AchievementScreen.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.o
 .PHONY : Game_Screens/AchievementScreen.cpp.o
 
@@ -664,6 +683,7 @@ Game_Screens/AchievementScreen.i: Game_Screens/AchievementScreen.cpp.i
 
 # target to preprocess a source file
 Game_Screens/AchievementScreen.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.i
 .PHONY : Game_Screens/AchievementScreen.cpp.i
 
@@ -673,6 +693,7 @@ Game_Screens/AchievementScreen.s: Game_Screens/AchievementScreen.cpp.s
 
 # target to generate assembly for a file
 Game_Screens/AchievementScreen.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/AchievementScreen.cpp.s
 .PHONY : Game_Screens/AchievementScreen.cpp.s
 
@@ -682,6 +703,7 @@ Game_Screens/DeathScreen.o: Game_Screens/DeathScreen.cpp.o
 
 # target to build an object file
 Game_Screens/DeathScreen.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/DeathScreen.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.o
 .PHONY : Game_Screens/DeathScreen.cpp.o
 
@@ -691,6 +713,7 @@ Game_Screens/DeathScreen.i: Game_Screens/DeathScreen.cpp.i
 
 # target to preprocess a source file
 Game_Screens/DeathScreen.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/DeathScreen.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.i
 .PHONY : Game_Screens/DeathScreen.cpp.i
 
@@ -700,6 +723,7 @@ Game_Screens/DeathScreen.s: Game_Screens/DeathScreen.cpp.s
 
 # target to generate assembly for a file
 Game_Screens/DeathScreen.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/DeathScreen.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/DeathScreen.cpp.s
 .PHONY : Game_Screens/DeathScreen.cpp.s
 
@@ -739,6 +763,7 @@ Game_Screens/NextLevelScreen.o: Game_Screens/NextLevelScreen.cpp.o
 
 # target to build an object file
 Game_Screens/NextLevelScreen.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/NextLevelScreen.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.o
 .PHONY : Game_Screens/NextLevelScreen.cpp.o
 
@@ -748,6 +773,7 @@ Game_Screens/NextLevelScreen.i: Game_Screens/NextLevelScreen.cpp.i
 
 # target to preprocess a source file
 Game_Screens/NextLevelScreen.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/NextLevelScreen.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.i
 .PHONY : Game_Screens/NextLevelScreen.cpp.i
 
@@ -757,6 +783,7 @@ Game_Screens/NextLevelScreen.s: Game_Screens/NextLevelScreen.cpp.s
 
 # target to generate assembly for a file
 Game_Screens/NextLevelScreen.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/NextLevelScreen.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/NextLevelScreen.cpp.s
 .PHONY : Game_Screens/NextLevelScreen.cpp.s
 
@@ -766,6 +793,7 @@ Game_Screens/Pause.o: Game_Screens/Pause.cpp.o
 
 # target to build an object file
 Game_Screens/Pause.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/Pause.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/Pause.cpp.o
 .PHONY : Game_Screens/Pause.cpp.o
 
@@ -775,6 +803,7 @@ Game_Screens/Pause.i: Game_Screens/Pause.cpp.i
 
 # target to preprocess a source file
 Game_Screens/Pause.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/Pause.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/Pause.cpp.i
 .PHONY : Game_Screens/Pause.cpp.i
 
@@ -784,6 +813,7 @@ Game_Screens/Pause.s: Game_Screens/Pause.cpp.s
 
 # target to generate assembly for a file
 Game_Screens/Pause.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game_Screens/Pause.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Game_Screens/Pause.cpp.s
 .PHONY : Game_Screens/Pause.cpp.s
 
@@ -823,6 +853,7 @@ Hud.o: Hud.cpp.o
 
 # target to build an object file
 Hud.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hud.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Hud.cpp.o
 .PHONY : Hud.cpp.o
 
@@ -832,6 +863,7 @@ Hud.i: Hud.cpp.i
 
 # target to preprocess a source file
 Hud.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hud.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Hud.cpp.i
 .PHONY : Hud.cpp.i
 
@@ -841,6 +873,7 @@ Hud.s: Hud.cpp.s
 
 # target to generate assembly for a file
 Hud.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hud.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Hud.cpp.s
 .PHONY : Hud.cpp.s
 
@@ -880,6 +913,7 @@ Input.o: Input.cpp.o
 
 # target to build an object file
 Input.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Input.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Input.cpp.o
 .PHONY : Input.cpp.o
 
@@ -889,6 +923,7 @@ Input.i: Input.cpp.i
 
 # target to preprocess a source file
 Input.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Input.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Input.cpp.i
 .PHONY : Input.cpp.i
 
@@ -898,6 +933,7 @@ Input.s: Input.cpp.s
 
 # target to generate assembly for a file
 Input.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Input.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Input.cpp.s
 .PHONY : Input.cpp.s
 
@@ -937,6 +973,7 @@ LevelManager.o: LevelManager.cpp.o
 
 # target to build an object file
 LevelManager.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/LevelManager.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/LevelManager.cpp.o
 .PHONY : LevelManager.cpp.o
 
@@ -946,6 +983,7 @@ LevelManager.i: LevelManager.cpp.i
 
 # target to preprocess a source file
 LevelManager.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/LevelManager.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/LevelManager.cpp.i
 .PHONY : LevelManager.cpp.i
 
@@ -955,6 +993,7 @@ LevelManager.s: LevelManager.cpp.s
 
 # target to generate assembly for a file
 LevelManager.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/LevelManager.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/LevelManager.cpp.s
 .PHONY : LevelManager.cpp.s
 
@@ -1084,6 +1123,7 @@ StateMachine/State.o: StateMachine/State.cpp.o
 
 # target to build an object file
 StateMachine/State.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State.cpp.o
 .PHONY : StateMachine/State.cpp.o
 
@@ -1093,6 +1133,7 @@ StateMachine/State.i: StateMachine/State.cpp.i
 
 # target to preprocess a source file
 StateMachine/State.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State.cpp.i
 .PHONY : StateMachine/State.cpp.i
 
@@ -1102,6 +1143,7 @@ StateMachine/State.s: StateMachine/State.cpp.s
 
 # target to generate assembly for a file
 StateMachine/State.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State.cpp.s
 .PHONY : StateMachine/State.cpp.s
 
@@ -1111,6 +1153,7 @@ StateMachine/StateManager.o: StateMachine/StateManager.cpp.o
 
 # target to build an object file
 StateMachine/StateManager.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/StateManager.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/StateManager.cpp.o
 .PHONY : StateMachine/StateManager.cpp.o
 
@@ -1120,6 +1163,7 @@ StateMachine/StateManager.i: StateMachine/StateManager.cpp.i
 
 # target to preprocess a source file
 StateMachine/StateManager.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/StateManager.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/StateManager.cpp.i
 .PHONY : StateMachine/StateManager.cpp.i
 
@@ -1129,6 +1173,7 @@ StateMachine/StateManager.s: StateMachine/StateManager.cpp.s
 
 # target to generate assembly for a file
 StateMachine/StateManager.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/StateManager.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/StateManager.cpp.s
 .PHONY : StateMachine/StateManager.cpp.s
 
@@ -1138,6 +1183,7 @@ StateMachine/State_Achivement.o: StateMachine/State_Achivement.cpp.o
 
 # target to build an object file
 StateMachine/State_Achivement.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o
 .PHONY : StateMachine/State_Achivement.cpp.o
 
@@ -1147,6 +1193,7 @@ StateMachine/State_Achivement.i: StateMachine/State_Achivement.cpp.i
 
 # target to preprocess a source file
 StateMachine/State_Achivement.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.i
 .PHONY : StateMachine/State_Achivement.cpp.i
 
@@ -1156,6 +1203,7 @@ StateMachine/State_Achivement.s: StateMachine/State_Achivement.cpp.s
 
 # target to generate assembly for a file
 StateMachine/State_Achivement.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.s
 .PHONY : StateMachine/State_Achivement.cpp.s
 
@@ -1165,6 +1213,7 @@ StateMachine/State_Death.o: StateMachine/State_Death.cpp.o
 
 # target to build an object file
 StateMachine/State_Death.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Death.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Death.cpp.o
 .PHONY : StateMachine/State_Death.cpp.o
 
@@ -1174,6 +1223,7 @@ StateMachine/State_Death.i: StateMachine/State_Death.cpp.i
 
 # target to preprocess a source file
 StateMachine/State_Death.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Death.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Death.cpp.i
 .PHONY : StateMachine/State_Death.cpp.i
 
@@ -1183,6 +1233,7 @@ StateMachine/State_Death.s: StateMachine/State_Death.cpp.s
 
 # target to generate assembly for a file
 StateMachine/State_Death.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Death.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Death.cpp.s
 .PHONY : StateMachine/State_Death.cpp.s
 
@@ -1192,6 +1243,7 @@ StateMachine/State_Level.o: StateMachine/State_Level.cpp.o
 
 # target to build an object file
 StateMachine/State_Level.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Level.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Level.cpp.o
 .PHONY : StateMachine/State_Level.cpp.o
 
@@ -1201,6 +1253,7 @@ StateMachine/State_Level.i: StateMachine/State_Level.cpp.i
 
 # target to preprocess a source file
 StateMachine/State_Level.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Level.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Level.cpp.i
 .PHONY : StateMachine/State_Level.cpp.i
 
@@ -1210,6 +1263,7 @@ StateMachine/State_Level.s: StateMachine/State_Level.cpp.s
 
 # target to generate assembly for a file
 StateMachine/State_Level.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Level.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Level.cpp.s
 .PHONY : StateMachine/State_Level.cpp.s
 
@@ -1219,6 +1273,7 @@ StateMachine/State_Main.o: StateMachine/State_Main.cpp.o
 
 # target to build an object file
 StateMachine/State_Main.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Main.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Main.cpp.o
 .PHONY : StateMachine/State_Main.cpp.o
 
@@ -1228,6 +1283,7 @@ StateMachine/State_Main.i: StateMachine/State_Main.cpp.i
 
 # target to preprocess a source file
 StateMachine/State_Main.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Main.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Main.cpp.i
 .PHONY : StateMachine/State_Main.cpp.i
 
@@ -1237,6 +1293,7 @@ StateMachine/State_Main.s: StateMachine/State_Main.cpp.s
 
 # target to generate assembly for a file
 StateMachine/State_Main.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Main.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Main.cpp.s
 .PHONY : StateMachine/State_Main.cpp.s
 
@@ -1246,6 +1303,7 @@ StateMachine/State_NextLevel.o: StateMachine/State_NextLevel.cpp.o
 
 # target to build an object file
 StateMachine/State_NextLevel.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_NextLevel.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o
 .PHONY : StateMachine/State_NextLevel.cpp.o
 
@@ -1255,6 +1313,7 @@ StateMachine/State_NextLevel.i: StateMachine/State_NextLevel.cpp.i
 
 # target to preprocess a source file
 StateMachine/State_NextLevel.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_NextLevel.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.i
 .PHONY : StateMachine/State_NextLevel.cpp.i
 
@@ -1264,6 +1323,7 @@ StateMachine/State_NextLevel.s: StateMachine/State_NextLevel.cpp.s
 
 # target to generate assembly for a file
 StateMachine/State_NextLevel.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_NextLevel.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.s
 .PHONY : StateMachine/State_NextLevel.cpp.s
 
@@ -1273,6 +1333,7 @@ StateMachine/State_Pause.o: StateMachine/State_Pause.cpp.o
 
 # target to build an object file
 StateMachine/State_Pause.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Pause.cpp.o
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o
 .PHONY : StateMachine/State_Pause.cpp.o
 
@@ -1282,6 +1343,7 @@ StateMachine/State_Pause.i: StateMachine/State_Pause.cpp.i
 
 # target to preprocess a source file
 StateMachine/State_Pause.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Pause.cpp.i
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Pause.cpp.i
 .PHONY : StateMachine/State_Pause.cpp.i
 
@@ -1291,6 +1353,7 @@ StateMachine/State_Pause.s: StateMachine/State_Pause.cpp.s
 
 # target to generate assembly for a file
 StateMachine/State_Pause.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Pause.cpp.s
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Pause.cpp.s
 .PHONY : StateMachine/State_Pause.cpp.s
 
