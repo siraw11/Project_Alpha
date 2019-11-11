@@ -9,6 +9,7 @@ MenuOption::MenuOption(const std::string &_text) {
     option.setColor(sf::Color::White);
     option.setCharacterSize(40);
     option.setFont(font);
+
 }
 
 MenuOption::~MenuOption() {

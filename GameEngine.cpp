@@ -20,6 +20,7 @@ float cartX = 0.8;
 float cartY = 0.4;
 sf::Texture wheelTexture;
 sf::Texture cartTexture;
+sf::Texture InterfaceTexture;
 float flipAngle = 0;
 int countFlips = 0;
 
@@ -134,6 +135,8 @@ void GameEngine::run() {
 
 
         drawBike();//disegno la moto
+
+        drawInterface();
 
         flipAngle = abs(degToGrad(bike.cart->GetAngle())) - (360.f * (float) countFlips);
         if (flipAngle > 350 && flipAngle < 370) {
@@ -313,6 +316,11 @@ void GameEngine::initBike() {
         std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
 
     //------------------------
+
+    bool InterfaceTextureFound = InterfaceTexture.loadFromFile("../textures/coin.png");
+    if (!InterfaceTextureFound)
+        std::cout << "Impossibile caricare texture Contatore Monete" << std::endl;
+
 }
 
 void GameEngine::drawBike() {
@@ -401,6 +409,14 @@ void GameEngine::drawItem(Item *item) {
     Game::gameData->window.draw(rect);
 }
 
+void GameEngine::drawInterface() {
+
+    sf::Sprite sprite(InitTexture);
+    sprite.setPosition((float)(view.getCenter().x)-((view.getSize().x)/2),(float)(view.getCenter().y)-((view.getSize().y)/2));
+    sprite.setScale(0.20,0.20);
+
+    window->draw(sprite);
+}
 
 //Conversione Radianti -> Gradi
 float GameEngine::degToGrad(float deg) {

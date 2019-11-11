@@ -80,6 +80,8 @@ private:
 
     void initBike();
 
+    void drawInterface();
+
     static bool checkCollision(float r1x, float r1y, float r1w, float r2x, float r2y, float r2w, float r2h);
 };
 
