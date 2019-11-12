@@ -11,9 +11,13 @@
 
 class Match {
 public:
-    Match(Map *map = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0);
+    Match(Map *map = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0, Position lastCheckpoint = {});
 
     Map *map;
+
+    const Position &getLastCheckpoint() const;
+
+    void setLastCheckpoint(const Position &lastCheckpoint);
 
     virtual ~Match();
 
@@ -21,6 +25,8 @@ public:
     int getLifes() const;
 
     void setLifes(int lifes);
+
+    void removeLife();
 
     float getTime() const;
 
@@ -48,12 +54,14 @@ public:
 
     void setMap(Map *map);
 
+
 private:
     int lifes;
     float time;
     int money;
     Player* player;
     Bike *bike;
+    Position lastCheckpoint;
 
 };
 

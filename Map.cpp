@@ -19,27 +19,28 @@ Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position
 void Map::loadLevel1() {
 
     this->mapPoints = {
-            {-1, 10},//back limit
-            {0,  0.},
-            {3,  0.},
-            {8,  1},
-            {11, 0},
-            {15, -1},
-            {20, 0},
-            {25, 0},
-            {30, 0.5},
-            {35, -1},
-            {40, 0},
-            {43, 0},
-            {45, 1},
-            {55, 1},
-            {55, 10}//front limit
+            {-1,  10},//back limit
+            {0,   0.},
+            {3,   0.},
+            {8,   1},
+            {11,  0},
+            {15,  -1},
+            {20,  0},
+            {25,  0},
+            {30,  0.5},
+            {35,  -1},
+            {40,  0},
+            {43,  0},
+            {45,  1},
+            {100, 1},
+            {100, 10}//front limit
     };
 
     mapItems.push_back(new Coin(5, 0.8, .7, .7, 50));
     mapItems.push_back(new Coin(7, 1, .7, .7, 30));
     mapItems.push_back(new SpeedBonus(10, 1, 10, .7, .7, .7));
-    mapItems.push_back(new Checkpoint(52, 1, 1, 5, true));
+    mapItems.push_back(new Checkpoint(25, 0, 1, 5));
+    mapItems.push_back(new Checkpoint(95, 1, 1, 5, true));
 }
 
 void Map::loadLevel2() {

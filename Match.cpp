@@ -5,9 +5,20 @@
 #include "Match.h"
 #include "Bike.h"
 
-Match::Match(Map *_map, Bike *_bike, int _lifes, float _time, int _money) : map(_map), bike(_bike), lifes(_lifes),
-                                                                            time(_time), money(_money) {}
+Match::Match(Map *_map, Bike *_bike, int _lifes, float _time, int _money, Position _lastCheckpoint) : map(_map),
+                                                                                                      bike(_bike),
+                                                                                                      lifes(_lifes),
+                                                                                                      time(_time),
+                                                                                                      money(_money),
+                                                                                                      lastCheckpoint(
+                                                                                                              _lastCheckpoint) {}
 
+
+void Match::removeLife() {
+    if (Match::lifes > 0) {
+        Match::lifes -= 1;
+    }
+}
 
 int Match::getLifes() const {
     return lifes;
@@ -73,4 +84,12 @@ void Match::setB(Bike *b) {
 
 Match::~Match() {
 
+}
+
+const Position &Match::getLastCheckpoint() const {
+    return lastCheckpoint;
+}
+
+void Match::setLastCheckpoint(const Position &lastCheckpoint) {
+    Match::lastCheckpoint = lastCheckpoint;
 }
