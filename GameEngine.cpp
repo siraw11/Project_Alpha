@@ -40,8 +40,6 @@ GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
     this->window->clear(sf::Color(0, 0, 0));
 
 
-
-
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
@@ -410,12 +408,24 @@ void GameEngine::drawItem(Item *item) {
 }
 
 void GameEngine::drawInterface() {
+    sf::Font font;
+    if (!font.loadFromFile("../fonts/Arial.ttf")) {}
+    float interfaceX = (view.getCenter().x) - ((view.getSize().x) / 2);
+    float interfaceY = (view.getCenter().y) - ((view.getSize().y) / 2);
 
-    sf::Sprite sprite(interfaceCoinTexture);
-    sprite.setPosition((float)(view.getCenter().x)-((view.getSize().x)/2),(float)(view.getCenter().y)-((view.getSize().y)/2));
-    sprite.setScale(0.20,0.20);
+    sf::Sprite spriteCoin(interfaceCoinTexture);
+    spriteCoin.setPosition(interfaceX, interfaceY);
+    spriteCoin.setScale(0.20, 0.20);
 
-    window->draw(sprite);
+    sf::Text textCoin;
+    textCoin.setPosition(interfaceX + 150, interfaceY);
+    textCoin.setFont(font);
+    textCoin.setCharacterSize(80);
+    textCoin.setColor(sf::Color::Black);
+    textCoin.setString(std::to_string(Game::gameData->match->getMoney()));
+
+    window->draw(spriteCoin);
+    window->draw(textCoin);
 }
 
 //Conversione Radianti -> Gradi
