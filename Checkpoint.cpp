@@ -18,6 +18,7 @@ Checkpoint::Checkpoint(double _posX, double _posY, double _width, double _height
 void Checkpoint::doSpecial() {
     if (isEnd) {
         Game::gameData->machine.push_state(StateRef(new GameWinState()));
+        Game::gameData->match->map->setIsCompleted(true);
     } else {
         //TODO:da implementare salvataggio ultima posizione
         std::cout << "checkpoint Save";
