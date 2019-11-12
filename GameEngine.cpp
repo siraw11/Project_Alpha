@@ -4,6 +4,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <GameStates/MenuPauseState.h>
+#include <GameStates/GameLostState.h>
 #include "Box2D/Box2D.h"
 
 #include "GameEngine.h"
@@ -51,6 +52,14 @@ GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
     initBike();//inizializzo la fisica del gioco
 }
 
+void GameEngine::respawn() {
+    float checkpointX = Game::gameData->match->getLastCheckpoint().posX;
+    float checkpointY = Game::gameData->match->getLastCheckpoint().posY + LINE - 1;
+    this->bike.wheelL->SetTransform(b2Vec2(checkpointX, checkpointY), 0);
+    this->bike.wheelR->SetTransform(b2Vec2(checkpointX + 1, checkpointY), 0);
+    this->bike.cart->SetTransform(b2Vec2(checkpointX, checkpointY + 1), 0);
+    this->run();
+}
 
 void GameEngine::run() {
     float offsetX = 3.f;
@@ -145,8 +154,11 @@ void GameEngine::run() {
 
         if (flipAngle > 160 && flipAngle < 220 && bike.cart->GetLinearVelocity().x <= 0 &&
             bike.cart->GetLinearVelocity().y <= 0) {
-            std::cout << " Morto!" << std::endl;
-            //this->setGameState(GameState::MatchDead);
+            if (Game::gameData->match->getLifes() > 0) {
+                this->setPause(true);
+                Game::gameData->machine.push_state(StateRef(new GameLostState()));
+            } else {
+            }
         }
 
         window->display();
