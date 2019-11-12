@@ -17,7 +17,7 @@ Enemy::Enemy() : aggro(new Idle()){
     moveSpeed = 0.2f;
 }
 
-void Enemy::aggroUpdate(Hero *player, sf::Clock *clock, std::vector<Platform> *platform){
+void Enemy::aggroUpdate(Hero *player, sf::Time time, std::vector<Platform> *platform){
 
     if(this->velocity.x == 0 && this->velocity.y == 0 && this->rectShape.getPosition().x == spawnX && this->rectShape.getPosition().y == spawnY)
     {
@@ -32,9 +32,9 @@ void Enemy::aggroUpdate(Hero *player, sf::Clock *clock, std::vector<Platform> *p
         aggro = (new Reset());
     }
 
-    if(this->rectShape.getGlobalBounds().intersects(player->rectShape.getGlobalBounds()) && clock->getElapsedTime() - lastAttackTime >= attackReload){
+    if(this->rectShape.getGlobalBounds().intersects(player->rectShape.getGlobalBounds()) && time - lastAttackTime >= attackReload){
         aggro = (new Attack());
-        lastAttackTime = clock->getElapsedTime();
+        lastAttackTime = time;
     }
 
     aggro->behaviour(this, player, platform);

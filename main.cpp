@@ -11,10 +11,13 @@ int main() {
     Input KeyBoardInput;
     StateManager* stateManager=new StateManager;
     bool keypressed = false;
+    sf::Image icon;
+    icon.loadFromFile("textures/gameIcon.png");
 
     //---------Loop di gioco------------//
 
     sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Game", sf::Style::Fullscreen);
+    window.setIcon(icon.getSize().x,icon.getSize().y,icon.getPixelsPtr());
     while (window.isOpen()) {
         while (window.pollEvent(event)) {
 

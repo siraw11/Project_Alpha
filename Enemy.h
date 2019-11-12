@@ -22,7 +22,7 @@ public:
     sf::Time lastAttackTime = sf::seconds(0);
     sf::Time attackReload = sf::seconds(2);
 public:
-    void aggroUpdate(Hero* player, sf::Clock* clock, std::vector<Platform> *platform);
+    void aggroUpdate(Hero* player, sf::Time time, std::vector<Platform> *platform);
 };
 
 

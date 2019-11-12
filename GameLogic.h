@@ -32,8 +32,10 @@ private:
     int powerUpBullet = 6;
     int powerUpSpeed = 5;
 
-    sf::SoundBuffer deathBuffer;
-    sf::Sound deathSound;
+    sf::SoundBuffer heroDeathBuffer;
+    sf::SoundBuffer enemyDeathBuffer;
+    sf::Sound heroDeathSound;
+    sf::Sound enemyDeathSound;
 public:
     float moveSpeedMux = 1.2f;
     int playerCollisionEnemy;

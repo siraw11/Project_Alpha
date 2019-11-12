@@ -12,8 +12,10 @@
 #include "StateMachine/State_Pause.h"
 
 GameLogic::GameLogic() {
-    deathBuffer.loadFromFile("Music/death-sound.wav");
-    deathSound.setBuffer(deathBuffer);
+    heroDeathBuffer.loadFromFile("Music/heroDeath.wav");
+    enemyDeathBuffer.loadFromFile("Music/enemyDeath.wav");
+    heroDeathSound.setBuffer(heroDeathBuffer);
+    enemyDeathSound.setBuffer(enemyDeathBuffer);
 }
 
 void GameLogic::Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud) {
@@ -57,10 +59,11 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
         level->setTextures();
     }
     for(int i = 0; i < level->vector_of_enemy.size();i++){
-        level->vector_of_enemy[i].aggroUpdate(&(level->player), &(level->clock), &(level->vector_of_platform));
+        level->vector_of_enemy[i].aggroUpdate(&level->player, level->clock.getElapsedTime(), &level->vector_of_platform);
     }
     if(level->player.y >= level->vector_of_platform[level->vector_of_platform.size()-1].y) level->player.HP = 0;
     if (level->player.HP <= 0) {
+        heroDeathSound.play();
         state->setState(new State_Death(state));
         deathcounter++;
     }
@@ -78,14 +81,12 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
 
 void GameLogic::enemyDamageCalculator(std::vector<Enemy> *enemy, std::vector<Bullet> *bullet) {
     bullet->erase(bullet->begin() + enemyCollisionBullet.x);
-    (*enemy)[enemyCollisionBullet.y].HP =
-            (*enemy)[enemyCollisionBullet.y].HP -
-    (*bullet)[enemyCollisionBullet.x].damage;
+    (*enemy)[enemyCollisionBullet.y].HP = (*enemy)[enemyCollisionBullet.y].HP - (*bullet)[enemyCollisionBullet.x].damage;
 
     if ((*enemy)[enemyCollisionBullet.y].HP <= 0) {
         enemy->erase(enemy->begin() + enemyCollisionBullet.y);
         enemyKilled++;
-        deathSound.play();
+        enemyDeathSound.play();
     }
 }
 

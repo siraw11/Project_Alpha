@@ -102,24 +102,31 @@ TEST(Hero,TestCollisionPlatform){
     ASSERT_EQ(hero.hitBottom,platform.hitTop);
 }
 
-TEST(Hero,TestCollisionPowerUp){
+TEST(Hero,TestCollisionPowerUpSpeed){
     Hero hero;
     std::vector<PowerUp> vectorPower;
     hero.init(100,100,sf::Vector2f(10,10));
-    PowerUp powerUp1(6);
-    powerUp1.init(100,100,sf::Vector2f(10,10));
-    PowerUp powerUp2(5);
-    vectorPower.push_back(powerUp1);
-    vectorPower.push_back(powerUp2);
-    powerUp1.init(200,100,sf::Vector2f(10,10));
+    float prevMovementSpeed = hero.getMoveSpeed();
+    PowerUp powerUp(5);
+    powerUp.init(100,100,sf::Vector2f(10,10));
+    vectorPower.push_back(powerUp);
     GameLogic gameLogic;
     gameLogic.playerCollisionPowerUp=0;
     gameLogic.powerUpEffect(&hero,&vectorPower);
-    //ASSERT_EQ TODO verificare che il range sia aumentato
-    gameLogic.playerCollisionPowerUp=1;
-    float prevMovementSpeed=hero.getMoveSpeed();
-    gameLogic.powerUpEffect(&hero,&vectorPower);
     ASSERT_EQ(hero.getMoveSpeed(),prevMovementSpeed*gameLogic.moveSpeedMux);
+}
+
+TEST(Hero,TestCollisionPowerUpBullet){
+    Hero hero;
+    std::vector<PowerUp> vectorPower;
+    hero.init(100,100,sf::Vector2f(10,10));
+    PowerUp powerUp(6);
+    powerUp.init(100,100,sf::Vector2f(10,10));
+    vectorPower.push_back(powerUp);
+    GameLogic gameLogic;
+    gameLogic.playerCollisionPowerUp=0;
+    gameLogic.powerUpEffect(&hero,&vectorPower);
+    ASSERT_EQ(true,hero.getIsPowerBullet());
 }
 
 TEST(Enemy,TestCollisionBullet){
@@ -139,5 +146,3 @@ TEST(Enemy,TestCollisionBullet){
     gameLogic.enemyDamageCalculator(&vectorEnemy,&vectorBullet);
     ASSERT_EQ(vectorEnemy[0].HP,initialHP-bullet.damage);
 }
-
-//TODO verificare perdita hp con collisione col nemico
