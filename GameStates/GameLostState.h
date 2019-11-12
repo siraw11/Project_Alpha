@@ -7,14 +7,24 @@
 
 
 #include "State.h"
+#include "Menu.h"
 
 class GameLostState : public State {
+public:
+    GameLostState();
+
+private:
     void update() override;
 
     void draw() override;
 
     void handleInput(sf::Event) override;
 
+    Menu *menu{};
+
+    bool canRetry = true;
+
+    std::vector<MenuOption *> loadMenu();
 
 };
 
