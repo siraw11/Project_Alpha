@@ -20,7 +20,6 @@ void Checkpoint::doSpecial() {
         Game::gameData->machine.push_state(StateRef(new GameWinState()));
         Game::gameData->match->map->setIsCompleted(true);
     } else {
-        //TODO:da implementare salvataggio ultima posizione
-        std::cout << "checkpoint Save";
+        Game::gameData->match->setLastCheckpoint({(float) this->getPosX(), (float) this->getPosY()});
     }
 }
