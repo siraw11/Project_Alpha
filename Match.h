@@ -30,6 +30,8 @@ public:
 
     void setMoney(int money);
 
+    void addMoney(int money);
+
     Player *getPlayer() const;
 
     void setPlayer(Player *player);

@@ -33,6 +33,12 @@ void Match::setMoney(int money) {
     Match::money = money;
 }
 
+
+void Match::addMoney(int _money) {
+    Match::money += _money;
+}
+
+
 Player *Match::getPlayer() const {
     return player;
 }
