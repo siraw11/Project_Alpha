@@ -71,7 +71,7 @@ TEST(Bullet,TestBulletCheckCollisionEnemy) {//Test per verificare se all'impatto
 }
 
 TEST(Hero,TestCeckCollPowerUp){
-    int checkColl=-1;
+    int checkColl;
     PowerUp powerUp(6);
     powerUp.init(120,100,sf::Vector2f(10,10));
     std::vector<PowerUp> vectorPowerUp;
@@ -81,7 +81,6 @@ TEST(Hero,TestCeckCollPowerUp){
     checkColl=Collision::checkCollision(&vectorPowerUp,&hero);
     ASSERT_EQ(checkColl,-1);
     vectorPowerUp[0].init(100,100,sf::Vector2f(10,10));
-    std::cout<<vectorPowerUp[0].x<<" "<<vectorPowerUp[0].y<<std::endl;
     checkColl=Collision::checkCollision(&vectorPowerUp,&hero);
     ASSERT_EQ(checkColl,0);
 }
