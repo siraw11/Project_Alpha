@@ -12,10 +12,11 @@ Game::Game() {
     gameData->window.create(sf::VideoMode(sf::VideoMode::getDesktopMode()), "Motocross 2D",
                             sf::Style::Close | sf::Style::Titlebar);
     gameData->window.setVerticalSyncEnabled(true);
-    gameData->machine.push_state(StateRef(new MenuHomeState()));
 
     Game::gameData->match = std::make_shared<Match>();
     Game::gameData->match->map = new Map();
+    gameData->machine.push_state(StateRef(new MenuHomeState()));
+
 
     Game::Run();
 }
