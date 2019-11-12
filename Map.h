@@ -17,8 +17,6 @@
 class Map:Observer {
 
 public:
-
-
     Map(bool isCompleted = 0, bool isUnlocked = 0, double record = 0, std::list<Position> mapPoints = {},
         Player *p = nullptr, std::list<Item *> mapItems = {});
 
@@ -50,6 +48,9 @@ public:
 
     bool removeMapItem(Item *item);
 
+    void loadLevel1();
+
+    void loadLevel2();
 
 
 private:

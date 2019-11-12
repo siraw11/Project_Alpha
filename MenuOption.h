@@ -15,11 +15,7 @@ public:
 
     virtual ~MenuOption();
 
-    MenuOption(std::string text);
-
-private:
-    sf::Font font;
-public:
+    MenuOption(const std::string &text);
 
     const sf::Text &getText() const;
 
@@ -30,6 +26,9 @@ public:
     static std::vector<MenuOption *> loadMainMenuOptions();
 
     static std::vector<MenuOption *> loadPauseMenuOptions();
+
+private:
+    sf::Font font;
 };
 
 

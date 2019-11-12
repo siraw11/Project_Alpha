@@ -13,11 +13,12 @@
 
 class Bike {
 public:
-    b2Body* wheelL;
-    b2Body* wheelR;
-    b2Body* cart;
+    b2Body *wheelL;
+    b2Body *wheelR;
+    b2Body *cart;
 
-    Bike(std::string nam = "n/d", std::string color = "red", float speed = 0., int usability = 0, int price = 0, bool isUnlocked = false,b2Body* wheelL = nullptr,b2Body* wheelR = nullptr,b2Body* cart = nullptr);
+    Bike(std::string nam = "n/d", std::string color = "red", float speed = 0., int usability = 0, int price = 0,
+         bool isUnlocked = false, b2Body *wheelL = nullptr, b2Body *wheelR = nullptr, b2Body *cart = nullptr);
 
     virtual ~Bike();
 
@@ -44,7 +45,6 @@ public:
     bool getIsUnlocked() const;
 
     void setIsUnlocked(bool isUnlocked);
-
 
 
 private:

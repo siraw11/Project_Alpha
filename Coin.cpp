@@ -7,6 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
+#include "Game.h"
 
 
 Coin::Coin(double _posX, double _posY, double _width, double _height, int _value, std::string _texture) : Item(_posX,
@@ -25,5 +26,7 @@ void Coin::setValue(int value) {
 }
 
 void Coin::doSpecial(){
-    std::cout << "Special! Addedd:" << value << " coins" << std::endl;
+    Game::gameData->match->addMoney(value);
+    std::cout << "Special! Addedd:" << value << "\ttotal:" << Game::gameData->match->getMoney() << " coins"
+              << std::endl;
 }

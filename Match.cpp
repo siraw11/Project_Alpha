@@ -4,18 +4,20 @@
 
 #include "Match.h"
 #include "Bike.h"
-#include "Player.h"
 
-Match::Match(Position _p, int _lifes, float _time, int _money, Player *_player, Bike *_b) : p(_p), lifes(_lifes),
-                                                                                            time(_time), money(_money),
-                                                                                            player(_player), b(_b) {}
+Match::Match(Map *_map, Bike *_bike, int _lifes, float _time, int _money, Position _lastCheckpoint) : map(_map),
+                                                                                                      bike(_bike),
+                                                                                                      lifes(_lifes),
+                                                                                                      time(_time),
+                                                                                                      money(_money),
+                                                                                                      lastCheckpoint(
+                                                                                                              _lastCheckpoint) {}
 
-const Position &Match::getP() const {
-    return p;
-}
 
-void Match::setP(const Position &p) {
-    Match::p = p;
+void Match::removeLife() {
+    if (Match::lifes > 0) {
+        Match::lifes -= 1;
+    }
 }
 
 int Match::getLifes() const {
@@ -42,6 +44,12 @@ void Match::setMoney(int money) {
     Match::money = money;
 }
 
+
+void Match::addMoney(int _money) {
+    Match::money += _money;
+}
+
+
 Player *Match::getPlayer() const {
     return player;
 }
@@ -50,14 +58,38 @@ void Match::setPlayer(Player *player) {
     Match::player = player;
 }
 
+Bike *Match::getBike() const {
+    return bike;
+}
+
+void Match::setBike(Bike *bike) {
+    Match::bike = bike;
+}
+
+Map *Match::getMap() const {
+    return map;
+}
+
+void Match::setMap(Map *map) {
+    Match::map = map;
+}
+
 Bike *Match::getB() const {
-    return b;
+    return bike;
 }
 
 void Match::setB(Bike *b) {
-    Match::b = b;
+    Match::bike = b;
 }
 
 Match::~Match() {
 
+}
+
+const Position &Match::getLastCheckpoint() const {
+    return lastCheckpoint;
+}
+
+void Match::setLastCheckpoint(const Position &lastCheckpoint) {
+    Match::lastCheckpoint = lastCheckpoint;
 }

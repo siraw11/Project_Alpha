@@ -6,23 +6,27 @@
 #define MOTOCROSS2D_MATCH_H
 #include "Bike.h"
 #include "Player.h"
-
-
+#include "Map.h"
 
 
 class Match {
 public:
-    Match(Position p, int lifes, float time, int money, Player* player, Bike* b);
+    Match(Map *map = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0, Position lastCheckpoint = {});
+
+    Map *map;
+
+    const Position &getLastCheckpoint() const;
+
+    void setLastCheckpoint(const Position &lastCheckpoint);
 
     virtual ~Match();
 
-    const Position &getP() const;
-
-    void setP(const Position &p);
 
     int getLifes() const;
 
     void setLifes(int lifes);
+
+    void removeLife();
 
     float getTime() const;
 
@@ -32,6 +36,8 @@ public:
 
     void setMoney(int money);
 
+    void addMoney(int money);
+
     Player *getPlayer() const;
 
     void setPlayer(Player *player);
@@ -40,13 +46,22 @@ public:
 
     void setB(Bike *b);
 
+    Bike *getBike() const;
+
+    void setBike(Bike *bike);
+
+    Map *getMap() const;
+
+    void setMap(Map *map);
+
+
 private:
-    Position p;
     int lifes;
     float time;
     int money;
     Player* player;
-    Bike* b;
+    Bike *bike;
+    Position lastCheckpoint;
 
 };
 
