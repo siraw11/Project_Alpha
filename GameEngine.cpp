@@ -20,7 +20,7 @@ float cartX = 0.8;
 float cartY = 0.4;
 sf::Texture wheelTexture;
 sf::Texture cartTexture;
-sf::Texture InterfaceTexture;
+sf::Texture interfaceCoinTexture;
 float flipAngle = 0;
 int countFlips = 0;
 
@@ -317,8 +317,8 @@ void GameEngine::initBike() {
 
     //------------------------
 
-    bool InterfaceTextureFound = InterfaceTexture.loadFromFile("../textures/coin.png");
-    if (!InterfaceTextureFound)
+    bool interfaceCoinTextureFound = interfaceCoinTexture.loadFromFile("../textures/coin.png");
+    if (!interfaceCoinTextureFound)
         std::cout << "Impossibile caricare texture Contatore Monete" << std::endl;
 
 }
@@ -411,7 +411,7 @@ void GameEngine::drawItem(Item *item) {
 
 void GameEngine::drawInterface() {
 
-    sf::Sprite sprite(InitTexture);
+    sf::Sprite sprite(interfaceCoinTexture);
     sprite.setPosition((float)(view.getCenter().x)-((view.getSize().x)/2),(float)(view.getCenter().y)-((view.getSize().y)/2));
     sprite.setScale(0.20,0.20);
 
