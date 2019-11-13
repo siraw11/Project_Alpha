@@ -25,7 +25,7 @@ private:
     sf::Vector2f sizeHeart;
     sf::Text hp;
     sf::Font font;
-    unsigned int textSize = 20;
+    unsigned int textSize = 30;
     sf::Text invulnerabilityTime;
 };
 

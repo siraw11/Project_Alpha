@@ -18,9 +18,11 @@ Hud::Hud() {
     hp.setFont(font);
     hp.setCharacterSize(textSize);
     hp.setString("HP :");
+    hp.setFillColor(sf::Color::Black);
     invulnerabilityTime.setFont(font);
     invulnerabilityTime.setCharacterSize(textSize);
     invulnerabilityTime.setString("Invulnerable");
+    invulnerabilityTime.setFillColor(sf::Color::Black);
 };
 
 void Hud::update(sf::RenderWindow *window, Level *level) {

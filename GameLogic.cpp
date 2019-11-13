@@ -73,7 +73,7 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
     if((*level).vector_of_enemy.empty()){
         state->setState(new State_NextLevel(state));
     }
-    level->camera.setCenter(level->player.x, -25);
+    level->camera.setCenter(level->player.x, 0);
     achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathcounter,&level->camera);
     hud->update(window, level);
 

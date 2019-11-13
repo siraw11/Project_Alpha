@@ -10,7 +10,7 @@
 #include "../Game_Screens/NextLevelScreen.h"
 class State_NextLevel : public State {
 public:
-    State_NextLevel(StateManager *stateManager);
+    explicit State_NextLevel(StateManager *stateManager);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);
 

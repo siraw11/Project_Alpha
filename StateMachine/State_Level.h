@@ -10,14 +10,14 @@
 class State_Level : public State {
 
 public:
-    State_Level(StateManager *stateManager);
+    explicit State_Level(StateManager *stateManager);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);
 
     StateManager *_stateManager;
     bool playing = false;
     sf::Music music;
-    float volume = 40.f;
+    float volume = 30.f;
 };
 
 

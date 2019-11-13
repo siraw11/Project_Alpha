@@ -10,7 +10,7 @@
 
 class State_Pause : public State {
 public:
-    State_Pause(StateManager *stateManager);
+    explicit State_Pause(StateManager *stateManager);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);
 

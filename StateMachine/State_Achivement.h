@@ -9,7 +9,7 @@
 #include "../Game_Screens/AchievementScreen.h"
 class State_Achivement : public State {
 public:
-    State_Achivement(StateManager *stateManager);
+    explicit State_Achivement(StateManager *stateManager);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);
 

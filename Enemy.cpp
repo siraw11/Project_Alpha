@@ -14,7 +14,11 @@
 Enemy::Enemy() : aggro(new Idle()){
     range.x = 130.f;
     range.y = 50.f;
-    moveSpeed = 0.2f;
+    // Enemy speed Davide
+    // moveSpeed = 0.2f;
+
+    // Enemy speed Andrea
+    moveSpeed = 0.4f;
 }
 
 void Enemy::aggroUpdate(Hero *player, sf::Time time, std::vector<Platform> *platform){

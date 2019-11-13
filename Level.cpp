@@ -17,6 +17,10 @@ Level::Level(int levelArray[], int column, int row) {
     size_of_player.y = 32;
     size_of_powerUp.x = 32;
     size_of_powerUp.y = 32;
+
+    shotgunBuffer.loadFromFile("Music/Gun.wav");
+    shotgun.setBuffer(shotgunBuffer);
+    shotgun.setVolume(15.f);
     //TODO Riordinare i vari numeri per l'assegnazione delle texture
 
 //-----Creazione vettori di oggetti----------------//
@@ -88,12 +92,20 @@ Level::Level(int levelArray[], int column, int row) {
     shoot_time = sf::seconds(0);
     clock.restart();
 
-    cameraSize.x = 1400;
-    cameraSize.y=1000;
+    // Background settings
+    backTexture.loadFromFile("textures/background.png");
+    background.setTexture(backTexture);
+    background.setPosition(-1000,-550);
+    background.setScale(2.0,1);
+
+    // Camera settings
+    cameraSize.x = 1366;
+    cameraSize.y = 768;
+    cameraZoom = 0.9;
     camera.setSize(cameraSize);
     camera.zoom(cameraZoom);
-    setTextures();
 
+    setTextures();
 }
 
 void Level::Update(sf::RenderWindow *window) {
@@ -132,6 +144,7 @@ void Level::Update(sf::RenderWindow *window) {
                        newBullet.rectShape.getSize().x / 2,
                        player.rectShape.getPosition().y + player.rectShape.getSize().y / 2 -
                        newBullet.rectShape.getSize().y / 2, size_of_bullet);
+        shotgun.play();
         vector_of_bullet.push_back(newBullet);
         setTextures();
         shoot_time = clock.getElapsedTime();
@@ -154,7 +167,7 @@ void Level::Update(sf::RenderWindow *window) {
 
     //----Draw globale-----------//
 
-    //window->draw(spiteBack);
+    window->draw(background);
     drawBullet(window);
     drawPlatform(window);
     drawEnemy(window);

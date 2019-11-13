@@ -6,6 +6,7 @@
 #define GAME_LEVEL_H
 
 #include "SFML/Graphics.hpp"
+#include "SFML/Audio.hpp"
 #include "Platform.h"
 #include "Enemy.h"
 #include "Hero.h"
@@ -62,9 +63,14 @@ private:
     int type_powerUpSpeed = 6;
     int type_player = 9;
     int type_enemy_octopus = 7;
-    float cameraZoom=0.75;
+    float cameraZoom;
     sf::Vector2f cameraSize;
     sf::Time shoot_time;
+
+    sf::Sprite background;
+    sf::Texture backTexture;
+    sf::SoundBuffer shotgunBuffer;
+    sf::Sound shotgun;
 };
 
 

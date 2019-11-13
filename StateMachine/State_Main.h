@@ -10,7 +10,7 @@
 
 class State_Main : public State {
 public:
-    State_Main(StateManager *stateManager);
+    explicit State_Main(StateManager *stateManager);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);
 

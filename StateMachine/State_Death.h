@@ -12,7 +12,7 @@
 class State_Death : public State {
 
 public:
-    State_Death(StateManager *stateManager);
+    explicit State_Death(StateManager *stateManager);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);
 
