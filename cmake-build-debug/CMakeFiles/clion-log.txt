@@ -1,5 +1,0 @@
-/home/andreatadde/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/andreatadde/Scrivania/Esame_Programmazione
--- Found SFML 2.5.1 in /usr/lib/cmake/SFML
--- Configuring done
--- Generating done
--- Build files have been written to: /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug
