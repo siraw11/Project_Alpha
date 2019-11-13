@@ -150,8 +150,8 @@ Google_tests/preinstall: Google_tests/lib/preinstall
 
 # All Build rule for target.
 Google_tests/CMakeFiles/Game_test.dir/all: CMakeFiles/core.dir/all
-Google_tests/CMakeFiles/Game_test.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 Google_tests/CMakeFiles/Game_test.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all
+Google_tests/CMakeFiles/Game_test.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_tests/CMakeFiles/Game_test.dir/build.make Google_tests/CMakeFiles/Game_test.dir/depend
 	$(MAKE) -f Google_tests/CMakeFiles/Game_test.dir/build.make Google_tests/CMakeFiles/Game_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target Game_test"
@@ -218,8 +218,8 @@ Google_tests/lib/googlemock/preinstall: Google_tests/lib/googletest/preinstall
 # Target rules for target Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
+Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=84,85 "Built target gmock_main"
