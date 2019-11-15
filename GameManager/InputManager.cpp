@@ -17,4 +17,9 @@ namespace Alpha
 
 		return false;
 	}
+
+	/*sf::Vector2i InputManager::GetMousePosition(sf::RenderWindow &window)
+	{
+		return sf::Mouse::getPosition(window);
+	}*/
 }

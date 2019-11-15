@@ -1,5 +1,3 @@
-#include <utility>
-
 
 #include <sstream>
 #include "GameOverState.hpp"
@@ -11,7 +9,7 @@
 
 namespace Alpha
 {
-	GameOverState::GameOverState(GameDataRef data) : _data(std::move(data))
+	GameOverState::GameOverState(GameDataRef data) : _data(data)
 	{
 
 	}
@@ -24,13 +22,13 @@ namespace Alpha
 		this->_retryButton.setTexture(this->_data->assets.GetTexture("Retry Button"));
 		this->_homeButton.setTexture(this->_data->assets.GetTexture("Home Button"));
 
-		this->_retryButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_retryButton.getLocalBounds().width / 2.0), (this->_data->window.getSize().y / 3.0) - (this->_retryButton.getLocalBounds().height / 2.0));
-		this->_homeButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_homeButton.getLocalBounds().width / 2.0), (this->_data->window.getSize().y / 3.0 * 2.0) - (this->_homeButton.getLocalBounds().height / 2.0));
+		this->_retryButton.setPosition((this->_data->window.getSize().x / 2) - (this->_retryButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3) - (this->_retryButton.getLocalBounds().height / 2));
+		this->_homeButton.setPosition((this->_data->window.getSize().x / 2) - (this->_homeButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3 * 2) - (this->_homeButton.getLocalBounds().height / 2));
 	}
 
 	void GameOverState::HandleInput()
 	{
-		sf::Event event{};
+		sf::Event event;
 
 		while (this->_data->window.pollEvent(event))
 		{

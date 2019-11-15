@@ -1,5 +1,3 @@
-#include <utility>
-
 #include <sstream>
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
@@ -18,7 +16,7 @@
 #include <fstream>
 
 namespace Alpha {
-    GameState::GameState(GameDataRef data,PlayerType playertype) : _data(std::move(data)) {
+    GameState::GameState(GameDataRef data,PlayerType playertype) : _data(data) {
         playerType=playertype;
 
     }
@@ -79,7 +77,7 @@ namespace Alpha {
 
         // Create the Map
         Map map;
-        if (!map.load("../Resources/Map/map.png", sf::Vector2u(32, 32), level, 120, 84))
+        if (!map.load("../Resources/Map/map.png", sf::Vector2u(32, 32), level, 120, 84));
         map.setScale(sf::Vector2f(1.f * SCALE, 1.f * SCALE));
 
         //View variable

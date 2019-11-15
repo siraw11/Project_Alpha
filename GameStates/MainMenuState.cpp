@@ -1,5 +1,3 @@
-#include <utility>
-
 
 
 #include <sstream>
@@ -13,7 +11,7 @@
 
 namespace Alpha
 {
-	MainMenuState::MainMenuState(GameDataRef data) : _data(std::move(data))
+	MainMenuState::MainMenuState(GameDataRef data) : _data(data)
 	{
 
 	}
@@ -39,21 +37,21 @@ namespace Alpha
 
 	void MainMenuState::HandleInput()
 	{
-		sf::Event event{};
+		sf::Event event;
 
 		while (this->_data->window.pollEvent(event))
-        {
-            if (sf::Event::Closed == event.type)
-            {
-                this->_data->window.close();
-            }
+		{
+			if (sf::Event::Closed == event.type)
+			{
+				this->_data->window.close();
+			}
 
-            if (this->_data->input.IsSpriteClicked(this->_playButton, sf::Mouse::Left, this->_data->window))
-            {
-                // Switch To Game State
-                this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::ARCHER)), true);
-            }
-            else if (this->_data->input.IsSpriteClicked(this->_selectClass, sf::Mouse::Left, this->_data->window))
+			if (this->_data->input.IsSpriteClicked(this->_playButton, sf::Mouse::Left, this->_data->window))
+			{
+			    // Switch To Game State
+				this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::ARCHER)), true);
+			}
+		else if (this->_data->input.IsSpriteClicked(this->_selectClass, sf::Mouse::Left, this->_data->window))
             {
                 // Switch To Select Class State
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
@@ -69,12 +67,6 @@ namespace Alpha
 
 	void MainMenuState::Draw()
 	{
-        sf::View view;
-        view.reset(sf::FloatRect(0, 0, 3840.0, 2160.0));
-		this->_data->window.clear();
-
-        this->_data->window.setView(view);
-
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_playButton);
         this->_data->window.draw(this->_selectClass);

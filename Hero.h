@@ -18,7 +18,7 @@ public:
 
     //Item* getItem() const;
     //void setItem(Item *item);
-    void heroMovement(const int *level);
+    void heroMovement(int *level);
     int direction=0; //1=up
 
 private:
