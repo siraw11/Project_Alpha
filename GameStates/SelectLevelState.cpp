@@ -21,22 +21,22 @@ std::vector<MenuOption *> SelectLevelState::loadLevelsOptions() {
     std::vector<MenuOption *> options;
     MenuOption *option;
 
-
-    option = new MenuOption("Level 1");
-    options.push_back(option);
-
-    //TODO: aggiungere riconoscimento se mappa bloccata
-    option = new MenuOption("Level 2");
-    options.push_back(option);
-    option = new MenuOption("Level 3 (locked)");
-    options.push_back(option);
-    lockedLevelsIndexes.push_front(2);
-
+    int i = 0;
+    for (std::map<std::string, std::shared_ptr<Map>>::iterator it = Game::gameData->levels.begin();
+         it != Game::gameData->levels.end(); ++it) {
+        option = new MenuOption(it->second->getName());
+        option->setValue(it->second->getId());
+        if (!it->second->getIsUnlocked()) {
+            lockedLevelsIndexes.push_front(i);
+        }
+        options.push_back(option);
+        i++;
+    }
     option = new MenuOption("Back");
+    option->setValue("back");
     options.push_back(option);
     return options;
 }
-
 
 
 void SelectLevelState::update() {
@@ -79,29 +79,21 @@ void SelectLevelState::handleInput(sf::Event event) {
                     menu->MoveUp();
                     break;
                 case sf::Keyboard::Enter:
-                    switch (menu->getSelectedItemIndex()) {
-                        case 0://Level 1
-                            std::cout << "Level 1 selected" << std::endl;
-                            Game::gameData->match->map = new Map();
-                            Game::gameData->match->map->loadLevel1();
-                            Game::gameData->machine.push_state(StateRef(new GameState(true)));
-                            break;
-                        case 1://Level 2
-                            std::cout << "Level 2 selected" << std::endl;
-                            Game::gameData->match->map = new Map();
-                            Game::gameData->match->map->loadLevel2();
-                            Game::gameData->machine.push_state(StateRef(new GameState(true)));
-                            break;
-                        case 2://Level 3
-                            std::cout << "Level 3 selected" << std::endl;
-                            break;
-                        case 3://Back to home menu
-                            Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
-                            break;
+                    std::string actionValue = menu->options.at(menu->getSelectedItemIndex())->getValue();
+                    if (actionValue == "back") {
+                        Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
+                    } else {
+                        if (actionValue.find("lv") != std::string::npos) {//controllo sia un livello
+                            auto level = Game::gameData->levels.at(actionValue);
+                            if (level->getIsUnlocked()) {
+                                std::cout << "Selected Level:" << level->getName() << std::endl;
+                                Game::gameData->match->setMap(level);
+                                Game::gameData->machine.push_state(StateRef(new GameState(true)));
+                            } else {
+                                std::cout << "Level " << level->getName() << " is locked!" << std::endl;
+                            }
+                        }
                     }
-                    break;
-                default:
-                    break;
             }
             break;
         default:
