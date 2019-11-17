@@ -5,13 +5,8 @@
 #include "Match.h"
 #include "Bike.h"
 
-Match::Match(Map *_map, Bike *_bike, int _lifes, float _time, int _money, Position _lastCheckpoint) : map(_map),
-                                                                                                      bike(_bike),
-                                                                                                      lifes(_lifes),
-                                                                                                      time(_time),
-                                                                                                      money(_money),
-                                                                                                      lastCheckpoint(
-                                                                                                              _lastCheckpoint) {}
+Match::Match(std::shared_ptr<Map> _map, Bike *_bike, int _lifes, float _time, int _money, Position _lastCheckpoint)
+        : map(_map), bike(_bike), lifes(_lifes), time(_time), money(_money), lastCheckpoint(_lastCheckpoint) {}
 
 
 void Match::removeLife() {
@@ -66,14 +61,6 @@ void Match::setBike(Bike *bike) {
     Match::bike = bike;
 }
 
-Map *Match::getMap() const {
-    return map;
-}
-
-void Match::setMap(Map *map) {
-    Match::map = map;
-}
-
 Bike *Match::getB() const {
     return bike;
 }
@@ -92,4 +79,12 @@ const Position &Match::getLastCheckpoint() const {
 
 void Match::setLastCheckpoint(const Position &lastCheckpoint) {
     Match::lastCheckpoint = lastCheckpoint;
+}
+
+const std::shared_ptr<Map> &Match::getMap() const {
+    return map;
+}
+
+void Match::setMap(const std::shared_ptr<Map> &map) {
+    Match::map = map;
 }

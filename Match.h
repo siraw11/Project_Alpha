@@ -11,9 +11,10 @@
 
 class Match {
 public:
-    Match(Map *map = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0, Position lastCheckpoint = {});
+    Match(std::shared_ptr<Map> = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0,
+          Position lastCheckpoint = {});
 
-    Map *map;
+    std::shared_ptr<Map> map;
 
     const Position &getLastCheckpoint() const;
 
@@ -21,6 +22,9 @@ public:
 
     virtual ~Match();
 
+    const std::shared_ptr<Map> &getMap() const;
+
+    void setMap(const std::shared_ptr<Map> &map);
 
     int getLifes() const;
 
@@ -49,10 +53,6 @@ public:
     Bike *getBike() const;
 
     void setBike(Bike *bike);
-
-    Map *getMap() const;
-
-    void setMap(Map *map);
 
 
 private:
