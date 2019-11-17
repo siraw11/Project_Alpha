@@ -53,6 +53,7 @@ void GameWinState::handleInput(sf::Event event) {
                 case sf::Keyboard::Enter:
                     switch (menu->getSelectedItemIndex()) {
                         case 0://Continue
+                            Game::gameData->match->map->setIsCompleted(true);
                             Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
                             break;
                     }
