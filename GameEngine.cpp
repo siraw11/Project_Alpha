@@ -46,7 +46,7 @@ GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
 
     //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
     //this->level = level1;       //scelta del livello
-    this->level = *Game::gameData->match->map;
+    this->level = Game::gameData->match->map;
     this->bike = bike1;
 
     initBike();//inizializzo la fisica del gioco
@@ -58,6 +58,10 @@ void GameEngine::respawn() {
     this->bike.wheelL->SetTransform(b2Vec2(checkpointX, checkpointY), 0);
     this->bike.wheelR->SetTransform(b2Vec2(checkpointX + 1, checkpointY), 0);
     this->bike.cart->SetTransform(b2Vec2(checkpointX, checkpointY + 1), 0);
+    this->bike.wheelL->SetLinearVelocity(b2Vec2(0, 0));
+    this->bike.wheelR->SetLinearVelocity(b2Vec2(0, 0));
+    this->wheelEngineL->SetMotorSpeed(0);
+    this->wheelEngineR->SetMotorSpeed(0);
     this->run();
 }
 
@@ -125,18 +129,20 @@ void GameEngine::run() {
 
         //itero la lista degli Items nella mappa
 
-        std::list<Item *> items = level.getMapItems();
+        std::list<Item *> items = level->getMapItems();
         for (auto &item : items) {
-            //controllo se collidono
-            bool collided = checkCollision(bike.cart->GetPosition().x, bike.cart->GetPosition().y, cartX,
-                                           (float) item->getPosX(), LINE + (float) item->getPosY(),
-                                           (float) item->getWidth(),
-                                           (float) item->getHeight());
-            if (collided) {
-                item->doSpecial();//eseguo la special
-                level.removeMapItem(item);//rimuovo l'item in quanto già usato
-            } else {
-                drawItem(item);//altrimenti disegno l'item
+            if (!item->isTaken()) {
+                //controllo se collidono
+                bool collided = checkCollision(bike.cart->GetPosition().x, bike.cart->GetPosition().y, cartX,
+                                               (float) item->getPosX(), LINE + (float) item->getPosY(),
+                                               (float) item->getWidth(),
+                                               (float) item->getHeight());
+                if (collided) {
+                    item->doSpecial();//eseguo la special
+                    level->removeMapItem(item);//rimuovo l'item in quanto già usato
+                } else {
+                    drawItem(item);//altrimenti disegno l'item
+                }
             }
         }
 
@@ -193,13 +199,13 @@ void GameEngine::drawMap() {
 
     b2Body *groundBody = this->world.CreateBody(&groundBodyDef);
     //sf::VertexArray terrain;
-    sf::VertexArray terrain(sf::TriangleStrip, this->level.getMapPoints().size() * 2);
+    sf::VertexArray terrain(sf::TriangleStrip, this->level->getMapPoints().size() * 2);
 
 
     int i = 0;
     int j = 0;
-    b2Vec2 vs[level.getMapPoints().size()];//box2D map points
-    for (Position point : level.getMapPoints()) {
+    b2Vec2 vs[level->getMapPoints().size()];//box2D map points
+    for (Position point : level->getMapPoints()) {
         vs[i].Set(point.posX, -point.posY);
         terrain[j].position = sf::Vector2f(point.posX * SCALE,
                                            Game::gameData->window.getSize().y / 1.3 - (point.posY * SCALE));
@@ -213,7 +219,7 @@ void GameEngine::drawMap() {
     }
     //Unisco tutti i punti con delle rette
     b2ChainShape chain;
-    chain.CreateChain(vs, level.getMapPoints().size());
+    chain.CreateChain(vs, level->getMapPoints().size());
 
 
     groundBody->CreateFixture(&chain, 0.0f);//0.0f->massa solido
