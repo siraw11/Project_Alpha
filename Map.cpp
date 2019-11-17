@@ -11,12 +11,17 @@
 #include "Checkpoint.h"
 
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player *_p,
-         std::list<Item *> _mapItems) : isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked),
+Map::Map(std::string _id, std::string _name, bool _isCompleted, bool _isUnlocked, double _record,
+         std::list<Position> _mapPoints, Player *_p,
+         std::list<Item *> _mapItems) : id(_id), name(_name), isCompleted(_isCompleted), record(_record),
+                                        isUnlocked(_isUnlocked),
                                         mapPoints(_mapPoints), p(_p), mapItems(_mapItems) {}
 
 
 void Map::loadLevel1() {
+    this->setId("lv1");
+    this->setName("Level 1");
+    this->setIsUnlocked(true);
 
     this->mapPoints = {
             {-1,  10},//back limit
@@ -39,11 +44,27 @@ void Map::loadLevel1() {
     mapItems.push_back(new Coin(5, 0.8, .7, .7, 50));
     mapItems.push_back(new Coin(7, 1, .7, .7, 30));
     mapItems.push_back(new SpeedBonus(10, 1, 10, .7, .7, .7));
-    mapItems.push_back(new Checkpoint(25, 0, 1, 5));
-    mapItems.push_back(new Checkpoint(95, 1, 1, 5, true));
+    mapItems.push_back(new Checkpoint(25, 0, 1, 1.2));
+    mapItems.push_back(new Checkpoint(95, 2, 5, 3, true));
+}
+
+std::unique_ptr<Map> Map::loadLevel(int id) {
+    std::unique_ptr<Map> map(new Map());
+    switch (id) {
+        case 1:
+            map->loadLevel1();
+            break;
+
+        case 2:
+            map->loadLevel2();
+            break;
+    }
+    return map;
 }
 
 void Map::loadLevel2() {
+    this->setId("lv2");
+    this->setName("Level 2");
     mapPoints = {
             {-1, 10},//back limit
             {0,  0},
@@ -98,8 +119,8 @@ void Map::setMapItems(const std::list<Item *> &mapItems) {
 }
 
 bool Map::removeMapItem(Item *item) {
-    mapItems.remove(item);
-    delete item;
+    //mapItems.remove(item);
+    //delete item;
 }
 
 
@@ -117,4 +138,20 @@ void Map::detach() {
 
 Map::~Map() {
     detach();
+}
+
+const std::string &Map::getName() const {
+    return name;
+}
+
+void Map::setName(const std::string &name) {
+    Map::name = name;
+}
+
+const std::string &Map::getId() const {
+    return id;
+}
+
+void Map::setId(const std::string &id) {
+    Map::id = id;
 }

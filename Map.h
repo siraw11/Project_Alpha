@@ -17,7 +17,8 @@
 class Map:Observer {
 
 public:
-    Map(bool isCompleted = 0, bool isUnlocked = 0, double record = 0, std::list<Position> mapPoints = {},
+    Map(std::string id = "", std::string name = "", bool isCompleted = 0, bool isUnlocked = 0, double record = 0,
+        std::list<Position> mapPoints = {},
         Player *p = nullptr, std::list<Item *> mapItems = {});
 
     virtual ~Map();
@@ -52,8 +53,21 @@ public:
 
     void loadLevel2();
 
+    static std::unique_ptr<Map> loadLevel(int id);
+
+    const std::string &getName() const;
+
+    void setName(const std::string &name);
 
 private:
+    std::string id;
+public:
+    const std::string &getId() const;
+
+    void setId(const std::string &id);
+
+private:
+    std::string name;
     bool isCompleted;
     bool isUnlocked;
     double record;
