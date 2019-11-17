@@ -13,7 +13,8 @@
 struct GameData {
     StateMachine machine;
     sf::RenderWindow window;
-    std::shared_ptr<Match> match;
+    std::unique_ptr<Match> match;
+    std::map<std::string, std::shared_ptr<Map>> levels;
     std::shared_ptr<GameEngine> engine;
 };
 typedef std::shared_ptr<GameData> GameDataRef;

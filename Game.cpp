@@ -13,9 +13,13 @@ Game::Game() {
                             sf::Style::Close | sf::Style::Titlebar);
     gameData->window.setVerticalSyncEnabled(true);
 
-    Game::gameData->match = std::make_shared<Match>();
-    Game::gameData->match->map = new Map();
+    Game::gameData->match = std::unique_ptr<Match>(new Match());
     gameData->machine.push_state(StateRef(new MenuHomeState()));
+
+
+    Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv1", Map::loadLevel(1)));
+    Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv2", Map::loadLevel(2)));
+
 
 
     Game::Run();
@@ -31,7 +35,6 @@ void Game::Run() {
                 Game::gameData->machine.get_current_state()->handleInput(event);
             }
         }
-        //this->gameData->machine.get_current_state()->HandleInput();
         Game::gameData->machine.get_current_state()->update();
         Game::gameData->machine.get_current_state()->draw();
         Game::gameData->window.display();
