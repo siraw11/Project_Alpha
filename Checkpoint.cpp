@@ -12,14 +12,18 @@ Checkpoint::Checkpoint(double _posX, double _posY, double _width, double _height
                _posY,
                _width,
                _height,
-               _texture), isEnd(_isEnd) {}
+               _texture), isEnd(_isEnd) {
+    if (isEnd) {
+        this->setTexture("../textures/arrival.png");
+    }
+}
 
 
 void Checkpoint::doSpecial() {
     if (isEnd) {
         Game::gameData->machine.push_state(StateRef(new GameWinState()));
-        Game::gameData->match->map->setIsCompleted(true);
     } else {
+        std::cout << "Checkpoint taken!" << std::endl;
         Game::gameData->match->setLastCheckpoint({(float) this->getPosX(), (float) this->getPosY()});
     }
 }
