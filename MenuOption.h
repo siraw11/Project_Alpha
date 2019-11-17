@@ -27,8 +27,13 @@ public:
 
     static std::vector<MenuOption *> loadPauseMenuOptions();
 
+    const std::string &getValue() const;
+
+    void setValue(const std::string &value);
+
 private:
     sf::Font font;
+    std::string value = "";
 };
 
 

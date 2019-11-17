@@ -16,6 +16,14 @@ MenuOption::~MenuOption() {
 
 }
 
+const std::string &MenuOption::getValue() const {
+    return value;
+}
+
+void MenuOption::setValue(const std::string &value) {
+    MenuOption::value = value;
+}
+
 
 std::vector<MenuOption *> MenuOption::loadMainMenuOptions() {
     std::vector<MenuOption *> options;
