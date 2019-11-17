@@ -57,3 +57,12 @@ const std::string &Item::getTexture() const {
 void Item::setTexture(const std::string &texture) {
     Item::texture = texture;
 }
+
+bool Item::isTaken() const {
+    return taken;
+}
+
+void Item::setTaken(bool taken) {
+    Item::taken = taken;
+}
+

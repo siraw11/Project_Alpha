@@ -34,6 +34,7 @@ public:
 
     void setHeight(double height);
 
+
     virtual void doSpecial();
 
 private:
@@ -41,6 +42,13 @@ private:
     double posY;
     double width;
     double height;
+    bool taken = false;
+public:
+    bool isTaken() const;
+
+    void setTaken(bool taken);
+
+private:
     std::string texture;
 };
 
