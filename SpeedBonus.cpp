@@ -30,7 +30,7 @@ void SpeedBonus::setSpeedIncrement(double speedIncrement) {
 }
 
 void SpeedBonus::doSpecial() {
-    //TODO: implement
+    setTaken(true);
     std::cout << "Special! Addedd:" << speedIncrement << " speed" << std::endl;
     std::cout << "Special! Addedd:" << seconds << " seconds" << std::endl;
 
