@@ -51,7 +51,6 @@ public:
 
     void respawn();
 private:
-    sf::RenderWindow *window;
     sf::View view;
 
     int framerate;
@@ -63,7 +62,6 @@ private:
     b2WheelJoint *wheelEngineR;
     b2Vec2 gravity = b2Vec2(0, 9.8);
     b2World world = b2World(gravity);
-    std::shared_ptr<Map> level = {};
     Bike bike = {};
 
     const float SCALE = 200.;
