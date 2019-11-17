@@ -13,7 +13,6 @@ void GameState::Init() {
 void GameState::update() {
     if (this->init) {
         Game::gameData->engine = std::make_shared<GameEngine>();
-        Game::gameData->match = std::unique_ptr<Match>(new Match());
         Game::gameData->engine->run();
         this->init = false;
     } else {
