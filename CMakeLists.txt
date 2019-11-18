@@ -7,7 +7,7 @@ include_directories(.)
 set(EXECUTABLE_NAME Motocross2D)
 
 set(SOURCE_FILES
-        Game.h Game.cpp Player.cpp Player.h Bike.cpp Bike.h GameEngine.h GameEngine.cpp Item.h Item.cpp Map.h Map.cpp Coin.cpp Coin.h SpeedBonus.cpp SpeedBonus.h Checkpoint.cpp Checkpoint.h TimeBonus.cpp TimeBonus.h Subject.cpp Subject.h Observer.cpp Observer.h Match.cpp Match.h Menu.cpp Menu.h MenuOption.h MenuOption.cpp
+        Game.h Game.cpp Player.cpp Player.h Bike.cpp Bike.h GameEngine.h GameEngine.cpp Item.h Item.cpp Map.h Map.cpp Coin.cpp Coin.h SpeedBonus.cpp SpeedBonus.h Checkpoint.cpp Checkpoint.h TimeBonus.cpp TimeBonus.h Subject.cpp Subject.h Observer.cpp Observer.h Match.cpp Match.h Menu.cpp Menu.h MenuOption.h MenuOption.cpp Timer.cpp Timer.h
         GameStates/State.h GameStates/StateMachine.cpp GameStates/StateMachine.h GameStates/GameState.h GameStates/GameState.cpp GameStates/MenuHomeState.cpp GameStates/MenuHomeState.h GameStates/MenuPauseState.h GameStates/MenuPauseState.cpp GameStates/SelectLevelState.cpp GameStates/SelectLevelState.h GameStates/GameWinState.cpp GameStates/GameWinState.h GameStates/GameLostState.cpp GameStates/GameLostState.h GameStates/ShopState.cpp GameStates/ShopState.h)
 
 
