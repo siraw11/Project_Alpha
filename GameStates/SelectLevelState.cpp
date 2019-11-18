@@ -22,15 +22,15 @@ std::vector<MenuOption *> SelectLevelState::loadLevelsOptions() {
     MenuOption *option;
 
     int i = 0;
-    for (std::map<std::string, std::shared_ptr<Map>>::iterator it = Game::gameData->levels.begin();
-         it != Game::gameData->levels.end(); ++it) {
+    bool unlockNext = false;
+    for (auto it = Game::gameData->levels.begin(); it != Game::gameData->levels.end(); ++it, ++i) {
+        if (unlockNext) {
+            it->second->setIsUnlocked(unlockNext);
+        }
+        unlockNext = it->second->getIsCompleted();
         option = new MenuOption(it->second->getName());
         option->setValue(it->second->getId());
-        if (!it->second->getIsUnlocked()) {
-            lockedLevelsIndexes.push_front(i);
-        }
         options.push_back(option);
-        i++;
     }
     option = new MenuOption("Back");
     option->setValue("back");
@@ -48,22 +48,30 @@ void SelectLevelState::draw() {
     float width = Game::gameData->window.getView().getCenter().x;
     float height = Game::gameData->window.getView().getCenter().y;
     int i = 0;
-
-    for (it = menu->options.begin(); it != menu->options.end(); it++, i++) {
+    for (it = menu->options.begin(), i = 0; it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
-        bool isLockedLevel =
-                std::find(lockedLevelsIndexes.begin(), lockedLevelsIndexes.end(), i) != lockedLevelsIndexes.end();
-        if (i == menu->getSelectedItemIndex()) {
-            if (!isLockedLevel) {
-                (*it)->option.setColor(sf::Color::Red);
+
+        (*it)->option.setColor(sf::Color::White);
+
+        if (i < Game::gameData->levels.size()) {//è un livello
+            if (Game::gameData->levels.at((*it)->getValue())->getIsUnlocked()) {
+                if (i == menu->getSelectedItemIndex()) {
+                    (*it)->option.setColor(sf::Color::Red);
+                }
             } else {
-                (*it)->option.setColor(sf::Color(100, 10, 100));
+                if (i == menu->getSelectedItemIndex()) {
+                    (*it)->option.setColor(sf::Color(100, 10, 100));
+                } else {
+                    (*it)->option.setColor(sf::Color(10, 10, 100));
+                }
             }
         } else {
-            if (isLockedLevel) {
-                (*it)->option.setColor(sf::Color(10, 10, 100));
+            if (i == menu->getSelectedItemIndex()) {
+                (*it)->option.setColor(sf::Color::Red);
             }
         }
+
+
         Game::gameData->window.draw((*it)->option);
     }
 }

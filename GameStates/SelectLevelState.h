@@ -18,8 +18,6 @@ private:
 
     void handleInput(sf::Event event) override;
 
-    std::list<int> lockedLevelsIndexes;
-
     std::vector<MenuOption *> loadLevelsOptions();
 
     Menu *menu;
