@@ -8,6 +8,8 @@
 
 GameWinState::GameWinState() {
     Game::gameData->engine->setPause(true);
+    Game::gameData->match->timer->stop();
+
     this->menu = new Menu(MenuType::Home, GameWinState::loadMenu());
 }
 

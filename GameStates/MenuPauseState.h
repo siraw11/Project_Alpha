@@ -9,6 +9,10 @@
 #include "State.h"
 
 class MenuPauseState : public State {
+public:
+    MenuPauseState();
+
+    ~MenuPauseState();
 private:
     void update() override;
 

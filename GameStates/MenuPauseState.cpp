@@ -12,6 +12,13 @@
 
 static Menu menu(MenuType::Home, MenuOption::loadPauseMenuOptions());
 
+MenuPauseState::~MenuPauseState() {
+
+}
+
+MenuPauseState::MenuPauseState() {
+    Game::gameData->match->timer->stop();
+}
 
 void MenuPauseState::draw() {
     Game::gameData->window.clear(sf::Color(0, 0, 0));
