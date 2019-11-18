@@ -14,6 +14,7 @@ struct GameData {
     StateMachine machine;
     sf::RenderWindow window;
     std::unique_ptr<Match> match;
+    std::unique_ptr<Player> player;
     std::map<std::string, std::shared_ptr<Map>> levels;
     std::shared_ptr<GameEngine> engine;
 };
