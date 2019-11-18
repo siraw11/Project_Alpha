@@ -9,6 +9,7 @@
 #include "StateMachine.h"
 #include "Menu.h"
 #include "SelectLevelState.h"
+#include "ShopState.h"
 
 static Menu menu(MenuType::Home, MenuOption::loadMainMenuOptions());
 
@@ -17,12 +18,37 @@ void MenuHomeState::draw() {
     std::vector<MenuOption *>::iterator it;
     float width = Game::gameData->window.getView().getCenter().x;
     float height = Game::gameData->window.getView().getCenter().y;
+
+
+    sf::Font font;
+    if (!font.loadFromFile("./fonts/Arial.ttf")) {}
+    sf::Text textWelcome;
+    textWelcome.setPosition(width, height);
+    textWelcome.setFont(font);
+    textWelcome.setCharacterSize(80);
+    textWelcome.setPosition(width, height - 450);
+    textWelcome.setColor(sf::Color(50, 50, 100));
+    textWelcome.setString("Welcome back,");
+
+
+    sf::Text textWelcomeUsername;
+    textWelcomeUsername.setPosition(width, height);
+    textWelcomeUsername.setFont(font);
+    textWelcomeUsername.setCharacterSize(50);
+    textWelcomeUsername.setPosition(width, height - 350);
+    textWelcomeUsername.setColor(sf::Color::White);
+    textWelcomeUsername.setString(Game::gameData->player->getUsername());
+
+    Game::gameData->window.draw(textWelcome);
+    Game::gameData->window.draw(textWelcomeUsername);
+
+
     int i = 0;
     for (it = menu.options.begin(); it != menu.options.end(); it++, i++) {
         (*it)->option.setPosition(
                 sf::Vector2f(width, height + i * 100));
         if (i == menu.getSelectedItemIndex()) {
-            (*it)->option.setColor(sf::Color::Red);
+            (*it)->option.setColor(sf::Color(246, 136, 121));
         }
         Game::gameData->window.draw((*it)->option);
     }
@@ -47,7 +73,8 @@ void MenuHomeState::handleInput(sf::Event event) {
                             Game::gameData->machine.push_state(StateRef(new SelectLevelState()));
                             break;
                         case 1:
-                            std::cout << "Settings" << std::endl;
+                            std::cout << "Shop" << std::endl;
+                            Game::gameData->machine.push_state(StateRef(new ShopState()));
                             break;
                         case 2:
                             Game::gameData->window.close();

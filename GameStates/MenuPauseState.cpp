@@ -49,6 +49,7 @@ void MenuPauseState::handleInput(sf::Event event) {
                             Game::gameData->machine.pop_state();
                             break;
                         case 1://Back Menu case
+                            Game::gameData->match = std::unique_ptr<Match>(new Match());
                             Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
                             break;
                         case 2://Exit case

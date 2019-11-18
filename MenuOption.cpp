@@ -30,7 +30,7 @@ std::vector<MenuOption *> MenuOption::loadMainMenuOptions() {
     MenuOption *option;
     option = new MenuOption("Play");
     options.push_back(option);
-    option = new MenuOption("Settings");
+    option = new MenuOption("Shop");
     options.push_back(option);
     option = new MenuOption("Exit Game");
     options.push_back(option);

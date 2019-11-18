@@ -52,6 +52,20 @@ void SelectLevelState::draw() {
     std::vector<MenuOption *>::iterator it;
     float width = Game::gameData->window.getView().getCenter().x;
     float height = Game::gameData->window.getView().getCenter().y;
+
+
+    sf::Text textHeader;
+    textHeader.setPosition(width, height);
+    sf::Font font;
+    if (!font.loadFromFile("./fonts/Arial.ttf")) {}
+    textHeader.setFont(font);
+    textHeader.setCharacterSize(80);
+    textHeader.setPosition(width, height - 250);
+    textHeader.setColor(sf::Color(50, 50, 100));
+    textHeader.setString("Select Level");
+    Game::gameData->window.draw(textHeader);
+
+
     int i = 0;
     for (it = menu->options.begin(), i = 0; it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
