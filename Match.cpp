@@ -4,9 +4,13 @@
 
 #include "Match.h"
 #include "Bike.h"
+#include "Game.h"
 
-Match::Match(std::shared_ptr<Map> _map, Bike *_bike, int _lifes, float _time, int _money, Position _lastCheckpoint)
-        : map(_map), bike(_bike), lifes(_lifes), time(_time), money(_money), lastCheckpoint(_lastCheckpoint) {}
+Match::Match(std::shared_ptr<Map> _map, Bike *_bike, int _lifes, int _money, Position _lastCheckpoint)
+        : map(_map), bike(_bike), lifes(_lifes), money(_money), lastCheckpoint(_lastCheckpoint) {
+
+    timer = std::unique_ptr<Timer>(new Timer());
+}
 
 
 void Match::removeLife() {
@@ -21,14 +25,6 @@ int Match::getLifes() const {
 
 void Match::setLifes(int lifes) {
     Match::lifes = lifes;
-}
-
-float Match::getTime() const {
-    return time;
-}
-
-void Match::setTime(float time) {
-    Match::time = time;
 }
 
 int Match::getMoney() const {
@@ -88,3 +84,4 @@ const std::shared_ptr<Map> &Match::getMap() const {
 void Match::setMap(const std::shared_ptr<Map> &map) {
     Match::map = map;
 }
+

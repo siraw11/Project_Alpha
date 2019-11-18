@@ -25,7 +25,6 @@ int countFlips = 0;
 
 GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
                                                           framerate(_framerate) {
-
     this->LINE = Game::gameData->window.getSize().y / this->SCALE / 1.3 + 0.01;
     this->timeStep = 1.0f / 60.0f;
     this->velocityIterations = 3;
@@ -63,6 +62,8 @@ void GameEngine::run() {
     float offsetX = 3.f;
     float offsetY = 1.f;
     sf::Event event{};
+
+    Game::gameData->match->timer->start();
     while (!this->pause) {
         Game::gameData->window.clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
         this->world.Step(timeStep, velocityIterations, positionIterations);
@@ -436,8 +437,17 @@ void GameEngine::drawInterface() {
     textCoin.setColor(sf::Color::Black);
     textCoin.setString(std::to_string(Game::gameData->match->getMoney()));
 
+
+    sf::Text textTimer;
+    textTimer.setPosition(interfaceX + Game::gameData->window.getSize().x / 2 - 150, interfaceY);
+    textTimer.setFont(font);
+    textTimer.setCharacterSize(80);
+    textTimer.setColor(sf::Color::Black);
+    textTimer.setString(Game::gameData->match->timer->elapsedString());
+
     Game::gameData->window.draw(spriteCoin);
     Game::gameData->window.draw(textCoin);
+    Game::gameData->window.draw(textTimer);
 }
 
 //Conversione Radianti -> Gradi

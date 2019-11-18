@@ -7,12 +7,15 @@
 #include "Bike.h"
 #include "Player.h"
 #include "Map.h"
+#include "Timer.h"
 
 
 class Match {
 public:
-    Match(std::shared_ptr<Map> = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0,
+    Match(std::shared_ptr<Map> = {}, Bike *b = {}, int lifes = 3, int money = 0,
           Position lastCheckpoint = {});
+
+    std::unique_ptr<Timer> timer;
 
     std::shared_ptr<Map> map;
 
@@ -30,11 +33,9 @@ public:
 
     void setLifes(int lifes);
 
+
     void removeLife();
 
-    float getTime() const;
-
-    void setTime(float time);
 
     int getMoney() const;
 
