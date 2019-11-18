@@ -65,7 +65,6 @@ std::unique_ptr<Map> Map::loadLevel(int id) {
 void Map::loadLevel2() {
     this->setId("lv2");
     this->setName("Level 2");
-    this->setIsUnlocked(true);
     mapPoints = {
             {-1, 10},//back limit
             {0,  0},
