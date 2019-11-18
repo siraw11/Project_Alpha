@@ -28,7 +28,12 @@ std::vector<MenuOption *> SelectLevelState::loadLevelsOptions() {
             it->second->setIsUnlocked(unlockNext);
         }
         unlockNext = it->second->getIsCompleted();
-        option = new MenuOption(it->second->getName());
+
+        if (it->second->getIsUnlocked()) {
+            option = new MenuOption(it->second->getName());
+        } else {
+            option = new MenuOption(it->second->getName() + " (locked)");
+        }
         option->setValue(it->second->getId());
         options.push_back(option);
     }
@@ -50,10 +55,8 @@ void SelectLevelState::draw() {
     int i = 0;
     for (it = menu->options.begin(), i = 0; it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
-
         (*it)->option.setColor(sf::Color::White);
-
-        if (i < Game::gameData->levels.size()) {//è un livello
+        if (i < Game::gameData->levels.size()) {
             if (Game::gameData->levels.at((*it)->getValue())->getIsUnlocked()) {
                 if (i == menu->getSelectedItemIndex()) {
                     (*it)->option.setColor(sf::Color::Red);
