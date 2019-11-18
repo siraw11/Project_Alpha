@@ -9,11 +9,8 @@
 
 #include "GameEngine.h"
 #include "Player.h"
-#include "Map.h"
 #include "Bike.h"
 #include "Item.h"
-#include "Coin.h"
-#include "SpeedBonus.h"
 #include "Game.h"
 
 
@@ -43,8 +40,6 @@ GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
     Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
 
 
-    //TODO:valori del puntatore verranno dalle scelte del menu e spostati su match
-    //this->level = level1;       //scelta del livello
     this->bike = bike1;
 
     initBike();//inizializzo la fisica del gioco
@@ -62,6 +57,7 @@ void GameEngine::respawn() {
     this->wheelEngineR->SetMotorSpeed(0);
     this->run();
 }
+
 
 void GameEngine::run() {
     float offsetX = 3.f;
