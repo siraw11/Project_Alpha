@@ -14,7 +14,7 @@ Checkpoint::Checkpoint(double _posX, double _posY, double _width, double _height
                _height,
                _texture), isEnd(_isEnd) {
     if (isEnd) {
-        this->setTexture("../textures/arrival.png");
+        this->setTexture("./textures/arrival.png");
     }
 }
 
