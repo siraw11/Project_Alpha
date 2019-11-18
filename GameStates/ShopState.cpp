@@ -74,7 +74,6 @@ void ShopState::draw() {
     textCoins.setColor(sf::Color(255, 255, 255));
     std::string stringTotalCoins = "You have:";
     textCoins.setString("You have: " + std::to_string(Game::gameData->player->getTotalCoin()) + " coins");
-    std::cout << "You have:" << Game::gameData->player->getTotalCoin() << std::endl;
     Game::gameData->window.draw(textCoins);
 
 
