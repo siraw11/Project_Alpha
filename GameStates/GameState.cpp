@@ -12,6 +12,7 @@ void GameState::Init() {
 
 void GameState::update() {
     if (this->init) {
+        std::cout << "New game init" << std::endl;
         Game::gameData->engine = std::make_shared<GameEngine>();
         Game::gameData->engine->run();
         this->init = false;

@@ -54,6 +54,8 @@ void GameWinState::handleInput(sf::Event event) {
                     switch (menu->getSelectedItemIndex()) {
                         case 0://Continue
                             Game::gameData->match->map->setIsCompleted(true);
+                            Game::gameData->player->addTotalCoin(Game::gameData->match->getMoney());
+                            Game::gameData->match = std::unique_ptr<Match>(new Match());
                             Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
                             break;
                     }

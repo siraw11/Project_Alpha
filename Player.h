@@ -19,8 +19,7 @@ struct Position {
 
 class Player : public Subject {
 public:
-    Player(std::string username = "Player1", int totalCoin = 0, float posX = 0, float posY = 0, float angle = 0,
-           Bike *bike = nullptr);
+    explicit Player(std::string username = "Player1", int totalCoin = 0, Bike *bike = nullptr);
 
     virtual ~Player();
 
@@ -30,19 +29,7 @@ public:
 
     int getTotalCoin() const;
 
-    void setTotalCoin(int totalCoin);
-
-    float getPosX() const;
-
-    void setPosX(float posX);
-
-    float getPosY() const;
-
-    void setPosY(float posY);
-
-    float getAngle() const;
-
-    void setAngle(float angle);
+    void addTotalCoin(int incrementCoin);
 
     Bike *getBike() const;
 
@@ -59,9 +46,6 @@ public:
 private:
     std::string username;
     int totalCoin;
-    float posX;
-    float posY;
-    float angle;
     Bike *bike;
 
     std::list<Observer*> observers;
