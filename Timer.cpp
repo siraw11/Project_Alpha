@@ -34,8 +34,7 @@ double Timer::elapsedSeconds() {
 }
 
 
-std::string Timer::elapsedString() {
-    long milli = elapsedMilliseconds();
+std::string Timer::elapsedString(long milli) {
     long hr = milli / 3600000;
     milli = milli - 3600000 * hr;
     long min = milli / 60000;

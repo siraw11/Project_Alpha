@@ -3,19 +3,23 @@
 //
 
 #include "Map.h"
+
+#include <utility>
 #include "Observer.h"
 #include "Subject.h"
 #include "Player.h"
 #include "Coin.h"
 #include "SpeedBonus.h"
 #include "Checkpoint.h"
+#include "Game.h"
 
 
 Map::Map(std::string _id, std::string _name, bool _isCompleted, bool _isUnlocked, double _record,
          std::list<Position> _mapPoints, Player *_p,
-         std::list<Item *> _mapItems) : id(_id), name(_name), isCompleted(_isCompleted), record(_record),
+         std::list<Item *> _mapItems) : id(std::move(_id)), name(std::move(_name)), isCompleted(_isCompleted),
+                                        record(_record),
                                         isUnlocked(_isUnlocked),
-                                        mapPoints(_mapPoints), p(_p), mapItems(_mapItems) {}
+                                        mapPoints(std::move(_mapPoints)), p(_p), mapItems(std::move(_mapItems)) {}
 
 
 void Map::loadLevel1() {
@@ -97,6 +101,10 @@ double Map::getRecord() const {
     return record;
 }
 
+std::string Map::getRecordString() const {
+    return Game::gameData->match->timer->elapsedString(this->record);
+}
+
 void Map::setRecord(double record) {
     Map::record = record;
 }
@@ -118,11 +126,13 @@ void Map::setMapItems(const std::list<Item *> &mapItems) {
     Map::mapItems = mapItems;
 }
 
-bool Map::removeMapItem(Item *item) {
-    //mapItems.remove(item);
-    //delete item;
-}
+void Map::resetItems() {
+    std::cout << "items reset" << std::endl;
+    for (auto &item : mapItems) {
+        item->setTaken(false);
+    }
 
+}
 
 void Map::update() {
 

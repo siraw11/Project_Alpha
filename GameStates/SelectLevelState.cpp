@@ -73,18 +73,18 @@ void SelectLevelState::draw() {
         if (i < Game::gameData->levels.size()) {
             if (Game::gameData->levels.at((*it)->getValue())->getIsUnlocked()) {
                 if (i == menu->getSelectedItemIndex()) {
-                    (*it)->option.setColor(sf::Color::Red);
+                    (*it)->option.setColor(sf::Color(200, 100, 0));
                 }
             } else {
                 if (i == menu->getSelectedItemIndex()) {
-                    (*it)->option.setColor(sf::Color(100, 10, 100));
+                    (*it)->option.setColor(sf::Color(200, 100, 100));
                 } else {
                     (*it)->option.setColor(sf::Color(10, 10, 100));
                 }
             }
         } else {
             if (i == menu->getSelectedItemIndex()) {
-                (*it)->option.setColor(sf::Color::Red);
+                (*it)->option.setColor(sf::Color(200, 100, 0));
             }
         }
 
@@ -113,6 +113,7 @@ void SelectLevelState::handleInput(sf::Event event) {
                             if (level->getIsUnlocked()) {
                                 std::cout << "Selected Level:" << level->getName() << std::endl;
                                 Game::gameData->match->setMap(level);
+                                Game::gameData->match->map->resetItems();
                                 Game::gameData->machine.push_state(StateRef(new GameState(true)));
                             } else {
                                 std::cout << "Level " << level->getName() << " is locked!" << std::endl;

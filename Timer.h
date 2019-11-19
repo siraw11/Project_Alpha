@@ -13,14 +13,14 @@ public:
 
     void stop();
 
-    std::string elapsedString();
-
-private:
-    std::string chronoFormat(float t);
+    static std::string elapsedString(long t);
 
     double elapsedSeconds();
 
     double elapsedMilliseconds();
+
+private:
+    static std::string chronoFormat(float t);
 
     std::time_t time;
     std::chrono::time_point<std::chrono::system_clock> startTime;

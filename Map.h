@@ -26,7 +26,6 @@ public:
     virtual void attach() override;
     virtual void detach() override;
 
-public:
     bool getIsCompleted() const;
 
     void setIsCompleted(bool isCompleted);
@@ -36,6 +35,8 @@ public:
     void setIsUnlocked(bool isUnlocked);
 
     double getRecord() const;
+
+    std::string getRecordString() const;
 
     void setRecord(double record);
 
@@ -47,7 +48,6 @@ public:
 
     void setMapItems(const std::list<Item *> &mapItems);
 
-    bool removeMapItem(Item *item);
 
     void loadLevel1();
 
@@ -59,14 +59,14 @@ public:
 
     void setName(const std::string &name);
 
-private:
-    std::string id;
-public:
     const std::string &getId() const;
 
     void setId(const std::string &id);
 
+    void resetItems();
+
 private:
+    std::string id;
     std::string name;
     bool isCompleted;
     bool isUnlocked;

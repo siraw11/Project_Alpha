@@ -134,7 +134,6 @@ void GameEngine::run() {
                                                (float) item->getHeight());
                 if (collided) {
                     item->doSpecial();//eseguo la special
-                    Game::gameData->match->map->removeMapItem(item);//rimuovo l'item in quanto già usato
                 } else {
                     drawItem(item);//altrimenti disegno l'item
                 }
@@ -443,7 +442,8 @@ void GameEngine::drawInterface() {
     textTimer.setFont(font);
     textTimer.setCharacterSize(80);
     textTimer.setColor(sf::Color::Black);
-    textTimer.setString(Game::gameData->match->timer->elapsedString());
+    textTimer.setString(
+            Game::gameData->match->timer->elapsedString(Game::gameData->match->timer->elapsedMilliseconds()));
 
     Game::gameData->window.draw(spriteCoin);
     Game::gameData->window.draw(textCoin);
