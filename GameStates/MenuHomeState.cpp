@@ -27,7 +27,7 @@ void MenuHomeState::draw() {
     textWelcome.setFont(font);
     textWelcome.setCharacterSize(80);
     textWelcome.setPosition(width, height - 450);
-    textWelcome.setColor(sf::Color(50, 50, 100));
+    textWelcome.setFillColor(sf::Color(50, 50, 100));
     textWelcome.setString("Welcome back,");
 
 
@@ -36,7 +36,7 @@ void MenuHomeState::draw() {
     textWelcomeUsername.setFont(font);
     textWelcomeUsername.setCharacterSize(50);
     textWelcomeUsername.setPosition(width, height - 350);
-    textWelcomeUsername.setColor(sf::Color::White);
+    textWelcomeUsername.setFillColor(sf::Color::White);
     textWelcomeUsername.setString(Game::gameData->player->getUsername());
 
     Game::gameData->window.draw(textWelcome);
@@ -48,7 +48,7 @@ void MenuHomeState::draw() {
         (*it)->option.setPosition(
                 sf::Vector2f(width, height + i * 100));
         if (i == menu.getSelectedItemIndex()) {
-            (*it)->option.setColor(sf::Color(246, 136, 121));
+            (*it)->option.setFillColor(sf::Color(200, 100, 0));
         }
         Game::gameData->window.draw((*it)->option);
     }
