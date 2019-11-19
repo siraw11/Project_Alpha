@@ -80,22 +80,22 @@ void ShopState::draw() {
     int i = 0;
     for (it = menu->options.begin(), i = 0; it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
-        (*it)->option.setColor(sf::Color::White);
+        (*it)->option.setFillColor(sf::Color::White);
         if (i < Game::gameData->levels.size()) {
             if (Game::gameData->levels.at((*it)->getValue())->getIsUnlocked()) {
                 if (i == menu->getSelectedItemIndex()) {
-                    (*it)->option.setColor(sf::Color::Red);
+                    (*it)->option.setFillColor(sf::Color(200, 100, 0));
                 }
             } else {
                 if (i == menu->getSelectedItemIndex()) {
-                    (*it)->option.setColor(sf::Color(100, 10, 100));
+                    (*it)->option.setFillColor(sf::Color(100, 10, 100));
                 } else {
-                    (*it)->option.setColor(sf::Color(10, 10, 100));
+                    (*it)->option.setFillColor(sf::Color(10, 10, 100));
                 }
             }
         } else {
             if (i == menu->getSelectedItemIndex()) {
-                (*it)->option.setColor(sf::Color::Red);
+                (*it)->option.setFillColor(sf::Color(200, 100, 0));
             }
         }
 
