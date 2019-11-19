@@ -1764,17 +1764,23 @@ CMakeFiles/core.dir/Map.cpp.o
  ../Box2D/Dynamics/b2TimeStep.h
  ../Box2D/Dynamics/b2World.h
  ../Box2D/Dynamics/b2WorldCallbacks.h
+ ../GameStates/State.h
+ ../GameStates/StateMachine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Checkpoint.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Coin.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Map.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp

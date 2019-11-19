@@ -277,10 +277,6 @@ Match.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
 SFML/Graphics.hpp
 -
-chrono
--
-ctime
--
 Box2D/Box2D.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
 Map.h
