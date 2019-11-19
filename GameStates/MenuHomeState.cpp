@@ -21,7 +21,7 @@ void MenuHomeState::draw() {
 
 
     sf::Font font;
-    if (!font.loadFromFile("./fonts/Arial.ttf")) {}
+    if (!font.loadFromFile("./resources/fonts/Arial.ttf")) {}
     sf::Text textWelcome;
     textWelcome.setPosition(width, height);
     textWelcome.setFont(font);

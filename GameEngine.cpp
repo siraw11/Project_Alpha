@@ -315,19 +315,19 @@ void GameEngine::initBike() {
 
 
     //Caricamento Texture Ruote moto
-    bool wheelTextureFound = wheelTexture.loadFromFile("./textures/wheel.png");
+    bool wheelTextureFound = wheelTexture.loadFromFile("./resources/textures/wheel.png");
     if (!wheelTextureFound)
         std::cout << "Impossibile caricare texture Ruote - Moto" << std::endl;
     //-----------------------
 
     //Caricamento Texture Cart moto
-    bool cartTextureFound = cartTexture.loadFromFile("./textures/cart.png");
+    bool cartTextureFound = cartTexture.loadFromFile("./resources/textures/cart.png");
     if (!cartTextureFound)
         std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
 
     //------------------------
 
-    bool interfaceCoinTextureFound = interfaceCoinTexture.loadFromFile("./textures/coin.png");
+    bool interfaceCoinTextureFound = interfaceCoinTexture.loadFromFile("./resources/textures/coin.png");
     if (!interfaceCoinTextureFound)
         std::cout << "Impossibile caricare texture Contatore Monete" << std::endl;
 
@@ -421,7 +421,7 @@ void GameEngine::drawItem(Item *item) {
 
 void GameEngine::drawInterface() {
     sf::Font font;
-    if (!font.loadFromFile("./fonts/Arial.ttf")) {}
+    if (!font.loadFromFile("./resources/fonts/Arial.ttf")) {}
     float interfaceX = (view.getCenter().x) - ((view.getSize().x) / 2);
     float interfaceY = (view.getCenter().y) - ((view.getSize().y) / 2);
 

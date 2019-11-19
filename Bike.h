@@ -46,6 +46,8 @@ public:
 
     void setIsUnlocked(bool isUnlocked);
 
+    void loadBike(int n);
+
 
 private:
     std::string name;

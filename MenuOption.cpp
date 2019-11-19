@@ -4,7 +4,7 @@
 #include "MenuOption.h"
 
 MenuOption::MenuOption(const std::string &_text) {
-    font.loadFromFile("./fonts/Arial.ttf");
+    font.loadFromFile("./resources/fonts/Arial.ttf");
     option.setString(_text);
     option.setColor(sf::Color::White);
     option.setCharacterSize(40);
