@@ -30,7 +30,7 @@ void MenuPauseState::draw() {
         (*it)->option.setPosition(
                 sf::Vector2f(width, height + i * 100));
         if (i == menu.getSelectedItemIndex()) {
-            (*it)->option.setColor(sf::Color::Red);
+            (*it)->option.setFillColor(sf::Color(200, 100, 0));
         }
         Game::gameData->window.draw((*it)->option);
     }
