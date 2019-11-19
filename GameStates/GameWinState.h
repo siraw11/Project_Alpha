@@ -17,6 +17,8 @@ public:
     virtual ~GameWinState();
 
 private:
+    bool isRecord = false;
+
     void update() override;
 
     void draw() override;

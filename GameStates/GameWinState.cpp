@@ -9,7 +9,18 @@
 GameWinState::GameWinState() {
     Game::gameData->engine->setPause(true);
     Game::gameData->match->timer->stop();
+    float bestRecord = Game::gameData->match->map->getRecord();
+    float newRecord = Game::gameData->match->timer->elapsedMilliseconds();
 
+    if (newRecord < bestRecord || bestRecord == 0) {
+        Game::gameData->match->map->setRecord(newRecord);
+        this->isRecord = true;
+    }
+
+    std::cout << "Actual map record:" << bestRecord << std::endl;
+    std::cout << "new record:" << newRecord << std::endl;
+
+    Game::gameData->match->map->resetItems();
     this->menu = new Menu(MenuType::Home, GameWinState::loadMenu());
 }
 
@@ -31,12 +42,29 @@ void GameWinState::draw() {
     std::vector<MenuOption *>::iterator it;
     float width = Game::gameData->window.getView().getCenter().x;
     float height = Game::gameData->window.getView().getCenter().y;
+
+
+    if (this->isRecord) {
+        sf::Font font;
+        if (!font.loadFromFile("./fonts/Arial.ttf")) {}
+        sf::Text textRecord;
+        textRecord.setPosition(width, height);
+        textRecord.setFont(font);
+        textRecord.setCharacterSize(80);
+        textRecord.setPosition(width - 150, height - 400);
+        textRecord.setFillColor(sf::Color(50, 255, 100));
+        textRecord.setString("New Record !\n" + Game::gameData->match->map->getRecordString());
+        Game::gameData->window.draw(textRecord);
+    }
+
+
+
     int i = 0;
     for (it = menu->options.begin(); it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(
                 sf::Vector2f(width, height + i * 100));
         if (i == menu->getSelectedItemIndex()) {
-            (*it)->option.setColor(sf::Color::Red);
+            (*it)->option.setColor(sf::Color(200, 100, 0));
         }
         Game::gameData->window.draw((*it)->option);
     }
