@@ -443,7 +443,7 @@ void GameEngine::drawInterface() {
     textTimer.setCharacterSize(80);
     textTimer.setColor(sf::Color::Black);
     textTimer.setString(
-            Game::gameData->match->timer->elapsedString(Game::gameData->match->timer->elapsedMilliseconds()));
+            Game::gameData->match->timer->elapsedString(Game::gameData->match->timer->getTime()));
 
     Game::gameData->window.draw(spriteCoin);
     Game::gameData->window.draw(textCoin);

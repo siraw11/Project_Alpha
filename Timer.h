@@ -13,19 +13,25 @@ public:
 
     void stop();
 
+    void update();
+
     static std::string elapsedString(long t);
 
     double elapsedSeconds();
 
     double elapsedMilliseconds();
 
-private:
-    static std::string chronoFormat(float t);
+    time_t getTime();
 
+private:
     std::time_t time;
+    std::time_t elapsed;
+
     std::chrono::time_point<std::chrono::system_clock> startTime;
     std::chrono::time_point<std::chrono::system_clock> endTime;
     bool running = false;
+
+    static std::string chronoFormat(float t);
 };
 
 

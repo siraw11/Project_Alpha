@@ -3,7 +3,6 @@
 //
 
 #include "Timer.h"
-#include <iomanip>
 
 void Timer::start() {
     startTime = std::chrono::system_clock::now();
@@ -12,27 +11,29 @@ void Timer::start() {
 
 void Timer::stop() {
     endTime = std::chrono::system_clock::now();
-    time = elapsedMilliseconds();
+    elapsed = time;
     running = false;
+}
+
+void Timer::update() {
+    time = elapsedMilliseconds();
 }
 
 
 double Timer::elapsedMilliseconds() {
-    std::chrono::time_point<std::chrono::system_clock> endTime;
-
+    std::chrono::time_point<std::chrono::system_clock> endTimeNow;
     if (running) {
-        endTime = std::chrono::system_clock::now();
+        endTimeNow = std::chrono::system_clock::now();
     } else {
-        endTime = this->endTime;
+        endTimeNow = this->endTime;
     }
-
-    return time + std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime).count();
+    double diffTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTimeNow - startTime).count();
+    return diffTime;
 }
 
 double Timer::elapsedSeconds() {
     return elapsedMilliseconds() / 1000.0;
 }
-
 
 std::string Timer::elapsedString(long milli) {
     long hr = milli / 3600000;
@@ -53,4 +54,14 @@ std::string Timer::chronoFormat(float t) {
         s = std::to_string(t).substr(0, 2);
     }
     return s;
+}
+
+time_t Timer::getTime() {
+    update();
+    if (running) {
+        time += elapsed;
+    } else {
+        time = elapsed;
+    }
+    return time;
 }
