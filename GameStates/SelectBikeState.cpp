@@ -99,7 +99,7 @@ void SelectBikeState::handleInput(sf::Event event) {
                 case sf::Keyboard::Enter:
                     std::string actionValue = menu->options.at(menu->getSelectedItemIndex())->getValue();
                     if (actionValue == "back") {
-                        Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
+                        Game::gameData->machine.pop_state();
                     } else {
                         if (actionValue.find("b") != std::string::npos) {
                             auto bike = Game::gameData->bikes.at(actionValue);
