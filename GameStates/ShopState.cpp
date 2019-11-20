@@ -22,18 +22,16 @@ std::vector<MenuOption *> ShopState::loadLevelsOptions() {
     MenuOption *option;
 
     int i = 0;
-    bool unlockNext = false;
-    for (auto it = Game::gameData->levels.begin(); it != Game::gameData->levels.end(); ++it, ++i) {
-        if (unlockNext) {
-            it->second->setIsUnlocked(unlockNext);
-        }
-        unlockNext = it->second->getIsCompleted();
-
+    for (auto it = Game::gameData->bikes.begin(); it != Game::gameData->bikes.end(); ++it, ++i) {
+        std::string bikeInfo = it->second->getName();
         if (it->second->getIsUnlocked()) {
-            option = new MenuOption(it->second->getName());
+            bikeInfo += " (already bought)";
         } else {
-            option = new MenuOption(it->second->getName() + " (locked)");
+            bikeInfo +=
+                    std::to_string((int) it->second->getSpeed()) + " [buy for" +
+                    std::to_string(it->second->getPrice()) + "]";
         }
+        option = new MenuOption(bikeInfo);
         option->setValue(it->second->getId());
         options.push_back(option);
     }
@@ -61,7 +59,7 @@ void ShopState::draw() {
     textHeader.setFont(font);
     textHeader.setCharacterSize(80);
     textHeader.setPosition(width, height - 350);
-    textHeader.setColor(sf::Color(50, 50, 100));
+    textHeader.setFillColor(sf::Color(50, 50, 100));
     textHeader.setString("Shop");
     Game::gameData->window.draw(textHeader);
 
@@ -71,7 +69,7 @@ void ShopState::draw() {
     textCoins.setFont(font);
     textCoins.setCharacterSize(40);
     textCoins.setPosition(width, height - 250);
-    textCoins.setColor(sf::Color(255, 255, 255));
+    textCoins.setFillColor(sf::Color(255, 255, 255));
     std::string stringTotalCoins = "You have:";
     textCoins.setString("You have: " + std::to_string(Game::gameData->player->getTotalCoin()) + " coins");
     Game::gameData->window.draw(textCoins);
@@ -81,8 +79,8 @@ void ShopState::draw() {
     for (it = menu->options.begin(), i = 0; it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
         (*it)->option.setFillColor(sf::Color::White);
-        if (i < Game::gameData->levels.size()) {
-            if (Game::gameData->levels.at((*it)->getValue())->getIsUnlocked()) {
+        if (i < Game::gameData->bikes.size()) {
+            if (Game::gameData->bikes.at((*it)->getValue())->getIsUnlocked()) {
                 if (i == menu->getSelectedItemIndex()) {
                     (*it)->option.setFillColor(sf::Color(200, 100, 0));
                 }
@@ -119,14 +117,19 @@ void ShopState::handleInput(sf::Event event) {
                     if (actionValue == "back") {
                         Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
                     } else {
-                        if (actionValue.find("lv") != std::string::npos) {//controllo sia un livello
-                            auto level = Game::gameData->levels.at(actionValue);
-                            if (level->getIsUnlocked()) {
-                                std::cout << "Selected Level:" << level->getName() << std::endl;
-                                Game::gameData->match->setMap(level);
-                                Game::gameData->machine.push_state(StateRef(new GameState(true)));
+                        if (actionValue.find("b") != std::string::npos) {//controllo sia una moto
+                            auto bike = Game::gameData->bikes.at(actionValue);
+                            if (!bike->getIsUnlocked()) {
+                                std::cout << "Selected Bike to buy:" << bike->getName() << std::endl;
+                                if (Game::gameData->player->getTotalCoin() >= bike->getPrice()) {
+                                    Game::gameData->player->removeTotalCoin(bike->getPrice());
+                                    Game::gameData->bikes.at(bike->getId())->setIsUnlocked(true);
+                                    std::cout << bike->getName() << " bought!" << std::endl;
+                                } else {
+                                    std::cout << "Sorry, you are poor D:" << std::endl;
+                                }
                             } else {
-                                std::cout << "Level " << level->getName() << " is locked!" << std::endl;
+                                std::cout << "Bike " << bike->getName() << " already bought!" << std::endl;
                             }
                         }
                     }
