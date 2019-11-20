@@ -62,7 +62,6 @@ private:
     b2WheelJoint *wheelEngineR;
     b2Vec2 gravity = b2Vec2(0, 9.8);
     b2World world = b2World(gravity);
-    Bike bike = {};
 
     const float SCALE = 200.;
     const float WHEEL_SIZE = 0.23;

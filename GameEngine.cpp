@@ -9,7 +9,6 @@
 
 #include "GameEngine.h"
 #include "Player.h"
-#include "Bike.h"
 #include "Item.h"
 #include "Game.h"
 
@@ -36,22 +35,17 @@ GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
     Game::gameData->window.clear(sf::Color(0, 0, 0));
 
 
-    Bike bike1("", "", 5, 0, 0, true, nullptr, nullptr, nullptr);
-
-
-    this->bike = bike1;
-
     initBike();//inizializzo la fisica del gioco
 }
 
 void GameEngine::respawn() {
     float checkpointX = Game::gameData->match->getLastCheckpoint().posX;
     float checkpointY = Game::gameData->match->getLastCheckpoint().posY + LINE - 1;
-    this->bike.wheelL->SetTransform(b2Vec2(checkpointX, checkpointY), 0);
-    this->bike.wheelR->SetTransform(b2Vec2(checkpointX + 1, checkpointY), 0);
-    this->bike.cart->SetTransform(b2Vec2(checkpointX, checkpointY + 1), 0);
-    this->bike.wheelL->SetLinearVelocity(b2Vec2(0, 0));
-    this->bike.wheelR->SetLinearVelocity(b2Vec2(0, 0));
+    Game::gameData->match->getBike()->wheelL->SetTransform(b2Vec2(checkpointX, checkpointY), 0);
+    Game::gameData->match->getBike()->wheelR->SetTransform(b2Vec2(checkpointX + 1, checkpointY), 0);
+    Game::gameData->match->getBike()->cart->SetTransform(b2Vec2(checkpointX, checkpointY + 1), 0);
+    Game::gameData->match->getBike()->wheelL->SetLinearVelocity(b2Vec2(0, 0));
+    Game::gameData->match->getBike()->wheelR->SetLinearVelocity(b2Vec2(0, 0));
     this->wheelEngineL->SetMotorSpeed(0);
     this->wheelEngineR->SetMotorSpeed(0);
     this->run();
@@ -69,10 +63,11 @@ void GameEngine::run() {
         this->world.Step(timeStep, velocityIterations, positionIterations);
 
         //la camera inizia il movimento una volta superata la metà schermo
-        if (((this->bike.wheelL->GetPosition().x + offsetX) * SCALE) > (Game::gameData->window.getSize().x / 2.)) {
+        if (((Game::gameData->match->getBike()->wheelL->GetPosition().x + offsetX) * SCALE) >
+            (Game::gameData->window.getSize().x / 2.)) {
             //camera segue il veicolo
-            double viewX = (bike.wheelL->GetPosition().x + offsetX) * SCALE;
-            double viewY = (bike.wheelL->GetPosition().y - offsetY) * SCALE;
+            double viewX = (Game::gameData->match->getBike()->wheelL->GetPosition().x + offsetX) * SCALE;
+            double viewY = (Game::gameData->match->getBike()->wheelL->GetPosition().y - offsetY) * SCALE;
             view.setCenter((float) viewX, (float) viewY);
             Game::gameData->window.setView(view);
         }
@@ -90,8 +85,8 @@ void GameEngine::run() {
             if (speed < 0) {
                 speed = 0;
             }
-            wheelEngineL->SetMotorSpeed(speed + bike.getSpeed());
-            wheelEngineR->SetMotorSpeed(speed + bike.getSpeed());
+            wheelEngineL->SetMotorSpeed(speed + Game::gameData->match->getBike()->getSpeed());
+            wheelEngineR->SetMotorSpeed(speed + Game::gameData->match->getBike()->getSpeed());
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
             //Accellerazione a Sinistra
             wheelEngineL->EnableMotor(true);
@@ -99,8 +94,8 @@ void GameEngine::run() {
             if (speed > 0) {
                 speed = 0;
             }
-            wheelEngineL->SetMotorSpeed(-(abs(speed) + bike.getSpeed()));
-            wheelEngineR->SetMotorSpeed(-(abs(speed) + bike.getSpeed()));
+            wheelEngineL->SetMotorSpeed(-(abs(speed) + Game::gameData->match->getBike()->getSpeed()));
+            wheelEngineR->SetMotorSpeed(-(abs(speed) + Game::gameData->match->getBike()->getSpeed()));
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
             //Freno a mano
             wheelEngineL->EnableMotor(true);
@@ -124,11 +119,12 @@ void GameEngine::run() {
 
         //itero la lista degli Items nella mappa
 
-        std::list<Item *> items = Game::gameData->match->map->getMapItems();
+        std::list<Item *> items = Game::gameData->match->getMap()->getMapItems();
         for (auto &item : items) {
             if (!item->isTaken()) {
                 //controllo se collidono
-                bool collided = checkCollision(bike.cart->GetPosition().x, bike.cart->GetPosition().y, cartX,
+                bool collided = checkCollision(Game::gameData->match->getBike()->cart->GetPosition().x,
+                                               Game::gameData->match->getBike()->cart->GetPosition().y, cartX,
                                                (float) item->getPosX(), LINE + (float) item->getPosY(),
                                                (float) item->getWidth(),
                                                (float) item->getHeight());
@@ -145,15 +141,15 @@ void GameEngine::run() {
 
         drawInterface();
 
-        flipAngle = abs(degToGrad(bike.cart->GetAngle())) - (360.f * (float) countFlips);
+        flipAngle = abs(degToGrad(Game::gameData->match->getBike()->cart->GetAngle())) - (360.f * (float) countFlips);
         if (flipAngle > 350 && flipAngle < 370) {
             countFlips++;
             flipAngle = 0;
             std::cout << countFlips << " Flip!" << std::endl;
         }
 
-        if (flipAngle > 160 && flipAngle < 220 && bike.cart->GetLinearVelocity().x <= 0 &&
-            bike.cart->GetLinearVelocity().y <= 0) {
+        if (flipAngle > 160 && flipAngle < 220 && Game::gameData->match->getBike()->cart->GetLinearVelocity().x <= 0 &&
+            Game::gameData->match->getBike()->cart->GetLinearVelocity().y <= 0) {
             if (Game::gameData->match->getLifes() > 0) {
                 this->setPause(true);
                 Game::gameData->machine.push_state(StateRef(new GameLostState()));
@@ -192,14 +188,13 @@ void GameEngine::drawMap() {
     groundBodyDef.position.Set(0, LINE);
 
     b2Body *groundBody = this->world.CreateBody(&groundBodyDef);
-    //sf::VertexArray terrain;
-    sf::VertexArray terrain(sf::TriangleStrip, Game::gameData->match->map->getMapPoints().size() * 2);
+    sf::VertexArray terrain(sf::TriangleStrip, Game::gameData->match->getMap()->getMapPoints().size() * 2);
 
 
     int i = 0;
     int j = 0;
-    b2Vec2 vs[Game::gameData->match->map->getMapPoints().size()];//box2D map points
-    for (Position point : Game::gameData->match->map->getMapPoints()) {
+    b2Vec2 vs[Game::gameData->match->getMap()->getMapPoints().size()];//box2D map points
+    for (Position point : Game::gameData->match->getMap()->getMapPoints()) {
         vs[i].Set(point.posX, -point.posY);
         terrain[j].position = sf::Vector2f(point.posX * SCALE,
                                            Game::gameData->window.getSize().y / 1.3 - (point.posY * SCALE));
@@ -207,13 +202,12 @@ void GameEngine::drawMap() {
         j++;
         terrain[j].position = sf::Vector2f(point.posX * SCALE, 4000);
         terrain[j].color = sf::Color(168, 75, 0);
-        //normal index increment
         j++;
         i++;
     }
     //Unisco tutti i punti con delle rette
     b2ChainShape chain;
-    chain.CreateChain(vs, Game::gameData->match->map->getMapPoints().size());
+    chain.CreateChain(vs, Game::gameData->match->getMap()->getMapPoints().size());
 
 
     groundBody->CreateFixture(&chain, 0.0f);//0.0f->massa solido
@@ -243,8 +237,8 @@ void GameEngine::initBike() {
     cartFixtureDef.filter.groupIndex = 2;
 
     //Inizializzazione Cart
-    bike.cart = world.CreateBody(&cartBodyDef);
-    bike.cart->CreateFixture(&cartFixtureDef);
+    Game::gameData->match->getBike()->cart = world.CreateBody(&cartBodyDef);
+    Game::gameData->match->getBike()->cart->CreateFixture(&cartFixtureDef);
 
 
     /*----------------------------------------
@@ -268,13 +262,13 @@ void GameEngine::initBike() {
 
     //Inizializzazione ruota sinistra
     wheelDef.position.Set(1, LINE - WHEEL_SIZE);//Posizione iniziale ruota sinistra
-    bike.wheelL = world.CreateBody(&wheelDef);
-    bike.wheelL->CreateFixture(&wheelFixtureDef);
+    Game::gameData->match->getBike()->wheelL = world.CreateBody(&wheelDef);
+    Game::gameData->match->getBike()->wheelL->CreateFixture(&wheelFixtureDef);
 
     //Inizializzazione ruota destra
     wheelDef.position.Set(3, LINE - WHEEL_SIZE);//Posizione iniziale ruota destra
-    bike.wheelR = world.CreateBody(&wheelDef);
-    bike.wheelR->CreateFixture(&wheelFixtureDef);
+    Game::gameData->match->getBike()->wheelR = world.CreateBody(&wheelDef);
+    Game::gameData->match->getBike()->wheelR->CreateFixture(&wheelFixtureDef);
 
 
     /*
@@ -283,7 +277,8 @@ void GameEngine::initBike() {
 
     //Distance joint per connettere la ruota destra e quella sinistra
     b2DistanceJointDef dJointDefR_L;
-    dJointDefR_L.Initialize(bike.wheelL, bike.wheelR, b2Vec2(0, 0), b2Vec2(0, 0));
+    dJointDefR_L.Initialize(Game::gameData->match->getBike()->wheelL, Game::gameData->match->getBike()->wheelR,
+                            b2Vec2(0, 0), b2Vec2(0, 0));
     dJointDefR_L.collideConnected = false;
     dJointDefR_L.localAnchorA.Set(0, 0);
     dJointDefR_L.localAnchorB.Set(0, 0);
@@ -294,7 +289,7 @@ void GameEngine::initBike() {
 
     //Definizione Caratteristiche Wheel Joint
     b2WheelJointDef wheelJointDef;
-    wheelJointDef.bodyA = bike.cart;
+    wheelJointDef.bodyA = Game::gameData->match->getBike()->cart;
     wheelJointDef.localAnchorB.Set(0, 0);
     wheelJointDef.enableMotor = true;
     wheelJointDef.maxMotorTorque = 30;
@@ -302,13 +297,13 @@ void GameEngine::initBike() {
     wheelJointDef.dampingRatio = .8;
 
     //Inizializzazione Wheel Joint ruota sinistra
-    wheelJointDef.bodyB = bike.wheelL;
+    wheelJointDef.bodyB = Game::gameData->match->getBike()->wheelL;
     wheelJointDef.localAnchorA.Set(-125 * 1 / SCALE, 50 * 1 / SCALE);
     wheelEngineL = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
 
 
     //Inizializzazione Wheel Joint ruota destra
-    wheelJointDef.bodyB = bike.wheelR;
+    wheelJointDef.bodyB = Game::gameData->match->getBike()->wheelR;
     wheelJointDef.enableMotor = false; //se attivo impedirebbe il movimento
     wheelJointDef.localAnchorA.Set(125 * 1 / SCALE, 50 * 1 / SCALE);
     wheelEngineR = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
@@ -352,17 +347,17 @@ void GameEngine::drawBike() {
 
 
     //Ricavo nuovi dati fisici ruota sinistra
-    b2Vec2 positionWheelL = bike.wheelL->GetPosition();                //posizione
-    float32 angleWheelL = ceil(degToGrad(bike.wheelL->GetAngle()));    //angolo
+    b2Vec2 positionWheelL = Game::gameData->match->getBike()->wheelL->GetPosition();                //posizione
+    float32 angleWheelL = ceil(degToGrad(Game::gameData->match->getBike()->wheelL->GetAngle()));    //angolo
 
     //Ricavo nuovi dati fisici ruota destra
-    b2Vec2 positionWheelR = bike.wheelR->GetPosition();                //posizione
-    float32 angleWheelR = ceil(degToGrad(bike.wheelR->GetAngle()));    //angolo
+    b2Vec2 positionWheelR = Game::gameData->match->getBike()->wheelR->GetPosition();                //posizione
+    float32 angleWheelR = ceil(degToGrad(Game::gameData->match->getBike()->wheelR->GetAngle()));    //angolo
 
 
     //Ricavo nuovi dati fisici cart
-    b2Vec2 positionCart = bike.cart->GetPosition();                    //posizione
-    float32 angleCart = ceil(degToGrad(bike.cart->GetAngle()));        //angolo
+    b2Vec2 positionCart = Game::gameData->match->getBike()->cart->GetPosition();                    //posizione
+    float32 angleCart = ceil(degToGrad(Game::gameData->match->getBike()->cart->GetAngle()));        //angolo
 
 
 
