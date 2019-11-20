@@ -310,6 +310,33 @@ GameEngine.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameEngine.cpp.s
 .PHONY : GameEngine.cpp.s
 
+GameManager/AssetManager.o: GameManager/AssetManager.cpp.o
+
+.PHONY : GameManager/AssetManager.o
+
+# target to build an object file
+GameManager/AssetManager.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.o
+.PHONY : GameManager/AssetManager.cpp.o
+
+GameManager/AssetManager.i: GameManager/AssetManager.cpp.i
+
+.PHONY : GameManager/AssetManager.i
+
+# target to preprocess a source file
+GameManager/AssetManager.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.i
+.PHONY : GameManager/AssetManager.cpp.i
+
+GameManager/AssetManager.s: GameManager/AssetManager.cpp.s
+
+.PHONY : GameManager/AssetManager.s
+
+# target to generate assembly for a file
+GameManager/AssetManager.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.s
+.PHONY : GameManager/AssetManager.cpp.s
+
 GameStates/GameLostState.o: GameStates/GameLostState.cpp.o
 
 .PHONY : GameStates/GameLostState.o
@@ -444,6 +471,33 @@ GameStates/MenuPauseState.s: GameStates/MenuPauseState.cpp.s
 GameStates/MenuPauseState.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.s
 .PHONY : GameStates/MenuPauseState.cpp.s
+
+GameStates/SelectBikeState.o: GameStates/SelectBikeState.cpp.o
+
+.PHONY : GameStates/SelectBikeState.o
+
+# target to build an object file
+GameStates/SelectBikeState.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o
+.PHONY : GameStates/SelectBikeState.cpp.o
+
+GameStates/SelectBikeState.i: GameStates/SelectBikeState.cpp.i
+
+.PHONY : GameStates/SelectBikeState.i
+
+# target to preprocess a source file
+GameStates/SelectBikeState.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.i
+.PHONY : GameStates/SelectBikeState.cpp.i
+
+GameStates/SelectBikeState.s: GameStates/SelectBikeState.cpp.s
+
+.PHONY : GameStates/SelectBikeState.s
+
+# target to generate assembly for a file
+GameStates/SelectBikeState.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.s
+.PHONY : GameStates/SelectBikeState.cpp.s
 
 GameStates/SelectLevelState.o: GameStates/SelectLevelState.cpp.o
 
@@ -878,6 +932,9 @@ help:
 	@echo "... GameEngine.o"
 	@echo "... GameEngine.i"
 	@echo "... GameEngine.s"
+	@echo "... GameManager/AssetManager.o"
+	@echo "... GameManager/AssetManager.i"
+	@echo "... GameManager/AssetManager.s"
 	@echo "... GameStates/GameLostState.o"
 	@echo "... GameStates/GameLostState.i"
 	@echo "... GameStates/GameLostState.s"
@@ -893,6 +950,9 @@ help:
 	@echo "... GameStates/MenuPauseState.o"
 	@echo "... GameStates/MenuPauseState.i"
 	@echo "... GameStates/MenuPauseState.s"
+	@echo "... GameStates/SelectBikeState.o"
+	@echo "... GameStates/SelectBikeState.i"
+	@echo "... GameStates/SelectBikeState.s"
 	@echo "... GameStates/SelectLevelState.o"
 	@echo "... GameStates/SelectLevelState.i"
 	@echo "... GameStates/SelectLevelState.s"

@@ -300,6 +300,12 @@
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h">
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameManager/AssetManager.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameManager/AssetManager.h">
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameLostState.cpp">
 			<Option target="core"/>
 		</Unit>
@@ -328,6 +334,12 @@
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuPauseState.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectBikeState.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectBikeState.h">
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectLevelState.cpp">

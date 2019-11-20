@@ -198,6 +198,24 @@ Box2D/Dynamics/b2TimeStep.h
 Box2D/Common/b2Settings.h
 -
 
+../GameManager/AssetManager.h
+SFML/Graphics.hpp
+-
+iostream
+-
+
+../GameStates/State.h
+SFML/Graphics.hpp
+-
+
+../GameStates/StateMachine.h
+memory
+-
+stack
+-
+State.h
+../GameStates/State.h
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
 iostream
 -
@@ -284,18 +302,6 @@ Map.h
 Item.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/State.h
-SFML/Graphics.hpp
--
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.h
-memory
--
-stack
--
-State.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/State.h
-
 /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
 iostream
 -
@@ -347,8 +353,8 @@ iostream
 -
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/main.cpp
-GameStates/StateMachine.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.h
+GameManager/AssetManager.h
+-
 Game.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
 

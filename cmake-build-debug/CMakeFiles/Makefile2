@@ -83,7 +83,7 @@ CMakeFiles/Motocross2D.dir/all: CMakeFiles/core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Motocross2D.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Motocross2D.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Motocross2D.dir/rule
@@ -105,12 +105,12 @@ CMakeFiles/Motocross2D.dir/clean:
 CMakeFiles/core.dir/all:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/depend
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 "Built target core"
 .PHONY : CMakeFiles/core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/core.dir/rule
@@ -149,17 +149,17 @@ test/preinstall: test/lib/googletest/preinstall
 # Target rules for target test/CMakeFiles/runTests.dir
 
 # All Build rule for target.
-test/CMakeFiles/runTests.dir/all: CMakeFiles/core.dir/all
 test/CMakeFiles/runTests.dir/all: test/lib/googletest/CMakeFiles/gtest_main.dir/all
 test/CMakeFiles/runTests.dir/all: test/lib/googletest/CMakeFiles/gtest.dir/all
+test/CMakeFiles/runTests.dir/all: CMakeFiles/core.dir/all
 	$(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/depend
 	$(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=32,33,34,35,36,37,38 "Built target runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=34,35,36,37,38,39,40 "Built target runTests"
 .PHONY : test/CMakeFiles/runTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/runTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 0
 .PHONY : test/CMakeFiles/runTests.dir/rule
@@ -201,7 +201,7 @@ test/lib/googletest/preinstall:
 test/lib/googletest/CMakeFiles/gtest_main.dir/all: test/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=30,31 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=32,33 "Built target gtest_main"
 .PHONY : test/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -228,7 +228,7 @@ test/lib/googletest/CMakeFiles/gtest_main.dir/clean:
 test/lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=28,29 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=30,31 "Built target gtest"
 .PHONY : test/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.

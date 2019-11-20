@@ -37,12 +37,13 @@ CMakeFiles/Motocross2D.dir/main.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
+CMakeFiles/Motocross2D.dir/main.cpp.o: ../GameManager/AssetManager.h
+CMakeFiles/Motocross2D.dir/main.cpp.o: ../GameStates/State.h
+CMakeFiles/Motocross2D.dir/main.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Bike.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Game.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../GameEngine.h
-CMakeFiles/Motocross2D.dir/main.cpp.o: ../GameStates/State.h
-CMakeFiles/Motocross2D.dir/main.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Item.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Map.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Match.h

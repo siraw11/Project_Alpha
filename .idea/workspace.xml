@@ -15,24 +15,31 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="minor fixes">
+    <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="Updated resources path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Checkpoint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Checkpoint.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bike.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bike.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bike.h" beforeDir="false" afterPath="$PROJECT_DIR$/Bike.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameStates/GameWinState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/GameWinState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStates/GameWinState.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/GameWinState.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStates/MenuHomeState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/MenuHomeState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStates/MenuPauseState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/MenuPauseState.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameStates/SelectLevelState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/SelectLevelState.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameStates/ShopState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/ShopState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Map.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Map.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Timer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Timer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Match.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Match.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Match.h" beforeDir="false" afterPath="$PROJECT_DIR$/Match.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Bike.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Bike.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Checkpoint.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Checkpoint.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Coin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Coin.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Game.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Game.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameLostState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameLostState.cpp.o" afterDir="false" />
@@ -44,11 +51,24 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/ShopState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/ShopState.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Map.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Map.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Match.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Match.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/MenuOption.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/MenuOption.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Player.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Player.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Timer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Timer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Motocross2D.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Motocross2D.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/libcore.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libcore.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +114,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/GameStates" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -213,98 +234,7 @@
       <workItem from="1573191865369" duration="45579000" />
       <workItem from="1573897315812" duration="5019000" />
       <workItem from="1573917189307" duration="4071000" />
-      <workItem from="1573922544533" duration="32132000" />
-    </task>
-    <task id="LOCAL-00085" summary="Implemented doSpecial()">
-      <created>1573542942934</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1573542942934</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Added GameWinState and GameLostState to source">
-      <created>1573542985100</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1573542985100</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Created GameWinState">
-      <created>1573543010629</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543010629</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Created GameLostState">
-      <created>1573543020249</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543020249</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Removed unused code">
-      <created>1573543042808</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543042808</updated>
-    </task>
-    <task id="LOCAL-00090" summary="Added end match checkpoint support">
-      <created>1573543069593</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543069593</updated>
-    </task>
-    <task id="LOCAL-00091" summary="minor fexes and clean">
-      <created>1573543095693</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543095693</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Added final checkpoint to maps">
-      <created>1573543118416</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543118416</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Added addMoney() method">
-      <created>1573543146322</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543146322</updated>
-    </task>
-    <task id="LOCAL-00094" summary="added update to isCompleted map boolean at match end">
-      <created>1573543312127</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1573543312128</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Implemented with menu">
-      <created>1573545786996</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1573545786996</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Added respawn method">
-      <created>1573545801766</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1573545801766</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Implemented checkpoin save">
-      <created>1573545825547</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1573545825547</updated>
+      <workItem from="1573922544533" duration="50519000" />
     </task>
     <task id="LOCAL-00098" summary="Updated level points">
       <created>1573545867934</created>
@@ -558,7 +488,98 @@
       <option name="project" value="LOCAL" />
       <updated>1574156006145</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Added record support">
+      <created>1574156036870</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156036870</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Changed setColor to setFillColor">
+      <created>1574156046768</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156046768</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Changed setColor to setFillColor">
+      <created>1574156087224</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156087224</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Changed setColor to setFillColor&#10;Added reset items">
+      <created>1574156112619</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156112619</updated>
+    </task>
+    <task id="LOCAL-00138" summary="Changed setColor to setFillColor">
+      <created>1574156141856</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156141856</updated>
+    </task>
+    <task id="LOCAL-00139" summary="minor fixes">
+      <created>1574156164177</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156164177</updated>
+    </task>
+    <task id="LOCAL-00140" summary="timer fix">
+      <created>1574160963546</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1574160963547</updated>
+    </task>
+    <task id="LOCAL-00141" summary="Updated resources path">
+      <created>1574168506768</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1574168506768</updated>
+    </task>
+    <task id="LOCAL-00142" summary="Created AssetManager">
+      <created>1574265239630</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1574265239630</updated>
+    </task>
+    <task id="LOCAL-00143" summary="Added Asset Manager, Shop, SelectBike">
+      <created>1574265275129</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1574265275129</updated>
+    </task>
+    <task id="LOCAL-00144" summary="Added assetManager">
+      <created>1574265302176</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1574265302176</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Added SelectBike State">
+      <created>1574265332359</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1574265332359</updated>
+    </task>
+    <task id="LOCAL-00146" summary="minor fix">
+      <created>1574265376513</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1574265376513</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,14 +615,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added taken value" />
-    <MESSAGE value="Added taken attribute" />
-    <MESSAGE value="Added id and name attributes" />
-    <MESSAGE value="Added map as shared ptr" />
-    <MESSAGE value="Added value attribute" />
-    <MESSAGE value="implemented taken" />
-    <MESSAGE value="Addeded match ptr" />
-    <MESSAGE value="Added checkpoint texture" />
     <MESSAGE value="Unlocked second level" />
     <MESSAGE value="Removed wrong match reinitialization" />
     <MESSAGE value="Added is completed" />
@@ -614,12 +627,20 @@
     <MESSAGE value="Add ShopState" />
     <MESSAGE value="implemented player" />
     <MESSAGE value="minor graphics change" />
-    <MESSAGE value="minor fix" />
-    <MESSAGE value="minor fixes" />
     <MESSAGE value="Added timer" />
     <MESSAGE value="Added Timer" />
+    <MESSAGE value="Added record support" />
+    <MESSAGE value="Changed setColor to setFillColor&#10;Added reset items" />
     <MESSAGE value="Changed setColor to setFillColor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed setColor to setFillColor" />
+    <MESSAGE value="minor fixes" />
+    <MESSAGE value="timer fix" />
+    <MESSAGE value="Updated resources path" />
+    <MESSAGE value="Created AssetManager" />
+    <MESSAGE value="Added Asset Manager, Shop, SelectBike" />
+    <MESSAGE value="Added assetManager" />
+    <MESSAGE value="Added SelectBike State" />
+    <MESSAGE value="minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fix" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
