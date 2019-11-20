@@ -16,9 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libcore.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libcore.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/SelectBikeState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/SelectBikeState.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,21 +182,7 @@
       <workItem from="1573191865369" duration="45579000" />
       <workItem from="1573897315812" duration="5019000" />
       <workItem from="1573917189307" duration="4071000" />
-      <workItem from="1573922544533" duration="55926000" />
-    </task>
-    <task id="LOCAL-00115" summary="Added is completed">
-      <created>1574016059334</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1574016059334</updated>
-    </task>
-    <task id="LOCAL-00116" summary="Removed window class attribute and changed to gamedata window">
-      <created>1574016072076</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1574016072076</updated>
+      <workItem from="1573922544533" duration="56071000" />
     </task>
     <task id="LOCAL-00117" summary="Updated texture path">
       <created>1574067761224</created>
@@ -529,7 +513,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574270807593</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Added new cart">
+      <created>1574271202557</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1574271202557</updated>
+    </task>
+    <task id="LOCAL-00165" summary=".">
+      <created>1574271232921</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1574271232921</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +563,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added record support" />
     <MESSAGE value="Changed setColor to setFillColor&#10;Added reset items" />
     <MESSAGE value="Changed setColor to setFillColor" />
     <MESSAGE value="minor fixes" />
@@ -588,9 +585,10 @@
     <MESSAGE value="added maxTorque from selected bike speed" />
     <MESSAGE value="Added bike models different texture&#10;Removed Color from bike attributes" />
     <MESSAGE value="created" />
-    <MESSAGE value="." />
     <MESSAGE value="Implemented ResourceManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented ResourceManager" />
+    <MESSAGE value="Added new cart" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
