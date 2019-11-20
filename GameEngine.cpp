@@ -316,7 +316,8 @@ void GameEngine::initBike() {
     //-----------------------
 
     //Caricamento Texture Cart moto
-    bool cartTextureFound = cartTexture.loadFromFile("./resources/textures/cart.png");
+    bool cartTextureFound = cartTexture.loadFromFile(
+            "./resources/textures/" + Game::gameData->match->getBike()->getTexture());
     if (!cartTextureFound)
         std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
 
@@ -331,18 +332,18 @@ void GameEngine::initBike() {
 void GameEngine::drawBike() {
     //Disegno ruota sinistra con Texture
     sf::CircleShape wheelLDraw(WHEEL_SIZE * SCALE);
-    wheelLDraw.setFillColor(sf::Color(255, 255, 255));
+    wheelLDraw.setFillColor(sf::Color::White);
     wheelLDraw.setTexture(&wheelTexture);
 
 
     //Disegno ruota destra con Texture
     sf::CircleShape wheelRDraw(WHEEL_SIZE * SCALE);
-    wheelRDraw.setFillColor(sf::Color(255, 255, 255));
+    wheelRDraw.setFillColor(sf::Color::White);
     wheelRDraw.setTexture(&wheelTexture);
 
     //Disegno cart con Texture
     sf::RectangleShape cartDraw(sf::Vector2f(cartX * 2 * SCALE, cartY * 3 * SCALE));
-    cartDraw.setFillColor(sf::Color(255, 255, 255));
+    cartDraw.setFillColor(sf::Color::White);
     cartDraw.setTexture(&cartTexture);
 
 

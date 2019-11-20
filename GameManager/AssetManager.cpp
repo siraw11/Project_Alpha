@@ -64,10 +64,10 @@ void AssetManager::loadBikes() {
 */
 
 void AssetManager::loadBikes() {
-    std::shared_ptr<Bike> bike = std::make_shared<Bike>(Bike("b1", "Standard", "red", 20, 0, true));
+    std::shared_ptr<Bike> bike = std::make_shared<Bike>(Bike("b1", "Standard", "cart.png", 20, 0, true));
     Game::gameData->bikes.insert(std::make_pair(bike->getId(), bike));
-    bike = std::make_shared<Bike>(Bike("b2", "Standard+", "red", 30, 200, false));
+    bike = std::make_shared<Bike>(Bike("b2", "Standard+", "cart_orange.png", 30, 200, false));
     Game::gameData->bikes.insert(std::make_pair(bike->getId(), bike));
-    bike = std::make_shared<Bike>(Bike("b3", "Rocket", "red", 50, 500, true));
+    bike = std::make_shared<Bike>(Bike("b3", "Rocket", "cart_red.png", 50, 500, true));
     Game::gameData->bikes.insert(std::make_pair(bike->getId(), bike));
 }
