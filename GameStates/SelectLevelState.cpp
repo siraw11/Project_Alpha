@@ -7,6 +7,7 @@
 #include "SelectLevelState.h"
 #include "GameState.h"
 #include "MenuHomeState.h"
+#include "SelectBikeState.h"
 
 SelectLevelState::SelectLevelState() {
     this->menu = new Menu(MenuType::Home, SelectLevelState::loadLevelsOptions());
@@ -61,7 +62,7 @@ void SelectLevelState::draw() {
     textHeader.setFont(font);
     textHeader.setCharacterSize(80);
     textHeader.setPosition(width, height - 250);
-    textHeader.setColor(sf::Color(50, 50, 100));
+    textHeader.setFillColor(sf::Color(50, 50, 100));
     textHeader.setString("Select Level");
     Game::gameData->window.draw(textHeader);
 
@@ -69,22 +70,22 @@ void SelectLevelState::draw() {
     int i = 0;
     for (it = menu->options.begin(), i = 0; it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
-        (*it)->option.setColor(sf::Color::White);
+        (*it)->option.setFillColor(sf::Color::White);
         if (i < Game::gameData->levels.size()) {
             if (Game::gameData->levels.at((*it)->getValue())->getIsUnlocked()) {
                 if (i == menu->getSelectedItemIndex()) {
-                    (*it)->option.setColor(sf::Color(200, 100, 0));
+                    (*it)->option.setFillColor(sf::Color(200, 100, 0));
                 }
             } else {
                 if (i == menu->getSelectedItemIndex()) {
-                    (*it)->option.setColor(sf::Color(200, 100, 100));
+                    (*it)->option.setFillColor(sf::Color(200, 100, 100));
                 } else {
-                    (*it)->option.setColor(sf::Color(10, 10, 100));
+                    (*it)->option.setFillColor(sf::Color(10, 10, 100));
                 }
             }
         } else {
             if (i == menu->getSelectedItemIndex()) {
-                (*it)->option.setColor(sf::Color(200, 100, 0));
+                (*it)->option.setFillColor(sf::Color(200, 100, 0));
             }
         }
 
@@ -113,8 +114,8 @@ void SelectLevelState::handleInput(sf::Event event) {
                             if (level->getIsUnlocked()) {
                                 std::cout << "Selected Level:" << level->getName() << std::endl;
                                 Game::gameData->match->setMap(level);
-                                Game::gameData->match->map->resetItems();
-                                Game::gameData->machine.push_state(StateRef(new GameState(true)));
+                                Game::gameData->match->getMap()->resetItems();
+                                Game::gameData->machine.push_state(StateRef(new SelectBikeState()));
                             } else {
                                 std::cout << "Level " << level->getName() << " is locked!" << std::endl;
                             }

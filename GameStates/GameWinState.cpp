@@ -9,18 +9,18 @@
 GameWinState::GameWinState() {
     Game::gameData->engine->setPause(true);
     Game::gameData->match->timer->stop();
-    float bestRecord = Game::gameData->match->map->getRecord();
+    float bestRecord = Game::gameData->match->getMap()->getRecord();
     float newRecord = Game::gameData->match->timer->getTime();
 
     if (newRecord < bestRecord || bestRecord == 0) {
-        Game::gameData->match->map->setRecord(newRecord);
+        Game::gameData->match->getMap()->setRecord(newRecord);
         this->isRecord = true;
     }
 
     std::cout << "Actual map record:" << bestRecord << std::endl;
     std::cout << "new record:" << newRecord << std::endl;
 
-    Game::gameData->match->map->resetItems();
+    Game::gameData->match->getMap()->resetItems();
     this->menu = new Menu(MenuType::Home, GameWinState::loadMenu());
 }
 
@@ -53,7 +53,7 @@ void GameWinState::draw() {
         textRecord.setCharacterSize(80);
         textRecord.setPosition(width - 150, height - 400);
         textRecord.setFillColor(sf::Color(50, 255, 100));
-        textRecord.setString("New Record !\n" + Game::gameData->match->map->getRecordString());
+        textRecord.setString("New Record !\n" + Game::gameData->match->getMap()->getRecordString());
         Game::gameData->window.draw(textRecord);
     }
 
@@ -83,7 +83,7 @@ void GameWinState::handleInput(sf::Event event) {
                 case sf::Keyboard::Enter:
                     switch (menu->getSelectedItemIndex()) {
                         case 0://Continue
-                            Game::gameData->match->map->setIsCompleted(true);
+                            Game::gameData->match->getMap()->setIsCompleted(true);
                             Game::gameData->player->addTotalCoin(Game::gameData->match->getMoney());
                             Game::gameData->match = std::unique_ptr<Match>(new Match());
                             Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
