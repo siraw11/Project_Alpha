@@ -43,14 +43,12 @@ public:
 
     void setIsUnlocked(bool isUnlocked);
 
-private:
-    std::string id;
-public:
     const std::string &getId() const;
 
     void setId(const std::string &id);
 
 private:
+    std::string id;
     std::string name;
     std::string color;
     float speed;
