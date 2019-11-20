@@ -31,6 +31,8 @@ public:
 
     void addTotalCoin(int incrementCoin);
 
+    void removeTotalCoin(int decrementCoin);
+
     Bike *getBike() const;
 
     void setBike(Bike *bike);

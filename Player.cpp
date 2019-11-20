@@ -27,6 +27,10 @@ void Player::addTotalCoin(int increment) {
     Player::totalCoin += increment;
 }
 
+void Player::removeTotalCoin(int increment) {
+    Player::totalCoin -= increment;
+}
+
 void Player::registerObserver(Observer *o) {
     observers.push_back(o);
 }
