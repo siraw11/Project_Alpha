@@ -17,10 +17,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bike.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bike.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bike.h" beforeDir="false" afterPath="$PROJECT_DIR$/Bike.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameManager/AssetManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager/AssetManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Bike.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Bike.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Checkpoint.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Checkpoint.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Coin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Coin.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Game.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Game.cpp.o" afterDir="false" />
@@ -204,35 +205,7 @@
       <workItem from="1573191865369" duration="45579000" />
       <workItem from="1573897315812" duration="5019000" />
       <workItem from="1573917189307" duration="4071000" />
-      <workItem from="1573922544533" duration="51137000" />
-    </task>
-    <task id="LOCAL-00106" summary="Added map as shared ptr">
-      <created>1574015004233</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1574015004233</updated>
-    </task>
-    <task id="LOCAL-00107" summary="Added value attribute">
-      <created>1574015017752</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1574015017752</updated>
-    </task>
-    <task id="LOCAL-00108" summary="implemented taken">
-      <created>1574015033705</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1574015033705</updated>
-    </task>
-    <task id="LOCAL-00109" summary="minor fixes">
-      <created>1574015048693</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1574015048693</updated>
+      <workItem from="1573922544533" duration="52689000" />
     </task>
     <task id="LOCAL-00110" summary="Addeded match ptr">
       <created>1574015066183</created>
@@ -549,7 +522,35 @@
       <option name="project" value="LOCAL" />
       <updated>1574265603813</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="&#10;&#10; &#10; .">
+      <created>1574266266691</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1574266266691</updated>
+    </task>
+    <task id="LOCAL-00156" summary="minor fix">
+      <created>1574266316591</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1574266316591</updated>
+    </task>
+    <task id="LOCAL-00157" summary="changed speed values">
+      <created>1574266328870</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1574266328870</updated>
+    </task>
+    <task id="LOCAL-00158" summary="added maxTorque from selected bike speed">
+      <created>1574266363970</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1574266363970</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,9 +586,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added level locked string" />
-    <MESSAGE value="Added ShopState (methods are tmp)" />
-    <MESSAGE value="Add ShopState" />
     <MESSAGE value="implemented player" />
     <MESSAGE value="minor graphics change" />
     <MESSAGE value="Added timer" />
@@ -602,7 +600,6 @@
     <MESSAGE value="Added Asset Manager, Shop, SelectBike" />
     <MESSAGE value="Added assetManager" />
     <MESSAGE value="Added SelectBike State" />
-    <MESSAGE value="minor fix" />
     <MESSAGE value="Added Shop State" />
     <MESSAGE value="Added id&#10;remove loadBike" />
     <MESSAGE value="Added bikes&#10;temp change resolution until fix" />
@@ -610,7 +607,11 @@
     <MESSAGE value="Changed bike to shared ptr" />
     <MESSAGE value="Added removeTotalCoin" />
     <MESSAGE value="test bike data file" />
-    <option name="LAST_COMMIT_MESSAGE" value="test bike data file" />
+    <MESSAGE value="&#10;&#10; &#10; ." />
+    <MESSAGE value="minor fix" />
+    <MESSAGE value="changed speed values" />
+    <MESSAGE value="added maxTorque from selected bike speed" />
+    <option name="LAST_COMMIT_MESSAGE" value="added maxTorque from selected bike speed" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
