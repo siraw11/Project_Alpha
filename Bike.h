@@ -17,7 +17,7 @@ public:
     b2Body *wheelR;
     b2Body *cart;
 
-    Bike(std::string nam = "n/d", std::string color = "red", float speed = 0., int usability = 0, int price = 0,
+    Bike(std::string id, std::string name = "n/d", std::string color = "red", float speed = 0., int price = 0,
          bool isUnlocked = false, b2Body *wheelL = nullptr, b2Body *wheelR = nullptr, b2Body *cart = nullptr);
 
     virtual ~Bike();
@@ -34,9 +34,6 @@ public:
 
     void setSpeed(float speed);
 
-    int getUsability() const;
-
-    void setUsability(int usability);
 
     int getPrice() const;
 
@@ -46,14 +43,17 @@ public:
 
     void setIsUnlocked(bool isUnlocked);
 
-    void loadBike(int n);
+private:
+    std::string id;
+public:
+    const std::string &getId() const;
 
+    void setId(const std::string &id);
 
 private:
     std::string name;
     std::string color;
     float speed;
-    int usability;
     int price;
     bool isUnlocked;
 
