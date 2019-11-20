@@ -16,6 +16,7 @@ struct GameData {
     std::unique_ptr<Match> match;
     std::unique_ptr<Player> player;
     std::map<std::string, std::shared_ptr<Map>> levels;
+    std::map<std::string, std::shared_ptr<Bike>> bikes;
     std::shared_ptr<GameEngine> engine;
 };
 typedef std::shared_ptr<GameData> GameDataRef;

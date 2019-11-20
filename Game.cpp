@@ -9,7 +9,7 @@
 GameDataRef Game::gameData = std::make_shared<GameData>();
 
 Game::Game() {
-    gameData->window.create(sf::VideoMode(sf::VideoMode::getDesktopMode()), "Motocross 2D",
+    gameData->window.create(sf::VideoMode(1920, 1080), "Motocross 2D",
                             sf::Style::Close | sf::Style::Titlebar);
     gameData->window.setVerticalSyncEnabled(true);
 
