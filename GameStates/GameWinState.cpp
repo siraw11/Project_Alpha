@@ -45,11 +45,9 @@ void GameWinState::draw() {
 
 
     if (this->isRecord) {
-        sf::Font font;
-        if (!font.loadFromFile("./resources/fonts/Arial.ttf")) {}
         sf::Text textRecord;
         textRecord.setPosition(width, height);
-        textRecord.setFont(font);
+        textRecord.setFont(Game::gameData->resources.getFont("arial.ttf"));
         textRecord.setCharacterSize(80);
         textRecord.setPosition(width - 150, height - 400);
         textRecord.setFillColor(sf::Color(50, 255, 100));

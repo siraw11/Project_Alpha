@@ -9,21 +9,24 @@
 GameDataRef Game::gameData = std::make_shared<GameData>();
 
 Game::Game() {
-    gameData->window.create(sf::VideoMode(1920, 1080), "Motocross 2D",
-                            sf::Style::Close | sf::Style::Titlebar);
-    gameData->window.setVerticalSyncEnabled(true);
+    if (Game::gameData->resources.loadEssentialResources()) {
+        std::cout << "Resources loaded successfully" << std::endl;
+        gameData->window.create(sf::VideoMode(1920, 1080), "Motocross 2D",
+                                sf::Style::Close | sf::Style::Titlebar);
+        gameData->window.setVerticalSyncEnabled(true);
 
-    Game::gameData->match = std::unique_ptr<Match>(new Match());
-    gameData->machine.push_state(StateRef(new MenuHomeState()));
+        Game::gameData->match = std::unique_ptr<Match>(new Match());
+        gameData->machine.push_state(StateRef(new MenuHomeState()));
 
-    Game::gameData->player = std::unique_ptr<Player>(new Player("Pinco Pallino"));
+        Game::gameData->player = std::unique_ptr<Player>(new Player("Pinco Pallino"));
 
-    Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv1", Map::loadLevel(1)));
-    Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv2", Map::loadLevel(2)));
+        Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv1", Map::loadLevel(1)));
+        Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv2", Map::loadLevel(2)));
 
-
-
-    Game::Run();
+        Game::Run();
+    } else {
+        std::cout << "Fatal error: Cannot load essential resources" << std::endl;
+    }
 }
 
 void Game::Run() {

@@ -15,9 +15,6 @@
 
 float cartX = 0.8;
 float cartY = 0.4;
-sf::Texture wheelTexture;
-sf::Texture cartTexture;
-sf::Texture interfaceCoinTexture;
 float flipAngle = 0;
 int countFlips = 0;
 
@@ -307,44 +304,24 @@ void GameEngine::initBike() {
     wheelJointDef.enableMotor = false; //se attivo impedirebbe il movimento
     wheelJointDef.localAnchorA.Set(125 * 1 / SCALE, 50 * 1 / SCALE);
     wheelEngineR = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
-
-
-    //Caricamento Texture Ruote moto
-    bool wheelTextureFound = wheelTexture.loadFromFile("./resources/textures/wheel.png");
-    if (!wheelTextureFound)
-        std::cout << "Impossibile caricare texture Ruote - Moto" << std::endl;
-    //-----------------------
-
-    //Caricamento Texture Cart moto
-    bool cartTextureFound = cartTexture.loadFromFile(
-            "./resources/textures/" + Game::gameData->match->getBike()->getTexture());
-    if (!cartTextureFound)
-        std::cout << "Impossibile caricare texture Cart - Moto" << std::endl;
-
-    //------------------------
-
-    bool interfaceCoinTextureFound = interfaceCoinTexture.loadFromFile("./resources/textures/coin.png");
-    if (!interfaceCoinTextureFound)
-        std::cout << "Impossibile caricare texture Contatore Monete" << std::endl;
-
 }
 
 void GameEngine::drawBike() {
     //Disegno ruota sinistra con Texture
     sf::CircleShape wheelLDraw(WHEEL_SIZE * SCALE);
     wheelLDraw.setFillColor(sf::Color::White);
-    wheelLDraw.setTexture(&wheelTexture);
+    wheelLDraw.setTexture(&Game::gameData->resources.getTexture("wheel.png"));
 
 
     //Disegno ruota destra con Texture
     sf::CircleShape wheelRDraw(WHEEL_SIZE * SCALE);
     wheelRDraw.setFillColor(sf::Color::White);
-    wheelRDraw.setTexture(&wheelTexture);
+    wheelRDraw.setTexture(&Game::gameData->resources.getTexture("wheel.png"));
 
     //Disegno cart con Texture
     sf::RectangleShape cartDraw(sf::Vector2f(cartX * 2 * SCALE, cartY * 3 * SCALE));
     cartDraw.setFillColor(sf::Color::White);
-    cartDraw.setTexture(&cartTexture);
+    cartDraw.setTexture(&Game::gameData->resources.getTexture(Game::gameData->match->getBike()->getTexture()));
 
 
     //Ricavo nuovi dati fisici ruota sinistra
@@ -416,18 +393,16 @@ void GameEngine::drawItem(Item *item) {
 }
 
 void GameEngine::drawInterface() {
-    sf::Font font;
-    if (!font.loadFromFile("./resources/fonts/Arial.ttf")) {}
     float interfaceX = (view.getCenter().x) - ((view.getSize().x) / 2);
     float interfaceY = (view.getCenter().y) - ((view.getSize().y) / 2);
 
-    sf::Sprite spriteCoin(interfaceCoinTexture);
+    sf::Sprite spriteCoin(Game::gameData->resources.getTexture("coin.png"));
     spriteCoin.setPosition(interfaceX, interfaceY);
     spriteCoin.setScale(0.20, 0.20);
 
     sf::Text textCoin;
     textCoin.setPosition(interfaceX + 150, interfaceY);
-    textCoin.setFont(font);
+    textCoin.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textCoin.setCharacterSize(80);
     textCoin.setColor(sf::Color::Black);
     textCoin.setString(std::to_string(Game::gameData->match->getMoney()));
@@ -435,7 +410,7 @@ void GameEngine::drawInterface() {
 
     sf::Text textTimer;
     textTimer.setPosition(interfaceX + Game::gameData->window.getSize().x / 2 - 150, interfaceY);
-    textTimer.setFont(font);
+    textTimer.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textTimer.setCharacterSize(80);
     textTimer.setColor(sf::Color::Black);
     textTimer.setString(

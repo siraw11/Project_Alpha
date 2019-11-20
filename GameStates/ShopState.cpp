@@ -52,11 +52,9 @@ void ShopState::draw() {
     float height = Game::gameData->window.getView().getCenter().y;
 
 
-    sf::Font font;
-    if (!font.loadFromFile("./resources/fonts/Arial.ttf")) {}
     sf::Text textHeader;
     textHeader.setPosition(width, height);
-    textHeader.setFont(font);
+    textHeader.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textHeader.setCharacterSize(80);
     textHeader.setPosition(width, height - 350);
     textHeader.setFillColor(sf::Color(50, 50, 100));
@@ -66,7 +64,7 @@ void ShopState::draw() {
 
     sf::Text textCoins;
     textCoins.setPosition(width, height);
-    textCoins.setFont(font);
+    textCoins.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textCoins.setCharacterSize(40);
     textCoins.setPosition(width, height - 250);
     textCoins.setFillColor(sf::Color(255, 255, 255));

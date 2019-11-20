@@ -57,9 +57,7 @@ void SelectLevelState::draw() {
 
     sf::Text textHeader;
     textHeader.setPosition(width, height);
-    sf::Font font;
-    if (!font.loadFromFile("./resources/fonts/Arial.ttf")) {}
-    textHeader.setFont(font);
+    textHeader.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textHeader.setCharacterSize(80);
     textHeader.setPosition(width, height - 250);
     textHeader.setFillColor(sf::Color(50, 50, 100));

@@ -20,11 +20,9 @@ void MenuHomeState::draw() {
     float height = Game::gameData->window.getView().getCenter().y;
 
 
-    sf::Font font;
-    if (!font.loadFromFile("./resources/fonts/Arial.ttf")) {}
     sf::Text textWelcome;
     textWelcome.setPosition(width, height);
-    textWelcome.setFont(font);
+    textWelcome.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textWelcome.setCharacterSize(80);
     textWelcome.setPosition(width, height - 450);
     textWelcome.setFillColor(sf::Color(50, 50, 100));
@@ -33,7 +31,7 @@ void MenuHomeState::draw() {
 
     sf::Text textWelcomeUsername;
     textWelcomeUsername.setPosition(width, height);
-    textWelcomeUsername.setFont(font);
+    textWelcomeUsername.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textWelcomeUsername.setCharacterSize(50);
     textWelcomeUsername.setPosition(width, height - 350);
     textWelcomeUsername.setFillColor(sf::Color::White);
