@@ -292,7 +292,7 @@ void GameEngine::initBike() {
     wheelJointDef.bodyA = Game::gameData->match->getBike()->cart;
     wheelJointDef.localAnchorB.Set(0, 0);
     wheelJointDef.enableMotor = true;
-    wheelJointDef.maxMotorTorque = 30;
+    wheelJointDef.maxMotorTorque = Game::gameData->match->getBike()->getSpeed();
     wheelJointDef.motorSpeed = 0;
     wheelJointDef.dampingRatio = .8;
 
