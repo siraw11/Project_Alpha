@@ -6,7 +6,7 @@
 #include "Bike.h"
 #include "Game.h"
 
-Match::Match(std::shared_ptr<Map> _map, Bike *_bike, int _lifes, int _money, Position _lastCheckpoint)
+Match::Match(std::shared_ptr<Map> _map, std::shared_ptr<Bike> _bike, int _lifes, int _money, Position _lastCheckpoint)
         : map(_map), bike(_bike), lifes(_lifes), money(_money), lastCheckpoint(_lastCheckpoint) {
 
     timer = std::unique_ptr<Timer>(new Timer());
@@ -49,21 +49,6 @@ void Match::setPlayer(Player *player) {
     Match::player = player;
 }
 
-Bike *Match::getBike() const {
-    return bike;
-}
-
-void Match::setBike(Bike *bike) {
-    Match::bike = bike;
-}
-
-Bike *Match::getB() const {
-    return bike;
-}
-
-void Match::setB(Bike *b) {
-    Match::bike = b;
-}
 
 Match::~Match() {
 
@@ -83,5 +68,13 @@ const std::shared_ptr<Map> &Match::getMap() const {
 
 void Match::setMap(const std::shared_ptr<Map> &map) {
     Match::map = map;
+}
+
+const std::shared_ptr<Bike> &Match::getBike() const {
+    return bike;
+}
+
+void Match::setBike(const std::shared_ptr<Bike> &bike) {
+    Match::bike = bike;
 }
 
