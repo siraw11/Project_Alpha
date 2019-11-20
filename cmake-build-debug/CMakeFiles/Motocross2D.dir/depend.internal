@@ -38,7 +38,6 @@ CMakeFiles/Motocross2D.dir/main.cpp.o
  ../Box2D/Dynamics/b2TimeStep.h
  ../Box2D/Dynamics/b2World.h
  ../Box2D/Dynamics/b2WorldCallbacks.h
- ../GameManager/AssetManager.h
  ../GameStates/State.h
  ../GameStates/StateMachine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
@@ -50,6 +49,7 @@ CMakeFiles/Motocross2D.dir/main.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/main.cpp

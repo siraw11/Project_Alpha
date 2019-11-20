@@ -310,33 +310,6 @@ GameEngine.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameEngine.cpp.s
 .PHONY : GameEngine.cpp.s
 
-GameManager/AssetManager.o: GameManager/AssetManager.cpp.o
-
-.PHONY : GameManager/AssetManager.o
-
-# target to build an object file
-GameManager/AssetManager.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.o
-.PHONY : GameManager/AssetManager.cpp.o
-
-GameManager/AssetManager.i: GameManager/AssetManager.cpp.i
-
-.PHONY : GameManager/AssetManager.i
-
-# target to preprocess a source file
-GameManager/AssetManager.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.i
-.PHONY : GameManager/AssetManager.cpp.i
-
-GameManager/AssetManager.s: GameManager/AssetManager.cpp.s
-
-.PHONY : GameManager/AssetManager.s
-
-# target to generate assembly for a file
-GameManager/AssetManager.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.s
-.PHONY : GameManager/AssetManager.cpp.s
-
 GameStates/GameLostState.o: GameStates/GameLostState.cpp.o
 
 .PHONY : GameStates/GameLostState.o
@@ -769,6 +742,33 @@ Player.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
+ResourceManager/ResourceManager.o: ResourceManager/ResourceManager.cpp.o
+
+.PHONY : ResourceManager/ResourceManager.o
+
+# target to build an object file
+ResourceManager/ResourceManager.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o
+.PHONY : ResourceManager/ResourceManager.cpp.o
+
+ResourceManager/ResourceManager.i: ResourceManager/ResourceManager.cpp.i
+
+.PHONY : ResourceManager/ResourceManager.i
+
+# target to preprocess a source file
+ResourceManager/ResourceManager.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.i
+.PHONY : ResourceManager/ResourceManager.cpp.i
+
+ResourceManager/ResourceManager.s: ResourceManager/ResourceManager.cpp.s
+
+.PHONY : ResourceManager/ResourceManager.s
+
+# target to generate assembly for a file
+ResourceManager/ResourceManager.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.s
+.PHONY : ResourceManager/ResourceManager.cpp.s
+
 SpeedBonus.o: SpeedBonus.cpp.o
 
 .PHONY : SpeedBonus.o
@@ -932,9 +932,6 @@ help:
 	@echo "... GameEngine.o"
 	@echo "... GameEngine.i"
 	@echo "... GameEngine.s"
-	@echo "... GameManager/AssetManager.o"
-	@echo "... GameManager/AssetManager.i"
-	@echo "... GameManager/AssetManager.s"
 	@echo "... GameStates/GameLostState.o"
 	@echo "... GameStates/GameLostState.i"
 	@echo "... GameStates/GameLostState.s"
@@ -983,6 +980,9 @@ help:
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
+	@echo "... ResourceManager/ResourceManager.o"
+	@echo "... ResourceManager/ResourceManager.i"
+	@echo "... ResourceManager/ResourceManager.s"
 	@echo "... SpeedBonus.o"
 	@echo "... SpeedBonus.i"
 	@echo "... SpeedBonus.s"

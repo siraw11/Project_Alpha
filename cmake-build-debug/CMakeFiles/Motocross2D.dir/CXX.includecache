@@ -198,12 +198,6 @@ Box2D/Dynamics/b2TimeStep.h
 Box2D/Common/b2Settings.h
 -
 
-../GameManager/AssetManager.h
-SFML/Graphics.hpp
--
-iostream
--
-
 ../GameStates/State.h
 SFML/Graphics.hpp
 -
@@ -287,6 +281,8 @@ SFML/Graphics.hpp
 -
 GameStates/StateMachine.h
 -
+ResourceManager/ResourceManager.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
 GameEngine.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
 Match.h
@@ -344,6 +340,12 @@ Observer.h
 Subject.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
 
+/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+SFML/Graphics.hpp
+-
+iostream
+-
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
 Observer.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
@@ -353,8 +355,6 @@ iostream
 -
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/main.cpp
-GameManager/AssetManager.h
--
 Game.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
 
