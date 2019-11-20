@@ -1,9 +1,13 @@
-#include "GameStates/StateMachine.h"
+#include <GameManager/AssetManager.h>
 #include "Game.h"
 
 
 int main() {
-    StateMachine stateMachine;
+    AssetManager assetManager;
+    assetManager.loadBikes();
     Game();
+
+
+    return 0;
 
 }
