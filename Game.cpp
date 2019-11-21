@@ -18,7 +18,7 @@ Game::Game() {
         Game::gameData->match = std::unique_ptr<Match>(new Match());
         gameData->machine.push_state(StateRef(new MenuHomeState()));
 
-        Game::gameData->player = std::unique_ptr<Player>(new Player("Pinco Pallino"));
+        Game::gameData->player = std::unique_ptr<Player>(new Player("Player"));
 
         Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv1", Map::loadLevel(1)));
         Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv2", Map::loadLevel(2)));
