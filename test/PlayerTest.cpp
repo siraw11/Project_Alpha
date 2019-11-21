@@ -6,4 +6,7 @@
 #include "../Player.h"
 
 TEST(Player, DefaultConstructor) {
+    Player p;
+    ASSERT_EQ(0, p.getTotalCoin());
+    ASSERT_NE("", p.getUsername());
 }

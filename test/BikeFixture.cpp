@@ -6,7 +6,7 @@
 #include "gtest/gtest.h"
 #include "Bike.h"
 
-class BikeSuite: public::testing::Test{
+class BikeFixture : public ::testing::Test {
 protected:
     Bike b;
 
@@ -19,4 +19,3 @@ protected:
         b.setSpeed(100);
     }
 };
-

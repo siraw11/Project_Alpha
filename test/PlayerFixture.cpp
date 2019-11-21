@@ -4,7 +4,7 @@
 #include "gtest/gtest.h"
 #include "../Player.h"
 
-class PlayerSuite : public ::testing::Test {
+class PlayerFixture : public ::testing::Test {
 protected:
     Player p;
 
@@ -14,8 +14,10 @@ protected:
     }
 };
 
-TEST_F(PlayerSuite, TestCoin) {
+TEST_F(PlayerFixture, TestCoin) {
     p.removeTotalCoin(100);
     p.addTotalCoin((100));
     ASSERT_EQ(p.getTotalCoin(), 500);
 }
+
+
