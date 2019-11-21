@@ -7,10 +7,9 @@
 #include "Box2D/Box2D.h"
 
 
-Bike::Bike(std::string _id, std::string _name, std::string _texture, float _speed, int _price, bool _isUnlocked,
-           b2Body *_wheelL, b2Body *_wheelR, b2Body *_cart) : id(_id), name(std::move(
-        _name)), texture(std::move(_texture)), speed(_speed), price(_price), isUnlocked(_isUnlocked),
-                                                              wheelL(_wheelL), wheelR(_wheelR), cart(_cart) {
+Bike::Bike(std::string _id, std::string _name, std::string _texture, float _speed, int _price, bool _isUnlocked) : id(
+        _id), name(std::move(
+        _name)), texture(std::move(_texture)), speed(_speed), price(_price), isUnlocked(_isUnlocked) {
 }
 
 
@@ -30,7 +29,6 @@ float Bike::getSpeed() const {
 void Bike::setSpeed(float _speed) {
     Bike::speed = _speed;
 }
-
 
 
 int Bike::getPrice() const {

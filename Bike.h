@@ -9,16 +9,12 @@
 #include <iostream>
 
 #include <SFML/Graphics.hpp>
-#include "Box2D/Box2D.h"
 
 class Bike {
 public:
-    b2Body *wheelL;
-    b2Body *wheelR;
-    b2Body *cart;
-
-    Bike(std::string id, std::string name = "n/d", std::string texture = "cart.png", float speed = 0., int price = 0,
-         bool isUnlocked = false, b2Body *wheelL = nullptr, b2Body *wheelR = nullptr, b2Body *cart = nullptr);
+    Bike(std::string id = "b1", std::string name = "n/d", std::string texture = "cart.png", float speed = 0.,
+         int price = 0,
+         bool isUnlocked = false);
 
     virtual ~Bike();
 
