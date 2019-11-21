@@ -290,6 +290,24 @@ iostream
 SFML/Graphics.hpp
 -
 
+/Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
+iostream
+-
+
+/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
+iostream
+-
+list
+-
+Player.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+Observer.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
+Subject.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
+Item.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
@@ -308,23 +326,11 @@ Subject.h
 Observer.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp
 gtest/gtest.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-../Bike.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-../Player.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-../Player.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+../Map.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h

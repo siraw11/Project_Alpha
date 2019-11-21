@@ -440,6 +440,12 @@
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp">
 			<Option target="runTests"/>
 		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapFixture.cpp">
+			<Option target="runTests"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp">
+			<Option target="runTests"/>
+		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp">
 			<Option target="runTests"/>
 		</Unit>

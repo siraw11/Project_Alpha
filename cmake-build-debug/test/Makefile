@@ -179,6 +179,60 @@ BikeTest.cpp.s:
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.s
 .PHONY : BikeTest.cpp.s
 
+MapFixture.o: MapFixture.cpp.o
+
+.PHONY : MapFixture.o
+
+# target to build an object file
+MapFixture.cpp.o:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.o
+.PHONY : MapFixture.cpp.o
+
+MapFixture.i: MapFixture.cpp.i
+
+.PHONY : MapFixture.i
+
+# target to preprocess a source file
+MapFixture.cpp.i:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.i
+.PHONY : MapFixture.cpp.i
+
+MapFixture.s: MapFixture.cpp.s
+
+.PHONY : MapFixture.s
+
+# target to generate assembly for a file
+MapFixture.cpp.s:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.s
+.PHONY : MapFixture.cpp.s
+
+MapTest.o: MapTest.cpp.o
+
+.PHONY : MapTest.o
+
+# target to build an object file
+MapTest.cpp.o:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.o
+.PHONY : MapTest.cpp.o
+
+MapTest.i: MapTest.cpp.i
+
+.PHONY : MapTest.i
+
+# target to preprocess a source file
+MapTest.cpp.i:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.i
+.PHONY : MapTest.cpp.i
+
+MapTest.s: MapTest.cpp.s
+
+.PHONY : MapTest.s
+
+# target to generate assembly for a file
+MapTest.cpp.s:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.s
+.PHONY : MapTest.cpp.s
+
 PlayerFixture.o: PlayerFixture.cpp.o
 
 .PHONY : PlayerFixture.o
@@ -275,6 +329,12 @@ help:
 	@echo "... BikeTest.o"
 	@echo "... BikeTest.i"
 	@echo "... BikeTest.s"
+	@echo "... MapFixture.o"
+	@echo "... MapFixture.i"
+	@echo "... MapFixture.s"
+	@echo "... MapTest.o"
+	@echo "... MapTest.i"
+	@echo "... MapTest.s"
 	@echo "... PlayerFixture.o"
 	@echo "... PlayerFixture.i"
 	@echo "... PlayerFixture.s"
