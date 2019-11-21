@@ -7,8 +7,8 @@
 #include "Observer.h"
 #include "Subject.h"
 
-Player::Player(std::string _username, int _totalCoin, Bike *_bike) : username(
-        _username), totalCoin(_totalCoin), bike(_bike) {}
+Player::Player(std::string _username, int _totalCoin) : username(
+        _username), totalCoin(_totalCoin) {}
 
 
 const std::string &Player::getUsername() const {

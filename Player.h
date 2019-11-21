@@ -19,7 +19,7 @@ struct Position {
 
 class Player : public Subject {
 public:
-    explicit Player(std::string username = "Player1", int totalCoin = 0, Bike *bike = nullptr);
+    explicit Player(std::string username = "Player", int totalCoin = 0);
 
     virtual ~Player();
 
@@ -33,22 +33,15 @@ public:
 
     void removeTotalCoin(int decrementCoin);
 
-    Bike *getBike() const;
-
-    void setBike(Bike *bike);
-
     virtual void registerObserver(Observer *o) override ;
 
     virtual void removeObserver(Observer *o) override ;
 
     virtual void notifyObservers() override ;
 
-    void move(float x, float y, float a);
-
 private:
     std::string username;
     int totalCoin;
-    Bike *bike;
 
     std::list<Observer*> observers;
 };
