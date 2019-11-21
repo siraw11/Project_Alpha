@@ -97,7 +97,7 @@ bool ResourceManager::loadBikes() {
     Game::gameData->bikes.insert(std::make_pair(bike->getId(), bike));
     bike = std::make_shared<Bike>(Bike("b2", "Standard+", "cart_orange.png", 30, 200, false));
     Game::gameData->bikes.insert(std::make_pair(bike->getId(), bike));
-    bike = std::make_shared<Bike>(Bike("b3", "Rocket", "cart_red.png", 50, 500, true));
+    bike = std::make_shared<Bike>(Bike("b3", "Rocket", "cart_red.png", 50, 500, false));
     Game::gameData->bikes.insert(std::make_pair(bike->getId(), bike));
     return true;
 }
