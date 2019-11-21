@@ -18,6 +18,10 @@ float cartY = 0.4;
 float flipAngle = 0;
 int countFlips = 0;
 
+b2Body *wheelL = nullptr;
+b2Body *wheelR = nullptr;
+b2Body *cart = nullptr;
+
 
 GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
                                                           framerate(_framerate) {
@@ -38,11 +42,11 @@ GameEngine::GameEngine(b2Vec2 _gravity, int _framerate) : gravity(_gravity),
 void GameEngine::respawn() {
     float checkpointX = Game::gameData->match->getLastCheckpoint().posX;
     float checkpointY = Game::gameData->match->getLastCheckpoint().posY + LINE - 1;
-    Game::gameData->match->getBike()->wheelL->SetTransform(b2Vec2(checkpointX, checkpointY), 0);
-    Game::gameData->match->getBike()->wheelR->SetTransform(b2Vec2(checkpointX + 1, checkpointY), 0);
-    Game::gameData->match->getBike()->cart->SetTransform(b2Vec2(checkpointX, checkpointY + 1), 0);
-    Game::gameData->match->getBike()->wheelL->SetLinearVelocity(b2Vec2(0, 0));
-    Game::gameData->match->getBike()->wheelR->SetLinearVelocity(b2Vec2(0, 0));
+    wheelL->SetTransform(b2Vec2(checkpointX, checkpointY), 0);
+    wheelR->SetTransform(b2Vec2(checkpointX + 1, checkpointY), 0);
+    cart->SetTransform(b2Vec2(checkpointX, checkpointY + 1), 0);
+    wheelL->SetLinearVelocity(b2Vec2(0, 0));
+    wheelR->SetLinearVelocity(b2Vec2(0, 0));
     this->wheelEngineL->SetMotorSpeed(0);
     this->wheelEngineR->SetMotorSpeed(0);
     this->run();
@@ -60,11 +64,11 @@ void GameEngine::run() {
         this->world.Step(timeStep, velocityIterations, positionIterations);
 
         //la camera inizia il movimento una volta superata la metà schermo
-        if (((Game::gameData->match->getBike()->wheelL->GetPosition().x + offsetX) * SCALE) >
+        if (((wheelL->GetPosition().x + offsetX) * SCALE) >
             (Game::gameData->window.getSize().x / 2.)) {
             //camera segue il veicolo
-            double viewX = (Game::gameData->match->getBike()->wheelL->GetPosition().x + offsetX) * SCALE;
-            double viewY = (Game::gameData->match->getBike()->wheelL->GetPosition().y - offsetY) * SCALE;
+            double viewX = (wheelL->GetPosition().x + offsetX) * SCALE;
+            double viewY = (wheelL->GetPosition().y - offsetY) * SCALE;
             view.setCenter((float) viewX, (float) viewY);
             Game::gameData->window.setView(view);
         }
@@ -120,8 +124,7 @@ void GameEngine::run() {
         for (auto &item : items) {
             if (!item->isTaken()) {
                 //controllo se collidono
-                bool collided = checkCollision(Game::gameData->match->getBike()->cart->GetPosition().x,
-                                               Game::gameData->match->getBike()->cart->GetPosition().y, cartX,
+                bool collided = checkCollision(cart->GetPosition().x, cart->GetPosition().y, cartX,
                                                (float) item->getPosX(), LINE + (float) item->getPosY(),
                                                (float) item->getWidth(),
                                                (float) item->getHeight());
@@ -137,15 +140,15 @@ void GameEngine::run() {
 
         drawInterface();
 
-        flipAngle = abs(degToGrad(Game::gameData->match->getBike()->cart->GetAngle())) - (360.f * (float) countFlips);
+        flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
         if (flipAngle > 350 && flipAngle < 370) {
             countFlips++;
             flipAngle = 0;
             std::cout << countFlips << " Flip!" << std::endl;
         }
 
-        if (flipAngle > 160 && flipAngle < 220 && Game::gameData->match->getBike()->cart->GetLinearVelocity().x <= 0 &&
-            Game::gameData->match->getBike()->cart->GetLinearVelocity().y <= 0) {
+        if (flipAngle > 160 && flipAngle < 220 && cart->GetLinearVelocity().x <= 0 &&
+            cart->GetLinearVelocity().y <= 0) {
             if (Game::gameData->match->getLifes() > 0) {
                 this->setPause(true);
                 Game::gameData->machine.push_state(StateRef(new GameLostState()));
@@ -236,8 +239,8 @@ void GameEngine::initBike() {
     cartFixtureDef.filter.groupIndex = 2;
 
     //Inizializzazione Cart
-    Game::gameData->match->getBike()->cart = world.CreateBody(&cartBodyDef);
-    Game::gameData->match->getBike()->cart->CreateFixture(&cartFixtureDef);
+    cart = world.CreateBody(&cartBodyDef);
+    cart->CreateFixture(&cartFixtureDef);
 
 
     /*----------------------------------------
@@ -261,13 +264,13 @@ void GameEngine::initBike() {
 
     //Inizializzazione ruota sinistra
     wheelDef.position.Set(1, LINE - WHEEL_SIZE);//Posizione iniziale ruota sinistra
-    Game::gameData->match->getBike()->wheelL = world.CreateBody(&wheelDef);
-    Game::gameData->match->getBike()->wheelL->CreateFixture(&wheelFixtureDef);
+    wheelL = world.CreateBody(&wheelDef);
+    wheelL->CreateFixture(&wheelFixtureDef);
 
     //Inizializzazione ruota destra
     wheelDef.position.Set(3, LINE - WHEEL_SIZE);//Posizione iniziale ruota destra
-    Game::gameData->match->getBike()->wheelR = world.CreateBody(&wheelDef);
-    Game::gameData->match->getBike()->wheelR->CreateFixture(&wheelFixtureDef);
+    wheelR = world.CreateBody(&wheelDef);
+    wheelR->CreateFixture(&wheelFixtureDef);
 
 
     /*
@@ -276,7 +279,7 @@ void GameEngine::initBike() {
 
     //Distance joint per connettere la ruota destra e quella sinistra
     b2DistanceJointDef dJointDefR_L;
-    dJointDefR_L.Initialize(Game::gameData->match->getBike()->wheelL, Game::gameData->match->getBike()->wheelR,
+    dJointDefR_L.Initialize(wheelL, wheelR,
                             b2Vec2(0, 0), b2Vec2(0, 0));
     dJointDefR_L.collideConnected = false;
     dJointDefR_L.localAnchorA.Set(0, 0);
@@ -288,7 +291,7 @@ void GameEngine::initBike() {
 
     //Definizione Caratteristiche Wheel Joint
     b2WheelJointDef wheelJointDef;
-    wheelJointDef.bodyA = Game::gameData->match->getBike()->cart;
+    wheelJointDef.bodyA = cart;
     wheelJointDef.localAnchorB.Set(0, 0);
     wheelJointDef.enableMotor = true;
     wheelJointDef.maxMotorTorque = Game::gameData->match->getBike()->getSpeed();
@@ -296,13 +299,13 @@ void GameEngine::initBike() {
     wheelJointDef.dampingRatio = .8;
 
     //Inizializzazione Wheel Joint ruota sinistra
-    wheelJointDef.bodyB = Game::gameData->match->getBike()->wheelL;
+    wheelJointDef.bodyB = wheelL;
     wheelJointDef.localAnchorA.Set(-125 * 1 / SCALE, 50 * 1 / SCALE);
     wheelEngineL = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
 
 
     //Inizializzazione Wheel Joint ruota destra
-    wheelJointDef.bodyB = Game::gameData->match->getBike()->wheelR;
+    wheelJointDef.bodyB = wheelR;
     wheelJointDef.enableMotor = false; //se attivo impedirebbe il movimento
     wheelJointDef.localAnchorA.Set(125 * 1 / SCALE, 50 * 1 / SCALE);
     wheelEngineR = (b2WheelJoint *) world.CreateJoint(&wheelJointDef);
@@ -327,17 +330,17 @@ void GameEngine::drawBike() {
 
 
     //Ricavo nuovi dati fisici ruota sinistra
-    b2Vec2 positionWheelL = Game::gameData->match->getBike()->wheelL->GetPosition();                //posizione
-    float32 angleWheelL = ceil(degToGrad(Game::gameData->match->getBike()->wheelL->GetAngle()));    //angolo
+    b2Vec2 positionWheelL = wheelL->GetPosition();                //posizione
+    float32 angleWheelL = ceil(degToGrad(wheelL->GetAngle()));    //angolo
 
     //Ricavo nuovi dati fisici ruota destra
-    b2Vec2 positionWheelR = Game::gameData->match->getBike()->wheelR->GetPosition();                //posizione
-    float32 angleWheelR = ceil(degToGrad(Game::gameData->match->getBike()->wheelR->GetAngle()));    //angolo
+    b2Vec2 positionWheelR = wheelR->GetPosition();                //posizione
+    float32 angleWheelR = ceil(degToGrad(wheelR->GetAngle()));    //angolo
 
 
     //Ricavo nuovi dati fisici cart
-    b2Vec2 positionCart = Game::gameData->match->getBike()->cart->GetPosition();                    //posizione
-    float32 angleCart = ceil(degToGrad(Game::gameData->match->getBike()->cart->GetAngle()));        //angolo
+    b2Vec2 positionCart = cart->GetPosition();                    //posizione
+    float32 angleCart = ceil(degToGrad(cart->GetAngle()));        //angolo
 
 
 
