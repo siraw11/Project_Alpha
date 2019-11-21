@@ -52,6 +52,9 @@ void GameEngine::respawn() {
     this->run();
 }
 
+void GameEngine::move() {
+    this->world.Step(timeStep, velocityIterations, positionIterations);
+}
 
 void GameEngine::run() {
     float offsetX = 3.f;
@@ -61,8 +64,7 @@ void GameEngine::run() {
     Game::gameData->match->timer->start();
     while (!this->pause) {
         Game::gameData->window.clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
-        this->world.Step(timeStep, velocityIterations, positionIterations);
-
+        move();
         //la camera inizia il movimento una volta superata la metà schermo
         if (((wheelL->GetPosition().x + offsetX) * SCALE) >
             (Game::gameData->window.getSize().x / 2.)) {
@@ -429,4 +431,56 @@ void GameEngine::drawInterface() {
 //Conversione Radianti -> Gradi
 float GameEngine::degToGrad(float deg) {
     return deg * (float) (180 / M_PI);
+}
+
+const b2Vec2 &GameEngine::getGravity() const {
+    return gravity;
+}
+
+float32 GameEngine::getTimeStep() const {
+    return timeStep;
+}
+
+int GameEngine::getFramerate() const {
+    return framerate;
+}
+
+int32 GameEngine::getPositionIterations() const {
+    return positionIterations;
+}
+
+int32 GameEngine::getVelocityIterations() const {
+    return velocityIterations;
+}
+
+const b2World &GameEngine::getWorld() const {
+    return world;
+}
+
+void GameEngine::setGravity(const b2Vec2 &_gravity) {
+    this->gravity = _gravity;
+}
+
+void GameEngine::setVelocityIterations(int32 _velocityIterations) {
+    this->velocityIterations = _velocityIterations;
+}
+
+void GameEngine::setPositionIterations(int32 _positionIterations) {
+    this->positionIterations = _positionIterations;
+}
+
+void GameEngine::setTimeStep(float32 _timeStep) {
+    this->timeStep = _timeStep;
+}
+
+void GameEngine::setFramerate(int _framerate) {
+    this->framerate = _framerate;
+}
+
+void GameEngine::setWorld(const b2World &_world) {
+    this->world = _world;
+}
+
+Position GameEngine::getBikePosition() const {
+    return Position{cart->GetPosition().x, cart->GetPosition().y};
 }
