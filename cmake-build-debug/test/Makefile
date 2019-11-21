@@ -179,6 +179,60 @@ BikeTest.cpp.s:
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.s
 .PHONY : BikeTest.cpp.s
 
+GameEngineFixture.o: GameEngineFixture.cpp.o
+
+.PHONY : GameEngineFixture.o
+
+# target to build an object file
+GameEngineFixture.cpp.o:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o
+.PHONY : GameEngineFixture.cpp.o
+
+GameEngineFixture.i: GameEngineFixture.cpp.i
+
+.PHONY : GameEngineFixture.i
+
+# target to preprocess a source file
+GameEngineFixture.cpp.i:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.i
+.PHONY : GameEngineFixture.cpp.i
+
+GameEngineFixture.s: GameEngineFixture.cpp.s
+
+.PHONY : GameEngineFixture.s
+
+# target to generate assembly for a file
+GameEngineFixture.cpp.s:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.s
+.PHONY : GameEngineFixture.cpp.s
+
+GameEngineTest.o: GameEngineTest.cpp.o
+
+.PHONY : GameEngineTest.o
+
+# target to build an object file
+GameEngineTest.cpp.o:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o
+.PHONY : GameEngineTest.cpp.o
+
+GameEngineTest.i: GameEngineTest.cpp.i
+
+.PHONY : GameEngineTest.i
+
+# target to preprocess a source file
+GameEngineTest.cpp.i:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.i
+.PHONY : GameEngineTest.cpp.i
+
+GameEngineTest.s: GameEngineTest.cpp.s
+
+.PHONY : GameEngineTest.s
+
+# target to generate assembly for a file
+GameEngineTest.cpp.s:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.s
+.PHONY : GameEngineTest.cpp.s
+
 MapFixture.o: MapFixture.cpp.o
 
 .PHONY : MapFixture.o
@@ -329,6 +383,12 @@ help:
 	@echo "... BikeTest.o"
 	@echo "... BikeTest.i"
 	@echo "... BikeTest.s"
+	@echo "... GameEngineFixture.o"
+	@echo "... GameEngineFixture.i"
+	@echo "... GameEngineFixture.s"
+	@echo "... GameEngineTest.o"
+	@echo "... GameEngineTest.i"
+	@echo "... GameEngineTest.s"
 	@echo "... MapFixture.o"
 	@echo "... MapFixture.i"
 	@echo "... MapFixture.s"
