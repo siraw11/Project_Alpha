@@ -1,15 +1,12 @@
 //
 // Created by Magna on 2019-06-03.
 //
-
-#include <Game.h>
 #include "gtest/gtest.h"
 #include "Bike.h"
 
 class BikeFixture : public ::testing::Test {
 protected:
     Bike b;
-
     virtual void SetUp() {
         b.setIsUnlocked(true);
         b.setId("b1");
