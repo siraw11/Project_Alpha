@@ -30,10 +30,8 @@ class Game {
 public:
     static GameDataRef gameData;
 
-    Game();
-
-private:
     static void Run();
+    Game();
 };
 
 

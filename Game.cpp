@@ -22,8 +22,6 @@ Game::Game() {
 
         Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv1", Map::loadLevel(1)));
         Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv2", Map::loadLevel(2)));
-
-        Game::Run();
     } else {
         std::cout << "Fatal error: Cannot load essential resources" << std::endl;
     }
