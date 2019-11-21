@@ -16,11 +16,11 @@
 
 
 Map::Map(std::string _id, std::string _name, bool _isCompleted, bool _isUnlocked, double _record,
-         std::list<Position> _mapPoints, Player *_p,
+         std::list<Position> _mapPoints,
          std::list<Item *> _mapItems) : id(std::move(_id)), name(std::move(_name)), isCompleted(_isCompleted),
                                         record(_record),
                                         isUnlocked(_isUnlocked),
-                                        mapPoints(std::move(_mapPoints)), p(_p), mapItems(std::move(_mapItems)) {}
+                                        mapPoints(std::move(_mapPoints)), mapItems(std::move(_mapItems)) {}
 
 
 void Map::loadLevel1() {
@@ -69,6 +69,7 @@ std::unique_ptr<Map> Map::loadLevel(int id) {
 }
 
 void Map::loadLevel2() {
+    this->setIsUnlocked(false);
     this->setId("lv2");
     this->setName("Level 2");
     mapPoints = {

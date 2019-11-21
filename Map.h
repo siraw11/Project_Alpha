@@ -13,17 +13,19 @@
 #include "Item.h"
 
 
-
-class Map:Observer {
+class Map : Observer {
 
 public:
-    Map(std::string id = "", std::string name = "", bool isCompleted = 0, bool isUnlocked = 0, double record = 0,
-        std::list<Position> mapPoints = {},
-        Player *p = nullptr, std::list<Item *> mapItems = {});
+    Map(std::string id = "n/d", std::string name = "n/d", bool isCompleted = false, bool isUnlocked = false,
+        double record = 0,
+        std::list<Position> mapPoints = {}, std::list<Item *> mapItems = {});
 
     virtual ~Map();
+
     virtual void update() override;
+
     virtual void attach() override;
+
     virtual void detach() override;
 
     bool getIsCompleted() const;
@@ -73,8 +75,6 @@ private:
     double record;
     std::list<Position> mapPoints;
     std::list<Item *> mapItems;
-    Player* p;
-
 };
 
 
