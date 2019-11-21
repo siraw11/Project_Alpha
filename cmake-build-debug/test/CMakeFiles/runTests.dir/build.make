@@ -96,22 +96,9 @@ test/CMakeFiles/runTests.dir/PlayerFixture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/PlayerFixture.cpp.s"
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp -o CMakeFiles/runTests.dir/PlayerFixture.cpp.s
 
-test/CMakeFiles/runTests.dir/BikeFixture.cpp.o: test/CMakeFiles/runTests.dir/flags.make
-test/CMakeFiles/runTests.dir/BikeFixture.cpp.o: ../test/BikeFixture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/CMakeFiles/runTests.dir/BikeFixture.cpp.o"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/BikeFixture.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp
-
-test/CMakeFiles/runTests.dir/BikeFixture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/BikeFixture.cpp.i"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp > CMakeFiles/runTests.dir/BikeFixture.cpp.i
-
-test/CMakeFiles/runTests.dir/BikeFixture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/BikeFixture.cpp.s"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp -o CMakeFiles/runTests.dir/BikeFixture.cpp.s
-
 test/CMakeFiles/runTests.dir/BikeTest.cpp.o: test/CMakeFiles/runTests.dir/flags.make
 test/CMakeFiles/runTests.dir/BikeTest.cpp.o: ../test/BikeTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/CMakeFiles/runTests.dir/BikeTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/CMakeFiles/runTests.dir/BikeTest.cpp.o"
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/BikeTest.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp
 
 test/CMakeFiles/runTests.dir/BikeTest.cpp.i: cmake_force
@@ -122,27 +109,26 @@ test/CMakeFiles/runTests.dir/BikeTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/BikeTest.cpp.s"
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp -o CMakeFiles/runTests.dir/BikeTest.cpp.s
 
-test/CMakeFiles/runTests.dir/MapTest.cpp.o: test/CMakeFiles/runTests.dir/flags.make
-test/CMakeFiles/runTests.dir/MapTest.cpp.o: ../test/MapTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/CMakeFiles/runTests.dir/MapTest.cpp.o"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/MapTest.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp
+test/CMakeFiles/runTests.dir/BikeFixture.cpp.o: test/CMakeFiles/runTests.dir/flags.make
+test/CMakeFiles/runTests.dir/BikeFixture.cpp.o: ../test/BikeFixture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/CMakeFiles/runTests.dir/BikeFixture.cpp.o"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/BikeFixture.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp
 
-test/CMakeFiles/runTests.dir/MapTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/MapTest.cpp.i"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp > CMakeFiles/runTests.dir/MapTest.cpp.i
+test/CMakeFiles/runTests.dir/BikeFixture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/BikeFixture.cpp.i"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp > CMakeFiles/runTests.dir/BikeFixture.cpp.i
 
-test/CMakeFiles/runTests.dir/MapTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/MapTest.cpp.s"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp -o CMakeFiles/runTests.dir/MapTest.cpp.s
+test/CMakeFiles/runTests.dir/BikeFixture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/BikeFixture.cpp.s"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp -o CMakeFiles/runTests.dir/BikeFixture.cpp.s
 
 # Object files for target runTests
 runTests_OBJECTS = \
 "CMakeFiles/runTests.dir/runAllTests.cpp.o" \
 "CMakeFiles/runTests.dir/PlayerTest.cpp.o" \
 "CMakeFiles/runTests.dir/PlayerFixture.cpp.o" \
-"CMakeFiles/runTests.dir/BikeFixture.cpp.o" \
 "CMakeFiles/runTests.dir/BikeTest.cpp.o" \
-"CMakeFiles/runTests.dir/MapTest.cpp.o"
+"CMakeFiles/runTests.dir/BikeFixture.cpp.o"
 
 # External object files for target runTests
 runTests_EXTERNAL_OBJECTS =
@@ -150,16 +136,19 @@ runTests_EXTERNAL_OBJECTS =
 test/runTests: test/CMakeFiles/runTests.dir/runAllTests.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/PlayerTest.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o
-test/runTests: test/CMakeFiles/runTests.dir/BikeFixture.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/BikeTest.cpp.o
-test/runTests: test/CMakeFiles/runTests.dir/MapTest.cpp.o
+test/runTests: test/CMakeFiles/runTests.dir/BikeFixture.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/build.make
 test/runTests: test/lib/googletest/libgtestd.a
 test/runTests: test/lib/googletest/libgtest_maind.a
 test/runTests: libcore.a
+test/runTests: /usr/local/lib/libsfml-graphics.2.5.1.dylib
+test/runTests: /usr/local/lib/libsfml-window.2.5.1.dylib
+test/runTests: /usr/local/lib/libsfml-system.2.5.1.dylib
+test/runTests: ../Box2D/libBox2D.a
 test/runTests: test/lib/googletest/libgtestd.a
 test/runTests: test/CMakeFiles/runTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable runTests"
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

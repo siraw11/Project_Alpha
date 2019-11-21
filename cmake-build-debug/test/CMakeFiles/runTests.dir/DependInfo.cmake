@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/BikeFixture.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/BikeTest.cpp.o"
-  "/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/MapTest.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerTest.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/runAllTests.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/runAllTests.cpp.o"
@@ -17,7 +16,9 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../."
   "../test/lib/googletest"
+  "/"
   "../test/lib/googletest/include"
+  "/usr/local/include"
   )
 
 # Targets to which this target links.
