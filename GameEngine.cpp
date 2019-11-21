@@ -406,7 +406,7 @@ void GameEngine::drawInterface() {
     textCoin.setPosition(interfaceX + 150, interfaceY);
     textCoin.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textCoin.setCharacterSize(80);
-    textCoin.setColor(sf::Color::Black);
+    textCoin.setFillColor(sf::Color::Black);
     textCoin.setString(std::to_string(Game::gameData->match->getMoney()));
 
 
@@ -414,7 +414,7 @@ void GameEngine::drawInterface() {
     textTimer.setPosition(interfaceX + Game::gameData->window.getSize().x / 2 - 150, interfaceY);
     textTimer.setFont(Game::gameData->resources.getFont("arial.ttf"));
     textTimer.setCharacterSize(80);
-    textTimer.setColor(sf::Color::Black);
+    textTimer.setFillColor(sf::Color::Black);
     textTimer.setString(
             Game::gameData->match->timer->elapsedString(Game::gameData->match->timer->getTime()));
 

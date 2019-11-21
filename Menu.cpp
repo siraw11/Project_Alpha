@@ -14,9 +14,9 @@ Menu::~Menu() {
 void Menu::MoveUp() {
     if (options.size() > 0) {
         if (selectedItemIndex - 1 >= 0) {
-            options[selectedItemIndex]->option.setColor(sf::Color::White);
+            options[selectedItemIndex]->option.setFillColor(sf::Color::White);
             selectedItemIndex--;
-            options[selectedItemIndex]->option.setColor(sf::Color::Red);
+            options[selectedItemIndex]->option.setFillColor(sf::Color::Red);
         }
     }
 }
@@ -24,9 +24,9 @@ void Menu::MoveUp() {
 void Menu::MoveDown() {
     if (options.size() > 0) {
         if (selectedItemIndex + 1 < options.size()) {
-            options[selectedItemIndex]->option.setColor(sf::Color::White);
+            options[selectedItemIndex]->option.setFillColor(sf::Color::White);
             selectedItemIndex++;
-            options[selectedItemIndex]->option.setColor(sf::Color::Red);
+            options[selectedItemIndex]->option.setFillColor(sf::Color::Red);
         }
     }
 }
