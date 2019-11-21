@@ -65,3 +65,11 @@ time_t Timer::getTime() {
     }
     return time;
 }
+
+
+void Timer::decrementTimer(float dt) {
+    stop();
+    time -= dt;
+    elapsed -= dt;
+    start();
+}

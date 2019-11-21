@@ -21,6 +21,8 @@ public:
 
     double elapsedMilliseconds();
 
+    void decrementTimer(float dt);
+
     time_t getTime();
 
 private:
