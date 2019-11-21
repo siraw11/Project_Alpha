@@ -133,7 +133,6 @@ void GameEngine::run() {
             }
         }
 
-
         drawBike();//disegno la moto
 
         drawInterface();
@@ -158,6 +157,9 @@ void GameEngine::run() {
     }
 }
 
+void GameEngine::speedBonus(float increment) {
+    //TODO:implment
+}
 
 void GameEngine::setPause(bool p) {
     this->pause = p;

@@ -49,6 +49,8 @@ public:
 
     void setPause(bool pause);
 
+    void speedBonus(float increment);
+    
     void respawn();
 private:
     sf::View view;
