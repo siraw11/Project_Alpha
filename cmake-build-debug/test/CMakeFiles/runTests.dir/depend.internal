@@ -150,42 +150,6 @@ test/CMakeFiles/runTests.dir/BikeFixture.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 test/CMakeFiles/runTests.dir/BikeTest.cpp.o
- ../Box2D/Collision/Shapes/b2ChainShape.h
- ../Box2D/Collision/Shapes/b2CircleShape.h
- ../Box2D/Collision/Shapes/b2EdgeShape.h
- ../Box2D/Collision/Shapes/b2PolygonShape.h
- ../Box2D/Collision/Shapes/b2Shape.h
- ../Box2D/Collision/b2BroadPhase.h
- ../Box2D/Collision/b2Collision.h
- ../Box2D/Collision/b2Distance.h
- ../Box2D/Collision/b2DynamicTree.h
- ../Box2D/Collision/b2TimeOfImpact.h
- ../Box2D/Common/b2BlockAllocator.h
- ../Box2D/Common/b2Draw.h
- ../Box2D/Common/b2GrowableStack.h
- ../Box2D/Common/b2Math.h
- ../Box2D/Common/b2Settings.h
- ../Box2D/Common/b2StackAllocator.h
- ../Box2D/Common/b2Timer.h
- ../Box2D/Dynamics/Contacts/b2Contact.h
- ../Box2D/Dynamics/Joints/b2DistanceJoint.h
- ../Box2D/Dynamics/Joints/b2FrictionJoint.h
- ../Box2D/Dynamics/Joints/b2GearJoint.h
- ../Box2D/Dynamics/Joints/b2Joint.h
- ../Box2D/Dynamics/Joints/b2MotorJoint.h
- ../Box2D/Dynamics/Joints/b2MouseJoint.h
- ../Box2D/Dynamics/Joints/b2PrismaticJoint.h
- ../Box2D/Dynamics/Joints/b2PulleyJoint.h
- ../Box2D/Dynamics/Joints/b2RevoluteJoint.h
- ../Box2D/Dynamics/Joints/b2RopeJoint.h
- ../Box2D/Dynamics/Joints/b2WeldJoint.h
- ../Box2D/Dynamics/Joints/b2WheelJoint.h
- ../Box2D/Dynamics/b2Body.h
- ../Box2D/Dynamics/b2ContactManager.h
- ../Box2D/Dynamics/b2Fixture.h
- ../Box2D/Dynamics/b2TimeStep.h
- ../Box2D/Dynamics/b2World.h
- ../Box2D/Dynamics/b2WorldCallbacks.h
  ../test/lib/googletest/include/gtest/gtest-death-test.h
  ../test/lib/googletest/include/gtest/gtest-message.h
  ../test/lib/googletest/include/gtest/gtest-param-test.h
@@ -209,7 +173,6 @@ test/CMakeFiles/runTests.dir/BikeTest.cpp.o
  ../test/lib/googletest/include/gtest/internal/gtest-tuple.h
  ../test/lib/googletest/include/gtest/internal/gtest-type-util.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -286,42 +249,6 @@ test/CMakeFiles/runTests.dir/BikeTest.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o
- ../Box2D/Collision/Shapes/b2ChainShape.h
- ../Box2D/Collision/Shapes/b2CircleShape.h
- ../Box2D/Collision/Shapes/b2EdgeShape.h
- ../Box2D/Collision/Shapes/b2PolygonShape.h
- ../Box2D/Collision/Shapes/b2Shape.h
- ../Box2D/Collision/b2BroadPhase.h
- ../Box2D/Collision/b2Collision.h
- ../Box2D/Collision/b2Distance.h
- ../Box2D/Collision/b2DynamicTree.h
- ../Box2D/Collision/b2TimeOfImpact.h
- ../Box2D/Common/b2BlockAllocator.h
- ../Box2D/Common/b2Draw.h
- ../Box2D/Common/b2GrowableStack.h
- ../Box2D/Common/b2Math.h
- ../Box2D/Common/b2Settings.h
- ../Box2D/Common/b2StackAllocator.h
- ../Box2D/Common/b2Timer.h
- ../Box2D/Dynamics/Contacts/b2Contact.h
- ../Box2D/Dynamics/Joints/b2DistanceJoint.h
- ../Box2D/Dynamics/Joints/b2FrictionJoint.h
- ../Box2D/Dynamics/Joints/b2GearJoint.h
- ../Box2D/Dynamics/Joints/b2Joint.h
- ../Box2D/Dynamics/Joints/b2MotorJoint.h
- ../Box2D/Dynamics/Joints/b2MouseJoint.h
- ../Box2D/Dynamics/Joints/b2PrismaticJoint.h
- ../Box2D/Dynamics/Joints/b2PulleyJoint.h
- ../Box2D/Dynamics/Joints/b2RevoluteJoint.h
- ../Box2D/Dynamics/Joints/b2RopeJoint.h
- ../Box2D/Dynamics/Joints/b2WeldJoint.h
- ../Box2D/Dynamics/Joints/b2WheelJoint.h
- ../Box2D/Dynamics/b2Body.h
- ../Box2D/Dynamics/b2ContactManager.h
- ../Box2D/Dynamics/b2Fixture.h
- ../Box2D/Dynamics/b2TimeStep.h
- ../Box2D/Dynamics/b2World.h
- ../Box2D/Dynamics/b2WorldCallbacks.h
  ../test/lib/googletest/include/gtest/gtest-death-test.h
  ../test/lib/googletest/include/gtest/gtest-message.h
  ../test/lib/googletest/include/gtest/gtest-param-test.h
@@ -345,7 +272,6 @@ test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o
  ../test/lib/googletest/include/gtest/internal/gtest-tuple.h
  ../test/lib/googletest/include/gtest/internal/gtest-type-util.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
@@ -425,42 +351,6 @@ test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 test/CMakeFiles/runTests.dir/PlayerTest.cpp.o
- ../Box2D/Collision/Shapes/b2ChainShape.h
- ../Box2D/Collision/Shapes/b2CircleShape.h
- ../Box2D/Collision/Shapes/b2EdgeShape.h
- ../Box2D/Collision/Shapes/b2PolygonShape.h
- ../Box2D/Collision/Shapes/b2Shape.h
- ../Box2D/Collision/b2BroadPhase.h
- ../Box2D/Collision/b2Collision.h
- ../Box2D/Collision/b2Distance.h
- ../Box2D/Collision/b2DynamicTree.h
- ../Box2D/Collision/b2TimeOfImpact.h
- ../Box2D/Common/b2BlockAllocator.h
- ../Box2D/Common/b2Draw.h
- ../Box2D/Common/b2GrowableStack.h
- ../Box2D/Common/b2Math.h
- ../Box2D/Common/b2Settings.h
- ../Box2D/Common/b2StackAllocator.h
- ../Box2D/Common/b2Timer.h
- ../Box2D/Dynamics/Contacts/b2Contact.h
- ../Box2D/Dynamics/Joints/b2DistanceJoint.h
- ../Box2D/Dynamics/Joints/b2FrictionJoint.h
- ../Box2D/Dynamics/Joints/b2GearJoint.h
- ../Box2D/Dynamics/Joints/b2Joint.h
- ../Box2D/Dynamics/Joints/b2MotorJoint.h
- ../Box2D/Dynamics/Joints/b2MouseJoint.h
- ../Box2D/Dynamics/Joints/b2PrismaticJoint.h
- ../Box2D/Dynamics/Joints/b2PulleyJoint.h
- ../Box2D/Dynamics/Joints/b2RevoluteJoint.h
- ../Box2D/Dynamics/Joints/b2RopeJoint.h
- ../Box2D/Dynamics/Joints/b2WeldJoint.h
- ../Box2D/Dynamics/Joints/b2WheelJoint.h
- ../Box2D/Dynamics/b2Body.h
- ../Box2D/Dynamics/b2ContactManager.h
- ../Box2D/Dynamics/b2Fixture.h
- ../Box2D/Dynamics/b2TimeStep.h
- ../Box2D/Dynamics/b2World.h
- ../Box2D/Dynamics/b2WorldCallbacks.h
  ../test/lib/googletest/include/gtest/gtest-death-test.h
  ../test/lib/googletest/include/gtest/gtest-message.h
  ../test/lib/googletest/include/gtest/gtest-param-test.h
@@ -484,7 +374,6 @@ test/CMakeFiles/runTests.dir/PlayerTest.cpp.o
  ../test/lib/googletest/include/gtest/internal/gtest-tuple.h
  ../test/lib/googletest/include/gtest/internal/gtest-type-util.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h

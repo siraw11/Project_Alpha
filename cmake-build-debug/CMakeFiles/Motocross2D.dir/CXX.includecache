@@ -215,8 +215,6 @@ iostream
 -
 SFML/Graphics.hpp
 -
-Box2D/Box2D.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
 Box2D/Common/b2Settings.h
