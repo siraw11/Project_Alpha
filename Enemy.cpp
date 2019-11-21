@@ -8,7 +8,7 @@
 
 Enemy::Enemy(int hp, int s, int sp) :GameCharacter(hp,s,sp) {
     auto enemyTexture = new sf::Texture;
-    enemyTexture->loadFromFile("../Resources/Sprites/Enemy/gargoyle(spear).png");
+    enemyTexture->loadFromFile("../Resources/Sprites/Enemy/gargoyle(axe).png");
     setTexture(*enemyTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
     setOrigin(getPosition().x+getGlobalBounds().width/5,getPosition().y+getGlobalBounds().height/2);
@@ -19,7 +19,7 @@ Enemy::Enemy(int hp, int s, int sp) :GameCharacter(hp,s,sp) {
 
 //Enemy::~Enemy() {}
 
-void Enemy::movement(int *level){
+void Enemy::movement(const int *level){
     //enemy movement, random direction
     if(walkingRate==24)
     {
