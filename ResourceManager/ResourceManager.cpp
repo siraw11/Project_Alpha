@@ -23,6 +23,7 @@ bool ResourceManager::loadEssentialResources() {
     loads.push_back(loadTexture("coin.png", "./resources/textures/coin.png"));
     loads.push_back(loadTexture("cart.png", "./resources/textures/cart.png"));
     loads.push_back(loadTexture("rocket1.png", "./resources/textures/rocket1.png"));
+    loads.push_back(loadTexture("timer.png", "./resources/textures/timer.png"));
 
     loads.push_back(loadBikes());
 
