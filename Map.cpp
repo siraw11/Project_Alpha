@@ -12,6 +12,7 @@
 #include "SpeedBonus.h"
 #include "Checkpoint.h"
 #include "Game.h"
+#include "TimeBonus.h"
 
 
 Map::Map(std::string _id, std::string _name, bool _isCompleted, bool _isUnlocked, double _record,
@@ -48,6 +49,7 @@ void Map::loadLevel1() {
     mapItems.push_back(new Coin(5, 0.8, .7, .7, 50));
     mapItems.push_back(new Coin(7, 1, .7, .7, 30));
     mapItems.push_back(new SpeedBonus(10, 1, 10, .7, .7, .7));
+    mapItems.push_back(new TimeBonus(1000, 20, 0., .7, .7));
     mapItems.push_back(new Checkpoint(25, 0, 1, 1.2));
     mapItems.push_back(new Checkpoint(95, 2, 5, 3, true));
 }
@@ -76,9 +78,10 @@ void Map::loadLevel2() {
             {30, 10}//front limit
     };
 
+    mapItems.push_back(new TimeBonus(1000, 3, .1, .7, .7));
     mapItems.push_back(new Coin(5, .2, .7, .7, 50));
     mapItems.push_back(new Coin(7, .1, .7, .7, 30));
-    mapItems.push_back(new Checkpoint(28, 0, 1, 5, true));
+    mapItems.push_back(new Checkpoint(24, 1, 5, 3, true));
 }
 
 bool Map::getIsCompleted() const {
