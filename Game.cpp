@@ -20,8 +20,10 @@ Game::Game() {
 
         Game::gameData->player = std::unique_ptr<Player>(new Player("Player"));
 
-        Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv1", Map::loadLevel(1)));
-        Game::gameData->levels.insert(std::pair<std::string, std::shared_ptr<Map>>("lv2", Map::loadLevel(2)));
+        Game::gameData->levels.insert(
+                std::pair<std::string, std::shared_ptr<Map>>("lv1", ResourceManager::loadLevel("lv1")));
+        Game::gameData->levels.insert(
+                std::pair<std::string, std::shared_ptr<Map>>("lv2", ResourceManager::loadLevel("lv2")));
     } else {
         std::cout << "Fatal error: Cannot load essential resources" << std::endl;
     }
