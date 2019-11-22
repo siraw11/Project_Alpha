@@ -17,7 +17,7 @@ struct Position {
     float posY;
 };
 
-class Player : public Subject {
+class Player {
 public:
     explicit Player(std::string username = "Player", int totalCoin = 0);
 
@@ -33,17 +33,9 @@ public:
 
     void removeTotalCoin(int decrementCoin);
 
-    virtual void registerObserver(Observer *o) override ;
-
-    virtual void removeObserver(Observer *o) override ;
-
-    virtual void notifyObservers() override ;
-
 private:
     std::string username;
     int totalCoin;
-
-    std::list<Observer*> observers;
 };
 
 
