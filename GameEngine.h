@@ -52,7 +52,7 @@ public:
 
     Position getBikePosition() const;
 
-    void move();
+    void step();
     
     void respawn();
 private:

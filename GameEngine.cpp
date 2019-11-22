@@ -52,7 +52,7 @@ void GameEngine::respawn() {
     this->run();
 }
 
-void GameEngine::move() {
+void GameEngine::step() {
     this->world.Step(timeStep, velocityIterations, positionIterations);
 }
 
@@ -64,7 +64,7 @@ void GameEngine::run() {
     Game::gameData->match->timer->start();
     while (!this->pause) {
         Game::gameData->window.clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
-        move();
+        this->step();
         //la camera inizia il movimento una volta superata la metà schermo
         if (((wheelL->GetPosition().x + offsetX) * SCALE) >
             (Game::gameData->window.getSize().x / 2.)) {
@@ -163,7 +163,8 @@ void GameEngine::run() {
 }
 
 void GameEngine::speedBonus(float increment) {
-    //TODO:implment
+    this->wheelEngineL->SetMaxMotorTorque(increment);
+    this->wheelEngineL->SetMaxMotorTorque(Game::gameData->match->getBike()->getSpeed());
 }
 
 void GameEngine::setPause(bool p) {
@@ -363,8 +364,6 @@ void GameEngine::drawBike() {
     cartDraw.rotate(angleCart);
 
 
-
-    //FIXME:Fixare la posizione del cart in caso di ribaltamento, questa soluzione attuale non è ottimale
     if (flipAngle > 90) {
         cartDraw.setPosition(positionCart.x * SCALE, (positionCart.y + cartY) * SCALE);
     } else {
@@ -380,21 +379,10 @@ void GameEngine::drawBike() {
 
 void GameEngine::drawItem(Item *item) {
     sf::RectangleShape rect;
-
     rect.setPosition((float) item->getPosX() * SCALE, (LINE - (float) item->getPosY()) * SCALE);
-
     rect.setSize(sf::Vector2f(item->getWidth() * SCALE, -item->getHeight() * SCALE));
-
-    sf::Texture itemTexture;
-    //Caricamento Texture Cart moto
     if (!item->getTexture().empty()) {
-        bool itemTextureFound = itemTexture.loadFromFile(item->getTexture());
-        if (!itemTextureFound)
-            std::cout << "Impossibile caricare texture Item" << std::endl;
-        else
-            rect.setTexture(&itemTexture);
-
-
+        rect.setTexture(&Game::gameData->resources.getTexture(item->getTexture()));
     }
     Game::gameData->window.draw(rect);
 }
