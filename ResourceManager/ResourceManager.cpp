@@ -108,6 +108,15 @@ bool ResourceManager::loadBikes() {
 }
 
 
+bool ResourceManager::loadLevels() {
+    Game::gameData->levels.insert(
+            std::pair<std::string, std::shared_ptr<Map>>("lv1", ResourceManager::loadLevel("lv1")));
+    Game::gameData->levels.insert(
+            std::pair<std::string, std::shared_ptr<Map>>("lv2", ResourceManager::loadLevel("lv2")));
+    return true;
+}
+
+
 std::unique_ptr<Map> ResourceManager::loadLevel1() {
     std::unique_ptr<Map> map(new Map("lv1", "Level 1", false, true, 0));
     map->setMapPoints({

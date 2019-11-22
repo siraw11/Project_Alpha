@@ -26,6 +26,8 @@ public:
 
     bool loadBikes();
 
+    bool loadLevels();
+
     static std::unique_ptr<Map> loadLevel(std::string id);
 
     bool loadEssentialResources();
