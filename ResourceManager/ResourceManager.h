@@ -44,6 +44,9 @@ private:
     static std::unique_ptr<Map> loadLevel2();
 
     static std::unique_ptr<Map> loadLevel3();
+
+    static std::unique_ptr<Map> loadLevel4();
+
 };
 
 

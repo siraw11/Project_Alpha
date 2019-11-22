@@ -15,4 +15,7 @@ protected:
         b.setPrice(300);
         b.setSpeed(100);
     }
+
 };
+
+

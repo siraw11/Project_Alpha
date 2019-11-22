@@ -12,9 +12,9 @@ protected:
     Map m;
 
     virtual void SetUp() {
-        m.setId("lv1");
+        m.setId("test");
         m.setIsUnlocked(true);
-        m.setName("Livello 1");
+        m.setName("Livello Test");
         m.setRecord(278347);
     }
 };
