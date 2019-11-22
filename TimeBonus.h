@@ -12,7 +12,7 @@ class TimeBonus : public Item {
 public:
     TimeBonus(double timeEarned = 0, double posX = 0, double posY = 0, double width = 0,
               double height = 0,
-              std::string texture = "./resources/textures/timer.png");
+              std::string texture = "timer.png");
 
     ~TimeBonus();
 
