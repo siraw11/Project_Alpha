@@ -78,3 +78,11 @@ void Match::setBike(const std::shared_ptr<Bike> &bike) {
     Match::bike = bike;
 }
 
+const std::shared_ptr<Timer> &Match::getTimer() const {
+    return timer;
+}
+
+void Match::setTimer(const std::shared_ptr<Timer> &timer) {
+    Match::timer = timer;
+}
+

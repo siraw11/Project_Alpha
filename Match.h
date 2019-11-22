@@ -15,9 +15,6 @@ public:
     Match(std::shared_ptr<Map> = {}, std::shared_ptr<Bike> = {}, int lifes = 3, int money = 0,
           Position lastCheckpoint = {});
 
-    std::unique_ptr<Timer> timer;
-
-
     const std::shared_ptr<Bike> &getBike() const;
 
     void setBike(const std::shared_ptr<Bike> &bike);
@@ -48,12 +45,14 @@ public:
 
     void setPlayer(Player *player);
 
+    const std::shared_ptr<Timer> &getTimer() const;
 
+    void setTimer(const std::shared_ptr<Timer> &timer);
 
 private:
     int lifes;
-    float time;
     int money;
+    std::shared_ptr<Timer> timer;
     Player* player;
     Position lastCheckpoint;
     std::shared_ptr<Map> map;
