@@ -113,6 +113,8 @@ bool ResourceManager::loadLevels() {
             std::pair<std::string, std::shared_ptr<Map>>("lv1", ResourceManager::loadLevel("lv1")));
     Game::gameData->levels.insert(
             std::pair<std::string, std::shared_ptr<Map>>("lv2", ResourceManager::loadLevel("lv2")));
+    Game::gameData->levels.insert(
+            std::pair<std::string, std::shared_ptr<Map>>("lv3", ResourceManager::loadLevel("lv3")));
     return true;
 }
 
@@ -166,11 +168,49 @@ std::unique_ptr<Map> ResourceManager::loadLevel2() {
     return map;
 }
 
+std::unique_ptr<Map> ResourceManager::loadLevel3() {
+    std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, true, 0));
+    map->setMapPoints({
+                              {-1, 10},//back limit
+                              {0,  0},
+                              {5,  0},
+                              {10, 3.5},
+                              {15, 3.5},
+                              {17, 4.5},
+                              {17, 0},
+                              {20, 1},
+                              {23, 1},
+                              {30, -1.5},
+                              {33, -1.5},
+                              {38, -1},
+                              {38, -1.5},
+                              {43, -1.5},
+                              {48, 0},
+                              {53, 0},
+                              {53, 10}//front limit
+                      });
+
+    map->setMapItems({
+
+                             new Coin(5, .4, .5, .5, 25),
+                             new Coin(7.5, 2.3, .7, .7, 50),
+                             new SpeedBonus(10, 1, 14, 3.8, .7, .7),
+                             new SpeedBonus(10, 1, 34, -1, .7, .7),
+                             new Checkpoint(32, -1.5, 1, 1.2),
+                             new Checkpoint(50, 0, 5, 3, true),
+
+
+                     });
+    return map;
+}
+
 std::unique_ptr<Map> ResourceManager::loadLevel(std::string id) {
     std::unique_ptr<Map> map(new Map());
     if (id == "lv1")
         map = loadLevel1();
     if (id == "lv2")
         map = loadLevel2();
+    if (id == "lv3")
+        map = loadLevel3();
     return map;
 }
