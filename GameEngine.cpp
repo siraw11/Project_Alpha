@@ -49,7 +49,6 @@ void GameEngine::respawn() {
     wheelR->SetLinearVelocity(b2Vec2(0, 0));
     this->wheelEngineL->SetMotorSpeed(0);
     this->wheelEngineR->SetMotorSpeed(0);
-    this->run();
 }
 
 void GameEngine::step() {
@@ -61,7 +60,7 @@ void GameEngine::run() {
     float offsetY = 1.f;
     sf::Event event{};
 
-    Game::gameData->match->timer->start();
+    Game::gameData->match->getTimer()->start();
     while (!this->pause) {
         Game::gameData->window.clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
         this->step();
@@ -409,7 +408,7 @@ void GameEngine::drawInterface() {
     textTimer.setCharacterSize(80);
     textTimer.setFillColor(sf::Color::Black);
     textTimer.setString(
-            Game::gameData->match->timer->elapsedString(Game::gameData->match->timer->getTime()));
+            Game::gameData->match->getTimer()->elapsedString(Game::gameData->match->getTimer()->getTime()));
 
     Game::gameData->window.draw(spriteCoin);
     Game::gameData->window.draw(textCoin);

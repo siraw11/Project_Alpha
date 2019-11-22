@@ -8,9 +8,9 @@
 
 GameWinState::GameWinState() {
     Game::gameData->engine->setPause(true);
-    Game::gameData->match->timer->stop();
+    Game::gameData->match->getTimer()->stop();
     float bestRecord = Game::gameData->match->getMap()->getRecord();
-    float newRecord = Game::gameData->match->timer->getTime();
+    float newRecord = Game::gameData->match->getTimer()->getTime();
 
     if (newRecord < bestRecord || bestRecord == 0) {
         Game::gameData->match->getMap()->setRecord(newRecord);

@@ -44,7 +44,7 @@ double Map::getRecord() const {
 }
 
 std::string Map::getRecordString() const {
-    return Game::gameData->match->timer->elapsedString(this->record);
+    return Game::gameData->match->getTimer()->elapsedString(this->record);
 }
 
 void Map::setRecord(double record) {

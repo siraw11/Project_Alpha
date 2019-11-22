@@ -17,7 +17,7 @@ MenuPauseState::~MenuPauseState() {
 }
 
 MenuPauseState::MenuPauseState() {
-    Game::gameData->match->timer->stop();
+    Game::gameData->match->getTimer()->stop();
 }
 
 void MenuPauseState::draw() {
