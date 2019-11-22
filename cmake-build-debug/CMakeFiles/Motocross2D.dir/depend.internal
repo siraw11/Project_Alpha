@@ -40,17 +40,17 @@ CMakeFiles/Motocross2D.dir/main.cpp.o
  ../Box2D/Dynamics/b2WorldCallbacks.h
  ../GameStates/State.h
  ../GameStates/StateMachine.h
+ ../Map.h
+ ../Observer.h
+ ../Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/main.cpp
  /usr/local/include/SFML/Config.hpp

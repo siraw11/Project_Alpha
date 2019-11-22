@@ -210,6 +210,26 @@ stack
 State.h
 ../GameStates/State.h
 
+../Map.h
+iostream
+-
+list
+-
+Player.h
+../Player.h
+Observer.h
+../Observer.h
+Subject.h
+../Subject.h
+Item.h
+../Item.h
+
+../Observer.h
+
+../Subject.h
+Observer.h
+../Observer.h
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
 iostream
 -
@@ -300,20 +320,6 @@ Item.h
 iostream
 -
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
-iostream
--
-list
--
-Player.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
-Observer.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
-Subject.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
-Item.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
-
 /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
 Bike.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
@@ -323,8 +329,6 @@ Map.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
 Timer.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
 iostream
@@ -343,10 +347,8 @@ SFML/Graphics.hpp
 -
 iostream
 -
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
-Observer.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
+Map.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Map.h
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
 iostream

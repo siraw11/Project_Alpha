@@ -502,6 +502,7 @@ test/CMakeFiles/runTests.dir/MapFixture.cpp.o
  ../Map.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/ResourceManager.h
  ../Subject.h
  ../test/lib/googletest/include/gtest/gtest-death-test.h
  ../test/lib/googletest/include/gtest/gtest-message.h

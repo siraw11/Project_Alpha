@@ -155,8 +155,11 @@ CMakeFiles/core.dir/Checkpoint.cpp.o
  ../GameStates/GameWinState.h
  ../GameStates/State.h
  ../GameStates/StateMachine.h
+ ../Map.h
  ../Menu.h
  ../MenuOption.h
+ ../Observer.h
+ ../Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Checkpoint.cpp
@@ -165,12 +168,9 @@ CMakeFiles/core.dir/Checkpoint.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -285,6 +285,9 @@ CMakeFiles/core.dir/Coin.cpp.o
  ../Box2D/Dynamics/b2WorldCallbacks.h
  ../GameStates/State.h
  ../GameStates/StateMachine.h
+ ../Map.h
+ ../Observer.h
+ ../Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Coin.cpp
@@ -292,12 +295,9 @@ CMakeFiles/core.dir/Coin.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -411,8 +411,11 @@ CMakeFiles/core.dir/Game.cpp.o
  ../Box2D/Dynamics/b2World.h
  ../Box2D/Dynamics/b2WorldCallbacks.h
  ../GameStates/StateMachine.h
+ ../Map.h
  ../Menu.h
  ../MenuOption.h
+ ../Observer.h
+ ../Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Game.cpp
@@ -421,12 +424,9 @@ CMakeFiles/core.dir/Game.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuHomeState.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/State.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -2453,6 +2453,8 @@ CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o
  ../Box2D/Dynamics/b2TimeStep.h
  ../Box2D/Dynamics/b2World.h
  ../Box2D/Dynamics/b2WorldCallbacks.h
+ ../Checkpoint.h
+ ../Coin.h
  ../Game.h
  ../GameEngine.h
  ../GameStates/State.h
@@ -2463,7 +2465,9 @@ CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o
  ../Observer.h
  ../Player.h
  ../ResourceManager/ResourceManager.h
+ ../SpeedBonus.h
  ../Subject.h
+ ../TimeBonus.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
@@ -2580,19 +2584,19 @@ CMakeFiles/core.dir/SpeedBonus.cpp.o
  ../Box2D/Dynamics/b2WorldCallbacks.h
  ../GameStates/State.h
  ../GameStates/StateMachine.h
+ ../Map.h
+ ../Observer.h
+ ../Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -2711,17 +2715,17 @@ CMakeFiles/core.dir/TimeBonus.cpp.o
  ../Box2D/Dynamics/b2WorldCallbacks.h
  ../GameStates/State.h
  ../GameStates/StateMachine.h
+ ../Map.h
+ ../Observer.h
+ ../Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
- /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h

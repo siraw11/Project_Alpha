@@ -501,6 +501,7 @@ test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Item.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Map.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Observer.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Player.h
+test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../ResourceManager/ResourceManager.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Subject.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../test/lib/googletest/include/gtest/gtest-death-test.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../test/lib/googletest/include/gtest/gtest-message.h
