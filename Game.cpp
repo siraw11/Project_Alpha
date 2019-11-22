@@ -18,12 +18,9 @@ Game::Game() {
         Game::gameData->match = std::unique_ptr<Match>(new Match());
         gameData->machine.push_state(StateRef(new MenuHomeState()));
 
-        Game::gameData->player = std::unique_ptr<Player>(new Player("Player"));
+        Game::gameData->player = std::unique_ptr<Player>(new Player("Player", 1000));
 
-        Game::gameData->levels.insert(
-                std::pair<std::string, std::shared_ptr<Map>>("lv1", ResourceManager::loadLevel("lv1")));
-        Game::gameData->levels.insert(
-                std::pair<std::string, std::shared_ptr<Map>>("lv2", ResourceManager::loadLevel("lv2")));
+        Game::gameData->resources.loadLevels();
     } else {
         std::cout << "Fatal error: Cannot load essential resources" << std::endl;
     }
