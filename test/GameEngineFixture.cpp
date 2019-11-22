@@ -60,7 +60,7 @@ TEST_F(GameEngineFixture, TestMovement) {
 
     int i = 60;
     while (i > 1) {
-        e->move();
+        e->step();
         i--;
     }
 
