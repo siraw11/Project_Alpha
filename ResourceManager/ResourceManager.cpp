@@ -173,31 +173,31 @@ std::unique_ptr<Map> ResourceManager::loadLevel3() {
     map->setMapPoints({
                               {-1, 10},//back limit
                               {0,  0},
-                              {5,  0},
-                              {10, 3.5},
-                              {15, 3.5},
-                              {17, 4.5},
-                              {17, 0},
-                              {20, 1},
-                              {23, 1},
-                              {30, -1.5},
-                              {33, -1.5},
-                              {38, -1},
-                              {38, -1.5},
-                              {43, -1.5},
-                              {48, 0},
-                              {53, 0},
-                              {53, 10}//front limit
+                              {3,  0},
+                              {12, 5.5},
+                              {15, 5.5},
+                              {17, 6.5},
+                              {17, 2},
+                              {20, 3},
+                              {23, 3},
+                              {30, 1.5},
+                              {33, 1.5},
+                              {38, 2},
+                              {38, 1.5},
+                              {43, 1.5},
+                              {48, 2},
+                              {53, 2},
+                              {53, 12}//front limit
                       });
 
     map->setMapItems({
 
-                             new Coin(5, .4, .5, .5, 25),
-                             new Coin(7.5, 2.3, .7, .7, 50),
-                             new SpeedBonus(10, 1, 14, 3.8, .7, .7),
-                             new SpeedBonus(10, 1, 34, -1, .7, .7),
-                             new Checkpoint(32, -1.5, 1, 1.2),
-                             new Checkpoint(50, 0, 5, 3, true),
+                             new Coin(5, 2.4, .5, .5, 25),
+                             new Coin(7.5, 4.3, .7, .7, 50),
+                             new SpeedBonus(10, 1, 14, 5.8, .7, .7),
+                             new SpeedBonus(10, 1, 34, 3, .7, .7),
+                             new Checkpoint(32, 1.5, 1, 1.2),
+                             new Checkpoint(50, 2, 5, 3, true),
 
 
                      });
