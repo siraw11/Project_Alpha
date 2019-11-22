@@ -11,7 +11,7 @@ GameDataRef Game::gameData = std::make_shared<GameData>();
 Game::Game() {
     if (Game::gameData->resources.loadEssentialResources()) {
         std::cout << "Resources loaded successfully" << std::endl;
-        gameData->window.create(sf::VideoMode(1920, 1080), "Motocross 2D",
+        gameData->window.create(sf::VideoMode(sf::VideoMode::getDesktopMode()), "Motocross 2D",
                                 sf::Style::Close | sf::Style::Titlebar);
         gameData->window.setVerticalSyncEnabled(true);
 
