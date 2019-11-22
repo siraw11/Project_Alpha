@@ -50,13 +50,6 @@ public:
 
     void setMapItems(const std::list<Item *> &mapItems);
 
-
-    void loadLevel1();
-
-    void loadLevel2();
-
-    static std::unique_ptr<Map> loadLevel(int id);
-
     const std::string &getName() const;
 
     void setName(const std::string &name);
