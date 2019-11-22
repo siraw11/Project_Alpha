@@ -10,7 +10,7 @@
 #include "Timer.h"
 
 
-class Match {
+class Match : public Subject {
 public:
     Match(std::shared_ptr<Map> = {}, std::shared_ptr<Bike> = {}, int lifes = 3, int money = 0,
           Position lastCheckpoint = {0, 0});
@@ -49,9 +49,22 @@ public:
 
     void setTimer(const std::shared_ptr<Timer> &timer);
 
+
+    virtual void registerObserver(Observer *o) override;
+
+    virtual void removeObserver(Observer *o) override;
+
+    virtual void notifyObservers() override;
+
+    float getPercentage() const;
+
+    void setPercentage(float percentage);
+
 private:
     int lifes;
     int money;
+    float percentage;
+    std::list<Observer *> observers;
     std::shared_ptr<Timer> timer;
     Player* player;
     Position lastCheckpoint;

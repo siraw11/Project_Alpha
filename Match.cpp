@@ -86,3 +86,25 @@ void Match::setTimer(const std::shared_ptr<Timer> &timer) {
     Match::timer = timer;
 }
 
+float Match::getPercentage() const {
+    return percentage;
+}
+
+void Match::setPercentage(float percentage) {
+    Match::percentage = percentage;
+}
+
+
+void Match::registerObserver(Observer *o) {
+    observers.push_back(o);
+}
+
+void Match::removeObserver(Observer *o) {
+    observers.remove(o);
+}
+
+void Match::notifyObservers() {
+    for (auto itr = std::begin(observers); itr != std::end(observers); itr++) {
+        (*itr)->update();
+    }
+}

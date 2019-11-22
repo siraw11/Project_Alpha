@@ -27,9 +27,9 @@ std::vector<MenuOption *> ShopState::loadLevelsOptions() {
         if (it->second->getIsUnlocked()) {
             bikeInfo += " (already bought)";
         } else {
-            bikeInfo +=
-                    std::to_string((int) it->second->getSpeed()) + " [buy for" +
-                    std::to_string(it->second->getPrice()) + "]";
+            bikeInfo += " (" +
+                        std::to_string((int) it->second->getSpeed()) + "Km/h) [buy for " +
+                        std::to_string(it->second->getPrice()) + "]";
         }
         option = new MenuOption(bikeInfo);
         option->setValue(it->second->getId());

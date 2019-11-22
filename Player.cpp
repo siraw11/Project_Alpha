@@ -30,21 +30,6 @@ void Player::addTotalCoin(int increment) {
 void Player::removeTotalCoin(int increment) {
     Player::totalCoin -= increment;
 }
-
-void Player::registerObserver(Observer *o) {
-    observers.push_back(o);
-}
-
-void Player::removeObserver(Observer *o) {
-    observers.remove(o);
-}
-
-void Player::notifyObservers() {
-    for( auto itr = std::begin(observers);itr != std::end (observers); itr++) {
-        (*itr)->update();
-    }
-}
-
 Player::~Player() {
 
 }
