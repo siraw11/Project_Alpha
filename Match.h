@@ -13,7 +13,7 @@
 class Match {
 public:
     Match(std::shared_ptr<Map> = {}, std::shared_ptr<Bike> = {}, int lifes = 3, int money = 0,
-          Position lastCheckpoint = {});
+          Position lastCheckpoint = {0, 0});
 
     const std::shared_ptr<Bike> &getBike() const;
 
