@@ -8,6 +8,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Map.h"
 
 class ResourceManager {
 public:
@@ -25,6 +26,8 @@ public:
 
     bool loadBikes();
 
+    static std::unique_ptr<Map> loadLevel(std::string id);
+
     bool loadEssentialResources();
 
 private:
@@ -32,6 +35,11 @@ private:
 
     std::map<std::string, sf::Texture> textures;
     std::map<std::string, sf::Font> fonts;
+
+
+    static std::unique_ptr<Map> loadLevel1();
+
+    static std::unique_ptr<Map> loadLevel2();
 };
 
 
