@@ -31,7 +31,7 @@ TEST_F(MapFixture, TestMapLoad) {
     ASSERT_EQ(false, m.getIsCompleted());
 
 
-    //controllo che il secondo non sia sbloccato di default
+    //controllo che il secondo non sia sbloccato e che i punti siano aggiornati
     m = *ResourceManager::loadLevel("lv2");
     ASSERT_LT(0, m.getMapPoints().size());
     ASSERT_EQ(0, m.getRecord());

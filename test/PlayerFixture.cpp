@@ -16,6 +16,7 @@ protected:
 
 TEST_F(PlayerFixture, TestCoin) {
     p.removeTotalCoin(100);
+    ASSERT_EQ(p.getTotalCoin(), 400);
     p.addTotalCoin((100));
     ASSERT_EQ(p.getTotalCoin(), 500);
 }

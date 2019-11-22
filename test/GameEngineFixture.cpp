@@ -38,6 +38,7 @@ TEST_F(GameEngineFixture, TestPause) {
     ASSERT_EQ(e->getTimeStep(), 0);
     ASSERT_EQ(e->getVelocityIterations(), 0);
     ASSERT_EQ(e->getPositionIterations(), 0);
+    e->step();//calcolo il nuovo step
 
     //testo condizione post-pausa
     e->setPause(false);
@@ -49,13 +50,14 @@ TEST_F(GameEngineFixture, TestPause) {
     float postPausePosX = e->getBikePosition().posX;
     float postPausePosY = e->getBikePosition().posY;
 
-
+    //anche se effettuato lo step, essendo in stop la moto non si deve muovere
     ASSERT_EQ(prePausePosX, postPausePosX);
     ASSERT_EQ(prePausePosY, postPausePosY);
 }
 
 
 TEST_F(GameEngineFixture, TestMovement) {
+    //controllo che si muova la moto
     float prePosX = e->getBikePosition().posX;
 
     int i = 60;
@@ -68,3 +70,23 @@ TEST_F(GameEngineFixture, TestMovement) {
 
     ASSERT_GT(postPosX, prePosX);
 }
+
+
+TEST_F(GameEngineFixture, TestRespawn) {
+    //controllo che il punto di respawn funzioni
+    float respawnX = 10;
+    Game::gameData->match->setLastCheckpoint({respawnX, 0});
+    e->respawn();
+
+    float postPosX = e->getBikePosition().posX;
+    float postPosY = e->getBikePosition().posY;
+    ASSERT_EQ(postPosX, respawnX);
+
+    respawnX = 50;
+    Game::gameData->match->setLastCheckpoint({respawnX, 0});
+    e->respawn();
+
+    postPosX = e->getBikePosition().posX;
+    ASSERT_EQ(postPosX, respawnX);
+}
+
