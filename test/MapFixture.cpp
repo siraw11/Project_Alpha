@@ -3,6 +3,7 @@
 //
 
 
+#include <ResourceManager/ResourceManager.h>
 #include "gtest/gtest.h"
 #include "Map.h"
 
@@ -21,9 +22,9 @@ protected:
 TEST_F(MapFixture, TestMapLoad) {
     ASSERT_EQ(0, m.getMapPoints().size());
     //il primo livello deve essere sblocatto ma non completato di default
-    m.loadLevel1();
+    m = *ResourceManager::loadLevel("lv1");
     ASSERT_LT(0, m.getMapPoints().size());
-    ASSERT_LT(0, m.getRecord());
+    ASSERT_EQ(0, m.getRecord());
     m.setRecord(5000);
     ASSERT_EQ(5000, m.getRecord());
     ASSERT_EQ(true, m.getIsUnlocked());
@@ -31,9 +32,9 @@ TEST_F(MapFixture, TestMapLoad) {
 
 
     //controllo che il secondo non sia sbloccato di default
-    m.loadLevel2();
+    m = *ResourceManager::loadLevel("lv2");
     ASSERT_LT(0, m.getMapPoints().size());
-    ASSERT_LT(0, m.getRecord());
+    ASSERT_EQ(0, m.getRecord());
     ASSERT_EQ(false, m.getIsCompleted());
     ASSERT_EQ(false, m.getIsUnlocked());
 }
