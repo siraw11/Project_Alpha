@@ -48,7 +48,7 @@ void Map::loadLevel1() {
 
     mapItems.push_back(new Coin(5, 0.8, .7, .7, 50));
     mapItems.push_back(new Coin(7, 1, .7, .7, 30));
-    mapItems.push_back(new SpeedBonus(10, 1, 10, .7, .7, .7));
+    mapItems.push_back(new SpeedBonus(10, 100, 10, .7, .7, .7));
     mapItems.push_back(new TimeBonus(1000, 20, 0., .7, .7));
     mapItems.push_back(new Checkpoint(25, 0, 1, 1.2));
     mapItems.push_back(new Checkpoint(95, 2, 5, 3, true));
