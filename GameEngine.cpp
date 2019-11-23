@@ -392,6 +392,7 @@ void GameEngine::drawInterface() {
     sf::Sprite spriteCoin(Game::gameData->resources.getTexture("coin.png"));
     spriteCoin.setPosition(interfaceX, interfaceY);
     spriteCoin.setScale(0.20, 0.20);
+    Game::gameData->window.draw(spriteCoin);
 
     sf::Text textCoin;
     textCoin.setPosition(interfaceX + 150, interfaceY);
@@ -399,6 +400,17 @@ void GameEngine::drawInterface() {
     textCoin.setCharacterSize(80);
     textCoin.setFillColor(sf::Color::Black);
     textCoin.setString(std::to_string(Game::gameData->match->getMoney()));
+    Game::gameData->window.draw(textCoin);
+
+
+    sf::Sprite spriteHeart(Game::gameData->resources.getTexture("heart.png"));
+    float heartPosX = interfaceX + 400;
+    for (int i = 0; i < Game::gameData->match->getLifes(); ++i) {
+        spriteHeart.setPosition(heartPosX, interfaceY);
+        spriteHeart.setScale(0.20, 0.20);
+        Game::gameData->window.draw(spriteHeart);
+        heartPosX += 130;
+    }
 
 
     sf::Text textTimer;
@@ -408,10 +420,9 @@ void GameEngine::drawInterface() {
     textTimer.setFillColor(sf::Color::Black);
     textTimer.setString(
             Game::gameData->match->getTimer()->elapsedString(Game::gameData->match->getTimer()->getTime()));
-
-    Game::gameData->window.draw(spriteCoin);
-    Game::gameData->window.draw(textCoin);
     Game::gameData->window.draw(textTimer);
+
+
 }
 
 //Conversione Radianti -> Gradi
