@@ -6,13 +6,14 @@
 #include "Item.h"
 #include "Game.h"
 
-SpeedBonus::SpeedBonus(double _seconds, double _speedIncrement, double _posX, double _posY, double _width, double _height, std::string _texture): Item(_posX,
-                                                                                                                                 _posY,
-                                                                                                                                 _width,
-                                                                                                                                 _height,
-                                                                                                                                 _texture),
-                                                                                                                            seconds(_seconds),
-                                                                                                                            speedIncrement(_speedIncrement){}
+SpeedBonus::SpeedBonus(double _seconds, double _speedIncrement, double _posX, double _posY, double _width,
+                       double _height, std::string _texture, float _angle) : Item(_posX,
+                                                                                  _posY,
+                                                                                  _width,
+                                                                                  _height,
+                                                                                  _texture, _angle),
+                                                                             seconds(_seconds),
+                                                                             speedIncrement(_speedIncrement) {}
 
 double SpeedBonus::getSeconds() const {
     return seconds;
@@ -33,5 +34,5 @@ void SpeedBonus::setSpeedIncrement(double speedIncrement) {
 void SpeedBonus::doSpecial() {
     setTaken(true);
     std::cout << "Special! Addedd:" << speedIncrement << " speed" << std::endl;
-    Game::gameData->engine->speedBonus(200);
+    Game::gameData->engine->speedChange(200);
 }

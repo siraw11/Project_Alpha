@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libMotocross2.a  CMakeFiles/Motocross2.dir/Player.cpp.o CMakeFiles/Motocross2.dir/Bike.cpp.o CMakeFiles/Motocross2.dir/Map.cpp.o CMakeFiles/Motocross2.dir/Item.cpp.o CMakeFiles/Motocross2.dir/Coin.cpp.o CMakeFiles/Motocross2.dir/SpeedBonus.cpp.o CMakeFiles/Motocross2.dir/TimeBonus.cpp.o CMakeFiles/Motocross2.dir/Checkpoint.cpp.o CMakeFiles/Motocross2.dir/GameEngine.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libMotocross2.a

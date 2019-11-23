@@ -48,7 +48,7 @@ public:
 
     void setPause(bool pause);
 
-    void speedBonus(float increment);
+    void speedChange(float increment);
 
     Position getBikePosition() const;
 

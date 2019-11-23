@@ -7,12 +7,13 @@
 #include "Checkpoint.h"
 #include "Game.h"
 
-Checkpoint::Checkpoint(double _posX, double _posY, double _width, double _height, bool _isEnd, std::string _texture)
+Checkpoint::Checkpoint(double _posX, double _posY, double _width, double _height, bool _isEnd, std::string _texture,
+                       float _angle)
         : Item(_posX,
                _posY,
                _width,
                _height,
-               _texture), isEnd(_isEnd) {
+               _texture, _angle), isEnd(_isEnd) {
     if (isEnd) {
         this->setTexture("arrival.png");
     }

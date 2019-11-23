@@ -161,9 +161,8 @@ void GameEngine::run() {
     }
 }
 
-void GameEngine::speedBonus(float increment) {
+void GameEngine::speedChange(float increment) {
     this->wheelEngineL->SetMaxMotorTorque(increment);
-    this->wheelEngineL->SetMaxMotorTorque(Game::gameData->match->getBike()->getSpeed());
 }
 
 void GameEngine::setPause(bool p) {
