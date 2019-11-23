@@ -15,28 +15,26 @@
 #include "Item.h"
 
 bool ResourceManager::loadEssentialResources() {
-    std::vector<bool> loads;
-    loads.push_back(loadFont("arial.ttf", "./resources/fonts/arial.ttf"));
+    bool resourcesLoaded = true;
+    loadFont("arial.ttf", "./resources/fonts/arial.ttf");
 
-    loads.push_back(loadTexture("wheel.png", "./resources/textures/wheel.png"));
-    loads.push_back(loadTexture("cart.png", "./resources/textures/cart.png"));
-    loads.push_back(loadTexture("cart_red.png", "./resources/textures/cart_red.png"));
-    loads.push_back(loadTexture("cart_orange.png", "./resources/textures/cart_orange.png"));
 
-    loads.push_back(loadTexture("arrival.png", "./resources/textures/arrival.png"));
-    loads.push_back(loadTexture("checkpoint.png", "./resources/textures/checkpoint.png"));
-    loads.push_back(loadTexture("coin.png", "./resources/textures/coin.png"));
-    loads.push_back(loadTexture("cart.png", "./resources/textures/cart.png"));
-    loads.push_back(loadTexture("rocket1.png", "./resources/textures/rocket1.png"));
-    loads.push_back(loadTexture("timer.png", "./resources/textures/timer.png"));
+    loadTexture("wheel.png", "./resources/textures/wheel.png");
+    loadTexture("cart.png", "./resources/textures/cart.png");
+    loadTexture("cart_red.png", "./resources/textures/cart_red.png");
+    loadTexture("cart_orange.png", "./resources/textures/cart_orange.png");
 
-    loads.push_back(loadBikes());
+    loadTexture("arrival.png", "./resources/textures/arrival.png");
+    loadTexture("checkpoint.png", "./resources/textures/checkpoint.png");
+    loadTexture("coin.png", "./resources/textures/coin.png");
+    loadTexture("heart.png", "./resources/textures/heart.png");
+    loadTexture("cart.png", "./resources/textures/cart.png");
+    loadTexture("rocket1.png", "./resources/textures/rocket1.png");
+    loadTexture("timer.png", "./resources/textures/timer.png");
 
-    if (std::find(loads.begin(), loads.end(), false) != loads.end()) {
-        return false;
-    } else {
-        return true;
-    }
+    loadBikes();
+
+    return resourcesLoaded;
 }
 
 bool ResourceManager::loadTexture(std::string name, std::string fileName) {
@@ -44,8 +42,8 @@ bool ResourceManager::loadTexture(std::string name, std::string fileName) {
     if (texture.loadFromFile(fileName)) {
         this->textures[name] = texture;
         return true;
+    } else {
     }
-    return false;
 }
 
 sf::Texture &ResourceManager::getTexture(std::string name) {
@@ -233,7 +231,6 @@ std::unique_ptr<Map> ResourceManager::loadLevel4() {
                      });
     return map;
 }
-
 
 
 std::unique_ptr<Map> ResourceManager::loadLevel(std::string id) {
