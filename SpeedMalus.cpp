@@ -5,12 +5,13 @@
 #include "SpeedMalus.h"
 #include "Game.h"
 
-SpeedMalus::SpeedMalus(double _speedDecrement, double _posX, double _posY, double _width, double _height,
-                       std::string _texture, float _angle) : Item(_posX,
-                                                                  _posY,
-                                                                  _width,
-                                                                  _height,
-                                                                  _texture, _angle),
+SpeedMalus::SpeedMalus(double _speedDecrement, double _posX, double _posY, double _width, double _height, float _angle,
+                       std::string _texture) : Item(_posX,
+                                                    _posY,
+                                                    _width,
+                                                    _height,
+                                                    _angle,
+                                                    _texture),
                                                              speedDecrement(_speedDecrement) {}
 
 double SpeedMalus::getSpeedDecrement() const {
@@ -23,6 +24,5 @@ void SpeedMalus::setSpeedDecrement(double speedDecrement) {
 
 
 void SpeedMalus::doSpecial() {
-    std::cout << "OH NO! Removed:" << speedDecrement << " speed" << std::endl;
-    Game::gameData->engine->speedChange(200);
+    Game::gameData->engine->speedChange(speedDecrement);
 }
