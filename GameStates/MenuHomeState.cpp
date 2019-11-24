@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <Game.h>
+#include <ResourceManager/ResourceFont.h>
 #include "MenuHomeState.h"
 #include "GameState.h"
 #include "StateMachine.h"
@@ -11,7 +12,10 @@
 #include "SelectLevelState.h"
 #include "ShopState.h"
 
-static Menu menu(MenuType::Home, MenuOption::loadMainMenuOptions());
+
+MenuHomeState::MenuHomeState() {
+    this->menu = new Menu(MenuType::Home, MenuOption::loadMainMenuOptions());
+}
 
 void MenuHomeState::draw() {
     Game::gameData->window.clear(sf::Color(0, 0, 0));
@@ -22,7 +26,7 @@ void MenuHomeState::draw() {
 
     sf::Text textWelcome;
     textWelcome.setPosition(width, height);
-    textWelcome.setFont(Game::gameData->resources.getFont("arial.ttf"));
+    textWelcome.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
     textWelcome.setCharacterSize(80);
     textWelcome.setPosition(width, height - 450);
     textWelcome.setFillColor(sf::Color(50, 50, 100));
@@ -31,7 +35,7 @@ void MenuHomeState::draw() {
 
     sf::Text textWelcomeUsername;
     textWelcomeUsername.setPosition(width, height);
-    textWelcomeUsername.setFont(Game::gameData->resources.getFont("arial.ttf"));
+    textWelcomeUsername.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
     textWelcomeUsername.setCharacterSize(50);
     textWelcomeUsername.setPosition(width, height - 350);
     textWelcomeUsername.setFillColor(sf::Color::White);
@@ -42,10 +46,10 @@ void MenuHomeState::draw() {
 
 
     int i = 0;
-    for (it = menu.options.begin(); it != menu.options.end(); it++, i++) {
+    for (it = menu->options.begin(); it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(
                 sf::Vector2f(width, height + i * 100));
-        if (i == menu.getSelectedItemIndex()) {
+        if (i == menu->getSelectedItemIndex()) {
             (*it)->option.setFillColor(sf::Color(200, 100, 0));
         }
         Game::gameData->window.draw((*it)->option);
@@ -59,13 +63,13 @@ void MenuHomeState::handleInput(sf::Event event) {
         case sf::Event::KeyPressed:
             switch (event.key.code) {
                 case sf::Keyboard::Down:
-                    menu.MoveDown();
+                    menu->MoveDown();
                     break;
                 case sf::Keyboard::Up:
-                    menu.MoveUp();
+                    menu->MoveUp();
                     break;
                 case sf::Keyboard::Enter:
-                    switch (menu.getSelectedItemIndex()) {
+                    switch (menu->getSelectedItemIndex()) {
                         case 0:
                             std::cout << "Play" << std::endl;
                             Game::gameData->machine.push_state(StateRef(new SelectLevelState()));

@@ -9,6 +9,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Map.h"
+#include "Resource.h"
+#include "ResourceTexture.h"
 
 class ResourceManager {
 public:
@@ -16,13 +18,7 @@ public:
 
     ~ResourceManager() {}
 
-    bool loadTexture(std::string name, std::string fileName);
-
-    sf::Texture &getTexture(std::string name);
-
-    bool loadFont(std::string name, std::string fileName);
-
-    sf::Font &getFont(std::string name);
+    void add(Resource *r);
 
     bool loadBikes();
 
@@ -32,12 +28,17 @@ public:
 
     bool loadEssentialResources();
 
-private:
-    static std::string readFile(std::string filePath);
+    template<typename T>
+    inline const T &getResource(std::string id) const {
+        return dynamic_cast<T>(resources.at(id));
+    };
 
+private:
+
+
+    std::map<std::string, Resource *> resources;
     std::map<std::string, sf::Texture> textures;
     std::map<std::string, sf::Font> fonts;
-
 
     static std::unique_ptr<Map> loadLevel1();
 
@@ -46,7 +47,6 @@ private:
     static std::unique_ptr<Map> loadLevel3();
 
     static std::unique_ptr<Map> loadLevel4();
-
 };
 
 

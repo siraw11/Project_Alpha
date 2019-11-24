@@ -9,7 +9,12 @@
 #include "State.h"
 
 class MenuHomeState : public State {
+public:
+    MenuHomeState();
+
 private:
+    Menu *menu;
+
     void update() override;
 
     void draw() override;

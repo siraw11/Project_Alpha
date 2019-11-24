@@ -5,6 +5,8 @@
 #include <SFML/Graphics.hpp>
 #include <GameStates/MenuPauseState.h>
 #include <GameStates/GameLostState.h>
+#include <ResourceManager/ResourceTexture.h>
+#include <ResourceManager/ResourceFont.h>
 #include "Box2D/Box2D.h"
 
 #include "GameEngine.h"
@@ -137,7 +139,6 @@ void GameEngine::run() {
         }
 
         drawBike();//disegno la moto
-
         drawInterface();
 
         flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
@@ -315,18 +316,19 @@ void GameEngine::drawBike() {
     //Disegno ruota sinistra con Texture
     sf::CircleShape wheelLDraw(WHEEL_SIZE * SCALE);
     wheelLDraw.setFillColor(sf::Color::White);
-    wheelLDraw.setTexture(&Game::gameData->resources.getTexture("wheel.png"));
+    wheelLDraw.setTexture(&Game::gameData->resources.getResource<ResourceTexture *>("wheel.png")->getTexture());
 
 
     //Disegno ruota destra con Texture
     sf::CircleShape wheelRDraw(WHEEL_SIZE * SCALE);
     wheelRDraw.setFillColor(sf::Color::White);
-    wheelRDraw.setTexture(&Game::gameData->resources.getTexture("wheel.png"));
+    wheelRDraw.setTexture(&Game::gameData->resources.getResource<ResourceTexture *>("wheel.png")->getTexture());
 
     //Disegno cart con Texture
     sf::RectangleShape cartDraw(sf::Vector2f(cartX * 2 * SCALE, cartY * 3 * SCALE));
     cartDraw.setFillColor(sf::Color::White);
-    cartDraw.setTexture(&Game::gameData->resources.getTexture(Game::gameData->match->getBike()->getTexture()));
+    cartDraw.setTexture(&Game::gameData->resources.getResource<ResourceTexture *>(
+            Game::gameData->match->getBike()->getTexture())->getTexture());
 
 
     //Ricavo nuovi dati fisici ruota sinistra
@@ -379,7 +381,7 @@ void GameEngine::drawItem(Item *item) {
     rect.setPosition((float) item->getPosX() * SCALE, (LINE - (float) item->getPosY()) * SCALE);
     rect.setSize(sf::Vector2f(item->getWidth() * SCALE, -item->getHeight() * SCALE));
     if (!item->getTexture().empty()) {
-        rect.setTexture(&Game::gameData->resources.getTexture(item->getTexture()));
+        rect.setTexture(&Game::gameData->resources.getResource<ResourceTexture *>(item->getTexture())->getTexture());
     }
     Game::gameData->window.draw(rect);
 }
@@ -388,21 +390,21 @@ void GameEngine::drawInterface() {
     float interfaceX = (view.getCenter().x) - ((view.getSize().x) / 2);
     float interfaceY = (view.getCenter().y) - ((view.getSize().y) / 2);
 
-    sf::Sprite spriteCoin(Game::gameData->resources.getTexture("coin.png"));
+    sf::Sprite spriteCoin(Game::gameData->resources.getResource<ResourceTexture *>("coin.png")->getTexture());
     spriteCoin.setPosition(interfaceX, interfaceY);
     spriteCoin.setScale(0.20, 0.20);
     Game::gameData->window.draw(spriteCoin);
 
     sf::Text textCoin;
     textCoin.setPosition(interfaceX + 150, interfaceY);
-    textCoin.setFont(Game::gameData->resources.getFont("arial.ttf"));
+    textCoin.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
     textCoin.setCharacterSize(80);
     textCoin.setFillColor(sf::Color::Black);
     textCoin.setString(std::to_string(Game::gameData->match->getMoney()));
     Game::gameData->window.draw(textCoin);
 
 
-    sf::Sprite spriteHeart(Game::gameData->resources.getTexture("heart.png"));
+    sf::Sprite spriteHeart(Game::gameData->resources.getResource<ResourceTexture *>("heart.png")->getTexture());
     float heartPosX = interfaceX + 400;
     for (int i = 0; i < Game::gameData->match->getLifes(); ++i) {
         spriteHeart.setPosition(heartPosX, interfaceY);
@@ -414,7 +416,7 @@ void GameEngine::drawInterface() {
 
     sf::Text textTimer;
     textTimer.setPosition(interfaceX + Game::gameData->window.getSize().x / 2 - 150, interfaceY);
-    textTimer.setFont(Game::gameData->resources.getFont("arial.ttf"));
+    textTimer.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
     textTimer.setCharacterSize(80);
     textTimer.setFillColor(sf::Color::Black);
     textTimer.setString(
@@ -480,3 +482,4 @@ void GameEngine::setWorld(const b2World &_world) {
 Position GameEngine::getBikePosition() const {
     return Position{cart->GetPosition().x, cart->GetPosition().y};
 }
+

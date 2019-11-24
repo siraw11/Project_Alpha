@@ -1,15 +1,15 @@
 //
 // Created by Luca Graziotti on 2019-10-12.
 //
+#include <ResourceManager/ResourceFont.h>
 #include "MenuOption.h"
+#include "Game.h"
 
 MenuOption::MenuOption(const std::string &_text) {
-    font.loadFromFile("./resources/fonts/Arial.ttf");
     option.setString(_text);
     option.setFillColor(sf::Color::White);
     option.setCharacterSize(40);
-    option.setFont(font);
-
+    option.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
 }
 
 MenuOption::~MenuOption() {

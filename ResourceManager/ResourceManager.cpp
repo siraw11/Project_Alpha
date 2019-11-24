@@ -4,6 +4,9 @@
 
 #include "ResourceManager.h"
 #include "ResourceManagerException.h"
+#include "ResourceTexture.h"
+#include "Resource.h"
+#include "ResourceFont.h"
 #include <sstream>
 #include <string>
 #include <fstream>
@@ -15,25 +18,22 @@
 #include <SpeedMalus.h>
 
 bool ResourceManager::loadEssentialResources() {
-    bool resourcesLoaded = true;
-
     try {
-        loadFont("arial.ttf", "./resources/fonts/arial.ttf");
+        add(new ResourceFont("arial.ttf", "./resources/fonts/arial.ttf"));
 
+        add(new ResourceTexture("wheel.png", "./resources/textures/wheel.png"));
+        add(new ResourceTexture("cart.png", "./resources/textures/cart.png"));
+        add(new ResourceTexture("cart_red.png", "./resources/textures/cart_red.png"));
+        add(new ResourceTexture("cart_orange.png", "./resources/textures/cart_orange.png"));
 
-        loadTexture("wheel.png", "./resources/textures/wheel.png");
-        loadTexture("cart.png", "./resources/textures/cart.png");
-        loadTexture("cart_red.png", "./resources/textures/cart_red.png");
-        loadTexture("cart_orange.png", "./resources/textures/cart_orange.png");
-
-        loadTexture("arrival.png", "./resources/textures/arrival.png");
-        loadTexture("checkpoint.png", "./resources/textures/checkpoint.png");
-        loadTexture("coin.png", "./resources/textures/coin.png");
-        loadTexture("heart.png", "./resources/textures/heart.png");
-        loadTexture("cart.png", "./resources/textures/cart.png");
-        loadTexture("rocket1.png", "./resources/textures/rocket1.png");
-        loadTexture("timer.png", "./resources/textures/timer.png");
-        loadTexture("mud.png", "./resources/textures/mud.png");
+        add(new ResourceTexture("arrival.png", "./resources/textures/arrival.png"));
+        add(new ResourceTexture("checkpoint.png", "./resources/textures/checkpoint.png"));
+        add(new ResourceTexture("coin.png", "./resources/textures/coin.png"));
+        add(new ResourceTexture("heart.png", "./resources/textures/heart.png"));
+        add(new ResourceTexture("cart.png", "./resources/textures/cart.png"));
+        add(new ResourceTexture("rocket1.png", "./resources/textures/rocket1.png"));
+        add(new ResourceTexture("timer.png", "./resources/textures/timer.png"));
+        add(new ResourceTexture("mud.png", "./resources/textures/mud.png"));
 
 
         loadBikes();
@@ -42,68 +42,13 @@ bool ResourceManager::loadEssentialResources() {
         std::cerr << e.getMsg() << std::endl;
         return false;
     }
-
-    return resourcesLoaded;
+    return true;
 }
 
-bool ResourceManager::loadTexture(std::string name, std::string fileName) {
-    sf::Texture texture;
-    if (texture.loadFromFile(fileName)) {
-        this->textures[name] = texture;
-        return true;
-    } else {
-        throw ResourceManagerException("Texture " + name + " not found at: " + fileName);
-    }
+void ResourceManager::add(Resource *r) {
+    this->resources.insert(std::make_pair(r->getName(), r));
 }
 
-sf::Texture &ResourceManager::getTexture(std::string name) {
-    return this->textures.at(name);
-}
-
-bool ResourceManager::loadFont(std::string name, std::string fileName) {
-    sf::Font font;
-    if (font.loadFromFile(fileName)) {
-        this->fonts[name] = font;
-        return true;
-    }
-    return false;
-}
-
-sf::Font &ResourceManager::getFont(std::string name) {
-    return this->fonts.at(name);
-}
-
-
-std::string ResourceManager::readFile(std::string filePath) {
-    std::ifstream infile(filePath);
-    std::string line;
-    std::string total = "";
-    while (std::getline(infile, line)) {
-        std::istringstream iss(line);
-        if (!iss) {
-            break;
-        }
-        total += line + "\n";
-    }
-    return total;
-
-}
-
-/*
-void ResourceManager::loadBikes() {
-    //TODO: da usare serializzazione
-    std::istringstream dataString(readFile("./resources/data/bikes.data"));
-    std::string line;
-    while (std::getline(dataString, line)) {
-        std::string name = line.substr(0, line.find("|"));
-        std::string color = line.substr(1, line.find("|"));
-        float speed = std::stof(line.substr(2, line.find("|")));
-        int price = std::stoi(line.substr(3, line.find("|")));
-        bool isUnlocked = std::stoi(line.substr(4, line.find("|")));
-    }
-    return;
-}
-*/
 
 bool ResourceManager::loadBikes() {
     std::shared_ptr<Bike> bike = std::make_shared<Bike>(Bike("b1", "Standard", "cart.png", 20, 0, true));
@@ -256,3 +201,4 @@ std::unique_ptr<Map> ResourceManager::loadLevel(std::string id) {
         map = loadLevel4();
     return map;
 }
+

@@ -3,6 +3,7 @@
 //
 
 #include <Game.h>
+#include <ResourceManager/ResourceFont.h>
 #include "GameWinState.h"
 #include "MenuHomeState.h"
 
@@ -47,7 +48,7 @@ void GameWinState::draw() {
     if (this->isRecord) {
         sf::Text textRecord;
         textRecord.setPosition(width, height);
-        textRecord.setFont(Game::gameData->resources.getFont("arial.ttf"));
+        textRecord.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
         textRecord.setCharacterSize(80);
         textRecord.setPosition(width - 150, height - 400);
         textRecord.setFillColor(sf::Color(50, 255, 100));

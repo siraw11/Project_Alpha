@@ -6,6 +6,7 @@
 
 #include <Menu.h>
 #include <Game.h>
+#include <ResourceManager/ResourceFont.h>
 #include "GameState.h"
 #include "MenuHomeState.h"
 
@@ -51,7 +52,7 @@ void SelectBikeState::draw() {
 
     sf::Text textHeader;
     textHeader.setPosition(width, height);
-    textHeader.setFont(Game::gameData->resources.getFont("arial.ttf"));
+    textHeader.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
     textHeader.setCharacterSize(80);
     textHeader.setPosition(width, height - 250);
     textHeader.setFillColor(sf::Color(50, 50, 100));
