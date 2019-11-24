@@ -124,7 +124,6 @@ std::unique_ptr<Map> ResourceManager::loadLevel1() {
     map->setMapPoints({
                               {-1,  10},//back limit
                               {0,   0.},
-                              /*
                               {3,   0.},
                               {8,   1},
                               {11,  0},
@@ -136,14 +135,12 @@ std::unique_ptr<Map> ResourceManager::loadLevel1() {
                               {40,  0},
                               {43,  0},
                               {45,  1},
-                               */
-
                               {100, 0},
                               {100, 10}//front limit
                       });
 
     map->setMapItems({
-                             new SpeedMalus(.1, 2, -.1, 3, .1),
+                             new SpeedMalus(.1, 2, -.1, 1, .1),
                              new Coin(5, 0.8, .7, .7, 50),
                              new Coin(7, 1, .7, .7, 30),
                              new SpeedBonus(10, 100, 10, .7, .7, .7),
