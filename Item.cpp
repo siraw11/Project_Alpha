@@ -8,7 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
 
-Item::Item(double _posX, double _posY, double _width, double _height, std::string _texture, float _angle) : posX(_posX),
+Item::Item(double _posX, double _posY, double _width, double _height, float _angle, std::string _texture) : posX(_posX),
                                                                                                             posY(_posY),
                                                                                                             width(_width),
                                                                                                             height(_height),

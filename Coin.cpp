@@ -10,12 +10,13 @@
 #include "Game.h"
 
 
-Coin::Coin(double _posX, double _posY, double _width, double _height, int _value, std::string _texture, float _angle)
+Coin::Coin(double _posX, double _posY, double _width, double _height, int _value, float _angle, std::string _texture)
         : Item(_posX,
                _posY,
                _width,
                _height,
-               _texture, _angle),
+               _angle,
+               _texture),
           value(_value) {}
 
 int Coin::getValue() const {
