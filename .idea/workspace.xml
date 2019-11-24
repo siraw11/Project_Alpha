@@ -131,7 +131,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.All in runTests">
+  <component name="RunManager" selected="CMake Application.Motocross2D">
     <configuration name="All in runTests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" nameIsGenerated="true" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Motocross2D" TARGET_NAME="runTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Motocross2D" RUN_TARGET_NAME="runTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
