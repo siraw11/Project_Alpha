@@ -422,6 +422,10 @@ iostream
 Map.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Map.h
 
+/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.cpp
+ResourceManagerException.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
 iostream
 -
