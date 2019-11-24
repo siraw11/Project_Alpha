@@ -3,7 +3,6 @@
 //
 
 #include "Timer.h"
-
 void Timer::start() {
     startTime = std::chrono::system_clock::now();
     running = true;
@@ -72,4 +71,19 @@ void Timer::decrementTimer(float dt) {
     time -= dt;
     elapsed -= dt;
     start();
+}
+
+
+void Timer::registerObserver(Observer *o) {
+    observers.push_back(o);
+}
+
+void Timer::removeObserver(Observer *o) {
+    observers.remove(o);
+}
+
+void Timer::notifyObservers() {
+    for (auto itr = std::begin(observers); itr != std::end(observers); itr++) {
+        (*itr)->update();
+    }
 }
