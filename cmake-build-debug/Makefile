@@ -769,6 +769,33 @@ ResourceManager/ResourceManager.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.s
 .PHONY : ResourceManager/ResourceManager.cpp.s
 
+ResourceManager/ResourceManagerException.o: ResourceManager/ResourceManagerException.cpp.o
+
+.PHONY : ResourceManager/ResourceManagerException.o
+
+# target to build an object file
+ResourceManager/ResourceManagerException.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o
+.PHONY : ResourceManager/ResourceManagerException.cpp.o
+
+ResourceManager/ResourceManagerException.i: ResourceManager/ResourceManagerException.cpp.i
+
+.PHONY : ResourceManager/ResourceManagerException.i
+
+# target to preprocess a source file
+ResourceManager/ResourceManagerException.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.i
+.PHONY : ResourceManager/ResourceManagerException.cpp.i
+
+ResourceManager/ResourceManagerException.s: ResourceManager/ResourceManagerException.cpp.s
+
+.PHONY : ResourceManager/ResourceManagerException.s
+
+# target to generate assembly for a file
+ResourceManager/ResourceManagerException.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s
+.PHONY : ResourceManager/ResourceManagerException.cpp.s
+
 SpeedBonus.o: SpeedBonus.cpp.o
 
 .PHONY : SpeedBonus.o
@@ -1010,6 +1037,9 @@ help:
 	@echo "... ResourceManager/ResourceManager.o"
 	@echo "... ResourceManager/ResourceManager.i"
 	@echo "... ResourceManager/ResourceManager.s"
+	@echo "... ResourceManager/ResourceManagerException.o"
+	@echo "... ResourceManager/ResourceManagerException.i"
+	@echo "... ResourceManager/ResourceManagerException.s"
 	@echo "... SpeedBonus.o"
 	@echo "... SpeedBonus.i"
 	@echo "... SpeedBonus.s"

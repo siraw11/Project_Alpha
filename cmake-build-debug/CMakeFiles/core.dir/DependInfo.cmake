@@ -26,6 +26,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/Observer.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/Player.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/Player.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o"
+  "/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/SpeedBonus.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/SpeedMalus.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/Subject.cpp.o"

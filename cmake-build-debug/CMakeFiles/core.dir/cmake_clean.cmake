@@ -21,6 +21,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/core.dir/Observer.cpp.o"
   "CMakeFiles/core.dir/Player.cpp.o"
   "CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o"
+  "CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o"
   "CMakeFiles/core.dir/SpeedBonus.cpp.o"
   "CMakeFiles/core.dir/SpeedMalus.cpp.o"
   "CMakeFiles/core.dir/Subject.cpp.o"

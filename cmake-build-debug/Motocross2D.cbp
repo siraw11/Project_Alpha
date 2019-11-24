@@ -407,6 +407,12 @@
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h">
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h">
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp">
 			<Option target="core"/>
 		</Unit>

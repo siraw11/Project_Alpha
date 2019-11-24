@@ -748,6 +748,18 @@ Subject.h
 Observer.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
 
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
+Bike.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/Bike.h
+
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
+../Bike.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/GameEngineFixture.cpp
 Game.h
 -
@@ -777,6 +789,22 @@ gtest/gtest.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
 ../Map.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
+
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
+../Player.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
+../Player.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/runAllTests.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h

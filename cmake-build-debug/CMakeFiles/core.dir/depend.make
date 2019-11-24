@@ -2471,6 +2471,7 @@ CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: ../TimeBonus.h
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: ../Timer.h
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: ../ResourceManager/ResourceManager.cpp
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: ../ResourceManager/ResourceManager.h
+CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: ../ResourceManager/ResourceManagerException.h
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: /usr/local/include/SFML/Config.hpp
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: /usr/local/include/SFML/Graphics.hpp
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -2545,6 +2546,9 @@ CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: /usr/local/include/SF
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: /usr/local/include/SFML/Window/Window.hpp
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: /usr/local/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
+
+CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o: ../ResourceManager/ResourceManagerException.cpp
+CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o: ../ResourceManager/ResourceManagerException.h
 
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Box2D/Collision/Shapes/b2CircleShape.h
