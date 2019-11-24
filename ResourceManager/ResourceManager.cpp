@@ -3,7 +3,7 @@
 //
 
 #include "ResourceManager.h"
-#include <vector>
+#include "ResourceManagerException.h"
 #include <sstream>
 #include <string>
 #include <fstream>
@@ -13,29 +13,37 @@
 #include <TimeBonus.h>
 #include <Checkpoint.h>
 #include <SpeedMalus.h>
-#include "Item.h"
 
 bool ResourceManager::loadEssentialResources() {
     bool resourcesLoaded = true;
-    loadFont("arial.ttf", "./resources/fonts/arial.ttf");
+
+    try {
+        loadFont("arial.ttf", "./resources/fonts/arial.ttf");
 
 
-    loadTexture("wheel.png", "./resources/textures/wheel.png");
-    loadTexture("cart.png", "./resources/textures/cart.png");
-    loadTexture("cart_red.png", "./resources/textures/cart_red.png");
-    loadTexture("cart_orange.png", "./resources/textures/cart_orange.png");
+        loadTexture("wheel.png", "./resources/textures/wheel.png");
+        /*
+        loadTexture("cart.png", "./resources/textures/cart.png");
+        loadTexture("cart_red.png", "./resources/textures/cart_red.png");
+        loadTexture("cart_orange.png", "./resources/textures/cart_orange.png");
 
-    loadTexture("arrival.png", "./resources/textures/arrival.png");
-    loadTexture("checkpoint.png", "./resources/textures/checkpoint.png");
-    loadTexture("coin.png", "./resources/textures/coin.png");
-    loadTexture("heart.png", "./resources/textures/heart.png");
-    loadTexture("cart.png", "./resources/textures/cart.png");
-    loadTexture("rocket1.png", "./resources/textures/rocket1.png");
-    loadTexture("timer.png", "./resources/textures/timer.png");
-    loadTexture("mud.png", "./resources/textures/mud.png");
+        loadTexture("arrival.png", "./resources/textures/arrival.png");
+        loadTexture("checkpoint.png", "./resources/textures/checkpoint.png");
+        loadTexture("coin.png", "./resources/textures/coin.png");
+        loadTexture("heart.png", "./resources/textures/heart.png");
+        loadTexture("cart.png", "./resources/textures/cart.png");
+        loadTexture("rocket1.png", "./resources/textures/rocket1.png");
+        loadTexture("timer.png", "./resources/textures/timer.png");
+        loadTexture("mud.png", "./resources/textures/mud.png");
+        */
 
-    loadBikes();
-    loadLevels();
+
+        loadBikes();
+        loadLevels();
+    } catch (ResourceManagerException &e) {
+        std::cerr << e.getMsg() << std::endl;
+        return false;
+    }
 
     return resourcesLoaded;
 }
@@ -46,6 +54,7 @@ bool ResourceManager::loadTexture(std::string name, std::string fileName) {
         this->textures[name] = texture;
         return true;
     } else {
+        throw ResourceManagerException("Texture " + name + " not found at: " + fileName);
     }
 }
 
