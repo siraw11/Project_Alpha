@@ -8,43 +8,43 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\;CMake Files\test\;CMake Files\test\lib\;CMake Files\test\lib\googletest\;CMake Files\test\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Motocross2D">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Motocross2D" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Motocross2D" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -53,20 +53,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Motocross2D"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 Motocross2D"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Motocross2D/fast">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Motocross2D" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Motocross2D" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -75,20 +75,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Motocross2D/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 Motocross2D/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="core">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -97,20 +97,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 core"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 core"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="core/fast">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -119,23 +119,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 core/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 core/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runTests">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/runTests" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/runTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
 					<Add directory="/"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -144,23 +144,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runTests"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runTests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runTests/fast">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/runTests" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/runTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
 					<Add directory="/"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -169,22 +169,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runTests/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runTests/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -193,22 +193,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -217,22 +217,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -241,22 +241,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -265,239 +265,239 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Bike.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Bike.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Checkpoint.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Checkpoint.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Checkpoint.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Checkpoint.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Coin.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Coin.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Coin.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Coin.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Game.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Game.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Game.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Game.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameEngine.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameEngine.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/GameLostState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameLostState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/GameLostState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameLostState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/GameState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/GameState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/GameWinState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameWinState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/GameWinState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameWinState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/MenuHomeState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuHomeState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/MenuHomeState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuHomeState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/MenuPauseState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuPauseState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/MenuPauseState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuPauseState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/SelectBikeState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectBikeState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/SelectBikeState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectBikeState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/SelectLevelState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectLevelState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/SelectLevelState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectLevelState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/ShopState.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/ShopState.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/ShopState.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/ShopState.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/State.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/State.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/StateMachine.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/GameStates/StateMachine.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Item.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Item.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Item.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Item.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Map.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Map.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Map.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Match.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Match.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Match.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Match.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Menu.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Menu.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Menu.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Menu.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/MenuOption.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/MenuOption.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Observer.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Observer.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Player.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Player.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Player.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/ResourceManager/ResourceManager.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/ResourceManager/ResourceManager.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/SpeedBonus.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/SpeedBonus.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/SpeedMalus.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/SpeedMalus.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Subject.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Subject.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/TimeBonus.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/TimeBonus.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Timer.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Timer.cpp">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/Timer.h">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h">
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/main.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/main.cpp">
 			<Option target="Motocross2D"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/BikeFixture.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/BikeTest.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/GameEngineFixture.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/GameEngineFixture.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/GameEngineTest.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/GameEngineTest.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/MapFixture.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapFixture.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/MapTest.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/PlayerFixture.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/PlayerTest.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/src/gtest-all.cc">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/src/gtest_main.cc">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/runAllTests.cpp">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/runAllTests.cpp">
 			<Option target="runTests"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/CMakeLists.txt">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLConfig.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/CMakeLists.txt">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/CMakeLists.txt">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\lib\googletest\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
 		</Unit>
 	</Project>

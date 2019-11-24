@@ -1,4 +1,4 @@
-# Install script for directory: /Users/user/CLionProjects/Motocross2D2/test
+# Install script for directory: /Users/lucagraziotti/CLionProjects/Motocross2D/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/cmake_install.cmake")
+  include("/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/cmake_install.cmake")
 
 endif()
 

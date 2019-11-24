@@ -351,8 +351,14 @@ Observer.h
 ../Observer.h
 
 ../Timer.h
+list
+-
 iostream
 -
+Subject.h
+../Subject.h
+Observer.h
+../Observer.h
 
 ../test/lib/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
@@ -632,6 +638,12 @@ cxxabi.h
 acxx_demangle.h
 -
 
+/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+iostream
+-
+SFML/Graphics.hpp
+-
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
 Box2D/Common/b2Settings.h
 -
@@ -720,6 +732,18 @@ Item.h
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
 
+/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+iostream
+-
+list
+-
+Bike.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+Observer.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
+Subject.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
 Observer.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
@@ -747,6 +771,12 @@ gtest/gtest.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
 Map.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/Map.h
+
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
+../Map.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h

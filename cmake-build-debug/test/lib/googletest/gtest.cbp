@@ -8,25 +8,25 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\;CMake Files\test\;CMake Files\test\lib\;CMake Files\test\lib\googletest\;CMake Files\test\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -35,22 +35,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -59,22 +59,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -83,22 +83,22 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/."/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/include"/>
-					<Add directory="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/."/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include"/>
+					<Add directory="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
@@ -107,44 +107,44 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/user/CLionProjects/Motocross2D2/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/src/gtest-all.cc">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/src/gtest_main.cc">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/CMakeLists.txt">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLConfig.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/CMakeLists.txt">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/CMakeLists.txt">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\lib\googletest\"/>
 		</Unit>
-		<Unit filename="/Users/user/CLionProjects/Motocross2D2/test/lib/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
 		</Unit>
 	</Project>
