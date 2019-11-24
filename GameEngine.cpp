@@ -131,9 +131,8 @@ void GameEngine::run() {
                                                (float) item->getHeight());
                 if (collided) {
                     item->doSpecial();//eseguo la special
-                } else {
-                    drawItem(item);//altrimenti disegno l'item
                 }
+                drawItem(item);
             }
         }
 
@@ -162,7 +161,7 @@ void GameEngine::run() {
 }
 
 void GameEngine::speedChange(float increment) {
-    this->wheelEngineL->SetMaxMotorTorque(increment);
+    this->wheelEngineL->SetMotorSpeed(this->wheelEngineL->GetMotorSpeed() * increment);
 }
 
 void GameEngine::setPause(bool p) {
