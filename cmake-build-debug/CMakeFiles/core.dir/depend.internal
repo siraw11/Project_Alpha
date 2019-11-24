@@ -170,7 +170,10 @@ CMakeFiles/core.dir/Checkpoint.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -297,7 +300,10 @@ CMakeFiles/core.dir/Coin.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -426,7 +432,10 @@ CMakeFiles/core.dir/Game.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
@@ -545,6 +554,10 @@ CMakeFiles/core.dir/GameEngine.cpp.o
  ../GameStates/StateMachine.h
  ../Menu.h
  ../MenuOption.h
+ ../ResourceManager/Resource.h
+ ../ResourceManager/ResourceFont.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
@@ -556,6 +569,7 @@ CMakeFiles/core.dir/GameEngine.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
@@ -681,7 +695,10 @@ CMakeFiles/core.dir/GameStates/GameLostState.cpp.o
  ../MenuOption.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameLostState.cpp
@@ -809,7 +826,10 @@ CMakeFiles/core.dir/GameStates/GameState.cpp.o
  ../Match.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.cpp
@@ -938,7 +958,11 @@ CMakeFiles/core.dir/GameStates/GameWinState.cpp.o
  ../MenuOption.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
+ ../ResourceManager/ResourceFont.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameWinState.cpp
@@ -1069,7 +1093,11 @@ CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o
  ../MenuOption.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
+ ../ResourceManager/ResourceFont.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.h
@@ -1202,7 +1230,10 @@ CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o
  ../MenuOption.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuHomeState.h
@@ -1333,7 +1364,11 @@ CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o
  ../MenuOption.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
+ ../ResourceManager/ResourceFont.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.h
@@ -1464,7 +1499,11 @@ CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o
  ../MenuOption.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
+ ../ResourceManager/ResourceFont.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.h
@@ -1596,7 +1635,11 @@ CMakeFiles/core.dir/GameStates/ShopState.cpp.o
  ../MenuOption.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/Resource.h
+ ../ResourceManager/ResourceFont.h
  ../ResourceManager/ResourceManager.h
+ ../ResourceManager/ResourceManagerException.h
+ ../ResourceManager/ResourceTexture.h
  ../Subject.h
  ../Timer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.h
@@ -1921,7 +1964,10 @@ CMakeFiles/core.dir/Map.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.h
@@ -2049,7 +2095,10 @@ CMakeFiles/core.dir/Match.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
@@ -2177,7 +2226,10 @@ CMakeFiles/core.dir/Menu.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
@@ -2255,8 +2307,62 @@ CMakeFiles/core.dir/Menu.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/core.dir/MenuOption.cpp.o
+ ../Box2D/Collision/Shapes/b2ChainShape.h
+ ../Box2D/Collision/Shapes/b2CircleShape.h
+ ../Box2D/Collision/Shapes/b2EdgeShape.h
+ ../Box2D/Collision/Shapes/b2PolygonShape.h
+ ../Box2D/Collision/Shapes/b2Shape.h
+ ../Box2D/Collision/b2BroadPhase.h
+ ../Box2D/Collision/b2Collision.h
+ ../Box2D/Collision/b2Distance.h
+ ../Box2D/Collision/b2DynamicTree.h
+ ../Box2D/Collision/b2TimeOfImpact.h
+ ../Box2D/Common/b2BlockAllocator.h
+ ../Box2D/Common/b2Draw.h
+ ../Box2D/Common/b2GrowableStack.h
+ ../Box2D/Common/b2Math.h
+ ../Box2D/Common/b2Settings.h
+ ../Box2D/Common/b2StackAllocator.h
+ ../Box2D/Common/b2Timer.h
+ ../Box2D/Dynamics/Contacts/b2Contact.h
+ ../Box2D/Dynamics/Joints/b2DistanceJoint.h
+ ../Box2D/Dynamics/Joints/b2FrictionJoint.h
+ ../Box2D/Dynamics/Joints/b2GearJoint.h
+ ../Box2D/Dynamics/Joints/b2Joint.h
+ ../Box2D/Dynamics/Joints/b2MotorJoint.h
+ ../Box2D/Dynamics/Joints/b2MouseJoint.h
+ ../Box2D/Dynamics/Joints/b2PrismaticJoint.h
+ ../Box2D/Dynamics/Joints/b2PulleyJoint.h
+ ../Box2D/Dynamics/Joints/b2RevoluteJoint.h
+ ../Box2D/Dynamics/Joints/b2RopeJoint.h
+ ../Box2D/Dynamics/Joints/b2WeldJoint.h
+ ../Box2D/Dynamics/Joints/b2WheelJoint.h
+ ../Box2D/Dynamics/b2Body.h
+ ../Box2D/Dynamics/b2ContactManager.h
+ ../Box2D/Dynamics/b2Fixture.h
+ ../Box2D/Dynamics/b2TimeStep.h
+ ../Box2D/Dynamics/b2World.h
+ ../Box2D/Dynamics/b2WorldCallbacks.h
+ ../GameStates/State.h
+ ../GameStates/StateMachine.h
+ ../Map.h
+ ../Observer.h
+ ../ResourceManager/Resource.h
+ ../ResourceManager/ResourceFont.h
+ ../ResourceManager/ResourceManagerException.h
+ ../Subject.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -2414,6 +2520,47 @@ CMakeFiles/core.dir/Player.cpp.o
  /usr/local/include/SFML/Window/Window.hpp
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/core.dir/ResourceManager/Resource.cpp.o
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.cpp
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /usr/local/include/SFML/Config.hpp
+ /usr/local/include/SFML/Graphics/Color.hpp
+ /usr/local/include/SFML/Graphics/Export.hpp
+ /usr/local/include/SFML/Graphics/Image.hpp
+ /usr/local/include/SFML/Graphics/Rect.hpp
+ /usr/local/include/SFML/Graphics/Rect.inl
+ /usr/local/include/SFML/Graphics/Texture.hpp
+ /usr/local/include/SFML/System/Export.hpp
+ /usr/local/include/SFML/System/NonCopyable.hpp
+ /usr/local/include/SFML/System/Vector2.hpp
+ /usr/local/include/SFML/System/Vector2.inl
+ /usr/local/include/SFML/Window/Export.hpp
+ /usr/local/include/SFML/Window/GlResource.hpp
+CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.cpp
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /usr/local/include/SFML/Config.hpp
+ /usr/local/include/SFML/Graphics/Color.hpp
+ /usr/local/include/SFML/Graphics/Export.hpp
+ /usr/local/include/SFML/Graphics/Font.hpp
+ /usr/local/include/SFML/Graphics/Glyph.hpp
+ /usr/local/include/SFML/Graphics/Image.hpp
+ /usr/local/include/SFML/Graphics/Rect.hpp
+ /usr/local/include/SFML/Graphics/Rect.inl
+ /usr/local/include/SFML/Graphics/Texture.hpp
+ /usr/local/include/SFML/System/Export.hpp
+ /usr/local/include/SFML/System/NonCopyable.hpp
+ /usr/local/include/SFML/System/String.hpp
+ /usr/local/include/SFML/System/String.inl
+ /usr/local/include/SFML/System/Utf.hpp
+ /usr/local/include/SFML/System/Utf.inl
+ /usr/local/include/SFML/System/Vector2.hpp
+ /usr/local/include/SFML/System/Vector2.inl
+ /usr/local/include/SFML/Window/Export.hpp
+ /usr/local/include/SFML/Window/GlResource.hpp
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o
  ../Bike.h
  ../Box2D/Box2D.h
@@ -2470,9 +2617,12 @@ CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o
  ../Subject.h
  ../TimeBonus.h
  ../Timer.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -2550,6 +2700,24 @@ CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o
 CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.cpp
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
+ /usr/local/include/SFML/Config.hpp
+ /usr/local/include/SFML/Graphics/Color.hpp
+ /usr/local/include/SFML/Graphics/Export.hpp
+ /usr/local/include/SFML/Graphics/Image.hpp
+ /usr/local/include/SFML/Graphics/Rect.hpp
+ /usr/local/include/SFML/Graphics/Rect.inl
+ /usr/local/include/SFML/Graphics/Texture.hpp
+ /usr/local/include/SFML/System/Export.hpp
+ /usr/local/include/SFML/System/NonCopyable.hpp
+ /usr/local/include/SFML/System/Vector2.hpp
+ /usr/local/include/SFML/System/Vector2.inl
+ /usr/local/include/SFML/Window/Export.hpp
+ /usr/local/include/SFML/Window/GlResource.hpp
 CMakeFiles/core.dir/SpeedBonus.cpp.o
  ../Box2D/Collision/Shapes/b2ChainShape.h
  ../Box2D/Collision/Shapes/b2CircleShape.h
@@ -2599,7 +2767,10 @@ CMakeFiles/core.dir/SpeedBonus.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
@@ -2726,7 +2897,10 @@ CMakeFiles/core.dir/SpeedMalus.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
@@ -2857,7 +3031,10 @@ CMakeFiles/core.dir/TimeBonus.cpp.o
  /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.cpp
  /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.h
  /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h

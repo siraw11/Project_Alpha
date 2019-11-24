@@ -401,6 +401,18 @@
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h">
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.h">
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp">
 			<Option target="core"/>
 		</Unit>
@@ -411,6 +423,12 @@
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h">
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp">

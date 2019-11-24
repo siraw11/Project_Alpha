@@ -742,6 +742,60 @@ Player.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
+ResourceManager/Resource.o: ResourceManager/Resource.cpp.o
+
+.PHONY : ResourceManager/Resource.o
+
+# target to build an object file
+ResourceManager/Resource.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/Resource.cpp.o
+.PHONY : ResourceManager/Resource.cpp.o
+
+ResourceManager/Resource.i: ResourceManager/Resource.cpp.i
+
+.PHONY : ResourceManager/Resource.i
+
+# target to preprocess a source file
+ResourceManager/Resource.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/Resource.cpp.i
+.PHONY : ResourceManager/Resource.cpp.i
+
+ResourceManager/Resource.s: ResourceManager/Resource.cpp.s
+
+.PHONY : ResourceManager/Resource.s
+
+# target to generate assembly for a file
+ResourceManager/Resource.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/Resource.cpp.s
+.PHONY : ResourceManager/Resource.cpp.s
+
+ResourceManager/ResourceFont.o: ResourceManager/ResourceFont.cpp.o
+
+.PHONY : ResourceManager/ResourceFont.o
+
+# target to build an object file
+ResourceManager/ResourceFont.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o
+.PHONY : ResourceManager/ResourceFont.cpp.o
+
+ResourceManager/ResourceFont.i: ResourceManager/ResourceFont.cpp.i
+
+.PHONY : ResourceManager/ResourceFont.i
+
+# target to preprocess a source file
+ResourceManager/ResourceFont.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.i
+.PHONY : ResourceManager/ResourceFont.cpp.i
+
+ResourceManager/ResourceFont.s: ResourceManager/ResourceFont.cpp.s
+
+.PHONY : ResourceManager/ResourceFont.s
+
+# target to generate assembly for a file
+ResourceManager/ResourceFont.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.s
+.PHONY : ResourceManager/ResourceFont.cpp.s
+
 ResourceManager/ResourceManager.o: ResourceManager/ResourceManager.cpp.o
 
 .PHONY : ResourceManager/ResourceManager.o
@@ -795,6 +849,33 @@ ResourceManager/ResourceManagerException.s: ResourceManager/ResourceManagerExcep
 ResourceManager/ResourceManagerException.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s
 .PHONY : ResourceManager/ResourceManagerException.cpp.s
+
+ResourceManager/ResourceTexture.o: ResourceManager/ResourceTexture.cpp.o
+
+.PHONY : ResourceManager/ResourceTexture.o
+
+# target to build an object file
+ResourceManager/ResourceTexture.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o
+.PHONY : ResourceManager/ResourceTexture.cpp.o
+
+ResourceManager/ResourceTexture.i: ResourceManager/ResourceTexture.cpp.i
+
+.PHONY : ResourceManager/ResourceTexture.i
+
+# target to preprocess a source file
+ResourceManager/ResourceTexture.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.i
+.PHONY : ResourceManager/ResourceTexture.cpp.i
+
+ResourceManager/ResourceTexture.s: ResourceManager/ResourceTexture.cpp.s
+
+.PHONY : ResourceManager/ResourceTexture.s
+
+# target to generate assembly for a file
+ResourceManager/ResourceTexture.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.s
+.PHONY : ResourceManager/ResourceTexture.cpp.s
 
 SpeedBonus.o: SpeedBonus.cpp.o
 
@@ -1034,12 +1115,21 @@ help:
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
+	@echo "... ResourceManager/Resource.o"
+	@echo "... ResourceManager/Resource.i"
+	@echo "... ResourceManager/Resource.s"
+	@echo "... ResourceManager/ResourceFont.o"
+	@echo "... ResourceManager/ResourceFont.i"
+	@echo "... ResourceManager/ResourceFont.s"
 	@echo "... ResourceManager/ResourceManager.o"
 	@echo "... ResourceManager/ResourceManager.i"
 	@echo "... ResourceManager/ResourceManager.s"
 	@echo "... ResourceManager/ResourceManagerException.o"
 	@echo "... ResourceManager/ResourceManagerException.i"
 	@echo "... ResourceManager/ResourceManagerException.s"
+	@echo "... ResourceManager/ResourceTexture.o"
+	@echo "... ResourceManager/ResourceTexture.i"
+	@echo "... ResourceManager/ResourceTexture.s"
 	@echo "... SpeedBonus.o"
 	@echo "... SpeedBonus.i"
 	@echo "... SpeedBonus.s"

@@ -49,7 +49,10 @@ CMakeFiles/Motocross2D.dir/main.cpp.o: ../GameEngine.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Item.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Match.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Player.h
+CMakeFiles/Motocross2D.dir/main.cpp.o: ../ResourceManager/Resource.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../ResourceManager/ResourceManager.h
+CMakeFiles/Motocross2D.dir/main.cpp.o: ../ResourceManager/ResourceManagerException.h
+CMakeFiles/Motocross2D.dir/main.cpp.o: ../ResourceManager/ResourceTexture.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../Timer.h
 CMakeFiles/Motocross2D.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Motocross2D.dir/main.cpp.o: /usr/local/include/SFML/Config.hpp

@@ -246,7 +246,10 @@ test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Map.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Match.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Observer.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Player.h
+test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/Resource.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/ResourceManager.h
+test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/ResourceManagerException.h
+test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/ResourceTexture.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Subject.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Timer.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../test/lib/googletest/include/gtest/gtest-death-test.h
@@ -390,7 +393,10 @@ test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../GameStates/State.h
 test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../GameStates/StateMachine.h
 test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../Match.h
 test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../Player.h
+test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../ResourceManager/Resource.h
 test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../ResourceManager/ResourceManager.h
+test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../ResourceManager/ResourceManagerException.h
+test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../ResourceManager/ResourceTexture.h
 test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../Timer.h
 test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-death-test.h
 test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-message.h
@@ -501,7 +507,10 @@ test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Item.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Map.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Observer.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Player.h
+test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../ResourceManager/Resource.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../ResourceManager/ResourceManager.h
+test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../ResourceManager/ResourceManagerException.h
+test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../ResourceManager/ResourceTexture.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../Subject.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../test/lib/googletest/include/gtest/gtest-death-test.h
 test/CMakeFiles/runTests.dir/MapFixture.cpp.o: ../test/lib/googletest/include/gtest/gtest-message.h

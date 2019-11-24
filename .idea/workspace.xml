@@ -15,18 +15,54 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="minor level1 changes">
-      <change afterPath="$PROJECT_DIR$/ResourceManager/ResourceManagerException.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResourceManager/ResourceManagerException.h" afterDir="false" />
+    <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="restored textures">
+      <change afterPath="$PROJECT_DIR$/ResourceManager/Resource.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResourceManager/Resource.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResourceManager/ResourceFont.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResourceManager/ResourceFont.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResourceManager/ResourceTexture.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResourceManager/ResourceTexture.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/GameWinState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/GameWinState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/MenuHomeState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/MenuHomeState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/MenuHomeState.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/MenuHomeState.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/MenuPauseState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/MenuPauseState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/MenuPauseState.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/MenuPauseState.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/SelectBikeState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/SelectBikeState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/SelectLevelState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/SelectLevelState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameStates/ShopState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/ShopState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenuOption.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MenuOption.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ResourceManager/ResourceManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ResourceManager/ResourceManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResourceManager/ResourceManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ResourceManager/ResourceManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Motocross2D.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Checkpoint.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Checkpoint.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Coin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Coin.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Game.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Game.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameLostState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameLostState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameWinState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameWinState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/ShopState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/ShopState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Map.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Map.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/MenuOption.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/MenuOption.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/SpeedBonus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/SpeedBonus.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/SpeedMalus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/SpeedMalus.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/TimeBonus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/TimeBonus.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/progress.make" afterDir="false" />
@@ -36,23 +72,13 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Motocross2D.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Motocross2D.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/libcore.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libcore.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/BikeFixture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/BikeFixture.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/BikeTest.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/BikeTest.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/MapFixture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/MapFixture.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/MapTest.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/MapTest.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerTest.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerTest.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/runAllTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/runAllTests.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/libgtest_maind.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/libgtest_maind.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/libgtestd.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/lib/googletest/libgtestd.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/runTests" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/runTests" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -243,41 +269,9 @@
       <workItem from="1573917189307" duration="4071000" />
       <workItem from="1573922544533" duration="87717000" />
       <workItem from="1574521560258" duration="4264000" />
-    </task>
-    <task id="LOCAL-00177" summary="removed unused SFML folder">
-      <created>1574328752720</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1574328752720</updated>
-    </task>
-    <task id="LOCAL-00178" summary=".">
-      <created>1574343876185</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1574343876185</updated>
-    </task>
-    <task id="LOCAL-00179" summary="locked rocket bike">
-      <created>1574343908640</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1574343908640</updated>
-    </task>
-    <task id="LOCAL-00180" summary="Changed Player username">
-      <created>1574343928719</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1574343928719</updated>
-    </task>
-    <task id="LOCAL-00181" summary="removed unused bike pointer">
-      <created>1574343960199</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1574343960199</updated>
+      <workItem from="1574630048713" duration="167000" />
+      <workItem from="1574630229175" duration="258000" />
+      <workItem from="1574630513989" duration="1044000" />
     </task>
     <task id="LOCAL-00182" summary="Created main function">
       <created>1574343984348</created>
@@ -587,7 +581,42 @@
       <option name="project" value="LOCAL" />
       <updated>1574609129879</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Gtest integration">
+      <created>1574610551759</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1574610551759</updated>
+    </task>
+    <task id="LOCAL-00227" summary=".">
+      <created>1574610570928</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1574610570929</updated>
+    </task>
+    <task id="LOCAL-00228" summary=".">
+      <created>1574610586922</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1574610586922</updated>
+    </task>
+    <task id="LOCAL-00229" summary=".">
+      <created>1574610637323</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1574610637323</updated>
+    </task>
+    <task id="LOCAL-00230" summary="restored textures">
+      <created>1574610655170</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1574610655170</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -623,9 +652,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added more tests" />
-    <MESSAGE value="Moved Run() method" />
-    <MESSAGE value="Added move method" />
     <MESSAGE value="Updated texture path" />
     <MESSAGE value="Updated resolution" />
     <MESSAGE value="renamed move() to step()" />
@@ -639,7 +665,6 @@
     <MESSAGE value="Added Heart lifes draw" />
     <MESSAGE value="Added load heart texture" />
     <MESSAGE value="Minor changes" />
-    <MESSAGE value="." />
     <MESSAGE value="Added mud&#10;Moved here loadLevels()" />
     <MESSAGE value="Removed loadLevels()&#10;Temp res change" />
     <MESSAGE value="made drawItem always present" />
@@ -648,7 +673,11 @@
     <MESSAGE value="Added observer" />
     <MESSAGE value="Added mud texture" />
     <MESSAGE value="minor level1 changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor level1 changes" />
+    <MESSAGE value="Gtest integration" />
+    <MESSAGE value="Created ResourceManagerException" />
+    <MESSAGE value="." />
+    <MESSAGE value="restored textures" />
+    <option name="LAST_COMMIT_MESSAGE" value="restored textures" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

@@ -338,6 +338,12 @@ Observer.h
 Subject.h
 ../Subject.h
 
+../ResourceManager/Resource.h
+iostream
+-
+ResourceManagerException.h
+../ResourceManager/ResourceManagerException.h
+
 ../ResourceManager/ResourceManager.h
 SFML/Graphics.hpp
 -
@@ -345,6 +351,22 @@ iostream
 -
 Map.h
 ../ResourceManager/Map.h
+Resource.h
+../ResourceManager/Resource.h
+ResourceTexture.h
+../ResourceManager/ResourceTexture.h
+
+../ResourceManager/ResourceManagerException.h
+iostream
+-
+
+../ResourceManager/ResourceTexture.h
+string
+-
+SFML/Graphics/Texture.hpp
+-
+Resource.h
+../ResourceManager/Resource.h
 
 ../Subject.h
 Observer.h
@@ -638,12 +660,6 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
-iostream
--
-SFML/Graphics.hpp
--
-
 /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
 Box2D/Common/b2Settings.h
 -
@@ -732,33 +748,9 @@ Item.h
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
-iostream
--
-list
--
-Bike.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
-Observer.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
-Subject.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
-
 /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
 Observer.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeFixture.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-Bike.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/Bike.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/BikeTest.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-../Bike.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
 
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/GameEngineFixture.cpp
 Game.h
@@ -783,28 +775,6 @@ gtest/gtest.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
 Map.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/Map.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-../Map.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-../Player.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
-../Player.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
-
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/runAllTests.cpp
-gtest/gtest.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h
