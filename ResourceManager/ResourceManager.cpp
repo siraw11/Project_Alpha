@@ -22,7 +22,6 @@ bool ResourceManager::loadEssentialResources() {
 
 
         loadTexture("wheel.png", "./resources/textures/wheel.png");
-        /*
         loadTexture("cart.png", "./resources/textures/cart.png");
         loadTexture("cart_red.png", "./resources/textures/cart_red.png");
         loadTexture("cart_orange.png", "./resources/textures/cart_orange.png");
@@ -35,7 +34,6 @@ bool ResourceManager::loadEssentialResources() {
         loadTexture("rocket1.png", "./resources/textures/rocket1.png");
         loadTexture("timer.png", "./resources/textures/timer.png");
         loadTexture("mud.png", "./resources/textures/mud.png");
-        */
 
 
         loadBikes();
