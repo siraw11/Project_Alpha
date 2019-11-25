@@ -127,16 +127,37 @@ void GameEngine::run() {
         for (auto &item : items) {
             if (!item->isTaken()) {
                 //controllo se collidono
-                bool collided = checkCollision(cart->GetPosition().x, cart->GetPosition().y, cartX,
-                                               (float) item->getPosX(), LINE + (float) item->getPosY(),
+                bool collided = checkCollision(cart->GetPosition().x,
+                                               LINE - cart->GetPosition().y, cartX, cartY,
+                                               (float) item->getPosX(),
+                                               (float) item->getPosY(),
                                                (float) item->getWidth(),
                                                (float) item->getHeight());
+                /*  std::cout<<"cartPosX " << cart->GetPosition().x <<std::endl;
+                  std::cout<<"cartPosY " << cart->GetPosition().y <<std::endl;
+                  std::cout<<"dimX " << cartX <<std::endl;
+                  std::cout<<"dimY " << cartY <<std::endl;
+                  std::cout<<"itemPosX " << item->getPosX() <<std::endl;
+                  std::cout<<"itemPosy " << LINE + item->getPosY() <<std::endl;
+                  std::cout<<"itemW " << item->getWidth() <<std::endl;
+                  std::cout<<"itemH " << item->getHeight() <<std::endl;*/
+
+                std::cout << "------------------------------------------" << std::endl;
+                std::cout << "cartPosY " << LINE - cart->GetPosition().y << std::endl;
+                std::cout << "itemPosy " << item->getPosY() << std::endl;
+
+
+                std::cout << "LINE " << LINE << std::endl;
+
+
                 if (collided) {
                     item->doSpecial();//eseguo la special
                 }
                 drawItem(item);
+
             }
         }
+
 
         drawBike();//disegno la moto
         drawInterface();
@@ -178,10 +199,15 @@ void GameEngine::setPause(bool p) {
     }
 }
 
-bool
-GameEngine::checkCollision(float r1x, float r1y, float r1w, float r2x, float r2y, float r2w, float r2h) {
-    return (r1x + r1w >= r2x && r1x <= r2x + r2w) &&
-           ((r1y < r2y && r2y + r2h > r1y));
+bool GameEngine::checkCollision(float cartPosX, float cartPosY, float dimCartX, float dimCartY, float itemPosX,
+                                float itemPosY, float itemW, float itemH) {
+    //return (cartPosX + dimCartX >= itemPosX && cartPosX <= itemPosX + itemW) &&
+    //  ((cartPosY + dimCartY >= itemPosY && cartPosY <= itemPosY + itemH));
+
+    return (itemPosX < cartPosX + dimCartX &&
+            itemPosX + itemW > cartPosX &&
+            itemPosY < cartPosY + dimCartY &&
+            itemPosY + itemH > cartPosY);
 }
 
 
@@ -383,6 +409,7 @@ void GameEngine::drawItem(Item *item) {
     if (!item->getTexture().empty()) {
         rect.setTexture(&Game::gameData->resources.getResource<ResourceTexture *>(item->getTexture())->getTexture());
     }
+    rect.setRotation(item->getAngle());
     Game::gameData->window.draw(rect);
 }
 

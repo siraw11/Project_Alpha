@@ -92,13 +92,13 @@ std::unique_ptr<Map> ResourceManager::loadLevel1() {
                       });
 
     map->setMapItems({
-                             new SpeedMalus(.1, 2, -.1, 1, .1),
+                             new SpeedMalus(.1, 2, -.1, 1, .1, 90), //speedDecrement, posX, posY, width, height, angle
                              new Coin(5, 0.8, .7, .7, 50),
                              new Coin(7, 1, .7, .7, 30),
                              new SpeedBonus(10, 100, 10, .7, .7, .7),
                              new TimeBonus(1000, 20, 0., .7, .7),
                              new Checkpoint(25, 0, 1, 1.2),
-                             new Checkpoint(95, 2, 5, 3, true),   //arrivo finale
+                             new Checkpoint(95, 0, 5, 3, true),   //arrivo finale
                      });
     return map;
 }
@@ -130,7 +130,7 @@ std::unique_ptr<Map> ResourceManager::loadLevel2() {
                              new Coin(33, 5.5, .7, .7, 50),
                              //new SpeedBonus(10, 1, 10, 1, .7, .7),
                              new Checkpoint(32, 1.5, 1, 1.2),
-                             new Checkpoint(50, 2, 5, 3, true),      //arrivo finale
+                             new Checkpoint(50, 2.5, 5, 3, true),      //arrivo finale
 
 
                      });
@@ -139,7 +139,7 @@ std::unique_ptr<Map> ResourceManager::loadLevel2() {
 
 
 std::unique_ptr<Map> ResourceManager::loadLevel3() {
-    std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, false, 0));
+    std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, true, 0));
     map->setMapPoints({
                               {-1, 10},//back limit
                               {0,  0},
@@ -164,26 +164,27 @@ std::unique_ptr<Map> ResourceManager::loadLevel3() {
                              new TimeBonus(1000, 3, .1, .7, .7),
                              new Coin(5, .2, .7, .7, 50),
                              new Coin(7, .1, .7, .7, 30),
-                             new Checkpoint(24, 1, 5, 3, true),      //arrivo finale
+                             new Checkpoint(50, 2, 5, 3, true),      //arrivo finale
                      });
     return map;
 }
 
 
 std::unique_ptr<Map> ResourceManager::loadLevel4() {
-    std::unique_ptr<Map> map(new Map("lv4", "Level 4", false, false, 0));
+    std::unique_ptr<Map> map(new Map("lv4", "Level 4", false, true, 0));
     map->setMapPoints({
                               {-1,  10},//back limit
                               {0,   0},
-                              {100, 0},
-                              {100, 10}//front limit
+                              {5,   0},
+                              {100, 30},
+                              {100, 1000}//front limit
                       });
 
     map->setMapItems({
                              new TimeBonus(1000, 3, .1, .7, .7),
                              new Coin(5, .2, .7, .7, 50),
                              new Coin(7, .1, .7, .7, 30),
-                             new Checkpoint(24, 1, 5, 3, true),       //arrivo finale
+                             new Checkpoint(95, 28, 5, 3, true),       //arrivo finale
                      });
     return map;
 }
