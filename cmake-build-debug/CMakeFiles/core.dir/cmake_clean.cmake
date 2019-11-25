@@ -20,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/core.dir/MenuOption.cpp.o"
   "CMakeFiles/core.dir/Observer.cpp.o"
   "CMakeFiles/core.dir/Player.cpp.o"
+  "CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o"
+  "CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o"
   "CMakeFiles/core.dir/ResourceManager/Resource.cpp.o"
   "CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o"
   "CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o"

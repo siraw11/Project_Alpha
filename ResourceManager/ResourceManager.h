@@ -20,12 +20,6 @@ public:
 
     void add(Resource *r);
 
-    bool loadBikes();
-
-    bool loadLevels();
-
-    static std::unique_ptr<Map> loadLevel(std::string id);
-
     bool loadEssentialResources();
 
     template<typename T>
@@ -34,19 +28,7 @@ public:
     };
 
 private:
-
-
     std::map<std::string, Resource *> resources;
-    std::map<std::string, sf::Texture> textures;
-    std::map<std::string, sf::Font> fonts;
-
-    static std::unique_ptr<Map> loadLevel1();
-
-    static std::unique_ptr<Map> loadLevel2();
-
-    static std::unique_ptr<Map> loadLevel3();
-
-    static std::unique_ptr<Map> loadLevel4();
 };
 
 

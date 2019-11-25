@@ -742,6 +742,60 @@ Player.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
+ResourceManager/BikeFactory.o: ResourceManager/BikeFactory.cpp.o
+
+.PHONY : ResourceManager/BikeFactory.o
+
+# target to build an object file
+ResourceManager/BikeFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o
+.PHONY : ResourceManager/BikeFactory.cpp.o
+
+ResourceManager/BikeFactory.i: ResourceManager/BikeFactory.cpp.i
+
+.PHONY : ResourceManager/BikeFactory.i
+
+# target to preprocess a source file
+ResourceManager/BikeFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.i
+.PHONY : ResourceManager/BikeFactory.cpp.i
+
+ResourceManager/BikeFactory.s: ResourceManager/BikeFactory.cpp.s
+
+.PHONY : ResourceManager/BikeFactory.s
+
+# target to generate assembly for a file
+ResourceManager/BikeFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.s
+.PHONY : ResourceManager/BikeFactory.cpp.s
+
+ResourceManager/LevelFactory.o: ResourceManager/LevelFactory.cpp.o
+
+.PHONY : ResourceManager/LevelFactory.o
+
+# target to build an object file
+ResourceManager/LevelFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o
+.PHONY : ResourceManager/LevelFactory.cpp.o
+
+ResourceManager/LevelFactory.i: ResourceManager/LevelFactory.cpp.i
+
+.PHONY : ResourceManager/LevelFactory.i
+
+# target to preprocess a source file
+ResourceManager/LevelFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.i
+.PHONY : ResourceManager/LevelFactory.cpp.i
+
+ResourceManager/LevelFactory.s: ResourceManager/LevelFactory.cpp.s
+
+.PHONY : ResourceManager/LevelFactory.s
+
+# target to generate assembly for a file
+ResourceManager/LevelFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.s
+.PHONY : ResourceManager/LevelFactory.cpp.s
+
 ResourceManager/Resource.o: ResourceManager/Resource.cpp.o
 
 .PHONY : ResourceManager/Resource.o
@@ -1115,6 +1169,12 @@ help:
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
+	@echo "... ResourceManager/BikeFactory.o"
+	@echo "... ResourceManager/BikeFactory.i"
+	@echo "... ResourceManager/BikeFactory.s"
+	@echo "... ResourceManager/LevelFactory.o"
+	@echo "... ResourceManager/LevelFactory.i"
+	@echo "... ResourceManager/LevelFactory.s"
 	@echo "... ResourceManager/Resource.o"
 	@echo "... ResourceManager/Resource.i"
 	@echo "... ResourceManager/Resource.s"

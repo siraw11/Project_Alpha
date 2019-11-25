@@ -401,6 +401,18 @@
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h">
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/BikeFactory.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/BikeFactory.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/LevelFactory.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/LevelFactory.h">
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.cpp">
 			<Option target="core"/>
 		</Unit>

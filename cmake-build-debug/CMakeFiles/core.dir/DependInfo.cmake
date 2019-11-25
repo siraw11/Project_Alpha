@@ -25,6 +25,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/MenuOption.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/Observer.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/Player.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/Player.cpp.o"
+  "/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/BikeFactory.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o"
+  "/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/LevelFactory.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/Resource.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o"
