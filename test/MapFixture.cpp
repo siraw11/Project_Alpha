@@ -6,6 +6,7 @@
 #include <ResourceManager/ResourceManager.h>
 #include "gtest/gtest.h"
 #include "Map.h"
+#include "ResourceManager/LevelFactory.h"
 
 class MapFixture : public ::testing::Test {
 protected:
@@ -22,7 +23,7 @@ protected:
 TEST_F(MapFixture, TestMapLoad) {
     ASSERT_EQ(0, m.getMapPoints().size());
     //il primo livello deve essere sblocatto ma non completato di default
-    m = *ResourceManager::loadLevel("lv1");
+    m = *LevelFactory::getLevel("lv1");
     ASSERT_LT(0, m.getMapPoints().size());
     ASSERT_EQ(0, m.getRecord());
     m.setRecord(5000);
@@ -32,7 +33,7 @@ TEST_F(MapFixture, TestMapLoad) {
 
 
     //controllo che il secondo non sia sbloccato e che i punti siano aggiornati
-    m = *ResourceManager::loadLevel("lv2");
+    m = *LevelFactory::getLevel("lv2");
     ASSERT_LT(0, m.getMapPoints().size());
     ASSERT_EQ(0, m.getRecord());
     ASSERT_EQ(false, m.getIsCompleted());
