@@ -79,33 +79,17 @@ void GameEngine::run() {
         wheelEngineL->EnableMotor(false);//impedisce il blocco delle ruote
         wheelEngineR->EnableMotor(false);//impedisce il blocco delle ruote
 
-        float speed = wheelEngineL->GetMotorSpeed();//Calcolo l'attuale velocità del motore
 
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
             //Accellerazione a Destra
-            wheelEngineL->EnableMotor(true);
-            wheelEngineR->EnableMotor(true);
-            if (speed < 0) {
-                speed = 0;
-            }
-            wheelEngineL->SetMotorSpeed(speed + Game::gameData->match->getBike()->getSpeed());
-            wheelEngineR->SetMotorSpeed(speed + Game::gameData->match->getBike()->getSpeed());
+            bikeAccellerate();
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
             //Accellerazione a Sinistra
-            wheelEngineL->EnableMotor(true);
-            wheelEngineR->EnableMotor(true);
-            if (speed > 0) {
-                speed = 0;
-            }
-            wheelEngineL->SetMotorSpeed(-(abs(speed) + Game::gameData->match->getBike()->getSpeed()));
-            wheelEngineR->SetMotorSpeed(-(abs(speed) + Game::gameData->match->getBike()->getSpeed()));
+            bikeDecelerate();
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
             //Freno a mano
-            wheelEngineL->EnableMotor(true);
-            wheelEngineR->EnableMotor(true);
-            wheelEngineL->SetMotorSpeed(0);
-            wheelEngineR->SetMotorSpeed(0);
+            bikeBreak();
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
             std::cout << "Called Pause State" << std::endl;
             this->setPause(true);
@@ -133,31 +117,13 @@ void GameEngine::run() {
                                                (float) item->getPosY(),
                                                (float) item->getWidth(),
                                                (float) item->getHeight());
-                /*  std::cout<<"cartPosX " << cart->GetPosition().x <<std::endl;
-                  std::cout<<"cartPosY " << cart->GetPosition().y <<std::endl;
-                  std::cout<<"dimX " << cartX <<std::endl;
-                  std::cout<<"dimY " << cartY <<std::endl;
-                  std::cout<<"itemPosX " << item->getPosX() <<std::endl;
-                  std::cout<<"itemPosy " << LINE + item->getPosY() <<std::endl;
-                  std::cout<<"itemW " << item->getWidth() <<std::endl;
-                  std::cout<<"itemH " << item->getHeight() <<std::endl;*/
-
-                std::cout << "------------------------------------------" << std::endl;
-                std::cout << "cartPosY " << LINE - cart->GetPosition().y << std::endl;
-                std::cout << "itemPosy " << item->getPosY() << std::endl;
-
-
-                std::cout << "LINE " << LINE << std::endl;
-
 
                 if (collided) {
                     item->doSpecial();//eseguo la special
                 }
                 drawItem(item);
-
             }
         }
-
 
         drawBike();//disegno la moto
         drawInterface();
@@ -201,9 +167,6 @@ void GameEngine::setPause(bool p) {
 
 bool GameEngine::checkCollision(float cartPosX, float cartPosY, float dimCartX, float dimCartY, float itemPosX,
                                 float itemPosY, float itemW, float itemH) {
-    //return (cartPosX + dimCartX >= itemPosX && cartPosX <= itemPosX + itemW) &&
-    //  ((cartPosY + dimCartY >= itemPosY && cartPosY <= itemPosY + itemH));
-
     return (itemPosX < cartPosX + dimCartX &&
             itemPosX + itemW > cartPosX &&
             itemPosY < cartPosY + dimCartY &&
@@ -458,6 +421,41 @@ float GameEngine::degToGrad(float deg) {
     return deg * (float) (180 / M_PI);
 }
 
+
+Position GameEngine::getBikePosition() const {
+    return Position{cart->GetPosition().x, cart->GetPosition().y};
+}
+
+void GameEngine::bikeAccellerate() {
+    float speed = wheelEngineL->GetMotorSpeed();
+    wheelEngineL->EnableMotor(true);
+    wheelEngineR->EnableMotor(true);
+    if (speed < 0) {
+        speed = 0;
+    }
+    wheelEngineL->SetMotorSpeed(speed + Game::gameData->match->getBike()->getSpeed());
+    wheelEngineR->SetMotorSpeed(speed + Game::gameData->match->getBike()->getSpeed());
+}
+
+void GameEngine::bikeDecelerate() {
+    float speed = wheelEngineL->GetMotorSpeed();
+    wheelEngineL->EnableMotor(true);
+    wheelEngineR->EnableMotor(true);
+    if (speed > 0) {
+        speed = 0;
+    }
+    wheelEngineL->SetMotorSpeed(-(abs(speed) + Game::gameData->match->getBike()->getSpeed()));
+    wheelEngineR->SetMotorSpeed(-(abs(speed) + Game::gameData->match->getBike()->getSpeed()));
+}
+
+void GameEngine::bikeBreak() {
+    wheelEngineL->EnableMotor(true);
+    wheelEngineR->EnableMotor(true);
+    wheelEngineL->SetMotorSpeed(0);
+    wheelEngineR->SetMotorSpeed(0);
+}
+
+
 const b2Vec2 &GameEngine::getGravity() const {
     return gravity;
 }
@@ -505,8 +503,3 @@ void GameEngine::setFramerate(int _framerate) {
 void GameEngine::setWorld(const b2World &_world) {
     this->world = _world;
 }
-
-Position GameEngine::getBikePosition() const {
-    return Position{cart->GetPosition().x, cart->GetPosition().y};
-}
-

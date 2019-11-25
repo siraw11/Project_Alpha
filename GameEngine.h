@@ -50,6 +50,12 @@ public:
 
     void speedChange(float increment);
 
+    void bikeAccellerate();
+
+    void bikeDecelerate();
+
+    void bikeBreak();
+
     Position getBikePosition() const;
 
     void step();
