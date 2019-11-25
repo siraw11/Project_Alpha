@@ -49,12 +49,12 @@ std::unique_ptr<Map> LevelFactory::loadLevel1() {
                               {40,  0},
                               {43,  0},
                               {45,  1},
-                              {100, 0},
+                              {100, 1},
                               {100, 10}//front limit
                       });
 
     map->setMapItems({
-                             new SpeedMalus(.1, 2, -.1, 1, .1, 90), //speedDecrement, posX, posY, width, height, angle
+                             new SpeedMalus(.1, 45, .6, 5, .5, 0), //speedDecrement, posX, posY, width, height, angle
                              new Coin(5, 0.8, .7, .7, 50),
                              new Coin(7, 1, .7, .7, 30),
                              new SpeedBonus(10, 100, 10, .7, .7, .7),
@@ -101,7 +101,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel2() {
 
 
 std::unique_ptr<Map> LevelFactory::loadLevel3() {
-    std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, true, 0));
+    std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, false, 0));
     map->setMapPoints({
                               {-1, 10},//back limit
                               {0,  0},
@@ -133,7 +133,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel3() {
 
 
 std::unique_ptr<Map> LevelFactory::loadLevel4() {
-    std::unique_ptr<Map> map(new Map("lv4", "Level 4", false, true, 0));
+    std::unique_ptr<Map> map(new Map("lv4", "Level 4", false, false, 0));
     map->setMapPoints({
                               {-1,  10},//back limit
                               {0,   0},
