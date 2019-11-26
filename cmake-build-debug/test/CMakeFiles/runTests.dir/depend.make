@@ -246,6 +246,7 @@ test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Map.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Match.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Observer.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../Player.h
+test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/LevelFactory.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/Resource.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/ResourceManager.h
 test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o: ../ResourceManager/ResourceManagerException.h

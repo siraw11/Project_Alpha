@@ -29,6 +29,8 @@ std::unique_ptr<Map> LevelFactory::getLevel(std::string id) {
         map = loadLevel3();
     if (id == "lv4")
         map = loadLevel4();
+    if (id == "TestDeath")
+        map = loadLevelTestDeath();
     return map;
 }
 
@@ -54,8 +56,8 @@ std::unique_ptr<Map> LevelFactory::loadLevel1() {
                       });
 
     map->setMapItems({
-                             new SpeedMalus(.1, 45, .5, 5, .55, 0), //speedDecrement, posX, posY, width, height, angle
-                             new Coin(5, 0, .7, .7, 50),
+                             new SpeedMalus(.1, 45, .6, 5, .7, 0), //speedDecrement, posX, posY, width, height, angle
+                             new Coin(5, .8, .7, .7, 50),
                              new Coin(7, 1, .7, .7, 30),
                              new SpeedBonus(10, 100, 10, .7, .7, .7),
                              new TimeBonus(1000, 20, 0., .7, .7),
@@ -90,6 +92,8 @@ std::unique_ptr<Map> LevelFactory::loadLevel2() {
                              new SpeedBonus(10, 1, 10, 1, .7, .7),
                              new SpeedBonus(10, 1, 18, 3.5, .7, .7),
                              new Coin(33, 5.5, .7, .7, 50),
+                             //new SpeedBonus(10, 1, 10, 1, .7, .7),
+                             new Checkpoint(32, 1.5, 1, 1.2),
                              new Checkpoint(50, 2.5, 5, 3, true),      //arrivo finale
 
 
@@ -122,6 +126,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel3() {
 
     map->setMapItems({
                              new TimeBonus(1000, 3, .1, .7, .7),
+                             new Coin(5, .2, .7, .7, 50),
                              new Coin(7, .1, .7, .7, 30),
                              new Checkpoint(50, 2, 5, 3, true),      //arrivo finale
                      });
@@ -145,6 +150,20 @@ std::unique_ptr<Map> LevelFactory::loadLevel4() {
                              new Coin(7, .1, .7, .7, 30),
                              new Checkpoint(95, 28, 5, 3, true),       //arrivo finale
                      });
+    return map;
+}
+
+std::unique_ptr<Map> LevelFactory::loadLevelTestDeath() {
+    std::unique_ptr<Map> map(new Map("TestDeath", "Test Death", false, true, 0));
+    map->setMapPoints({
+                              {-1,  10},//back limit
+                              {0,   0},
+                              {5,   0},
+                              {20,  4},
+                              {20,  0},
+                              {100, 0},
+                              {100, 1000}//front limit
+                      });
     return map;
 }
 

@@ -247,6 +247,7 @@ test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o
  ../Match.h
  ../Observer.h
  ../Player.h
+ ../ResourceManager/LevelFactory.h
  ../ResourceManager/Resource.h
  ../ResourceManager/ResourceManager.h
  ../ResourceManager/ResourceManagerException.h

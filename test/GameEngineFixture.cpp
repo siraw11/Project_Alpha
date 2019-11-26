@@ -3,6 +3,7 @@
 //
 
 #include <Game.h>
+#include <ResourceManager/LevelFactory.h>
 #include "gtest/gtest.h"
 #include "GameEngine.h"
 
@@ -90,3 +91,29 @@ TEST_F(GameEngineFixture, TestRespawn) {
     ASSERT_EQ(postPosX, respawnX);
 }
 
+
+TEST_F(GameEngineFixture, TestDeath) {
+    e = std::shared_ptr<GameEngine>();
+    Game::gameData->levels.insert(std::make_pair("TestDeath", LevelFactory::getLevel("TestDeath")));
+    Game::gameData->match->setMap(Game::gameData->levels.at("TestDeath"));
+    Game::gameData->match->setBike(Game::gameData->bikes.at("b1"));
+    ASSERT_EQ(Game::gameData->match->getLifes(), 3);
+
+    bool isDead;
+    do {
+        Game::gameData->engine->bikeAccellerate();
+        Game::gameData->engine->step();
+        Game::gameData->engine->draw();
+        std::cout << Game::gameData->engine->getBikePosition().posX << ", "
+                  << Game::gameData->engine->getBikePosition().posY << std::endl;
+
+        isDead = Game::gameData->engine->checkDeath();
+        if (isDead) {
+            break;
+        }
+    } while (Game::gameData->engine->getBikePosition().posX < 50);//50 la x massima nel qua
+
+    ASSERT_EQ(isDead, true);
+    ASSERT_EQ(Game::gameData->match->getLifes(), 2);
+    Game::gameData->levels.erase("TestDeath");
+}
