@@ -156,8 +156,8 @@ std::unique_ptr<Map> LevelFactory::loadLevelTestDeath() {
                               {-1,  10},//back limit
                               {0,   0},
                               {5,   0},
-                              {20,  4},
-                              {20,  0},
+                              {60,  10},
+                              {60,  0},
                               {100, 0},
                               {100, 1000}//front limit
                       });
