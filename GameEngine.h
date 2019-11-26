@@ -58,7 +58,11 @@ public:
 
     Position getBikePosition() const;
 
+    bool checkDeath();
+
     void step();
+
+    void draw();
     
     void respawn();
 private:
@@ -86,6 +90,8 @@ private:
     void drawBike();
 
     void drawItem(Item *item);
+
+    void drawItems();
 
     void initBike();
 

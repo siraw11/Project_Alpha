@@ -64,7 +64,7 @@ void GameEngine::run() {
 
     Game::gameData->match->getTimer()->start();
     while (!this->pause) {
-        Game::gameData->window.clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
+        std::cout << this->getBikePosition().posX << ", " << this->getBikePosition().posY << std::endl;
         this->step();
         //la camera inizia il movimento una volta superata la metà schermo
         if (((wheelL->GetPosition().x + offsetX) * SCALE) >
@@ -103,12 +103,9 @@ void GameEngine::run() {
         }
 
 
-        this->drawMap();//disegno la mappa del livello
-
         //itero la lista degli Items nella mappa
 
-        std::list<Item *> items = Game::gameData->match->getMap()->getMapItems();
-        for (auto &item : items) {
+        for (auto &item : Game::gameData->match->getMap()->getMapItems()) {
             if (!item->isTaken()) {
                 //controllo se collidono
                 bool collided = checkCollision(cart->GetPosition().x,
@@ -121,12 +118,9 @@ void GameEngine::run() {
                 if (collided) {
                     item->doSpecial();//eseguo la special
                 }
-                drawItem(item);
             }
         }
 
-        drawBike();//disegno la moto
-        drawInterface();
 
         flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
         if (flipAngle > 350 && flipAngle < 370) {
@@ -135,16 +129,41 @@ void GameEngine::run() {
             std::cout << countFlips << " Flip!" << std::endl;
         }
 
-        if (flipAngle > 160 && flipAngle < 220 && cart->GetLinearVelocity().x <= 0 &&
-            cart->GetLinearVelocity().y <= 0) {
-            if (Game::gameData->match->getLifes() > 0) {
-                this->setPause(true);
-                Game::gameData->machine.push_state(StateRef(new GameLostState()));
-            } else {
-            }
-        }
+        checkDeath();
 
-        Game::gameData->window.display();
+
+        draw();
+
+    }
+}
+
+void GameEngine::draw() {
+    Game::gameData->window.clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
+    drawMap();
+    drawItems();
+    drawBike();//disegno la moto
+    drawInterface();
+    Game::gameData->window.display();
+}
+
+void GameEngine::drawItems() {
+    for (auto &item : Game::gameData->match->getMap()->getMapItems()) {
+        if (!item->isTaken())
+            drawItem(item);
+    }
+}
+
+bool GameEngine::checkDeath() {
+    float flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
+    if (flipAngle > 160 && flipAngle < 220 && cart->GetLinearVelocity().x <= 0 &&
+        cart->GetLinearVelocity().y <= 0) {
+        if (Game::gameData->match->getLifes() > 0) {
+            this->setPause(true);
+            Game::gameData->machine.push_state(StateRef(new GameLostState()));
+        }
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -170,7 +189,7 @@ bool GameEngine::checkCollision(float cartPosX, float cartPosY, float dimCartX, 
     return (itemPosX < cartPosX + dimCartX &&
             itemPosX + itemW > cartPosX &&
             itemPosY < cartPosY + dimCartY &&
-            itemPosY + itemH < cartPosY);
+            itemPosY + itemH > cartPosY);
 }
 
 
