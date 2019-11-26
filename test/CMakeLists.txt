@@ -6,7 +6,7 @@ set(gtest_SOURCE_DIR, ./lib/googletest/)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} /)
 
 
-set(TEST_SOURCE_FILES runAllTests.cpp PlayerTest.cpp PlayerFixture.cpp BikeTest.cpp BikeFixture.cpp MapTest.cpp MapFixture.cpp GameEngineFixture.cpp GameEngineTest.cpp)
+set(TEST_SOURCE_FILES runAllTests.cpp PlayerTest.cpp PlayerFixture.cpp BikeTest.cpp BikeFixture.cpp MapTest.cpp MapFixture.cpp GameEngineFixture.cpp GameEngineTest.cpp ResurceManagerTest.cpp ResourceManagerFixture.cpp)
 add_executable(runTests ${TEST_SOURCE_FILES})
 target_link_libraries(runTests gtest gtest_main core)
 

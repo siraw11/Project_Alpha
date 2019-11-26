@@ -170,7 +170,7 @@ bool GameEngine::checkCollision(float cartPosX, float cartPosY, float dimCartX, 
     return (itemPosX < cartPosX + dimCartX &&
             itemPosX + itemW > cartPosX &&
             itemPosY < cartPosY + dimCartY &&
-            itemPosY + itemH > cartPosY);
+            itemPosY + itemH < cartPosY);
 }
 
 
