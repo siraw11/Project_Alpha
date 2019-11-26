@@ -49,13 +49,13 @@ void SpeedBonus::update(float dt) {
     if (dt - getTakenTime() > seconds * 1000) {
         detach();
     }
+    Game::gameData->engine->speedChange(speedIncrement);
 }
 
 void SpeedBonus::attach() {
     Game::gameData->match->getTimer()->registerObserver(this);
     precedentSpeed = Game::gameData->match->getBike()->getSpeed();
     std::cout << "attached!" << std::endl;
-    Game::gameData->engine->speedChange(1000);
 }
 
 void SpeedBonus::detach() {
@@ -74,5 +74,6 @@ void SpeedBonus::setTakenTime(float takenTime) {
 }
 
 SpeedBonus::~SpeedBonus() {
+    detach();
 }
 

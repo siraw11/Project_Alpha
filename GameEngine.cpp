@@ -101,7 +101,6 @@ void GameEngine::run() {
                 Game::gameData->window.close();
         }
 
-
         //itero la lista degli Items nella mappa
 
         for (auto &item : Game::gameData->match->getMap()->getMapItems()) {
@@ -128,6 +127,7 @@ void GameEngine::run() {
             std::cout << countFlips << " Flip!" << std::endl;
         }
 
+        this->wheelEngineL->SetMaxMotorTorque(Game::gameData->match->getBike()->getSpeed());//reset max speed
         checkDeath();
         draw();
 
@@ -165,6 +165,7 @@ bool GameEngine::checkDeath() {
 }
 
 void GameEngine::speedChange(float increment) {
+    this->wheelEngineL->SetMaxMotorTorque(100);
     this->wheelEngineL->SetMotorSpeed(this->wheelEngineL->GetMotorSpeed() * increment);
 }
 
