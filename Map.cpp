@@ -76,20 +76,7 @@ void Map::resetItems() {
 
 }
 
-void Map::update() {
-
-}
-
-void Map::attach() {
-    //TODO:implement
-}
-
-void Map::detach() {
-    //TODO:implement
-}
-
 Map::~Map() {
-    detach();
 }
 
 const std::string &Map::getName() const {

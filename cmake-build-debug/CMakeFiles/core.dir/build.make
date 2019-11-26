@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/CLionProjects/Motocross2D4
+CMAKE_SOURCE_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/CLionProjects/Motocross2D4/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/core.dir/depend.make
@@ -59,432 +59,432 @@ include CMakeFiles/core.dir/flags.make
 
 CMakeFiles/core.dir/Game.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Game.cpp.o: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/core.dir/Game.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Game.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/core.dir/Game.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Game.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Game.cpp
 
 CMakeFiles/core.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Game.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Game.cpp > CMakeFiles/core.dir/Game.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Game.cpp > CMakeFiles/core.dir/Game.cpp.i
 
 CMakeFiles/core.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Game.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Game.cpp -o CMakeFiles/core.dir/Game.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Game.cpp -o CMakeFiles/core.dir/Game.cpp.s
 
 CMakeFiles/core.dir/Player.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Player.cpp.o: ../Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/core.dir/Player.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Player.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/core.dir/Player.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Player.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Player.cpp
 
 CMakeFiles/core.dir/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Player.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Player.cpp > CMakeFiles/core.dir/Player.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Player.cpp > CMakeFiles/core.dir/Player.cpp.i
 
 CMakeFiles/core.dir/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Player.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Player.cpp -o CMakeFiles/core.dir/Player.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Player.cpp -o CMakeFiles/core.dir/Player.cpp.s
 
 CMakeFiles/core.dir/Bike.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Bike.cpp.o: ../Bike.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/core.dir/Bike.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Bike.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Bike.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/core.dir/Bike.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Bike.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.cpp
 
 CMakeFiles/core.dir/Bike.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Bike.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Bike.cpp > CMakeFiles/core.dir/Bike.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.cpp > CMakeFiles/core.dir/Bike.cpp.i
 
 CMakeFiles/core.dir/Bike.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Bike.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Bike.cpp -o CMakeFiles/core.dir/Bike.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.cpp -o CMakeFiles/core.dir/Bike.cpp.s
 
 CMakeFiles/core.dir/GameEngine.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameEngine.cpp.o: ../GameEngine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/core.dir/GameEngine.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameEngine.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/core.dir/GameEngine.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameEngine.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.cpp
 
 CMakeFiles/core.dir/GameEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameEngine.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameEngine.cpp > CMakeFiles/core.dir/GameEngine.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.cpp > CMakeFiles/core.dir/GameEngine.cpp.i
 
 CMakeFiles/core.dir/GameEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameEngine.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameEngine.cpp -o CMakeFiles/core.dir/GameEngine.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.cpp -o CMakeFiles/core.dir/GameEngine.cpp.s
 
 CMakeFiles/core.dir/Item.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Item.cpp.o: ../Item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/core.dir/Item.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Item.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/core.dir/Item.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Item.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Item.cpp
 
 CMakeFiles/core.dir/Item.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Item.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Item.cpp > CMakeFiles/core.dir/Item.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Item.cpp > CMakeFiles/core.dir/Item.cpp.i
 
 CMakeFiles/core.dir/Item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Item.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Item.cpp -o CMakeFiles/core.dir/Item.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Item.cpp -o CMakeFiles/core.dir/Item.cpp.s
 
 CMakeFiles/core.dir/Map.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Map.cpp.o: ../Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/core.dir/Map.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Map.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/core.dir/Map.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Map.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Map.cpp
 
 CMakeFiles/core.dir/Map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Map.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Map.cpp > CMakeFiles/core.dir/Map.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Map.cpp > CMakeFiles/core.dir/Map.cpp.i
 
 CMakeFiles/core.dir/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Map.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Map.cpp -o CMakeFiles/core.dir/Map.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Map.cpp -o CMakeFiles/core.dir/Map.cpp.s
 
 CMakeFiles/core.dir/Coin.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Coin.cpp.o: ../Coin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/core.dir/Coin.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Coin.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Coin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/core.dir/Coin.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Coin.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Coin.cpp
 
 CMakeFiles/core.dir/Coin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Coin.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Coin.cpp > CMakeFiles/core.dir/Coin.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Coin.cpp > CMakeFiles/core.dir/Coin.cpp.i
 
 CMakeFiles/core.dir/Coin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Coin.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Coin.cpp -o CMakeFiles/core.dir/Coin.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Coin.cpp -o CMakeFiles/core.dir/Coin.cpp.s
 
 CMakeFiles/core.dir/SpeedBonus.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../SpeedBonus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/core.dir/SpeedBonus.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/SpeedBonus.cpp.o -c /Users/user/CLionProjects/Motocross2D4/SpeedBonus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/core.dir/SpeedBonus.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/SpeedBonus.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp
 
 CMakeFiles/core.dir/SpeedBonus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/SpeedBonus.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/SpeedBonus.cpp > CMakeFiles/core.dir/SpeedBonus.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp > CMakeFiles/core.dir/SpeedBonus.cpp.i
 
 CMakeFiles/core.dir/SpeedBonus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/SpeedBonus.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/SpeedBonus.cpp -o CMakeFiles/core.dir/SpeedBonus.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedBonus.cpp -o CMakeFiles/core.dir/SpeedBonus.cpp.s
 
 CMakeFiles/core.dir/Checkpoint.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Checkpoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/core.dir/Checkpoint.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Checkpoint.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Checkpoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/core.dir/Checkpoint.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Checkpoint.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Checkpoint.cpp
 
 CMakeFiles/core.dir/Checkpoint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Checkpoint.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Checkpoint.cpp > CMakeFiles/core.dir/Checkpoint.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Checkpoint.cpp > CMakeFiles/core.dir/Checkpoint.cpp.i
 
 CMakeFiles/core.dir/Checkpoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Checkpoint.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Checkpoint.cpp -o CMakeFiles/core.dir/Checkpoint.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Checkpoint.cpp -o CMakeFiles/core.dir/Checkpoint.cpp.s
 
 CMakeFiles/core.dir/TimeBonus.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../TimeBonus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/core.dir/TimeBonus.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/TimeBonus.cpp.o -c /Users/user/CLionProjects/Motocross2D4/TimeBonus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/core.dir/TimeBonus.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/TimeBonus.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.cpp
 
 CMakeFiles/core.dir/TimeBonus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/TimeBonus.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/TimeBonus.cpp > CMakeFiles/core.dir/TimeBonus.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.cpp > CMakeFiles/core.dir/TimeBonus.cpp.i
 
 CMakeFiles/core.dir/TimeBonus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/TimeBonus.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/TimeBonus.cpp -o CMakeFiles/core.dir/TimeBonus.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/TimeBonus.cpp -o CMakeFiles/core.dir/TimeBonus.cpp.s
 
 CMakeFiles/core.dir/Subject.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Subject.cpp.o: ../Subject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/core.dir/Subject.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Subject.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Subject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/core.dir/Subject.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Subject.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.cpp
 
 CMakeFiles/core.dir/Subject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Subject.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Subject.cpp > CMakeFiles/core.dir/Subject.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.cpp > CMakeFiles/core.dir/Subject.cpp.i
 
 CMakeFiles/core.dir/Subject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Subject.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Subject.cpp -o CMakeFiles/core.dir/Subject.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Subject.cpp -o CMakeFiles/core.dir/Subject.cpp.s
 
 CMakeFiles/core.dir/Observer.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Observer.cpp.o: ../Observer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/core.dir/Observer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Observer.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Observer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/core.dir/Observer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Observer.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.cpp
 
 CMakeFiles/core.dir/Observer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Observer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Observer.cpp > CMakeFiles/core.dir/Observer.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.cpp > CMakeFiles/core.dir/Observer.cpp.i
 
 CMakeFiles/core.dir/Observer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Observer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Observer.cpp -o CMakeFiles/core.dir/Observer.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Observer.cpp -o CMakeFiles/core.dir/Observer.cpp.s
 
 CMakeFiles/core.dir/Match.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Match.cpp.o: ../Match.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/core.dir/Match.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Match.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Match.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/core.dir/Match.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Match.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Match.cpp
 
 CMakeFiles/core.dir/Match.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Match.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Match.cpp > CMakeFiles/core.dir/Match.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Match.cpp > CMakeFiles/core.dir/Match.cpp.i
 
 CMakeFiles/core.dir/Match.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Match.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Match.cpp -o CMakeFiles/core.dir/Match.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Match.cpp -o CMakeFiles/core.dir/Match.cpp.s
 
 CMakeFiles/core.dir/Menu.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Menu.cpp.o: ../Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/core.dir/Menu.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Menu.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/core.dir/Menu.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Menu.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Menu.cpp
 
 CMakeFiles/core.dir/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Menu.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Menu.cpp > CMakeFiles/core.dir/Menu.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Menu.cpp > CMakeFiles/core.dir/Menu.cpp.i
 
 CMakeFiles/core.dir/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Menu.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Menu.cpp -o CMakeFiles/core.dir/Menu.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Menu.cpp -o CMakeFiles/core.dir/Menu.cpp.s
 
 CMakeFiles/core.dir/MenuOption.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/MenuOption.cpp.o: ../MenuOption.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/core.dir/MenuOption.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/MenuOption.cpp.o -c /Users/user/CLionProjects/Motocross2D4/MenuOption.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/core.dir/MenuOption.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/MenuOption.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.cpp
 
 CMakeFiles/core.dir/MenuOption.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/MenuOption.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/MenuOption.cpp > CMakeFiles/core.dir/MenuOption.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.cpp > CMakeFiles/core.dir/MenuOption.cpp.i
 
 CMakeFiles/core.dir/MenuOption.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/MenuOption.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/MenuOption.cpp -o CMakeFiles/core.dir/MenuOption.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/MenuOption.cpp -o CMakeFiles/core.dir/MenuOption.cpp.s
 
 CMakeFiles/core.dir/Timer.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Timer.cpp.o: ../Timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/core.dir/Timer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Timer.cpp.o -c /Users/user/CLionProjects/Motocross2D4/Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/core.dir/Timer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Timer.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.cpp
 
 CMakeFiles/core.dir/Timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Timer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/Timer.cpp > CMakeFiles/core.dir/Timer.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.cpp > CMakeFiles/core.dir/Timer.cpp.i
 
 CMakeFiles/core.dir/Timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Timer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/Timer.cpp -o CMakeFiles/core.dir/Timer.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.cpp -o CMakeFiles/core.dir/Timer.cpp.s
 
 CMakeFiles/core.dir/SpeedMalus.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../SpeedMalus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/core.dir/SpeedMalus.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/SpeedMalus.cpp.o -c /Users/user/CLionProjects/Motocross2D4/SpeedMalus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/core.dir/SpeedMalus.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/SpeedMalus.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.cpp
 
 CMakeFiles/core.dir/SpeedMalus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/SpeedMalus.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/SpeedMalus.cpp > CMakeFiles/core.dir/SpeedMalus.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.cpp > CMakeFiles/core.dir/SpeedMalus.cpp.i
 
 CMakeFiles/core.dir/SpeedMalus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/SpeedMalus.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/SpeedMalus.cpp -o CMakeFiles/core.dir/SpeedMalus.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/SpeedMalus.cpp -o CMakeFiles/core.dir/SpeedMalus.cpp.s
 
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o: ../ResourceManager/ResourceManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o -c /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp
 
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManager.cpp > CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp > CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.i
 
 CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManager.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.s
 
 CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o: ../ResourceManager/ResourceManagerException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o -c /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManagerException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.cpp
 
 CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManagerException.cpp > CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.cpp > CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.i
 
 CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManagerException.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s
 
 CMakeFiles/core.dir/ResourceManager/Resource.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/ResourceManager/Resource.cpp.o: ../ResourceManager/Resource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/core.dir/ResourceManager/Resource.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/Resource.cpp.o -c /Users/user/CLionProjects/Motocross2D4/ResourceManager/Resource.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/core.dir/ResourceManager/Resource.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/Resource.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.cpp
 
 CMakeFiles/core.dir/ResourceManager/Resource.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ResourceManager/Resource.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/ResourceManager/Resource.cpp > CMakeFiles/core.dir/ResourceManager/Resource.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.cpp > CMakeFiles/core.dir/ResourceManager/Resource.cpp.i
 
 CMakeFiles/core.dir/ResourceManager/Resource.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ResourceManager/Resource.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/ResourceManager/Resource.cpp -o CMakeFiles/core.dir/ResourceManager/Resource.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.cpp -o CMakeFiles/core.dir/ResourceManager/Resource.cpp.s
 
 CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o: ../ResourceManager/ResourceTexture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o -c /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceTexture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.cpp
 
 CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceTexture.cpp > CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.cpp > CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.i
 
 CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceTexture.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.s
 
 CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o: ../ResourceManager/ResourceFont.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o -c /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceFont.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.cpp
 
 CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceFont.cpp > CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.cpp > CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.i
 
 CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceFont.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceFont.cpp -o CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.s
 
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../ResourceManager/LevelFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o -c /Users/user/CLionProjects/Motocross2D4/ResourceManager/LevelFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/LevelFactory.cpp
 
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/ResourceManager/LevelFactory.cpp > CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/LevelFactory.cpp > CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.i
 
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/ResourceManager/LevelFactory.cpp -o CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/LevelFactory.cpp -o CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.s
 
 CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o: ../ResourceManager/BikeFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o -c /Users/user/CLionProjects/Motocross2D4/ResourceManager/BikeFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/BikeFactory.cpp
 
 CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/ResourceManager/BikeFactory.cpp > CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/BikeFactory.cpp > CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.i
 
 CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/ResourceManager/BikeFactory.cpp -o CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/BikeFactory.cpp -o CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.s
 
 CMakeFiles/core.dir/GameStates/StateMachine.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/StateMachine.cpp.o: ../GameStates/StateMachine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/core.dir/GameStates/StateMachine.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/StateMachine.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/StateMachine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/core.dir/GameStates/StateMachine.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/StateMachine.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.cpp
 
 CMakeFiles/core.dir/GameStates/StateMachine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/StateMachine.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/StateMachine.cpp > CMakeFiles/core.dir/GameStates/StateMachine.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.cpp > CMakeFiles/core.dir/GameStates/StateMachine.cpp.i
 
 CMakeFiles/core.dir/GameStates/StateMachine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/StateMachine.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/StateMachine.cpp -o CMakeFiles/core.dir/GameStates/StateMachine.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/StateMachine.cpp -o CMakeFiles/core.dir/GameStates/StateMachine.cpp.s
 
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../GameStates/GameState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/core.dir/GameStates/GameState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/GameState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/GameState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/core.dir/GameStates/GameState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/GameState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.cpp
 
 CMakeFiles/core.dir/GameStates/GameState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/GameState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/GameState.cpp > CMakeFiles/core.dir/GameStates/GameState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.cpp > CMakeFiles/core.dir/GameStates/GameState.cpp.i
 
 CMakeFiles/core.dir/GameStates/GameState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/GameState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/GameState.cpp -o CMakeFiles/core.dir/GameStates/GameState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameState.cpp -o CMakeFiles/core.dir/GameStates/GameState.cpp.s
 
 CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o: ../GameStates/MenuHomeState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/MenuHomeState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuHomeState.cpp
 
 CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/MenuHomeState.cpp > CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuHomeState.cpp > CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.i
 
 CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/MenuHomeState.cpp -o CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuHomeState.cpp -o CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.s
 
 CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o: ../GameStates/MenuPauseState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/MenuPauseState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuPauseState.cpp
 
 CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/MenuPauseState.cpp > CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuPauseState.cpp > CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.i
 
 CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/MenuPauseState.cpp -o CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/MenuPauseState.cpp -o CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.s
 
 CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o: ../GameStates/SelectLevelState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/SelectLevelState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectLevelState.cpp
 
 CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/SelectLevelState.cpp > CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectLevelState.cpp > CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.i
 
 CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/SelectLevelState.cpp -o CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectLevelState.cpp -o CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.s
 
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/GameWinState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/core.dir/GameStates/GameWinState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/GameWinState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/GameWinState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/core.dir/GameStates/GameWinState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/GameWinState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameWinState.cpp
 
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/GameWinState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/GameWinState.cpp > CMakeFiles/core.dir/GameStates/GameWinState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameWinState.cpp > CMakeFiles/core.dir/GameStates/GameWinState.cpp.i
 
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/GameWinState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/GameWinState.cpp -o CMakeFiles/core.dir/GameStates/GameWinState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameWinState.cpp -o CMakeFiles/core.dir/GameStates/GameWinState.cpp.s
 
 CMakeFiles/core.dir/GameStates/GameLostState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/GameLostState.cpp.o: ../GameStates/GameLostState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/core.dir/GameStates/GameLostState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/GameLostState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/GameLostState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/core.dir/GameStates/GameLostState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/GameLostState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameLostState.cpp
 
 CMakeFiles/core.dir/GameStates/GameLostState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/GameLostState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/GameLostState.cpp > CMakeFiles/core.dir/GameStates/GameLostState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameLostState.cpp > CMakeFiles/core.dir/GameStates/GameLostState.cpp.i
 
 CMakeFiles/core.dir/GameStates/GameLostState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/GameLostState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/GameLostState.cpp -o CMakeFiles/core.dir/GameStates/GameLostState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/GameLostState.cpp -o CMakeFiles/core.dir/GameStates/GameLostState.cpp.s
 
 CMakeFiles/core.dir/GameStates/ShopState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/ShopState.cpp.o: ../GameStates/ShopState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/core.dir/GameStates/ShopState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/ShopState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/ShopState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/core.dir/GameStates/ShopState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/ShopState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/ShopState.cpp
 
 CMakeFiles/core.dir/GameStates/ShopState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/ShopState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/ShopState.cpp > CMakeFiles/core.dir/GameStates/ShopState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/ShopState.cpp > CMakeFiles/core.dir/GameStates/ShopState.cpp.i
 
 CMakeFiles/core.dir/GameStates/ShopState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/ShopState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/ShopState.cpp -o CMakeFiles/core.dir/GameStates/ShopState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/ShopState.cpp -o CMakeFiles/core.dir/GameStates/ShopState.cpp.s
 
 CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o: ../GameStates/SelectBikeState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o -c /Users/user/CLionProjects/Motocross2D4/GameStates/SelectBikeState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectBikeState.cpp
 
 CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/GameStates/SelectBikeState.cpp > CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectBikeState.cpp > CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.i
 
 CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/GameStates/SelectBikeState.cpp -o CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/GameStates/SelectBikeState.cpp -o CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.s
 
 # Object files for target core
 core_OBJECTS = \
@@ -560,7 +560,7 @@ libcore.a: CMakeFiles/core.dir/GameStates/ShopState.cpp.o
 libcore.a: CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -574,6 +574,6 @@ CMakeFiles/core.dir/clean:
 .PHONY : CMakeFiles/core.dir/clean
 
 CMakeFiles/core.dir/depend:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/CLionProjects/Motocross2D4 /Users/user/CLionProjects/Motocross2D4 /Users/user/CLionProjects/Motocross2D4/cmake-build-debug /Users/user/CLionProjects/Motocross2D4/cmake-build-debug /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lucagraziotti/CLionProjects/Motocross2D /Users/lucagraziotti/CLionProjects/Motocross2D /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/core.dir/depend
 

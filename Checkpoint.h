@@ -8,7 +8,7 @@
 
 #include "Item.h"
 
-class Checkpoint: public Item {
+class Checkpoint : public Item {
 private:
     bool isEnd;
 
@@ -21,6 +21,7 @@ public:
 
 
     void doSpecial() override final;
+
 };
 
 

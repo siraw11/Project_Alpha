@@ -55,11 +55,11 @@ public:
     void setPercentage(float percentage);
     */
 
+    std::shared_ptr<Timer> timer;
 private:
     int lifes;
     int money;
     float percentage;
-    std::shared_ptr<Timer> timer;
     Player* player;
     Position lastCheckpoint;
     std::shared_ptr<Map> map;

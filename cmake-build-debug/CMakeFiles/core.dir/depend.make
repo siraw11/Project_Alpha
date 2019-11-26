@@ -157,7 +157,6 @@ CMakeFiles/core.dir/Checkpoint.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Map.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Menu.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../MenuOption.h
-CMakeFiles/core.dir/Checkpoint.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Bike.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Box2D/Box2D.h
@@ -168,6 +167,7 @@ CMakeFiles/core.dir/Checkpoint.cpp.o: ../GameEngine.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Item.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Match.h
+CMakeFiles/core.dir/Checkpoint.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../Player.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../ResourceManager/Resource.h
 CMakeFiles/core.dir/Checkpoint.cpp.o: ../ResourceManager/ResourceManager.h
@@ -288,7 +288,6 @@ CMakeFiles/core.dir/Coin.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/core.dir/Coin.cpp.o: ../GameStates/State.h
 CMakeFiles/core.dir/Coin.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/core.dir/Coin.cpp.o: ../Map.h
-CMakeFiles/core.dir/Coin.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Coin.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Coin.cpp.o: ../Bike.h
 CMakeFiles/core.dir/Coin.cpp.o: ../Box2D/Box2D.h
@@ -298,6 +297,7 @@ CMakeFiles/core.dir/Coin.cpp.o: ../Game.h
 CMakeFiles/core.dir/Coin.cpp.o: ../GameEngine.h
 CMakeFiles/core.dir/Coin.cpp.o: ../Item.h
 CMakeFiles/core.dir/Coin.cpp.o: ../Match.h
+CMakeFiles/core.dir/Coin.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Coin.cpp.o: ../Player.h
 CMakeFiles/core.dir/Coin.cpp.o: ../ResourceManager/Resource.h
 CMakeFiles/core.dir/Coin.cpp.o: ../ResourceManager/ResourceManager.h
@@ -1838,6 +1838,7 @@ CMakeFiles/core.dir/Item.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/core.dir/Item.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/core.dir/Item.cpp.o: ../Item.cpp
 CMakeFiles/core.dir/Item.cpp.o: ../Item.h
+CMakeFiles/core.dir/Item.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Item.cpp.o: /usr/local/include/SFML/Config.hpp
 CMakeFiles/core.dir/Item.cpp.o: /usr/local/include/SFML/Graphics.hpp
 CMakeFiles/core.dir/Item.cpp.o: /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -2651,6 +2652,7 @@ CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../SpeedBonus.h
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../SpeedMalus.h
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../Subject.h
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../TimeBonus.h
+CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../Timer.h
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../ResourceManager/LevelFactory.cpp
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: ../ResourceManager/LevelFactory.h
 CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o: /usr/local/include/SFML/Config.hpp
@@ -2962,7 +2964,6 @@ CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../GameStates/State.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Map.h
-CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Subject.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Bike.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Game.h
@@ -2977,6 +2978,7 @@ CMakeFiles/core.dir/SpeedBonus.cpp.o: ../ResourceManager/ResourceManagerExceptio
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../ResourceManager/ResourceTexture.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../SpeedBonus.cpp
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../SpeedBonus.h
+CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Subject.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: ../Timer.h
 CMakeFiles/core.dir/SpeedBonus.cpp.o: /usr/local/include/SFML/Config.hpp
 CMakeFiles/core.dir/SpeedBonus.cpp.o: /usr/local/include/SFML/Graphics.hpp
@@ -3092,7 +3094,6 @@ CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../GameStates/State.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Map.h
-CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Observer.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Subject.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Bike.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Box2D/Box2D.h
@@ -3100,6 +3101,7 @@ CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Game.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../GameEngine.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Item.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Match.h
+CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Observer.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../Player.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../ResourceManager/Resource.h
 CMakeFiles/core.dir/SpeedMalus.cpp.o: ../ResourceManager/ResourceManager.h
@@ -3226,7 +3228,6 @@ CMakeFiles/core.dir/TimeBonus.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../GameStates/State.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../GameStates/StateMachine.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../Map.h
-CMakeFiles/core.dir/TimeBonus.cpp.o: ../Observer.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../Subject.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../Bike.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../Box2D/Box2D.h
@@ -3234,6 +3235,7 @@ CMakeFiles/core.dir/TimeBonus.cpp.o: ../Game.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../GameEngine.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../Item.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../Match.h
+CMakeFiles/core.dir/TimeBonus.cpp.o: ../Observer.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../Player.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../ResourceManager/Resource.h
 CMakeFiles/core.dir/TimeBonus.cpp.o: ../ResourceManager/ResourceManager.h

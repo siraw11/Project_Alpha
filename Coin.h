@@ -26,8 +26,6 @@ public:
     void setValue(int value);
 
     void doSpecial() final;
-
-
 private:
     int value;
 };

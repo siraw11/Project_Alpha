@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/CLionProjects/Motocross2D4
+CMAKE_SOURCE_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/CLionProjects/Motocross2D4/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/CMakeFiles/progress.marks
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles 0
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/progress.marks
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/clean
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/runTests.dir/rule:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runTests.dir/rule
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runTests.dir/rule
 .PHONY : test/CMakeFiles/runTests.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ runTests: test/CMakeFiles/runTests.dir/rule
 
 # fast build rule for target.
 runTests/fast:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/build
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/build
 .PHONY : runTests/fast
 
 BikeFixture.o: BikeFixture.cpp.o
@@ -131,7 +131,7 @@ BikeFixture.o: BikeFixture.cpp.o
 
 # target to build an object file
 BikeFixture.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeFixture.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeFixture.cpp.o
 .PHONY : BikeFixture.cpp.o
 
 BikeFixture.i: BikeFixture.cpp.i
@@ -140,7 +140,7 @@ BikeFixture.i: BikeFixture.cpp.i
 
 # target to preprocess a source file
 BikeFixture.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeFixture.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeFixture.cpp.i
 .PHONY : BikeFixture.cpp.i
 
 BikeFixture.s: BikeFixture.cpp.s
@@ -149,7 +149,7 @@ BikeFixture.s: BikeFixture.cpp.s
 
 # target to generate assembly for a file
 BikeFixture.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeFixture.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeFixture.cpp.s
 .PHONY : BikeFixture.cpp.s
 
 BikeTest.o: BikeTest.cpp.o
@@ -158,7 +158,7 @@ BikeTest.o: BikeTest.cpp.o
 
 # target to build an object file
 BikeTest.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.o
 .PHONY : BikeTest.cpp.o
 
 BikeTest.i: BikeTest.cpp.i
@@ -167,7 +167,7 @@ BikeTest.i: BikeTest.cpp.i
 
 # target to preprocess a source file
 BikeTest.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.i
 .PHONY : BikeTest.cpp.i
 
 BikeTest.s: BikeTest.cpp.s
@@ -176,7 +176,7 @@ BikeTest.s: BikeTest.cpp.s
 
 # target to generate assembly for a file
 BikeTest.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/BikeTest.cpp.s
 .PHONY : BikeTest.cpp.s
 
 GameEngineFixture.o: GameEngineFixture.cpp.o
@@ -185,7 +185,7 @@ GameEngineFixture.o: GameEngineFixture.cpp.o
 
 # target to build an object file
 GameEngineFixture.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o
 .PHONY : GameEngineFixture.cpp.o
 
 GameEngineFixture.i: GameEngineFixture.cpp.i
@@ -194,7 +194,7 @@ GameEngineFixture.i: GameEngineFixture.cpp.i
 
 # target to preprocess a source file
 GameEngineFixture.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.i
 .PHONY : GameEngineFixture.cpp.i
 
 GameEngineFixture.s: GameEngineFixture.cpp.s
@@ -203,7 +203,7 @@ GameEngineFixture.s: GameEngineFixture.cpp.s
 
 # target to generate assembly for a file
 GameEngineFixture.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.s
 .PHONY : GameEngineFixture.cpp.s
 
 GameEngineTest.o: GameEngineTest.cpp.o
@@ -212,7 +212,7 @@ GameEngineTest.o: GameEngineTest.cpp.o
 
 # target to build an object file
 GameEngineTest.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o
 .PHONY : GameEngineTest.cpp.o
 
 GameEngineTest.i: GameEngineTest.cpp.i
@@ -221,7 +221,7 @@ GameEngineTest.i: GameEngineTest.cpp.i
 
 # target to preprocess a source file
 GameEngineTest.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.i
 .PHONY : GameEngineTest.cpp.i
 
 GameEngineTest.s: GameEngineTest.cpp.s
@@ -230,7 +230,7 @@ GameEngineTest.s: GameEngineTest.cpp.s
 
 # target to generate assembly for a file
 GameEngineTest.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/GameEngineTest.cpp.s
 .PHONY : GameEngineTest.cpp.s
 
 MapFixture.o: MapFixture.cpp.o
@@ -239,7 +239,7 @@ MapFixture.o: MapFixture.cpp.o
 
 # target to build an object file
 MapFixture.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.o
 .PHONY : MapFixture.cpp.o
 
 MapFixture.i: MapFixture.cpp.i
@@ -248,7 +248,7 @@ MapFixture.i: MapFixture.cpp.i
 
 # target to preprocess a source file
 MapFixture.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.i
 .PHONY : MapFixture.cpp.i
 
 MapFixture.s: MapFixture.cpp.s
@@ -257,7 +257,7 @@ MapFixture.s: MapFixture.cpp.s
 
 # target to generate assembly for a file
 MapFixture.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapFixture.cpp.s
 .PHONY : MapFixture.cpp.s
 
 MapTest.o: MapTest.cpp.o
@@ -266,7 +266,7 @@ MapTest.o: MapTest.cpp.o
 
 # target to build an object file
 MapTest.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.o
 .PHONY : MapTest.cpp.o
 
 MapTest.i: MapTest.cpp.i
@@ -275,7 +275,7 @@ MapTest.i: MapTest.cpp.i
 
 # target to preprocess a source file
 MapTest.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.i
 .PHONY : MapTest.cpp.i
 
 MapTest.s: MapTest.cpp.s
@@ -284,7 +284,7 @@ MapTest.s: MapTest.cpp.s
 
 # target to generate assembly for a file
 MapTest.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/MapTest.cpp.s
 .PHONY : MapTest.cpp.s
 
 PlayerFixture.o: PlayerFixture.cpp.o
@@ -293,7 +293,7 @@ PlayerFixture.o: PlayerFixture.cpp.o
 
 # target to build an object file
 PlayerFixture.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o
 .PHONY : PlayerFixture.cpp.o
 
 PlayerFixture.i: PlayerFixture.cpp.i
@@ -302,7 +302,7 @@ PlayerFixture.i: PlayerFixture.cpp.i
 
 # target to preprocess a source file
 PlayerFixture.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerFixture.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerFixture.cpp.i
 .PHONY : PlayerFixture.cpp.i
 
 PlayerFixture.s: PlayerFixture.cpp.s
@@ -311,7 +311,7 @@ PlayerFixture.s: PlayerFixture.cpp.s
 
 # target to generate assembly for a file
 PlayerFixture.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerFixture.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerFixture.cpp.s
 .PHONY : PlayerFixture.cpp.s
 
 PlayerTest.o: PlayerTest.cpp.o
@@ -320,7 +320,7 @@ PlayerTest.o: PlayerTest.cpp.o
 
 # target to build an object file
 PlayerTest.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerTest.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerTest.cpp.o
 .PHONY : PlayerTest.cpp.o
 
 PlayerTest.i: PlayerTest.cpp.i
@@ -329,7 +329,7 @@ PlayerTest.i: PlayerTest.cpp.i
 
 # target to preprocess a source file
 PlayerTest.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerTest.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerTest.cpp.i
 .PHONY : PlayerTest.cpp.i
 
 PlayerTest.s: PlayerTest.cpp.s
@@ -338,7 +338,7 @@ PlayerTest.s: PlayerTest.cpp.s
 
 # target to generate assembly for a file
 PlayerTest.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerTest.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerTest.cpp.s
 .PHONY : PlayerTest.cpp.s
 
 ResourceManagerFixture.o: ResourceManagerFixture.cpp.o
@@ -347,7 +347,7 @@ ResourceManagerFixture.o: ResourceManagerFixture.cpp.o
 
 # target to build an object file
 ResourceManagerFixture.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o
 .PHONY : ResourceManagerFixture.cpp.o
 
 ResourceManagerFixture.i: ResourceManagerFixture.cpp.i
@@ -356,7 +356,7 @@ ResourceManagerFixture.i: ResourceManagerFixture.cpp.i
 
 # target to preprocess a source file
 ResourceManagerFixture.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.i
 .PHONY : ResourceManagerFixture.cpp.i
 
 ResourceManagerFixture.s: ResourceManagerFixture.cpp.s
@@ -365,7 +365,7 @@ ResourceManagerFixture.s: ResourceManagerFixture.cpp.s
 
 # target to generate assembly for a file
 ResourceManagerFixture.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.s
 .PHONY : ResourceManagerFixture.cpp.s
 
 ResurceManagerTest.o: ResurceManagerTest.cpp.o
@@ -374,7 +374,7 @@ ResurceManagerTest.o: ResurceManagerTest.cpp.o
 
 # target to build an object file
 ResurceManagerTest.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o
 .PHONY : ResurceManagerTest.cpp.o
 
 ResurceManagerTest.i: ResurceManagerTest.cpp.i
@@ -383,7 +383,7 @@ ResurceManagerTest.i: ResurceManagerTest.cpp.i
 
 # target to preprocess a source file
 ResurceManagerTest.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.i
 .PHONY : ResurceManagerTest.cpp.i
 
 ResurceManagerTest.s: ResurceManagerTest.cpp.s
@@ -392,7 +392,7 @@ ResurceManagerTest.s: ResurceManagerTest.cpp.s
 
 # target to generate assembly for a file
 ResurceManagerTest.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.s
 .PHONY : ResurceManagerTest.cpp.s
 
 runAllTests.o: runAllTests.cpp.o
@@ -401,7 +401,7 @@ runAllTests.o: runAllTests.cpp.o
 
 # target to build an object file
 runAllTests.cpp.o:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/runAllTests.cpp.o
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/runAllTests.cpp.o
 .PHONY : runAllTests.cpp.o
 
 runAllTests.i: runAllTests.cpp.i
@@ -410,7 +410,7 @@ runAllTests.i: runAllTests.cpp.i
 
 # target to preprocess a source file
 runAllTests.cpp.i:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/runAllTests.cpp.i
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/runAllTests.cpp.i
 .PHONY : runAllTests.cpp.i
 
 runAllTests.s: runAllTests.cpp.s
@@ -419,7 +419,7 @@ runAllTests.s: runAllTests.cpp.s
 
 # target to generate assembly for a file
 runAllTests.cpp.s:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/runAllTests.cpp.s
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/runAllTests.cpp.s
 .PHONY : runAllTests.cpp.s
 
 # Help Target
@@ -475,6 +475,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

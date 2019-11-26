@@ -3,6 +3,7 @@
 //
 
 #include "Timer.h"
+
 void Timer::start() {
     startTime = std::chrono::system_clock::now();
     running = true;
@@ -16,6 +17,7 @@ void Timer::stop() {
 
 void Timer::update() {
     time = elapsedMilliseconds();
+    notifyObservers();
 }
 
 
@@ -83,7 +85,14 @@ void Timer::removeObserver(Observer *o) {
 }
 
 void Timer::notifyObservers() {
-    for (auto itr = std::begin(observers); itr != std::end(observers); itr++) {
-        (*itr)->update();
+    auto itr = observers.begin();
+    while (itr != observers.end()) {
+        if (!observers.empty()) {
+            (*itr)->update(elapsed + this->elapsedMilliseconds());
+            itr++;
+        } else {
+            break;
+        }
     }
 }
+

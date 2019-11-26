@@ -11,13 +11,15 @@
 #include <SFML/Graphics.hpp>
 #include "Box2D/Box2D.h"
 #include "Observer.h"
+#include "Timer.h"
 
-class SpeedBonus : public Item {
+class SpeedBonus : public Item, public Observer {
 public:
-    SpeedBonus(double seconds=0, double speedIncrement=0,
+    SpeedBonus(double seconds = 0, double speedIncrement = 0,
                double posX = 0, double posY = 0, double width = 0,
                double height = 0, float angle = 0,
                std::string texture = "rocket1.png");
+
     ~SpeedBonus();
 
     double getSeconds() const;
@@ -30,19 +32,20 @@ public:
 
     void doSpecial() override final;
 
-/*
-    void update() final ;
-    void attach() final;
-    void detach() final;
-    */
+    virtual void update(float dt);
+
+    virtual void attach();
+
+    virtual void detach();
+
+    float getTakenTime() const;
+
+    void setTakenTime(float takenTime);
 
 private:
     double seconds;
     double speedIncrement;
-
-
-
-
+    float takenTime;
 };
 
 

@@ -29,18 +29,17 @@ public:
 
     time_t getTime();
 
-
     virtual void registerObserver(Observer *o) override;
 
     virtual void removeObserver(Observer *o) override;
 
     virtual void notifyObservers() override;
 
+    std::list<Observer *> observers;
 private:
     std::time_t time;
     std::time_t elapsed;
 
-    std::list<Observer *> observers;
 
     std::chrono::time_point<std::chrono::system_clock> startTime;
     std::chrono::time_point<std::chrono::system_clock> endTime;

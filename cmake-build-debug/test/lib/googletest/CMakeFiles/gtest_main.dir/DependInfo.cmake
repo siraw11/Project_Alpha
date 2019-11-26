@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/user/CLionProjects/Motocross2D4/test/lib/googletest/src/gtest_main.cc" "/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+  "/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest_main.cc" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
@@ -17,7 +17,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -6,6 +6,8 @@
 #include "Item.h"
 #include "Game.h"
 
+float precedentSpeed;
+
 SpeedBonus::SpeedBonus(double _seconds, double _speedIncrement, double _posX, double _posY, double _width,
                        double _height, float _angle, std::string _texture) : Item(_posX,
                                                                                   _posY,
@@ -14,7 +16,8 @@ SpeedBonus::SpeedBonus(double _seconds, double _speedIncrement, double _posX, do
                                                                                   _angle,
                                                                                   _texture),
                                                                              seconds(_seconds),
-                                                                             speedIncrement(_speedIncrement) {}
+                                                                             speedIncrement(_speedIncrement) {
+}
 
 double SpeedBonus::getSeconds() const {
     return seconds;
@@ -33,22 +36,43 @@ void SpeedBonus::setSpeedIncrement(double speedIncrement) {
 }
 
 void SpeedBonus::doSpecial() {
-    //Game::gameData->match->getTimer()->registerObserver(this);
+    this->attach();
     setTaken(true);
+    setTakenTime(Game::gameData->match->getTimer()->getTime());
+    std::cout << "Taken at :" << getTakenTime() << std::endl;
     std::cout << "Special! Addedd:" << speedIncrement << " speed" << std::endl;
     Game::gameData->engine->speedChange(speedIncrement);
 }
 
-/*
-void SpeedBonus::attach() {
 
+void SpeedBonus::update(float dt) {
+    if (dt - getTakenTime() > seconds * 1000) {
+        detach();
+    }
+}
+
+void SpeedBonus::attach() {
+    Game::gameData->match->getTimer()->registerObserver(this);
+    precedentSpeed = Game::gameData->match->getBike()->getSpeed();
+    std::cout << "attached!" << std::endl;
+    Game::gameData->engine->speedChange(1000);
 }
 
 void SpeedBonus::detach() {
-
+    Game::gameData->match->getTimer()->removeObserver(this);
+    Game::gameData->match->getBike()->setSpeed(precedentSpeed);
+    std::cout << "Detached" << std::endl;
 }
 
-void SpeedBonus::update() {
 
+float SpeedBonus::getTakenTime() const {
+    return takenTime;
 }
- */
+
+void SpeedBonus::setTakenTime(float takenTime) {
+    SpeedBonus::takenTime = takenTime;
+}
+
+SpeedBonus::~SpeedBonus() {
+}
+

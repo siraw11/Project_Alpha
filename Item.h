@@ -6,6 +6,7 @@
 #define MOTOCROSS2D_ITEM_H
 
 #include <iostream>
+#include "Observer.h"
 
 class Item {
 public:
@@ -46,6 +47,7 @@ public:
 
 
     virtual void doSpecial();
+
 
 private:
     float posX;

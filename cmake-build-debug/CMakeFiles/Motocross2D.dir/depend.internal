@@ -43,19 +43,19 @@ CMakeFiles/Motocross2D.dir/main.cpp.o
  ../Map.h
  ../Observer.h
  ../Subject.h
- /Users/user/CLionProjects/Motocross2D4/Bike.h
- /Users/user/CLionProjects/Motocross2D4/Box2D/Box2D.h
- /Users/user/CLionProjects/Motocross2D4/Game.h
- /Users/user/CLionProjects/Motocross2D4/GameEngine.h
- /Users/user/CLionProjects/Motocross2D4/Item.h
- /Users/user/CLionProjects/Motocross2D4/Match.h
- /Users/user/CLionProjects/Motocross2D4/Player.h
- /Users/user/CLionProjects/Motocross2D4/ResourceManager/Resource.h
- /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManager.h
- /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManagerException.h
- /Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceTexture.h
- /Users/user/CLionProjects/Motocross2D4/Timer.h
- /Users/user/CLionProjects/Motocross2D4/main.cpp
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
+ /Users/lucagraziotti/CLionProjects/Motocross2D/main.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp

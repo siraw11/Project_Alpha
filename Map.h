@@ -13,7 +13,7 @@
 #include "Item.h"
 
 
-class Map : Observer {
+class Map {
 
 public:
     Map(std::string id = "n/d", std::string name = "n/d", bool isCompleted = false, bool isUnlocked = false,
@@ -21,12 +21,6 @@ public:
         std::list<Position> mapPoints = {}, std::list<Item *> mapItems = {});
 
     virtual ~Map();
-
-    virtual void update() override;
-
-    virtual void attach() override;
-
-    virtual void detach() override;
 
     bool getIsCompleted() const;
 
