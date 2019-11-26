@@ -6,8 +6,6 @@
 #include "Item.h"
 #include "Game.h"
 
-float precedentSpeed;
-
 SpeedBonus::SpeedBonus(double _seconds, double _speedIncrement, double _posX, double _posY, double _width,
                        double _height, float _angle, std::string _texture) : Item(_posX,
                                                                                   _posY,
@@ -54,14 +52,12 @@ void SpeedBonus::update(float dt) {
 
 void SpeedBonus::attach() {
     Game::gameData->match->getTimer()->registerObserver(this);
-    precedentSpeed = Game::gameData->match->getBike()->getSpeed();
-    std::cout << "attached!" << std::endl;
+    std::cout << "attached observer!" << std::endl;
 }
 
 void SpeedBonus::detach() {
     Game::gameData->match->getTimer()->removeObserver(this);
-    Game::gameData->match->getBike()->setSpeed(precedentSpeed);
-    std::cout << "Detached" << std::endl;
+    std::cout << "Detached observer" << std::endl;
 }
 
 
