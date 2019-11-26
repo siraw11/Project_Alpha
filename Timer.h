@@ -35,10 +35,10 @@ public:
 
     virtual void notifyObservers() override;
 
-    std::list<Observer *> observers;
 private:
     std::time_t time;
     std::time_t elapsed;
+    std::list<Observer *> observers;
 
 
     std::chrono::time_point<std::chrono::system_clock> startTime;

@@ -91,7 +91,7 @@ void Timer::notifyObservers() {
             (*itr)->update(elapsed + this->elapsedMilliseconds());
             itr++;
         } else {
-            break;
+            itr = observers.begin();
         }
     }
 }
