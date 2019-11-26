@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest
+# Install script for directory: /Users/user/CLionProjects/Motocross2D4/test/lib/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

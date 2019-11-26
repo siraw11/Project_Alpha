@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/lucagraziotti/CLionProjects/Motocross2D/. -I/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest -I/ -isystem /Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/include -isystem /usr/local/include 
+CXX_INCLUDES = -I/Users/user/CLionProjects/Motocross2D4/. -I/Users/user/CLionProjects/Motocross2D4/test/lib/googletest -I/ -isystem /Users/user/CLionProjects/Motocross2D4/test/lib/googletest/include -isystem /usr/local/include 
 

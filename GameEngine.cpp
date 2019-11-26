@@ -116,7 +116,7 @@ void GameEngine::run() {
                                                (float) item->getPosX(),
                                                (float) item->getPosY(),
                                                (float) item->getWidth(),
-                                               (float) item->getHeight());
+                                               (float) item->getHeight() + 0.55);
 
                 if (collided) {
                     item->doSpecial();//eseguo la special
@@ -170,7 +170,7 @@ bool GameEngine::checkCollision(float cartPosX, float cartPosY, float dimCartX, 
     return (itemPosX < cartPosX + dimCartX &&
             itemPosX + itemW > cartPosX &&
             itemPosY < cartPosY + dimCartY &&
-            itemPosY + itemH < cartPosY);
+            itemPosY + itemH > cartPosY);
 }
 
 

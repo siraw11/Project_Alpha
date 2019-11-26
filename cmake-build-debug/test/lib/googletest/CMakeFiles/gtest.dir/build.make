@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D
+CMAKE_SOURCE_DIR = /Users/user/CLionProjects/Motocross2D4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/user/CLionProjects/Motocross2D4/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include test/lib/googletest/CMakeFiles/gtest.dir/depend.make
@@ -59,16 +59,16 @@ include test/lib/googletest/CMakeFiles/gtest.dir/flags.make
 
 test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: test/lib/googletest/CMakeFiles/gtest.dir/flags.make
 test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: ../test/lib/googletest/src/gtest-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/user/CLionProjects/Motocross2D4/test/lib/googletest/src/gtest-all.cc
 
 test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.cc.i
+	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/user/CLionProjects/Motocross2D4/test/lib/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.cc.i
 
 test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
+	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/user/CLionProjects/Motocross2D4/test/lib/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
 
 # Object files for target gtest
 gtest_OBJECTS = \
@@ -80,9 +80,9 @@ gtest_EXTERNAL_OBJECTS =
 test/lib/googletest/libgtestd.a: test/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
 test/lib/googletest/libgtestd.a: test/lib/googletest/CMakeFiles/gtest.dir/build.make
 test/lib/googletest/libgtestd.a: test/lib/googletest/CMakeFiles/gtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtestd.a"
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean_target.cmake
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/CLionProjects/Motocross2D4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtestd.a"
+	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean_target.cmake
+	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/lib/googletest/CMakeFiles/gtest.dir/build: test/lib/googletest/libgtestd.a
@@ -90,10 +90,10 @@ test/lib/googletest/CMakeFiles/gtest.dir/build: test/lib/googletest/libgtestd.a
 .PHONY : test/lib/googletest/CMakeFiles/gtest.dir/build
 
 test/lib/googletest/CMakeFiles/gtest.dir/clean:
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean.cmake
+	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean.cmake
 .PHONY : test/lib/googletest/CMakeFiles/gtest.dir/clean
 
 test/lib/googletest/CMakeFiles/gtest.dir/depend:
-	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lucagraziotti/CLionProjects/Motocross2D /Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/CLionProjects/Motocross2D4/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/CLionProjects/Motocross2D4 /Users/user/CLionProjects/Motocross2D4/test/lib/googletest /Users/user/CLionProjects/Motocross2D4/cmake-build-debug /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest /Users/user/CLionProjects/Motocross2D4/cmake-build-debug/test/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/lib/googletest/CMakeFiles/gtest.dir/depend
 

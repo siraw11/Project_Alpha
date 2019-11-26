@@ -230,13 +230,13 @@ Item.h
 Observer.h
 ../Observer.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+/Users/user/CLionProjects/Motocross2D4/Bike.h
 iostream
 -
 SFML/Graphics.hpp
 -
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
+/Users/user/CLionProjects/Motocross2D4/Box2D/Box2D.h
 Box2D/Common/b2Settings.h
 -
 Box2D/Common/b2Draw.h
@@ -294,97 +294,97 @@ Box2D/Dynamics/Joints/b2WeldJoint.h
 Box2D/Dynamics/Joints/b2WheelJoint.h
 -
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
+/Users/user/CLionProjects/Motocross2D4/Game.h
 SFML/Graphics.hpp
 -
 GameStates/StateMachine.h
 -
 ResourceManager/ResourceManager.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManager.h
 GameEngine.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
+/Users/user/CLionProjects/Motocross2D4/GameEngine.h
 Match.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
+/Users/user/CLionProjects/Motocross2D4/Match.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/GameEngine.h
+/Users/user/CLionProjects/Motocross2D4/GameEngine.h
 SFML/Graphics.hpp
 -
 Box2D/Box2D.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Box2D/Box2D.h
+/Users/user/CLionProjects/Motocross2D4/Box2D/Box2D.h
 Map.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
+/Users/user/CLionProjects/Motocross2D4/Map.h
 Item.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
+/Users/user/CLionProjects/Motocross2D4/Item.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Item.h
+/Users/user/CLionProjects/Motocross2D4/Item.h
 iostream
 -
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Match.h
+/Users/user/CLionProjects/Motocross2D4/Match.h
 Bike.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+/Users/user/CLionProjects/Motocross2D4/Bike.h
 Player.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+/Users/user/CLionProjects/Motocross2D4/Player.h
 Map.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
+/Users/user/CLionProjects/Motocross2D4/Map.h
 Timer.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
+/Users/user/CLionProjects/Motocross2D4/Timer.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+/Users/user/CLionProjects/Motocross2D4/Player.h
 iostream
 -
 list
 -
 Bike.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Bike.h
+/Users/user/CLionProjects/Motocross2D4/Bike.h
 Observer.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
+/Users/user/CLionProjects/Motocross2D4/Observer.h
 Subject.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
+/Users/user/CLionProjects/Motocross2D4/Subject.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/Resource.h
 iostream
 -
 ResourceManagerException.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManagerException.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManager.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManager.h
 SFML/Graphics.hpp
 -
 iostream
 -
 Map.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Map.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/Map.h
 Resource.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/Resource.h
 ResourceTexture.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceTexture.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceManagerException.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceManagerException.h
 iostream
 -
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/ResourceTexture.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/ResourceTexture.h
 string
 -
 SFML/Graphics/Texture.hpp
 -
 Resource.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/ResourceManager/Resource.h
+/Users/user/CLionProjects/Motocross2D4/ResourceManager/Resource.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/Timer.h
+/Users/user/CLionProjects/Motocross2D4/Timer.h
 list
 -
 iostream
 -
 Subject.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Subject.h
+/Users/user/CLionProjects/Motocross2D4/Subject.h
 Observer.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Observer.h
+/Users/user/CLionProjects/Motocross2D4/Observer.h
 
-/Users/lucagraziotti/CLionProjects/Motocross2D/main.cpp
+/Users/user/CLionProjects/Motocross2D4/main.cpp
 Game.h
-/Users/lucagraziotti/CLionProjects/Motocross2D/Game.h
+/Users/user/CLionProjects/Motocross2D4/Game.h
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h
