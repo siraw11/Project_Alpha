@@ -45,3 +45,11 @@ bool ResourceManager::loadEssentialResources() {
 void ResourceManager::add(Resource *r) {
     this->resources.insert(std::make_pair(r->getName(), r));
 }
+
+int ResourceManager::getSize() {
+    return resources.size();
+}
+
+void ResourceManager::remove(std::string id) {
+    this->resources.erase(id);
+}

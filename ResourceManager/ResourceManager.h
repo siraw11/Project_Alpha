@@ -20,6 +20,10 @@ public:
 
     void add(Resource *r);
 
+    void remove(std::string id);
+
+    int getSize();
+
     bool loadEssentialResources();
 
     template<typename T>
