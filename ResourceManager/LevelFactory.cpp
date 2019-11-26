@@ -68,7 +68,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel1() {
 }
 
 std::unique_ptr<Map> LevelFactory::loadLevel2() {
-    std::unique_ptr<Map> map(new Map("lv2", "Level 2", false, true, 0));
+    std::unique_ptr<Map> map(new Map("lv2", "Level 2", false, false, 0));
     map->setMapPoints({
                               {-1, 10},//back limit
                               {0,  0},
@@ -99,7 +99,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel2() {
 
 
 std::unique_ptr<Map> LevelFactory::loadLevel3() {
-    std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, true, 0));
+    std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, false, 0));
     map->setMapPoints({
                               {-1, 10},//back limit
                               {0,  0},
@@ -130,7 +130,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel3() {
 
 
 std::unique_ptr<Map> LevelFactory::loadLevel4() {
-    std::unique_ptr<Map> map(new Map("lv4", "Level 4", false, true, 0));
+    std::unique_ptr<Map> map(new Map("lv4", "Level 4", false, false, 0));
     map->setMapPoints({
                               {-1,  10},//back limit
                               {0,   0},
@@ -149,7 +149,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel4() {
 }
 
 std::unique_ptr<Map> LevelFactory::loadLevelTestDeath() {
-    std::unique_ptr<Map> map(new Map("TestDeath", "Test Death", false, true, 0));
+    std::unique_ptr<Map> map(new Map("TestDeath", "Test Death", false, false, 0));
     map->setMapPoints({
                               {-1,  10},//back limit
                               {0,   0},

@@ -830,6 +830,18 @@ gtest/gtest.h
 ../Map.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/Map.h
 
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
+../Player.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp
+gtest/gtest.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/test/gtest/gtest.h
+../Player.h
+/Users/lucagraziotti/CLionProjects/Motocross2D/Player.h
+
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResourceManagerFixture.cpp
 ResourceManager/ResourceManager.h
 /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResourceManager/ResourceManager.h
