@@ -56,7 +56,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel1() {
                       });
 
     map->setMapItems({
-                             new SpeedMalus(.1, 45, .6, 5, .7, 0), //speedDecrement, posX, posY, width, height, angle
+                             new SpeedMalus(.1, 45, .6, 5, .5, 0), //speedDecrement, posX, posY, width, height, angle
                              new Coin(5, .8, .7, .7, 50),
                              new Coin(7, 1, .7, .7, 30),
                              new SpeedBonus(10, 100, 10, .7, .7, .7),
@@ -92,8 +92,6 @@ std::unique_ptr<Map> LevelFactory::loadLevel2() {
                              new SpeedBonus(10, 1, 10, 1, .7, .7),
                              new SpeedBonus(10, 1, 18, 3.5, .7, .7),
                              new Coin(33, 5.5, .7, .7, 50),
-                             //new SpeedBonus(10, 1, 10, 1, .7, .7),
-                             new Checkpoint(32, 1.5, 1, 1.2),
                              new Checkpoint(50, 2.5, 5, 3, true),      //arrivo finale
 
 
@@ -126,7 +124,6 @@ std::unique_ptr<Map> LevelFactory::loadLevel3() {
 
     map->setMapItems({
                              new TimeBonus(1000, 3, .1, .7, .7),
-                             new Coin(5, .2, .7, .7, 50),
                              new Coin(7, .1, .7, .7, 30),
                              new Checkpoint(50, 2, 5, 3, true),      //arrivo finale
                      });
