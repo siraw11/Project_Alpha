@@ -29,6 +29,8 @@ std::unique_ptr<Map> LevelFactory::getLevel(std::string id) {
         map = loadLevel3();
     if (id == "lv4")
         map = loadLevel4();
+    if (id == "TestDeath")
+        map = loadLevelTestDeath();
     return map;
 }
 
@@ -148,6 +150,20 @@ std::unique_ptr<Map> LevelFactory::loadLevel4() {
                              new Coin(7, .1, .7, .7, 30),
                              new Checkpoint(95, 28, 5, 3, true),       //arrivo finale
                      });
+    return map;
+}
+
+std::unique_ptr<Map> LevelFactory::loadLevelTestDeath() {
+    std::unique_ptr<Map> map(new Map("TestDeath", "Test Death", false, true, 0));
+    map->setMapPoints({
+                              {-1,  10},//back limit
+                              {0,   0},
+                              {5,   0},
+                              {20,  4},
+                              {20,  0},
+                              {100, 0},
+                              {100, 1000}//front limit
+                      });
     return map;
 }
 

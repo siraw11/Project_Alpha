@@ -19,6 +19,8 @@ private:
 
     static std::unique_ptr<Map> loadLevel4();
 
+    static std::unique_ptr<Map> loadLevelTestDeath();
+
 public :
     static std::map<std::string, std::shared_ptr<Map>> getLevels();
 
