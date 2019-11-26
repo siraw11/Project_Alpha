@@ -15,10 +15,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="Added test">
+    <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResourceManager/LevelFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ResourceManager/LevelFactory.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/libcore.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libcore.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/runTests" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/runTests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/GameEngineFixture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/GameEngineFixture.cpp" afterDir="false" />
@@ -102,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.All in runTests">
+  <component name="RunManager" selected="CMake Application.Motocross2D">
     <configuration name="All in runTests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" nameIsGenerated="true" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Motocross2D" TARGET_NAME="runTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Motocross2D" RUN_TARGET_NAME="runTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -218,21 +224,7 @@
       <workItem from="1574630229175" duration="258000" />
       <workItem from="1574630513989" duration="1044000" />
       <workItem from="1574631778016" duration="576000" />
-      <workItem from="1574670327025" duration="19246000" />
-    </task>
-    <task id="LOCAL-00196" summary=".">
-      <created>1574373027570</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1574373027570</updated>
-    </task>
-    <task id="LOCAL-00197" summary="Added more tests">
-      <created>1574373046454</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1574373046454</updated>
+      <workItem from="1574670327025" duration="21207000" />
     </task>
     <task id="LOCAL-00198" summary="Moved Run() method">
       <created>1574373075413</created>
@@ -563,7 +555,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574759718359</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary=".">
+      <created>1574760555552</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1574760555553</updated>
+    </task>
+    <task id="LOCAL-00246" summary="Added TestDeath">
+      <created>1574760577441</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1574760577441</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +605,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added load heart texture" />
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Added mud&#10;Moved here loadLevels()" />
     <MESSAGE value="Removed loadLevels()&#10;Temp res change" />
@@ -622,9 +627,10 @@
     <MESSAGE value="Created" />
     <MESSAGE value="Created ResourceManager tests" />
     <MESSAGE value="Added test death level" />
-    <MESSAGE value="." />
     <MESSAGE value="Cleaned code:&#10;Added checkdeath()&#10;Added draw()&#10;Added drawItems()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned code:&#10;Added checkdeath()&#10;Added draw()&#10;Added drawItems()" />
+    <MESSAGE value="." />
+    <MESSAGE value="Added TestDeath" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TestDeath" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

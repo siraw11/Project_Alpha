@@ -64,7 +64,6 @@ void GameEngine::run() {
 
     Game::gameData->match->getTimer()->start();
     while (!this->pause) {
-        std::cout << this->getBikePosition().posX << ", " << this->getBikePosition().posY << std::endl;
         this->step();
         //la camera inizia il movimento una volta superata la metà schermo
         if (((wheelL->GetPosition().x + offsetX) * SCALE) >
@@ -130,8 +129,6 @@ void GameEngine::run() {
         }
 
         checkDeath();
-
-
         draw();
 
     }
@@ -141,7 +138,7 @@ void GameEngine::draw() {
     Game::gameData->window.clear(sf::Color(160, 200, 244));//ripulisco nuovo frame
     drawMap();
     drawItems();
-    drawBike();//disegno la moto
+    drawBike();
     drawInterface();
     Game::gameData->window.display();
 }

@@ -97,10 +97,9 @@ TEST_F(GameEngineFixture, TestDeath) {
     Game::gameData->levels.insert(std::make_pair("TestDeath", LevelFactory::getLevel("TestDeath")));
     Game::gameData->match->setMap(Game::gameData->levels.at("TestDeath"));
     Game::gameData->match->setBike(Game::gameData->bikes.at("b1"));
-    Game::gameData->match->setLifes(3);
+    ASSERT_EQ(Game::gameData->match->getLifes(), 3);
+
     bool isDead;
-
-
     do {
         Game::gameData->engine->bikeAccellerate();
         Game::gameData->engine->step();
