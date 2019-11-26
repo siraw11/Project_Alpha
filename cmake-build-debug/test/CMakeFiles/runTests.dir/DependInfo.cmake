@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/MapTest.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/MapTest.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerFixture.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerFixture.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/PlayerTest.cpp.o"
+  "/Users/lucagraziotti/CLionProjects/Motocross2D/test/ResourceManagerFixture.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o"
+  "/Users/lucagraziotti/CLionProjects/Motocross2D/test/ResurceManagerTest.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o"
   "/Users/lucagraziotti/CLionProjects/Motocross2D/test/runAllTests.cpp" "/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test/CMakeFiles/runTests.dir/runAllTests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

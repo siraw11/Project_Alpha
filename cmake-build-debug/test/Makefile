@@ -341,6 +341,60 @@ PlayerTest.cpp.s:
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/PlayerTest.cpp.s
 .PHONY : PlayerTest.cpp.s
 
+ResourceManagerFixture.o: ResourceManagerFixture.cpp.o
+
+.PHONY : ResourceManagerFixture.o
+
+# target to build an object file
+ResourceManagerFixture.cpp.o:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o
+.PHONY : ResourceManagerFixture.cpp.o
+
+ResourceManagerFixture.i: ResourceManagerFixture.cpp.i
+
+.PHONY : ResourceManagerFixture.i
+
+# target to preprocess a source file
+ResourceManagerFixture.cpp.i:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.i
+.PHONY : ResourceManagerFixture.cpp.i
+
+ResourceManagerFixture.s: ResourceManagerFixture.cpp.s
+
+.PHONY : ResourceManagerFixture.s
+
+# target to generate assembly for a file
+ResourceManagerFixture.cpp.s:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.s
+.PHONY : ResourceManagerFixture.cpp.s
+
+ResurceManagerTest.o: ResurceManagerTest.cpp.o
+
+.PHONY : ResurceManagerTest.o
+
+# target to build an object file
+ResurceManagerTest.cpp.o:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o
+.PHONY : ResurceManagerTest.cpp.o
+
+ResurceManagerTest.i: ResurceManagerTest.cpp.i
+
+.PHONY : ResurceManagerTest.i
+
+# target to preprocess a source file
+ResurceManagerTest.cpp.i:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.i
+.PHONY : ResurceManagerTest.cpp.i
+
+ResurceManagerTest.s: ResurceManagerTest.cpp.s
+
+.PHONY : ResurceManagerTest.s
+
+# target to generate assembly for a file
+ResurceManagerTest.cpp.s:
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug && $(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.s
+.PHONY : ResurceManagerTest.cpp.s
+
 runAllTests.o: runAllTests.cpp.o
 
 .PHONY : runAllTests.o
@@ -401,6 +455,12 @@ help:
 	@echo "... PlayerTest.o"
 	@echo "... PlayerTest.i"
 	@echo "... PlayerTest.s"
+	@echo "... ResourceManagerFixture.o"
+	@echo "... ResourceManagerFixture.i"
+	@echo "... ResourceManagerFixture.s"
+	@echo "... ResurceManagerTest.o"
+	@echo "... ResurceManagerTest.i"
+	@echo "... ResurceManagerTest.s"
 	@echo "... runAllTests.o"
 	@echo "... runAllTests.i"
 	@echo "... runAllTests.s"

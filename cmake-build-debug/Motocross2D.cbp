@@ -500,6 +500,12 @@
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/PlayerTest.cpp">
 			<Option target="runTests"/>
 		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/ResourceManagerFixture.cpp">
+			<Option target="runTests"/>
+		</Unit>
+		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/ResurceManagerTest.cpp">
+			<Option target="runTests"/>
+		</Unit>
 		<Unit filename="/Users/lucagraziotti/CLionProjects/Motocross2D/test/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>

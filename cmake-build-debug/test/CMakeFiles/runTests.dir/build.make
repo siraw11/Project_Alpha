@@ -174,6 +174,32 @@ test/CMakeFiles/runTests.dir/GameEngineTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/GameEngineTest.cpp.s"
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/GameEngineTest.cpp -o CMakeFiles/runTests.dir/GameEngineTest.cpp.s
 
+test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o: test/CMakeFiles/runTests.dir/flags.make
+test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o: ../test/ResurceManagerTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResurceManagerTest.cpp
+
+test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/ResurceManagerTest.cpp.i"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResurceManagerTest.cpp > CMakeFiles/runTests.dir/ResurceManagerTest.cpp.i
+
+test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/ResurceManagerTest.cpp.s"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResurceManagerTest.cpp -o CMakeFiles/runTests.dir/ResurceManagerTest.cpp.s
+
+test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o: test/CMakeFiles/runTests.dir/flags.make
+test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o: ../test/ResourceManagerFixture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o -c /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResourceManagerFixture.cpp
+
+test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.i"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResourceManagerFixture.cpp > CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.i
+
+test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.s"
+	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucagraziotti/CLionProjects/Motocross2D/test/ResourceManagerFixture.cpp -o CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.s
+
 # Object files for target runTests
 runTests_OBJECTS = \
 "CMakeFiles/runTests.dir/runAllTests.cpp.o" \
@@ -184,7 +210,9 @@ runTests_OBJECTS = \
 "CMakeFiles/runTests.dir/MapTest.cpp.o" \
 "CMakeFiles/runTests.dir/MapFixture.cpp.o" \
 "CMakeFiles/runTests.dir/GameEngineFixture.cpp.o" \
-"CMakeFiles/runTests.dir/GameEngineTest.cpp.o"
+"CMakeFiles/runTests.dir/GameEngineTest.cpp.o" \
+"CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o" \
+"CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o"
 
 # External object files for target runTests
 runTests_EXTERNAL_OBJECTS =
@@ -198,6 +226,8 @@ test/runTests: test/CMakeFiles/runTests.dir/MapTest.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/MapFixture.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/GameEngineTest.cpp.o
+test/runTests: test/CMakeFiles/runTests.dir/ResurceManagerTest.cpp.o
+test/runTests: test/CMakeFiles/runTests.dir/ResourceManagerFixture.cpp.o
 test/runTests: test/CMakeFiles/runTests.dir/build.make
 test/runTests: test/lib/googletest/libgtestd.a
 test/runTests: test/lib/googletest/libgtest_maind.a
@@ -208,7 +238,7 @@ test/runTests: /usr/local/lib/libsfml-system.2.5.1.dylib
 test/runTests: ../Box2D/libBox2D.a
 test/runTests: test/lib/googletest/libgtestd.a
 test/runTests: test/CMakeFiles/runTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable runTests"
 	cd /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
