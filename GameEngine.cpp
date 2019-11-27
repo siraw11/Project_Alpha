@@ -19,6 +19,8 @@ float cartX = 0.8;
 float cartY = 0.4;
 float flipAngle = 0;
 int countFlips = 0;
+float offsetX = 3.f;
+float offsetY = 1.f;
 
 b2Body *wheelL = nullptr;
 b2Body *wheelR = nullptr;
@@ -51,6 +53,12 @@ void GameEngine::respawn() {
     wheelR->SetLinearVelocity(b2Vec2(0, 0));
     this->wheelEngineL->SetMotorSpeed(0);
     this->wheelEngineR->SetMotorSpeed(0);
+
+
+    double viewX = (wheelL->GetPosition().x + offsetX) * SCALE;
+    double viewY = (wheelL->GetPosition().y - offsetY) * SCALE;
+    view.setCenter((float) viewX, (float) viewY);
+    Game::gameData->window.setView(view);
 }
 
 void GameEngine::step() {
@@ -58,8 +66,6 @@ void GameEngine::step() {
 }
 
 void GameEngine::run() {
-    float offsetX = 3.f;
-    float offsetY = 1.f;
     sf::Event event{};
 
     Game::gameData->match->getTimer()->start();
