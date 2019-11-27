@@ -18,13 +18,7 @@
     <list default="true" id="d0f9712f-b8ea-485a-857c-027ba1185bd4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStates/GameWinState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStates/GameWinState.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameWinState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameStates/GameWinState.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Match.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/Match.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Motocross2D" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libcore.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libcore.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/runTests" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/runTests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/core.dir/GameEngine.cpp.o" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -222,21 +216,7 @@
       <workItem from="1574630513989" duration="1044000" />
       <workItem from="1574631778016" duration="576000" />
       <workItem from="1574670327025" duration="21207000" />
-      <workItem from="1574792389187" duration="10697000" />
-    </task>
-    <task id="LOCAL-00214" summary="Added Heart lifes draw">
-      <created>1574529318413</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1574529318413</updated>
-    </task>
-    <task id="LOCAL-00215" summary="Added load heart texture">
-      <created>1574529371776</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1574529371776</updated>
+      <workItem from="1574792389187" duration="10953000" />
     </task>
     <task id="LOCAL-00216" summary="Minor changes">
       <created>1574608809007</created>
@@ -567,7 +547,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574843003672</updated>
     </task>
-    <option name="localTasksCounter" value="263" />
+    <task id="LOCAL-00263" summary="Minor changes">
+      <created>1574843679471</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1574843679471</updated>
+    </task>
+    <task id="LOCAL-00264" summary="Fixed camera problem if respawn">
+      <created>1574843700849</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1574843700849</updated>
+    </task>
+    <option name="localTasksCounter" value="265" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,8 +597,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added Factory" />
-    <MESSAGE value="Added accelleration/deceleration/break as methods&#10;removed unused cout" />
     <MESSAGE value="Added Factory getLevel()" />
     <MESSAGE value="Added getSize() and remove() methods" />
     <MESSAGE value="Added ResurceManagerTest.cpp and ResourceManagerFixture.cpp" />
@@ -628,7 +620,9 @@
     <MESSAGE value="Fixed death problem" />
     <MESSAGE value="Added Flips interface draw" />
     <MESSAGE value="Added Flip texture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Flip texture" />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Fixed camera problem if respawn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed camera problem if respawn" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

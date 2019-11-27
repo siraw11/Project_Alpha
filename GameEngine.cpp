@@ -18,7 +18,6 @@
 float cartX = 0.8;
 float cartY = 0.4;
 float flipAngle = 0;
-int countFlips = 0;
 float offsetX = 3.f;
 float offsetY = 1.f;
 
@@ -109,12 +108,10 @@ void GameEngine::run() {
 
         this->checkCollisions();
 
-        flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
+        flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) Game::gameData->match->getFlips());
         if (flipAngle > 350 && flipAngle < 370 && !checkDeath()) {
-            countFlips++;
             flipAngle = 0;
             Game::gameData->match->addFlip();
-            std::cout << countFlips << " Flip!" << std::endl;
         }
 
         this->wheelEngineL->SetMaxMotorTorque(Game::gameData->match->getBike()->getSpeed());//reset max speed
@@ -159,11 +156,12 @@ void GameEngine::drawItems() {
 }
 
 bool GameEngine::checkDeath() {
-    float flipAngle = abs(abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips));
+    float flipAngle = abs(abs(degToGrad(cart->GetAngle())) - (360.f * (float) Game::gameData->match->getFlips()));
     if (flipAngle > 160 && flipAngle < 220 && (float) cart->GetLinearVelocity().x <= 0.3 &&
         (float) cart->GetLinearVelocity().y <= 0.3) {
         if (Game::gameData->match->getLifes() > 0) {
             this->setPause(true);
+            Game::gameData->match->setFlips(0);
             Game::gameData->machine.push_state(StateRef(new GameLostState()));
         }
         return true;
