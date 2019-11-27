@@ -152,9 +152,9 @@ void GameEngine::drawItems() {
 }
 
 bool GameEngine::checkDeath() {
-    float flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
-    if (flipAngle > 160 && flipAngle < 220 && cart->GetLinearVelocity().x <= 0 &&
-        cart->GetLinearVelocity().y <= 0) {
+    float flipAngle = abs(abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips));
+    if (flipAngle > 160 && flipAngle < 220 && (float) cart->GetLinearVelocity().x <= 0.3 &&
+        (float) cart->GetLinearVelocity().y <= 0.3) {
         if (Game::gameData->match->getLifes() > 0) {
             this->setPause(true);
             Game::gameData->machine.push_state(StateRef(new GameLostState()));

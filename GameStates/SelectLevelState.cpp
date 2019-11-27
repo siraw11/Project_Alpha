@@ -114,6 +114,7 @@ void SelectLevelState::handleInput(sf::Event event) {
                                 std::cout << "Selected Level:" << level->getName() << std::endl;
                                 Game::gameData->match->setMap(level);
                                 Game::gameData->match->getMap()->resetItems();
+                                Game::gameData->match->setLifes(3);
                                 Game::gameData->machine.push_state(StateRef(new SelectBikeState()));
                             } else {
                                 std::cout << "Level " << level->getName() << " is locked!" << std::endl;

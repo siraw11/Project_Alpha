@@ -238,6 +238,7 @@ test/CMakeFiles/runTests.dir/GameEngineFixture.cpp.o
  ../Box2D/Dynamics/b2TimeStep.h
  ../Box2D/Dynamics/b2World.h
  ../Box2D/Dynamics/b2WorldCallbacks.h
+ ../Coin.h
  ../Game.h
  ../GameEngine.h
  ../GameStates/State.h
