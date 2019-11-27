@@ -5,6 +5,7 @@
 #include <Game.h>
 #include <ResourceManager/LevelFactory.h>
 #include <ResourceManager/BikeFactory.h>
+#include <Coin.h>
 #include "gtest/gtest.h"
 #include "GameEngine.h"
 
@@ -93,7 +94,7 @@ TEST_F(GameEngineFixture, TestRespawn) {
 }
 
 
-TEST_F(GameEngineFixture, TestDeath) {
+TEST_F(GameEngineFixture, TestDeathAndCollision) {
     Game::gameData->levels.insert(std::make_pair("TestDeath", LevelFactory::getLevel("TestDeath")));
     Game::gameData->match->setMap(Game::gameData->levels.at("TestDeath"));
 
@@ -106,12 +107,17 @@ TEST_F(GameEngineFixture, TestDeath) {
         Game::gameData->engine->draw();
 
         isDead = Game::gameData->engine->checkDeath();
+        Game::gameData->engine->checkCollisions();
         if (isDead) {
             break;
         }
     } while (Game::gameData->engine->getBikePosition().posX < 200);//200 la x massima nel qua
+    auto firstCoin = dynamic_cast<Coin *>(Game::gameData->match->getMap()->getMapItems().front());
+
 
     ASSERT_EQ(isDead, true);
     ASSERT_EQ(Game::gameData->match->getLifes(), 2);
+    ASSERT_EQ(firstCoin->isTaken(), true);
+    ASSERT_EQ(Game::gameData->match->getMoney(), firstCoin->getValue());
     Game::gameData->levels.erase("TestDeath");
 }
