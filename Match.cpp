@@ -76,12 +76,15 @@ const std::shared_ptr<Timer> &Match::getTimer() const {
 void Match::setTimer(const std::shared_ptr<Timer> &timer) {
     Match::timer = timer;
 }
-/*
-float Match::getPercentage() const {
-    return percentage;
+
+int Match::getFlips() const {
+    return flips;
 }
 
-void Match::setPercentage(float percentage) {
-    Match::percentage = percentage;
+void Match::setFlips(int flips) {
+    Match::flips = flips;
 }
-*/
+
+void Match::addFlip() {
+    this->flips += 1;
+}

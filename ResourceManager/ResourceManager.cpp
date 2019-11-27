@@ -31,6 +31,7 @@ bool ResourceManager::loadEssentialResources() {
         add(new ResourceTexture("rocket1.png", "./resources/textures/rocket1.png"));
         add(new ResourceTexture("timer.png", "./resources/textures/timer.png"));
         add(new ResourceTexture("mud.png", "./resources/textures/mud.png"));
+        add(new ResourceTexture("flip.png", "./resources/textures/flip.png"));
 
 
         Game::gameData->bikes = BikeFactory::getBikes();

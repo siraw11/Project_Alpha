@@ -46,10 +46,16 @@ public:
 
     void setTimer(const std::shared_ptr<Timer> &timer);
 
+    int getFlips() const;
+
+    void setFlips(int flips);
+
+    void addFlip();
 
 private:
     int lifes;
     int money;
+    int flips;
     Position lastCheckpoint;
     std::shared_ptr<Timer> timer;
     std::shared_ptr<Map> map;

@@ -104,9 +104,10 @@ void GameEngine::run() {
         this->checkCollisions();
 
         flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
-        if (flipAngle > 350 && flipAngle < 370) {
+        if (flipAngle > 350 && flipAngle < 370 && !checkDeath()) {
             countFlips++;
             flipAngle = 0;
+            Game::gameData->match->addFlip();
             std::cout << countFlips << " Flip!" << std::endl;
         }
 
@@ -412,8 +413,23 @@ void GameEngine::drawInterface() {
     Game::gameData->window.draw(textCoin);
 
 
+    sf::Sprite spriteFlip(Game::gameData->resources.getResource<ResourceTexture *>("flip.png")->getTexture());
+    spriteFlip.setPosition(interfaceX + 300, interfaceY);
+    spriteFlip.setScale(0.20, 0.20);
+    Game::gameData->window.draw(spriteFlip);
+
+    sf::Text textFlip;
+    textFlip.setPosition(interfaceX + 400, interfaceY);
+    textFlip.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
+    textFlip.setCharacterSize(80);
+    textFlip.setFillColor(sf::Color::Black);
+    textFlip.setString(std::to_string(Game::gameData->match->getFlips()));
+    Game::gameData->window.draw(textFlip);
+
+
+
     sf::Sprite spriteHeart(Game::gameData->resources.getResource<ResourceTexture *>("heart.png")->getTexture());
-    float heartPosX = interfaceX + 400;
+    float heartPosX = interfaceX + 500;
     for (int i = 0; i < Game::gameData->match->getLifes(); ++i) {
         spriteHeart.setPosition(heartPosX, interfaceY);
         spriteHeart.setScale(0.20, 0.20);

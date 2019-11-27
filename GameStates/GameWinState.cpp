@@ -19,7 +19,8 @@ GameWinState::GameWinState() {
     }
 
     std::cout << "Actual map record:" << bestRecord << std::endl;
-    std::cout << "new record:" << newRecord << std::endl;
+    std::cout << "new time:" << newRecord << std::endl;
+    std::cout << "Flips done:" << Game::gameData->match->getFlips() << std::endl;
 
     Game::gameData->match->getMap()->resetItems();
     this->menu = new Menu(MenuType::Home, GameWinState::loadMenu());
@@ -50,11 +51,23 @@ void GameWinState::draw() {
         textRecord.setPosition(width, height);
         textRecord.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
         textRecord.setCharacterSize(80);
-        textRecord.setPosition(width - 150, height - 400);
+        textRecord.setPosition(width - 150, height - 300);
         textRecord.setFillColor(sf::Color(50, 255, 100));
         textRecord.setString("New Record !\n" + Game::gameData->match->getMap()->getRecordString());
         Game::gameData->window.draw(textRecord);
     }
+
+    sf::Text textFlips;
+    textFlips.setPosition(width, height);
+    textFlips.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
+    textFlips.setCharacterSize(60);
+    textFlips.setPosition(width - 150, height - 600);
+    textFlips.setFillColor(sf::Color(50, 255, 100));
+    int totCoins = Game::gameData->match->getFlips() * 10 + Game::gameData->match->getMoney();
+    textFlips.setString("Flips: " + std::to_string(Game::gameData->match->getFlips()) + "\nCoin: " +
+                        std::to_string(Game::gameData->match->getMoney()) + "\nTotal Coins:" +
+                        std::to_string(totCoins));
+    Game::gameData->window.draw(textFlips);
 
 
     int i = 0;
@@ -84,7 +97,8 @@ void GameWinState::handleInput(sf::Event event) {
                             if (!Game::gameData->match->getMap()->getIsCompleted()) {
                                 Game::gameData->match->getMap()->setIsCompleted(true);
                             }
-                            Game::gameData->player->addTotalCoin(Game::gameData->match->getMoney());
+                            int totCoins = Game::gameData->match->getFlips() * 10 + Game::gameData->match->getMoney();
+                            Game::gameData->player->addTotalCoin(totCoins);
                             Game::gameData->match = std::unique_ptr<Match>(new Match());
                             Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
                             break;
