@@ -101,19 +101,20 @@ std::unique_ptr<Map> LevelFactory::loadLevel2() {
 std::unique_ptr<Map> LevelFactory::loadLevel3() {
     std::unique_ptr<Map> map(new Map("lv3", "Level 3", false, false, 0));
     map->setMapPoints({
-                              {-1, 10},//back limit
-                              {0,  0},
-                              {3,  0},
-                              {12, 5.5},
-                              {15, 5.5},
-                              {17, 6.5},
-                              {17, 2},
-                              {20, 3},
-                              {23, 3},
-                              {30, 1.5},
-                              {33, 1.5},
-                              {38, 2},
-                              {38, 1.5},
+                              {-5,  10},//back limit
+                              {-.4, 10},//back limit
+                              {0,   0},
+                              {3,   0},
+                              {12,  5.5},
+                              {15,  5.5},
+                              {17,  6.5},
+                              {17,  2},
+                              {20,  3},
+                              {23,  3},
+                              {30,  1.5},
+                              {33,  1.5},
+                              {38,  2},
+                              {38,  1.5},
                               {43, 1.5},
                               {48, 2},
                               {53, 2},
@@ -142,7 +143,7 @@ std::unique_ptr<Map> LevelFactory::loadLevel4() {
     map->setMapItems({
                              new TimeBonus(1000, 3, .1, .7, .7),
                              new Coin(5, .2, .7, .7, 50),
-                             new Coin(7, .1, .7, .7, 30),
+                             new Coin(7, .7, .7, .7, 30),
                              new Checkpoint(95, 29, 5, 3, true),       //arrivo finale
                      });
     return map;
