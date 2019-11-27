@@ -7,8 +7,28 @@
 #include "iostream"
 
 LevelManager::LevelManager() {
-    currentLevel = new Level(levelArray1, arrayColumn, arrayRow);
+    int x;
     levelNumber=1;
+    fileLevel1.open("Level1");
+    if(!fileLevel1){
+        std::cout<<"File non trovato"<<std::endl;
+    }
+    for(int i=0;i<(arrayColumn*arrayRow);i++){
+        fileLevel1>>x;
+        levelArray1[i]=x;
+    }
+    fileLevel1.close();
+    fileLevel2.open("Level2");
+    if(!fileLevel2){
+        std::cout<<"File non trovato"<<std::endl;
+    }
+    for(int i=0;i<(arrayColumn*arrayRow);i++){
+        fileLevel2>>x;
+        levelArray2[i]=x;
+    }
+    fileLevel2.close();
+
+    currentLevel = new Level(levelArray1, arrayColumn, arrayRow);
 }
 
 void LevelManager::resetLevel() {

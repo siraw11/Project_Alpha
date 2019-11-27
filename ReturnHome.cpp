@@ -2,13 +2,11 @@
 // Created by andreatadde on 23/10/19.
 //
 
-#include <iostream>
-#include "Reset.h"
+#include "ReturnHome.h"
 #include "Collision.h"
 #include <math.h>
 
-void Reset::behaviour(Enemy* enemy, Hero* hero, std::vector<Platform> *platform) {
-    //std::cout<<"In Reset state"<<std::endl;
+void ReturnHome::behaviour(Enemy* enemy, Hero* hero, std::vector<Platform> *platform) {
     if(enemy->spawnX < enemy->x){
         enemy->velocity.x = -1.f;
     }

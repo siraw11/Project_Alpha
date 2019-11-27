@@ -1251,7 +1251,7 @@ std::string CreateUnifiedDiff(const std::vector<std::string>& left,
       }
 
       EditType edit = edits[edit_i];
-      // Reset count when a non match is found.
+      // ReturnHome count when a non match is found.
       n_suffix = edit == kMatch ? n_suffix + 1 : 0;
 
       if (edit == kMatch || edit == kRemove || edit == kReplace) {

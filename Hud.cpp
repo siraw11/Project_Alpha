@@ -3,9 +3,7 @@
 //
 
 #include "Hud.h"
-#include "iostream"
 #include "SFML/Graphics.hpp"
-#include "Level.h"
 
 Hud::Hud() {
     font.loadFromFile("textures/arial_narrow_7.ttf");

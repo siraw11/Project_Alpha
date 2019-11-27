@@ -691,7 +691,7 @@ using ::testing::Return;
 using ::testing::Sequence;
 Sequence s1, s2;
 ...
-EXPECT_CALL(foo, Reset())
+EXPECT_CALL(foo, ReturnHome())
     .InSequence(s1, s2)
     .WillOnce(Return(true));
 EXPECT_CALL(foo, GetSize())
@@ -702,7 +702,7 @@ EXPECT_CALL(foo, Describe(A<const char*>()))
     .WillOnce(Return("dummy"));
 ```
 
-says that `Reset()` must be called before *both* `GetSize()` *and* `Describe()`,
+says that `ReturnHome()` must be called before *both* `GetSize()` *and* `Describe()`,
 and the latter two can occur in any order.
 
 To put many expectations in a sequence conveniently:

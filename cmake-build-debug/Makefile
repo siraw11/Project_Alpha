@@ -1087,35 +1087,35 @@ RectangleShape.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/RectangleShape.cpp.s
 .PHONY : RectangleShape.cpp.s
 
-Reset.o: Reset.cpp.o
+ReturnHome.o: ReturnHome.cpp.o
 
-.PHONY : Reset.o
+.PHONY : ReturnHome.o
 
 # target to build an object file
-Reset.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Reset.cpp.o
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Reset.cpp.o
-.PHONY : Reset.cpp.o
+ReturnHome.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ReturnHome.cpp.o
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/ReturnHome.cpp.o
+.PHONY : ReturnHome.cpp.o
 
-Reset.i: Reset.cpp.i
+ReturnHome.i: ReturnHome.cpp.i
 
-.PHONY : Reset.i
+.PHONY : ReturnHome.i
 
 # target to preprocess a source file
-Reset.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Reset.cpp.i
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Reset.cpp.i
-.PHONY : Reset.cpp.i
+ReturnHome.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ReturnHome.cpp.i
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/ReturnHome.cpp.i
+.PHONY : ReturnHome.cpp.i
 
-Reset.s: Reset.cpp.s
+ReturnHome.s: ReturnHome.cpp.s
 
-.PHONY : Reset.s
+.PHONY : ReturnHome.s
 
 # target to generate assembly for a file
-Reset.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Reset.cpp.s
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/Reset.cpp.s
-.PHONY : Reset.cpp.s
+ReturnHome.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ReturnHome.cpp.s
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/ReturnHome.cpp.s
+.PHONY : ReturnHome.cpp.s
 
 StateMachine/State.o: StateMachine/State.cpp.o
 
@@ -1177,35 +1177,35 @@ StateMachine/StateManager.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/StateManager.cpp.s
 .PHONY : StateMachine/StateManager.cpp.s
 
-StateMachine/State_Achivement.o: StateMachine/State_Achivement.cpp.o
+StateMachine/State_Achievement.o: StateMachine/State_Achievement.cpp.o
 
-.PHONY : StateMachine/State_Achivement.o
+.PHONY : StateMachine/State_Achievement.o
 
 # target to build an object file
-StateMachine/State_Achivement.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o
-.PHONY : StateMachine/State_Achivement.cpp.o
+StateMachine/State_Achievement.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.o
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o
+.PHONY : StateMachine/State_Achievement.cpp.o
 
-StateMachine/State_Achivement.i: StateMachine/State_Achivement.cpp.i
+StateMachine/State_Achievement.i: StateMachine/State_Achievement.cpp.i
 
-.PHONY : StateMachine/State_Achivement.i
+.PHONY : StateMachine/State_Achievement.i
 
 # target to preprocess a source file
-StateMachine/State_Achivement.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.i
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.i
-.PHONY : StateMachine/State_Achivement.cpp.i
+StateMachine/State_Achievement.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.i
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.i
+.PHONY : StateMachine/State_Achievement.cpp.i
 
-StateMachine/State_Achivement.s: StateMachine/State_Achivement.cpp.s
+StateMachine/State_Achievement.s: StateMachine/State_Achievement.cpp.s
 
-.PHONY : StateMachine/State_Achivement.s
+.PHONY : StateMachine/State_Achievement.s
 
 # target to generate assembly for a file
-StateMachine/State_Achivement.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.s
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.s
-.PHONY : StateMachine/State_Achivement.cpp.s
+StateMachine/State_Achievement.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.s
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.s
+.PHONY : StateMachine/State_Achievement.cpp.s
 
 StateMachine/State_Death.o: StateMachine/State_Death.cpp.o
 
@@ -1487,18 +1487,18 @@ help:
 	@echo "... RectangleShape.o"
 	@echo "... RectangleShape.i"
 	@echo "... RectangleShape.s"
-	@echo "... Reset.o"
-	@echo "... Reset.i"
-	@echo "... Reset.s"
+	@echo "... ReturnHome.o"
+	@echo "... ReturnHome.i"
+	@echo "... ReturnHome.s"
 	@echo "... StateMachine/State.o"
 	@echo "... StateMachine/State.i"
 	@echo "... StateMachine/State.s"
 	@echo "... StateMachine/StateManager.o"
 	@echo "... StateMachine/StateManager.i"
 	@echo "... StateMachine/StateManager.s"
-	@echo "... StateMachine/State_Achivement.o"
-	@echo "... StateMachine/State_Achivement.i"
-	@echo "... StateMachine/State_Achivement.s"
+	@echo "... StateMachine/State_Achievement.o"
+	@echo "... StateMachine/State_Achievement.i"
+	@echo "... StateMachine/State_Achievement.s"
 	@echo "... StateMachine/State_Death.o"
 	@echo "... StateMachine/State_Death.i"
 	@echo "... StateMachine/State_Death.s"

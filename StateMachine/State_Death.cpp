@@ -6,7 +6,6 @@
 
 State_Death::State_Death(StateManager *stateManager) {
     _stateManager = stateManager;
-
 }
 
 void State_Death::run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic) {

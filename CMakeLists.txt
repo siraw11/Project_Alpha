@@ -13,10 +13,10 @@ add_executable(game main.cpp Game_Screens/Menu.cpp Game_Screens/Menu.h Rectangle
         Achievements/Achievement.cpp Achievements/Achievement.h Achievements/FirstBlood.cpp Achievements/FirstBlood.h
         Achievements/FirstDeath.cpp Achievements/FirstDeath.h
         Achievements/PotionAchievement.cpp Achievements/PotionAchievement.h Aggro.cpp Aggro.h Idle.cpp Idle.h
-        Catch.cpp Catch.h Attack.cpp Attack.h Reset.cpp Reset.h Game_Screens/NextLevelScreen.cpp Game_Screens/NextLevelScreen.h
+        Catch.cpp Catch.h Attack.cpp Attack.h ReturnHome.cpp ReturnHome.h Game_Screens/NextLevelScreen.cpp Game_Screens/NextLevelScreen.h
         LevelManager.cpp LevelManager.h Hud.cpp Hud.h StateMachine/State_Level.cpp StateMachine/State.h StateMachine/State.cpp
         StateMachine/State_Main.cpp StateMachine/State_Main.h StateMachine/StateManager.h StateMachine/StateManager.cpp
-        StateMachine/State_Achivement.cpp StateMachine/State_Achivement.h StateMachine/State_Death.cpp
+        StateMachine/State_Achievement.cpp StateMachine/State_Achievement.h StateMachine/State_Death.cpp
         StateMachine/State_Death.h StateMachine/State_Pause.cpp StateMachine/State_Pause.h
         StateMachine/State_NextLevel.cpp StateMachine/State_NextLevel.h Game_Screens/AchievementScreen.cpp Game_Screens/AchievementScreen.h)
 target_include_directories(game PUBLIC "${SFML_INCLUDE_DIRS}")
@@ -35,10 +35,10 @@ add_library(core Game_Screens/Menu.cpp Game_Screens/Menu.h RectangleShape.cpp Re
         Achievements/Achievement.cpp Achievements/Achievement.h Achievements/FirstBlood.cpp Achievements/FirstBlood.h
         Achievements/FirstDeath.cpp Achievements/FirstDeath.h
         Achievements/PotionAchievement.cpp Achievements/PotionAchievement.h Aggro.cpp Aggro.h Idle.cpp Idle.h
-        Catch.cpp Catch.h Attack.cpp Attack.h Reset.cpp Reset.h Game_Screens/NextLevelScreen.cpp Game_Screens/NextLevelScreen.h
+        Catch.cpp Catch.h Attack.cpp Attack.h ReturnHome.cpp ReturnHome.h Game_Screens/NextLevelScreen.cpp Game_Screens/NextLevelScreen.h
         LevelManager.cpp LevelManager.h Hud.cpp Hud.h StateMachine/State_Level.cpp StateMachine/State.h StateMachine/State.cpp
         StateMachine/State_Main.cpp StateMachine/State_Main.h StateMachine/StateManager.h StateMachine/StateManager.cpp
-        StateMachine/State_Achivement.cpp StateMachine/State_Achivement.h StateMachine/State_Death.cpp
+        StateMachine/State_Achievement.cpp StateMachine/State_Achievement.h StateMachine/State_Death.cpp
         StateMachine/State_Death.h StateMachine/State_Pause.cpp StateMachine/State_Pause.h
         StateMachine/State_NextLevel.cpp StateMachine/State_NextLevel.h Game_Screens/AchievementScreen.cpp Game_Screens/AchievementScreen.h)
 target_link_libraries(game core)

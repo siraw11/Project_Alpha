@@ -697,8 +697,8 @@ int WindowsDeathTest::Wait() {
 
   // The child has acquired the write end of the pipe or exited.
   // We release the handle on our side and continue.
-  write_handle_.Reset();
-  event_handle_.Reset();
+  write_handle_.ReturnHome();
+  event_handle_.ReturnHome();
 
   ReadAndInterpretStatusByte();
 
@@ -712,7 +712,7 @@ int WindowsDeathTest::Wait() {
   DWORD status_code;
   GTEST_DEATH_TEST_CHECK_(
       ::GetExitCodeProcess(child_handle_.Get(), &status_code) != FALSE);
-  child_handle_.Reset();
+  child_handle_.ReturnHome();
   set_status(static_cast<int>(status_code));
   return status();
 }
@@ -747,8 +747,8 @@ DeathTest::TestRole WindowsDeathTest::AssumeRole() {
       != FALSE);
   set_read_fd(::_open_osfhandle(reinterpret_cast<intptr_t>(read_handle),
                                 O_RDONLY));
-  write_handle_.Reset(write_handle);
-  event_handle_.Reset(::CreateEvent(
+  write_handle_.ReturnHome(write_handle);
+  event_handle_.ReturnHome(::CreateEvent(
       &handles_are_inheritable,
       TRUE,       // The event will automatically reset to non-signaled state.
       FALSE,      // The initial state is non-signalled.
@@ -802,7 +802,7 @@ DeathTest::TestRole WindowsDeathTest::AssumeRole() {
           nullptr,  // Inherit the parent's environment.
           UnitTest::GetInstance()->original_working_dir(), &startup_info,
           &process_info) != FALSE);
-  child_handle_.Reset(process_info.hProcess);
+  child_handle_.ReturnHome(process_info.hProcess);
   ::CloseHandle(process_info.hThread);
   set_spawned(true);
   return OVERSEE_TEST;

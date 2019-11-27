@@ -289,18 +289,18 @@ AutoHandle::AutoHandle(Handle handle)
     : handle_(handle) {}
 
 AutoHandle::~AutoHandle() {
-  Reset();
+  ReturnHome();
 }
 
 AutoHandle::Handle AutoHandle::Get() const {
   return handle_;
 }
 
-void AutoHandle::Reset() {
-  Reset(INVALID_HANDLE_VALUE);
+void AutoHandle::ReturnHome() {
+  ReturnHome(INVALID_HANDLE_VALUE);
 }
 
-void AutoHandle::Reset(HANDLE handle) {
+void AutoHandle::ReturnHome(HANDLE handle) {
   // Resetting with the same handle we already own is invalid.
   if (handle_ != handle) {
     if (IsCloseable()) {

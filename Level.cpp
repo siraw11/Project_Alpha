@@ -99,9 +99,11 @@ Level::Level(int levelArray[], int column, int row) {
     background.setScale(2.0,1);
 
     // Camera settings
-    cameraSize.x = 1366;
-    cameraSize.y = 768;
-    cameraZoom = 0.9;
+    //cameraSize.x = 1366;
+    //cameraSize.y = 768;
+    cameraSize.x = 1920;
+    cameraSize.y = 1080;    //TODO use sf::VideoMode::getDesktopMode() to set the best resolution, adjust the camera zoom
+    cameraZoom = 0.65;
     camera.setSize(cameraSize);
     camera.zoom(cameraZoom);
 
@@ -149,19 +151,6 @@ void Level::Update(sf::RenderWindow *window) {
         setTextures();
         shoot_time = clock.getElapsedTime();
     }
-
-    /*
-    sf::Texture textureBack;
-    sf::Vector2u textureSize;
-    textureBack.loadFromFile("../textures/Back.png");
-    sf::Sprite spiteBack;
-    spiteBack.setPosition(0,0);
-    textureSize = textureBack.getSize();
-    float scaleX = (float) 500*32 / textureSize.x; //TODO set a background image to place clouds an other not colliding obj
-    float scaleY = (float) 320 / textureSize.y;
-    spiteBack.setTexture(textureBack);
-    spiteBack.setScale(scaleX,scaleY);
-    */
 
     //------Passa gli oggetti al gestore della logica di gioco (per collisioni ed eventi)-------//
 
@@ -237,5 +226,4 @@ void Level::setTextures() {
     for (int i = 0; i < vector_of_bullet.size(); i++) {
         vector_of_bullet[i].setTexture("textures/bullet3.png");
     }
-    //player.setTexture("../textures/tux_from_linux.png"); // TODO try to set the textures into the c-tor, don't update here otherwise animation won't work
 }

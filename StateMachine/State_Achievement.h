@@ -2,14 +2,15 @@
 // Created by davide on 08/11/19.
 //
 
-#ifndef GAME_STATE_ACHIVEMENT_H
-#define GAME_STATE_ACHIVEMENT_H
+#ifndef GAME_STATE_ACHIEVEMENT_H
+#define GAME_STATE_ACHIEVEMENT_H
 
 #include "State.h"
 #include "../Game_Screens/AchievementScreen.h"
-class State_Achivement : public State {
+
+class State_Achievement : public State {
 public:
-    explicit State_Achivement(StateManager *stateManager);
+    explicit State_Achievement(StateManager *stateManager);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);
 
@@ -19,4 +20,4 @@ public:
 };
 
 
-#endif //GAME_STATE_ACHIVEMENT_H
+#endif //GAME_STATE_ACHIEVEMENT_H

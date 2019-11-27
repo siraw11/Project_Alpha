@@ -5,8 +5,6 @@
 #ifndef GAME_AGGRO_H
 #define GAME_AGGRO_H
 
-
-
 #include "Hero.h"
 #include "Enemy.h"
 #include "Platform.h"

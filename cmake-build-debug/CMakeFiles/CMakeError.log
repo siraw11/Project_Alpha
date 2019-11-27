@@ -1,24 +1,24 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_7d65c/fast && /usr/bin/make -f CMakeFiles/cmTC_7d65c.dir/build.make CMakeFiles/cmTC_7d65c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e3eb8/fast && /usr/bin/make -f CMakeFiles/cmTC_e3eb8.dir/build.make CMakeFiles/cmTC_e3eb8.dir/build
 make[1]: ingresso nella directory "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp"
-Building C object CMakeFiles/cmTC_7d65c.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7d65c.dir/src.c.o   -c /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_7d65c
-/home/andreatadde/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d65c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_7d65c.dir/src.c.o  -o cmTC_7d65c 
-CMakeFiles/cmTC_7d65c.dir/src.c.o: nella funzione "main":
+Building C object CMakeFiles/cmTC_e3eb8.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e3eb8.dir/src.c.o   -c /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e3eb8
+/home/andreatadde/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3eb8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_e3eb8.dir/src.c.o  -o cmTC_e3eb8 
+CMakeFiles/cmTC_e3eb8.dir/src.c.o: nella funzione "main":
 src.c:(.text+0x3e): riferimento non definito a "pthread_create"
 src.c:(.text+0x4a): riferimento non definito a "pthread_detach"
 src.c:(.text+0x5b): riferimento non definito a "pthread_join"
 src.c:(.text+0x6f): riferimento non definito a "pthread_atfork"
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_7d65c.dir/build.make:86: recipe for target 'cmTC_7d65c' failed
-make[1]: *** [cmTC_7d65c] Error 1
+CMakeFiles/cmTC_e3eb8.dir/build.make:86: recipe for target 'cmTC_e3eb8' failed
+make[1]: *** [cmTC_e3eb8] Error 1
 make[1]: uscita dalla directory "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp"
-Makefile:121: recipe for target 'cmTC_7d65c/fast' failed
-make: *** [cmTC_7d65c/fast] Error 2
+Makefile:121: recipe for target 'cmTC_e3eb8/fast' failed
+make: *** [cmTC_e3eb8/fast] Error 2
 
 
 Source file was:
@@ -44,20 +44,20 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_4bc72/fast && /usr/bin/make -f CMakeFiles/cmTC_4bc72.dir/build.make CMakeFiles/cmTC_4bc72.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b4444/fast && /usr/bin/make -f CMakeFiles/cmTC_b4444.dir/build.make CMakeFiles/cmTC_b4444.dir/build
 make[1]: ingresso nella directory "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp"
-Building C object CMakeFiles/cmTC_4bc72.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4bc72.dir/CheckFunctionExists.c.o   -c /home/andreatadde/clion-2018.3.4/bin/cmake/linux/share/cmake-3.15/Modules/CheckFunctionExists.c
-Linking C executable cmTC_4bc72
-/home/andreatadde/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bc72.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_4bc72.dir/CheckFunctionExists.c.o  -o cmTC_4bc72 -lpthreads 
+Building C object CMakeFiles/cmTC_b4444.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b4444.dir/CheckFunctionExists.c.o   -c /home/andreatadde/clion-2018.3.4/bin/cmake/linux/share/cmake-3.15/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b4444
+/home/andreatadde/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4444.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b4444.dir/CheckFunctionExists.c.o  -o cmTC_b4444 -lpthreads 
 /usr/bin/ld: impossibile trovare -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_4bc72.dir/build.make:86: recipe for target 'cmTC_4bc72' failed
-make[1]: *** [cmTC_4bc72] Error 1
+CMakeFiles/cmTC_b4444.dir/build.make:86: recipe for target 'cmTC_b4444' failed
+make[1]: *** [cmTC_b4444] Error 1
 make[1]: uscita dalla directory "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/CMakeTmp"
-Makefile:121: recipe for target 'cmTC_4bc72/fast' failed
-make: *** [cmTC_4bc72/fast] Error 2
+Makefile:121: recipe for target 'cmTC_b4444/fast' failed
+make: *** [cmTC_b4444/fast] Error 2
 
 
 

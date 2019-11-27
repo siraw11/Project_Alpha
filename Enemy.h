@@ -9,13 +9,14 @@
 #include "Hero.h"
 #include "Platform.h"
 #include "SFML/Graphics.hpp"
+#include <memory>
 
 
 class Aggro;
 class Enemy : public GameCharacter {
 public:
     Enemy();
-    Aggro* aggro;
+    std::shared_ptr<Aggro> aggro;
     int HP = 2;
     int damage = 1;
     sf::Vector2f range;

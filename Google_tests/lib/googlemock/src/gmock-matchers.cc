@@ -143,7 +143,7 @@ class MaxBipartiteMatchState {
     // The flow is known to be possible or impossible by looking at the
     // node once.
     for (size_t ilhs = 0; ilhs < graph_->LhsSize(); ++ilhs) {
-      // Reset the path-marking vector and try to find a path from
+      // ReturnHome the path-marking vector and try to find a path from
       // source to sink starting at the left_[ilhs] node.
       GTEST_CHECK_(left_[ilhs] == kUnused)
           << "ilhs: " << ilhs << ", left_[ilhs]: " << left_[ilhs];

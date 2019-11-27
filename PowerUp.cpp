@@ -5,7 +5,6 @@
 #include "PowerUp.h"
 
 PowerUp::PowerUp( int type) {
-
     this->type = type;
 }
 

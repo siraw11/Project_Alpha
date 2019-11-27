@@ -345,6 +345,8 @@ Platform.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
 SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
+memory
+-
 
 /home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
 RectangleShape.h
@@ -390,6 +392,20 @@ vector
 iostream
 -
 
+/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestObjects.cpp
+gtest/gtest.h
+-
+SFML/System.hpp
+-
+../Hero.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
+../GameCharacter.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
+../RectangleShape.h
+/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
+../Bullet.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
+
 /home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestStrategyEnemy.cpp
 gtest/gtest.h
 -
@@ -427,6 +443,8 @@ SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
 vector
 /home/andreatadde/Scrivania/Esame_Programmazione/vector
+Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Level.h
 
 /home/andreatadde/Scrivania/Esame_Programmazione/Input.h
 

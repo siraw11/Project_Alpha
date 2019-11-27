@@ -27,7 +27,7 @@ public:
 private:
 
     int enemyKilled = 0;
-    int deathcounter = 0;
+    int deathCounter = 0;
     int potionUsed = 0;
     int powerUpBullet = 6;
     int powerUpSpeed = 5;

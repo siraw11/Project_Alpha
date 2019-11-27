@@ -369,18 +369,18 @@ CMakeFiles/core.dir/Attack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Attack.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/Attack.cpp -o CMakeFiles/core.dir/Attack.cpp.s
 
-CMakeFiles/core.dir/Reset.cpp.o: CMakeFiles/core.dir/flags.make
-CMakeFiles/core.dir/Reset.cpp.o: ../Reset.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/core.dir/Reset.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Reset.cpp.o -c /home/andreatadde/Scrivania/Esame_Programmazione/Reset.cpp
+CMakeFiles/core.dir/ReturnHome.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/ReturnHome.cpp.o: ../ReturnHome.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/core.dir/ReturnHome.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/ReturnHome.cpp.o -c /home/andreatadde/Scrivania/Esame_Programmazione/ReturnHome.cpp
 
-CMakeFiles/core.dir/Reset.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Reset.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreatadde/Scrivania/Esame_Programmazione/Reset.cpp > CMakeFiles/core.dir/Reset.cpp.i
+CMakeFiles/core.dir/ReturnHome.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/ReturnHome.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreatadde/Scrivania/Esame_Programmazione/ReturnHome.cpp > CMakeFiles/core.dir/ReturnHome.cpp.i
 
-CMakeFiles/core.dir/Reset.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Reset.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/Reset.cpp -o CMakeFiles/core.dir/Reset.cpp.s
+CMakeFiles/core.dir/ReturnHome.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/ReturnHome.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/ReturnHome.cpp -o CMakeFiles/core.dir/ReturnHome.cpp.s
 
 CMakeFiles/core.dir/Game_Screens/NextLevelScreen.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/Game_Screens/NextLevelScreen.cpp.o: ../Game_Screens/NextLevelScreen.cpp
@@ -473,18 +473,18 @@ CMakeFiles/core.dir/StateMachine/StateManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/StateMachine/StateManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.cpp -o CMakeFiles/core.dir/StateMachine/StateManager.cpp.s
 
-CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o: CMakeFiles/core.dir/flags.make
-CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o: ../StateMachine/State_Achivement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o -c /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achivement.cpp
+CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.o: ../StateMachine/State_Achievement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.o -c /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.cpp
 
-CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achivement.cpp > CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.i
+CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.cpp > CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.i
 
-CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achivement.cpp -o CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.s
+CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.cpp -o CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.s
 
 CMakeFiles/core.dir/StateMachine/State_Death.cpp.o: CMakeFiles/core.dir/flags.make
 CMakeFiles/core.dir/StateMachine/State_Death.cpp.o: ../StateMachine/State_Death.cpp
@@ -564,7 +564,7 @@ core_OBJECTS = \
 "CMakeFiles/core.dir/Idle.cpp.o" \
 "CMakeFiles/core.dir/Catch.cpp.o" \
 "CMakeFiles/core.dir/Attack.cpp.o" \
-"CMakeFiles/core.dir/Reset.cpp.o" \
+"CMakeFiles/core.dir/ReturnHome.cpp.o" \
 "CMakeFiles/core.dir/Game_Screens/NextLevelScreen.cpp.o" \
 "CMakeFiles/core.dir/LevelManager.cpp.o" \
 "CMakeFiles/core.dir/Hud.cpp.o" \
@@ -572,7 +572,7 @@ core_OBJECTS = \
 "CMakeFiles/core.dir/StateMachine/State.cpp.o" \
 "CMakeFiles/core.dir/StateMachine/State_Main.cpp.o" \
 "CMakeFiles/core.dir/StateMachine/StateManager.cpp.o" \
-"CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o" \
+"CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.o" \
 "CMakeFiles/core.dir/StateMachine/State_Death.cpp.o" \
 "CMakeFiles/core.dir/StateMachine/State_Pause.cpp.o" \
 "CMakeFiles/core.dir/StateMachine/State_NextLevel.cpp.o" \
@@ -605,7 +605,7 @@ libcore.a: CMakeFiles/core.dir/Aggro.cpp.o
 libcore.a: CMakeFiles/core.dir/Idle.cpp.o
 libcore.a: CMakeFiles/core.dir/Catch.cpp.o
 libcore.a: CMakeFiles/core.dir/Attack.cpp.o
-libcore.a: CMakeFiles/core.dir/Reset.cpp.o
+libcore.a: CMakeFiles/core.dir/ReturnHome.cpp.o
 libcore.a: CMakeFiles/core.dir/Game_Screens/NextLevelScreen.cpp.o
 libcore.a: CMakeFiles/core.dir/LevelManager.cpp.o
 libcore.a: CMakeFiles/core.dir/Hud.cpp.o
@@ -613,7 +613,7 @@ libcore.a: CMakeFiles/core.dir/StateMachine/State_Level.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/State.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/State_Main.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/StateManager.cpp.o
-libcore.a: CMakeFiles/core.dir/StateMachine/State_Achivement.cpp.o
+libcore.a: CMakeFiles/core.dir/StateMachine/State_Achievement.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/State_Death.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/State_Pause.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/State_NextLevel.cpp.o

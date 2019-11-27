@@ -65,7 +65,7 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
     if (level->player.HP <= 0) {
         heroDeathSound.play();
         state->setState(new State_Death(state));
-        deathcounter++;
+        deathCounter++;
     }
     if (input == Input::Escape) {
         state->setState(new State_Pause(state));
@@ -74,7 +74,7 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
         state->setState(new State_NextLevel(state));
     }
     level->camera.setCenter(level->player.x, 0);
-    achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathcounter,&level->camera);
+    achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathCounter, &level->camera);
     hud->update(window, level);
 
 }

@@ -675,11 +675,11 @@
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Reset.cpp">
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/ReturnHome.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Reset.h">
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/ReturnHome.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
@@ -699,11 +699,11 @@
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achivement.cpp">
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achivement.h">
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.h">
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>

@@ -1234,8 +1234,8 @@ class GTEST_API_ AutoHandle {
   ~AutoHandle();
 
   Handle Get() const;
-  void Reset();
-  void Reset(Handle handle);
+  void ReturnHome();
+  void ReturnHome(Handle handle);
 
  private:
   // Returns true if the handle is a valid handle object that can be closed.

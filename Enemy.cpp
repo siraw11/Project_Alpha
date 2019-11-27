@@ -9,7 +9,7 @@
 #include "Idle.h"
 #include "Catch.h"
 #include "Attack.h"
-#include "Reset.h"
+#include "ReturnHome.h"
 
 Enemy::Enemy() : aggro(new Idle()){
     range.x = 130.f;
@@ -25,19 +25,19 @@ void Enemy::aggroUpdate(Hero *player, sf::Time time, std::vector<Platform> *plat
 
     if(this->velocity.x == 0 && this->velocity.y == 0 && this->rectShape.getPosition().x == spawnX && this->rectShape.getPosition().y == spawnY)
     {
-        aggro = (new Idle());
+        aggro.reset(new Idle());
     }
 
     if(fabs(player->x-this->spawnX) < range.x && fabs(player->y-this->spawnY) < range.y){
-        aggro = (new Catch());
+        aggro.reset(new Catch());
     }
     else if(this->rectShape.getPosition().x != spawnX && this->rectShape.getPosition().y != spawnY)
     {
-        aggro = (new Reset());
+        aggro.reset(new ReturnHome());
     }
 
     if(this->rectShape.getGlobalBounds().intersects(player->rectShape.getGlobalBounds()) && time - lastAttackTime >= attackReload){
-        aggro = (new Attack());
+        aggro.reset(new Attack());
         lastAttackTime = time;
     }
 

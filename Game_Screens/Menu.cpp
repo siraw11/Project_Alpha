@@ -4,7 +4,7 @@
 
 #include "Menu.h"
 #include "../StateMachine/State_Level.h"
-#include "../StateMachine/State_Achivement.h"
+#include "../StateMachine/State_Achievement.h"
 
 Menu::Menu() {
     text1Pos.x = 100;
@@ -75,7 +75,7 @@ void Menu::update(Input input, StateManager *state, sf::RenderWindow *window) {
             state->setState(new State_Level(state));
         }
         if (selected == 1) {
-            state->setState(new State_Achivement(state));
+            state->setState(new State_Achievement(state));
         }
         if (selected == 2) {
             window->close();

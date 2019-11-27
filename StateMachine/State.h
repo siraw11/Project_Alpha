@@ -8,7 +8,6 @@
 #include "SFML/Graphics.hpp"
 #include "../Input.h"
 #include "../LevelManager.h"
-#include "StateManager.h"
 #include "../GameLogic.h"
 
 class State {

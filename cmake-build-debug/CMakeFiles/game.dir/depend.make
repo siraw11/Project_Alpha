@@ -86,7 +86,7 @@ CMakeFiles/game.dir/Enemy.cpp.o: ../Hero.h
 CMakeFiles/game.dir/Enemy.cpp.o: ../Idle.h
 CMakeFiles/game.dir/Enemy.cpp.o: ../Platform.h
 CMakeFiles/game.dir/Enemy.cpp.o: ../RectangleShape.h
-CMakeFiles/game.dir/Enemy.cpp.o: ../Reset.h
+CMakeFiles/game.dir/Enemy.cpp.o: ../ReturnHome.h
 
 CMakeFiles/game.dir/GameCharacter.cpp.o: ../Animation.h
 CMakeFiles/game.dir/GameCharacter.cpp.o: ../GameCharacter.cpp
@@ -198,7 +198,7 @@ CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/StateManager.h
-CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State_Achivement.h
+CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State_Achievement.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State_Level.h
 CMakeFiles/game.dir/Game_Screens/Menu.cpp.o: ../StateMachine/State_Main.h
 
@@ -331,19 +331,19 @@ CMakeFiles/game.dir/PowerUp.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/RectangleShape.cpp.o: ../RectangleShape.cpp
 CMakeFiles/game.dir/RectangleShape.cpp.o: ../RectangleShape.h
 
-CMakeFiles/game.dir/Reset.cpp.o: ../Aggro.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Animation.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Bullet.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Collision.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Enemy.h
-CMakeFiles/game.dir/Reset.cpp.o: ../GameCharacter.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Hero.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Level.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Platform.h
-CMakeFiles/game.dir/Reset.cpp.o: ../PowerUp.h
-CMakeFiles/game.dir/Reset.cpp.o: ../RectangleShape.h
-CMakeFiles/game.dir/Reset.cpp.o: ../Reset.cpp
-CMakeFiles/game.dir/Reset.cpp.o: ../Reset.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Aggro.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Animation.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Bullet.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Collision.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Enemy.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../GameCharacter.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Hero.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Level.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../Platform.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../PowerUp.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../RectangleShape.h
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../ReturnHome.cpp
+CMakeFiles/game.dir/ReturnHome.cpp.o: ../ReturnHome.h
 
 CMakeFiles/game.dir/StateMachine/State.cpp.o: ../StateMachine/State.cpp
 
@@ -371,31 +371,31 @@ CMakeFiles/game.dir/StateMachine/StateManager.cpp.o: ../StateMachine/StateManage
 CMakeFiles/game.dir/StateMachine/StateManager.cpp.o: ../StateMachine/StateManager.h
 CMakeFiles/game.dir/StateMachine/StateManager.cpp.o: ../StateMachine/State_Main.h
 
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../AchievementNotifier.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Achievements/Achievement.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Achievements/FirstBlood.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Achievements/FirstDeath.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Achievements/PotionAchievement.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Animation.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Bullet.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Enemy.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../GameCharacter.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../GameLogic.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Game_Screens/AchievementScreen.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Game_Screens/Menu.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Hero.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Hud.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Input.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Level.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../LevelManager.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../Platform.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../PowerUp.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../RectangleShape.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../StateMachine/State.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../StateMachine/StateManager.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../StateMachine/State_Achivement.cpp
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../StateMachine/State_Achivement.h
-CMakeFiles/game.dir/StateMachine/State_Achivement.cpp.o: ../StateMachine/State_Main.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../AchievementNotifier.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Achievements/Achievement.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Achievements/FirstBlood.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Achievements/FirstDeath.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Achievements/PotionAchievement.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Animation.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Bullet.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Enemy.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../GameCharacter.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../GameLogic.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Game_Screens/AchievementScreen.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Game_Screens/Menu.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Hero.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Hud.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Input.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Level.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../LevelManager.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../Platform.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../PowerUp.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../RectangleShape.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../StateMachine/State.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../StateMachine/StateManager.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../StateMachine/State_Achievement.cpp
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../StateMachine/State_Achievement.h
+CMakeFiles/game.dir/StateMachine/State_Achievement.cpp.o: ../StateMachine/State_Main.h
 
 CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../AchievementNotifier.h
 CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../Achievements/Achievement.h
@@ -417,7 +417,6 @@ CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../Platform.h
 CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../StateMachine/State.h
-CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../StateMachine/StateManager.h
 CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../StateMachine/State_Death.cpp
 CMakeFiles/game.dir/StateMachine/State_Death.cpp.o: ../StateMachine/State_Death.h
 
@@ -488,7 +487,6 @@ CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o: ../Platform.h
 CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o: ../StateMachine/State.h
-CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o: ../StateMachine/StateManager.h
 CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o: ../StateMachine/State_NextLevel.cpp
 CMakeFiles/game.dir/StateMachine/State_NextLevel.cpp.o: ../StateMachine/State_NextLevel.h
 
@@ -512,7 +510,6 @@ CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o: ../Platform.h
 CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o: ../RectangleShape.h
 CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o: ../StateMachine/State.h
-CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o: ../StateMachine/StateManager.h
 CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o: ../StateMachine/State_Pause.cpp
 CMakeFiles/game.dir/StateMachine/State_Pause.cpp.o: ../StateMachine/State_Pause.h
 
@@ -534,6 +531,7 @@ CMakeFiles/game.dir/main.cpp.o: ../LevelManager.h
 CMakeFiles/game.dir/main.cpp.o: ../Platform.h
 CMakeFiles/game.dir/main.cpp.o: ../PowerUp.h
 CMakeFiles/game.dir/main.cpp.o: ../RectangleShape.h
+CMakeFiles/game.dir/main.cpp.o: ../StateMachine/State.h
 CMakeFiles/game.dir/main.cpp.o: ../StateMachine/StateManager.h
 CMakeFiles/game.dir/main.cpp.o: ../main.cpp
 

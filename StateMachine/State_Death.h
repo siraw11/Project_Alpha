@@ -5,7 +5,6 @@
 #ifndef GAME_STATE_DEATH_H
 #define GAME_STATE_DEATH_H
 
-
 #include "State.h"
 #include "../Game_Screens/DeathScreen.h"
 

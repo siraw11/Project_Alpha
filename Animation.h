@@ -5,7 +5,6 @@
 #ifndef GAME_ANIMATION_H
 #define GAME_ANIMATION_H
 
-
 #include <SFML/Graphics.hpp>
 
 class Animation {

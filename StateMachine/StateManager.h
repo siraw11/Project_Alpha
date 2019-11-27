@@ -9,8 +9,8 @@
 #include "../Input.h"
 #include "../LevelManager.h"
 #include "../GameLogic.h"
+#include "../StateMachine/State.h"
 
-class State;
 class StateManager {
 public:
     StateManager();
