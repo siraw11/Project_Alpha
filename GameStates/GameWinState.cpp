@@ -62,9 +62,9 @@ void GameWinState::draw() {
     textFlips.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
     textFlips.setCharacterSize(60);
     textFlips.setPosition(width - 150, height - 600);
-    textFlips.setFillColor(sf::Color(50, 255, 100));
-    int totCoins = Game::gameData->match->getFlips() * 10 + Game::gameData->match->getMoney();
-    textFlips.setString("Flips: " + std::to_string(Game::gameData->match->getFlips()) + "\nCoin: " +
+    textFlips.setFillColor(sf::Color::White);
+    int totCoins = Game::gameData->match->getFlips() * 100 + Game::gameData->match->getMoney();
+    textFlips.setString("Flips: " + std::to_string(Game::gameData->match->getFlips()) + "x100\nCoins: " +
                         std::to_string(Game::gameData->match->getMoney()) + "\nTotal Coins:" +
                         std::to_string(totCoins));
     Game::gameData->window.draw(textFlips);
@@ -97,7 +97,7 @@ void GameWinState::handleInput(sf::Event event) {
                             if (!Game::gameData->match->getMap()->getIsCompleted()) {
                                 Game::gameData->match->getMap()->setIsCompleted(true);
                             }
-                            int totCoins = Game::gameData->match->getFlips() * 10 + Game::gameData->match->getMoney();
+                            int totCoins = Game::gameData->match->getFlips() * 100 + Game::gameData->match->getMoney();
                             Game::gameData->player->addTotalCoin(totCoins);
                             Game::gameData->match = std::unique_ptr<Match>(new Match());
                             Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
