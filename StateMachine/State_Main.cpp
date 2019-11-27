@@ -3,7 +3,7 @@
 //
 
 #include "State_Main.h"
-
+#include "StateManager.h"
 State_Main::State_Main(StateManager *stateManager) {
     _stateManager = stateManager;
     music.setVolume(volume);

@@ -3,6 +3,7 @@
 //
 
 #include "State_Level.h"
+#include "StateManager.h"
 
 State_Level::State_Level(StateManager *stateManager) {
     _stateManager = stateManager;
