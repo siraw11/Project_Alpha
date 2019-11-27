@@ -101,24 +101,7 @@ void GameEngine::run() {
                 Game::gameData->window.close();
         }
 
-        //itero la lista degli Items nella mappa
-
-        for (auto &item : Game::gameData->match->getMap()->getMapItems()) {
-            if (!item->isTaken()) {
-                //controllo se collidono
-                bool collided = checkCollision(cart->GetPosition().x,
-                                               LINE - cart->GetPosition().y, cartX, cartY,
-                                               (float) item->getPosX(),
-                                               (float) item->getPosY(),
-                                               (float) item->getWidth(),
-                                               (float) item->getHeight() + 0.55);
-
-                if (collided) {
-                    item->doSpecial();//eseguo la special
-                }
-            }
-        }
-
+        this->checkCollisions();
 
         flipAngle = abs(degToGrad(cart->GetAngle())) - (360.f * (float) countFlips);
         if (flipAngle > 350 && flipAngle < 370) {
@@ -131,6 +114,24 @@ void GameEngine::run() {
         checkDeath();
         draw();
 
+    }
+}
+
+void GameEngine::checkCollisions() {
+    for (auto &item : Game::gameData->match->getMap()->getMapItems()) {
+        if (!item->isTaken()) {
+            //controllo se collidono
+            bool collided = checkCollision(cart->GetPosition().x,
+                                           LINE - cart->GetPosition().y, cartX, cartY,
+                                           (float) item->getPosX(),
+                                           (float) item->getPosY(),
+                                           (float) item->getWidth(),
+                                           (float) item->getHeight() + 0.55);
+
+            if (collided) {
+                item->doSpecial();//eseguo la special
+            }
+        }
     }
 }
 

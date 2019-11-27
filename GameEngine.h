@@ -60,6 +60,8 @@ public:
 
     bool checkDeath();
 
+    void checkCollisions();
+
     void step();
 
     void draw();
