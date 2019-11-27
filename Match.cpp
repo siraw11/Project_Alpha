@@ -41,15 +41,6 @@ void Match::addMoney(int _money) {
 }
 
 
-Player *Match::getPlayer() const {
-    return player;
-}
-
-void Match::setPlayer(Player *player) {
-    Match::player = player;
-}
-
-
 Match::~Match() {
 
 }

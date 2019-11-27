@@ -41,27 +41,17 @@ public:
 
     void addMoney(int money);
 
-    Player *getPlayer() const;
-
-    void setPlayer(Player *player);
 
     const std::shared_ptr<Timer> &getTimer() const;
 
     void setTimer(const std::shared_ptr<Timer> &timer);
 
-    /*
-    float getPercentage() const;
 
-    void setPercentage(float percentage);
-    */
-
-    std::shared_ptr<Timer> timer;
 private:
     int lifes;
     int money;
-    float percentage;
-    Player* player;
     Position lastCheckpoint;
+    std::shared_ptr<Timer> timer;
     std::shared_ptr<Map> map;
     std::shared_ptr<Bike> bike;
 };
