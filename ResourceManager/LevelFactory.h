@@ -9,22 +9,10 @@
 #include <Map.h>
 
 class LevelFactory {
-private:
-
-    static std::unique_ptr<Map> loadLevel1();
-
-    static std::unique_ptr<Map> loadLevel2();
-
-    static std::unique_ptr<Map> loadLevel3();
-
-    static std::unique_ptr<Map> loadLevel4();
-
-    static std::unique_ptr<Map> loadLevelTestDeath();
-
 public :
     static std::map<std::string, std::shared_ptr<Map>> getLevels();
 
-    static std::unique_ptr<Map> getLevel(std::string id);
+    static std::shared_ptr<Map> getLevel(std::string id);
 };
 
 

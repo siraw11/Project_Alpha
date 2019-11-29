@@ -24,6 +24,6 @@ TEST(ResourceManager, TestException) {
     } catch (ResourceManagerException e) {
         errorVerified = true;
     }
-    ASSERT_EQ(true, errorVerified);
+    ASSERT_TRUE(errorVerified);
     ASSERT_EQ(0, r.getSize());
 }

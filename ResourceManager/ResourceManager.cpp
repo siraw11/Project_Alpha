@@ -33,7 +33,6 @@ bool ResourceManager::loadEssentialResources() {
         add(new ResourceTexture("mud.png", "./resources/textures/mud.png"));
         add(new ResourceTexture("flip.png", "./resources/textures/flip.png"));
 
-
         Game::gameData->bikes = BikeFactory::getBikes();
         Game::gameData->levels = LevelFactory::getLevels();
     } catch (ResourceManagerException &e) {
