@@ -10,8 +10,8 @@
 
 class TimeBonus : public Item {
 public:
-    TimeBonus(double timeEarned = 0, double posX = 0, double posY = 0, double width = 0,
-              double height = 0, float angle = 0,
+    TimeBonus(double posX = 0, double posY = 0, double width = 0,
+              double height = 0, float angle = 0, double timeEarned = 0,
               std::string texture = "timer.png");
 
     ~TimeBonus();

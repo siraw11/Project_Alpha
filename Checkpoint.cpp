@@ -7,7 +7,7 @@
 #include "Checkpoint.h"
 #include "Game.h"
 
-Checkpoint::Checkpoint(double _posX, double _posY, double _width, double _height, bool _isEnd, float _angle,
+Checkpoint::Checkpoint(double _posX, double _posY, double _width, double _height, float _angle, bool _isEnd,
                        std::string _texture)
         : Item(_posX,
                _posY,

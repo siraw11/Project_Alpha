@@ -6,15 +6,16 @@
 #include "Item.h"
 #include "Game.h"
 
-SpeedBonus::SpeedBonus(double _seconds, double _speedIncrement, double _posX, double _posY, double _width,
-                       double _height, float _angle, std::string _texture) : Item(_posX,
+SpeedBonus::SpeedBonus(double _posX, double _posY, double _width,
+                       double _height, float _angle, double _speedIncrement, double _seconds, std::string _texture)
+        : Item(_posX,
                                                                                   _posY,
                                                                                   _width,
                                                                                   _height,
                                                                                   _angle,
                                                                                   _texture),
-                                                                             seconds(_seconds),
-                                                                             speedIncrement(_speedIncrement) {
+          speedIncrement(_speedIncrement),
+          seconds(_seconds) {
 }
 
 double SpeedBonus::getSeconds() const {

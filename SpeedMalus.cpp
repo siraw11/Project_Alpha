@@ -5,7 +5,7 @@
 #include "SpeedMalus.h"
 #include "Game.h"
 
-SpeedMalus::SpeedMalus(double _speedDecrement, double _posX, double _posY, double _width, double _height, float _angle,
+SpeedMalus::SpeedMalus(double _posX, double _posY, double _width, double _height, float _angle, double _speedDecrement,
                        std::string _texture) : Item(_posX,
                                                     _posY,
                                                     _width,

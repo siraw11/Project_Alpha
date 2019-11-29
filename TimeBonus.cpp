@@ -5,7 +5,7 @@
 #include "TimeBonus.h"
 #include "Game.h"
 
-TimeBonus::TimeBonus(double _timeEarned, double _posX, double _posY, double _width, double _height, float _angle,
+TimeBonus::TimeBonus(double _posX, double _posY, double _width, double _height, float _angle, double _timeEarned,
                      std::string _texture) : Item(_posX,
                                                   _posY,
                                                   _width,

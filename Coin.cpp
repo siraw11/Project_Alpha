@@ -10,7 +10,7 @@
 #include "Game.h"
 
 
-Coin::Coin(double _posX, double _posY, double _width, double _height, int _value, float _angle, std::string _texture)
+Coin::Coin(double _posX, double _posY, double _width, double _height, float _angle, int _value, std::string _texture)
         : Item(_posX,
                _posY,
                _width,

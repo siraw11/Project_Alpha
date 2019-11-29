@@ -9,9 +9,8 @@
 
 class SpeedMalus : public Item {
 public:
-    SpeedMalus(double speedDecrement = 0,
-               double posX = 0, double posY = 0, double width = 0,
-               double height = 0, float angle = 0,
+    SpeedMalus(double posX = 0, double posY = 0, double width = 0,
+               double height = 0, float angle = 0, double speedDecrement = 0,
                std::string texture = "mud.png");
 
     ~SpeedMalus();

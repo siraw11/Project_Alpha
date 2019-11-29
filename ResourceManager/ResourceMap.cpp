@@ -128,19 +128,19 @@ Item *ResourceMap::parseMapItem(std::string raw) {
     Item *item;
     switch (type) {
         case 1:
-            item = new Coin(x, y, w, h, std::stof(exploded[6]), a);//ok
+            item = new Coin(x, y, w, h, a, std::stof(exploded[6]));//ok
             break;
         case 2:
-            item = new SpeedBonus(std::stof(exploded[7]), std::stof(exploded[6]), x, y, w, h, a);
+            item = new SpeedBonus(x, y, w, h, a, std::stof(exploded[6]), std::stof(exploded[7]));
             break;
         case 3:
-            item = new SpeedMalus(std::stof(exploded[6]), x, y, w, h, a);//ok
+            item = new SpeedMalus(x, y, w, h, a, std::stof(exploded[6]));//ok
             break;
         case 4:
-            item = new TimeBonus(std::stof(exploded[6]), x, y, w, h, a);
+            item = new TimeBonus(x, y, w, h, a, std::stof(exploded[6]));
             break;
         case 5:
-            item = new Checkpoint(x, y, w, h, std::stoi(exploded[6]), a);
+            item = new Checkpoint(x, y, w, h, a, std::stoi(exploded[6]));
             break;
         default:
             item = new Item();
