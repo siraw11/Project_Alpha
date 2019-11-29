@@ -95,7 +95,6 @@ void GameEngine::run() {
             //Freno a mano
             bikeBreak();
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-            std::cout << "Called Pause State" << std::endl;
             this->setPause(true);
             Game::gameData->machine.push_state(StateRef(new MenuPauseState()));
         }
@@ -137,6 +136,18 @@ void GameEngine::checkCollisions() {
             }
         }
     }
+}
+
+void GameEngine::drawSpeedBonusAlert() {
+    float interfaceX = (view.getCenter().x);
+    float interfaceY = (view.getCenter().y) - ((view.getSize().y) / 2);
+
+    sf::Text textAlert;
+    textAlert.setPosition(view.getCenter().x - 250, interfaceY + 100);
+    textAlert.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
+    textAlert.setCharacterSize(60);
+    textAlert.setFillColor(sf::Color::Red);
+    Game::gameData->window.draw(textAlert);
 }
 
 void GameEngine::draw() {

@@ -67,6 +67,8 @@ public:
     void draw();
     
     void respawn();
+
+    void drawSpeedBonusAlert();
 private:
     sf::View view;
 

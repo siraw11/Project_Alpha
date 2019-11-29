@@ -31,8 +31,5 @@ void Coin::doSpecial(){
     if (!isTaken()) {
         setTaken(true);
         Game::gameData->match->addMoney(value);
-
-        std::cout << "Special! Addedd:" << value << "\ttotal:" << Game::gameData->match->getMoney() << " coins"
-                  << std::endl;
     }
 }

@@ -33,18 +33,22 @@ std::shared_ptr<Map> ResourceMap::loadFromFile(std::string path) {
     std::unique_ptr<Map> loadedMap = std::unique_ptr<Map>(new Map());
     std::list<Item *> mapItems;
 
+
     std::istringstream dataStringStream(readFile(std::move(path)));
     std::string dataString = dataStringStream.str();
 
+    try {
+        loadedMap->setId(split(dataString, "ID[", "]"));
+        loadedMap->setRecord(std::stod(split(dataString, "Record[", "]")));
+        loadedMap->setName(split(dataString, "Name[", "]"));
+        loadedMap->setIsCompleted(std::stoi(split(dataString, "Completed[", "]")));
+        loadedMap->setIsUnlocked(std::stoi(split(dataString, "Unlocked[", "]")));
 
-    loadedMap->setId(split(dataString, "ID[", "]"));
-    loadedMap->setRecord(std::stod(split(dataString, "Record[", "]")));
-    loadedMap->setName(split(dataString, "Name[", "]"));
-    loadedMap->setIsCompleted(std::stoi(split(dataString, "Completed[", "]")));
-    loadedMap->setIsUnlocked(std::stoi(split(dataString, "Unlocked[", "]")));
-
-    loadedMap->setMapPoints(parseMapPoints(split(dataString, "Points[", "]")));
-    loadedMap->setMapItems(parseMapItems(split(dataString, "Items[", "]")));
+        loadedMap->setMapPoints(parseMapPoints(split(dataString, "Points[", "]")));
+        loadedMap->setMapItems(parseMapItems(split(dataString, "Items[", "]")));
+    } catch (ResourceManagerException e) {
+        std::cout << "Cannot Load map at " << path << std::endl;
+    }
     return loadedMap;
 }
 
@@ -126,25 +130,30 @@ Item *ResourceMap::parseMapItem(std::string raw) {
     float a = std::stof(exploded[5]);
 
     Item *item;
-    switch (type) {
-        case 1:
-            item = new Coin(x, y, w, h, a, std::stof(exploded[6]));//ok
-            break;
-        case 2:
-            item = new SpeedBonus(x, y, w, h, a, std::stof(exploded[6]), std::stof(exploded[7]));
-            break;
-        case 3:
-            item = new SpeedMalus(x, y, w, h, a, std::stof(exploded[6]));//ok
-            break;
-        case 4:
-            item = new TimeBonus(x, y, w, h, a, std::stof(exploded[6]));
-            break;
-        case 5:
-            item = new Checkpoint(x, y, w, h, a, std::stoi(exploded[6]));
-            break;
-        default:
-            item = new Item();
-            break;
+    try {
+        switch (type) {
+            case 1:
+                item = new Coin(x, y, w, h, a, std::stof(exploded[6]));//ok
+                break;
+            case 2:
+                item = new SpeedBonus(x, y, w, h, a, std::stof(exploded[6]), std::stof(exploded[7]));
+                break;
+            case 3:
+                item = new SpeedMalus(x, y, w, h, a, std::stof(exploded[6]));//ok
+                break;
+            case 4:
+                item = new TimeBonus(x, y, w, h, a, std::stof(exploded[6]));
+                break;
+            case 5:
+                item = new Checkpoint(x, y, w, h, a, std::stoi(exploded[6]));
+                break;
+            default:
+                item = new Item();
+                break;
+        }
+
+    } catch (std::exception e) {
+        throw ResourceManagerException("Error parsing map points");
     }
     return item;
 }

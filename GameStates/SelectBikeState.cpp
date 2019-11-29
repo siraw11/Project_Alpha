@@ -105,11 +105,9 @@ void SelectBikeState::handleInput(sf::Event event) {
                         if (actionValue.find("b") != std::string::npos) {
                             auto bike = Game::gameData->bikes.at(actionValue);
                             if (bike->getIsUnlocked()) {
-                                std::cout << "Selected bike:" << bike->getName() << std::endl;
                                 Game::gameData->match->setBike(bike);
                                 Game::gameData->machine.push_state(StateRef(new GameState(true)));
                             } else {
-                                std::cout << "Map " << bike->getName() << " is locked!" << std::endl;
                             }
                         }
                     }

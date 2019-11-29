@@ -21,7 +21,6 @@ void TimeBonus::setTimeEarned(double timeEarned) {
 }
 
 void TimeBonus::doSpecial() {
-    std::cout << "Special! " << this->timeEarned << " seconds earned" << std::endl;
     Game::gameData->match->getTimer()->decrementTimer(this->timeEarned);
     setTaken(true);
 

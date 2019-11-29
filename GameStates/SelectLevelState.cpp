@@ -111,14 +111,12 @@ void SelectLevelState::handleInput(sf::Event event) {
                         if (actionValue.find("lv") != std::string::npos) {//controllo sia un livello
                             auto level = Game::gameData->levels.at(actionValue);
                             if (level->getIsUnlocked()) {
-                                std::cout << "Selected Level:" << level->getName() << std::endl;
                                 Game::gameData->match->setMap(level);
                                 Game::gameData->match->getMap()->resetItems();
                                 Game::gameData->match->setLifes(3);
                                 Game::gameData->match->setFlips(0);
                                 Game::gameData->machine.push_state(StateRef(new SelectBikeState()));
                             } else {
-                                std::cout << "Level " << level->getName() << " is locked!" << std::endl;
                             }
                         }
                     }

@@ -119,16 +119,12 @@ void ShopState::handleInput(sf::Event event) {
                         if (actionValue.find("b") != std::string::npos) {//controllo sia una moto
                             auto bike = Game::gameData->bikes.at(actionValue);
                             if (!bike->getIsUnlocked()) {
-                                std::cout << "Selected Bike to buy:" << bike->getName() << std::endl;
                                 if (Game::gameData->player->getTotalCoin() >= bike->getPrice()) {
                                     Game::gameData->player->removeTotalCoin(bike->getPrice());
                                     Game::gameData->bikes.at(bike->getId())->setIsUnlocked(true);
-                                    std::cout << bike->getName() << " bought!" << std::endl;
                                 } else {
-                                    std::cout << "Sorry, you are poor D:" << std::endl;
                                 }
                             } else {
-                                std::cout << "Bike " << bike->getName() << " already bought!" << std::endl;
                             }
                         }
                     }

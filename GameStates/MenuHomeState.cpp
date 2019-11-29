@@ -71,11 +71,9 @@ void MenuHomeState::handleInput(sf::Event event) {
                 case sf::Keyboard::Enter:
                     switch (menu->getSelectedItemIndex()) {
                         case 0:
-                            std::cout << "Play" << std::endl;
                             Game::gameData->machine.push_state(StateRef(new SelectLevelState()));
                             break;
                         case 1:
-                            std::cout << "Shop" << std::endl;
                             Game::gameData->machine.push_state(StateRef(new ShopState()));
                             break;
                         case 2:

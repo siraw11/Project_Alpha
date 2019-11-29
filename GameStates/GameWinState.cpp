@@ -18,10 +18,6 @@ GameWinState::GameWinState() {
         this->isRecord = true;
     }
 
-    std::cout << "Actual map record:" << bestRecord << std::endl;
-    std::cout << "new time:" << newRecord << std::endl;
-    std::cout << "Flips done:" << Game::gameData->match->getFlips() << std::endl;
-
     Game::gameData->match->getMap()->resetItems();
     this->menu = new Menu(MenuType::Home, GameWinState::loadMenu());
 }

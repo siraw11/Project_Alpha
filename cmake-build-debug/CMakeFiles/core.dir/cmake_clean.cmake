@@ -26,6 +26,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o"
   "CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o"
   "CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o"
+  "CMakeFiles/core.dir/ResourceManager/ResourceMap.cpp.o"
   "CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o"
   "CMakeFiles/core.dir/SpeedBonus.cpp.o"
   "CMakeFiles/core.dir/SpeedMalus.cpp.o"

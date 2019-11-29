@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D
+CMAKE_SOURCE_DIR = /Users/lucagraziotti/CLionProjects/TestM2D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/Motocross2D/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -904,6 +904,33 @@ ResourceManager/ResourceManagerException.cpp.s:
 	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s
 .PHONY : ResourceManager/ResourceManagerException.cpp.s
 
+ResourceManager/ResourceMap.o: ResourceManager/ResourceMap.cpp.o
+
+.PHONY : ResourceManager/ResourceMap.o
+
+# target to build an object file
+ResourceManager/ResourceMap.cpp.o:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceMap.cpp.o
+.PHONY : ResourceManager/ResourceMap.cpp.o
+
+ResourceManager/ResourceMap.i: ResourceManager/ResourceMap.cpp.i
+
+.PHONY : ResourceManager/ResourceMap.i
+
+# target to preprocess a source file
+ResourceManager/ResourceMap.cpp.i:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceMap.cpp.i
+.PHONY : ResourceManager/ResourceMap.cpp.i
+
+ResourceManager/ResourceMap.s: ResourceManager/ResourceMap.cpp.s
+
+.PHONY : ResourceManager/ResourceMap.s
+
+# target to generate assembly for a file
+ResourceManager/ResourceMap.cpp.s:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceMap.cpp.s
+.PHONY : ResourceManager/ResourceMap.cpp.s
+
 ResourceManager/ResourceTexture.o: ResourceManager/ResourceTexture.cpp.o
 
 .PHONY : ResourceManager/ResourceTexture.o
@@ -1187,6 +1214,9 @@ help:
 	@echo "... ResourceManager/ResourceManagerException.o"
 	@echo "... ResourceManager/ResourceManagerException.i"
 	@echo "... ResourceManager/ResourceManagerException.s"
+	@echo "... ResourceManager/ResourceMap.o"
+	@echo "... ResourceManager/ResourceMap.i"
+	@echo "... ResourceManager/ResourceMap.s"
 	@echo "... ResourceManager/ResourceTexture.o"
 	@echo "... ResourceManager/ResourceTexture.i"
 	@echo "... ResourceManager/ResourceTexture.s"

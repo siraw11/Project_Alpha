@@ -25,7 +25,6 @@ void Checkpoint::doSpecial() {
     if (isEnd) {
         Game::gameData->machine.push_state(StateRef(new GameWinState()));
     } else {
-        std::cout << "Checkpoint taken!" << std::endl;
         this->setTaken(true);
         Game::gameData->match->setLastCheckpoint({(float) this->getPosX(), (float) this->getPosY()});
     }

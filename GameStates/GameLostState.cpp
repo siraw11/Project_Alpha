@@ -66,7 +66,6 @@ void GameLostState::handleInput(sf::Event event) {
                     if (this->canRetry) {
                         switch (menu->getSelectedItemIndex()) {
                             case 0://Retry
-                                std::cout << "retry from last checkpoint:" << std::endl;
                                 Game::gameData->engine->respawn();
                                 Game::gameData->engine->run();
                                 Game::gameData->match->getTimer()->start();

@@ -69,7 +69,6 @@ void Map::setMapItems(const std::list<Item *> &mapItems) {
 }
 
 void Map::resetItems() {
-    std::cout << "items reset" << std::endl;
     for (auto &item : mapItems) {
         item->setTaken(false);
     }

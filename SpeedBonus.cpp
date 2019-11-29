@@ -38,8 +38,6 @@ void SpeedBonus::doSpecial() {
     this->attach();
     setTaken(true);
     setTakenTime(Game::gameData->match->getTimer()->getTime());
-    std::cout << "Taken at :" << getTakenTime() << std::endl;
-    std::cout << "Special! Addedd:" << speedIncrement << " speed" << std::endl;
     Game::gameData->engine->speedChange(speedIncrement);
 }
 
@@ -48,17 +46,16 @@ void SpeedBonus::update(float dt) {
     if (dt - getTakenTime() > seconds * 1000) {
         detach();
     }
+    Game::gameData->engine->drawSpeedBonusAlert();
     Game::gameData->engine->speedChange(speedIncrement);
 }
 
 void SpeedBonus::attach() {
     Game::gameData->match->getTimer()->registerObserver(this);
-    std::cout << "attached observer!" << std::endl;
 }
 
 void SpeedBonus::detach() {
     Game::gameData->match->getTimer()->removeObserver(this);
-    std::cout << "Detached observer" << std::endl;
 }
 
 
