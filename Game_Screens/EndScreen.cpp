@@ -60,7 +60,6 @@ void EndScreen::update(Input input, StateManager *state, sf::RenderWindow *windo
             state->setState(new State_Main(state));
         }
         if (selected == 1) {
-            delete state;
             window->close();
         }
     }
