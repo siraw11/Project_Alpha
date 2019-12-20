@@ -40,5 +40,6 @@ add_library(core Game_Screens/Menu.cpp Game_Screens/Menu.h RectangleShape.cpp Re
         StateMachine/State_Main.cpp StateMachine/State_Main.h StateMachine/StateManager.h StateMachine/StateManager.cpp
         StateMachine/State_Achievement.cpp StateMachine/State_Achievement.h StateMachine/State_Death.cpp
         StateMachine/State_Death.h StateMachine/State_Pause.cpp StateMachine/State_Pause.h
-        StateMachine/State_NextLevel.cpp StateMachine/State_NextLevel.h Game_Screens/AchievementScreen.cpp Game_Screens/AchievementScreen.h)
+        StateMachine/State_NextLevel.cpp StateMachine/State_NextLevel.h Game_Screens/AchievementScreen.cpp Game_Screens/AchievementScreen.h
+        Game_Screens/EndScreen.cpp Game_Screens/EndScreen.h StateMachine/State_End.cpp StateMachine/State_End.h)
 target_link_libraries(game core)

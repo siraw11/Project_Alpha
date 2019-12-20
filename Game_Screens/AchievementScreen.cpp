@@ -37,6 +37,7 @@ void AchievementScreen::update(Input input, StateManager *state) {
 
     if (input == Input::Enter) {
         if (selected == 0) {
+            delete state;
             state->setState(new State_Main(state));
         }
     }

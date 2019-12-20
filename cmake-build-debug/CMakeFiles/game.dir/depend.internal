@@ -107,6 +107,7 @@ CMakeFiles/game.dir/GameLogic.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.cpp
  /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/DeathScreen.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Pause.h
@@ -121,6 +122,7 @@ CMakeFiles/game.dir/GameLogic.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_NextLevel.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Pause.h

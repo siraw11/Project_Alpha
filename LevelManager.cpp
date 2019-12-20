@@ -34,16 +34,18 @@ LevelManager::LevelManager() {
 void LevelManager::resetLevel() {
     delete currentLevel;
     if(levelNumber==1){
-        Level *levelS = new Level(levelArray1, arrayColumn, arrayRow);
-        currentLevel=levelS;
+        currentLevel = new Level(levelArray1, arrayColumn, arrayRow);
     }
     if(levelNumber>=2){
-        Level *level = new Level(levelArray2, arrayColumn, arrayRow);
-        currentLevel=level;
+        currentLevel =new Level(levelArray2, arrayColumn, arrayRow);
     }
     currentLevel->reset= false;
 }
 void LevelManager::nextLevel() {
     levelNumber++;
     resetLevel();
+}
+
+int LevelManager::getLevelNumber() const {
+    return levelNumber;
 }

@@ -107,6 +107,7 @@ CMakeFiles/core.dir/GameLogic.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.cpp
  /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/DeathScreen.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Pause.h
@@ -121,6 +122,7 @@ CMakeFiles/core.dir/GameLogic.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_NextLevel.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Pause.h
@@ -173,6 +175,34 @@ CMakeFiles/core.dir/Game_Screens/DeathScreen.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
+CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.o
+ /home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Animation.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Enemy.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.cpp
+ /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Hud.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Input.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Level.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
 CMakeFiles/core.dir/Game_Screens/Menu.cpp.o
@@ -420,6 +450,30 @@ CMakeFiles/core.dir/StateMachine/State_Death.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.cpp
  /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.h
+CMakeFiles/core.dir/StateMachine/State_End.cpp.o
+ /home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Animation.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Enemy.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Hud.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Input.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Level.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.cpp
+ /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.h
 CMakeFiles/core.dir/StateMachine/State_Level.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h
  /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h

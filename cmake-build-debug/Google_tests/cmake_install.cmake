@@ -1,4 +1,4 @@
-# Install script for directory: /home/davide/Scrivania/Esame_Programmazione/Google_tests
+# Install script for directory: /home/andreatadde/Scrivania/Esame_Programmazione/Google_tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/cmake_install.cmake")
+  include("/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/cmake_install.cmake")
 
 endif()
 

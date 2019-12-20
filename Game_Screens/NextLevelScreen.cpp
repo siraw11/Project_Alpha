@@ -68,9 +68,11 @@ void NextLevelScreen::update(Input input, StateManager *state, sf::RenderWindow 
             state->setState(new State_Level(state));
         }
         if (selected == 1) {
+            delete state;
             state->setState(new State_Main(state));
         }
         if (selected == 2) {
+            delete state;
             window->close();
         }
     }

@@ -50,4 +50,6 @@ int main() {
         window.display();
         window.clear(sf::Color(10, 108, 180));
     }
+    delete levelManager;
+    delete stateManager;
 }

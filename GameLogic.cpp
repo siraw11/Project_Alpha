@@ -10,6 +10,7 @@
 #include "StateMachine/State_Death.h"
 #include "StateMachine/State_NextLevel.h"
 #include "StateMachine/State_Pause.h"
+#include "StateMachine/State_End.h"
 
 GameLogic::GameLogic() {
     heroDeathBuffer.loadFromFile("Music/heroDeath.wav");
@@ -18,7 +19,7 @@ GameLogic::GameLogic() {
     enemyDeathSound.setBuffer(enemyDeathBuffer);
 }
 
-void GameLogic::Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud) {
+void GameLogic::Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud, int nLevel) {
     playerCollisionEnemy = -1;
     playerCollisionPowerUp = -1;
     bulletCollisionMap = -1;
@@ -71,7 +72,12 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
         state->setState(new State_Pause(state));
     }
     if((*level).vector_of_enemy.empty()){
-        state->setState(new State_NextLevel(state));
+        if(nLevel >= 2){
+            state->setState(new State_End(state));
+        }
+        else {
+            state->setState(new State_NextLevel(state));
+        }
     }
     level->camera.setCenter(level->player.x, 0);
     achievementNotifier.update(&level->clock, window, enemyKilled, potionUsed, deathCounter, &level->camera);

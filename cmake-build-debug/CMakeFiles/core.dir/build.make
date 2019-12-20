@@ -538,6 +538,32 @@ CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.cpp -o CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.s
 
+CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.o: ../Game_Screens/EndScreen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.o -c /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.cpp
+
+CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.cpp > CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.i
+
+CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.cpp -o CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.s
+
+CMakeFiles/core.dir/StateMachine/State_End.cpp.o: CMakeFiles/core.dir/flags.make
+CMakeFiles/core.dir/StateMachine/State_End.cpp.o: ../StateMachine/State_End.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/core.dir/StateMachine/State_End.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core.dir/StateMachine/State_End.cpp.o -c /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.cpp
+
+CMakeFiles/core.dir/StateMachine/State_End.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/StateMachine/State_End.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.cpp > CMakeFiles/core.dir/StateMachine/State_End.cpp.i
+
+CMakeFiles/core.dir/StateMachine/State_End.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/StateMachine/State_End.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.cpp -o CMakeFiles/core.dir/StateMachine/State_End.cpp.s
+
 # Object files for target core
 core_OBJECTS = \
 "CMakeFiles/core.dir/Game_Screens/Menu.cpp.o" \
@@ -576,7 +602,9 @@ core_OBJECTS = \
 "CMakeFiles/core.dir/StateMachine/State_Death.cpp.o" \
 "CMakeFiles/core.dir/StateMachine/State_Pause.cpp.o" \
 "CMakeFiles/core.dir/StateMachine/State_NextLevel.cpp.o" \
-"CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.o"
+"CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.o" \
+"CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.o" \
+"CMakeFiles/core.dir/StateMachine/State_End.cpp.o"
 
 # External object files for target core
 core_EXTERNAL_OBJECTS =
@@ -618,9 +646,11 @@ libcore.a: CMakeFiles/core.dir/StateMachine/State_Death.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/State_Pause.cpp.o
 libcore.a: CMakeFiles/core.dir/StateMachine/State_NextLevel.cpp.o
 libcore.a: CMakeFiles/core.dir/Game_Screens/AchievementScreen.cpp.o
+libcore.a: CMakeFiles/core.dir/Game_Screens/EndScreen.cpp.o
+libcore.a: CMakeFiles/core.dir/StateMachine/State_End.cpp.o
 libcore.a: CMakeFiles/core.dir/build.make
 libcore.a: CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking CXX static library libcore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking CXX static library libcore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 

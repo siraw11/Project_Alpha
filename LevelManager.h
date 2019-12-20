@@ -22,6 +22,10 @@ private:
     std::ifstream fileLevel1;
     std::ifstream fileLevel2;
     int levelNumber;
+public:
+    int getLevelNumber() const;
+
+private:
     int levelArray1[arrayColumn * arrayRow];
     int levelArray2[arrayColumn * arrayRow];
 };

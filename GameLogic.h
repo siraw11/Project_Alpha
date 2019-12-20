@@ -18,7 +18,7 @@ class GameLogic {
 public:
     GameLogic();
 
-    void Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud);
+    void Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud, int nLevel);
 
     void enemyDamageCalculator(std::vector<Enemy>* enemy,std::vector<Bullet>* bullet);
 

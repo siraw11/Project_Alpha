@@ -558,6 +558,12 @@
 			<Option target="core"/>
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.h">
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.cpp">
 			<Option target="core"/>
 			<Option target="game"/>
@@ -714,6 +720,12 @@
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.h">
 			<Option target="core"/>
 			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_End.h">
+			<Option target="core"/>
 		</Unit>
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.cpp">
 			<Option target="core"/>

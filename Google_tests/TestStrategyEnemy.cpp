@@ -36,7 +36,7 @@ TEST(Enemy,testCatch){
     ASSERT_TRUE(50 > fabs(hero.x - enemy.x));
 }
 
-TEST(Enemy,testReset){
+TEST(Enemy,testReturnHome){
     Enemy enemy;
     Hero hero;
     sf::Time time = sf::seconds(3);
