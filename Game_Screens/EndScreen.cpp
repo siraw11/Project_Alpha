@@ -20,7 +20,7 @@ EndScreen::EndScreen() {
     endVect[0].setCharacterSize(textSize);
     endVect[0].setFillColor(sf::Color::Red);
     endVect[0].setPosition(text1Pos.x, text1Pos.y);
-    endVect[0].setString("ACHIEVEMENT SCREEN");
+    endVect[0].setString("MAIN MENU");
 
     endVect[1].setFont(this->Font);
     endVect[1].setCharacterSize(textSize);
@@ -57,7 +57,7 @@ void EndScreen::update(Input input, StateManager *state, sf::RenderWindow *windo
     if (input == Input::Enter) {
         if (selected == 0) {
             delete state;
-            state->setState(new State_Achievement(state));
+            state->setState(new State_Main(state));
         }
         if (selected == 1) {
             delete state;

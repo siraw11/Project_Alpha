@@ -24,7 +24,7 @@ private:
     int levelNumber;
 public:
     int getLevelNumber() const;
-
+    void setLevelNumber(int n);
 private:
     int levelArray1[arrayColumn * arrayRow];
     int levelArray2[arrayColumn * arrayRow];

@@ -49,3 +49,7 @@ void LevelManager::nextLevel() {
 int LevelManager::getLevelNumber() const {
     return levelNumber;
 }
+
+void LevelManager::setLevelNumber(int n){
+    levelNumber=n;
+}
