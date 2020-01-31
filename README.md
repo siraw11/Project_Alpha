@@ -9,7 +9,7 @@ https://streamable.com/yqlkb
 
 # Game Screens
 The states of he game are menaged by a state pattern every state is associated with a sceen: game screen for the "playing state",
-menu scrren for the main menù etc..
+ menu screen for the main menù etc..
 
 **Home Screen**
 
@@ -21,7 +21,7 @@ menu scrren for the main menù etc..
 
 **Game Screen**
 
-This is themost complext state, "playing state". You can shoot in all four direction. The enemies have two HP each, you have five.The game has two levels,at the start of any level your healt will be restored.
+This is themost complext state, "playing state". You can shoot in all four direction. The enemies have two HP each, you have five.The game has two levels, at the start of any level your healt will be restored.
 
 ![Alt text](/Screenshots%20%26%20GIFS/Game.png?raw=true "Game")
 
