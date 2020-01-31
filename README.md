@@ -1,6 +1,7 @@
 # Octopus Killer
 
 This project has been made by Taddeucci Andrea & Martini Davide
+
 The game goal is to kill all the octopus,doing so will bring you to the next level.
 
 **Gameplay Video**
@@ -8,8 +9,7 @@ The game goal is to kill all the octopus,doing so will bring you to the next lev
 https://streamable.com/yqlkb
 
 # Game Screens
-The states of he game are menaged by a state pattern every state is associated with a sceen: game screen for the "playing state",
- menu screen for the main menù etc..
+The states of he game are menaged by a state pattern every state is associated with a sceen: game screen for the "playing state", menu screen for the main menù etc..
 
 **Home Screen**
 
@@ -21,7 +21,7 @@ The states of he game are menaged by a state pattern every state is associated w
 
 **Game Screen**
 
-This is themost complext state, "playing state". You can shoot in all four direction. The enemies have two HP each, you have five.The game has two levels, at the start of any level your healt will be restored.
+This is the most complext state, "playing state". You can shoot in all four direction. The enemies have two HP each, you have five.The game has two levels, at the start of any level your healt will be restored.
 
 ![Alt text](/Screenshots%20%26%20GIFS/Game.png?raw=true "Game")
 
