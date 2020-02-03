@@ -21,7 +21,6 @@ Level::Level(int levelArray[], int column, int row) {
     shotgunBuffer.loadFromFile("Music/Gun.wav");
     shotgun.setBuffer(shotgunBuffer);
     shotgun.setVolume(15.f);
-    //TODO Riordinare i vari numeri per l'assegnazione delle texture
 
 //-----Creazione vettori di oggetti----------------//
 
@@ -99,11 +98,9 @@ Level::Level(int levelArray[], int column, int row) {
     background.setScale(2.0,1);
 
     // Camera settings
-    //cameraSize.x = 1366;
-    //cameraSize.y = 768;
-    cameraSize.x = 1920;
-    cameraSize.y = 1080;    //TODO use sf::VideoMode::getDesktopMode() to set the best resolution, adjust the camera zoom
-    cameraZoom = 0.65;
+    cameraSize.x = sf::VideoMode::getDesktopMode().width;
+    cameraSize.y = sf::VideoMode::getDesktopMode().height;
+    cameraZoom = 720 / cameraSize.y;
     camera.setSize(cameraSize);
     camera.zoom(cameraZoom);
 

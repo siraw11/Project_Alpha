@@ -13,7 +13,6 @@ class Enemy;
 
 class Aggro {
 public:
-    //virtual ~Aggro() = 0;
     virtual void behaviour(Enemy* enemy,Hero* hero, std::vector<Platform> *platform) = 0;
 };
 

@@ -33,11 +33,6 @@ public:
 protected:
     bool facingRight;
     int row;
-
-    // switch time Davide
-    //float switch_time = 0.6f;
-
-    // switch time Andrea
     float switch_time = 0.2f;
 
 };

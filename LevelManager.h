@@ -13,6 +13,8 @@
 class LevelManager {
 public:
     LevelManager();
+    virtual ~LevelManager();
+
     void resetLevel();
     void nextLevel();
 public:

@@ -73,7 +73,6 @@ void DeathScreen::update(Input input, StateManager *state, sf::RenderWindow *win
             state->setState(new State_Main(state));
         }
         if (selected == 2) {
-            delete state;
             window->close();
         }
     }

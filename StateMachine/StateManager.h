@@ -14,7 +14,7 @@
 class StateManager {
 public:
     StateManager();
-
+    
     void setState(State *state);
 
     void run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic);

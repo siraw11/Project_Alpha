@@ -16,9 +16,6 @@ public:
 public:
     int damage = 1;
     float bulletLife = 100.f;//distanza massima proiettile
-    //Bullet speed Davide
-    //float bulletSpeed = 0.4f;//velocità del proiettile
-    //Bullet speed Andrea
     float bulletSpeed = 0.7f;//velocità del proiettile
 private:
     sf::Vector2f shootingDirection;//direzione

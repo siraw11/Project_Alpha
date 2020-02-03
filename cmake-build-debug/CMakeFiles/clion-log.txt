@@ -1,4 +1,4 @@
-/opt/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/davide/Scrivania/Esame_Programmazione
+/home/andreatadde/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/andreatadde/Scrivania/Esame_Programmazione
 -- The C compiler identification is GNU 7.4.0
 -- The CXX compiler identification is GNU 7.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -17,8 +17,8 @@
 -- Found PythonInterp: /usr/bin/python (found version "2.7.15") 
 -- Looking for pthread.h
 -- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
 -- Looking for pthread_create in pthreads
 -- Looking for pthread_create in pthreads - not found
 -- Looking for pthread_create in pthread
@@ -26,4 +26,4 @@
 -- Found Threads: TRUE  
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/davide/Scrivania/Esame_Programmazione/cmake-build-debug
+-- Build files have been written to: /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug

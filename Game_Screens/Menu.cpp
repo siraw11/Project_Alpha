@@ -79,7 +79,6 @@ void Menu::update(Input input, StateManager *state, sf::RenderWindow *window) {
             state->setState(new State_Achievement(state));
         }
         if (selected == 2) {
-            delete state;
             window->close();
         }
     }

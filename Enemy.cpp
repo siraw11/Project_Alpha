@@ -14,10 +14,6 @@
 Enemy::Enemy() : aggro(new Idle()){
     range.x = 130.f;
     range.y = 50.f;
-    // Enemy speed Davide
-    // moveSpeed = 0.2f;
-
-    // Enemy speed Andrea
     moveSpeed = 0.4f;
 }
 

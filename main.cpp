@@ -7,7 +7,7 @@ int main() {
     GameLogic logic;
     LevelManager* levelManager = new LevelManager;
     sf::Event event{};
-    Input KeyBoardInput;
+    Input KeyBoardInput = Input::Null;
     StateManager* stateManager = new StateManager;
     bool keypressed = false;
     sf::Image icon;

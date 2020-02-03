@@ -51,5 +51,10 @@ int LevelManager::getLevelNumber() const {
 }
 
 void LevelManager::setLevelNumber(int n){
-    levelNumber=n;
+    levelNumber = n;
 }
+
+LevelManager::~LevelManager() {
+    delete currentLevel;
+}
+
