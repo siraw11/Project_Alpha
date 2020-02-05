@@ -15,7 +15,10 @@ void State_Main::run(sf::RenderWindow *window, Input input, LevelManager *levelM
         music.play();
         playing = true;
     }
-    levelManager->resetLevel();
+    if (!reset) {
+        levelManager->resetLevel();
+        reset = true;
+    }
     levelManager->currentLevel->camera.setCenter(400, 300);
     window->setView(levelManager->currentLevel->camera);
     menu.update(input, _stateManager, window);

@@ -17,6 +17,7 @@ public:
 
     StateManager *_stateManager;
     DeathScreen deathScreen;
+    bool reset = false;
 };
 
 

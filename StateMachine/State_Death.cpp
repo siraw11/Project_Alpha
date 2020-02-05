@@ -9,7 +9,10 @@ State_Death::State_Death(StateManager *stateManager) {
 }
 
 void State_Death::run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic) {
-    levelManager->resetLevel();
+    if (!reset) {
+        levelManager->resetLevel();
+        reset = true;
+    }
     levelManager->currentLevel->camera.setCenter(400, 300);
     window->setView(levelManager->currentLevel->camera);
     deathScreen.update(input, _stateManager, window);

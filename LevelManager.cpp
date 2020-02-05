@@ -8,38 +8,63 @@
 
 LevelManager::LevelManager() {
     int x;
-    levelNumber=1;
-    fileLevel1.open("Level1");
-    if(!fileLevel1){
-        std::cout<<"File non trovato"<<std::endl;
-    }
-    for(int i=0;i<(arrayColumn*arrayRow);i++){
-        fileLevel1>>x;
-        levelArray1[i]=x;
-    }
-    fileLevel1.close();
-    fileLevel2.open("Level2");
-    if(!fileLevel2){
-        std::cout<<"File non trovato"<<std::endl;
-    }
-    for(int i=0;i<(arrayColumn*arrayRow);i++){
-        fileLevel2>>x;
-        levelArray2[i]=x;
-    }
-    fileLevel2.close();
+    levelNumber = 0;
+    std::ifstream fileLevel1("Levels/Level1");
+    std::ifstream fileLevel2("Levels/Level2");
+    if (!fileLevel1) {
 
-    currentLevel = new Level(levelArray1, arrayColumn, arrayRow);
+        std::cout << "File 1 non trovato" << std::endl;
+        exit(3);
+    } else {
+        levelVector.push_back(&fileLevel1);
+    }
+    if (!fileLevel2) {
+
+        std::cout << "File 2 non trovato" << std::endl;
+        exit(3);
+    } else {
+        levelVector.push_back(&fileLevel2);
+    }
+
+    for (int j = 0; j < levelVector.size(); j++) {
+        for (int i = 0; i < (arrayColumn * arrayRow); i++) {
+            *levelVector[j] >> x;
+            if (!levelVector[j]->good()) {
+                std::cout << "Il file di Level " << j + 1 << " è corrotto" << std::endl;
+                levelVector.erase(levelVector.begin() + j);
+                exit(3);
+            }
+        }
+    }
+    buildLevel();
+    currentLevel = new Level(levelArray0, arrayColumn, arrayRow);
 }
 
+void LevelManager::buildLevel() {
+    int x;
+    for (int i = 0; i < levelVector.size(); i++) {
+        levelVector[i]->seekg(0, std::ios::beg);
+        levelVector[i]->clear();
+        for (int j = 0; j < (arrayColumn * arrayRow); j++) {
+            *levelVector[i] >> x;
+            if (i == 0)
+                levelArray0[j] = x;
+            if (i == 1) {
+                levelArray1[j] = x;
+            }
+        }
+    }
+
+}
 void LevelManager::resetLevel() {
+    int x;
     delete currentLevel;
-    if(levelNumber==1){
+    if (levelNumber == 0)
+        currentLevel = new Level(levelArray0, arrayColumn, arrayRow);
+    if (levelNumber == 1)
         currentLevel = new Level(levelArray1, arrayColumn, arrayRow);
-    }
-    if(levelNumber>=2){
-        currentLevel =new Level(levelArray2, arrayColumn, arrayRow);
-    }
     currentLevel->reset= false;
+
 }
 void LevelManager::nextLevel() {
     levelNumber++;
@@ -57,4 +82,5 @@ void LevelManager::setLevelNumber(int n){
 LevelManager::~LevelManager() {
     delete currentLevel;
 }
+
 

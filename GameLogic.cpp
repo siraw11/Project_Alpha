@@ -72,7 +72,7 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
         state->setState(new State_Pause(state));
     }
     if((*level).vector_of_enemy.empty()){
-        if(nLevel >= 2){
+        if (nLevel >= numberOfLevels - 1) {
             state->setState(new State_End(state));
         }
         else {

@@ -19,6 +19,7 @@ public:
     sf::Music music;
     Menu menu;
     float volume = 40.f;
+    bool reset = false;
 };
 
 

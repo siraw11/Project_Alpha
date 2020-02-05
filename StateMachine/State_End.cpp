@@ -9,7 +9,7 @@ State_End::State_End(StateManager *stateManager) {
 }
 
 void State_End::run(sf::RenderWindow *window, Input input, LevelManager *levelManager, GameLogic *logic) {
-    levelManager->setLevelNumber(1);
+    levelManager->setLevelNumber(0);
     levelManager->resetLevel();
     levelManager->currentLevel->camera.setCenter(400, 300);
     window->setView(levelManager->currentLevel->camera);
