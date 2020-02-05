@@ -12,15 +12,13 @@ LevelManager::LevelManager() {
     std::ifstream fileLevel1("Levels/Level1");
     std::ifstream fileLevel2("Levels/Level2");
     if (!fileLevel1) {
-
-        std::cout << "File 1 non trovato" << std::endl;
+        std::cerr << "File 1 non trovato" << std::endl;
         exit(3);
     } else {
         levelVector.push_back(&fileLevel1);
     }
     if (!fileLevel2) {
-
-        std::cout << "File 2 non trovato" << std::endl;
+        std::cerr << "File 2 non trovato" << std::endl;
         exit(3);
     } else {
         levelVector.push_back(&fileLevel2);
@@ -30,39 +28,28 @@ LevelManager::LevelManager() {
         for (int i = 0; i < (arrayColumn * arrayRow); i++) {
             *levelVector[j] >> x;
             if (!levelVector[j]->good()) {
-                std::cout << "Il file di Level " << j + 1 << " è corrotto" << std::endl;
-                levelVector.erase(levelVector.begin() + j);
+                std::cerr << "Il file di Level " << j + 1 << " è corrotto" << std::endl;
                 exit(3);
             }
         }
     }
-    buildLevel();
-    currentLevel = new Level(levelArray0, arrayColumn, arrayRow);
-}
 
-void LevelManager::buildLevel() {
-    int x;
     for (int i = 0; i < levelVector.size(); i++) {
         levelVector[i]->seekg(0, std::ios::beg);
         levelVector[i]->clear();
+        int *levelArray0 = new int[arrayColumn * arrayRow];
         for (int j = 0; j < (arrayColumn * arrayRow); j++) {
             *levelVector[i] >> x;
-            if (i == 0)
-                levelArray0[j] = x;
-            if (i == 1) {
-                levelArray1[j] = x;
-            }
+            levelArray0[j] = x;
         }
+        vectorArray.push_back(levelArray0);
     }
-
+    currentLevel = new Level(vectorArray[levelNumber], arrayColumn, arrayRow);
 }
+
 void LevelManager::resetLevel() {
-    int x;
     delete currentLevel;
-    if (levelNumber == 0)
-        currentLevel = new Level(levelArray0, arrayColumn, arrayRow);
-    if (levelNumber == 1)
-        currentLevel = new Level(levelArray1, arrayColumn, arrayRow);
+    currentLevel = new Level(vectorArray[levelNumber], arrayColumn, arrayRow);
     currentLevel->reset= false;
 
 }
@@ -83,4 +70,8 @@ LevelManager::~LevelManager() {
     delete currentLevel;
 }
 
+int LevelManager::getNumberOfLevels() {
+    int n = levelVector.size();
 
+    return n;
+}

@@ -19,7 +19,8 @@ GameLogic::GameLogic() {
     enemyDeathSound.setBuffer(enemyDeathBuffer);
 }
 
-void GameLogic::Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud, int nLevel) {
+void GameLogic::Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud, int nLevel,
+                       int maxLevel) {
     playerCollisionEnemy = -1;
     playerCollisionPowerUp = -1;
     bulletCollisionMap = -1;
@@ -72,7 +73,7 @@ void GameLogic::Update(Level *level, StateManager *state, Input input, sf::Rende
         state->setState(new State_Pause(state));
     }
     if((*level).vector_of_enemy.empty()){
-        if (nLevel >= numberOfLevels - 1) {
+        if (nLevel >= maxLevel) {
             state->setState(new State_End(state));
         }
         else {
