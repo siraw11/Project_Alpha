@@ -19,23 +19,23 @@ NextLevelScreen::NextLevelScreen() {
 
     this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
-    menu[0].setFont(this->Font);
-    menu[0].setCharacterSize(textSize);
-    menu[0].setFillColor(sf::Color::Red);
-    menu[0].setPosition(text1Pos.x, text1Pos.y);
-    menu[0].setString("NEXT LEVEL");
+    nextLevel[0].setFont(this->Font);
+    nextLevel[0].setCharacterSize(textSize);
+    nextLevel[0].setFillColor(sf::Color::Red);
+    nextLevel[0].setPosition(text1Pos.x, text1Pos.y);
+    nextLevel[0].setString("NEXT LEVEL");
 
-    menu[2].setFont(this->Font);
-    menu[2].setCharacterSize(textSize);
-    menu[2].setFillColor(sf::Color::White);
-    menu[2].setPosition(text3Pos.x, text3Pos.y);
-    menu[2].setString("EXIT");
+    nextLevel[2].setFont(this->Font);
+    nextLevel[2].setCharacterSize(textSize);
+    nextLevel[2].setFillColor(sf::Color::White);
+    nextLevel[2].setPosition(text3Pos.x, text3Pos.y);
+    nextLevel[2].setString("EXIT");
 
-    menu[1].setFont(this->Font);
-    menu[1].setCharacterSize(textSize);
-    menu[1].setFillColor(sf::Color::White);
-    menu[1].setPosition(text2Pos.x, text2Pos.y);
-    menu[1].setString("MAIN MENU");
+    nextLevel[1].setFont(this->Font);
+    nextLevel[1].setCharacterSize(textSize);
+    nextLevel[1].setFillColor(sf::Color::White);
+    nextLevel[1].setPosition(text2Pos.x, text2Pos.y);
+    nextLevel[1].setString("MAIN MENU");
 
     title.setFont(this->Font);
     title.setCharacterSize(textSize);
@@ -48,20 +48,20 @@ void NextLevelScreen::update(Input input, StateManager *state, sf::RenderWindow 
     if (input == Input::Down) {
         selected++;
         if (selected < SIZE) {
-            menu[selected - 1].setFillColor(sf::Color::White);
+            nextLevel[selected - 1].setFillColor(sf::Color::White);
         } else {
             selected--;
         }
-        menu[selected].setFillColor(sf::Color::Red);
+        nextLevel[selected].setFillColor(sf::Color::Red);
     }
     if (input == Input::Up) {
         selected--;
         if (selected >= 0) {
-            menu[selected + 1].setFillColor(sf::Color::White);
+            nextLevel[selected + 1].setFillColor(sf::Color::White);
         } else {
             selected++;
         }
-        menu[selected].setFillColor(sf::Color::Red);
+        nextLevel[selected].setFillColor(sf::Color::Red);
     }
     if (input == Input::Enter) {
         if (selected == 0) {
@@ -79,7 +79,7 @@ void NextLevelScreen::update(Input input, StateManager *state, sf::RenderWindow 
 
 void NextLevelScreen::drawMenu(sf::RenderWindow *window) {
     for (int i = 0; i < SIZE; i++) {
-        window->draw(this->menu[i]);
+        window->draw(this->nextLevel[i]);
     }
     window->draw(title);
 }

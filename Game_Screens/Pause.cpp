@@ -13,8 +13,8 @@ Pause::Pause() {
     text2Pos.y = 130;
     text3Pos.x = 100;
     text3Pos.y = 160;
-    textPos.x = 150;
-    textPos.y = 50;
+    titlePos.x = 150;
+    titlePos.y = 50;
 
     this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
@@ -39,7 +39,7 @@ Pause::Pause() {
     text.setFont(this->Font);
     text.setCharacterSize(textSize);
     text.setFillColor(sf::Color::Black);
-    text.setPosition(textPos.x, textPos.y);
+    text.setPosition(titlePos.x, titlePos.y);
     text.setString("PAUSE");
 }
 
@@ -77,7 +77,7 @@ void Pause::update(Input input, StateManager *state, sf::RenderWindow *window) {
     }
 }
 
-void Pause::drawMenu(sf::RenderWindow *window) {
+void Pause::drawPause(sf::RenderWindow *window) {
 
     for (int i = 0; i < SIZE; i++) {
         window->draw(this->pause[i]);

@@ -15,7 +15,6 @@ public:
     static int checkCollision(std::vector<PowerUp> *powerUp, Hero *player);//powerup-player
     static int checkCollision(std::vector<Bullet> *bullet, std::vector<Platform> *platform);//proiettili-mappa
     static sf::Vector2i checkCollision(std::vector<Bullet> *bullet, std::vector<Enemy> *enemy);//proiettili-nemici
-    static int checkCollision(Hero *hero, std::vector<Enemy> *enemy);
 };
 
 

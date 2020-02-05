@@ -136,7 +136,7 @@ void Level::Update(sf::RenderWindow *window) {
         shotDir.y = 1;
         shoot = true;
     }
-    //-----Creazione priettili------------//
+    //-----Creazione proiettili------------//
     if (shoot && clock.getElapsedTime() - shoot_time >= shoot_delay) {
         Bullet newBullet(player.getIsPowerBullet(), shotDir);
         newBullet.init(player.rectShape.getPosition().x + player.rectShape.getSize().x / 2 -

@@ -17,7 +17,6 @@ public:
     StateManager *_stateManager;
     NextLevelScreen nextLevelScreen;
     bool reset = false;
-
 };
 
 

@@ -12,7 +12,7 @@
 class PowerUp : public RectangleShape {
 public:
     explicit PowerUp(int type);
-public:
+
     int type;
 };
 

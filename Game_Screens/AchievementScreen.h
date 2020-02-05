@@ -18,7 +18,6 @@ public:
     AchievementScreen();
 
     void update(Input input, StateManager *state);
-
     void drawAchievements(AchievementNotifier *achievementNotifier, sf::RenderWindow *window);
 
 private:

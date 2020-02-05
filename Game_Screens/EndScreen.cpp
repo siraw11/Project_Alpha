@@ -16,17 +16,17 @@ EndScreen::EndScreen() {
 
     this->Font.loadFromFile("textures/arial_narrow_7.ttf");
 
-    endVect[0].setFont(this->Font);
-    endVect[0].setCharacterSize(textSize);
-    endVect[0].setFillColor(sf::Color::Red);
-    endVect[0].setPosition(text1Pos.x, text1Pos.y);
-    endVect[0].setString("MAIN MENU");
+    endVector[0].setFont(this->Font);
+    endVector[0].setCharacterSize(textSize);
+    endVector[0].setFillColor(sf::Color::Red);
+    endVector[0].setPosition(text1Pos.x, text1Pos.y);
+    endVector[0].setString("MAIN MENU");
 
-    endVect[1].setFont(this->Font);
-    endVect[1].setCharacterSize(textSize);
-    endVect[1].setFillColor(sf::Color::White);
-    endVect[1].setPosition(text2Pos.x, text2Pos.y);
-    endVect[1].setString("EXIT");
+    endVector[1].setFont(this->Font);
+    endVector[1].setCharacterSize(textSize);
+    endVector[1].setFillColor(sf::Color::White);
+    endVector[1].setPosition(text2Pos.x, text2Pos.y);
+    endVector[1].setString("EXIT");
 
     title.setFont(this->Font);
     title.setCharacterSize(textSize);
@@ -39,20 +39,20 @@ void EndScreen::update(Input input, StateManager *state, sf::RenderWindow *windo
     if (input == Input::Down) {
         selected++;
         if (selected < SIZE_END) {
-            endVect[selected - 1].setFillColor(sf::Color::White);
+            endVector[selected - 1].setFillColor(sf::Color::White);
         } else {
             selected--;
         }
-        endVect[selected].setFillColor(sf::Color::Red);
+        endVector[selected].setFillColor(sf::Color::Red);
     }
     if (input == Input::Up) {
         selected--;
         if (selected >= 0) {
-            endVect[selected + 1].setFillColor(sf::Color::White);
+            endVector[selected + 1].setFillColor(sf::Color::White);
         } else {
             selected++;
         }
-        endVect[selected].setFillColor(sf::Color::Red);
+        endVector[selected].setFillColor(sf::Color::Red);
     }
     if (input == Input::Enter) {
         if (selected == 0) {
@@ -67,7 +67,7 @@ void EndScreen::update(Input input, StateManager *state, sf::RenderWindow *windo
 
 void EndScreen::drawMenu(sf::RenderWindow *window) {
     for (int i = 0; i < SIZE_END; i++) {
-        window->draw(this->endVect[i]);
+        window->draw(this->endVector[i]);
     }
     window->draw(title);
 }

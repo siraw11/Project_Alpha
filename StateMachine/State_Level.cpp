@@ -19,9 +19,7 @@ void State_Level::run(sf::RenderWindow *window, Input input, LevelManager *level
         playing = true;
     }
     levelManager->currentLevel->Update(window);
-    logic->Update(levelManager->currentLevel, _stateManager, input, window, &hud, levelManager->getLevelNumber(),
-                  levelManager->getNumberOfLevels());
-
+    logic->Update(levelManager->currentLevel, _stateManager, input, window, &hud, levelManager->getLevelNumber(), levelManager->getNumberOfLevels());
     if (_stateManager->current != this) {
         music.stop();
     }

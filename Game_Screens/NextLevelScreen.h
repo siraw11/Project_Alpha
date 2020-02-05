@@ -20,7 +20,7 @@ public:
     int selected = 0;
 private:
     sf::Text title;
-    sf::Text menu[SIZE];
+    sf::Text nextLevel[SIZE];
     sf::Font Font;
     sf::Vector2i text1Pos;
     sf::Vector2i text2Pos;

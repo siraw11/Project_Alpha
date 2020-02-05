@@ -8,7 +8,6 @@
 #include "State.h"
 
 class State_Level : public State {
-
 public:
     explicit State_Level(StateManager *stateManager);
 

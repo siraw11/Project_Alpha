@@ -18,14 +18,14 @@ public:
 private:
     std::vector<sf::RectangleShape> vector_of_hearts;
     std::vector<sf::RectangleShape> vector_of_enemyhp;
-    sf::Texture texture;
-    sf::Texture texture2;
+    sf::Texture playerHpTex;
+    sf::Texture enemyHpTex;
     sf::Vector2f offset;
     sf::Vector2f sizeHeart;
     sf::Text hp;
     sf::Font font;
-    unsigned int textSize = 30;
     sf::Text invulnerabilityTime;
+    unsigned int textSize = 30;
 };
 
 

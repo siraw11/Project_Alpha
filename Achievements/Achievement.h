@@ -14,14 +14,12 @@ public:
     Achievement();
 
     void update();
-
     void drawPopUp(sf::RenderWindow *window,sf::View* camera);
 
     sf::Clock *clock;
-    bool achieved = false;
     sf::Text description;
     sf::Text unlocked;
-
+    bool achieved = false;
 
 protected:
     sf::Text textPopUp;

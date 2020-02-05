@@ -12,7 +12,7 @@
 class Platform : public RectangleShape {
 public:
     Platform(int type);//Prende un intero in ingresso solo per sapere quale texture applicare
-public:
+
     int t;
 };
 

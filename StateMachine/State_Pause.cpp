@@ -13,6 +13,6 @@ void State_Pause::run(sf::RenderWindow *window, Input input, LevelManager *level
     levelManager->currentLevel->camera.setCenter(400, 300);
     window->setView(levelManager->currentLevel->camera);
     pause.update(input, _stateManager, window);
-    pause.drawMenu(window);
+    pause.drawPause(window);
 
 }

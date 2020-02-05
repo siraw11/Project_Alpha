@@ -14,11 +14,10 @@ class Menu {
 
 public:
     Menu();
+    virtual ~Menu();
 
     void update(Input input, StateManager *state, sf::RenderWindow *window);
     void drawMenu(sf::RenderWindow *window);
-
-    virtual ~Menu();
 
 private:
     sf::Text title;

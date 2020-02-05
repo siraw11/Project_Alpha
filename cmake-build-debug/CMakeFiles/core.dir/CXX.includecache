@@ -6,155 +6,155 @@
 
 #IncludeRegexTransform: 
 
-/home/davide/Scrivania/Esame_Programmazione/AchievementNotifier.h
+/home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h
 Achievements/FirstBlood.h
-/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
 Achievements/FirstDeath.h
-/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h
 Achievements/PotionAchievement.h
-/home/davide/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h
 
-/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h
 SFML/Graphics.hpp
 -
 
-/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
 Achievement.h
-/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h
 
-/home/davide/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h
 Achievement.h
-/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h
 
-/home/davide/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h
 Achievement.h
-/home/davide/Scrivania/Esame_Programmazione/Achievements/Achievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h
 
-/home/davide/Scrivania/Esame_Programmazione/Animation.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Animation.h
 SFML/Graphics.hpp
 -
 
-/home/davide/Scrivania/Esame_Programmazione/Bullet.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
 RectangleShape.h
-/home/davide/Scrivania/Esame_Programmazione/RectangleShape.h
+/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
 
-/home/davide/Scrivania/Esame_Programmazione/Enemy.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Enemy.h
 GameCharacter.h
-/home/davide/Scrivania/Esame_Programmazione/GameCharacter.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
 Hero.h
-/home/davide/Scrivania/Esame_Programmazione/Hero.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
 Platform.h
-/home/davide/Scrivania/Esame_Programmazione/Platform.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
 SFML/Graphics.hpp
-/home/davide/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
 memory
 -
 
-/home/davide/Scrivania/Esame_Programmazione/GameCharacter.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
 RectangleShape.h
-/home/davide/Scrivania/Esame_Programmazione/RectangleShape.h
+/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
 Animation.h
-/home/davide/Scrivania/Esame_Programmazione/Animation.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Animation.h
 
-/home/davide/Scrivania/Esame_Programmazione/GameLogic.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
 Level.h
-/home/davide/Scrivania/Esame_Programmazione/Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Level.h
 Input.h
-/home/davide/Scrivania/Esame_Programmazione/Input.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Input.h
 SFML/Graphics.hpp
-/home/davide/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
 SFML/Audio.hpp
-/home/davide/Scrivania/Esame_Programmazione/SFML/Audio.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/SFML/Audio.hpp
 AchievementNotifier.h
-/home/davide/Scrivania/Esame_Programmazione/AchievementNotifier.h
+/home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h
 Hud.h
-/home/davide/Scrivania/Esame_Programmazione/Hud.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Hud.h
 
-/home/davide/Scrivania/Esame_Programmazione/Hero.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
 GameCharacter.h
-/home/davide/Scrivania/Esame_Programmazione/GameCharacter.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
 Platform.h
-/home/davide/Scrivania/Esame_Programmazione/Platform.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
 
-/home/davide/Scrivania/Esame_Programmazione/Hud.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Hud.h
 SFML/Graphics.hpp
-/home/davide/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
 vector
-/home/davide/Scrivania/Esame_Programmazione/vector
+/home/andreatadde/Scrivania/Esame_Programmazione/vector
 Level.h
-/home/davide/Scrivania/Esame_Programmazione/Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Level.h
 
-/home/davide/Scrivania/Esame_Programmazione/Input.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Input.h
 
-/home/davide/Scrivania/Esame_Programmazione/Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Level.h
 SFML/Graphics.hpp
-/home/davide/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
 SFML/Audio.hpp
-/home/davide/Scrivania/Esame_Programmazione/SFML/Audio.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/SFML/Audio.hpp
 Platform.h
-/home/davide/Scrivania/Esame_Programmazione/Platform.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
 Enemy.h
-/home/davide/Scrivania/Esame_Programmazione/Enemy.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Enemy.h
 Hero.h
-/home/davide/Scrivania/Esame_Programmazione/Hero.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
 PowerUp.h
-/home/davide/Scrivania/Esame_Programmazione/PowerUp.h
+/home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h
 Bullet.h
-/home/davide/Scrivania/Esame_Programmazione/Bullet.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
 
-/home/davide/Scrivania/Esame_Programmazione/LevelManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
 Level.h
-/home/davide/Scrivania/Esame_Programmazione/Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Level.h
 fstream
-/home/davide/Scrivania/Esame_Programmazione/fstream
+/home/andreatadde/Scrivania/Esame_Programmazione/fstream
 vector
-/home/davide/Scrivania/Esame_Programmazione/vector
+/home/andreatadde/Scrivania/Esame_Programmazione/vector
 
-/home/davide/Scrivania/Esame_Programmazione/Platform.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
 RectangleShape.h
-/home/davide/Scrivania/Esame_Programmazione/RectangleShape.h
+/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
 
-/home/davide/Scrivania/Esame_Programmazione/PowerUp.h
+/home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h
 RectangleShape.h
-/home/davide/Scrivania/Esame_Programmazione/RectangleShape.h
+/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
 Hero.h
-/home/davide/Scrivania/Esame_Programmazione/Hero.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
 Bullet.h
-/home/davide/Scrivania/Esame_Programmazione/Bullet.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
 
-/home/davide/Scrivania/Esame_Programmazione/RectangleShape.h
+/home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
 SFML/Graphics.hpp
 -
 
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/State.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
 SFML/Graphics.hpp
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/SFML/Graphics.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/SFML/Graphics.hpp
 ../Input.h
-/home/davide/Scrivania/Esame_Programmazione/Input.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Input.h
 ../LevelManager.h
-/home/davide/Scrivania/Esame_Programmazione/LevelManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
 ../GameLogic.h
-/home/davide/Scrivania/Esame_Programmazione/GameLogic.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
 
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
 SFML/Graphics.hpp
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/SFML/Graphics.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/SFML/Graphics.hpp
 ../Input.h
-/home/davide/Scrivania/Esame_Programmazione/Input.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Input.h
 ../LevelManager.h
-/home/davide/Scrivania/Esame_Programmazione/LevelManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
 ../GameLogic.h
-/home/davide/Scrivania/Esame_Programmazione/GameLogic.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
 ../StateMachine/State.h
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/State.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
 
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Level.cpp
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.cpp
 State_Level.h
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
 StateManager.h
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
 
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
 State.h
-/home/davide/Scrivania/Esame_Programmazione/StateMachine/State.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
 

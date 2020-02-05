@@ -10,11 +10,9 @@
 class Animation {
 public:
     Animation() = default;
-
-    void setAnimation(sf::Texture *texture, sf::Vector2u imageCount, float switchTime);
-
     ~Animation();
 
+    void setAnimation(sf::Texture *texture, sf::Vector2u imageCount, float switchTime);
     void Update(int row, float deltaTime, bool facingRight);
 
     sf::IntRect uvRect; // Rectangle that resize the texture

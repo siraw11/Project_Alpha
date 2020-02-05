@@ -11,18 +11,16 @@
 #include "SFML/Graphics.hpp"
 
 class EndScreen {
-
 public:
     EndScreen();
+    virtual ~EndScreen();
 
     void update(Input input, StateManager *state, sf::RenderWindow *window);
     void drawMenu(sf::RenderWindow *window);
 
-    virtual ~EndScreen();
-
 private:
     sf::Text title;
-    sf::Text endVect[SIZE_END];
+    sf::Text endVector[SIZE_END];
     sf::Font Font;
     int selected = 0;
     sf::Vector2i text1Pos;

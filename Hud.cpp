@@ -7,8 +7,8 @@
 
 Hud::Hud() {
     font.loadFromFile("textures/arial_narrow_7.ttf");
-    texture.loadFromFile("textures/red_heart.png");
-    texture2.loadFromFile("textures/green_heart.png");
+    playerHpTex.loadFromFile("textures/red_heart.png");
+    enemyHpTex.loadFromFile("textures/green_heart.png");
     sizeHeart.x = 30;
     sizeHeart.y = 30;
     offset.x = -450;
@@ -26,9 +26,8 @@ Hud::Hud() {
 void Hud::update(sf::RenderWindow *window, Level *level) {
     while (vector_of_hearts.size() < level->player.HP) {
         sf::RectangleShape heart;
-        heart.setTexture(&texture);
+        heart.setTexture(&playerHpTex);
         heart.setSize(sizeHeart);
-        heart.setTexture(&texture);
         vector_of_hearts.push_back(heart);
     }
     if (vector_of_hearts.size() > level->player.HP) {
@@ -37,7 +36,7 @@ void Hud::update(sf::RenderWindow *window, Level *level) {
     if (vector_of_enemyhp.size() < level->vector_of_enemy.size()) {
         for (int i = 0; i < level->vector_of_enemy.size(); i++) {
             sf::RectangleShape heart;
-            heart.setTexture(&texture2);
+            heart.setTexture(&enemyHpTex);
             heart.setSize(sizeHeart);
             vector_of_enemyhp.push_back(heart);
         }
@@ -48,7 +47,7 @@ void Hud::update(sf::RenderWindow *window, Level *level) {
     for (int i = 0; i < vector_of_hearts.size(); i++) {
         vector_of_hearts[i].setPosition(level->camera.getCenter().x + (sizeHeart.x * i) + offset.x,
                                         level->camera.getCenter().y + offset.y);
-            window->draw(vector_of_hearts[i]);
+        window->draw(vector_of_hearts[i]);
     }
     for (int i = 0; i < vector_of_enemyhp.size(); i++) {
         for (int j = 0; j < level->vector_of_enemy[i].HP; j++) {

@@ -16,7 +16,6 @@ public:
 
     StateManager *_stateManager;
     AchievementScreen achievementScreen;
-
 };
 
 

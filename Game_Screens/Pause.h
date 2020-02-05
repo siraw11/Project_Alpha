@@ -17,8 +17,7 @@ public:
     Pause();
 
     void update(Input input, StateManager *state, sf::RenderWindow *window);
-
-    void drawMenu(sf::RenderWindow *window);
+    void drawPause(sf::RenderWindow *window);
 
     int selected = 0;
 private:
@@ -28,7 +27,7 @@ private:
     sf::Vector2i text1Pos;
     sf::Vector2i text2Pos;
     sf::Vector2i text3Pos;
-    sf::Vector2i textPos;
+    sf::Vector2i titlePos;
     unsigned int textSize = 30;
 };
 

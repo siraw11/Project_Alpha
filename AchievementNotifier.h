@@ -15,11 +15,9 @@ public:
 
     void update(sf::Clock *clock, sf::RenderWindow *window, int enemyKilled, int potionCounter, int deathCounter,sf::View* camera);
 
-public:
     FirstBlood firstBlood;
     FirstDeath firstDeath;
     PotionAchievement potionUsed;
-    sf::Clock *clock;
 };
 
 

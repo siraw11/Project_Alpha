@@ -12,23 +12,21 @@
 class Hero : public GameCharacter {
 public:
     Hero();
+    virtual ~Hero();
 
     void update(bool W, bool A, bool S, bool D, std::vector<Platform> *platform);//Gestisce il movimento da input da tastiera
 
+    bool getIsPowerBullet() const;
+    void setIsPowerBullet(bool isPowerBullet);
+
     int HP = 5;
-    int initialHP = HP;
+
 private:
     bool isPowerBullet;
     //---Animation variables--//
     float delta_time = 1.0 / 60.f;
     unsigned int frame_x = 3;
     unsigned int frame_y = 9;
-public:
-    bool getIsPowerBullet() const;
-
-    void setIsPowerBullet(bool isPowerBullet);
-
-    virtual ~Hero();
 };
 
 

@@ -9,7 +9,6 @@
 #include "../Game_Screens/DeathScreen.h"
 
 class State_Death : public State {
-
 public:
     explicit State_Death(StateManager *stateManager);
 

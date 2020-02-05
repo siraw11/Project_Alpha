@@ -92,14 +92,3 @@ int Collision::checkCollision(std::vector<Bullet> *bullet, std::vector<Platform>
     }
     return collisionCheck;
 }
-
-int Collision::checkCollision(Hero *hero, std::vector<Enemy> *enemy) {
-    int collisionCheck = -1;
-    for (int i = 0; i < enemy->size(); i++) {
-
-        if ((*enemy)[i].rectShape.getGlobalBounds().intersects(hero->rectShape.getGlobalBounds())) {
-            collisionCheck = i;
-        }
-    }
-    return collisionCheck;
-}

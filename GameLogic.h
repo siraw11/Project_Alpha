@@ -18,15 +18,20 @@ class GameLogic {
 public:
     GameLogic();
 
-    void Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud, int nLevel,
-                int maxLevel);
+    void Update(Level *level, StateManager *state, Input input, sf::RenderWindow *window, Hud *hud, int nLevel, int maxLevel);
 
     void enemyDamageCalculator(std::vector<Enemy>* enemy,std::vector<Bullet>* bullet);
 
     void powerUpEffect(Hero* hero,std::vector<PowerUp>* powerUp);
-    AchievementNotifier achievementNotifier;
-private:
 
+    AchievementNotifier achievementNotifier;
+
+    float moveSpeedMux = 1.2f;
+    sf::Vector2i enemyCollisionBullet;
+    int playerCollisionPowerUp;
+    int bulletCollisionMap;
+
+private:
     int enemyKilled = 0;
     int deathCounter = 0;
     int potionUsed = 0;
@@ -37,12 +42,6 @@ private:
     sf::SoundBuffer enemyDeathBuffer;
     sf::Sound heroDeathSound;
     sf::Sound enemyDeathSound;
-public:
-    float moveSpeedMux = 1.2f;
-    int playerCollisionEnemy;
-    sf::Vector2i enemyCollisionBullet;
-    int playerCollisionPowerUp;
-    int bulletCollisionMap;
 };
 
 

@@ -9,28 +9,24 @@
 class GameCharacter : public RectangleShape {
 public:
     GameCharacter();
+    virtual ~GameCharacter();
 
     float getMoveSpeed() const;//getter velocità
     void setMoveSpeed(float moveSpeed);//setter velocità
+
     void setAnimation(const std::string &textureDir, unsigned int xFrames, unsigned int yFrames);//setta l'animazione
+
     bool isOnGround;
     sf::Vector2f velocity;
 protected:
-
     // Movement parameters
     float moveSpeed;
     float jumpPower;
-
     // Gravity parameters
     float gravityAcc;
     float gravityMax;
-
     // Animation parameters
     Animation animation;
-public:
-    virtual ~GameCharacter();
-
-protected:
     bool facingRight;
     int row;
     float switch_time = 0.2f;

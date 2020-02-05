@@ -18,18 +18,17 @@ public:
 
     void resetLevel();
     void nextLevel();
-public:
+
+    int getLevelNumber() const;
+    void setLevelNumber(int n);
+
+    int getNumberOfLevels();
+
     Level* currentLevel;
 
 private:
     int levelNumber;
     std::vector<std::ifstream *> levelVector;
-public:
-    int getLevelNumber() const;
-    void setLevelNumber(int n);
-
-    int getNumberOfLevels();
-private:
     std::vector<int *> vectorArray;
 };
 

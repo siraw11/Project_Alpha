@@ -5,7 +5,6 @@
 #ifndef GAME_STATE_END_H
 #define GAME_STATE_END_H
 
-
 #include "State.h"
 #include "../Game_Screens/EndScreen.h"
 
