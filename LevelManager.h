@@ -13,7 +13,7 @@
 
 class LevelManager {
 public:
-    LevelManager();
+    LevelManager(std::string* levelName,int nFiles);
     virtual ~LevelManager();
 
     void resetLevel();
@@ -24,12 +24,16 @@ public:
 
     int getNumberOfLevels();
 
+    bool isFound() const;
+
     Level* currentLevel;
 
 private:
     int levelNumber;
     std::vector<std::ifstream *> levelVector;
     std::vector<int *> vectorArray;
+    int *levelArray;
+    bool found;
 };
 
 

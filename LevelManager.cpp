@@ -6,22 +6,22 @@
 #include "stdlib.h"
 #include "iostream"
 
-LevelManager::LevelManager() {
+LevelManager::LevelManager(std::string* levelName,const int nFiles) {
+
     int x;
     levelNumber = 0;
-    std::ifstream fileLevel1("Levels/Level1");
-    std::ifstream fileLevel2("Levels/Level2");
-    if (!fileLevel1) {
-        std::cerr << "File 1 non trovato" << std::endl;
-        exit(3);
-    } else {
-        levelVector.push_back(&fileLevel1);
-    }
-    if (!fileLevel2) {
-        std::cerr << "File 2 non trovato" << std::endl;
-        exit(3);
-    } else {
-        levelVector.push_back(&fileLevel2);
+    std::ifstream fileLevel[nFiles];
+    for (int i = 0; i < nFiles; i++) {
+        fileLevel[i].open(levelName[i]);
+        if(!fileLevel[i]){
+            found = false;
+            std::cerr << "File "<< i+1 <<" non trovato" << std::endl;
+            exit(3);
+        }
+        else{
+            found = true;
+            levelVector.push_back(&fileLevel[i]);
+        }
     }
 
     for (int j = 0; j < levelVector.size(); j++) {
@@ -37,12 +37,12 @@ LevelManager::LevelManager() {
     for (int i = 0; i < levelVector.size(); i++) {
         levelVector[i]->seekg(0, std::ios::beg);
         levelVector[i]->clear();
-        int *levelArray0 = new int[arrayColumn * arrayRow];
+        levelArray = new int[arrayColumn * arrayRow]; //TODO Memory Leak!
         for (int j = 0; j < (arrayColumn * arrayRow); j++) {
             *levelVector[i] >> x;
-            levelArray0[j] = x;
+            levelArray[j] = x;
         }
-        vectorArray.push_back(levelArray0);
+        vectorArray.push_back(levelArray);
     }
     currentLevel = new Level(vectorArray[levelNumber], arrayColumn, arrayRow);
 }
@@ -67,11 +67,15 @@ void LevelManager::setLevelNumber(int n){
 }
 
 LevelManager::~LevelManager() {
+
+    delete levelArray;
     delete currentLevel;
 }
 
 int LevelManager::getNumberOfLevels() {
-    int n = levelVector.size();
+    return levelVector.size();
+}
 
-    return n;
+bool LevelManager::isFound() const {
+    return found;
 }

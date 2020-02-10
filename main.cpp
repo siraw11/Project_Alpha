@@ -2,14 +2,17 @@
 #include "LevelManager.h"
 #include "GameLogic.h"
 #include "StateMachine/StateManager.h"
+
 int main() {
+    const int nFiles = 2;
+    std::string levelName[nFiles] = {"Levels/Level1","Levels/Level2"};
 
     GameLogic logic;
-    LevelManager* levelManager = new LevelManager;
+    LevelManager* levelManager = new LevelManager(levelName, nFiles);
     sf::Event event{};
     Input KeyBoardInput = Input::Null;
     StateManager* stateManager = new StateManager;
-    bool keypressed = false;
+    bool keyPressed = false;
     sf::Image icon;
     icon.loadFromFile("textures/gameIcon.png");
 
@@ -37,12 +40,12 @@ int main() {
                 if (event.key.code == sf::Keyboard::Escape) {
                     KeyBoardInput = Input::Escape;
                 }
-                keypressed = true;
+                keyPressed = true;
             }
         }
-        if (!keypressed) {
+        if (!keyPressed) {
             KeyBoardInput = Input::Null;
-            keypressed = false;
+            keyPressed = false;
         }
 
         stateManager->run(&window, KeyBoardInput, levelManager, &logic);

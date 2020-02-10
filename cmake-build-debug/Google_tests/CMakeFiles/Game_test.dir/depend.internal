@@ -41,6 +41,47 @@ Google_tests/CMakeFiles/Game_test.dir/TestCollision.cpp.o
  /home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
  /home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h
  /home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
+Google_tests/CMakeFiles/Game_test.dir/TestLevelManager.cpp.o
+ ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-matchers.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-message.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-param-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-printers.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-test-part.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-typed-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest.h
+ ../Google_tests/lib/googletest/include/gtest/gtest_pred_impl.h
+ ../Google_tests/lib/googletest/include/gtest/gtest_prod.h
+ ../Google_tests/lib/googletest/include/gtest/internal/custom/gtest-port.h
+ ../Google_tests/lib/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-filepath.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-internal.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-param-util.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-port-arch.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/Achievement.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstDeath.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Achievements/PotionAchievement.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Animation.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Collision.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Enemy.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/GameCharacter.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestLevelManager.cpp
+ /home/andreatadde/Scrivania/Esame_Programmazione/Hero.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Hud.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Input.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Level.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/Platform.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h
+ /home/andreatadde/Scrivania/Esame_Programmazione/RectangleShape.h
 Google_tests/CMakeFiles/Game_test.dir/TestObjects.cpp.o
  ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
  ../Google_tests/lib/googletest/include/gtest/gtest-matchers.h

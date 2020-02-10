@@ -94,6 +94,38 @@ AchievementNotifier.h
 Hud.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Hud.h
 
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.cpp
+AchievementScreen.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.h
+iostream
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/iostream
+../StateMachine/State_Main.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.h
+../Input.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Input.h
+SFML/Graphics.hpp
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/SFML/Graphics.hpp
+../Achievements/FirstBlood.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Achievements/FirstBlood.h
+../AchievementNotifier.h
+/home/andreatadde/Scrivania/Esame_Programmazione/AchievementNotifier.h
+../StateMachine/State_Main.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
+../StateMachine/StateManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/DeathScreen.cpp
+DeathScreen.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/DeathScreen.h
+../StateMachine/State_Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+../StateMachine/State_Main.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
+iostream
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/iostream
+
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/DeathScreen.h
 SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/SFML/Graphics.hpp
@@ -108,6 +140,14 @@ SFML/Graphics.hpp
 SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/SFML/Graphics.hpp
 
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.cpp
+Menu.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.h
+../StateMachine/State_Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+../StateMachine/State_Achievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.h
+
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.h
 ../Input.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Input.h
@@ -116,11 +156,29 @@ SFML/Graphics.hpp
 SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/SFML/Graphics.hpp
 
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.cpp
+NextLevelScreen.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.h
+iostream
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/iostream
+../StateMachine/State_Main.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
+../StateMachine/State_Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.h
 ../Input.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Input.h
 SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/SFML/Graphics.hpp
+
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Pause.cpp
+Pause.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Pause.h
+../StateMachine/State_Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+../StateMachine/State_Main.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
 
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Pause.h
 SFML/Graphics.hpp
@@ -144,14 +202,6 @@ Level.h
 
 /home/andreatadde/Scrivania/Esame_Programmazione/Input.h
 
-/home/andreatadde/Scrivania/Esame_Programmazione/Level.cpp
-Level.h
-/home/andreatadde/Scrivania/Esame_Programmazione/Level.h
-iostream
--
-Input.h
-/home/andreatadde/Scrivania/Esame_Programmazione/Input.h
-
 /home/andreatadde/Scrivania/Esame_Programmazione/Level.h
 SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/SFML/Graphics.hpp
@@ -167,6 +217,14 @@ PowerUp.h
 /home/andreatadde/Scrivania/Esame_Programmazione/PowerUp.h
 Bullet.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Bullet.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.cpp
+LevelManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
+stdlib.h
+/home/andreatadde/Scrivania/Esame_Programmazione/stdlib.h
+iostream
+/home/andreatadde/Scrivania/Esame_Programmazione/iostream
 
 /home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
 Level.h
@@ -202,6 +260,12 @@ SFML/Graphics.hpp
 ../GameLogic.h
 /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
 
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.cpp
+StateManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+State_Main.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
+
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
 SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/SFML/Graphics.hpp
@@ -213,6 +277,20 @@ SFML/Graphics.hpp
 /home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
 ../StateMachine/State.h
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.cpp
+State_Achievement.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Achievement.h
+State.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
+../Game_Screens/AchievementScreen.h
+/home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/AchievementScreen.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.cpp
+State_Death.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.h
 
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Death.h
 State.h
@@ -226,11 +304,31 @@ State.h
 ../Game_Screens/EndScreen.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/EndScreen.h
 
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.cpp
+State_Level.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+StateManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Level.h
+State.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.cpp
+State_Main.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
+StateManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
+
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Main.h
 State.h
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
 ../Game_Screens/Menu.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Menu.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_NextLevel.cpp
+State_NextLevel.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_NextLevel.h
 
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_NextLevel.h
 State.h
@@ -238,9 +336,23 @@ State.h
 ../Game_Screens/NextLevelScreen.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/NextLevelScreen.h
 
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Pause.cpp
+State_Pause.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Pause.h
+
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State_Pause.h
 State.h
 /home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/State.h
 ../Game_Screens/Pause.h
 /home/andreatadde/Scrivania/Esame_Programmazione/Game_Screens/Pause.h
+
+/home/andreatadde/Scrivania/Esame_Programmazione/main.cpp
+SFML/Graphics.hpp
+-
+LevelManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/LevelManager.h
+GameLogic.h
+/home/andreatadde/Scrivania/Esame_Programmazione/GameLogic.h
+StateMachine/StateManager.h
+/home/andreatadde/Scrivania/Esame_Programmazione/StateMachine/StateManager.h
 

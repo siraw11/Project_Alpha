@@ -198,6 +198,33 @@ TestCollision.cpp.s:
 	cd /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Game_test.dir/build.make Google_tests/CMakeFiles/Game_test.dir/TestCollision.cpp.s
 .PHONY : TestCollision.cpp.s
 
+TestLevelManager.o: TestLevelManager.cpp.o
+
+.PHONY : TestLevelManager.o
+
+# target to build an object file
+TestLevelManager.cpp.o:
+	cd /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Game_test.dir/build.make Google_tests/CMakeFiles/Game_test.dir/TestLevelManager.cpp.o
+.PHONY : TestLevelManager.cpp.o
+
+TestLevelManager.i: TestLevelManager.cpp.i
+
+.PHONY : TestLevelManager.i
+
+# target to preprocess a source file
+TestLevelManager.cpp.i:
+	cd /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Game_test.dir/build.make Google_tests/CMakeFiles/Game_test.dir/TestLevelManager.cpp.i
+.PHONY : TestLevelManager.cpp.i
+
+TestLevelManager.s: TestLevelManager.cpp.s
+
+.PHONY : TestLevelManager.s
+
+# target to generate assembly for a file
+TestLevelManager.cpp.s:
+	cd /home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug && $(MAKE) -f Google_tests/CMakeFiles/Game_test.dir/build.make Google_tests/CMakeFiles/Game_test.dir/TestLevelManager.cpp.s
+.PHONY : TestLevelManager.cpp.s
+
 TestObjects.o: TestObjects.cpp.o
 
 .PHONY : TestObjects.o
@@ -268,6 +295,9 @@ help:
 	@echo "... TestCollision.o"
 	@echo "... TestCollision.i"
 	@echo "... TestCollision.s"
+	@echo "... TestLevelManager.o"
+	@echo "... TestLevelManager.i"
+	@echo "... TestLevelManager.s"
 	@echo "... TestObjects.o"
 	@echo "... TestObjects.i"
 	@echo "... TestObjects.s"

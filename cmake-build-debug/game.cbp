@@ -591,6 +591,9 @@
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestCollision.cpp">
 			<Option target="Game_test"/>
 		</Unit>
+		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestLevelManager.cpp">
+			<Option target="Game_test"/>
+		</Unit>
 		<Unit filename="/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestObjects.cpp">
 			<Option target="Game_test"/>
 		</Unit>
