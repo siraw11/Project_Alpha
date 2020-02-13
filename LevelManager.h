@@ -34,6 +34,7 @@ private:
     std::vector<int *> vectorArray;
     int *levelArray;
     bool found;
+    bool corrupted;
 };
 
 

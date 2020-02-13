@@ -16,7 +16,6 @@ LevelManager::LevelManager(std::string* levelName,const int nFiles) {
         if(!fileLevel[i]){
             found = false;
             std::cerr << "File "<< i+1 <<" non trovato" << std::endl;
-            exit(3);
         }
         else{
             found = true;
@@ -25,15 +24,23 @@ LevelManager::LevelManager(std::string* levelName,const int nFiles) {
     }
 
     for (int j = 0; j < levelVector.size(); j++) {
+        corrupted=false;
         for (int i = 0; i < (arrayColumn * arrayRow); i++) {
-            *levelVector[j] >> x;
-            if (!levelVector[j]->good()) {
-                std::cerr << "Il file di Level " << j + 1 << " è corrotto" << std::endl;
-                exit(3);
+            if(!corrupted) {
+                *levelVector[j] >> x;
+                if (!levelVector[j]->good()) {
+                    std::cerr << "Il file di Level " << j + 1 << " è corrotto" << std::endl;
+                    corrupted = true;
+                }
             }
         }
+        if(corrupted)
+        levelVector.erase(levelVector.begin() + j);
     }
-
+    if(levelVector.empty()){
+        std::cerr << "Nessun file di livello utilizzabile" << std::endl;
+        exit(3);
+    }
     for (int i = 0; i < levelVector.size(); i++) {
         levelVector[i]->seekg(0, std::ios::beg);
         levelVector[i]->clear();
