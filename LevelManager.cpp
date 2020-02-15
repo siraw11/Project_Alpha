@@ -75,7 +75,9 @@ void LevelManager::setLevelNumber(int n){
 
 LevelManager::~LevelManager() {
 
-    delete levelArray;
+    for(int i=0;i<vectorArray.size();i++){
+        delete vectorArray[i];
+    }
     delete currentLevel;
 }
 
