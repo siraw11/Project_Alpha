@@ -4,14 +4,9 @@
 #include <gtest/gtest.h>
 #include <SFML/System.hpp>
 #include "../Hero.h"
-#include "../GameCharacter.h"
-#include "../RectangleShape.h"
-#include "../Bullet.h"
 #include "../Platform.h"
 #include "../Collision.h"
-#include "../GameLogic.h"
 #include <vector>
-#include <iostream>
 #include <cmath>
 
 TEST(Enemy,testIdle){

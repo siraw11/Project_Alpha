@@ -15,7 +15,7 @@
 
 TEST(Bullet,TestBulletCheckCollisionMap) {//Test per verificare se all'impatto con la mappa il priettile viene distrutto e se
     //la mappa rimane invariata
-    int ceckcoll = -1;
+    int checkColl = -1;
     Bullet bullet(false, sf::Vector2f(1, 0));
     std::vector<Bullet> vectorBullet;
     std::vector<Platform> vectorPlat;
@@ -29,14 +29,14 @@ TEST(Bullet,TestBulletCheckCollisionMap) {//Test per verificare se all'impatto c
 
     while(bullet.x<objectr.hitLeft-bullet.hitRight){
         bullet.fire();
-        ceckcoll=Collision::checkCollision(&vectorBullet,&vectorPlat);
-        ASSERT_EQ(ceckcoll,-1);
+        checkColl=Collision::checkCollision(&vectorBullet, &vectorPlat);
+        ASSERT_EQ(checkColl, -1);
     }
     while(bullet.x<=objectr.hitLeft){
-        ceckcoll=Collision::checkCollision(&vectorBullet,&vectorPlat);
+        checkColl=Collision::checkCollision(&vectorBullet, &vectorPlat);
         bullet.fire();
     }
-    ASSERT_EQ(ceckcoll,0);
+    ASSERT_EQ(checkColl, 0);
 }
 
 TEST(Bullet,TestBulletCheckCollisionEnemy) {//Test per verificare se all'impatto con un nemico il priettile viene distrutto  se

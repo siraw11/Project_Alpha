@@ -2,8 +2,8 @@
 // Created by davide on 29/10/19.
 //
 
-#ifndef GAME_LEVELMENAGER_H
-#define GAME_LEVELMENAGER_H
+#ifndef GAME_LEVELMANAGER_H
+#define GAME_LEVELMANAGER_H
 #define arrayRow 13
 #define arrayColumn 50
 
@@ -38,4 +38,4 @@ private:
 };
 
 
-#endif //GAME_LEVELMENAGER_H
+#endif //GAME_LEVELMANAGER_H

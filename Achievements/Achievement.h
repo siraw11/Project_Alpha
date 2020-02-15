@@ -33,7 +33,7 @@ private:
     sf::Font font;
     sf::Uint8 i = 50;
     sf::Uint8 opacity = 1;
-    bool nodraw = false;
+    bool noDraw = false;
     bool endDraw = false;
     unsigned int sizeText = 20;
 

@@ -44,7 +44,7 @@ LevelManager::LevelManager(std::string* levelName,const int nFiles) {
     for (int i = 0; i < levelVector.size(); i++) {
         levelVector[i]->seekg(0, std::ios::beg);
         levelVector[i]->clear();
-        levelArray = new int[arrayColumn * arrayRow]; //TODO Memory Leak!
+        levelArray = new int[arrayColumn * arrayRow];
         for (int j = 0; j < (arrayColumn * arrayRow); j++) {
             *levelVector[i] >> x;
             levelArray[j] = x;
@@ -74,8 +74,7 @@ void LevelManager::setLevelNumber(int n){
 }
 
 LevelManager::~LevelManager() {
-
-    for(int i=0;i<vectorArray.size();i++){
+    for(int i = 0; i < vectorArray.size(); i++){
         delete vectorArray[i];
     }
     delete currentLevel;

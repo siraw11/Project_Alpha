@@ -9,8 +9,7 @@
 
 AchievementNotifier::AchievementNotifier() = default;
 
-void AchievementNotifier::update(sf::Clock *clock, sf::RenderWindow *window, int enemyKilled, int potionCounter,
-                                 int deathCounter,sf::View* camera) {
+void AchievementNotifier::update(sf::Clock *clock, sf::RenderWindow *window, int enemyKilled, int potionCounter, int deathCounter,sf::View* camera) {
 
     if (enemyKilled == 1 && !firstBlood.achieved) {
         firstBlood.clock = clock;

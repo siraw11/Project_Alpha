@@ -17,7 +17,7 @@
 
 class Level {
 public:
-    explicit Level(int levelArray[], int colomun, int row);//Crea il livello mettendo tutti i tipi di oggetti nei vettori assegnati e ne setta le propietà
+    explicit Level(int levelArray[], int column, int row);//Crea il livello mettendo tutti i tipi di oggetti nei vettori assegnati e ne setta le propietà
 
     void Update(sf::RenderWindow *window);//Prende l'input da tastiera
 

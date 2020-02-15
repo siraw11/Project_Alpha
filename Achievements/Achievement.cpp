@@ -34,17 +34,17 @@ void Achievement::drawPopUp(sf::RenderWindow *window,sf::View* camera) {
     if (achieved) {
         firstFrame = clock->getElapsedTime();
     }
-    if (achieved && firstFrame + popUpLife >= clock->getElapsedTime() && !nodraw && !endDraw) {
+    if (achieved && firstFrame + popUpLife >= clock->getElapsedTime() && !noDraw && !endDraw) {
         textPopUp.setFillColor(sf::Color(0, 0, 0, i));
         window->draw(textPopUp);
         if (i <= 255) {
             i = i + opacity;
         }
         if (i == 255) {
-            nodraw = true;
+            noDraw = true;
         }
     }
-    if (achieved && (firstFrame + popUpLife + popUpLife) >= clock->getElapsedTime() && nodraw && !endDraw) {
+    if (achieved && (firstFrame + popUpLife + popUpLife) >= clock->getElapsedTime() && noDraw && !endDraw) {
         textPopUp.setFillColor(sf::Color(0, 0, 0, i));
         window->draw(textPopUp);
         if (i >= 0) {

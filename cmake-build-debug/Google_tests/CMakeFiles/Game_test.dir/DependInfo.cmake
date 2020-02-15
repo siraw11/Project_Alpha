@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/davide/Scrivania/Esame_Programmazione/Google_tests/TestCollision.cpp" "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestCollision.cpp.o"
-  "/home/davide/Scrivania/Esame_Programmazione/Google_tests/TestLevelManager.cpp" "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestLevelManager.cpp.o"
-  "/home/davide/Scrivania/Esame_Programmazione/Google_tests/TestObjects.cpp" "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestObjects.cpp.o"
-  "/home/davide/Scrivania/Esame_Programmazione/Google_tests/TestStrategyEnemy.cpp" "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestStrategyEnemy.cpp.o"
+  "/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestCollision.cpp" "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestCollision.cpp.o"
+  "/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestLevelManager.cpp" "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestLevelManager.cpp.o"
+  "/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestObjects.cpp" "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestObjects.cpp.o"
+  "/home/andreatadde/Scrivania/Esame_Programmazione/Google_tests/TestStrategyEnemy.cpp" "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/CMakeFiles/Game_test.dir/TestStrategyEnemy.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,9 +19,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/davide/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake"
+  "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/CMakeFiles/core.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

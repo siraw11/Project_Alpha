@@ -6,8 +6,6 @@
 #include "../LevelManager.h"
 #include <vector>
 #include <iostream>
-#include "fstream"
-
 
 TEST(LevelManager,TestFile){
     const int nFiles = 2;

@@ -5,7 +5,6 @@
 
 #include "Enemy.h"
 #include <cmath>
-
 #include "Idle.h"
 #include "Catch.h"
 #include "Attack.h"

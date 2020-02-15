@@ -33,29 +33,29 @@ void Hud::update(sf::RenderWindow *window, Level *level) {
     if (vector_of_hearts.size() > level->player.HP) {
         vector_of_hearts.pop_back();
     }
-    if (vector_of_enemyhp.size() < level->vector_of_enemy.size()) {
+    if (vector_of_enemyHp.size() < level->vector_of_enemy.size()) {
         for (int i = 0; i < level->vector_of_enemy.size(); i++) {
             sf::RectangleShape heart;
             heart.setTexture(&enemyHpTex);
             heart.setSize(sizeHeart);
-            vector_of_enemyhp.push_back(heart);
+            vector_of_enemyHp.push_back(heart);
         }
     }
-    if (vector_of_enemyhp.size() > level->vector_of_enemy.size()) {
-        vector_of_enemyhp.pop_back();
+    if (vector_of_enemyHp.size() > level->vector_of_enemy.size()) {
+        vector_of_enemyHp.pop_back();
     }
     for (int i = 0; i < vector_of_hearts.size(); i++) {
         vector_of_hearts[i].setPosition(level->camera.getCenter().x + (sizeHeart.x * i) + offset.x,
                                         level->camera.getCenter().y + offset.y);
         window->draw(vector_of_hearts[i]);
     }
-    for (int i = 0; i < vector_of_enemyhp.size(); i++) {
+    for (int i = 0; i < vector_of_enemyHp.size(); i++) {
         for (int j = 0; j < level->vector_of_enemy[i].HP; j++) {
-            vector_of_enemyhp[i].setPosition(
+            vector_of_enemyHp[i].setPosition(
                     level->vector_of_enemy[i].x + (j * sizeHeart.x) - ((level->vector_of_enemy[i].width) / 2),
                     level->vector_of_enemy[i].y - level->vector_of_enemy[i].height);
             if (j < level->vector_of_enemy[i].HP) {
-                window->draw(vector_of_enemyhp[i]);
+                window->draw(vector_of_enemyHp[i]);
             }
         }
     }

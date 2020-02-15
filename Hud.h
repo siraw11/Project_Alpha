@@ -17,7 +17,7 @@ public:
 
 private:
     std::vector<sf::RectangleShape> vector_of_hearts;
-    std::vector<sf::RectangleShape> vector_of_enemyhp;
+    std::vector<sf::RectangleShape> vector_of_enemyHp;
     sf::Texture playerHpTex;
     sf::Texture enemyHpTex;
     sf::Vector2f offset;

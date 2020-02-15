@@ -10,8 +10,7 @@ Bullet::Bullet(bool isPoweredUp, sf::Vector2f shootingDirectionInput) {
         bulletLife = bulletLife * bulletLifeMultiplier;
     }
     shootingDirection = shootingDirectionInput;
-    if (shootingDirection.y == 1)
-        this->rectShape.rotate(spriteDirectionDown); // Based on the direction the shape is rotated
+    if (shootingDirection.y == 1) this->rectShape.rotate(spriteDirectionDown); // Based on the direction the shape is rotated
     if (shootingDirection.y == -1) this->rectShape.rotate(spriteDirectionUp);
     if (shootingDirection.x == -1) this->rectShape.rotate(spriteDirectionLeft);
 

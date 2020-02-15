@@ -14,10 +14,6 @@ void Animation::setAnimation(sf::Texture *texture, sf::Vector2u imageCount, floa
     uvRect.height = texture->getSize().y / float(imageCount.y);
 }
 
-Animation::~Animation() {
-
-}
-
 void Animation::Update(int row, float deltaTime, bool facingRight) {
     currentImage.y = row; // Row identifies the type of animation
     totalTime += deltaTime;
@@ -37,4 +33,8 @@ void Animation::Update(int row, float deltaTime, bool facingRight) {
         uvRect.left = (currentImage.x + 1) * abs(uvRect.width);
         uvRect.width = -abs(uvRect.width);
     }
+}
+
+Animation::~Animation() {
+
 }
