@@ -1,19 +1,27 @@
 //
 // Created by Luca Graziotti on 2019-10-12.
 //
+#include <ResourceManager/ResourceFont.h>
 #include "MenuOption.h"
+#include "Game.h"
 
 MenuOption::MenuOption(const std::string &_text) {
-    font.loadFromFile("../fonts/Arial.ttf");
     option.setString(_text);
-    option.setColor(sf::Color::White);
+    option.setFillColor(sf::Color::White);
     option.setCharacterSize(40);
-    option.setFont(font);
-
+    option.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
 }
 
 MenuOption::~MenuOption() {
 
+}
+
+const std::string &MenuOption::getValue() const {
+    return value;
+}
+
+void MenuOption::setValue(const std::string &value) {
+    MenuOption::value = value;
 }
 
 
@@ -22,7 +30,7 @@ std::vector<MenuOption *> MenuOption::loadMainMenuOptions() {
     MenuOption *option;
     option = new MenuOption("Play");
     options.push_back(option);
-    option = new MenuOption("Settings");
+    option = new MenuOption("Shop");
     options.push_back(option);
     option = new MenuOption("Exit Game");
     options.push_back(option);

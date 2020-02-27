@@ -7,14 +7,21 @@
 
 #include <SFML/Graphics.hpp>
 #include <GameStates/StateMachine.h>
+#include "ResourceManager/ResourceManager.h"
 #include "GameEngine.h"
 #include "Match.h"
 
 struct GameData {
     StateMachine machine;
     sf::RenderWindow window;
-    std::shared_ptr<Match> match;
     std::shared_ptr<GameEngine> engine;
+    ResourceManager resources;
+
+
+    std::unique_ptr<Match> match;
+    std::unique_ptr<Player> player;
+    std::map<std::string, std::shared_ptr<Map>> levels;
+    std::map<std::string, std::shared_ptr<Bike>> bikes;
 };
 typedef std::shared_ptr<GameData> GameDataRef;
 
@@ -23,10 +30,8 @@ class Game {
 public:
     static GameDataRef gameData;
 
-    Game();
-
-private:
     static void Run();
+    Game();
 };
 
 

@@ -9,6 +9,7 @@
 
 GameLostState::GameLostState() {
     Game::gameData->engine->setPause(true);
+    Game::gameData->match->getTimer()->stop();
     this->menu = new Menu(MenuType::Home, GameLostState::loadMenu());
 }
 
@@ -45,7 +46,7 @@ void GameLostState::draw() {
         (*it)->option.setPosition(
                 sf::Vector2f(width, height + i * 100));
         if (i == menu->getSelectedItemIndex()) {
-            (*it)->option.setColor(sf::Color::Red);
+            (*it)->option.setFillColor(sf::Color(200, 100, 0));
         }
         Game::gameData->window.draw((*it)->option);
     }
@@ -65,8 +66,9 @@ void GameLostState::handleInput(sf::Event event) {
                     if (this->canRetry) {
                         switch (menu->getSelectedItemIndex()) {
                             case 0://Retry
-                                std::cout << "retry from last checkpoint:" << std::endl;
                                 Game::gameData->engine->respawn();
+                                Game::gameData->engine->run();
+                                Game::gameData->match->getTimer()->start();
                                 Game::gameData->machine.pop_state();
                                 break;
                         }

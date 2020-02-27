@@ -7,13 +7,17 @@
 #include "Bike.h"
 #include "Player.h"
 #include "Map.h"
+#include "Timer.h"
 
 
 class Match {
 public:
-    Match(Map *map = {}, Bike *b = {}, int lifes = 3, float time = 0.f, int money = 0, Position lastCheckpoint = {});
+    Match(std::shared_ptr<Map> = {}, std::shared_ptr<Bike> = {}, int lifes = 3, int money = 0,
+          Position lastCheckpoint = {0, 0});
 
-    Map *map;
+    const std::shared_ptr<Bike> &getBike() const;
+
+    void setBike(const std::shared_ptr<Bike> &bike);
 
     const Position &getLastCheckpoint() const;
 
@@ -21,6 +25,9 @@ public:
 
     virtual ~Match();
 
+    const std::shared_ptr<Map> &getMap() const;
+
+    void setMap(const std::shared_ptr<Map> &map);
 
     int getLifes() const;
 
@@ -28,41 +35,31 @@ public:
 
     void removeLife();
 
-    float getTime() const;
-
-    void setTime(float time);
-
     int getMoney() const;
 
     void setMoney(int money);
 
     void addMoney(int money);
 
-    Player *getPlayer() const;
 
-    void setPlayer(Player *player);
+    const std::shared_ptr<Timer> &getTimer() const;
 
-    Bike *getB() const;
+    void setTimer(const std::shared_ptr<Timer> &timer);
 
-    void setB(Bike *b);
+    int getFlips() const;
 
-    Bike *getBike() const;
+    void setFlips(int flips);
 
-    void setBike(Bike *bike);
-
-    Map *getMap() const;
-
-    void setMap(Map *map);
-
+    void addFlip();
 
 private:
     int lifes;
-    float time;
     int money;
-    Player* player;
-    Bike *bike;
+    int flips;
     Position lastCheckpoint;
-
+    std::shared_ptr<Timer> timer;
+    std::shared_ptr<Map> map;
+    std::shared_ptr<Bike> bike;
 };
 
 

@@ -3,58 +3,25 @@
 //
 
 #include "Map.h"
+
+#include <utility>
 #include "Observer.h"
 #include "Subject.h"
 #include "Player.h"
 #include "Coin.h"
 #include "SpeedBonus.h"
 #include "Checkpoint.h"
+#include "Game.h"
+#include "TimeBonus.h"
 
 
-Map::Map(bool _isCompleted, bool _isUnlocked, double _record, std::list<Position> _mapPoints, Player *_p,
-         std::list<Item *> _mapItems) : isCompleted(_isCompleted), record(_record), isUnlocked(_isUnlocked),
-                                        mapPoints(_mapPoints), p(_p), mapItems(_mapItems) {}
+Map::Map(std::string _id, std::string _name, bool _isCompleted, bool _isUnlocked, double _record,
+         std::list<Position> _mapPoints,
+         std::list<Item *> _mapItems) : id(std::move(_id)), name(std::move(_name)), isCompleted(_isCompleted),
+                                        record(_record),
+                                        isUnlocked(_isUnlocked),
+                                        mapPoints(std::move(_mapPoints)), mapItems(std::move(_mapItems)) {}
 
-
-void Map::loadLevel1() {
-
-    this->mapPoints = {
-            {-1,  10},//back limit
-            {0,   0.},
-            {3,   0.},
-            {8,   1},
-            {11,  0},
-            {15,  -1},
-            {20,  0},
-            {25,  0},
-            {30,  0.5},
-            {35,  -1},
-            {40,  0},
-            {43,  0},
-            {45,  1},
-            {100, 1},
-            {100, 10}//front limit
-    };
-
-    mapItems.push_back(new Coin(5, 0.8, .7, .7, 50));
-    mapItems.push_back(new Coin(7, 1, .7, .7, 30));
-    mapItems.push_back(new SpeedBonus(10, 1, 10, .7, .7, .7));
-    mapItems.push_back(new Checkpoint(25, 0, 1, 5));
-    mapItems.push_back(new Checkpoint(95, 1, 1, 5, true));
-}
-
-void Map::loadLevel2() {
-    mapPoints = {
-            {-1, 10},//back limit
-            {0,  0},
-            {30, 0},
-            {30, 10}//front limit
-    };
-
-    mapItems.push_back(new Coin(5, .2, .7, .7, 50));
-    mapItems.push_back(new Coin(7, .1, .7, .7, 30));
-    mapItems.push_back(new Checkpoint(28, 0, 1, 5, true));
-}
 
 bool Map::getIsCompleted() const {
     return isCompleted;
@@ -74,6 +41,10 @@ void Map::setIsUnlocked(bool isUnlocked) {
 
 double Map::getRecord() const {
     return record;
+}
+
+std::string Map::getRecordString() const {
+    return Game::gameData->match->getTimer()->elapsedString(this->record);
 }
 
 void Map::setRecord(double record) {
@@ -97,24 +68,28 @@ void Map::setMapItems(const std::list<Item *> &mapItems) {
     Map::mapItems = mapItems;
 }
 
-bool Map::removeMapItem(Item *item) {
-    mapItems.remove(item);
-    delete item;
-}
+void Map::resetItems() {
+    for (auto &item : mapItems) {
+        item->setTaken(false);
+    }
 
-
-void Map::update() {
-
-}
-
-void Map::attach() {
-    //TODO:implement
-}
-
-void Map::detach() {
-    //TODO:implement
 }
 
 Map::~Map() {
-    detach();
+}
+
+const std::string &Map::getName() const {
+    return name;
+}
+
+void Map::setName(const std::string &name) {
+    Map::name = name;
+}
+
+const std::string &Map::getId() const {
+    return id;
+}
+
+void Map::setId(const std::string &id) {
+    Map::id = id;
 }

@@ -5,7 +5,12 @@
 #include "gtest/gtest.h"
 #include "../Map.h"
 
-TEST(Map, DefaultConstraction){
+TEST(Map, DefaultConstructor) {
     Map m;
-    ASSERT_EQ(false,m.getIsUnlocked()); //check if the Map is unlocked
+    ASSERT_EQ(0, m.getRecord());
+    ASSERT_EQ(false, m.getIsCompleted());
+    ASSERT_EQ(false, m.getIsUnlocked());
+    ASSERT_NE("", m.getId());
+    ASSERT_NE("", m.getName());
+    ASSERT_EQ(0, m.getMapItems().size());
 }

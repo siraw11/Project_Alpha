@@ -8,18 +8,20 @@
 
 #include "Item.h"
 
-class Checkpoint: public Item {
+class Checkpoint : public Item {
 private:
     bool isEnd;
 
 public:
     explicit Checkpoint(double posX = 0, double posY = 0, double width = 0,
-                        double height = 0, bool isEnd = false, std::string texture = "../textures/coin.png");
+                        double height = 0, float angle = 0, bool isEnd = false,
+                        std::string texture = "checkpoint.png");
 
     ~Checkpoint();
 
 
     void doSpecial() override final;
+
 };
 
 

@@ -20,7 +20,6 @@ public:
 
     void run();
 
-
     float32 getTimeStep() const;
 
     int getFramerate() const;
@@ -49,9 +48,28 @@ public:
 
     void setPause(bool pause);
 
+    void speedChange(float increment);
+
+    void bikeAccellerate();
+
+    void bikeDecelerate();
+
+    void bikeBreak();
+
+    Position getBikePosition() const;
+
+    bool checkDeath();
+
+    void checkCollisions();
+
+    void step();
+
+    void draw();
+    
     void respawn();
+
+    void drawSpeedBonusAlert();
 private:
-    sf::RenderWindow *window;
     sf::View view;
 
     int framerate;
@@ -63,8 +81,6 @@ private:
     b2WheelJoint *wheelEngineR;
     b2Vec2 gravity = b2Vec2(0, 9.8);
     b2World world = b2World(gravity);
-    Map level = {};
-    Bike bike = {};
 
     const float SCALE = 200.;
     const float WHEEL_SIZE = 0.23;
@@ -79,12 +95,13 @@ private:
 
     void drawItem(Item *item);
 
+    void drawItems();
+
     void initBike();
 
     void drawInterface();
 
-
-    static bool checkCollision(float r1x, float r1y, float r1w, float r2x, float r2y, float r2w, float r2h);
+    static bool checkCollision(float r1x, float r1y, float r1w, float r1h, float r2x, float r2y, float r2w, float r2h);
 };
 
 

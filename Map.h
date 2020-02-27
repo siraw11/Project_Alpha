@@ -13,19 +13,15 @@
 #include "Item.h"
 
 
-
-class Map:Observer {
+class Map {
 
 public:
-    Map(bool isCompleted = 0, bool isUnlocked = 0, double record = 0, std::list<Position> mapPoints = {},
-        Player *p = nullptr, std::list<Item *> mapItems = {});
+    Map(std::string id = "n/d", std::string name = "n/d", bool isCompleted = false, bool isUnlocked = false,
+        double record = 0,
+        std::list<Position> mapPoints = {}, std::list<Item *> mapItems = {});
 
     virtual ~Map();
-    virtual void update() override;
-    virtual void attach() override;
-    virtual void detach() override;
 
-public:
     bool getIsCompleted() const;
 
     void setIsCompleted(bool isCompleted);
@@ -35,6 +31,8 @@ public:
     void setIsUnlocked(bool isUnlocked);
 
     double getRecord() const;
+
+    std::string getRecordString() const;
 
     void setRecord(double record);
 
@@ -46,21 +44,24 @@ public:
 
     void setMapItems(const std::list<Item *> &mapItems);
 
-    bool removeMapItem(Item *item);
+    const std::string &getName() const;
 
-    void loadLevel1();
+    void setName(const std::string &name);
 
-    void loadLevel2();
+    const std::string &getId() const;
 
+    void setId(const std::string &id);
+
+    void resetItems();
 
 private:
+    std::string id;
+    std::string name;
     bool isCompleted;
     bool isUnlocked;
     double record;
     std::list<Position> mapPoints;
     std::list<Item *> mapItems;
-    Player* p;
-
 };
 
 

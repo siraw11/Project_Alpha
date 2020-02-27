@@ -10,12 +10,14 @@
 #include "Game.h"
 
 
-Coin::Coin(double _posX, double _posY, double _width, double _height, int _value, std::string _texture) : Item(_posX,
-                                                                                                               _posY,
-                                                                                                               _width,
-                                                                                                               _height,
-                                                                                                               _texture),
-                                                                                                          value(_value) {}
+Coin::Coin(double _posX, double _posY, double _width, double _height, float _angle, int _value, std::string _texture)
+        : Item(_posX,
+               _posY,
+               _width,
+               _height,
+               _angle,
+               _texture),
+          value(_value) {}
 
 int Coin::getValue() const {
     return value;
@@ -26,7 +28,8 @@ void Coin::setValue(int value) {
 }
 
 void Coin::doSpecial(){
-    Game::gameData->match->addMoney(value);
-    std::cout << "Special! Addedd:" << value << "\ttotal:" << Game::gameData->match->getMoney() << " coins"
-              << std::endl;
+    if (!isTaken()) {
+        setTaken(true);
+        Game::gameData->match->addMoney(value);
+    }
 }

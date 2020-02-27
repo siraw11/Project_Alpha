@@ -17,10 +17,9 @@ struct Position {
     float posY;
 };
 
-class Player : public Subject {
+class Player {
 public:
-    Player(std::string username = "Player1", int totalCoin = 0, float posX = 0, float posY = 0, float angle = 0,
-           Bike *bike = nullptr);
+    explicit Player(std::string username = "Player", int totalCoin = 0);
 
     virtual ~Player();
 
@@ -30,41 +29,13 @@ public:
 
     int getTotalCoin() const;
 
-    void setTotalCoin(int totalCoin);
+    void addTotalCoin(int incrementCoin);
 
-    float getPosX() const;
-
-    void setPosX(float posX);
-
-    float getPosY() const;
-
-    void setPosY(float posY);
-
-    float getAngle() const;
-
-    void setAngle(float angle);
-
-    Bike *getBike() const;
-
-    void setBike(Bike *bike);
-
-    virtual void registerObserver(Observer *o) override ;
-
-    virtual void removeObserver(Observer *o) override ;
-
-    virtual void notifyObservers() override ;
-
-    void move(float x, float y, float a);
+    void removeTotalCoin(int decrementCoin);
 
 private:
     std::string username;
     int totalCoin;
-    float posX;
-    float posY;
-    float angle;
-    Bike *bike;
-
-    std::list<Observer*> observers;
 };
 
 

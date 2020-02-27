@@ -4,9 +4,11 @@
 
 #include <Menu.h>
 #include <Game.h>
+#include <ResourceManager/ResourceFont.h>
 #include "SelectLevelState.h"
 #include "GameState.h"
 #include "MenuHomeState.h"
+#include "SelectBikeState.h"
 
 SelectLevelState::SelectLevelState() {
     this->menu = new Menu(MenuType::Home, SelectLevelState::loadLevelsOptions());
@@ -21,22 +23,27 @@ std::vector<MenuOption *> SelectLevelState::loadLevelsOptions() {
     std::vector<MenuOption *> options;
     MenuOption *option;
 
+    int i = 0;
+    bool unlockNext = false;
+    for (auto it = Game::gameData->levels.begin(); it != Game::gameData->levels.end(); ++it, ++i) {
+        if (unlockNext) {
+            it->second->setIsUnlocked(unlockNext);
+        }
+        unlockNext = it->second->getIsCompleted();
 
-    option = new MenuOption("Level 1");
-    options.push_back(option);
-
-    //TODO: aggiungere riconoscimento se mappa bloccata
-    option = new MenuOption("Level 2");
-    options.push_back(option);
-    option = new MenuOption("Level 3 (locked)");
-    options.push_back(option);
-    lockedLevelsIndexes.push_front(2);
-
+        if (it->second->getIsUnlocked()) {
+            option = new MenuOption(it->second->getName());
+        } else {
+            option = new MenuOption(it->second->getName() + " (locked)");
+        }
+        option->setValue(it->second->getId());
+        options.push_back(option);
+    }
     option = new MenuOption("Back");
+    option->setValue("back");
     options.push_back(option);
     return options;
 }
-
 
 
 void SelectLevelState::update() {
@@ -47,23 +54,41 @@ void SelectLevelState::draw() {
     std::vector<MenuOption *>::iterator it;
     float width = Game::gameData->window.getView().getCenter().x;
     float height = Game::gameData->window.getView().getCenter().y;
-    int i = 0;
 
-    for (it = menu->options.begin(); it != menu->options.end(); it++, i++) {
+
+    sf::Text textHeader;
+    textHeader.setPosition(width, height);
+    textHeader.setFont(Game::gameData->resources.getResource<ResourceFont *>("arial.ttf")->getFont());
+    textHeader.setCharacterSize(80);
+    textHeader.setPosition(width, height - 250);
+    textHeader.setFillColor(sf::Color(50, 50, 100));
+    textHeader.setString("Select Level");
+    Game::gameData->window.draw(textHeader);
+
+
+    int i = 0;
+    for (it = menu->options.begin(), i = 0; it != menu->options.end(); it++, i++) {
         (*it)->option.setPosition(sf::Vector2f(width, height + i * 100));
-        bool isLockedLevel =
-                std::find(lockedLevelsIndexes.begin(), lockedLevelsIndexes.end(), i) != lockedLevelsIndexes.end();
-        if (i == menu->getSelectedItemIndex()) {
-            if (!isLockedLevel) {
-                (*it)->option.setColor(sf::Color::Red);
+        (*it)->option.setFillColor(sf::Color::White);
+        if (i < Game::gameData->levels.size()) {
+            if (Game::gameData->levels.at((*it)->getValue())->getIsUnlocked()) {
+                if (i == menu->getSelectedItemIndex()) {
+                    (*it)->option.setFillColor(sf::Color(200, 100, 0));
+                }
             } else {
-                (*it)->option.setColor(sf::Color(100, 10, 100));
+                if (i == menu->getSelectedItemIndex()) {
+                    (*it)->option.setFillColor(sf::Color(200, 100, 100));
+                } else {
+                    (*it)->option.setFillColor(sf::Color(10, 10, 100));
+                }
             }
         } else {
-            if (isLockedLevel) {
-                (*it)->option.setColor(sf::Color(10, 10, 100));
+            if (i == menu->getSelectedItemIndex()) {
+                (*it)->option.setFillColor(sf::Color(200, 100, 0));
             }
         }
+
+
         Game::gameData->window.draw((*it)->option);
     }
 }
@@ -79,29 +104,22 @@ void SelectLevelState::handleInput(sf::Event event) {
                     menu->MoveUp();
                     break;
                 case sf::Keyboard::Enter:
-                    switch (menu->getSelectedItemIndex()) {
-                        case 0://Level 1
-                            std::cout << "Level 1 selected" << std::endl;
-                            Game::gameData->match->map = new Map();
-                            Game::gameData->match->map->loadLevel1();
-                            Game::gameData->machine.push_state(StateRef(new GameState(true)));
-                            break;
-                        case 1://Level 2
-                            std::cout << "Level 2 selected" << std::endl;
-                            Game::gameData->match->map = new Map();
-                            Game::gameData->match->map->loadLevel2();
-                            Game::gameData->machine.push_state(StateRef(new GameState(true)));
-                            break;
-                        case 2://Level 3
-                            std::cout << "Level 3 selected" << std::endl;
-                            break;
-                        case 3://Back to home menu
-                            Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
-                            break;
+                    std::string actionValue = menu->options.at(menu->getSelectedItemIndex())->getValue();
+                    if (actionValue == "back") {
+                        Game::gameData->machine.push_state(StateRef(new MenuHomeState()));
+                    } else {
+                        if (actionValue.find("lv") != std::string::npos) {//controllo sia un livello
+                            auto level = Game::gameData->levels.at(actionValue);
+                            if (level->getIsUnlocked()) {
+                                Game::gameData->match->setMap(level);
+                                Game::gameData->match->getMap()->resetItems();
+                                Game::gameData->match->setLifes(3);
+                                Game::gameData->match->setFlips(0);
+                                Game::gameData->machine.push_state(StateRef(new SelectBikeState()));
+                            } else {
+                            }
+                        }
                     }
-                    break;
-                default:
-                    break;
             }
             break;
         default:

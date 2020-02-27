@@ -6,10 +6,16 @@
 #define MOTOCROSS2D_MENUPAUSESTATE_H
 
 #include <GameEngine.h>
+#include <Menu.h>
 #include "State.h"
 
 class MenuPauseState : public State {
+public:
+    MenuPauseState();
+
+    ~MenuPauseState();
 private:
+    Menu *menu;
     void update() override;
 
     void draw() override;

@@ -7,8 +7,9 @@ include_directories(.)
 set(EXECUTABLE_NAME Motocross2D)
 
 set(SOURCE_FILES
-        Game.h Game.cpp Player.cpp Player.h Bike.cpp Bike.h GameEngine.h GameEngine.cpp Item.h Item.cpp Map.h Map.cpp Coin.cpp Coin.h SpeedBonus.cpp SpeedBonus.h Checkpoint.cpp Checkpoint.h TimeBonus.cpp TimeBonus.h Subject.cpp Subject.h Observer.cpp Observer.h Match.cpp Match.h Menu.cpp Menu.h MenuOption.h MenuOption.cpp
-        GameStates/State.h GameStates/StateMachine.cpp GameStates/StateMachine.h GameStates/GameState.h GameStates/GameState.cpp GameStates/MenuHomeState.cpp GameStates/MenuHomeState.h GameStates/MenuPauseState.h GameStates/MenuPauseState.cpp GameStates/SelectLevelState.cpp GameStates/SelectLevelState.h GameStates/GameWinState.cpp GameStates/GameWinState.h GameStates/GameLostState.cpp GameStates/GameLostState.h)
+        Game.h Game.cpp Player.cpp Player.h Bike.cpp Bike.h GameEngine.h GameEngine.cpp Item.h Item.cpp Map.h Map.cpp Coin.cpp Coin.h SpeedBonus.cpp SpeedBonus.h Checkpoint.cpp Checkpoint.h TimeBonus.cpp TimeBonus.h Subject.cpp Subject.h Observer.cpp Observer.h Match.cpp Match.h Menu.cpp Menu.h MenuOption.h MenuOption.cpp Timer.cpp Timer.h SpeedMalus.cpp SpeedMalus.h
+        ResourceManager/ResourceManager.cpp ResourceManager/ResourceManager.h ResourceManager/ResourceManagerException.h ResourceManager/ResourceManagerException.cpp ResourceManager/Resource.cpp ResourceManager/Resource.h ResourceManager/ResourceTexture.cpp ResourceManager/ResourceTexture.h ResourceManager/ResourceFont.h ResourceManager/ResourceFont.cpp ResourceManager/LevelFactory.cpp ResourceManager/LevelFactory.h ResourceManager/BikeFactory.cpp ResourceManager/BikeFactory.h ResourceManager/ResourceMap.h ResourceManager/ResourceMap.cpp
+        GameStates/State.h GameStates/StateMachine.cpp GameStates/StateMachine.h GameStates/GameState.h GameStates/GameState.cpp GameStates/MenuHomeState.cpp GameStates/MenuHomeState.h GameStates/MenuPauseState.h GameStates/MenuPauseState.cpp GameStates/SelectLevelState.cpp GameStates/SelectLevelState.h GameStates/GameWinState.cpp GameStates/GameWinState.h GameStates/GameLostState.cpp GameStates/GameLostState.h GameStates/ShopState.cpp GameStates/ShopState.h GameStates/SelectBikeState.cpp GameStates/SelectBikeState.h)
 
 
 add_library(core ${SOURCE_FILES})
