@@ -1,4 +1,4 @@
-# Install script for directory: /home/andreatadde/Scrivania/Esame_Programmazione
+# Install script for directory: /home/waris/CLionProjects/Project_Alpha
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,12 +37,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/Google_tests/cmake_install.cmake")
-
-endif()
-
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
@@ -51,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/andreatadde/Scrivania/Esame_Programmazione/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

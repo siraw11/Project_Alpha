@@ -1,45 +1,17 @@
-cmake_minimum_required(VERSION 3.11)
-project(game)
+cmake_minimum_required(VERSION 3.12)
+project(Project_Alpha)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
-find_package(SFML 2 COMPONENTS audio graphics window system network REQUIRED)
-
-add_executable(game main.cpp Game_Screens/Menu.cpp Game_Screens/Menu.h RectangleShape.cpp RectangleShape.h
-        Collision.cpp Collision.h Bullet.cpp Bullet.h Level.cpp Level.h Platform.cpp Platform.h
-        GameCharacter.cpp GameCharacter.h Hero.cpp Hero.h PowerUp.cpp PowerUp.h
-        GameLogic.cpp GameLogic.h Enemy.cpp Enemy.h Animation.cpp Animation.h Input.cpp Input.h Game_Screens/Pause.cpp Game_Screens/Pause.h
-        Game_Screens/DeathScreen.cpp Game_Screens/DeathScreen.h AchievementNotifier.cpp AchievementNotifier.h
-        Achievements/Achievement.cpp Achievements/Achievement.h Achievements/FirstBlood.cpp Achievements/FirstBlood.h
-        Achievements/FirstDeath.cpp Achievements/FirstDeath.h
-        Achievements/PotionAchievement.cpp Achievements/PotionAchievement.h Aggro.cpp Aggro.h Idle.cpp Idle.h
-        Catch.cpp Catch.h Attack.cpp Attack.h ReturnHome.cpp ReturnHome.h Game_Screens/NextLevelScreen.cpp Game_Screens/NextLevelScreen.h
-        LevelManager.cpp LevelManager.h Hud.cpp Hud.h StateMachine/State_Level.cpp StateMachine/State.h StateMachine/State.cpp
-        StateMachine/State_Main.cpp StateMachine/State_Main.h StateMachine/StateManager.h StateMachine/StateManager.cpp
-        StateMachine/State_Achievement.cpp StateMachine/State_Achievement.h StateMachine/State_Death.cpp
-        StateMachine/State_Death.h StateMachine/State_Pause.cpp StateMachine/State_Pause.h
-        StateMachine/State_NextLevel.cpp StateMachine/State_NextLevel.h Game_Screens/AchievementScreen.cpp Game_Screens/AchievementScreen.h)
-target_include_directories(game PUBLIC "${SFML_INCLUDE_DIRS}")
-
+include_directories(Project_Alpha)
+set(SOURCE_FILE main.cpp  GameManager/AssetManager.hpp GameManager/AssetManager.cpp GameManager/DEFINITIONS.hpp GameManager/Game.hpp GameManager/Game.cpp GameManager/InputManager.cpp GameManager/InputManager.hpp
+        GameStates/GameOverState.cpp GameStates/GameOverState.hpp GameStates/GameState.cpp GameStates/GameState.hpp GameStates/MainMenuState.hpp GameStates/MainMenuState.cpp GameStates/PauseState.cpp
+        GameStates/PauseState.hpp GameStates/SelectClassState.cpp GameStates/SelectClassState.h GameStates/SplashState.cpp GameStates/SplashState.hpp GameStates/State.hpp GameStates/StateMachine.cpp
+        GameStates/StateMachine.hpp Tile.cpp Tile.h map.cpp map.h GameCharacter.cpp GameCharacter.h Hero.cpp Hero.h PlayerType.h  Collision.cpp Archer.cpp Archer.h Knight.cpp Knight.h CharacterFactory.cpp CharacterFactory.h Mage.cpp Mage.h
+        Collision.h Enemy.cpp Enemy.h Random.cpp Random.h Weapon.cpp Weapon.h Item.cpp Item.h Projectile.cpp Projectile.h)
+add_executable(Project_Alpha_ROOT ${SOURCE_FILE})
+find_package(SFML 2 COMPONENTS network audio graphics window system REQUIRED)
 if (SFML_FOUND)
-    target_link_libraries(game sfml-graphics sfml-window sfml-audio sfml-system)
+    target_link_libraries(Project_Alpha_ROOT sfml-graphics sfml-window sfml-system)
+
 endif ()
-
-add_subdirectory(Google_tests)
-
-add_library(core Game_Screens/Menu.cpp Game_Screens/Menu.h RectangleShape.cpp RectangleShape.h
-        Collision.cpp Collision.h Bullet.cpp Bullet.h Level.cpp Level.h Platform.cpp Platform.h
-        GameCharacter.cpp GameCharacter.h Hero.cpp Hero.h PowerUp.cpp PowerUp.h
-        GameLogic.cpp GameLogic.h Enemy.cpp Enemy.h Animation.cpp Animation.h Input.cpp Input.h Game_Screens/Pause.cpp Game_Screens/Pause.h
-        Game_Screens/DeathScreen.cpp Game_Screens/DeathScreen.h AchievementNotifier.cpp AchievementNotifier.h
-        Achievements/Achievement.cpp Achievements/Achievement.h Achievements/FirstBlood.cpp Achievements/FirstBlood.h
-        Achievements/FirstDeath.cpp Achievements/FirstDeath.h
-        Achievements/PotionAchievement.cpp Achievements/PotionAchievement.h Aggro.cpp Aggro.h Idle.cpp Idle.h
-        Catch.cpp Catch.h Attack.cpp Attack.h ReturnHome.cpp ReturnHome.h Game_Screens/NextLevelScreen.cpp Game_Screens/NextLevelScreen.h
-        LevelManager.cpp LevelManager.h Hud.cpp Hud.h StateMachine/State_Level.cpp StateMachine/State.h StateMachine/State.cpp
-        StateMachine/State_Main.cpp StateMachine/State_Main.h StateMachine/StateManager.h StateMachine/StateManager.cpp
-        StateMachine/State_Achievement.cpp StateMachine/State_Achievement.h StateMachine/State_Death.cpp
-        StateMachine/State_Death.h StateMachine/State_Pause.cpp StateMachine/State_Pause.h
-        StateMachine/State_NextLevel.cpp StateMachine/State_NextLevel.h Game_Screens/AchievementScreen.cpp Game_Screens/AchievementScreen.h
-        Game_Screens/EndScreen.cpp Game_Screens/EndScreen.h StateMachine/State_End.cpp StateMachine/State_End.h)
-target_link_libraries(game core)

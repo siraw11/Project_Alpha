@@ -1,26 +1,57 @@
 //
-// Created by andreatadde on 18/09/19.
+// Created by matteo on 19/03/20.
 //
 
 #include "GameCharacter.h"
+#include "Collision.h"
+#include "map.h"
 
-GameCharacter::GameCharacter() {
-    velocity.x = 0;
-    velocity.y = 0;
+GameCharacter::GameCharacter(int hp, int s, int sp){
+    if(hp <= 0 || s <= 0 || sp <= 0){
+        throw std::out_of_range("Negative Value");
+    }else{
+        life = hp;
+        strength = s;
+        speed = sp;
+    }
+
+    setSize(sf::Vector2f(32,32));
+
 }
 
-float GameCharacter::getMoveSpeed() const {
-    return moveSpeed;
+int GameCharacter::getLife() const {
+    return life;
 }
 
-void GameCharacter::setMoveSpeed(float moveSpeed) {
-    GameCharacter::moveSpeed = moveSpeed;
+void GameCharacter::setLife(int life) {
+    GameCharacter::life = life;
 }
 
-void GameCharacter::setAnimation(const std::string &textureDir, unsigned int xFrames, unsigned int yFrames) {
-    RectangleShape::setTexture(textureDir);
-    // SetAnimation need a texture, number of frames and an update frequency
-    animation.setAnimation(&rectTexture, sf::Vector2u(xFrames, yFrames), switch_time);
+int GameCharacter::getSpeed() const {
+    return speed;
+}
+
+void GameCharacter::setSpeed(int speed) {
+    GameCharacter::speed = speed;
+}
+
+int GameCharacter::getStrength() const {
+    return strength;
+}
+
+void GameCharacter::setStrength(int strength) {
+    GameCharacter::strength = strength;
 }
 
 GameCharacter::~GameCharacter() = default;
+
+bool GameCharacter::collisionLinker(const map &level, int x, int y) {
+    std::vector<Tile> vect= level.tile_vector;
+
+    return Collision::checkCollision(vect, this, x, y);
+
+}
+
+void GameCharacter::takeDamage(int damage) {
+    life-=damage;
+}

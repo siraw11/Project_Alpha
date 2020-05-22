@@ -1,33 +1,36 @@
 //
-// Created by andreatadde on 18/09/19.
+// Created by matteo on 19/03/20.
 //
 
-#ifndef GAME_HERO_H
-#define GAME_HERO_H
+#ifndef PROGETTO_PROVA_HERO_H
+#define PROGETTO_PROVA_HERO_H
+
 
 #include "GameCharacter.h"
-#include "Platform.h"
+#include "PlayerType.h"
+#include "Enemy.h"
 
-//Classe addebita alla gestione del giocatore
-class Hero : public GameCharacter {
+
+class Hero: public GameCharacter {
 public:
-    Hero();
-    virtual ~Hero();
+    Hero(int hp, int s,int sp);
+    ~Hero() override;
 
-    void update(bool W, bool A, bool S, bool D, std::vector<Platform> *platform);//Gestisce il movimento da input da tastiera
+    void heroMovement(int x, int y, const map& level);
 
-    bool getIsPowerBullet() const;
-    void setIsPowerBullet(bool isPowerBullet);
+    int walkingDirection=2;//0=up, 1=left, 2=down, 3=right
 
-    int HP = 5;
+    // PlayerType playerType;
+
+    void fight(Enemy &enemy);
+
+protected:
+
 
 private:
-    bool isPowerBullet;
-    //---Animation variables--//
-    float delta_time = 1.0 / 60.f;
-    unsigned int frame_x = 3;
-    unsigned int frame_y = 9;
+    int counterWalking=0;
+    void walkingAnimation();
 };
 
 
-#endif //GAME_HERO_H
+#endif //PROGETTO_PROVA_HERO_H

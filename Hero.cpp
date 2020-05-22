@@ -1,67 +1,49 @@
 //
-// Created by andreatadde on 18/09/19.
+// Created by matteo on 19/03/20.
 //
 
+#include <iostream>
 #include "Hero.h"
-#include "Collision.h"
 
-Hero::Hero() { //Setting dei parametri iniziali e texture
-    setAnimation("textures/tux_from_linux.png", frame_x, frame_y);
+#include "GameManager/DEFINITIONS.hpp"
 
-    isPowerBullet = false;
-    moveSpeed = 0.6f;
-    jumpPower = 6.8f;
-    gravityAcc = 0.15f;
-    gravityMax = 1.8f;//ricaduta
-    facingRight = true;
-    row = 0;
+
+Hero::Hero(int hp, int s,int sp):GameCharacter(hp,s,sp){
+
+    setOrigin(getPosition().x +getGlobalBounds().width/10 ,getPosition().y +getGlobalBounds().height / 6);
+
+    setPosition(sf::Vector2f(300,300));
+
+
 }
 
-void Hero::update(bool W, bool A, bool S, bool D, std::vector<Platform> *platform) {
-    x = this->rectShape.getPosition().x;
-    y = this->rectShape.getPosition().y;
+void Hero::heroMovement(int x, int y, const map& level) {
 
-    // Y movements
-    if (W && isOnGround) {
-        velocity.y = jumpPower * -1.f;
-        row = 2;
-    }
-    if (!isOnGround) {
-        velocity.y += gravityAcc;
-        if (velocity.y > gravityMax) velocity.y = gravityMax;
+    sf::Vector2f movement(x*speed,y*speed);
+
+    if(this->collisionLinker(level,x,y)) {
+        movement.x=0;
+        movement.y=0;
+    }else{
+        walkingAnimation();
     }
 
-    // X movements
-    if (A) {
-        velocity.x = -1.f;
-        facingRight = false;
-        row = 1;
-    }
-    if (D) {
-        velocity.x = 1.f;
-        facingRight = true;
-        row = 1;
+    move(movement);
 
-    }
-    if (!(A || D)) {
-        velocity.x = 0.f;
-        row = 0;
-    }
-    Collision::checkCollision(platform, this); // Managing the collisions with the map
-    this->rectShape.setPosition(this->x, this->y); // Updating the position of the player
-    // Updating the texture based on the animation
-    animation.Update(row, delta_time, facingRight);
-    rectShape.setTextureRect(animation.uvRect);
 }
 
-bool Hero::getIsPowerBullet() const {
-    return isPowerBullet;
+void Hero::walkingAnimation() {
+    if(counterWalking!=8){
+        setTextureRect(sf::IntRect(64*counterWalking,64*walkingDirection,64,64));
+        counterWalking++;
+    }else{
+        counterWalking=0;
+    }
+
 }
 
-void Hero::setIsPowerBullet(bool isPowerBullet) {
-    Hero::isPowerBullet = isPowerBullet;
+void Hero::fight(Enemy &enemy) {
+    enemy.takeDamage(1);
 }
 
 Hero::~Hero() = default;
-
-

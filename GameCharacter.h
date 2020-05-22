@@ -1,37 +1,45 @@
+//
+// Created by matteo on 19/03/20.
+//
 
-#ifndef GAME_GAMECHARACTER_H
-#define GAME_GAMECHARACTER_H
+#ifndef PROGETTO_PROVA_GAMECHARACTER_H
+#define PROGETTO_PROVA_GAMECHARACTER_H
 
-#include "RectangleShape.h"
-#include "Animation.h"
 
-//Classe derivata per nemici e per il player implementa il movimento e le animazioni
-class GameCharacter : public RectangleShape {
+#include <SFML/Graphics.hpp>
+
+
+class map;
+
+
+class GameCharacter:public sf::RectangleShape {
+
 public:
-    GameCharacter();
+    GameCharacter(int hp, int s, int sp);
     virtual ~GameCharacter();
 
-    float getMoveSpeed() const;//getter velocità
-    void setMoveSpeed(float moveSpeed);//setter velocità
+    int getLife() const;
 
-    void setAnimation(const std::string &textureDir, unsigned int xFrames, unsigned int yFrames);//setta l'animazione
+    void setLife(int life);
 
-    bool isOnGround;
-    sf::Vector2f velocity;
+    int getStrength() const;
+
+    void setStrength(int strength);
+
+    int getSpeed() const;
+
+    void setSpeed(int speed);
+
+    bool collisionLinker(const map &level, int x, int y);
+
+    void takeDamage(int damage);
+
 protected:
-    // Movement parameters
-    float moveSpeed;
-    float jumpPower;
-    // Gravity parameters
-    float gravityAcc;
-    float gravityMax;
-    // Animation parameters
-    Animation animation;
-    bool facingRight;
-    int row;
-    float switch_time = 0.2f;
-
+    int strength;
+    int speed;
+    int life;
 };
 
 
-#endif //GAME_GAMECHARACTER_H
+
+#endif //PROGETTO_PROVA_GAMECHARACTER_H

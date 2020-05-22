@@ -1,31 +1,31 @@
 //
-// Created by andreatadde on 23/10/19.
+// Created by matteo on 10/04/20.
 //
 
-#ifndef GAME_ENEMY_H
-#define GAME_ENEMY_H
+#ifndef PROGETTO_PROVA_ENEMY_H
+#define PROGETTO_PROVA_ENEMY_H
+
 
 #include "GameCharacter.h"
-#include "Hero.h"
-#include "Platform.h"
-#include "SFML/Graphics.hpp"
-#include <memory>
 
-class Aggro;
-class Enemy : public GameCharacter {
+class Enemy : public GameCharacter{
 public:
-    Enemy();
+    Enemy(int hp, int s, int sp);
+    ~Enemy() override;
 
-    void aggroUpdate(Hero* player, sf::Time time, std::vector<Platform> *platform);
+    void movement(map& level);
+    void walkingAnimation();
 
-    std::shared_ptr<Aggro> aggro;
-    int HP = 2;
-    int damage = 1;
-    sf::Vector2f range;
-    //Attack parameters
-    sf::Time lastAttackTime = sf::seconds(0);
-    sf::Time attackReload = sf::seconds(2);
+    sf::Vector2f spawnposition;
+
+private:
+    int direction=0;// 1=up,2=down,3=left,4=right
+    int walkingRate=0;
+    int counterWalking=0;
+
+
+
 };
 
 
-#endif //GAME_ENEMY_H
+#endif //PROGETTO_PROVA_ENEMY_H
