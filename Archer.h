@@ -1,34 +1,24 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 31/03/20.
 //
 
-#ifndef EXAM_PROJECT_ARCHER_H
-#define EXAM_PROJECT_ARCHER_H
-
-#include "GameCharacter.h"
+#ifndef PROGETTO_PROVA_ARCHER_H
+#define PROGETTO_PROVA_ARCHER_H
 
 
-class Archer {
+#include "Hero.h"
+
+class Archer: public Hero {
 public:
-    Archer();
+    Archer(int hp, int s, int sp, int ar);
 
-    int getArrows() const;
-
-    void setArrows(int arrows);
-
-    void setRange(int range);
-
-    int getRange() const;
-
-    void fightA(GameCharacter *enemy);
-
-
-
+    void Attack();
 
 private:
-
-    int range;
     int arrows;
+    int range=4;
 
 };
-#endif //EXAM_PROJECT_ARCHER_H
+
+
+#endif //PROGETTO_PROVA_ARCHER_H

@@ -5,7 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/waris/CLionProjects/Project_Alpha/Archer.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
-  "/home/waris/CLionProjects/Project_Alpha/Classes.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/CharacterFactory.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/Collision.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Enemy.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/GameCharacter.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o"
@@ -22,11 +23,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/waris/CLionProjects/Project_Alpha/Item.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Knight.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Mage.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o"
-  "/home/waris/CLionProjects/Project_Alpha/Map.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Map.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Projectile.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Random.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/Tile.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Weapon.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/main.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/map.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

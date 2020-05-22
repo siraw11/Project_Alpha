@@ -1,27 +1,26 @@
 //
-// Created by waris on 20/06/19.
+//
+// Created by matteo on 31/03/20.
 //
 
-#ifndef EXAM_PROJECT_KNIGHT_H
-#define EXAM_PROJECT_KNIGHT_H
+#ifndef PROGETTO_PROVA_KNIGHT_H
+#define PROGETTO_PROVA_KNIGHT_H
 
-#include "GameCharacter.h"
 
-class Knight  {
+#include "Hero.h"
+
+class Knight : public Hero{
 public:
-    Knight(int a , int hp, int s , int sp);
-    ~Knight() ;
+    Knight(int hp, int s, int sp, int a);
 
-   /* void fight(GameCharacter* enemy);
-    void TakeDamage(int damage);*/
+    void Attack();
 
     int getArmor() const;
-
     void setArmor(int armor);
-protected:
+private:
     int armor;
-
 
 };
 
-#endif //EXAM_PROJECT_KNIGHT_H
+
+#endif //PROGETTO_PROVA_KNIGHT_H

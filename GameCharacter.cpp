@@ -1,14 +1,12 @@
 //
-// Created by matteo on 20/06/19.
+// Created by matteo on 19/03/20.
 //
 
 #include "GameCharacter.h"
-#include <stdexcept>
-#include <iostream>
+#include "Collision.h"
+#include "map.h"
 
-using namespace std;
-
-GameCharacter::GameCharacter(int hp, int s, int sp): weapon(nullptr){
+GameCharacter::GameCharacter(int hp, int s, int sp){
     if(hp <= 0 || s <= 0 || sp <= 0){
         throw std::out_of_range("Negative Value");
     }else{
@@ -16,52 +14,44 @@ GameCharacter::GameCharacter(int hp, int s, int sp): weapon(nullptr){
         strength = s;
         speed = sp;
     }
+
+    setSize(sf::Vector2f(32,32));
+
 }
 
-
-void GameCharacter::setStrength(int strength) {
-    GameCharacter::strength = strength;
-}
-
-
-Weapon* GameCharacter::getWeapon() const {
-    return weapon;
-}
-
-void GameCharacter::setWeapon(Weapon *weapon) {
-    this->weapon = weapon;
-}
-
-void GameCharacter::Attack(GameCharacter &enemy) {
-    int point=strength;
-    //cout<<point<<endl;
-    if(weapon!=nullptr)
-        point+=weapon->getStrength();
-    enemy.TakeDamage(point);
-}
-
-
-void GameCharacter::TakeDamage(int point) {
-    life -= point;
+int GameCharacter::getLife() const {
+    return life;
 }
 
 void GameCharacter::setLife(int life) {
     GameCharacter::life = life;
 }
 
-GameCharacter::~GameCharacter(){
-    if(weapon!= nullptr)
-        delete weapon;
+int GameCharacter::getSpeed() const {
+    return speed;
 }
 
-int GameCharacter::animation(int n, int direction) {
+void GameCharacter::setSpeed(int speed) {
+    GameCharacter::speed = speed;
+}
 
-    if (n > 0) {
-        int k = n - 1;
-        setTextureRect((sf::IntRect(64 * k, 64 * direction, 64, 64)));
-        n++;
-    }
+int GameCharacter::getStrength() const {
+    return strength;
+}
 
-    return n;
+void GameCharacter::setStrength(int strength) {
+    GameCharacter::strength = strength;
+}
 
+GameCharacter::~GameCharacter() = default;
+
+bool GameCharacter::collisionLinker(const map &level, int x, int y) {
+    std::vector<Tile> vect= level.tile_vector;
+
+    return Collision::checkCollision(vect, this, x, y);
+
+}
+
+void GameCharacter::takeDamage(int damage) {
+    life-=damage;
 }

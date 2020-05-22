@@ -8,10 +8,11 @@
 #include <SFML/System.hpp>
 #include <iostream>
 #include <ctime>
+#include "Tile.h"
 
 int generateRandom(int max);
 
-sf::Vector2f generateRandomPos(int *level);
+sf::Vector2f generateRandomPos(std::vector<Tile>& tile_vector);
 
 int generatePosX();
 

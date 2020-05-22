@@ -1,5 +1,17 @@
-/opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/waris/CLionProjects/Project_Alpha
--- Found SFML 2.5.0 in /usr/lib/x86_64-linux-gnu/cmake/SFML
+/opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/waris/CLionProjects/Project_Alpha
+-- Found SFML 2.5.1 in /usr/lib/x86_64-linux-gnu/cmake/SFML
 -- Configuring done
--- Generating done
--- Build files have been written to: /home/waris/CLionProjects/Project_Alpha/cmake-build-debug
+CMake Error at CMakeLists.txt:12 (add_executable):
+  Cannot find source file:
+
+    map.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:12 (add_executable):
+  No SOURCES given to target: Project_Alpha_ROOT
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

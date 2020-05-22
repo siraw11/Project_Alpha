@@ -1,99 +1,49 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 19/03/20.
 //
 
+#include <iostream>
 #include "Hero.h"
 
+#include "GameManager/DEFINITIONS.hpp"
 
-Hero::Hero(int hp, int s, int sp):GameCharacter(hp,s,sp)/*,item(nullptr)*/{
 
+Hero::Hero(int hp, int s,int sp):GameCharacter(hp,s,sp){
+
+    setOrigin(getPosition().x +getGlobalBounds().width/10 ,getPosition().y +getGlobalBounds().height / 6);
+
+    setPosition(sf::Vector2f(300,300));
 
 
 }
-/*Item *Hero::getItem() const {
-    return item;
-}
 
-void Hero::setItem(Item *item) {
-    Hero::item = item;
-}*/
+void Hero::heroMovement(int x, int y, const map& level) {
 
-void Hero::heroMovement(int *level) {
-    int x, y;
-    const int SCALE = 3;
+    sf::Vector2f movement(x*speed,y*speed);
 
-    if (direction == 1) {
-        // up movement
-        x = (int) (getPosition().x) / 32 / SCALE;
-        y = (int) ((getPosition().y - 1) / 32 / SCALE);
-
-        if (level[120 * y + x] == 0) {
-            move(0, -getSpeed());
-        } else {//wall up problem fix
-            float offset = 0;
-            while (true) {
-                offset += 0.01;
-                y = static_cast<int>((getPosition().y + offset) / 32 / SCALE);
-                if (level[120 * y + x] == 0) {
-                    move(0, offset);
-                    break;
-                }
-            }
-        }
-    } else if (direction == 2) {
-        //down movement
-        x = (int) (getPosition().x) / 32 / SCALE;
-        y = (int) ((getPosition().y) / 32 / SCALE) + 1;
-        if (level[120 * y + x] == 0) {
-            move(0, getSpeed());
-        } else {
-            //wall down problem fix
-            float offset = 0;
-            while (true) {
-                offset += 0.01;
-                y = static_cast<int>((getPosition().y - offset) / 32 / SCALE);
-                if (level[120 * y + x] == 0) {
-                    move(0, -offset);
-                    break;
-                }
-            }
-        }
-    }else if(direction==3){
-        // left movement
-        x = (int) ((getPosition().x - 1) / 32 / SCALE);
-        y = (int) (getPosition().y) / 32 / SCALE;
-        if (level[120 * y + x] == 0) {
-            move(-getSpeed(), 0);
-        } else {
-            //wall left problem fix
-            float offset = 0;
-            while (true) {
-                offset += 0.01;
-                x = static_cast<int>((getPosition().x + offset) / 32 /SCALE);
-                if (level[120 * y + x] == 0) {
-                    move(offset, 0);
-                    break;
-                }
-            }
-        }
-    }else if(direction==4){
-        //right movement
-        x = (int) ((getPosition().x) / 32 / SCALE) + 1;
-        y = (int) (getPosition().y) / 32 / SCALE;
-        if (level[120 * y + x] == 0) {
-
-            move(getSpeed(), 0);
-        } else {
-            //wall right problem fix
-            float offset = 0;
-            while (true) {
-                offset += 0.01;
-                x = static_cast<int>((getPosition().x - offset) / 32 /SCALE);
-                if (level[120 * y + x] == 0) {
-                    move(-offset, 0);
-                    break;
-                }
-            }
-        }
+    if(this->collisionLinker(level,x,y)) {
+        movement.x=0;
+        movement.y=0;
+    }else{
+        walkingAnimation();
     }
+
+    move(movement);
+
 }
+
+void Hero::walkingAnimation() {
+    if(counterWalking!=8){
+        setTextureRect(sf::IntRect(64*counterWalking,64*walkingDirection,64,64));
+        counterWalking++;
+    }else{
+        counterWalking=0;
+    }
+
+}
+
+void Hero::fight(Enemy &enemy) {
+    enemy.takeDamage(1);
+}
+
+Hero::~Hero() = default;

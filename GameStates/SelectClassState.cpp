@@ -8,7 +8,7 @@
 #include "GameState.hpp"
 #include "PauseState.hpp"
 #include "../GameManager/DEFINITIONS.hpp"
-#include "../PlayerType.h"
+//#include "../PlayerType.h"
 
 
 

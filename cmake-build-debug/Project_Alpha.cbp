@@ -92,10 +92,16 @@
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Archer.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Classes.cpp">
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/CharacterFactory.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Classes.h">
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Collision.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Collision.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Enemy.cpp">
@@ -200,12 +206,6 @@
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Mage.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Map.cpp">
-			<Option target="Project_Alpha_ROOT"/>
-		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Map.h">
-			<Option target="Project_Alpha_ROOT"/>
-		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/PlayerType.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
@@ -221,6 +221,12 @@
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Random.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Tile.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Tile.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Weapon.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
@@ -228,6 +234,12 @@
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/main.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/map.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/map.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/CMakeLists.txt">

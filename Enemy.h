@@ -1,30 +1,31 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 10/04/20.
 //
 
-#ifndef EXAM_PROJECT_ENEMY_H
-#define EXAM_PROJECT_ENEMY_H
+#ifndef PROGETTO_PROVA_ENEMY_H
+#define PROGETTO_PROVA_ENEMY_H
 
-#include "Knight.h"
-#include "Mage.h"
-#include "Archer.h"
 
-class Enemy: public GameCharacter{
+#include "GameCharacter.h"
+
+class Enemy : public GameCharacter{
 public:
-    Enemy(int hp,int s, int sp);
-    // ~Enemy() override;
-    //void TakeDamage(int point) override;
+    Enemy(int hp, int s, int sp);
+    ~Enemy() override;
 
-    int direction;
+    void movement(map& level);
+    void walkingAnimation();
+
+    sf::Vector2f spawnposition;
+
+private:
+    int direction=0;// 1=up,2=down,3=left,4=right
+    int walkingRate=0;
     int counterWalking=0;
-    int walkingRate;
-    int counterDeath=0;
-    sf::Vector2f spawnPosition;
-
-    void movement(const int *level);
 
 
 
 };
 
-#endif //EXAM_PROJECT_ENEMY_H
+
+#endif //PROGETTO_PROVA_ENEMY_H

@@ -5,7 +5,7 @@
 
 #define SCREEN_HEIGHT 1080
 
-#define SPLASH_STATE_SHOW_TIME 0.5
+#define SPLASH_STATE_SHOW_TIME 0.1
 
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
 
@@ -38,5 +38,13 @@
 #define STATE_LOSE 2
 
 #define  STATE_PLAYING 0
+
+#define SCALE 3
+
+#define TILE_WIDTH 32
+
+#define TILE_HEIGHT 32
+
+#define ENEMY_WALK_DISTANCE 320
 
 
