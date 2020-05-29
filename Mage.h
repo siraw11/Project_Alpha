@@ -1,33 +1,23 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 31/03/20.
 //
 
-#ifndef EXAM_PROJECT_MAGE_H
-#define EXAM_PROJECT_MAGE_H
-
-#include "GameCharacter.h"
+#ifndef PROGETTO_PROVA_MAGE_H
+#define PROGETTO_PROVA_MAGE_H
 
 
-class Mage{
+#include "Hero.h"
 
+class Mage: public Hero {
 public:
-    Mage(int hp, int s, int sp);
-    ~Mage();
+    Mage(int hp, int s,int sp, int m);
 
-    int getRange() const;
-
-    void setRange(int range);
-
-    int getMana() const;
-
-    void setMana(int mana);
-
-    //void fight(GameCharacter* enemy);
+    void Attack();
 
 private:
-
-    int range;
     int mana;
+
 };
 
-#endif //EXAM_PROJECT_MAGE_H
+
+#endif //PROGETTO_PROVA_MAGE_H

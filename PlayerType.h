@@ -1,13 +1,12 @@
 //
-// Created by waris on 26/10/19.
+// Created by matteo on 19/03/20.
 //
 
-#ifndef PROJECT_ALPHA_PLAYERTYPE_H
-#define PROJECT_ALPHA_PLAYERTYPE_H
+#ifndef PROGETTO_PROVA_PLAYERTYPE_H
+#define PROGETTO_PROVA_PLAYERTYPE_H
 
-
-enum class PlayerType {
-    ARCHER, MAGE, KNIGHT
+enum class PlayerType{
+    ARCHER,KNIGHT,MAGE
 };
 
-#endif //PROJECT_ALPHA_PLAYERTYPE_H
+#endif //PROGETTO_PROVA_PLAYERTYPE_H

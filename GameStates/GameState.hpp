@@ -3,29 +3,29 @@
 #include <SFML/Graphics.hpp>
 #include "State.hpp"
 #include "../GameManager/Game.hpp"
-
+#include "../PlayerType.h"
 
 
 namespace Alpha
 {
-	class GameState : public State
-	{
-	public:
-		explicit GameState(GameDataRef data,PlayerType playerType);
+    class GameState : public State
+    {
+    public:
+        explicit GameState(GameDataRef data,PlayerType playerType);
 
-		void Init() override;
+        void Init() override;
 
-		void HandleInput()override ;
-		void Update() override;
-		void Draw() override;
+        void HandleInput()override ;
+        void Update() override;
+        void Draw() override;
 
-	private:
-	    PlayerType playerType;
+    private:
+        PlayerType playerType;
 
-	    GameDataRef _data;
+        GameDataRef _data;
 
-	    int gameState{};
+        int gameState{};
 
-		sf::Clock _clock;
-	};
+        sf::Clock _clock;
+    };
 }

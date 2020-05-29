@@ -1,29 +1,22 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 31/03/20.
 //
 
 #include "Archer.h"
 
-Archer::Archer() {
+Archer::Archer(int hp, int s, int sp, int ar):Hero(hp,s,sp),arrows(ar) {
+
+    auto heroTexture= new sf::Texture;
+    heroTexture->loadFromFile("../Resources/Sprites/Hero/archer.png");
+    setTexture(heroTexture);
+    setTextureRect(sf::IntRect(0, 128, 64, 64));
+
+    setScale(sf::Vector2f(3.5,3.5));
+
 
 }
 
-int Archer::getArrows() const {
-    return 0;
-}
+void Archer::Attack() {
 
-void Archer::setArrows(int arrows) {
-
-}
-
-void Archer::setRange(int range) {
-
-}
-
-int Archer::getRange() const {
-    return 0;
-}
-
-void Archer::fightA(GameCharacter *enemy) {
 
 }

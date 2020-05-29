@@ -1,32 +1,20 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 31/03/20.
 //
 
-#include <stdexcept>
 #include "Knight.h"
 
-Knight::Knight(int a, int hp, int s, int sp) {
-    if (a<0){
-        throw std::out_of_range("negative values");
-    }else{
-        armor=a;
-    }
+Knight::Knight(int hp, int s, int sp, int a) :Hero(hp,s,sp){
+
+    auto heroTexture= new sf::Texture;
+    heroTexture->loadFromFile("../Resources/Sprites/Hero/knight.png");
+    setTexture(heroTexture);
+    setTextureRect(sf::IntRect(0, 128, 64, 64));
+
+    setScale(sf::Vector2f(3.f,3.f));
+
+    armor=a;
 }
-
-Knight::~Knight() {}
-
-/*void Knight::fight(GameCharacter* enemy) {
-    int damage=0;
-    damage=strength+weapon->getStrength();
-
-    TakeDamage(damage);
-}*/
-
-/*void Knight::TakeDamage(int damage) {
-if(armor>=0)
-    damage-=armor;
-life-=damage;
-}*/
 
 int Knight::getArmor() const {
     return armor;
@@ -34,4 +22,8 @@ int Knight::getArmor() const {
 
 void Knight::setArmor(int armor) {
     Knight::armor = armor;
+}
+
+void Knight::Attack() {
+
 }

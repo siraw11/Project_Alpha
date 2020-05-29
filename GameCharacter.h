@@ -1,52 +1,45 @@
 //
-// Created by matteo on 20/06/19.
+// Created by matteo on 19/03/20.
 //
 
-#ifndef EXAM_PROJECT_GAMECHARACTER_H
-#define EXAM_PROJECT_GAMECHARACTER_H
+#ifndef PROGETTO_PROVA_GAMECHARACTER_H
+#define PROGETTO_PROVA_GAMECHARACTER_H
 
-#include "Weapon.h"
-//#include "Map.h"
+
 #include <SFML/Graphics.hpp>
-class GameCharacter:public sf::Sprite {
+
+
+class map;
+
+
+class GameCharacter:public sf::RectangleShape {
+
 public:
     GameCharacter(int hp, int s, int sp);
     virtual ~GameCharacter();
 
+    int getLife() const;
 
-    Weapon *getWeapon() const;
-    void setWeapon(Weapon* weapon);
-
-    int getLife() const {
-        return life;
-    }
     void setLife(int life);
 
-    int getStrength() const {
-        return strength;
-    }
+    int getStrength() const;
 
     void setStrength(int strength);
-    int getSpeed() const {
-        return speed;
-    }
 
-    void Attack(GameCharacter &enemy);
-    virtual void TakeDamage(int point);
+    int getSpeed() const;
 
-    int animation(int n, int direction);
+    void setSpeed(int speed);
 
+    bool collisionLinker(const map &level, int x, int y);
 
+    void takeDamage(int damage);
 
 protected:
-
-    int life;
     int strength;
     int speed;
-
-
-    Weapon* weapon;
-
+    int life;
 };
 
-#endif //EXAM_PROJECT_GAMECHARACTER_H
+
+
+#endif //PROGETTO_PROVA_GAMECHARACTER_H

@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2019.2.5/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.3.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/waris/CLionProjects/Project_Alpha/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion-2019.2.5/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -150,32 +150,59 @@ Archer.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
 .PHONY : Archer.cpp.s
 
-Classes.o: Classes.cpp.o
+CharacterFactory.o: CharacterFactory.cpp.o
 
-.PHONY : Classes.o
+.PHONY : CharacterFactory.o
 
 # target to build an object file
-Classes.cpp.o:
-	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.o
-.PHONY : Classes.cpp.o
+CharacterFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
+.PHONY : CharacterFactory.cpp.o
 
-Classes.i: Classes.cpp.i
+CharacterFactory.i: CharacterFactory.cpp.i
 
-.PHONY : Classes.i
+.PHONY : CharacterFactory.i
 
 # target to preprocess a source file
-Classes.cpp.i:
-	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.i
-.PHONY : Classes.cpp.i
+CharacterFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i
+.PHONY : CharacterFactory.cpp.i
 
-Classes.s: Classes.cpp.s
+CharacterFactory.s: CharacterFactory.cpp.s
 
-.PHONY : Classes.s
+.PHONY : CharacterFactory.s
 
 # target to generate assembly for a file
-Classes.cpp.s:
-	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Classes.cpp.s
-.PHONY : Classes.cpp.s
+CharacterFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s
+.PHONY : CharacterFactory.cpp.s
+
+Collision.o: Collision.cpp.o
+
+.PHONY : Collision.o
+
+# target to build an object file
+Collision.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
+.PHONY : Collision.cpp.o
+
+Collision.i: Collision.cpp.i
+
+.PHONY : Collision.i
+
+# target to preprocess a source file
+Collision.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i
+.PHONY : Collision.cpp.i
+
+Collision.s: Collision.cpp.s
+
+.PHONY : Collision.s
+
+# target to generate assembly for a file
+Collision.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s
+.PHONY : Collision.cpp.s
 
 Enemy.o: Enemy.cpp.o
 
@@ -609,33 +636,6 @@ Mage.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s
 .PHONY : Mage.cpp.s
 
-Map.o: Map.cpp.o
-
-.PHONY : Map.o
-
-# target to build an object file
-Map.cpp.o:
-	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Map.cpp.o
-.PHONY : Map.cpp.o
-
-Map.i: Map.cpp.i
-
-.PHONY : Map.i
-
-# target to preprocess a source file
-Map.cpp.i:
-	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Map.cpp.i
-.PHONY : Map.cpp.i
-
-Map.s: Map.cpp.s
-
-.PHONY : Map.s
-
-# target to generate assembly for a file
-Map.cpp.s:
-	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Map.cpp.s
-.PHONY : Map.cpp.s
-
 Projectile.o: Projectile.cpp.o
 
 .PHONY : Projectile.o
@@ -771,6 +771,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+map.o: map.cpp.o
+
+.PHONY : map.o
+
+# target to build an object file
+map.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
+.PHONY : map.cpp.o
+
+map.i: map.cpp.i
+
+.PHONY : map.i
+
+# target to preprocess a source file
+map.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i
+.PHONY : map.cpp.i
+
+map.s: map.cpp.s
+
+.PHONY : map.s
+
+# target to generate assembly for a file
+map.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s
+.PHONY : map.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -783,9 +810,12 @@ help:
 	@echo "... Archer.o"
 	@echo "... Archer.i"
 	@echo "... Archer.s"
-	@echo "... Classes.o"
-	@echo "... Classes.i"
-	@echo "... Classes.s"
+	@echo "... CharacterFactory.o"
+	@echo "... CharacterFactory.i"
+	@echo "... CharacterFactory.s"
+	@echo "... Collision.o"
+	@echo "... Collision.i"
+	@echo "... Collision.s"
 	@echo "... Enemy.o"
 	@echo "... Enemy.i"
 	@echo "... Enemy.s"
@@ -834,9 +864,6 @@ help:
 	@echo "... Mage.o"
 	@echo "... Mage.i"
 	@echo "... Mage.s"
-	@echo "... Map.o"
-	@echo "... Map.i"
-	@echo "... Map.s"
 	@echo "... Projectile.o"
 	@echo "... Projectile.i"
 	@echo "... Projectile.s"
@@ -852,6 +879,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... map.o"
+	@echo "... map.i"
+	@echo "... map.s"
 .PHONY : help
 
 

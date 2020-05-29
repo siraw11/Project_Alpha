@@ -1,25 +1,21 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 18/04/20.
 //
 
-#ifndef EXAM_PROJECT_WEAPON_H
-#define EXAM_PROJECT_WEAPON_H
+#ifndef PROGETTO_PROVA_WEAPON_H
+#define PROGETTO_PROVA_WEAPON_H
 
-#include <stdexcept>
 
-class Weapon{
+class Weapon {
 public:
-    Weapon(int s,int l);
-
-    void setStrength(int strength);
-
-    int getStrength() const;
-
+    Weapon(int s, int l);
+    ~Weapon();
+    int getStrenght() const;
 
 private:
-    int strength;
+    int strenght;
     int level;
-
 };
 
-#endif //EXAM_PROJECT_WEAPON_H
+
+#endif //PROGETTO_PROVA_WEAPON_H

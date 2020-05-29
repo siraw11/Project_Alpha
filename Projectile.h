@@ -1,27 +1,24 @@
 //
-// Created by matteo on 07/10/19.
+// Created by matteo on 22/04/20.
 //
 
-#ifndef PROJECT_ALPHA_PROJECTILE_H
-#define PROJECT_ALPHA_PROJECTILE_H
+#ifndef PROGETTO_PROVA_PROJECTILE_H
+#define PROGETTO_PROVA_PROJECTILE_H
 
-#include <SFML/Graphics/Sprite.hpp>
-#include <SFML/Graphics/Texture.hpp>
+
+#include <SFML/Graphics/RectangleShape.hpp>
 #include "PlayerType.h"
 
-
-class Projectile : public sf::Sprite{
-
+class Projectile: public sf::RectangleShape {
 public:
     explicit Projectile(PlayerType playerType);
-    ~Projectile()override;
-    int attackSpeed=20;
-    int direction{};//right=2,down=0,left=1,up=3
-    int counterAttack=0;
-    //int counterProjectile;
-    sf::Vector2f projectileStart;
-    void update();
-    bool controlCollision(const int level[10080]);
+    ~Projectile() override;
+
+    int direction{};//0=down,1=left,2=right,3=up
+    int projectile_speed=20;
+
+    void updateProjectile();
 };
 
-#endif //PROJECT_ALPHA_PROJECTILE_H
+
+#endif //PROGETTO_PROVA_PROJECTILE_H

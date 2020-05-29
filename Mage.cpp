@@ -1,31 +1,21 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 31/03/20.
 //
 
 #include "Mage.h"
 
-Mage::Mage(int hp, int s, int sp){}
-Mage::~Mage() {}
+Mage::Mage(int hp, int s, int sp, int m) : Hero(hp,s,sp){
 
-int Mage::getRange() const {
-    return range;
+    auto heroTexture= new sf::Texture ;
+    heroTexture->loadFromFile("../Resources/Sprites/Hero/mage.png");
+    setTexture(heroTexture);
+    setTextureRect(sf::IntRect(0, 128, 64, 64));
+
+    setScale(sf::Vector2f(3.f,3.f));
+
+    mana=m;
 }
 
-void Mage::setRange(int range) {
-    Mage::range = range;
-}
+void Mage::Attack() {
 
-int Mage::getMana() const {
-    return mana;
 }
-
-void Mage::setMana(int mana) {
-    Mage::mana = mana;
-}
-
-/*void Mage::fight(GameCharacter* enemy){
-    if(mana>0){
-        Attack(*enemy);
-        mana--;
-    }
-}*/

@@ -9,29 +9,29 @@
 
 namespace Alpha
 {
-	struct GameData
-	{
+    struct GameData
+    {
         int playerType;
-		StateMachine machine;
-		sf::RenderWindow window;
-		AssetManager assets;
-		InputManager input;
-	};
+        StateMachine machine;
+        sf::RenderWindow window;
+        AssetManager assets;
+        InputManager input;
+    };
 
-	typedef std::shared_ptr<GameData> GameDataRef;
+    typedef std::shared_ptr<GameData> GameDataRef;
 
-	class Game
-	{
-	public:
-		explicit Game( const std::string& title);
+    class Game
+    {
+    public:
+        explicit Game( const std::string& title);
 
-	private:
-		// Updates run at 60 per second.
-		const float dt = 1.0f / 60.0f;
-		sf::Clock _clock;
+    private:
+        // Updates run at 60 per second.
+        const float dt = 1.0f / 60.0f;
+        sf::Clock _clock;
 
-		GameDataRef _data = std::make_shared<GameData>();
+        GameDataRef _data = std::make_shared<GameData>();
 
-		void Run();
-	};
+        void Run();
+    };
 }

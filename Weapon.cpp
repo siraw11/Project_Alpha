@@ -1,25 +1,14 @@
 //
-// Created by waris on 20/06/19.
+// Created by matteo on 18/04/20.
 //
 
 #include "Weapon.h"
 
-Weapon::Weapon(int s, int l) {
-    if(strength<=0||level<=0){
-        throw std::out_of_range("Negative value");
-    }else{
-        strength=s;
-        level=l;
-    }
-
+Weapon::Weapon(int s, int l):strenght(s), level(l) {
 }
 
-
-
-int Weapon::getStrength() const {
-    return strength;
+int Weapon::getStrenght() const {
+    return strenght;
 }
 
-void Weapon::setStrength(int strength) {
-    Weapon::strength = strength;
-}
+Weapon::~Weapon() = default;
