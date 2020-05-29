@@ -36,7 +36,7 @@ void Projectile::update() {
         move(0,-attackSpeed);
 }
 
-bool Projectile::controlCollision( const int *level) {
+bool Projectile::controlCollision( const int level[10080]) {
 
     int x,y, SCALE=3;
 

@@ -125,7 +125,6 @@ namespace Alpha {
         int attackAnimation = 0;
 
         while (this->_data->window.isOpen()) {
-
             sf::Event event2{};
             while (this->_data->window.pollEvent(event2)) {
                 if (event2.type == sf::Event::Closed)
@@ -229,17 +228,16 @@ namespace Alpha {
 
                     if(i->controlCollision(level)){
                         projectileArray.erase(i);
-                        //std::cout<<"cazzosi"<<std::endl;
+
                         i--;
 
                     }else if (std::abs(i->getPosition().x-i->projectileStart.x)>=640 || std::abs(i->getPosition().y-i->projectileStart.y)>=640){
                         projectileArray.erase(i);
-                        //std::cout<<"cazzosisssssss"<<std::endl;
+
                         i--;
                     }else if(i->getGlobalBounds().intersects(j.getGlobalBounds())){
                         hero->Attack(j);
                         projectileArray.erase(i);
-                        //std::cout<<"cazzosiluca"<<std::endl;
                         i--;
                     }
                 }

@@ -11,7 +11,7 @@
 class GameCharacter:public sf::Sprite {
 public:
     GameCharacter(int hp, int s, int sp);
-    ~GameCharacter() override;
+    virtual ~GameCharacter();
 
 
     Weapon *getWeapon() const;

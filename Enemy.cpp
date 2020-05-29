@@ -19,7 +19,7 @@ Enemy::Enemy(int hp, int s, int sp) :GameCharacter(hp,s,sp) {
 
 //Enemy::~Enemy() {}
 
-void Enemy::movement(const int *level){
+void Enemy::movement(const int level[10080]){
     //enemy movement, random direction
     if(walkingRate==24)
     {
@@ -76,4 +76,7 @@ void Enemy::movement(const int *level){
     }
 
 
+}
+
+Enemy::~Enemy() {
 }

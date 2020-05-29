@@ -690,6 +690,33 @@ Random.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s
 .PHONY : Random.cpp.s
 
+Tile.o: Tile.cpp.o
+
+.PHONY : Tile.o
+
+# target to build an object file
+Tile.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
+.PHONY : Tile.cpp.o
+
+Tile.i: Tile.cpp.i
+
+.PHONY : Tile.i
+
+# target to preprocess a source file
+Tile.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i
+.PHONY : Tile.cpp.i
+
+Tile.s: Tile.cpp.s
+
+.PHONY : Tile.s
+
+# target to generate assembly for a file
+Tile.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s
+.PHONY : Tile.cpp.s
+
 Weapon.o: Weapon.cpp.o
 
 .PHONY : Weapon.o
@@ -816,6 +843,9 @@ help:
 	@echo "... Random.o"
 	@echo "... Random.i"
 	@echo "... Random.s"
+	@echo "... Tile.o"
+	@echo "... Tile.i"
+	@echo "... Tile.s"
 	@echo "... Weapon.o"
 	@echo "... Weapon.i"
 	@echo "... Weapon.s"
