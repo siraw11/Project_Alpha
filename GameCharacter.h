@@ -7,6 +7,7 @@
 
 
 #include <SFML/Graphics.hpp>
+#include "Tile.h"
 
 
 class map;
@@ -30,7 +31,7 @@ public:
 
     void setSpeed(int speed);
 
-    bool collisionLinker(const map &level, int x, int y);
+    bool collisionLinker(const std::vector<Tile>& tile_vector, int x, int y);
 
     void takeDamage(int damage);
 

@@ -8,6 +8,7 @@
 #include "GameManager/DEFINITIONS.hpp"
 
 
+
 Hero::Hero(int hp, int s,int sp):GameCharacter(hp,s,sp){
 
     setOrigin(getPosition().x +getGlobalBounds().width/10 ,getPosition().y +getGlobalBounds().height / 6);
@@ -17,11 +18,11 @@ Hero::Hero(int hp, int s,int sp):GameCharacter(hp,s,sp){
 
 }
 
-void Hero::heroMovement(int x, int y, const map& level) {
+void Hero::heroMovement(int x, int y, const std::vector<Tile>& tile_vector) {
 
     sf::Vector2f movement(x*speed,y*speed);
 
-    if(this->collisionLinker(level,x,y)) {
+    if(this->collisionLinker(tile_vector,x,y)) {
         movement.x=0;
         movement.y=0;
     }else{

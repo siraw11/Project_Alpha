@@ -18,7 +18,7 @@ Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
 
 }
 
-void Enemy::movement(map& level) {
+void Enemy::movement(const std::vector<Tile>& tile_vector) {
 
     //make the enemy move in random direction for n steps
     if(walkingRate==24)
@@ -47,7 +47,7 @@ void Enemy::movement(map& level) {
     }
 
     sf::Vector2f movement(getSpeed()*x,getSpeed()*y);
-    if(collisionLinker(level, x, y)){
+    if(collisionLinker(tile_vector, x, y)){
         movement.x=0;
         movement.y=0;
     }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*x) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*y)){//check collision

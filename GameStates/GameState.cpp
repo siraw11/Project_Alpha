@@ -86,19 +86,16 @@ namespace Alpha {
             }
             //hero movement
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
-                hero->heroMovement(0, -1, level);
+                hero->heroMovement(0, -1, level.tile_vector);
                 hero->walkingDirection=0;
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
-                hero->heroMovement(-1, 0, level);
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
+                hero->heroMovement(-1, 0, level.tile_vector);
                 hero->walkingDirection=1;
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
-                hero->heroMovement(0, 1, level);
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
+                hero->heroMovement(0, 1, level.tile_vector);
                 hero->walkingDirection=2;
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
-                hero->heroMovement(1 ,0, level);
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
+                hero->heroMovement(1 ,0, level.tile_vector);
                 hero->walkingDirection=3;
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
@@ -106,7 +103,7 @@ namespace Alpha {
             }
 
             //update level events
-            //level.update();
+            level.update();
 
             //camera settings
             position.x = hero->getPosition().x + 20 - (1920.0 / 2);
