@@ -17,8 +17,10 @@ public:
     ~Hero() override;
 
     void heroMovement(int x, int y, const std::vector<Tile>& tile_vector);
+    void attackAnimation();
 
     int walkingDirection=2;//0=up, 1=left, 2=down, 3=right
+    int counterAttack=0;//attack rate
 
     // PlayerType playerType;
 

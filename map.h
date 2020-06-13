@@ -10,6 +10,7 @@
 #include <SFML/Window.hpp>
 #include "GameManager/Game.hpp"
 #include "Enemy.h"
+#include "Hero.h"
 
 
 class map {
@@ -27,7 +28,7 @@ public:
     void setTexture();
     void drawEnemy(const Alpha::GameDataRef& _data);
 
-    void update();// update level events
+    void update(const std::shared_ptr<Hero>& hero);// update level events
 
 private:
     int raws=84;

@@ -59,7 +59,7 @@ namespace Alpha {
 
         CharacterFactory factory;
 
-        std::unique_ptr<Hero> hero =factory.createCharacter(playerType);
+        std::shared_ptr<Hero> hero =factory.createCharacter(playerType);
         //hero->playerType=playerType;
 
 
@@ -99,11 +99,12 @@ namespace Alpha {
                 hero->walkingDirection=3;
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+                hero->counterAttack=1;
                 //hero attack;
             }
 
             //update level events
-            level.update();
+            level.update(hero);
 
             //camera settings
             position.x = hero->getPosition().x + 20 - (1920.0 / 2);

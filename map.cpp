@@ -332,13 +332,21 @@ void map::drawEnemy(const Alpha::GameDataRef &_data) {
     }
 }
 
-void map::update() {
+void map::update(const std::shared_ptr<Hero>& hero) {
     //enemy movement update
     for(auto& i : enemy_vector)
         i.movement(this->tile_vector);
 
+    //update attack animation
+    if(hero->counterAttack>0){
+        hero->attackAnimation();
+        hero->counterAttack++;
+    }
+    if(hero->counterAttack==11)
+        hero->counterAttack=0;
+
+
+
 }
-
-
 
 
