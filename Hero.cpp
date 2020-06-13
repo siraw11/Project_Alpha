@@ -48,7 +48,6 @@ void Hero::fight(Enemy &enemy) {
 }
 
 void Hero::attackAnimation() {
-    std::cout<<"entra"<<" "<<counterAttack<<std::endl;
     int k = counterAttack - 1;
     setTextureRect(sf::IntRect(64 * k, 64 *(walkingDirection+4), 64, 64));
 }
