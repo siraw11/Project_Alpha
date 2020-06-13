@@ -54,7 +54,7 @@ namespace Alpha {
     void GameState::Draw() {
         srand(time(nullptr));
 
-        std::cout<<"test branch"<<std::endl;
+        std::cout<<"test branch   "<<std::endl;
 
 
         map level;
