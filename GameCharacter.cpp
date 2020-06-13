@@ -45,10 +45,9 @@ void GameCharacter::setStrength(int strength) {
 
 GameCharacter::~GameCharacter() = default;
 
-bool GameCharacter::collisionLinker(const map &level, int x, int y) {
-    std::vector<Tile> vect= level.tile_vector;
+bool GameCharacter::collisionLinker(const std::vector<Tile>& tile_vector, int x, int y) {
 
-    return Collision::checkCollision(vect, this, x, y);
+    return Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, x, y);
 
 }
 

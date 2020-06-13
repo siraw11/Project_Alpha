@@ -16,7 +16,7 @@ public:
     Hero(int hp, int s,int sp);
     ~Hero() override;
 
-    void heroMovement(int x, int y, const map& level);
+    void heroMovement(int x, int y, const std::vector<Tile>& tile_vector);
 
     int walkingDirection=2;//0=up, 1=left, 2=down, 3=right
 

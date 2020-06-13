@@ -167,7 +167,7 @@ map::map() {
         }
     //creazione vettore dei nemici
 
-    for(int i=0;i<20;i++)
+    for(int i=0;i<10;i++)
     {
         Enemy newEnemy(1,1,10);
         newEnemy.spawnposition=generateRandomPos(tile_vector);
@@ -335,7 +335,7 @@ void map::drawEnemy(const Alpha::GameDataRef &_data) {
 void map::update() {
     //enemy movement update
     for(auto& i : enemy_vector)
-        i.movement(*this);
+        i.movement(this->tile_vector);
 
 }
 

@@ -7,13 +7,14 @@
 
 
 #include "GameCharacter.h"
+#include "Tile.h"
 
 class Enemy : public GameCharacter{
 public:
     Enemy(int hp, int s, int sp);
     ~Enemy() override;
 
-    void movement(map& level);
+    void movement(const std::vector<Tile>& tile_vector);
     void walkingAnimation();
 
     sf::Vector2f spawnposition;
