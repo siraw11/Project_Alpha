@@ -73,4 +73,9 @@ void Enemy::walkingAnimation() {
 
 }
 
+void Enemy::deathAnimation() {
+    setTextureRect(sf::IntRect(64*counterDeath,64*8,64,64));
+    counterDeath++;
+}
+
 Enemy::~Enemy() = default;

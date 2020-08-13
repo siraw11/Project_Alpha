@@ -18,15 +18,15 @@ std::unique_ptr<Hero> CharacterFactory::createCharacter(PlayerType type) {
 
     switch(type) {
         case PlayerType::KNIGHT: {
-            result = std::unique_ptr<Hero>(new Knight(1, 1, 20, 1));
+            result = std::unique_ptr<Hero>(new Knight(1, 1, 50, 1));
             break;
         }
         case PlayerType::ARCHER: {
-            result = std::unique_ptr<Hero>(new Archer(1,1,20,10));
+            result = std::unique_ptr<Hero>(new Archer(1,1,50,10));
             break;
         }
         case PlayerType ::MAGE: {
-            result = std::unique_ptr<Hero>(new Mage(1,1,20,10));
+            result = std::unique_ptr<Hero>(new Mage(1,1,50,10));
             break;
         }
     }

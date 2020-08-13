@@ -372,13 +372,15 @@ void map::update(const std::shared_ptr<Hero>& hero) {
         for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
             if(i->hit) {
                 i->takeDamage(1);
-                std::cout<<i->getLife()<<" "<<i->hit<<std::endl;
                 i->hit=false;
 
             }
             if(i->getLife()<=0){
+                std::cout<<i->counterDeath<<std::endl;
+                i->deathAnimation();
+                if(i->counterDeath==11){
                 enemy_vector.erase(i);
-                i--;
+                i--;}
             }
         }
 
