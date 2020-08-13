@@ -169,11 +169,11 @@ map::map() {
 
     for(int i=0;i<10;i++)
     {
-        Enemy newEnemy(1,1,10);
+        Enemy newEnemy(3,1,10);
         newEnemy.spawnposition=generateRandomPos(tile_vector);
         newEnemy.setPosition(newEnemy.spawnposition);
         enemy_vector.push_back(newEnemy);
-        std::cout<<newEnemy.spawnposition.x<<" "<<newEnemy.spawnposition.y<<std::endl;
+        //std::cout<<newEnemy.spawnposition.x<<" "<<newEnemy.spawnposition.y<<std::endl;
     }
 }
 
@@ -318,35 +318,71 @@ void map::setTexture() {
 }
 
 void map::drawTile(const Alpha::GameDataRef& _data) {
-    for (auto &i :tile_vector)
-    {
-        _data->window.draw(i);
-    }
 
+    for (auto &i :tile_vector)
+        _data->window.draw(i);
 }
 
 void map::drawEnemy(const Alpha::GameDataRef &_data) {
+
     for(auto &i : enemy_vector)
-    {
         _data->window.draw(i);
+}
+
+void map::drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef &_data) {
+
+    if(!projectile_vector.empty()) {
+        for (auto &i : projectile_vector)
+            _data->window.draw(i);
     }
 }
 
 void map::update(const std::shared_ptr<Hero>& hero) {
     //enemy movement update
-    for(auto& i : enemy_vector)
-        i.movement(this->tile_vector);
+   /*for(auto& i : enemy_vector)
+        i.movement(this->tile_vector);*/
 
     //update attack animation
     if(hero->counterAttack>0){
         hero->attackAnimation();
         hero->counterAttack++;
     }
-    if(hero->counterAttack==11)
+    if(hero->counterAttack==11){
         hero->counterAttack=0;
+        hero->attack(enemy_vector);
+    }
 
+    //check hero projectile collision
+    for(auto i= hero->projectile_vector.begin(); i!= hero->projectile_vector.end(); ++i) {
 
+        if (i->checkCollision(&enemy_vector, tile_vector)) {//erase the projectile if there is a collision
+            hero->projectile_vector.erase(i);
+            i--;
+        }
+    }
+
+    //update hero projectile position
+    if(!hero->projectile_vector.empty())
+        for(auto &i : hero->projectile_vector){
+            i.updateProjectile();
+        }
+
+    //update enemy life and death
+    if(!enemy_vector.empty())
+        for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
+            if(i->hit) {
+                i->takeDamage(1);
+                std::cout<<i->getLife()<<" "<<i->hit<<std::endl;
+                i->hit=false;
+
+            }
+            if(i->getLife()<=0){
+                enemy_vector.erase(i);
+                i--;
+            }
+        }
 
 }
+
 
 

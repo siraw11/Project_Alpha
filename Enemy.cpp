@@ -13,8 +13,9 @@ Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
     setTexture(enemyTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
     setOrigin(getPosition().x ,getPosition().y +getGlobalBounds().height / 10);
+    setScale(sf::Vector2f(ENEMY_SCALE,ENEMY_SCALE));
 
-    setScale(sf::Vector2f(5,5));
+
 
 }
 
@@ -57,6 +58,7 @@ void Enemy::movement(const std::vector<Tile>& tile_vector) {
         walkingAnimation();
     }
     move(movement);
+
 
 }
 

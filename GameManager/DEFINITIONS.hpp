@@ -47,4 +47,10 @@
 
 #define ENEMY_WALK_DISTANCE 320
 
+#define ENEMY_SCALE 5
+
+#define ENEMY_WIDTH 64
+
+#define ENEMY_HEIGHT 64
+
 
