@@ -12,7 +12,7 @@
 
 Hero::Hero(int hp, int s,int sp):GameCharacter(hp,s,sp){
 
-    setOrigin(getPosition().x +getGlobalBounds().width/10 ,getPosition().y +getGlobalBounds().height / 6);
+    //setOrigin(getPosition().x +getGlobalBounds().width/10 ,getPosition().y +getGlobalBounds().height / 2);
 
     setPosition(sf::Vector2f(300,300));
 
@@ -23,7 +23,7 @@ void Hero::heroMovement(int x, int y, const std::vector<Tile>& tile_vector, cons
 
     sf::Vector2f movement(x*speed,y*speed);
 
-    if(this->collisionLinker(tile_vector,x,y) || counterAttack!=0) {
+    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, x, y) || counterAttack != 0) {
         movement.x=0;
         movement.y=0;
     }else if(Collision::enemyCollision(this, enemy_vector, x, y )){

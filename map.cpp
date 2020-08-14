@@ -167,7 +167,7 @@ map::map() {
         }
     //creazione vettore dei nemici
 
-    for(int i=0;i<10;i++)
+    for(int i=0;i<50;i++)
     {
         Enemy newEnemy(3,1,10);
         newEnemy.spawnposition=generateRandomPos(tile_vector);

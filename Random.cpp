@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <SFML/System.hpp>
 #include "Random.h"
+#include "GameManager/DEFINITIONS.hpp"
 #include <ctime>
 
 
@@ -29,7 +30,7 @@ sf::Vector2f generateRandomPos(std::vector<Tile>& tile_vector) {
         if(tile_vector[120*y+x].t==0)
             test=true;
     }
-    sf::Vector2f randomPos(x*32*3, y*32*3);
+    sf::Vector2f randomPos(x*32*SCALE, y*32*SCALE);
     return randomPos;
 }
 

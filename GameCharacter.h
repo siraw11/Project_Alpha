@@ -31,8 +31,6 @@ public:
 
     void setSpeed(int speed);
 
-    bool collisionLinker(const std::vector<Tile>& tile_vector, int x, int y);
-
     void takeDamage(int damage);
 
 protected:
