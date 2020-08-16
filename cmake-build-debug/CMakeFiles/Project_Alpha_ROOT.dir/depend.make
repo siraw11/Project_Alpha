@@ -5,6 +5,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Archer.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Archer.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../GameCharacter.h
+CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Projectile.h
@@ -254,10 +255,14 @@ CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: /opt/SFML-2.5.1/include/SFML/
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Collision.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Enemy.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../GameManager/DEFINITIONS.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Random.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Tile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
@@ -1359,6 +1364,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /opt/SFML-2.5.1/include/SFML/Windo
 
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../GameCharacter.h
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.h
@@ -1442,6 +1448,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /opt/SFML-2.5.1/include/SFML/Win
 
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../GameCharacter.h
+CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Mage.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Mage.h
@@ -1606,6 +1613,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: /opt/SFML-2.5.1/include/SFML
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: ../Random.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: ../Random.h
 CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: ../Tile.h

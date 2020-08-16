@@ -6,6 +6,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
  /home/matteo/Project_Alpha/Archer.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
+ /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/Project_Alpha/Hero.h
  /home/matteo/Project_Alpha/PlayerType.h
  /home/matteo/Project_Alpha/Projectile.h
@@ -255,10 +256,14 @@ CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
+ /home/matteo/Project_Alpha/Collision.h
  /home/matteo/Project_Alpha/Enemy.cpp
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
  /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/Project_Alpha/Hero.h
+ /home/matteo/Project_Alpha/PlayerType.h
+ /home/matteo/Project_Alpha/Projectile.h
  /home/matteo/Project_Alpha/Random.h
  /home/matteo/Project_Alpha/Tile.h
  /opt/SFML-2.5.1/include/SFML/Config.hpp
@@ -1360,6 +1365,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
+ /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/Project_Alpha/Hero.h
  /home/matteo/Project_Alpha/Knight.cpp
  /home/matteo/Project_Alpha/Knight.h
@@ -1443,6 +1449,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
+ /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/Project_Alpha/Hero.h
  /home/matteo/Project_Alpha/Mage.cpp
  /home/matteo/Project_Alpha/Mage.h
@@ -1607,6 +1614,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
+ /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/Project_Alpha/Random.cpp
  /home/matteo/Project_Alpha/Random.h
  /home/matteo/Project_Alpha/Tile.h
