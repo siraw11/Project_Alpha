@@ -18,7 +18,7 @@ public:
     static bool enemyCollision(Hero *hero,const std::vector<Enemy>& enemy_vector, int x, int y);
     static bool projectileCollisionEnemy(Projectile *projectile, const Enemy &enemy, int x, int y);//projectile collision with enemies
     static bool projectileCollision(Projectile *projectile,const std::vector<Tile>& tile_vector, int x, int y);//projectile collision with walls
-
+    static bool meleeHeroAttak(Hero *hero, const Enemy &enemy, int x, int y);
 
 
 

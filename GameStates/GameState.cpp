@@ -64,6 +64,9 @@ namespace Alpha {
         std::shared_ptr<Hero> hero =factory.createCharacter(playerType);
         hero->playerType=playerType;
 
+        auto heroWeapon = new Weapon(1);
+        hero->setWeapon(heroWeapon);
+
 
         //View variable
         sf::View view;

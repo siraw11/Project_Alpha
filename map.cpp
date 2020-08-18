@@ -349,7 +349,7 @@ void map::update(const std::shared_ptr<Hero>& hero) {
     }
     if(hero->counterAttack==11){
         hero->counterAttack=0;
-        hero->attack(enemy_vector);
+        hero->attack(&enemy_vector);
     }
 
     //check hero projectile collision
@@ -371,7 +371,8 @@ void map::update(const std::shared_ptr<Hero>& hero) {
     if(!enemy_vector.empty())
         for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
             if(i->hit) {
-                i->takeDamage(1);
+                i->takeDamage(hero->damage());
+                std::cout<<i->getLife()<<std::endl;
                 i->hit=false;
 
             }

@@ -72,10 +72,10 @@ bool Projectile::checkCollision(  std::vector<Enemy>* enemy_vector, const std::v
 
     bool collided=false;
     for(auto & i : *enemy_vector)
-        if(Collision::projectileCollisionEnemy(this, i, x, y))
-        {collided=true;
-        i.hit=true;
-        break;
+        if(Collision::projectileCollisionEnemy(this, i, x, y)){
+            collided=true;
+            i.hit=true;
+            break;
         }else {
             collided = Collision::projectileCollision(this, tile_vector, x, y);//funziona
         }

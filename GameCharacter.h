@@ -17,7 +17,7 @@ class GameCharacter:public sf::RectangleShape {
 
 public:
     GameCharacter(int hp, int s, int sp);
-    virtual ~GameCharacter();
+    ~GameCharacter() override;
 
     int getLife() const;
 
@@ -32,6 +32,8 @@ public:
     void setSpeed(int speed);
 
     void takeDamage(int damage);
+
+
 
 protected:
     int strength;

@@ -12,6 +12,8 @@
 
 Hero::Hero(int hp, int s,int sp):GameCharacter(hp,s,sp){
 
+    weapon= nullptr;
+
     //setOrigin(getPosition().x +getGlobalBounds().width/10 ,getPosition().y +getGlobalBounds().height / 2);
 
     setPosition(sf::Vector2f(300,300));
@@ -46,16 +48,12 @@ void Hero::walkingAnimation() {
 
 }
 
-void Hero::fight(Enemy &enemy) {
-    enemy.takeDamage(1);
-}
-
 void Hero::attackAnimation() {
     int k = counterAttack - 1;
     setTextureRect(sf::IntRect(64 * k, 64 *(walkingDirection+4), 64, 64));
 }
 
-void Hero::attack(const std::vector<Enemy>& enemy_vector) {
+void Hero::attack( std::vector<Enemy>* enemy_vector) {
     if(playerType!=PlayerType::KNIGHT) {
         Projectile newProjectile(playerType);
         newProjectile.projectile_start.x = getPosition().x;
@@ -90,14 +88,30 @@ void Hero::attack(const std::vector<Enemy>& enemy_vector) {
             }
         }
 
-
-        if(Collision::enemyCollision(this, enemy_vector, x, y)){
-        std::cout<<"yes"<<std::endl;
-        }
-
-
+        for(auto &i: *enemy_vector)
+            if (Collision::meleeHeroAttak(this, i, x, y)){
+                i.hit=true;
+                break;
+            }
     }
 }
 
+Weapon *Hero::getWeapon() const {
+    return weapon;
+}
 
-Hero::~Hero() = default;
+void Hero::setWeapon(Weapon *weapon) {
+    Hero::weapon = weapon;
+}
+
+int Hero::damage() {
+    int damage=strength;
+    if(weapon!= nullptr)
+        damage+=weapon->getStrenght();
+    return damage;
+}
+
+Hero::~Hero(){
+
+    delete weapon;
+}

@@ -106,3 +106,19 @@ bool Collision::checkCollision(std::vector<Tile> &tile_vector, Enemy *enemy, int
     return collided;
 }
 
+bool Collision::meleeHeroAttak(Hero *hero, const Enemy &enemy, int x, int y) {
+    bool collided=false;
+    sf::Vector2f position(hero->getPosition());
+
+    position.x+= hero->getSpeed()*x+10;//next position right or left but +10 to avoid the collision with the enemy
+    position.y+= hero->getSpeed()*y+10;//next position up or down
+
+    if(position.x + HERO_WIDTH*HERO_SCALE > enemy.getPosition().x && position.x < enemy.getPosition().x + ENEMY_WIDTH*ENEMY_SCALE &&
+       position.y < enemy.getPosition().y + ENEMY_HEIGHT*ENEMY_SCALE && position.y + HERO_HEIGHT*HERO_SCALE > enemy.getPosition().y){
+
+
+        collided=true;
+    }
+    return collided;
+}
+

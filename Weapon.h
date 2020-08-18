@@ -8,13 +8,13 @@
 
 class Weapon {
 public:
-    Weapon(int s, int l);
+    explicit Weapon(int s);
     ~Weapon();
     int getStrenght() const;
 
 private:
     int strenght;
-    int level;
+
 };
 
 

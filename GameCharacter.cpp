@@ -48,3 +48,5 @@ GameCharacter::~GameCharacter() = default;
 void GameCharacter::takeDamage(int damage) {
     life-=damage;
 }
+
+

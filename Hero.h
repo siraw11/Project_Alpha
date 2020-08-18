@@ -10,6 +10,7 @@
 #include "PlayerType.h"
 #include "Enemy.h"
 #include "Projectile.h"
+#include "Weapon.h"
 
 
 class Hero: public GameCharacter {
@@ -19,19 +20,23 @@ public:
 
     void heroMovement(int x, int y, const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector);
     void attackAnimation();
-    void attack(const std::vector<Enemy>& enemy_vector);
+    void attack( std::vector<Enemy>* enemy_vector);
+    int damage();
 
     int walkingDirection=2;//0=up, 1=left, 2=down, 3=right
     int counterAttack=0;//attack rate
 
     std::vector<Projectile> projectile_vector;
 
-     PlayerType playerType;
+    PlayerType playerType;
 
-    void fight(Enemy &enemy);
+    Weapon *getWeapon() const;
+
+    void setWeapon(Weapon *weapon);
 
 protected:
 
+    Weapon *weapon;
 
 private:
     int counterWalking=0;
