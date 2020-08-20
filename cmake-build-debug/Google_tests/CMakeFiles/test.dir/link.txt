@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/test.dir/collision.cpp.o  -o test -lProject_Alpha_ROOT /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1 ../lib/libgtestd.a ../lib/libgtest_maind.a ../lib/libgtestd.a -lpthread 
