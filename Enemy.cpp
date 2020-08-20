@@ -5,6 +5,7 @@
 #include "Enemy.h"
 #include "Random.h"
 #include "GameManager/DEFINITIONS.hpp"
+#include "Collision.h"
 
 Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
 
@@ -12,9 +13,10 @@ Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
     enemyTexture->loadFromFile("../Resources/Sprites/Enemy/orc(warhammer).png");
     setTexture(enemyTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
-    setOrigin(getPosition().x ,getPosition().y +getGlobalBounds().height / 10);
+    //setOrigin(getPosition().x ,getPosition().y +getGlobalBounds().height / 10);
+    setScale(sf::Vector2f(ENEMY_SCALE,ENEMY_SCALE));
 
-    setScale(sf::Vector2f(5,5));
+
 
 }
 
@@ -47,7 +49,7 @@ void Enemy::movement(const std::vector<Tile>& tile_vector) {
     }
 
     sf::Vector2f movement(getSpeed()*x,getSpeed()*y);
-    if(collisionLinker(tile_vector, x, y)){
+    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector),this, x, y)){
         movement.x=0;
         movement.y=0;
     }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*x) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*y)){//check collision
@@ -57,6 +59,7 @@ void Enemy::movement(const std::vector<Tile>& tile_vector) {
         walkingAnimation();
     }
     move(movement);
+
 
 }
 
@@ -69,6 +72,11 @@ void Enemy::walkingAnimation() {
         counterWalking=0;
     }
 
+}
+
+void Enemy::deathAnimation() {
+    setTextureRect(sf::IntRect(64*counterDeath,64*8,64,64));
+    counterDeath++;
 }
 
 Enemy::~Enemy() = default;

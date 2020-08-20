@@ -17,7 +17,7 @@ class GameCharacter:public sf::RectangleShape {
 
 public:
     GameCharacter(int hp, int s, int sp);
-    virtual ~GameCharacter();
+    ~GameCharacter() override;
 
     int getLife() const;
 
@@ -31,9 +31,9 @@ public:
 
     void setSpeed(int speed);
 
-    bool collisionLinker(const std::vector<Tile>& tile_vector, int x, int y);
-
     void takeDamage(int damage);
+
+
 
 protected:
     int strength;

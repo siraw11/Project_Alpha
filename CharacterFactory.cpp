@@ -22,11 +22,11 @@ std::unique_ptr<Hero> CharacterFactory::createCharacter(PlayerType type) {
             break;
         }
         case PlayerType::ARCHER: {
-            result = std::unique_ptr<Hero>(new Archer(1,1,20,10));
+            result = std::unique_ptr<Hero>(new Archer(1,1,50,10));
             break;
         }
         case PlayerType ::MAGE: {
-            result = std::unique_ptr<Hero>(new Mage(1,1,20,10));
+            result = std::unique_ptr<Hero>(new Mage(1,1,50,10));
             break;
         }
     }

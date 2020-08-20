@@ -15,7 +15,7 @@ GameCharacter::GameCharacter(int hp, int s, int sp){
         speed = sp;
     }
 
-    setSize(sf::Vector2f(32,32));
+    setSize(sf::Vector2f(64,64));
 
 }
 
@@ -45,12 +45,8 @@ void GameCharacter::setStrength(int strength) {
 
 GameCharacter::~GameCharacter() = default;
 
-bool GameCharacter::collisionLinker(const std::vector<Tile>& tile_vector, int x, int y) {
-
-    return Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, x, y);
-
-}
-
 void GameCharacter::takeDamage(int damage) {
     life-=damage;
 }
+
+

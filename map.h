@@ -27,6 +27,7 @@ public:
     void drawTile(const Alpha::GameDataRef& _data);
     void setTexture();
     void drawEnemy(const Alpha::GameDataRef& _data);
+    void drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef& _data);
 
     void update(const std::shared_ptr<Hero>& hero);// update level events
 

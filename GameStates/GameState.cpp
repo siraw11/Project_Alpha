@@ -54,18 +54,23 @@ namespace Alpha {
     void GameState::Draw() {
         srand(time(nullptr));
 
+        std::cout<<"test branch"<<std::endl;
+
 
         map level;
 
         CharacterFactory factory;
 
         std::shared_ptr<Hero> hero =factory.createCharacter(playerType);
-        //hero->playerType=playerType;
+        hero->playerType=playerType;
+
+        auto heroWeapon = new Weapon(1);
+        hero->setWeapon(heroWeapon);
 
 
         //View variable
         sf::View view;
-        // this->_data->window.setFramerateLimit(60);
+        this->_data->window.setFramerateLimit(60);
         view.reset(sf::FloatRect(0, 0, 1920.0, 1080.0));
         view.setViewport(sf::FloatRect(0, 0, 1.0f, 1.0f));
         sf::Vector2f position(0, 0);
@@ -86,21 +91,20 @@ namespace Alpha {
             }
             //hero movement
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
-                hero->heroMovement(0, -1, level.tile_vector);
+                hero->heroMovement(0, -1, level.tile_vector,level.enemy_vector);
                 hero->walkingDirection=0;
             }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
-                hero->heroMovement(-1, 0, level.tile_vector);
+                hero->heroMovement(-1, 0, level.tile_vector,level.enemy_vector);
                 hero->walkingDirection=1;
             }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
-                hero->heroMovement(0, 1, level.tile_vector);
+                hero->heroMovement(0, 1, level.tile_vector,level.enemy_vector);
                 hero->walkingDirection=2;
             }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
-                hero->heroMovement(1 ,0, level.tile_vector);
+                hero->heroMovement(1 ,0, level.tile_vector,level.enemy_vector );
                 hero->walkingDirection=3;
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
                 hero->counterAttack=1;
-                //hero attack;
             }
 
             //update level events
@@ -122,8 +126,9 @@ namespace Alpha {
             this->_data->window.setFramerateLimit(60);
 
             level.drawTile(_data);
-            this->_data->window.draw(*hero);
             level.drawEnemy(_data);
+            this->_data->window.draw(*hero);
+            level.drawProjectile(hero->projectile_vector,_data);
             this->_data->window.display();
         }
     }

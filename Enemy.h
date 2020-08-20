@@ -16,13 +16,18 @@ public:
 
     void movement(const std::vector<Tile>& tile_vector);
     void walkingAnimation();
+    void deathAnimation();
+
 
     sf::Vector2f spawnposition;
-
+    bool hit=false;
+    int counterDeath=0;
 private:
     int direction=0;// 1=up,2=down,3=left,4=right
     int walkingRate=0;
     int counterWalking=0;
+
+
 
 
 

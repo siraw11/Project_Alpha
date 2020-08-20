@@ -37,7 +37,7 @@
 
 #define STATE_LOSE 2
 
-#define  STATE_PLAYING 0
+#define STATE_PLAYING 0
 
 #define SCALE 3
 
@@ -46,5 +46,19 @@
 #define TILE_HEIGHT 32
 
 #define ENEMY_WALK_DISTANCE 320
+
+#define ENEMY_SCALE 2.5
+
+#define HERO_SCALE 1.75
+
+#define ENEMY_WIDTH 64
+
+#define ENEMY_HEIGHT 64
+
+#define HERO_WIDTH 64
+
+#define  HERO_HEIGHT 64
+
+#define PROJECTILE_SIZE 64
 
 

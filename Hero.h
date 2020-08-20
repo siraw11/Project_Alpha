@@ -9,6 +9,8 @@
 #include "GameCharacter.h"
 #include "PlayerType.h"
 #include "Enemy.h"
+#include "Projectile.h"
+#include "Weapon.h"
 
 
 class Hero: public GameCharacter {
@@ -16,18 +18,25 @@ public:
     Hero(int hp, int s,int sp);
     ~Hero() override;
 
-    void heroMovement(int x, int y, const std::vector<Tile>& tile_vector);
+    void heroMovement(int x, int y, const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector);
     void attackAnimation();
+    void attack( std::vector<Enemy>* enemy_vector);
+    int damage();
 
     int walkingDirection=2;//0=up, 1=left, 2=down, 3=right
     int counterAttack=0;//attack rate
 
-    // PlayerType playerType;
+    std::vector<Projectile> projectile_vector;
 
-    void fight(Enemy &enemy);
+    PlayerType playerType;
+
+    Weapon *getWeapon() const;
+
+    void setWeapon(Weapon *weapon);
 
 protected:
 
+    Weapon *weapon;
 
 private:
     int counterWalking=0;
