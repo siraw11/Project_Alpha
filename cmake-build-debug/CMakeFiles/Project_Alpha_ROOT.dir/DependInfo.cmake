@@ -29,7 +29,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/waris/CLionProjects/Project_Alpha/Weapon.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/main.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/map.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o"
-  "/home/waris/CLionProjects/Project_Alpha/test/test.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/test/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

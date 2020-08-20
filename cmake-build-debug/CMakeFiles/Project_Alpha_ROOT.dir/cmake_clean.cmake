@@ -24,7 +24,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o"
-  "CMakeFiles/Project_Alpha_ROOT.dir/test/test.cpp.o"
   "Project_Alpha_ROOT"
   "Project_Alpha_ROOT.pdb"
 )

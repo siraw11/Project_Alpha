@@ -565,7 +565,6 @@
 			<Option target="gtest_main"/>
 		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/test.cpp">
-			<Option target="Project_Alpha_ROOT"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/CMakeLists.txt">

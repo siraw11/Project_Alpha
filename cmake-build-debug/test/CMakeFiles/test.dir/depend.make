@@ -21,5 +21,6 @@ test/CMakeFiles/test.dir/test.cpp.o: ../test/gtest_src/googletest/include/gtest/
 test/CMakeFiles/test.dir/test.cpp.o: ../test/gtest_src/googletest/include/gtest/internal/gtest-port.h
 test/CMakeFiles/test.dir/test.cpp.o: ../test/gtest_src/googletest/include/gtest/internal/gtest-string.h
 test/CMakeFiles/test.dir/test.cpp.o: ../test/gtest_src/googletest/include/gtest/internal/gtest-type-util.h
+test/CMakeFiles/test.dir/test.cpp.o: ../test/gtest_src/googletest/include/gtest/gtest.h
 test/CMakeFiles/test.dir/test.cpp.o: ../test/test.cpp
 
