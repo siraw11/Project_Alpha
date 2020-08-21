@@ -94,6 +94,12 @@
 		<Unit filename="/home/matteo/Project_Alpha/Archer.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Boss.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Boss.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
 		<Unit filename="/home/matteo/Project_Alpha/CharacterFactory.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>

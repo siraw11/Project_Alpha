@@ -150,6 +150,33 @@ Archer.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
 .PHONY : Archer.cpp.s
 
+Boss.o: Boss.cpp.o
+
+.PHONY : Boss.o
+
+# target to build an object file
+Boss.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
+.PHONY : Boss.cpp.o
+
+Boss.i: Boss.cpp.i
+
+.PHONY : Boss.i
+
+# target to preprocess a source file
+Boss.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i
+.PHONY : Boss.cpp.i
+
+Boss.s: Boss.cpp.s
+
+.PHONY : Boss.s
+
+# target to generate assembly for a file
+Boss.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s
+.PHONY : Boss.cpp.s
+
 CharacterFactory.o: CharacterFactory.cpp.o
 
 .PHONY : CharacterFactory.o
@@ -810,6 +837,9 @@ help:
 	@echo "... Archer.o"
 	@echo "... Archer.i"
 	@echo "... Archer.s"
+	@echo "... Boss.o"
+	@echo "... Boss.i"
+	@echo "... Boss.s"
 	@echo "... CharacterFactory.o"
 	@echo "... CharacterFactory.i"
 	@echo "... CharacterFactory.s"

@@ -13,14 +13,14 @@ Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
     enemyTexture->loadFromFile("../Resources/Sprites/Enemy/orc(warhammer).png");
     setTexture(enemyTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
-    //setOrigin(getPosition().x ,getPosition().y +getGlobalBounds().height / 10);
+
     setScale(sf::Vector2f(ENEMY_SCALE,ENEMY_SCALE));
 
 
 
 }
 
-void Enemy::movement(const std::vector<Tile>& tile_vector) {
+void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero) {
 
     //make the enemy move in random direction for n steps
     if(walkingRate==24)
@@ -55,7 +55,12 @@ void Enemy::movement(const std::vector<Tile>& tile_vector) {
     }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*x) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*y)){//check collision
         movement.x=0;
         movement.y=0;
-    }else{
+    }else if(Collision::heroCollision(this, hero, x, y)){
+        movement.x=0;
+        movement.y=0;
+
+    }else {
+
         walkingAnimation();
     }
     move(movement);

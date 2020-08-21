@@ -175,6 +175,9 @@ map::map() {
         enemy_vector.push_back(newEnemy);
         //std::cout<<newEnemy.spawnposition.x<<" "<<newEnemy.spawnposition.y<<std::endl;
     }
+
+    //creazione boss
+
 }
 
 
@@ -337,10 +340,10 @@ void map::drawProjectile(const std::vector<Projectile>& projectile_vector, const
     }
 }
 
-void map::update(const std::shared_ptr<Hero>& hero) {
+void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
     //enemy movement update
-   /*for(auto& i : enemy_vector)
-        i.movement(this->tile_vector);*/
+   for(auto& i : enemy_vector)
+        i.movement(this->tile_vector, *hero);
 
     //update attack animation
     if(hero->counterAttack>0){

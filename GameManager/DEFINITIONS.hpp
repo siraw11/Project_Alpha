@@ -51,6 +51,8 @@
 
 #define HERO_SCALE 1.75
 
+#define BOSS_SCALE 5
+
 #define ENEMY_WIDTH 64
 
 #define ENEMY_HEIGHT 64
@@ -60,5 +62,11 @@
 #define  HERO_HEIGHT 64
 
 #define PROJECTILE_SIZE 64
+
+#define BOSS_SIZE 64
+
+#define MAP_WIDTH 120*32
+
+#define  MAP_HEIGHT 84*32
 
 

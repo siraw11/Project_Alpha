@@ -11,6 +11,7 @@
 #include "GameManager/Game.hpp"
 #include "Enemy.h"
 #include "Hero.h"
+#include "Boss.h"
 
 
 class map {
@@ -23,13 +24,16 @@ public:
     //vettore dei nemici
     std::vector<Enemy> enemy_vector;
 
+
+
     //draw oggetti
     void drawTile(const Alpha::GameDataRef& _data);
     void setTexture();
     void drawEnemy(const Alpha::GameDataRef& _data);
     void drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef& _data);
 
-    void update(const std::shared_ptr<Hero>& hero);// update level events
+
+    void update(const std::shared_ptr<Hero>& hero, Boss& boss);// update level events
 
 private:
     int raws=84;

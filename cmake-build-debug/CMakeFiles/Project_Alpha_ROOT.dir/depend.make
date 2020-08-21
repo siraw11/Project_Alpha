@@ -10,6 +10,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -85,6 +86,87 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Win
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.cpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameCharacter.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameManager/DEFINITIONS.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Color.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Export.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Font.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Glsl.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Image.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Rect.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Rect.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Shader.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Shape.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Text.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Texture.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Transform.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/View.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Clock.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Err.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Export.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/FileInputStream.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/InputStream.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Lock.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Mutex.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/NonCopyable.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Sleep.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/String.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/String.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Thread.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Thread.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Time.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Utf.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Utf.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Vector2.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Vector2.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Vector3.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/System/Vector3.inl
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Clipboard.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Context.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Cursor.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Event.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Export.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/GlResource.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Joystick.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Keyboard.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Mouse.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Sensor.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Touch.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/VideoMode.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/Window.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
+
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../Archer.h
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../CharacterFactory.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../CharacterFactory.h
@@ -96,6 +178,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../Mage.h
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -180,6 +263,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -265,6 +349,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Random.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -340,6 +425,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Wind
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Collision.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../GameCharacter.cpp
@@ -353,6 +439,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../map.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -752,6 +839,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameCharacter.h
@@ -770,6 +858,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../map.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -1204,6 +1293,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Hero.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1287,6 +1377,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Item.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1371,6 +1462,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1455,6 +1547,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Mage.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1538,6 +1631,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../Projectile.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1856,6 +1950,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: /opt/SFML-2.5.1/include/SFML/Windo
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../GameManager/AssetManager.hpp
@@ -1869,6 +1964,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../Random.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../map.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../map.h
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp

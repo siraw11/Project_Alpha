@@ -9,12 +9,14 @@
 #include "GameCharacter.h"
 #include "Tile.h"
 
+class Hero;
+
 class Enemy : public GameCharacter{
 public:
     Enemy(int hp, int s, int sp);
     ~Enemy() override;
 
-    void movement(const std::vector<Tile>& tile_vector);
+    void movement(const std::vector<Tile>& tile_vector,Hero &hero);
     void walkingAnimation();
     void deathAnimation();
 

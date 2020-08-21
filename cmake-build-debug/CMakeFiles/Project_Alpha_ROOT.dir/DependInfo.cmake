@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/matteo/Project_Alpha/Archer.cpp" "/home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
+  "/home/matteo/Project_Alpha/Boss.cpp" "/home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o"
   "/home/matteo/Project_Alpha/CharacterFactory.cpp" "/home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o"
   "/home/matteo/Project_Alpha/Collision.cpp" "/home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o"
   "/home/matteo/Project_Alpha/Enemy.cpp" "/home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o"

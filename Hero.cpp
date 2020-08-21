@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include "Hero.h"
-
 #include "GameManager/DEFINITIONS.hpp"
 #include "Projectile.h"
 #include "Collision.h"

@@ -49,6 +49,24 @@ bool Collision::enemyCollision(Hero *hero, const std::vector<Enemy>& enemy_vecto
     return collided;
 }
 
+bool Collision::heroCollision(Enemy *enemy, const Hero &hero, int x, int y) {
+    bool collided=false;
+    sf::Vector2f position(enemy->getPosition());
+
+
+    position.x+= enemy->getSpeed()*x;//next position right or left
+    position.y+= enemy->getSpeed()*y;//next position up or down
+
+
+
+    if(position.x+ENEMY_WIDTH*ENEMY_SCALE - enemy->getGlobalBounds().width/2 > hero.getPosition().x && position.x + enemy->getGlobalBounds().width/3 < hero.getPosition().x + HERO_WIDTH*HERO_SCALE &&
+       position.y + enemy->getGlobalBounds().height/2 < hero.getPosition().y + HERO_HEIGHT*HERO_SCALE && position.y + ENEMY_HEIGHT*ENEMY_SCALE - enemy->getGlobalBounds().height/2 > hero.getPosition().y ){
+        //control on the enemy, I left side, II right side, III bottom  side, IV top side
+        collided=true;
+    }
+    return collided;
+}
+
 bool Collision::projectileCollisionEnemy(Projectile *projectile,const Enemy &enemy, int x, int y) {
     bool collided=false;
     sf::Vector2f position(projectile->getPosition());

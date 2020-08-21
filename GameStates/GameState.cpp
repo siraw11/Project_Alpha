@@ -67,6 +67,8 @@ namespace Alpha {
         auto heroWeapon = new Weapon(1);
         hero->setWeapon(heroWeapon);
 
+        auto boss= new Boss(1,1,1);
+
 
         //View variable
         sf::View view;
@@ -108,7 +110,7 @@ namespace Alpha {
             }
 
             //update level events
-            level.update(hero);
+            level.update(hero, reinterpret_cast<Boss &>(boss));
 
             //camera settings
             position.x = hero->getPosition().x + 20 - (1920.0 / 2);
@@ -128,6 +130,7 @@ namespace Alpha {
             level.drawTile(_data);
             level.drawEnemy(_data);
             this->_data->window.draw(*hero);
+            this->_data->window.draw(*boss);
             level.drawProjectile(hero->projectile_vector,_data);
             this->_data->window.display();
         }
