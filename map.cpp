@@ -166,17 +166,29 @@ map::map() {
             }
         }
     //creazione vettore dei nemici
-
     for(int i=0;i<50;i++)
     {
         Enemy newEnemy(3,1,10);
         newEnemy.spawnposition=generateRandomPos(tile_vector);
         newEnemy.setPosition(newEnemy.spawnposition);
         enemy_vector.push_back(newEnemy);
-        //std::cout<<newEnemy.spawnposition.x<<" "<<newEnemy.spawnposition.y<<std::endl;
+
     }
 
-    //creazione boss
+    //creazione vettore di Item chest
+    for(int i=0; i<6; i++){
+        Chest<Item> newChest(false);
+        newChest.init(i);
+        itemChest_vector.push_back(newChest);
+
+    }
+
+    //creazione vettore di weapon chest
+    for(int i=0; i<2; i++){
+        Chest<Weapon> newChest(true);
+        newChest.init(i);
+        weaponChest_vector.push_back(newChest);
+    }
 
 }
 
@@ -340,6 +352,14 @@ void map::drawProjectile(const std::vector<Projectile>& projectile_vector, const
     }
 }
 
+void map::drawChest(const Alpha::GameDataRef &_data) {
+    for(auto &i: itemChest_vector)
+        _data->window.draw(i);
+    for(auto &i: weaponChest_vector)
+        _data->window.draw(i);
+
+}
+
 void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
     //enemy movement update
    for(auto& i : enemy_vector)
@@ -380,7 +400,6 @@ void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
 
             }
             if(i->getLife()<=0){
-                std::cout<<i->counterDeath<<std::endl;
                 i->deathAnimation();
                 if(i->counterDeath==11){
                 enemy_vector.erase(i);

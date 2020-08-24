@@ -427,16 +427,19 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
  /home/matteo/Project_Alpha/Boss.h
+ /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Collision.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.cpp
  /home/matteo/Project_Alpha/GameCharacter.h
  /home/matteo/Project_Alpha/GameManager/AssetManager.hpp
+ /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/Project_Alpha/GameManager/Game.hpp
  /home/matteo/Project_Alpha/GameManager/InputManager.hpp
  /home/matteo/Project_Alpha/GameStates/State.hpp
  /home/matteo/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/Project_Alpha/Hero.h
+ /home/matteo/Project_Alpha/Item.h
  /home/matteo/Project_Alpha/PlayerType.h
  /home/matteo/Project_Alpha/Projectile.h
  /home/matteo/Project_Alpha/Tile.h
@@ -842,6 +845,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
  /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/CharacterFactory.h
+ /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
  /home/matteo/Project_Alpha/GameManager/AssetManager.hpp
@@ -856,6 +860,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
  /home/matteo/Project_Alpha/GameStates/State.hpp
  /home/matteo/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/Project_Alpha/Hero.h
+ /home/matteo/Project_Alpha/Item.h
  /home/matteo/Project_Alpha/PlayerType.h
  /home/matteo/Project_Alpha/Projectile.h
  /home/matteo/Project_Alpha/Tile.h
@@ -1952,6 +1957,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
  /home/matteo/Project_Alpha/Boss.h
+ /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
  /home/matteo/Project_Alpha/GameManager/AssetManager.hpp
@@ -1961,6 +1967,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
  /home/matteo/Project_Alpha/GameStates/State.hpp
  /home/matteo/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/Project_Alpha/Hero.h
+ /home/matteo/Project_Alpha/Item.h
  /home/matteo/Project_Alpha/PlayerType.h
  /home/matteo/Project_Alpha/Projectile.h
  /home/matteo/Project_Alpha/Random.h

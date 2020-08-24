@@ -3,7 +3,7 @@
 //
 
 #include "Item.h"
-#include "Hero.h"
+
 
 Item::Item(bool S,bool M,bool arm,bool arw,bool HP,bool K):Strenght(S), Mana(M), Armor(arm), Arrow(arw), Life(HP),Key(K){}
 
@@ -55,7 +55,7 @@ void Item::setKey(bool key) {
     Key = key;
 }
 
-/*void Item::use(Item &item, GameCharacter* hero) {
+/*void Item::use(Item &item, Hero* hero) {
     Hero *ptr = dynamic_cast<Hero *>(hero);
     if (ptr != nullptr) {
         if (item.isStrenght())

@@ -106,6 +106,9 @@
 		<Unit filename="/home/matteo/Project_Alpha/CharacterFactory.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Chest.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
 		<Unit filename="/home/matteo/Project_Alpha/Collision.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>

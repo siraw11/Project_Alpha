@@ -5,11 +5,11 @@
 #ifndef EXAM_PROJECT_ITEM_H
 #define EXAM_PROJECT_ITEM_H
 
-#include "GameCharacter.h"
+#include "Hero.h"
 
 class Item{
 public:
-    void use(Item &item, GameCharacter* hero);
+    //void use(Item &item, Hero* hero);
 
     Item(bool S, bool M, bool arm, bool arw, bool HP, bool K);
 

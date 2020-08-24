@@ -129,9 +129,11 @@ namespace Alpha {
 
             level.drawTile(_data);
             level.drawEnemy(_data);
+            level.drawChest(_data);
             this->_data->window.draw(*hero);
             this->_data->window.draw(*boss);
             level.drawProjectile(hero->projectile_vector,_data);
+
             this->_data->window.display();
         }
     }

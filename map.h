@@ -12,6 +12,8 @@
 #include "Enemy.h"
 #include "Hero.h"
 #include "Boss.h"
+#include "Chest.h"
+#include "Item.h"
 
 
 class map {
@@ -23,6 +25,10 @@ public:
     std::vector<Tile> tile_vector;
     //vettore dei nemici
     std::vector<Enemy> enemy_vector;
+    //vettore delle chest item
+    std::vector<Chest<Item>> itemChest_vector;
+    //vector delle chest weapon
+    std::vector<Chest<Weapon>> weaponChest_vector;
 
 
 
@@ -31,7 +37,7 @@ public:
     void setTexture();
     void drawEnemy(const Alpha::GameDataRef& _data);
     void drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef& _data);
-
+    void drawChest( const Alpha::GameDataRef& _data);
 
     void update(const std::shared_ptr<Hero>& hero, Boss& boss);// update level events
 
