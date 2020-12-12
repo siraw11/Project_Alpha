@@ -2,10 +2,12 @@
 // Created by matteo on 31/03/20.
 //
 
-#include "Mage.h"
-#include "GameManager/DEFINITIONS.hpp"
 
-Mage::Mage(int hp, int s, int sp, int m) : Hero(hp,s,sp){
+#include "GameManager/DEFINITIONS.hpp"
+#include "Mage.h"
+
+///cpnstructor
+Mage::Mage(int hp, int s, int sp,int a, int ar, int m) : Hero(hp, s, sp, a, ar, m){
 
     auto heroTexture= new sf::Texture ;
     heroTexture->loadFromFile("../Resources/Sprites/Hero/mage.png");
@@ -14,9 +16,9 @@ Mage::Mage(int hp, int s, int sp, int m) : Hero(hp,s,sp){
 
     setScale(sf::Vector2f(HERO_SCALE,HERO_SCALE));
 
-    mana=m;
 }
 
-void Mage::Attack() {
+///destructor
+Mage::~Mage() = default;
 
-}
+

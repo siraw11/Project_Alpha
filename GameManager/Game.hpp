@@ -11,7 +11,7 @@ namespace Alpha
 {
     struct GameData
     {
-        int playerType;
+
         StateMachine machine;
         sf::RenderWindow window;
         AssetManager assets;

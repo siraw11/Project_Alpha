@@ -67,6 +67,10 @@
 
 #define MAP_WIDTH 120*32
 
-#define  MAP_HEIGHT 84*32
+#define MAP_HEIGHT 84*32
+
+#define CHEST_SIZE 32
+
+#define CHEST_SCALE 3
 
 

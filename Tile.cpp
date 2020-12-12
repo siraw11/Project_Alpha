@@ -3,13 +3,18 @@
 //
 
 #include <iostream>
-#include "Tile.h"
 #include "GameManager/DEFINITIONS.hpp"
+#include "Tile.h"
 
+///constructor
 Tile::Tile(int type) {
     t=type;
 }
 
+///destructor
+Tile::~Tile() =default;
+
+///functions
 void Tile::init(float xPos, float yPos) {
 
     posx=xPos;
@@ -24,7 +29,4 @@ void Tile::init(float xPos, float yPos) {
     hitBottom=posy+(height*SCALE);
     hitLeft=posx-(width);
     hitRight=posx+(width*SCALE);
-
-
-
 }

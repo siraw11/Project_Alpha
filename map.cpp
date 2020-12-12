@@ -4,196 +4,189 @@
 
 #include <fstream>
 #include <iostream>
-#include "map.h"
 #include "GameManager/DEFINITIONS.hpp"
+#include "map.h"
 #include "Random.h"
 
+///constructor
 map::map() {
     //Create Map Matrix
-    int *level =new int[raws*column];
+    int *level = new int[raws * column];
 
     //load map from Resources
     std::fstream fin("../Resources/Map/map.txt", std::fstream::in);
     char c;
     std::string tmp;
-    int k=0;
+    int k = 0;
     while (fin >> std::noskipws >> c)
-        if(c != ',') {
+        if (c != ',') {
             tmp += c;
-        }else{
-            level[k]=std::stoi(tmp);
+        } else {
+            level[k] = std::stoi(tmp);
             k++;
-            tmp =" ";
+            tmp = " ";
         }
     fin.close();
 
 
     //creazione vettore di tile
-    for (int i = 0; i <raws ; ++i)
-        for(int j=0; j< column; ++j)
-        {
+    for (int i = 0; i < raws; ++i)
+        for (int j = 0; j < column; ++j) {
 
-            if(level[(i*column)+j]==floor){
+            if (level[(i * column) + j] == floor) {
                 Tile newTile(floor);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==up_wall){
+            if (level[(i * column) + j] == up_wall) {
                 Tile newTile(up_wall);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==right_wall){
+            if (level[(i * column) + j] == right_wall) {
                 Tile newTile(right_wall);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==left_wall){
+            if (level[(i * column) + j] == left_wall) {
                 Tile newTile(left_wall);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==down_wall){
+            if (level[(i * column) + j] == down_wall) {
                 Tile newTile(down_wall);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==down_left_corner){
+            if (level[(i * column) + j] == down_left_corner) {
                 Tile newTile(down_left_corner);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==down_right_corner){
+            if (level[(i * column) + j] == down_right_corner) {
                 Tile newTile(down_right_corner);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==up_left_corner){
+            if (level[(i * column) + j] == up_left_corner) {
                 Tile newTile(up_left_corner);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==up_right_corner){
+            if (level[(i * column) + j] == up_right_corner) {
                 Tile newTile(up_right_corner);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==key_wall){
+            if (level[(i * column) + j] == key_wall) {
                 Tile newTile(key_wall);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==left_corridor){
+            if (level[(i * column) + j] == left_corridor) {
                 Tile newTile(left_corridor);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==torch_wall){
+            if (level[(i * column) + j] == torch_wall) {
                 Tile newTile(torch_wall);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==right_corridor){
+            if (level[(i * column) + j] == right_corridor) {
                 Tile newTile(right_corridor);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==bones){
+            if (level[(i * column) + j] == bones) {
                 Tile newTile(bones);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==web){
+            if (level[(i * column) + j] == web) {
                 Tile newTile(web);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==skull){
+            if (level[(i * column) + j] == skull) {
                 Tile newTile(skull);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==torch){
+            if (level[(i * column) + j] == torch) {
                 Tile newTile(torch);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==left_front_door){
+            if (level[(i * column) + j] == left_front_door) {
                 Tile newTile(left_front_door);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==right_front_door){
+            if (level[(i * column) + j] == right_front_door) {
                 Tile newTile(right_front_door);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==left_side_door){
+            if (level[(i * column) + j] == left_side_door) {
                 Tile newTile(left_side_door);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==right_side_door){
+            if (level[(i * column) + j] == right_side_door) {
                 Tile newTile(right_side_door);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
 
-            if(level[(i*column)+j]==void_tile){
+            if (level[(i * column) + j] == void_tile) {
                 Tile newTile(void_tile);
-                newTile.init(j*32*SCALE,i*32*SCALE);
+                newTile.init(j * 32 * SCALE, i * 32 * SCALE);
                 tile_vector.push_back(newTile);
             }
         }
     //creazione vettore dei nemici
-    for(int i=0;i<50;i++)
-    {
-        Enemy newEnemy(3,1,10);
-        newEnemy.spawnposition=generateRandomPos(tile_vector);
+    for (int i = 0; i < 50; i++) {
+        Enemy newEnemy(3, 1, 10);
+        newEnemy.spawnposition = generateRandomPos(tile_vector);
         newEnemy.setPosition(newEnemy.spawnposition);
         enemy_vector.push_back(newEnemy);
 
     }
 
-    //creazione vettore di Item chest
-    for(int i=0; i<6; i++){
-        Chest<Item> newChest(false);
+    //creazione vettore  chest
+    for (int i = 0; i < 8; i++) {
+        Chest newChest;
         newChest.init(i);
-        itemChest_vector.push_back(newChest);
+        chest_vector.push_back(newChest);
 
     }
-
-    //creazione vettore di weapon chest
-    for(int i=0; i<2; i++){
-        Chest<Weapon> newChest(true);
-        newChest.init(i);
-        weaponChest_vector.push_back(newChest);
-    }
-
 }
 
+///destructor
+map::~map() =default;
 
-
+///function
 void map::setTexture() {
     for(auto & i:tile_vector) {
 
@@ -332,38 +325,10 @@ void map::setTexture() {
     }
 }
 
-void map::drawTile(const Alpha::GameDataRef& _data) {
-
-    for (auto &i :tile_vector)
-        _data->window.draw(i);
-}
-
-void map::drawEnemy(const Alpha::GameDataRef &_data) {
-
-    for(auto &i : enemy_vector)
-        _data->window.draw(i);
-}
-
-void map::drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef &_data) {
-
-    if(!projectile_vector.empty()) {
-        for (auto &i : projectile_vector)
-            _data->window.draw(i);
-    }
-}
-
-void map::drawChest(const Alpha::GameDataRef &_data) {
-    for(auto &i: itemChest_vector)
-        _data->window.draw(i);
-    for(auto &i: weaponChest_vector)
-        _data->window.draw(i);
-
-}
-
 void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
     //enemy movement update
-   for(auto& i : enemy_vector)
-        i.movement(this->tile_vector, *hero);
+    /*for(auto& i : enemy_vector)
+         i.movement(this->tile_vector, *hero, itemChest_vector, weaponChest_vector);*/
 
     //update attack animation
     if(hero->counterAttack>0){
@@ -397,15 +362,50 @@ void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
                 i->takeDamage(hero->damage());
                 std::cout<<i->getLife()<<std::endl;
                 i->hit=false;
-
             }
             if(i->getLife()<=0){
                 i->deathAnimation();
                 if(i->counterDeath==11){
-                enemy_vector.erase(i);
-                i--;}
+                    enemy_vector.erase(i);
+                    i--;
+                }
             }
         }
+    for(auto & i:chest_vector){
+        if(!i.close && i.counterOpening<3){
+            i.openingAnimation();
+            break;}
+    }
+
+
+}
+
+
+///draw objects
+void map::drawTile(const Alpha::GameDataRef& _data) {
+
+    for (auto &i :tile_vector)
+        _data->window.draw(i);
+}
+
+void map::drawEnemy(const Alpha::GameDataRef &_data) {
+
+    for(auto &i : enemy_vector)
+        _data->window.draw(i);
+}
+
+void map::drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef &_data) {
+
+    if(!projectile_vector.empty()) {
+        for (auto &i : projectile_vector)
+            _data->window.draw(i);
+    }
+}
+
+void map::drawChest(const Alpha::GameDataRef &_data) {
+    for(auto &i: chest_vector)
+        _data->window.draw(i);
+
 
 }
 

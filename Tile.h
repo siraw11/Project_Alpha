@@ -1,6 +1,7 @@
 //
 // Created by matteo on 09/03/20.
 //
+#pragma once
 
 #ifndef PROGETTO_PROVA_TILE_H
 #define PROGETTO_PROVA_TILE_H
@@ -11,7 +12,9 @@
 
 class Tile: public sf::RectangleShape {
 public:
+    ///constructor, destructor
     explicit Tile(int type);
+    ~Tile() override;
     void init(float xPos,float yPos);
     int t;
     int width=32;

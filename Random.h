@@ -1,6 +1,7 @@
 //
 // Created by matteo on 22/10/19.
 //
+#pragma once
 
 #ifndef PROJECT_ALPHA_RANDOM_H
 #define PROJECT_ALPHA_RANDOM_H

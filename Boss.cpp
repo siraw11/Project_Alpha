@@ -2,9 +2,12 @@
 // Created by matteo on 18/08/20.
 //
 
-#include "Boss.h"
-#include "GameManager/DEFINITIONS.hpp"
 
+#include "GameManager/DEFINITIONS.hpp"
+#include "Boss.h"
+
+
+///cosntructor
 Boss::Boss(int hp, int s, int sp) : Enemy(hp, s, sp) {
 
     posx=(MAP_WIDTH/2)*SCALE;// centro della mappa
@@ -21,3 +24,6 @@ Boss::Boss(int hp, int s, int sp) : Enemy(hp, s, sp) {
 
 
 }
+
+///destructor
+Boss::~Boss() = default;

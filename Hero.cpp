@@ -3,34 +3,55 @@
 //
 
 #include <iostream>
-#include "Hero.h"
+
 #include "GameManager/DEFINITIONS.hpp"
-#include "Projectile.h"
+#include "Hero.h"
 #include "Collision.h"
 
 
-Hero::Hero(int hp, int s,int sp):GameCharacter(hp,s,sp){
+///constructor
+Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 
+    arrow=a;
+    armor=ar;
+    mana=m;
     weapon= nullptr;
-
-    //setOrigin(getPosition().x +getGlobalBounds().width/10 ,getPosition().y +getGlobalBounds().height / 2);
-
     setPosition(sf::Vector2f(300,300));
 
 
 }
 
-void Hero::heroMovement(int x, int y, const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector) {
+///destructor
+Hero::~Hero(){
 
-    sf::Vector2f movement(x*speed,y*speed);
+    delete weapon;
+}
 
-    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, x, y) || counterAttack != 0) {
+///functions
+void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& itemChest_vector ) {
+
+    sf::Vector2f movement(direction().x*speed,direction().y*speed);
+    bool collided=false;
+
+    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, direction().x, direction().y) || counterAttack != 0) {
         movement.x=0;
         movement.y=0;
-    }else if(Collision::enemyCollision(this, enemy_vector, x, y )){
+        collided=true;
+    }else if(Collision::enemyCollision(this, enemy_vector, direction().x, direction().y )){
         movement.x=0;
         movement.y=0;
-    }else{
+        collided=true;
+    }else {
+        for( const Chest& i : itemChest_vector)
+            if(Collision::chestCollision( i, this, direction().x, direction().y )){
+                movement.x=0;
+                movement.y=0;
+                collided=true;
+                break;
+            }
+
+    }
+    if(!collided){
         walkingAnimation();
     }
     move(movement);
@@ -62,55 +83,95 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
         projectile_vector.push_back(newProjectile);
 
     }else {
-        int x=0;
-        int y=0;
-        switch(walkingDirection){
-            case 0: {
-                x=0;
-                y=-1;
-                break;
-            }
-            case 1: {
-                x=-1;
-                y=0;
-                break;
-            }
-            case 2: {
-                x=0;
-                y=-1;
-                break;
-            }
-            case 3: {
-                x=1;
-                y=0;
-                break;
-            }
-        }
-
         for(auto &i: *enemy_vector)
-            if (Collision::meleeHeroAttak(this, i, x, y)){
+            if (Collision::meleeHeroAttak(this, i, direction().x, direction().y)){
                 i.hit=true;
                 break;
             }
     }
 }
 
-Weapon *Hero::getWeapon() const {
-    return weapon;
+void Hero::openChest( std::vector<Chest> *chest_vector) {
+
+    for(auto &i: *chest_vector) {
+        if (Collision::chestCollision(i, this, direction().x, direction().y)) {
+
+            if(i.close){
+                i.open(this);
+                std::cout<<i.close<<std::endl;
+            }
+            break;
+        }
+    }
 }
 
-void Hero::setWeapon(Weapon *weapon) {
-    Hero::weapon = weapon;
+
+sf::Vector2i Hero::direction() {
+    sf::Vector2i direction;
+    switch(walkingDirection){
+        case 0: {
+            direction.x=0;
+            direction.y=-1;
+            break;
+        }
+        case 1: {
+            direction.x=-1;
+            direction.y=0;
+            break;
+        }
+        case 2: {
+            direction.x=0;
+            direction.y=1;
+            break;
+        }
+        case 3: {
+            direction.x=1;
+            direction.y=0;
+            break;
+        }
+    }
+
+    return direction;
 }
 
 int Hero::damage() {
     int damage=strength;
     if(weapon!= nullptr)
-        damage+=weapon->getStrenght();
+        damage+=weapon->getStrength();
     return damage;
 }
 
-Hero::~Hero(){
+///getters
+Weapon *Hero::getWeapon() const {
+    return weapon;
+}
 
-    delete weapon;
+int Hero::getArmor() const {
+    return armor;
+}
+
+int Hero::getArrow() const {
+    return arrow;
+}
+
+int Hero::getMana() const {
+    return mana;
+}
+
+///setters
+void Hero::setWeapon(Weapon *weapon) {
+    delete this->weapon;
+    Hero::weapon = weapon;
+}
+
+void Hero::setArmor(int armor) {
+    Hero::armor = armor;
+}
+
+void Hero::setMana(int mana) {
+    Hero::mana = mana;
+}
+
+void Hero::setArrow(int arrow) {
+    Hero::arrow = arrow;
 }

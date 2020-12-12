@@ -1,36 +1,37 @@
 //
 // Created by matteo on 19/03/20.
 //
+#pragma once
 
 #ifndef PROGETTO_PROVA_GAMECHARACTER_H
 #define PROGETTO_PROVA_GAMECHARACTER_H
 
 
 #include <SFML/Graphics.hpp>
-#include "Tile.h"
 
 
-class map;
+
+
 
 
 class GameCharacter:public sf::RectangleShape {
 
 public:
+///constructor, destructor
     GameCharacter(int hp, int s, int sp);
     ~GameCharacter() override;
 
+///getters
     int getLife() const;
-
-    void setLife(int life);
-
     int getStrength() const;
-
-    void setStrength(int strength);
-
     int getSpeed() const;
 
+///setters
+    void setLife(int life);
+    void setStrength(int strength);
     void setSpeed(int speed);
 
+///funciton
     void takeDamage(int damage);
 
 

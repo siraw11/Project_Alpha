@@ -3,8 +3,9 @@
 //
 
 #include <iostream>
-#include "Collision.h"
 #include "GameManager/DEFINITIONS.hpp"
+#include "Collision.h"
+
 
 bool Collision::checkCollision( std::vector<Tile>& tile_vector,  Hero *hero, int x, int y ) {
     bool collided=false;
@@ -77,7 +78,6 @@ bool Collision::projectileCollisionEnemy(Projectile *projectile,const Enemy &ene
     if(position.x + PROJECTILE_SIZE > enemy.getPosition().x && position.x < enemy.getPosition().x + ENEMY_WIDTH*ENEMY_SCALE &&
        position.y < enemy.getPosition().y + ENEMY_HEIGHT*ENEMY_SCALE && position.y + PROJECTILE_SIZE > enemy.getPosition().y){
 
-
         collided=true;
     }
     return collided;
@@ -139,4 +139,47 @@ bool Collision::meleeHeroAttak(Hero *hero, const Enemy &enemy, int x, int y) {
     }
     return collided;
 }
+
+
+/*bool Collision::chestCollision(const std::vector<Chest<Item>> &itemChest_vector, const std::vector<Chest<Weapon>> &weaponChest_vector, Enemy *enemy, int x, int y) {
+    bool collided=false;
+    sf::Vector2f position(enemy->getPosition());
+
+    position.x+= enemy->getSpeed()*x;//next position right or left
+    position.y+= enemy->getSpeed()*y;//next position up or down
+
+    for(const auto& i: itemChest_vector)
+        if(position.x + ENEMY_WIDTH*ENEMY_SCALE> i.getPosition().x && position.x < i.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
+           position.y < i.getPosition().y + CHEST_SIZE*CHEST_SCALE && position.y > i.getPosition().y ){
+
+            collided=true;
+            break;
+        }
+    for(const auto& i: weaponChest_vector)
+        if(position.x + ENEMY_WIDTH*ENEMY_SCALE> i.getPosition().x && position.x < i.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
+           position.y < i.getPosition().y + CHEST_SIZE*CHEST_SCALE && position.y > i.getPosition().y ){
+
+            collided=true;
+            break;
+        }
+    return collided;
+}*/
+
+bool Collision::chestCollision( const Chest& chest, Hero *hero, int x, int y) {
+    bool collided=false;
+    sf::Vector2f position(hero->getPosition());
+
+    position.x+= hero->getSpeed()*x;//next position right or left
+    position.y+= hero->getSpeed()*y;//next position up or down
+
+
+    if(position.x + HERO_WIDTH*HERO_SCALE> chest.getPosition().x && position.x < chest.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
+       position.y < chest.getPosition().y + CHEST_SIZE*CHEST_SCALE && position.y > chest.getPosition().y ){
+
+        collided=true;
+    }
+
+    return collided;
+}
+
 

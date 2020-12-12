@@ -1,19 +1,36 @@
 //
 // Created by matteo on 18/04/20.
 //
+#pragma once
 
 #ifndef PROGETTO_PROVA_WEAPON_H
 #define PROGETTO_PROVA_WEAPON_H
 
 
-class Weapon {
+#include "Object.h"
+
+class Weapon : public Object {
+
 public:
+
+///constructor, destructor
     explicit Weapon(int s);
-    ~Weapon();
-    int getStrenght() const;
+    ~Weapon() override;
+    Weapon(Weapon &w);
+
+///getter
+    int getStrength() const;
+
+
+///functions
+    void use(Hero* hero) override;
+
+
 
 private:
-    int strenght;
+
+///attributes
+    int strength;
 
 };
 

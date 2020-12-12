@@ -7,6 +7,8 @@
 #include "Projectile.h"
 #include "Collision.h"
 
+
+///constructor
 Projectile::Projectile(PlayerType playerType) {
     auto projectileTexture= new sf::Texture;
     switch(playerType){
@@ -26,13 +28,10 @@ Projectile::Projectile(PlayerType playerType) {
     setSize(sf::Vector2f(64,64));
 }
 
+///destructor
 Projectile::~Projectile() = default;
 
-void Projectile::init() {
-    setPosition(projectile_start);
-    setTextureRect(sf::IntRect(0,64*direction,64,64));
-}
-
+///functions
 void Projectile::updateProjectile() {
     if(direction==0)//up
         move(0,-projectile_speed);
@@ -44,7 +43,12 @@ void Projectile::updateProjectile() {
         move(projectile_speed,0);
 }
 
-bool Projectile::checkCollision(  std::vector<Enemy>* enemy_vector, const std::vector<Tile> &tile_vector) {
+void Projectile::init() {
+    setPosition(projectile_start);
+    setTextureRect(sf::IntRect(0,64*direction,64,64));
+}
+
+bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector) {
     int x=0;
     int y=0;
     switch(direction){

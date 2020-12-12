@@ -6,9 +6,10 @@
 #include "GameOverState.hpp"
 #include "../map.h"
 #include "../Hero.h"
-
 #include "../PlayerType.h"
 #include "../CharacterFactory.h"
+#include "../Weapon.h"
+#include "../Boss.h"
 #include <iostream>
 
 
@@ -56,7 +57,6 @@ namespace Alpha {
 
         std::cout<<"test branch"<<std::endl;
 
-
         map level;
 
         CharacterFactory factory;
@@ -70,7 +70,7 @@ namespace Alpha {
         auto boss= new Boss(1,1,1);
 
 
-        //View variable
+        ///View variable
         sf::View view;
         this->_data->window.setFramerateLimit(60);
         view.reset(sf::FloatRect(0, 0, 1920.0, 1080.0));
@@ -91,28 +91,32 @@ namespace Alpha {
                     this->_data->window.setView(temp);
                 }
             }
-            //hero movement
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
-                hero->heroMovement(0, -1, level.tile_vector,level.enemy_vector);
+            ///hero movement
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){///up
+                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
                 hero->walkingDirection=0;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
-                hero->heroMovement(-1, 0, level.tile_vector,level.enemy_vector);
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){///left
+                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
                 hero->walkingDirection=1;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
-                hero->heroMovement(0, 1, level.tile_vector,level.enemy_vector);
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){///down
+                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
                 hero->walkingDirection=2;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
-                hero->heroMovement(1 ,0, level.tile_vector,level.enemy_vector );
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){///right
+                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
                 hero->walkingDirection=3;
             }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){///attack
                 hero->counterAttack=1;
             }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){///open chest
+                hero->openChest(&level.chest_vector);
+            }
 
-            //update level events
+
+            ///update level events
             level.update(hero, reinterpret_cast<Boss &>(boss));
 
-            //camera settings
+            ///camera settings
             position.x = hero->getPosition().x + 20 - (1920.0 / 2);
             position.y = hero->getPosition().y + 20 - (1080.0 / 2);
 
@@ -124,7 +128,6 @@ namespace Alpha {
             view.reset(sf::FloatRect(position.x, position.y, 3840, 2160));
 
             this->_data->window.setView(view);
-
             this->_data->window.setFramerateLimit(60);
 
             level.drawTile(_data);

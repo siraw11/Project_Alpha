@@ -106,6 +106,9 @@
 		<Unit filename="/home/matteo/Project_Alpha/CharacterFactory.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Chest.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
 		<Unit filename="/home/matteo/Project_Alpha/Chest.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
@@ -215,6 +218,12 @@
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
 		<Unit filename="/home/matteo/Project_Alpha/Mage.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Object.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Object.h">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
 		<Unit filename="/home/matteo/Project_Alpha/PlayerType.h">

@@ -2,11 +2,14 @@
 // Created by matteo on 10/04/20.
 //
 
+
+#include "GameManager/DEFINITIONS.hpp"
 #include "Enemy.h"
 #include "Random.h"
-#include "GameManager/DEFINITIONS.hpp"
 #include "Collision.h"
 
+
+///constructor
 Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
 
     auto enemyTexture = new sf::Texture;
@@ -15,12 +18,15 @@ Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
     setTextureRect(sf::IntRect(0,64*3,64,64));
 
     setScale(sf::Vector2f(ENEMY_SCALE,ENEMY_SCALE));
-
-
-
 }
 
-void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero) {
+
+///destructor
+Enemy::~Enemy() = default;
+
+///functions
+
+void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero/*, const std::vector<Chest<Item>>& itemChest_vector, const std::vector<Chest<Weapon>>& weaponChest_vector*/) {
 
     //make the enemy move in random direction for n steps
     if(walkingRate==24)
@@ -59,7 +65,12 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero) {
         movement.x=0;
         movement.y=0;
 
-    }else {
+    }else /*if(Collision::chestCollision( itemChest_vector, weaponChest_vector, this, x, y)) {
+
+        movement.x=0;
+        movement.y=0;
+    }
+    else */{
 
         walkingAnimation();
     }
@@ -83,5 +94,3 @@ void Enemy::deathAnimation() {
     setTextureRect(sf::IntRect(64*counterDeath,64*8,64,64));
     counterDeath++;
 }
-
-Enemy::~Enemy() = default;

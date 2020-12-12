@@ -204,6 +204,33 @@ CharacterFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s
 .PHONY : CharacterFactory.cpp.s
 
+Chest.o: Chest.cpp.o
+
+.PHONY : Chest.o
+
+# target to build an object file
+Chest.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
+.PHONY : Chest.cpp.o
+
+Chest.i: Chest.cpp.i
+
+.PHONY : Chest.i
+
+# target to preprocess a source file
+Chest.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i
+.PHONY : Chest.cpp.i
+
+Chest.s: Chest.cpp.s
+
+.PHONY : Chest.s
+
+# target to generate assembly for a file
+Chest.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s
+.PHONY : Chest.cpp.s
+
 Collision.o: Collision.cpp.o
 
 .PHONY : Collision.o
@@ -663,6 +690,33 @@ Mage.cpp.s:
 	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s
 .PHONY : Mage.cpp.s
 
+Object.o: Object.cpp.o
+
+.PHONY : Object.o
+
+# target to build an object file
+Object.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
+.PHONY : Object.cpp.o
+
+Object.i: Object.cpp.i
+
+.PHONY : Object.i
+
+# target to preprocess a source file
+Object.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i
+.PHONY : Object.cpp.i
+
+Object.s: Object.cpp.s
+
+.PHONY : Object.s
+
+# target to generate assembly for a file
+Object.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s
+.PHONY : Object.cpp.s
+
 Projectile.o: Projectile.cpp.o
 
 .PHONY : Projectile.o
@@ -843,6 +897,9 @@ help:
 	@echo "... CharacterFactory.o"
 	@echo "... CharacterFactory.i"
 	@echo "... CharacterFactory.s"
+	@echo "... Chest.o"
+	@echo "... Chest.i"
+	@echo "... Chest.s"
 	@echo "... Collision.o"
 	@echo "... Collision.i"
 	@echo "... Collision.s"
@@ -894,6 +951,9 @@ help:
 	@echo "... Mage.o"
 	@echo "... Mage.i"
 	@echo "... Mage.s"
+	@echo "... Object.o"
+	@echo "... Object.i"
+	@echo "... Object.s"
 	@echo "... Projectile.o"
 	@echo "... Projectile.i"
 	@echo "... Projectile.s"
