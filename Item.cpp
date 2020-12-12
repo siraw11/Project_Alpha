@@ -40,10 +40,10 @@ bool Item::isPoison() const {
 
 ///functions
 void Item::use( Hero* hero) {
-
+    std::cout<<"object"<<std::endl;
 
     if (isStrength()){
-        hero->setStrength(hero->getStrength() + 2);
+        hero->setStrength(hero->getStrength() + 5);
 
     }else if(isGeneric()) {
         switch(hero->playerType){

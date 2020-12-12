@@ -360,7 +360,6 @@ void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
         for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
             if(i->hit) {
                 i->takeDamage(hero->damage());
-                std::cout<<i->getLife()<<std::endl;
                 i->hit=false;
             }
             if(i->getLife()<=0){

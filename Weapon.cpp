@@ -3,6 +3,7 @@
 //
 
 #include <stdexcept>
+#include <iostream>
 #include "Weapon.h"
 #include "Hero.h"
 
@@ -24,9 +25,10 @@ int Weapon::getStrength() const {
 }
 
 void Weapon::use(Hero *hero) {
+    std::cout<<"object"<<std::endl;
     Weapon weapon(*this);
     hero->setWeapon(&weapon);
-   // delete(this);
+
 }
 
 Weapon::Weapon(Weapon &w) {

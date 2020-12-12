@@ -98,7 +98,6 @@ void Hero::openChest( std::vector<Chest> *chest_vector) {
 
             if(i.close){
                 i.open(this);
-                std::cout<<i.close<<std::endl;
             }
             break;
         }

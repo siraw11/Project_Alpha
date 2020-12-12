@@ -4,6 +4,7 @@
 
 
 
+#include <iostream>
 #include "Object.h"
 
 
@@ -15,5 +16,6 @@ Object::~Object() = default;
 
 
 void Object::use(Hero* hero) {
+    std::cout<<"object"<<std::endl;
 
 }
