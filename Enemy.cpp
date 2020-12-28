@@ -26,7 +26,7 @@ Enemy::~Enemy() = default;
 
 ///functions
 
-void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero/*, const std::vector<Chest<Item>>& itemChest_vector, const std::vector<Chest<Weapon>>& weaponChest_vector*/) {
+void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector) {
 
     //make the enemy move in random direction for n steps
     if(walkingRate==24)
@@ -55,22 +55,30 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero/*, const s
     }
 
     sf::Vector2f movement(getSpeed()*x,getSpeed()*y);
+    bool collided=false;
     if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector),this, x, y)){
         movement.x=0;
         movement.y=0;
+        collided=true;
     }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*x) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*y)){//check collision
         movement.x=0;
         movement.y=0;
+        collided=true;
     }else if(Collision::heroCollision(this, hero, x, y)){
         movement.x=0;
         movement.y=0;
+        collided=true;
+    }else{
 
-    }else /*if(Collision::chestCollision( itemChest_vector, weaponChest_vector, this, x, y)) {
-
-        movement.x=0;
-        movement.y=0;
+        for( const Chest& i : chest_vector)
+            if(Collision::chestCollision( i, this, x, y )){
+                movement.x=0;
+                movement.y=0;
+                collided=true;
+                break;
+            }
     }
-    else */{
+    if(!collided) {
 
         walkingAnimation();
     }

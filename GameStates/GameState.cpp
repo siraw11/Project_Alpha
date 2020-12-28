@@ -55,8 +55,6 @@ namespace Alpha {
     void GameState::Draw() {
         srand(time(nullptr));
 
-        std::cout<<"piedi"<<std::endl;
-
         map level;
 
         CharacterFactory factory;

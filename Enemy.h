@@ -9,6 +9,7 @@
 
 #include "GameCharacter.h"
 #include "Tile.h"
+#include "Chest.h"
 
 class Hero;
 
@@ -20,7 +21,7 @@ public:
     ~Enemy() override;
 
     ///functions
-    void movement( const std::vector<Tile>& tile_vector, Hero &hero/*, const std::vector<Chest<Item>>& itemChest_vector, const std::vector<Chest<Weapon>>& weaponChest_vector*/);
+    void movement( const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector);
     void walkingAnimation();
     void deathAnimation();
 

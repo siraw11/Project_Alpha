@@ -28,7 +28,7 @@ Hero::~Hero(){
 }
 
 ///functions
-void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& itemChest_vector ) {
+void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector ) {
 
     sf::Vector2f movement(direction().x*speed,direction().y*speed);
     bool collided=false;
@@ -42,7 +42,7 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
         movement.y=0;
         collided=true;
     }else {
-        for( const Chest& i : itemChest_vector)
+        for( const Chest& i : chest_vector)
             if(Collision::chestCollision( i, this, direction().x, direction().y )){
                 movement.x=0;
                 movement.y=0;
