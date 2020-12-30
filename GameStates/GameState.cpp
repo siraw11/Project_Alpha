@@ -108,6 +108,8 @@ namespace Alpha {
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){///open chest
                 hero->openChest(&level.chest_vector);
+                std::cout<<"forza e forza arma"<<std::endl;
+                std::cout<<hero->getStrength()<<" "<<hero->getWeapon()->getStrength()<<std::endl;
             }
 
 

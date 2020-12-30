@@ -327,8 +327,8 @@ void map::setTexture() {
 
 void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
     //enemy movement update
-    for(auto& i : enemy_vector)
-         i.movement(this->tile_vector, *hero, chest_vector);
+    /*for(auto& i : enemy_vector)
+         i.movement(this->tile_vector, *hero, chest_vector);*/
 
     //update attack animation
     if(hero->counterAttack>0){

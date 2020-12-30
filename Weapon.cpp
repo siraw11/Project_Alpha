@@ -25,10 +25,11 @@ int Weapon::getStrength() const {
 }
 
 void Weapon::use(Hero *hero) {
-    std::cout<<"object"<<std::endl;
-    Weapon weapon(*this);
-    hero->setWeapon(&weapon);
+    std::cout<<"weapon"<<std::endl;
 
+    hero->setWeapon(this);
+    std::cout<<"forza arma subito dopo il set"<<std::endl;
+    std::cout<<hero->getWeapon()->strength<<std::endl;
 }
 
 Weapon::Weapon(Weapon &w) {

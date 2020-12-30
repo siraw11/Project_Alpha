@@ -90,9 +90,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Win
 
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameManager/DEFINITIONS.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Tile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp

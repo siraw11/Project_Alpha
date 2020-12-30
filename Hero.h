@@ -43,7 +43,7 @@ public:
     int getMana() const;
 
 ///setters
-    void setWeapon(Weapon *weapon);
+    void setWeapon(Weapon* weapon);
     void setArmor(int armor);
     void setArrow(int arrow);
     void setMana(int mana);
@@ -51,7 +51,7 @@ public:
 
 protected:
 ///attributes
-    Weapon *weapon;
+    Weapon* weapon;
     int armor;
     int arrow;
     int mana;

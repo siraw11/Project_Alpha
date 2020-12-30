@@ -156,9 +156,7 @@ void Chest::init(int counter) {
 
 
 void Chest::open(Hero* hero) {
-    std::cout<<"Chest"<<std::endl;
     this->setClose(false);
-
     for (auto i : elements){
             i->use(hero);
         }

@@ -23,8 +23,6 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 
 ///destructor
 Hero::~Hero(){
-
-    delete weapon;
 }
 
 ///functions
@@ -98,10 +96,15 @@ void Hero::openChest( std::vector<Chest> *chest_vector) {
 
             if(i.close){
                 i.open(this);
+                std::cout<<"forza arma dopo open"<<std::endl;
+                std::cout<<this->getWeapon()->getStrength()<<std::endl;
             }
+
+
             break;
         }
     }
+
 }
 
 
@@ -135,8 +138,12 @@ sf::Vector2i Hero::direction() {
 
 int Hero::damage() {
     int damage=strength;
+    std::cout<<"forza e forza arma al danno"<<std::endl;
+    std::cout<<this->strength<<" "<<this->getWeapon()->getStrength()<<std::endl;
     if(weapon!= nullptr)
         damage+=weapon->getStrength();
+    std::cout<<"danno"<<std::endl;
+    std::cout<<damage<<std::endl;
     return damage;
 }
 
@@ -158,9 +165,10 @@ int Hero::getMana() const {
 }
 
 ///setters
-void Hero::setWeapon(Weapon *weapon) {
-    delete this->weapon;
-    Hero::weapon = weapon;
+void Hero::setWeapon(Weapon* weapon) {
+    this->weapon=weapon;
+    std::cout<<"forza arma nel set"<<std::endl;
+    std::cout<<this->weapon->getStrength()<<std::endl;
 }
 
 void Hero::setArmor(int armor) {
@@ -174,3 +182,5 @@ void Hero::setMana(int mana) {
 void Hero::setArrow(int arrow) {
     Hero::arrow = arrow;
 }
+
+

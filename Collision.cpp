@@ -151,7 +151,6 @@ bool Collision::chestCollision(const Chest& chest, Enemy *enemy, int x, int y) {
     if(position.x + ENEMY_WIDTH*ENEMY_SCALE  > chest.getPosition().x && position.x < chest.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
            position.y < chest.getPosition().y + CHEST_SIZE*CHEST_SCALE && position.y  > chest.getPosition().y){
             //control on the tile, I left side, II right side, III bottom side, IV top side
-            std::cout<< "preso"<<std::endl;
             collided=true;
 
             return collided;
