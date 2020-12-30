@@ -100,7 +100,7 @@ void Chest::init(int counter) {
             elements.push_back(potion);
             elements.push_back(sword);
 
-            posX=119*32*SCALE;
+            posX=118*32*SCALE;
             posY=(61/2)*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
@@ -115,7 +115,7 @@ void Chest::init(int counter) {
             elements.push_back(sword);
 
             posX=20*32*SCALE;
-            posY=61*32*SCALE;
+            posY=60*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -128,8 +128,8 @@ void Chest::init(int counter) {
             elements.push_back(potion);
             elements.push_back(sword);
 
-            posX=90*32*SCALE;
-            posY=61*32*SCALE;
+            posX=99*32*SCALE;
+            posY=60*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -142,8 +142,8 @@ void Chest::init(int counter) {
             elements.push_back(potion);
             elements.push_back(sword);
 
-            posX=60*32*SCALE;
-            posY=78*32*SCALE;
+            posX=59*32*SCALE;
+            posY=70*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
