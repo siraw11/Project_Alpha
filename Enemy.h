@@ -24,11 +24,13 @@ public:
     void movement( const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector);
     void walkingAnimation();
     void deathAnimation();
+    int damage();
 
     ///attributes
     sf::Vector2f spawnposition;
     bool hit=false;
     int counterDeath=0;
+    bool heroHitted;
 
 private:
     ///attributes

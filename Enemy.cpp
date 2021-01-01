@@ -18,6 +18,8 @@ Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
     setTextureRect(sf::IntRect(0,64*3,64,64));
 
     setScale(sf::Vector2f(ENEMY_SCALE,ENEMY_SCALE));
+
+    heroHitted=false;
 }
 
 
@@ -67,6 +69,8 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
     }else if(Collision::heroCollision(this, hero, x, y)){
         movement.x=0;
         movement.y=0;
+        hero.hit=true;
+        this->heroHitted=true;
         collided=true;
     }else{
 
@@ -102,3 +106,5 @@ void Enemy::deathAnimation() {
     setTextureRect(sf::IntRect(64*counterDeath,64*8,64,64));
     counterDeath++;
 }
+
+

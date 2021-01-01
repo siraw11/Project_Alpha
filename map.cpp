@@ -166,7 +166,7 @@ map::map() {
             }
         }
     //creazione vettore dei nemici
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 10; i++) {
         Enemy newEnemy(3, 1, 10);
         newEnemy.spawnposition = generateRandomPos(tile_vector);
         newEnemy.setPosition(newEnemy.spawnposition);
@@ -327,8 +327,8 @@ void map::setTexture() {
 
 void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
     //enemy movement update
-    /*for(auto& i : enemy_vector)
-         i.movement(this->tile_vector, *hero, chest_vector);*/
+    for(auto& i : enemy_vector)
+         i.movement(this->tile_vector, *hero, chest_vector);
 
     //update attack animation
     if(hero->counterAttack>0){
@@ -376,7 +376,20 @@ void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
             break;}
     }
 
+    //update hero life
+    if(hero->hit)
+    {
+        for (auto &i: enemy_vector) {
+            if(i.heroHitted){
+                hero->takeDamage(i.getStrength());
+                i.heroHitted=false;
+            }
+        }
+        hero->hit=false;
 
+
+    }
+    std::cout<<hero->getLife()<<std::endl;
 }
 
 

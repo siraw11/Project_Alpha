@@ -35,7 +35,7 @@ public:
     int counterAttack=0;//attack rate
     std::vector<Projectile> projectile_vector;
     PlayerType playerType;
-
+    bool hit;
 ///getters
     Weapon *getWeapon() const;
     int getArmor() const;
@@ -55,6 +55,7 @@ protected:
     int armor;
     int arrow;
     int mana;
+
 
 
 private:

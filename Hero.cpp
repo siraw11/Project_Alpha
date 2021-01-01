@@ -16,6 +16,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
     armor=ar;
     mana=m;
     weapon= nullptr;
+    hit=false;
     setPosition(sf::Vector2f(300,300));
 
 
@@ -38,6 +39,7 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
     }else if(Collision::enemyCollision(this, enemy_vector, direction().x, direction().y )){
         movement.x=0;
         movement.y=0;
+        this->hit=true;
         collided=true;
     }else {
         for( const Chest& i : chest_vector)
@@ -138,12 +140,8 @@ sf::Vector2i Hero::direction() {
 
 int Hero::damage() {
     int damage=strength;
-    std::cout<<"forza e forza arma al danno"<<std::endl;
-    std::cout<<this->strength<<" "<<this->getWeapon()->getStrength()<<std::endl;
     if(weapon!= nullptr)
         damage+=weapon->getStrength();
-    std::cout<<"danno"<<std::endl;
-    std::cout<<damage<<std::endl;
     return damage;
 }
 
