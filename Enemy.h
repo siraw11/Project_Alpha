@@ -24,7 +24,8 @@ public:
     void movement( const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector);
     void walkingAnimation();
     void deathAnimation();
-    int damage();
+    sf::Vector2i walkingDirection();
+
 
     ///attributes
     sf::Vector2f spawnposition;
@@ -34,7 +35,7 @@ public:
 
 private:
     ///attributes
-    int direction=0;// 1=up,2=down,3=left,4=right
+    int direction=0;// 1=up,2=left,3=down,4=right
     int walkingRate=0;
     int counterWalking=0;
 };

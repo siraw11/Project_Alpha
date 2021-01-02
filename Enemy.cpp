@@ -39,34 +39,17 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
         walkingRate++;
     }
 
-    //setting direction
-    int x=0;
-    int y=0;
-    if(direction==1){//up
-        x=0;
-        y=-1;
-    }else if(direction==2){//left
-        x=-1;
-        y=0;
-    }else if(direction==3){//down
-        x=0;
-        y=1;
-    } else if(direction==4){//right
-        x=1;
-        y=0;
-    }
-
-    sf::Vector2f movement(getSpeed()*x,getSpeed()*y);
+    sf::Vector2f movement(getSpeed()*walkingDirection().x,getSpeed()*walkingDirection().y);
     bool collided=false;
-    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector),this, x, y)){
+    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector),this, walkingDirection().x, walkingDirection().y )){
         movement.x=0;
         movement.y=0;
         collided=true;
-    }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*x) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*y)){//check collision
+    }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*walkingDirection().x ) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*walkingDirection().y )){//check collision
         movement.x=0;
         movement.y=0;
         collided=true;
-    }else if(Collision::heroCollision(this, hero, x, y)){
+    }else if(Collision::heroCollision(this, hero, walkingDirection().x, walkingDirection().y )){
         movement.x=0;
         movement.y=0;
         hero.hit=true;
@@ -75,7 +58,7 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
     }else{
 
         for( const Chest& i : chest_vector)
-            if(Collision::chestCollision( i, this, x, y )){
+            if(Collision::chestCollision( i, this, walkingDirection().x, walkingDirection().y )){
                 movement.x=0;
                 movement.y=0;
                 collided=true;
@@ -105,6 +88,34 @@ void Enemy::walkingAnimation() {
 void Enemy::deathAnimation() {
     setTextureRect(sf::IntRect(64*counterDeath,64*8,64,64));
     counterDeath++;
+}
+
+sf::Vector2i Enemy::walkingDirection() {
+    sf::Vector2i walkingDirection;
+    switch(direction){
+        case 1: {
+            walkingDirection.x=0;
+            walkingDirection.y=-1;
+            break;
+        }
+        case 2: {
+            walkingDirection.x=-1;
+            walkingDirection.y=0;
+            break;
+        }
+        case 3: {
+            walkingDirection.x=0;
+            walkingDirection.y=1;
+            break;
+        }
+        case 4: {
+            walkingDirection.x=1;
+            walkingDirection.y=0;
+            break;
+        }
+    }
+
+    return walkingDirection;
 }
 
 

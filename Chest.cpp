@@ -36,26 +36,22 @@ void Chest::init(int counter) {
 
     switch (counter){
         case 0:{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(8);
+            Object *generic = new Item(false, false, true, false, false, false);
 
-            elements.push_back(potion);
-            elements.push_back(sword);
+            elements.push_back(generic);
 
             posX=19*32*SCALE;
             posY=0;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
-
         }
         case 1 :{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(2);
+            Object *poison = new Item(false, false, false, false, true, false);
+            Object *strength = new Item(true, false, false, false, false, false);
 
-
-            elements.push_back(potion);
-            elements.push_back(sword);
+            elements.push_back(strength);
+            elements.push_back(poison);
 
             posX=59*32*SCALE;
             posY=0;
@@ -64,12 +60,11 @@ void Chest::init(int counter) {
             break;
         }
         case 2:{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(2);
+            Object *generic = new Item(false, false, true, false, false, false);
+            Object *weapon = new Weapon(4);
 
-
-            elements.push_back(potion);
-            elements.push_back(sword);
+            elements.push_back(generic);
+            elements.push_back(weapon);
 
             posX=99*32*SCALE;
             posY=0;
@@ -79,12 +74,12 @@ void Chest::init(int counter) {
         }
 
         case 3:{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(2);
+            Object *exhaust = new Item(false, true, false, false, false, false);
+            Object *life = new Item(false, false, false, true, false, false);
 
 
-            elements.push_back(potion);
-            elements.push_back(sword);
+            elements.push_back(exhaust);
+            elements.push_back(life);
 
             posX=32*SCALE;
             posY=(61/2)*32*SCALE;
@@ -93,12 +88,12 @@ void Chest::init(int counter) {
             break;
         }
         case 4:{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(2);
+            Object *exhaust = new Item(false, true, false, false, false, false);
+            Object *poison = new Item(false, false, false, false, true, false);
 
 
-            elements.push_back(potion);
-            elements.push_back(sword);
+            elements.push_back(exhaust);
+            elements.push_back(poison);
 
             posX=118*32*SCALE;
             posY=(61/2)*32*SCALE;
@@ -107,12 +102,12 @@ void Chest::init(int counter) {
             break;
         }
         case 5:{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(2);
+            Object *generic = new Item(false, false, true, false, false, false);
+            Object *weapon = new Weapon(5);
 
 
-            elements.push_back(potion);
-            elements.push_back(sword);
+            elements.push_back(generic);
+            elements.push_back(weapon);
 
             posX=20*32*SCALE;
             posY=60*32*SCALE;
@@ -121,12 +116,14 @@ void Chest::init(int counter) {
             break;
         }
         case 6:{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(2);
+            Object *generic = new Item(false, false, true, false, false, false);
+            Object *life = new Item(false, false, false, true, false, false);
+            Object *weapon = new Weapon(6);
 
 
-            elements.push_back(potion);
-            elements.push_back(sword);
+            elements.push_back(generic);
+            elements.push_back(life);
+            elements.push_back(weapon);
 
             posX=99*32*SCALE;
             posY=60*32*SCALE;
@@ -135,11 +132,12 @@ void Chest::init(int counter) {
             break;
         }
         case 7:{
-            Object *potion = new Item(true, false, false, false, false, false);
-            Object *sword = new Weapon(2);
+            Object *key = new Item(false, false, false, false, false, true);
+            Object *strength = new Item(true, false, false, false, false, false);
+            Object *sword = new Weapon(8);
 
-
-            elements.push_back(potion);
+            elements.push_back(key);
+            elements.push_back(strength);
             elements.push_back(sword);
 
             posX=59*32*SCALE;

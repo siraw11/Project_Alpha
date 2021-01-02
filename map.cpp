@@ -381,15 +381,21 @@ void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
     {
         for (auto &i: enemy_vector) {
             if(i.heroHitted){
-                hero->takeDamage(i.getStrength());
+                if(hero->playerType==PlayerType::KNIGHT && hero->getArmor()>0){
+                    hero->setArmor(hero->getArmor()-i.getStrength());
+
+                }else{
+                    hero->takeDamage(i.getStrength());
+                }
                 i.heroHitted=false;
+                hero->move(sf::Vector2f(30*(i.walkingDirection().x),30*(i.walkingDirection().y)));
             }
         }
         hero->hit=false;
 
 
     }
-    std::cout<<hero->getLife()<<std::endl;
+    std::cout<<hero->getLife()<<" "<<hero->getArmor()<<std::endl;
 }
 
 
