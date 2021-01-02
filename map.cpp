@@ -359,6 +359,9 @@ void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
     if(!enemy_vector.empty())
         for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
             if(i->hit) {
+                if(hero->playerType==PlayerType::KNIGHT)
+                    i->move(30*hero->direction().x,30*hero->direction().y);
+
                 i->takeDamage(hero->damage());
                 i->hit=false;
             }
