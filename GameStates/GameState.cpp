@@ -75,7 +75,9 @@ namespace Alpha {
         view.setViewport(sf::FloatRect(0, 0, 1.0f, 1.0f));
         sf::Vector2f position(0, 0);
 
+        //map sprite
         level.setTexture();
+
         while (this->_data->window.isOpen())
         {
             sf::Event event;
@@ -107,7 +109,7 @@ namespace Alpha {
                 hero->counterAttack=1;
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){///open chest
-                hero->openChest(&level.chest_vector);
+                hero->openChest(&level.chest_vector, &level.tile_vector);
                 std::cout<<"forza e forza arma"<<std::endl;
                 std::cout<<hero->getStrength()<<" "<<hero->getWeapon()->getStrength()<<std::endl;
             }

@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/matteo/Project_Alpha/Boss.h
-Enemy.h
-/home/matteo/Project_Alpha/Enemy.h
+/home/matteo/Project_Alpha/Chest.cpp
+iostream
+-
+Chest.h
+/home/matteo/Project_Alpha/Chest.h
+Item.h
+/home/matteo/Project_Alpha/Item.h
+Weapon.h
+/home/matteo/Project_Alpha/Weapon.h
 
 /home/matteo/Project_Alpha/Chest.h
 SFML/Graphics.hpp
@@ -30,47 +36,7 @@ Chest.h
 SFML/Graphics.hpp
 -
 
-/home/matteo/Project_Alpha/GameManager/AssetManager.hpp
-map
--
-SFML/Graphics.hpp
--
-
 /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
-
-/home/matteo/Project_Alpha/GameManager/Game.hpp
-memory
--
-string
--
-SFML/Graphics.hpp
--
-../GameStates/StateMachine.hpp
-/home/matteo/Project_Alpha/GameStates/StateMachine.hpp
-AssetManager.hpp
-/home/matteo/Project_Alpha/GameManager/AssetManager.hpp
-InputManager.hpp
-/home/matteo/Project_Alpha/GameManager/InputManager.hpp
-
-/home/matteo/Project_Alpha/GameManager/InputManager.hpp
-SFML/Graphics/RenderWindow.hpp
--
-SFML/Window/Mouse.hpp
--
-SFML/Graphics.hpp
-/home/matteo/Project_Alpha/GameManager/SFML/Graphics.hpp
-
-/home/matteo/Project_Alpha/GameStates/State.hpp
-../PlayerType.h
-/home/matteo/Project_Alpha/PlayerType.h
-
-/home/matteo/Project_Alpha/GameStates/StateMachine.hpp
-memory
--
-stack
--
-State.hpp
-/home/matteo/Project_Alpha/GameStates/State.hpp
 
 /home/matteo/Project_Alpha/Hero.h
 GameCharacter.h
@@ -88,7 +54,23 @@ Weapon.h
 PlayerType.h
 /home/matteo/Project_Alpha/PlayerType.h
 
+/home/matteo/Project_Alpha/Item.cpp
+iostream
+-
+Item.h
+/home/matteo/Project_Alpha/Item.h
+PlayerType.h
+/home/matteo/Project_Alpha/PlayerType.h
+Hero.h
+/home/matteo/Project_Alpha/Hero.h
+
+/home/matteo/Project_Alpha/Item.h
+Object.h
 /home/matteo/Project_Alpha/Object.h
+
+/home/matteo/Project_Alpha/Object.h
+Tile.h
+/home/matteo/Project_Alpha/Tile.h
 
 /home/matteo/Project_Alpha/PlayerType.h
 
@@ -100,18 +82,6 @@ PlayerType.h
 Tile.h
 /home/matteo/Project_Alpha/Tile.h
 
-/home/matteo/Project_Alpha/Random.h
-cstdlib
--
-SFML/System.hpp
--
-iostream
--
-ctime
--
-Tile.h
-/home/matteo/Project_Alpha/Tile.h
-
 /home/matteo/Project_Alpha/Tile.h
 SFML/Graphics.hpp
 -
@@ -119,38 +89,6 @@ SFML/Graphics.hpp
 /home/matteo/Project_Alpha/Weapon.h
 Object.h
 /home/matteo/Project_Alpha/Object.h
-
-/home/matteo/Project_Alpha/map.cpp
-fstream
--
-iostream
--
-GameManager/DEFINITIONS.hpp
-/home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
-map.h
-/home/matteo/Project_Alpha/map.h
-Random.h
-/home/matteo/Project_Alpha/Random.h
-
-/home/matteo/Project_Alpha/map.h
-SFML/Graphics.hpp
--
-SFML/Window.hpp
--
-GameManager/Game.hpp
-/home/matteo/Project_Alpha/GameManager/Game.hpp
-Tile.h
-/home/matteo/Project_Alpha/Tile.h
-Enemy.h
-/home/matteo/Project_Alpha/Enemy.h
-Boss.h
-/home/matteo/Project_Alpha/Boss.h
-Chest.h
-/home/matteo/Project_Alpha/Chest.h
-Projectile.h
-/home/matteo/Project_Alpha/Projectile.h
-Hero.h
-/home/matteo/Project_Alpha/Hero.h
 
 /opt/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h

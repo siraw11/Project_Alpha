@@ -23,7 +23,7 @@ public:
 
 ///function
     void init(int counter);
-    void open(Hero* hero);
+    void open(Hero* hero, std::vector<Tile>* tile_vector);
     void openingAnimation();
     void setClose(bool close);
 

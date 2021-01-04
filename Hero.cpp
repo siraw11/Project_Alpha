@@ -17,7 +17,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
     mana=m;
     weapon= nullptr;
     hit=false;
-    setPosition(sf::Vector2f(300,300));
+    setPosition(sf::Vector2f(6000,7000));
 
 
 }
@@ -91,13 +91,13 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
     }
 }
 
-void Hero::openChest( std::vector<Chest> *chest_vector) {
+void Hero::openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_vector) {
 
     for(auto &i: *chest_vector) {
         if (Collision::chestCollision(i, this, direction().x, direction().y)) {
 
             if(i.close){
-                i.open(this);
+                i.open(this, tile_vector);
                 std::cout<<"forza arma dopo open"<<std::endl;
                 std::cout<<this->getWeapon()->getStrength()<<std::endl;
             }

@@ -39,12 +39,10 @@ bool Item::isPoison() const {
 }
 
 ///functions
-void Item::use( Hero* hero) {
+void Item::use( Hero* hero, std::vector<Tile>* tile_vector) {
     std::cout<<"Item"<<std::endl;
 
     if (isStrength()){
-        hero->setStrength(hero->getStrength() + 5);
-        std::cout<<hero->getStrength()<<std::endl;
     }else if(isGeneric()) {
         switch(hero->playerType){
             case PlayerType ::KNIGHT:{
@@ -65,6 +63,10 @@ void Item::use( Hero* hero) {
     }else if(isKey()){
         std::cout<<" ok"<<std::endl;
         //Todo:open the gate
+        for(auto &i: *tile_vector)
+            if(i.t == LEFT_FRONT_DOOR || i.t == RIGHT_FRONT_DOOR || i.t == LEFT_SIDE_DOOR || i.t == RIGHT_SIDE_DOOR){
+                i.openGate();
+            }
 
     }else if(isExhaust()){
         hero->setStrength(hero->getStrength()-1);

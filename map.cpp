@@ -395,10 +395,7 @@ void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
             }
         }
         hero->hit=false;
-
-
     }
-    std::cout<<hero->getLife()<<" "<<hero->getArmor()<<std::endl;
 }
 
 

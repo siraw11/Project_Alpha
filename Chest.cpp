@@ -153,12 +153,11 @@ void Chest::init(int counter) {
 }
 
 
-void Chest::open(Hero* hero) {
+void Chest::open(Hero* hero, std::vector<Tile>* tile_vector) {
     this->setClose(false);
     for (auto i : elements){
-            i->use(hero);
+            i->use(hero, tile_vector);
         }
-
        if(!elements.empty())
             for(auto i=elements.end(); i!=elements.end(); ++i)
                 this->elements.erase(i);

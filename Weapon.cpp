@@ -24,7 +24,7 @@ int Weapon::getStrength() const {
     return strength;
 }
 
-void Weapon::use(Hero *hero) {
+void Weapon::use(Hero *hero, std::vector<Tile>* tile_vector) {
     std::cout<<"weapon"<<std::endl;
 
     hero->setWeapon(this);

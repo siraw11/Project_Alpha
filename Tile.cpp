@@ -30,3 +30,29 @@ void Tile::init(float xPos, float yPos) {
     hitLeft=posx-(width);
     hitRight=posx+(width*SCALE);
 }
+
+void Tile::openGate() {
+    this->t=0;
+    this->setTextureRect(sf::IntRect(0, 0, 32, 32));
+    std::cout<<"yep "<<t<<std::endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

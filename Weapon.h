@@ -23,7 +23,7 @@ public:
 
 
 ///functions
-    void use(Hero* hero) override;
+    void use(Hero* hero, std::vector<Tile>* tile_vector) override;
 
 
 

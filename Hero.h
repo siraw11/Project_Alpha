@@ -24,7 +24,7 @@ public:
 
 ///function
     void heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector );
-    void openChest( std::vector<Chest> *chest_vector );
+    void openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_vector );
     void attackAnimation();
     void attack( std::vector<Enemy>* enemy_vector );
     int damage();

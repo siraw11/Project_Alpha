@@ -45,6 +45,14 @@
 
 #define TILE_HEIGHT 32
 
+#define LEFT_FRONT_DOOR 17
+
+#define RIGHT_FRONT_DOOR 18
+
+#define LEFT_SIDE_DOOR 19
+
+#define RIGHT_SIDE_DOOR 20
+
 #define ENEMY_WALK_DISTANCE 320
 
 #define ENEMY_SCALE 2.5
@@ -72,5 +80,7 @@
 #define CHEST_SIZE 32
 
 #define CHEST_SCALE 3
+
+
 
 

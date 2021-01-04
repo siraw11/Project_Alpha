@@ -7,6 +7,8 @@
 #define PROJECT_ALPHA_OBJECT_H
 
 
+#include "Tile.h"
+
 class Hero;
 
 class Object {
@@ -16,7 +18,7 @@ public:
     Object();
     virtual ~Object();
 
-    virtual void use(Hero* hero);
+    virtual void use(Hero* hero, std::vector<Tile>* tile_vector);
 
 
 };
