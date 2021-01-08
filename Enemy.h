@@ -25,7 +25,7 @@ public:
     void walkingAnimation();
     void deathAnimation();
     sf::Vector2i walkingDirection();
-
+    void aggro(sf::Vector2f d);
 
     ///attributes
     sf::Vector2f spawnposition;

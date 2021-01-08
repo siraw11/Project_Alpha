@@ -147,9 +147,6 @@ void Chest::init(int counter) {
             break;
         }
     }
-
-
-
 }
 
 

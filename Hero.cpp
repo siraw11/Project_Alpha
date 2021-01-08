@@ -17,7 +17,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
     mana=m;
     weapon= nullptr;
     hit=false;
-    setPosition(sf::Vector2f(6000,7000));
+    setPosition(sf::Vector2f(300,300));
 
 
 }

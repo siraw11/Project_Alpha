@@ -1,3 +1,5 @@
+#include <cmath>
+
 //
 // Created by matteo on 10/04/20.
 //
@@ -7,6 +9,7 @@
 #include "Enemy.h"
 #include "Random.h"
 #include "Collision.h"
+#include <cmath>
 
 
 ///constructor
@@ -30,16 +33,28 @@ Enemy::~Enemy() = default;
 
 void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector) {
 
+    auto d=hero.getPosition()-this->getPosition();
+    float distanza = std::sqrt((d.x*d.x) + (d.y*d.y));
+    d/=distanza;
+
+    sf::Vector2f movement;
+    if(this->getPosition().x!= hero.getPosition().x && distanza<600){ //enemy aggro
+        movement.x=getSpeed()*d.x;
+        movement.y=getSpeed()*d.y;
+        aggro(d);
+    }
     //make the enemy move in random direction for n steps
-    if(walkingRate==24)
-    {
+    else if(walkingRate==24){
+
         direction=generateRandom(4);
         walkingRate=0;
     }else{
+        movement.x=getSpeed()*walkingDirection().x;
+        movement.y=getSpeed()*walkingDirection().y;
         walkingRate++;
     }
 
-    sf::Vector2f movement(getSpeed()*walkingDirection().x,getSpeed()*walkingDirection().y);
+
     bool collided=false;
     if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector),this, walkingDirection().x, walkingDirection().y )){
         movement.x=0;
@@ -69,6 +84,8 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
 
         walkingAnimation();
     }
+
+
     move(movement);
 
 
@@ -116,6 +133,15 @@ sf::Vector2i Enemy::walkingDirection() {
     }
 
     return walkingDirection;
+}
+
+void Enemy::aggro(sf::Vector2f d) {
+
+    if(d.x<0){
+        direction=2;
+    }else {
+        direction=4;
+    }
 }
 
 
