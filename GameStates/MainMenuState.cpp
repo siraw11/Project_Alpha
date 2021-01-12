@@ -34,7 +34,7 @@ namespace Alpha
 
 	}
 
-
+//if
 	void MainMenuState::HandleInput()
 	{
 		sf::Event event;
