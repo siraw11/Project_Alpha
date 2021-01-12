@@ -31,6 +31,14 @@
 
 #define RETRY_BUTTON "../Resources/MainMenu/Retry Button.png"
 
+#define HEART_UI "../Resources/item/heart.png"
+
+#define MANA_UI "../Resources/item/mana.png"
+
+#define ARMOR_UI "../Resources/item/armor.png"
+
+#define ARROW_UI "../Resources/item/arrow_1.png"
+
 #define TIME_BEFORE_SHOWING_GAME_OVER 1
 
 #define STATE_WON 1

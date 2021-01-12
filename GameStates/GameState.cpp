@@ -130,10 +130,40 @@ namespace Alpha {
             this->_data->window.setView(view);
             this->_data->window.setFramerateLimit(60);
 
+            //UI Elements
+            this->_data->assets.LoadTexture("Heart", HEART_UI);
+            this->_heart.setTexture(this->_data->assets.GetTexture("Heart"));
+            this->_heart.setScale(3,3);
+            _heart.setPosition(hero->getPosition().x,hero->getPosition().y-30 );
+
+            if(playerType==PlayerType::ARCHER){
+                this->_data->assets.LoadTexture("Arrow", ARROW_UI);
+                this->_arrow_1.setTexture(this->_data->assets.GetTexture("Arrow"));
+                this->_arrow_1.setScale(3,3);
+                _arrow_1.setPosition(hero->getPosition().x+80,hero->getPosition().y-30 );
+
+            }
+
+            else if (playerType==PlayerType::MAGE){
+                this->_data->assets.LoadTexture("Mana", MANA_UI);
+                this->_mana.setTexture(this->_data->assets.GetTexture("Mana"));
+                this->_mana.setScale(3,3);
+                _mana.setPosition(hero->getPosition().x+80,hero->getPosition().y-30 );}
+
+            else if (playerType==PlayerType::KNIGHT){
+                this->_data->assets.LoadTexture("Armor", ARMOR_UI);
+                this->_armor.setTexture(this->_data->assets.GetTexture("Armor"));
+                this->_armor.setScale(2.7,2.7);
+                _armor.setPosition(hero->getPosition().x+80,hero->getPosition().y-30 );}
+
             level.drawTile(_data);
             level.drawEnemy(_data);
             level.drawChest(_data);
             this->_data->window.draw(*hero);
+            this->_data->window.draw(this->_heart);
+            this->_data->window.draw(this->_arrow_1);
+            this->_data->window.draw(this->_mana);
+            this->_data->window.draw(this->_armor);
             this->_data->window.draw(*boss);
             level.drawProjectile(hero->projectile_vector,_data);
             level.drawProjectile(boss->projectile_vector,_data);
