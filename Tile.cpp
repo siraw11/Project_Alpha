@@ -34,7 +34,7 @@ void Tile::init(float xPos, float yPos) {
 void Tile::openGate() {
     this->t=0;
     this->setTextureRect(sf::IntRect(0, 0, 32, 32));
-    std::cout<<"yep "<<t<<std::endl;
+
 
 
 

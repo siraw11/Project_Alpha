@@ -29,6 +29,7 @@ public:
     void attack( std::vector<Enemy>* enemy_vector );
     int damage();
     sf::Vector2i direction();
+    void update( const std::vector<Tile>& tile_vector, std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector );
 
 ///attributi
     int walkingDirection=2;//0=up, 1=left, 2=down, 3=right

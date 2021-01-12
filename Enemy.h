@@ -11,6 +11,7 @@
 #include "Tile.h"
 #include "Chest.h"
 
+
 class Hero;
 
 class Enemy : public GameCharacter{
@@ -21,19 +22,21 @@ public:
     ~Enemy() override;
 
     ///functions
-    void movement( const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector);
+    virtual void movement( const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector);
     void walkingAnimation();
     void deathAnimation();
     sf::Vector2i walkingDirection();
     void aggro(sf::Vector2f d);
+    virtual void update(Hero hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector);
 
     ///attributes
     sf::Vector2f spawnposition;
     bool hit=false;
     int counterDeath=0;
     bool heroHitted;
+    bool dead=false;
 
-private:
+protected:
     ///attributes
     int direction=0;// 1=up,2=left,3=down,4=right
     int walkingRate=0;

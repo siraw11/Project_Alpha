@@ -98,8 +98,6 @@ void Hero::openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_
 
             if(i.close){
                 i.open(this, tile_vector);
-                std::cout<<"forza arma dopo open"<<std::endl;
-                std::cout<<this->getWeapon()->getStrength()<<std::endl;
             }
 
 
@@ -145,6 +143,44 @@ int Hero::damage() {
     return damage;
 }
 
+
+void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector ) {
+    //update attack animation
+    if(this->counterAttack>0){
+        this->attackAnimation();
+        this->counterAttack++;
+    }
+    if(this->counterAttack==11){
+        this->counterAttack=0;
+        this->attack(&enemy_vector);
+    }
+
+    //update hero life
+    if(this->hit)
+    {
+        for (auto &i: enemy_vector) {
+            if(i.heroHitted){
+                if(this->playerType==PlayerType::KNIGHT && this->getArmor()>0){
+                    this->setArmor(this->getArmor()-i.getStrength());
+
+                }else{
+                    this->takeDamage(i.getStrength());
+                }
+                i.heroHitted=false;
+                this->move(sf::Vector2f(30*(i.walkingDirection().x),30*(i.walkingDirection().y)));
+            }
+        }
+        this->hit=false;
+    }
+    for(auto & i: *chest_vector){//opening chest animation
+        if(!i.close && i.counterOpening<3){
+            i.openingAnimation();
+            break;}
+    }
+
+}
+
+
 ///getters
 Weapon *Hero::getWeapon() const {
     return weapon;
@@ -165,8 +201,6 @@ int Hero::getMana() const {
 ///setters
 void Hero::setWeapon(Weapon* weapon) {
     this->weapon=weapon;
-    std::cout<<"forza arma nel set"<<std::endl;
-    std::cout<<this->weapon->getStrength()<<std::endl;
 }
 
 void Hero::setArmor(int armor) {
@@ -180,5 +214,7 @@ void Hero::setMana(int mana) {
 void Hero::setArrow(int arrow) {
     Hero::arrow = arrow;
 }
+
+
 
 

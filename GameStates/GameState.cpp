@@ -65,7 +65,7 @@ namespace Alpha {
         auto heroWeapon = new Weapon(1);
         hero->setWeapon(heroWeapon);
 
-        auto boss= new Boss(1,1,1);
+        std::unique_ptr<Boss> boss=std::unique_ptr<Boss>(new Boss(1, 1, 10));
 
 
         ///View variable
@@ -110,13 +110,11 @@ namespace Alpha {
             }
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){///open chest
                 hero->openChest(&level.chest_vector, &level.tile_vector);
-                std::cout<<"forza e forza arma"<<std::endl;
-                std::cout<<hero->getStrength()<<" "<<hero->getWeapon()->getStrength()<<std::endl;
             }
 
 
             ///update level events
-            level.update(hero, reinterpret_cast<Boss &>(boss));
+            level.update(hero, boss);
 
             ///camera settings
             position.x = hero->getPosition().x + 20 - (1920.0 / 2);
@@ -138,6 +136,7 @@ namespace Alpha {
             this->_data->window.draw(*hero);
             this->_data->window.draw(*boss);
             level.drawProjectile(hero->projectile_vector,_data);
+            level.drawProjectile(boss->projectile_vector,_data);
 
             this->_data->window.display();
         }

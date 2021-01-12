@@ -56,7 +56,10 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
 
 
     bool collided=false;
-    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector),this, walkingDirection().x, walkingDirection().y )){
+    if(dead){
+        movement.x=0;
+        movement.y=0;
+    }else if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector),this, walkingDirection().x, walkingDirection().y )){
         movement.x=0;
         movement.y=0;
         collided=true;
@@ -142,6 +145,23 @@ void Enemy::aggro(sf::Vector2f d) {
     }else {
         direction=4;
     }
+}
+
+void Enemy::update(Hero hero, const std::vector<Tile> &tile_vector, const std::vector<Chest> &chest_vector) {
+    movement(tile_vector, hero, chest_vector);
+
+    if(this->hit) {
+        if(hero.playerType==PlayerType::KNIGHT)
+            move(30*hero.direction().x,30*hero.direction().y);
+
+        takeDamage(hero.damage());
+        hit=false;
+    }
+    if(getLife()<=0){
+        dead=true;
+        deathAnimation();
+    }
+
 }
 
 

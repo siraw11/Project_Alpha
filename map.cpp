@@ -325,77 +325,33 @@ void map::setTexture() {
     }
 }
 
-void map::update(const std::shared_ptr<Hero>& hero,  Boss& boss) {
+void map::update(const std::shared_ptr<Hero>& hero, std::unique_ptr<Boss>& boss) {
     //enemy movement update
-    for(auto& i : enemy_vector)
-         i.movement(this->tile_vector, *hero, chest_vector);
+    if(!enemy_vector.empty())
+        for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
+            i->update(*hero, this->tile_vector, this->chest_vector);
+            if(i->counterDeath==11){
+                enemy_vector.erase(i);
+                i--;
+            }
+        }
 
-    //update attack animation
-    if(hero->counterAttack>0){
-        hero->attackAnimation();
-        hero->counterAttack++;
-    }
-    if(hero->counterAttack==11){
-        hero->counterAttack=0;
-        hero->attack(&enemy_vector);
-    }
+    boss->update(*hero, tile_vector,chest_vector);
+    hero->update(tile_vector, enemy_vector, &chest_vector);
 
     //check hero projectile collision
+    if(!hero->projectile_vector.empty())
     for(auto i= hero->projectile_vector.begin(); i!= hero->projectile_vector.end(); ++i) {
-
-        if (i->checkCollision(&enemy_vector, tile_vector)) {//erase the projectile if there is a collision
+        if (i->checkCollision(&enemy_vector, tile_vector, *boss)) {//erase the projectile if there is a collision
             hero->projectile_vector.erase(i);
             i--;
         }
     }
-
     //update hero projectile position
-    if(!hero->projectile_vector.empty())
+
         for(auto &i : hero->projectile_vector){
-            i.updateProjectile();
+            i.updatePosition();
         }
-
-    //update enemy life and death
-    if(!enemy_vector.empty())
-        for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
-            if(i->hit) {
-                if(hero->playerType==PlayerType::KNIGHT)
-                    i->move(30*hero->direction().x,30*hero->direction().y);
-
-                i->takeDamage(hero->damage());
-                i->hit=false;
-            }
-            if(i->getLife()<=0){
-                i->deathAnimation();
-                if(i->counterDeath==11){
-                    enemy_vector.erase(i);
-                    i--;
-                }
-            }
-        }
-    for(auto & i:chest_vector){
-        if(!i.close && i.counterOpening<3){
-            i.openingAnimation();
-            break;}
-    }
-
-    //update hero life
-    if(hero->hit)
-    {
-        for (auto &i: enemy_vector) {
-            if(i.heroHitted){
-                if(hero->playerType==PlayerType::KNIGHT && hero->getArmor()>0){
-                    hero->setArmor(hero->getArmor()-i.getStrength());
-
-                }else{
-                    hero->takeDamage(i.getStrength());
-                }
-                i.heroHitted=false;
-                hero->move(sf::Vector2f(30*(i.walkingDirection().x),30*(i.walkingDirection().y)));
-            }
-        }
-        hero->hit=false;
-    }
 }
 
 

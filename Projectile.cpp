@@ -32,7 +32,7 @@ Projectile::Projectile(PlayerType playerType) {
 Projectile::~Projectile() = default;
 
 ///functions
-void Projectile::updateProjectile() {
+void Projectile::updatePosition() {
     if(direction==0)//up
         move(0,-projectile_speed);
     else if(direction==1)//left
@@ -48,7 +48,7 @@ void Projectile::init() {
     setTextureRect(sf::IntRect(0,64*direction,64,64));
 }
 
-bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector) {
+bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss) {
     int x=0;
     int y=0;
     switch(direction){
@@ -75,15 +75,26 @@ bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vec
     }
 
     bool collided=false;
-    for(auto & i : *enemy_vector)
-        if(Collision::projectileCollisionEnemy(this, i, x, y)){
-            collided=true;
-            i.hit=true;
-            break;
-        }else {
-            collided = Collision::projectileCollision(this, tile_vector, x, y);//funziona
-        }
+    if(Collision::projectileCollision(this, tile_vector, x, y)){
+        collided = true;
+
+    }else if(Collision::projectileCollisionBoss(this, boss , x , y)){
+        boss.hit=true;
+        collided=true;
+
+    }else{
+        for (auto &i : *enemy_vector)
+            if (Collision::projectileCollisionEnemy(this, i, x, y)) {
+                collided = true;
+                i.hit = true;
+                break;
+            }
+    }
+
+
 
 
 return collided;
 }
+
+

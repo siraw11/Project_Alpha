@@ -6,15 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/matteo/Project_Alpha/Chest.cpp
-iostream
+/home/matteo/Project_Alpha/Boss.cpp
+GameManager/DEFINITIONS.hpp
+/home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
+Boss.h
+/home/matteo/Project_Alpha/Boss.h
+Random.h
+/home/matteo/Project_Alpha/Random.h
+Collision.h
+/home/matteo/Project_Alpha/Collision.h
+cmath
 -
-Chest.h
-/home/matteo/Project_Alpha/Chest.h
-Item.h
-/home/matteo/Project_Alpha/Item.h
-Weapon.h
-/home/matteo/Project_Alpha/Weapon.h
+
+/home/matteo/Project_Alpha/Boss.h
+Enemy.h
+/home/matteo/Project_Alpha/Enemy.h
 
 /home/matteo/Project_Alpha/Chest.h
 SFML/Graphics.hpp
@@ -23,6 +29,14 @@ GameManager/DEFINITIONS.hpp
 /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
 Object.h
 /home/matteo/Project_Alpha/Object.h
+
+/home/matteo/Project_Alpha/Collision.h
+SFML/Graphics.hpp
+-
+Tile.h
+/home/matteo/Project_Alpha/Tile.h
+Hero.h
+/home/matteo/Project_Alpha/Hero.h
 
 /home/matteo/Project_Alpha/Enemy.h
 GameCharacter.h
@@ -54,20 +68,6 @@ Weapon.h
 PlayerType.h
 /home/matteo/Project_Alpha/PlayerType.h
 
-/home/matteo/Project_Alpha/Item.cpp
-iostream
--
-Item.h
-/home/matteo/Project_Alpha/Item.h
-PlayerType.h
-/home/matteo/Project_Alpha/PlayerType.h
-Hero.h
-/home/matteo/Project_Alpha/Hero.h
-
-/home/matteo/Project_Alpha/Item.h
-Object.h
-/home/matteo/Project_Alpha/Object.h
-
 /home/matteo/Project_Alpha/Object.h
 Tile.h
 /home/matteo/Project_Alpha/Tile.h
@@ -79,6 +79,20 @@ SFML/Graphics/RectangleShape.hpp
 -
 PlayerType.h
 /home/matteo/Project_Alpha/PlayerType.h
+Tile.h
+/home/matteo/Project_Alpha/Tile.h
+Boss.h
+/home/matteo/Project_Alpha/Boss.h
+
+/home/matteo/Project_Alpha/Random.h
+cstdlib
+-
+SFML/System.hpp
+-
+iostream
+-
+ctime
+-
 Tile.h
 /home/matteo/Project_Alpha/Tile.h
 

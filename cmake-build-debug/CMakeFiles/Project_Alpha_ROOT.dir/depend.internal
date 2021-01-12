@@ -4,6 +4,7 @@
 CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
  /home/matteo/Project_Alpha/Archer.cpp
  /home/matteo/Project_Alpha/Archer.h
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
@@ -92,11 +93,17 @@ CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
  /home/matteo/Project_Alpha/Boss.cpp
  /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
+ /home/matteo/Project_Alpha/Collision.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
  /home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/Project_Alpha/Hero.h
  /home/matteo/Project_Alpha/Object.h
+ /home/matteo/Project_Alpha/PlayerType.h
+ /home/matteo/Project_Alpha/Projectile.h
+ /home/matteo/Project_Alpha/Random.h
  /home/matteo/Project_Alpha/Tile.h
+ /home/matteo/Project_Alpha/Weapon.h
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -173,6 +180,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
  /home/matteo/Project_Alpha/Archer.h
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/CharacterFactory.cpp
  /home/matteo/Project_Alpha/CharacterFactory.h
  /home/matteo/Project_Alpha/Chest.h
@@ -344,6 +352,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Collision.cpp
  /home/matteo/Project_Alpha/Collision.h
@@ -431,6 +440,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Collision.h
  /home/matteo/Project_Alpha/Enemy.cpp
@@ -1366,6 +1376,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
  /home/matteo/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/Project_Alpha/PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Collision.h
  /home/matteo/Project_Alpha/Enemy.h
@@ -1453,6 +1464,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
@@ -1540,6 +1552,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
@@ -1627,6 +1640,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h
@@ -1792,6 +1806,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Collision.h
  /home/matteo/Project_Alpha/Enemy.h
@@ -2036,6 +2051,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
+ /home/matteo/Project_Alpha/Boss.h
  /home/matteo/Project_Alpha/Chest.h
  /home/matteo/Project_Alpha/Enemy.h
  /home/matteo/Project_Alpha/GameCharacter.h

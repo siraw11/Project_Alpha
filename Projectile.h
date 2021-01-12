@@ -11,6 +11,8 @@
 
 #include "PlayerType.h"
 #include "Tile.h"
+#include "Boss.h"
+
 class Enemy;
 
 
@@ -22,11 +24,11 @@ public:
 
     ///functions
     void init();
-    bool checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector);
-    void updateProjectile();
+    bool checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss);
+    void updatePosition();
 
     ///attributes
-    int direction{};//0=down,1=left,2=right,3=up
+    int direction{};//0=up,1=left,2=down,3=right
 
 
 
