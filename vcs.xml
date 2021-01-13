@@ -6,7 +6,12 @@
           <option name="url" value="http://github.com" />
           <option name="userName" value="Itina99" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/siraw11/Project_Alpha.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
+    <option name="cloneParentDir" value="$USER_HOME$/CLionProjects" />
   </component>
 </application>
