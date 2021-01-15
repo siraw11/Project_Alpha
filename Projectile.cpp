@@ -33,19 +33,38 @@ Projectile::~Projectile() = default;
 
 ///functions
 void Projectile::updatePosition() {
-    if(direction==0)//up
-        move(0,-projectile_speed);
-    else if(direction==1)//left
+    switch(direction){
+        case 0:{//up
+            move(0,-projectile_speed);
+            break;
+        }
+   case 1:{//left
         move(-projectile_speed,0);
-    else if(direction==2)//down
+        break;
+   }
+   case 2:{//down
         move(0,projectile_speed);
-    else if(direction==3)//right
-        move(projectile_speed,0);
+        break;
+   }
+   case 3:{//right
+       move(projectile_speed,0);
+       break;
+   }
+   case 4:{
+       move(projectile_speed*directionVector.x,projectile_speed*directionVector.y);
+       break;
+
+   }
+    }
 }
 
 void Projectile::init() {
     setPosition(projectile_start);
-    setTextureRect(sf::IntRect(0,64*direction,64,64));
+    if(direction==4){
+        setTextureRect(sf::IntRect(0,64,64,64));
+    }else{
+        setTextureRect(sf::IntRect(0,64*direction,64,64));
+    }
 }
 
 bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss) {

@@ -17,7 +17,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
     mana=m;
     weapon= nullptr;
     hit=false;
-    setPosition(sf::Vector2f(300,300));
+    setPosition(sf::Vector2f(4500,3500));
 
 
 }
@@ -74,11 +74,11 @@ void Hero::attackAnimation() {
 }
 
 void Hero::attack( std::vector<Enemy>* enemy_vector) {
-    if(playerType!=PlayerType::KNIGHT) {
+    if(playerType != PlayerType::KNIGHT) {
         Projectile newProjectile(playerType);
         newProjectile.projectile_start.x = getPosition().x;
         newProjectile.projectile_start.y = getPosition().y+ getGlobalBounds().height/4;
-        newProjectile.direction=walkingDirection;
+        newProjectile.direction = walkingDirection;
         newProjectile.init();
         projectile_vector.push_back(newProjectile);
 

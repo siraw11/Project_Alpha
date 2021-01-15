@@ -22,9 +22,14 @@ public:
     void movement(const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector)override;
     void update(Hero hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector)override;
     void attack(const Hero& hero);
+    void aggro(sf::Vector2f d)override;
+    void attackAnimation();
+
+///attributes
     std::vector<Projectile> projectile_vector;
 
 private:
+    int counterAttack=0;
     int posx;
     int posy;
 

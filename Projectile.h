@@ -28,12 +28,10 @@ public:
     void updatePosition();
 
     ///attributes
-    int direction{};//0=up,1=left,2=down,3=right
-
-
+    int direction{};//0=up,1=left,2=down,3=right,4=other
+    sf::Vector2f directionVector;
 
     int projectile_speed=20;
-
     sf::Vector2f projectile_start;
 };
 

@@ -26,7 +26,7 @@ public:
     void walkingAnimation();
     void deathAnimation();
     sf::Vector2i walkingDirection();
-    void aggro(sf::Vector2f d);
+    virtual void aggro(sf::Vector2f d);
     virtual void update(Hero hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector);
 
     ///attributes
