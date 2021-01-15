@@ -15,14 +15,18 @@ Projectile::Projectile(PlayerType playerType) {
         case PlayerType ::ARCHER:
             projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
             setTexture(projectileTexture);
-
             break;
         case PlayerType ::MAGE:
             projectileTexture->loadFromFile("../Resources/Sprites/item/fireball.png");
             setTexture(projectileTexture);
             break;
+        case PlayerType ::BOSS:
+            projectileTexture->loadFromFile("../Resources/Sprites/item/ice.png");
+            setTexture(projectileTexture);
+            break;
         case PlayerType ::KNIGHT:
             break;
+
     }
 
     setSize(sf::Vector2f(64,64));
@@ -61,9 +65,11 @@ void Projectile::updatePosition() {
 void Projectile::init() {
     setPosition(projectile_start);
     if(direction==4){
-        setTextureRect(sf::IntRect(0,64,64,64));
+        setTextureRect(sf::IntRect(0,0,64,50));
+        setScale(sf::Vector2f(2.f,2.f));
     }else{
         setTextureRect(sf::IntRect(0,64*direction,64,64));
+
     }
 }
 

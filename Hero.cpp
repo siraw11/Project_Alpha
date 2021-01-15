@@ -77,7 +77,7 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
     if(playerType != PlayerType::KNIGHT) {
         Projectile newProjectile(playerType);
         newProjectile.projectile_start.x = getPosition().x;
-        newProjectile.projectile_start.y = getPosition().y+ getGlobalBounds().height/4;
+        newProjectile.projectile_start.y = getPosition().y+ getGlobalBounds().height/4*HERO_SCALE;
         newProjectile.direction = walkingDirection;
         newProjectile.init();
         projectile_vector.push_back(newProjectile);

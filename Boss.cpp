@@ -18,7 +18,7 @@ Boss::Boss(int hp, int s, int sp) : Enemy(hp, s, sp) {
     setPosition(posx,posy);
 
     auto bossTexture = new sf::Texture;
-    bossTexture->loadFromFile("../Resources/Sprites/Enemy/skeleton(bow).png");
+    bossTexture->loadFromFile("../Resources/Enemy/boss.png");
     setTexture(bossTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
 
@@ -82,6 +82,8 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
     move(movement);
 }
 
+
+
 void Boss::update( Hero hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector ) {
     auto d = hero.getPosition() - this->getPosition();
     float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
@@ -89,19 +91,26 @@ void Boss::update( Hero hero, const std::vector<Tile>& tile_vector, const std::v
     this->movement(tile_vector, hero, chest_vector);
 
     if(distance < 800)
-        if(counterAttack!=11){
-            this->aggro(d);
-        }else{
-            this->attack(hero);
-            this->counterAttack=0;
+        if(attackRate==20){
+            if (counterAttack == 11){
+                this->attack(hero);
+                this->counterAttack = 0;
+                this->attackRate=0;
+            } else {
+                this->aggro(d);
+                counterAttack++;
+            }
+        } else {
+            attackRate++;
         }
 
-
+    //boss projectile update
     if(!projectile_vector.empty())
         for(auto &i : projectile_vector)
             i.updatePosition();
 
-        if(this->hit)//boss damage
+    //boss damage
+    if(this->hit)
     {
         this->takeDamage(hero.damage());
         this->hit = false;
@@ -116,14 +125,18 @@ void Boss::update( Hero hero, const std::vector<Tile>& tile_vector, const std::v
     }
 }
 
+
+//boss attack
 void Boss::attack(const Hero& hero) {
-    auto d = hero.getPosition() - this->getPosition();
+   sf::Vector2f d;
+    d.x = hero.getPosition().x - (this->getPosition().x);
+    d.y = hero.getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
     float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
     d /= distance;
 
-    Projectile newProjectile(PlayerType::ARCHER);
+    Projectile newProjectile(PlayerType::BOSS);
     newProjectile.projectile_start.x = getPosition().x;
-    newProjectile.projectile_start.y = getPosition().y + getGlobalBounds().height/4;
+    newProjectile.projectile_start.y = getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE;
     newProjectile.direction = 4;
     newProjectile.directionVector.x = d.x;
     newProjectile.directionVector.y = d.y;
@@ -133,11 +146,10 @@ void Boss::attack(const Hero& hero) {
 
 void Boss::aggro(sf::Vector2f d) {
     if(d.x < 0){
+        this->setTextureRect(sf::IntRect(64*counterAttack,64*4,64,64));
+    } else {
         this->setTextureRect(sf::IntRect(64*counterAttack,64*5,64,64));
-    }else {
-        this->setTextureRect(sf::IntRect(64*counterAttack,64*7,64,64));
     }
-    counterAttack++;
 }
 
 
