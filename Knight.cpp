@@ -6,7 +6,7 @@
 #include "GameManager/DEFINITIONS.hpp"
 #include "Knight.h"
 
-///cosnstructor
+///constructor
 Knight::Knight(int hp, int s, int sp, int a, int ar, int m) : Hero(hp ,s , sp, a, ar, m){
 
     auto heroTexture= new sf::Texture;
@@ -16,7 +16,7 @@ Knight::Knight(int hp, int s, int sp, int a, int ar, int m) : Hero(hp ,s , sp, a
 
     setScale(sf::Vector2f(HERO_SCALE,HERO_SCALE));
 
-
+    playerType = PlayerType::KNIGHT;
 }
 
 ///destructor

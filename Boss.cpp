@@ -84,16 +84,16 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
 
 
 
-void Boss::update( Hero hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector ) {
-    auto d = hero.getPosition() - this->getPosition();
+void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector ) {
+    auto d = hero->getPosition() - this->getPosition();
     float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
 
-    this->movement(tile_vector, hero, chest_vector);
+    this->movement(tile_vector, *hero, chest_vector);
 
     if(distance < 800)
         if(attackRate==20){
             if (counterAttack == 11){
-                this->attack(hero);
+                this->attack(*hero);
                 this->counterAttack = 0;
                 this->attackRate=0;
             } else {
@@ -112,7 +112,7 @@ void Boss::update( Hero hero, const std::vector<Tile>& tile_vector, const std::v
     //boss damage
     if(this->hit)
     {
-        this->takeDamage(hero.damage());
+        this->takeDamage(hero->damage());
         this->hit = false;
     }
 

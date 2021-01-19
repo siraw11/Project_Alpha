@@ -27,7 +27,7 @@ public:
     void deathAnimation();
     sf::Vector2i walkingDirection();
     virtual void aggro(sf::Vector2f d);
-    virtual void update(Hero hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector);
+    virtual void update(std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector);
 
     ///attributes
     sf::Vector2f spawnposition;
@@ -41,6 +41,7 @@ protected:
     int direction=0;// 1=up,2=left,3=down,4=right
     int walkingRate=0;
     int counterWalking=0;
+    sf::Vector2f movementvect;
 };
 
 

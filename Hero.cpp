@@ -7,6 +7,7 @@
 #include "GameManager/DEFINITIONS.hpp"
 #include "Hero.h"
 #include "Collision.h"
+#include <cmath>
 
 
 ///constructor
@@ -17,9 +18,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
     mana=m;
     weapon= nullptr;
     hit=false;
-    setPosition(sf::Vector2f(4500,3500));
-
-
+    setPosition(sf::Vector2f(300,300));
 }
 
 ///destructor
@@ -60,6 +59,7 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
 
 void Hero::walkingAnimation() {
     if(counterWalking!=8){
+
         setTextureRect(sf::IntRect(64*counterWalking,64*walkingDirection,64,64));
         counterWalking++;
     }else{
@@ -74,20 +74,51 @@ void Hero::attackAnimation() {
 }
 
 void Hero::attack( std::vector<Enemy>* enemy_vector) {
-    if(playerType != PlayerType::KNIGHT) {
-        Projectile newProjectile(playerType);
-        newProjectile.projectile_start.x = getPosition().x;
-        newProjectile.projectile_start.y = getPosition().y+ getGlobalBounds().height/4*HERO_SCALE;
-        newProjectile.direction = walkingDirection;
-        newProjectile.init();
-        projectile_vector.push_back(newProjectile);
 
-    }else {
-        for(auto &i: *enemy_vector)
-            if (Collision::meleeHeroAttak(this, i, direction().x, direction().y)){
-                i.hit=true;
-                break;
+    switch(playerType) {
+        case PlayerType::ARCHER:{
+            if(this->arrow>0){
+                Projectile newProjectile(playerType);
+
+                newProjectile.projectile_start.x = getPosition().x;
+                newProjectile.projectile_start.y = getPosition().y+ getGlobalBounds().height/4*HERO_SCALE;
+                newProjectile.direction = walkingDirection;
+
+                newProjectile.init();
+
+                projectile_vector.push_back(newProjectile);
+
+                this->arrow--;
             }
+            break;
+        }
+        case PlayerType::MAGE:{
+            if(this->mana>0){
+                Projectile newProjectile(playerType);
+
+                newProjectile.projectile_start.x = getPosition().x;
+                newProjectile.projectile_start.y = getPosition().y+ getGlobalBounds().height/4*HERO_SCALE;
+                newProjectile.direction = walkingDirection;
+
+                newProjectile.init();
+
+                projectile_vector.push_back(newProjectile);
+
+                this->mana--;
+            }
+            break;
+        }
+        case PlayerType::KNIGHT:{
+            for(auto &i: *enemy_vector)
+                if (Collision::meleeHeroAttak(this, i, direction().x, direction().y)){
+                    i.hit=true;
+                    break;
+                }
+            break;
+        }
+        case PlayerType::BOSS:{
+            break;
+        }
     }
 }
 
@@ -145,10 +176,11 @@ int Hero::damage() {
 
 
 void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector ) {
+
     //update attack animation
     if(this->counterAttack>0){
         this->attackAnimation();
-        this->counterAttack++;
+        counterAttack++;
     }
     if(this->counterAttack==11){
         this->counterAttack=0;
@@ -156,6 +188,7 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
     }
 
     //update hero life
+
     if(this->hit)
     {
         for (auto &i: enemy_vector) {
@@ -166,8 +199,10 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
                 }else{
                     this->takeDamage(i.getStrength());
                 }
+
+                this->bounce(i);
                 i.heroHitted=false;
-                this->move(sf::Vector2f(30*(i.walkingDirection().x),30*(i.walkingDirection().y)));
+
             }
         }
         this->hit=false;
@@ -178,6 +213,14 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
             break;}
     }
 
+}
+void Hero::bounce(const Enemy& enemy) {
+
+    auto d = this->getPosition() - enemy.getPosition();
+    float distanza = std::sqrt((d.x*d.x) + (d.y*d.y));
+    d/=distanza;
+
+    this->move(sf::Vector2f(30*(d.x),30*(d.y)));
 }
 
 
@@ -214,6 +257,7 @@ void Hero::setMana(int mana) {
 void Hero::setArrow(int arrow) {
     Hero::arrow = arrow;
 }
+
 
 
 

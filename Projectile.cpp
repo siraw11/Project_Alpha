@@ -65,48 +65,51 @@ void Projectile::updatePosition() {
 void Projectile::init() {
     setPosition(projectile_start);
     if(direction==4){
-        setTextureRect(sf::IntRect(0,0,64,50));
-        setScale(sf::Vector2f(2.f,2.f));
+        setTextureRect(sf::IntRect(0,0,BOSS_PROJECTILE_WIDTH,BOSS_PROJECTILE_HEIGTH));
+        setScale(sf::Vector2f(BOSS_PROJECTILE_SCALE,BOSS_PROJECTILE_SCALE));
     }else{
         setTextureRect(sf::IntRect(0,64*direction,64,64));
 
     }
 }
 
-bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss) {
-    int x=0;
-    int y=0;
-    switch(direction){
+bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, Hero& hero) {
+    int x = 0;
+    int y = 0;
+    switch (direction) {
         case 0: {
-            x=0;
-            y=-1;
+            x = 0;
+            y = -1;
             break;
         }
         case 1: {
-            x=-1;
-            y=0;
+            x = -1;
+            y = 0;
             break;
         }
         case 2: {
-            x=0;
-            y=-1;
+            x = 0;
+            y = -1;
             break;
         }
         case 3: {
-            x=1;
-            y=0;
+            x = 1;
+            y = 0;
             break;
         }
     }
 
-    bool collided=false;
-    if(Collision::projectileCollision(this, tile_vector, x, y)){
+    bool collided = false;
+    if (Collision::projectileCollision(this, tile_vector, x, y)) {
         collided = true;
 
-    }else if(Collision::projectileCollisionBoss(this, boss , x , y)){
-        boss.hit=true;
-        collided=true;
+    } else if (Collision::projectileCollisionBoss(this, boss, x, y)) {
+        boss.hit = true;
+        collided = true;
 
+    } else if (Collision::projectileCollisionHero(this,hero,x,y)){
+        hero.hit = true;
+        collided = true;
     }else{
         for (auto &i : *enemy_vector)
             if (Collision::projectileCollisionEnemy(this, i, x, y)) {

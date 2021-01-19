@@ -34,7 +34,7 @@ std::unique_ptr<Hero> CharacterFactory::createCharacter(PlayerType type) {
             break;
         }
         case PlayerType ::MAGE: {
-            result = std::unique_ptr<Hero>(new Mage(1, 1, 50, 0, 0, 10));
+            result = std::unique_ptr<Hero>(new Mage(1, 1, 20, 0, 0, 10));
             break;
         }
     }

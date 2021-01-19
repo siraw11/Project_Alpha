@@ -67,15 +67,17 @@
 
 #define HERO_SCALE 1.75
 
-#define ENEMY_WIDTH 64
+#define ENEMY_SIZE 64
 
-#define ENEMY_HEIGHT 64
-
-#define HERO_WIDTH 64
-
-#define  HERO_HEIGHT 64
+#define HERO_SIZE 64
 
 #define PROJECTILE_SIZE 64
+
+#define BOSS_PROJECTILE_WIDTH 64
+
+#define BOSS_PROJECTILE_HEIGTH 50
+
+#define BOSS_PROJECTILE_SCALE 2.f
 
 #define BOSS_SCALE 5
 

@@ -30,6 +30,7 @@ public:
     int damage();
     sf::Vector2i direction();
     void update( const std::vector<Tile>& tile_vector, std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector );
+    void bounce(const Enemy& enemy);
 
 ///attributi
     int walkingDirection=2;//0=up, 1=left, 2=down, 3=right
@@ -37,6 +38,7 @@ public:
     std::vector<Projectile> projectile_vector;
     PlayerType playerType;
     bool hit;
+    int range = 0;
 ///getters
     Weapon *getWeapon() const;
     int getArmor() const;
@@ -56,6 +58,7 @@ protected:
     int armor;
     int arrow;
     int mana;
+
 
 
 

@@ -16,8 +16,8 @@ bool Collision::checkCollision( std::vector<Tile>& tile_vector,  Hero *hero, int
 
     for(const auto& i: tile_vector){
 
-        if(i.t!=0 && position.x + HERO_WIDTH - hero->getGlobalBounds().width/6 > i.hitLeft && position.x + hero->getGlobalBounds().width/6  < i.hitRight &&
-           position.y + hero->getGlobalBounds().height/2 < i.hitBottom && position.y + HERO_HEIGHT + hero->getGlobalBounds().height/6 > i.hitTop){
+        if(i.t!=0 && position.x + HERO_SIZE - hero->getGlobalBounds().width/6 > i.hitLeft && position.x + hero->getGlobalBounds().width/6  < i.hitRight &&
+           position.y + hero->getGlobalBounds().height/2 < i.hitBottom && position.y + HERO_SIZE + hero->getGlobalBounds().height/6 > i.hitTop){
             //control on the tile, I left side, II right side, III bottom side, IV top side
 
             collided=true;
@@ -37,8 +37,8 @@ bool Collision::checkCollision(std::vector<Tile> &tile_vector, Enemy *enemy, int
 
     for(const auto& i: tile_vector){
 
-        if(i.t!=0 && position.x + ENEMY_WIDTH*ENEMY_SCALE - enemy->getGlobalBounds().width/6 > i.hitLeft && position.x + enemy->getGlobalBounds().width/6  < i.hitRight &&
-           position.y + enemy->getGlobalBounds().height/2 < i.hitBottom && position.y + ENEMY_HEIGHT*ENEMY_SCALE + enemy->getGlobalBounds().height/6 > i.hitTop){
+        if(i.t!=0 && position.x + ENEMY_SIZE*ENEMY_SCALE - enemy->getGlobalBounds().width/6 > i.hitLeft && position.x + enemy->getGlobalBounds().width/6  < i.hitRight &&
+           position.y + enemy->getGlobalBounds().height/2 < i.hitBottom && position.y + ENEMY_SIZE*ENEMY_SCALE + enemy->getGlobalBounds().height/6 > i.hitTop){
             //control on the tile, I left side, II right side, III bottom side, IV top side
 
             collided=true;
@@ -80,8 +80,8 @@ bool Collision::enemyCollision(Hero *hero, const std::vector<Enemy>& enemy_vecto
 
     for( const auto& i: enemy_vector){
 
-        if(position.x+HERO_WIDTH*HERO_SCALE - hero->getGlobalBounds().width/2 > i.getPosition().x && position.x + hero->getGlobalBounds().width/3 < i.getPosition().x + ENEMY_WIDTH*ENEMY_SCALE &&
-           position.y + hero->getGlobalBounds().height/2 < i.getPosition().y + ENEMY_HEIGHT*ENEMY_SCALE && position.y + HERO_HEIGHT*HERO_SCALE - hero->getGlobalBounds().height/2 > i.getPosition().y ){
+        if(position.x+HERO_SIZE*HERO_SCALE - hero->getGlobalBounds().width/2 > i.getPosition().x && position.x + hero->getGlobalBounds().width/3 < i.getPosition().x + ENEMY_SIZE*ENEMY_SCALE &&
+           position.y + hero->getGlobalBounds().height/2 < i.getPosition().y + ENEMY_SIZE*ENEMY_SCALE && position.y + HERO_SIZE*HERO_SCALE - hero->getGlobalBounds().height/2 > i.getPosition().y ){
             //control on the enemy, I left side, II right side, III bottom  side, IV top side
 
             collided=true;
@@ -92,16 +92,16 @@ bool Collision::enemyCollision(Hero *hero, const std::vector<Enemy>& enemy_vecto
     return collided;
 }
 
-bool Collision::heroCollision(Enemy *enemy, const Hero &hero, int x, int y) {
+bool Collision::heroCollision(Enemy *enemy, const Hero &hero, float posX, float posY) {
     bool collided=false;
     sf::Vector2f position(enemy->getPosition());
 
 
-    position.x+= enemy->getSpeed()*x;//next position right or left
-    position.y+= enemy->getSpeed()*y;//next position up or down
+    position.x+= posX;//next position right or left
+    position.y+= posY;//next position up or down
 
-    if(position.x+ENEMY_WIDTH*ENEMY_SCALE - enemy->getGlobalBounds().width/2 > hero.getPosition().x && position.x + enemy->getGlobalBounds().width/3 < hero.getPosition().x + HERO_WIDTH*HERO_SCALE &&
-       position.y + enemy->getGlobalBounds().height/2 < hero.getPosition().y + HERO_HEIGHT*HERO_SCALE && position.y + ENEMY_HEIGHT*ENEMY_SCALE - enemy->getGlobalBounds().height/2 > hero.getPosition().y ){
+    if(position.x+ENEMY_SIZE*ENEMY_SCALE - enemy->getGlobalBounds().width/2 > hero.getPosition().x && position.x + enemy->getGlobalBounds().width/3 < hero.getPosition().x + HERO_SIZE*HERO_SCALE &&
+       position.y + enemy->getGlobalBounds().height/2 < hero.getPosition().y + HERO_SIZE*HERO_SCALE && position.y + ENEMY_SIZE*ENEMY_SCALE - enemy->getGlobalBounds().height/2 > hero.getPosition().y ){
         //control on the enemy, I left side, II right side, III bottom  side, IV top side
         collided=true;
     }
@@ -115,8 +115,8 @@ bool Collision::projectileCollisionEnemy(Projectile *projectile,const Enemy &ene
     position.x+= projectile->projectile_speed*x;//next position right or left
     position.y+= projectile->projectile_speed*y;//next position up or down
 
-    if(position.x + PROJECTILE_SIZE > enemy.getPosition().x && position.x < enemy.getPosition().x + ENEMY_WIDTH*ENEMY_SCALE &&
-       position.y < enemy.getPosition().y + ENEMY_HEIGHT*ENEMY_SCALE && position.y + PROJECTILE_SIZE > enemy.getPosition().y){
+    if(position.x + PROJECTILE_SIZE > enemy.getPosition().x && position.x < enemy.getPosition().x + ENEMY_SIZE*ENEMY_SCALE &&
+       position.y < enemy.getPosition().y + ENEMY_SIZE*ENEMY_SCALE && position.y + PROJECTILE_SIZE > enemy.getPosition().y){
 
         collided=true;
     }
@@ -166,8 +166,8 @@ bool Collision::meleeHeroAttak(Hero *hero, const Enemy &enemy, int x, int y) {
     position.x+= hero->getSpeed()*x+10;//next position right or left but +10 to avoid the collision with the enemy
     position.y+= hero->getSpeed()*y+10;//next position up or down
 
-    if(position.x + HERO_WIDTH*HERO_SCALE > enemy.getPosition().x && position.x < enemy.getPosition().x + ENEMY_WIDTH*ENEMY_SCALE &&
-       position.y < enemy.getPosition().y + ENEMY_HEIGHT*ENEMY_SCALE && position.y + HERO_HEIGHT*HERO_SCALE > enemy.getPosition().y){
+    if(position.x + HERO_SIZE*HERO_SCALE > enemy.getPosition().x && position.x < enemy.getPosition().x + ENEMY_SIZE*ENEMY_SCALE &&
+       position.y < enemy.getPosition().y + ENEMY_SIZE*ENEMY_SCALE && position.y + HERO_SIZE*HERO_SCALE > enemy.getPosition().y){
 
 
         collided=true;
@@ -182,7 +182,7 @@ bool Collision::chestCollision(const Chest& chest, Enemy *enemy, int x, int y) {
     position.x+= enemy->getSpeed()*x;//next position right or left
     position.y+= enemy->getSpeed()*y;//next position up or down
 
-    if(position.x + ENEMY_WIDTH*ENEMY_SCALE  > chest.getPosition().x && position.x < chest.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
+    if(position.x + ENEMY_SIZE*ENEMY_SCALE  > chest.getPosition().x && position.x < chest.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
            position.y < chest.getPosition().y + CHEST_SIZE*CHEST_SCALE && position.y  > chest.getPosition().y){
             //control on the tile, I left side, II right side, III bottom side, IV top side
             collided=true;
@@ -199,7 +199,7 @@ bool Collision::chestCollision( const Chest& chest, Hero *hero, int x, int y) {
     position.y+= hero->getSpeed()*y;//next position up or down
 
 
-    if(position.x + HERO_WIDTH*HERO_SCALE> chest.getPosition().x && position.x < chest.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
+    if(position.x + HERO_SIZE*HERO_SCALE> chest.getPosition().x && position.x < chest.getPosition().x + CHEST_SIZE*CHEST_SCALE &&
        position.y < chest.getPosition().y + CHEST_SIZE*CHEST_SCALE && position.y > chest.getPosition().y){
 
         collided=true;
@@ -207,5 +207,21 @@ bool Collision::chestCollision( const Chest& chest, Hero *hero, int x, int y) {
 
     return collided;
 }
+
+bool Collision::projectileCollisionHero(Projectile *projectile, const Hero &hero, int x, int y) {
+    bool collided=false;
+    sf::Vector2f position(projectile->getPosition());
+
+    position.x+= projectile->projectile_speed*x;//next position right or left
+    position.y+= projectile->projectile_speed*y;//next position up or down
+
+    if(position.x + BOSS_PROJECTILE_WIDTH*BOSS_PROJECTILE_SCALE > hero.getPosition().x && position.x < hero.getPosition().x + HERO_SIZE*HERO_SCALE &&
+       position.y < hero.getPosition().y + HERO_SCALE*HERO_SCALE && position.y + PROJECTILE_SIZE > hero.getPosition().y){
+
+        collided=true;
+    }
+    return collided;
+}
+
 
 
