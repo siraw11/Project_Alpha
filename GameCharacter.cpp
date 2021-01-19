@@ -2,10 +2,10 @@
 // Created by matteo on 19/03/20.
 //
 
-#include "GameCharacter.h"
-#include "Collision.h"
-#include "map.h"
 
+#include "GameCharacter.h"
+
+///constructor
 GameCharacter::GameCharacter(int hp, int s, int sp){
     if(hp <= 0 || s <= 0 || sp <= 0){
         throw std::out_of_range("Negative Value");
@@ -15,42 +15,44 @@ GameCharacter::GameCharacter(int hp, int s, int sp){
         speed = sp;
     }
 
-    setSize(sf::Vector2f(32,32));
+    setSize(sf::Vector2f(64,64));
 
 }
+
+///destructor
+GameCharacter::~GameCharacter() = default;
+
+///getters
 
 int GameCharacter::getLife() const {
     return life;
-}
-
-void GameCharacter::setLife(int life) {
-    GameCharacter::life = life;
 }
 
 int GameCharacter::getSpeed() const {
     return speed;
 }
 
-void GameCharacter::setSpeed(int speed) {
-    GameCharacter::speed = speed;
-}
-
 int GameCharacter::getStrength() const {
     return strength;
+}
+
+///setters
+void GameCharacter::setLife(int life) {
+    GameCharacter::life = life;
+}
+
+void GameCharacter::setSpeed(int speed) {
+    GameCharacter::speed = speed;
 }
 
 void GameCharacter::setStrength(int strength) {
     GameCharacter::strength = strength;
 }
 
-GameCharacter::~GameCharacter() = default;
-
-bool GameCharacter::collisionLinker(const std::vector<Tile>& tile_vector, int x, int y) {
-
-    return Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, x, y);
-
-}
+///functions
 
 void GameCharacter::takeDamage(int damage) {
     life-=damage;
 }
+
+

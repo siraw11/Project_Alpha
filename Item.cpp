@@ -2,73 +2,81 @@
 // Created by waris on 20/06/19.
 //
 
+#include <iostream>
 #include "Item.h"
+#include "PlayerType.h"
 #include "Hero.h"
 
-Item::Item(bool S,bool M,bool arm,bool arw,bool HP,bool K):Strenght(S), Mana(M), Armor(arm), Arrow(arw), Life(HP),Key(K){}
+///constructor
+Item::Item(bool S,bool E, bool G, bool HP, bool P, bool K):strength(S), exhaust(E), generic(G), life(HP), poison(P), key(K){}
 
-bool Item::isStrenght() const {
-    return Strenght;
-}
+///destructor
+Item::~Item() = default;
 
-void Item::setStrenght(bool strenght) {
-    Strenght = strenght;
-}
-
-bool Item::isMana() const {
-    return Mana;
-}
-
-void Item::setMana(bool mana) {
-    Mana = mana;
-}
-
-bool Item::isArmor() const {
-    return Armor;
-}
-
-void Item::setArmor(bool armor) {
-    Armor = armor;
-}
-
-bool Item::isArrow() const {
-    return Arrow;
-}
-
-void Item::setArrow(bool arrow) {
-    Arrow = arrow;
+///getters
+bool Item::isStrength() const {
+    return strength;
 }
 
 bool Item::isLife() const {
-    return Life;
-}
-
-void Item::setLife(bool life) {
-    Life = life;
+    return life;
 }
 
 bool Item::isKey() const {
-    return Key;
+    return key;
 }
 
-void Item::setKey(bool key) {
-    Key = key;
+bool Item::isGeneric() const {
+    return generic;
 }
 
-/*void Item::use(Item &item, GameCharacter* hero) {
-    Hero *ptr = dynamic_cast<Hero *>(hero);
-    if (ptr != nullptr) {
-        if (item.isStrenght())
-            ptr->setStrength(ptr->getStrength() + 2);
-        if (item.isArmor())
-            ptr->setArmor(ptr->getArmor() + 2);
-        if (item.isMana())
-            ptr->setMana(ptr->getMana() + 10);
-        if (item.isArrow())
-            ptr->setArrows(ptr->getArrows() + 10);
-        if (item.isLife())
-            ptr->setLife(ptr->getLife() + 2);
-        if (item.isKey()){}
+bool Item::isExhaust() const {
+    return exhaust;
+}
+
+bool Item::isPoison() const {
+    return poison;
+}
+
+///functions
+void Item::use( Hero* hero, std::vector<Tile>* tile_vector) {
+    std::cout<<"Item"<<std::endl;
+
+    if (isStrength()){
+    }else if(isGeneric()) {
+        switch(hero->playerType){
+            case PlayerType ::KNIGHT:{
+                hero->setArmor(hero->getArmor()+3);
+                break;
+            }
+            case PlayerType::MAGE:{
+                hero->setMana(hero->getMana()+10);
+                break;
+            }
+            case PlayerType::ARCHER:{
+                hero->setArrow(hero->getArrow()+10);
+            }
+        }
+    }else if (isLife()){
+        hero->setLife(hero->getLife() + 2);
+
+    }else if(isKey()){
+        std::cout<<" ok"<<std::endl;
         //Todo:open the gate
+        for(auto &i: *tile_vector)
+            if(i.t == LEFT_FRONT_DOOR || i.t == RIGHT_FRONT_DOOR || i.t == LEFT_SIDE_DOOR || i.t == RIGHT_SIDE_DOOR){
+                i.openGate();
+            }
+
+    }else if(isExhaust()){
+        hero->setStrength(hero->getStrength()-1);
+
+    }else if(isPoison()){
+        hero->setLife(hero->getLife()-1);
+
     }
-}*/
+
+}
+
+
+

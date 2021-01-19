@@ -1,20 +1,37 @@
 //
 // Created by matteo on 18/04/20.
 //
+#pragma once
 
 #ifndef PROGETTO_PROVA_WEAPON_H
 #define PROGETTO_PROVA_WEAPON_H
 
 
-class Weapon {
+#include "Object.h"
+
+class Weapon : public Object {
+
 public:
-    Weapon(int s, int l);
-    ~Weapon();
-    int getStrenght() const;
+
+///constructor, destructor
+    explicit Weapon(int s);
+    ~Weapon() override;
+    Weapon(Weapon &w);
+
+///getter
+    int getStrength() const;
+
+
+///functions
+    void use(Hero* hero, std::vector<Tile>* tile_vector) override;
+
+
 
 private:
-    int strenght;
-    int level;
+
+///attributes
+    int strength;
+
 };
 
 

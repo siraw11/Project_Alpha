@@ -22,6 +22,14 @@ namespace Alpha
     private:
         PlayerType playerType;
 
+        sf::Sprite _heart;
+
+        sf::Sprite _mana;
+
+        sf::Sprite _armor;
+
+        sf::Sprite _arrow_1;
+
         GameDataRef _data;
 
         int gameState{};

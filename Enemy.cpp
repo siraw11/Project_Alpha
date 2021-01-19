@@ -1,62 +1,96 @@
+#include <cmath>
+
 //
 // Created by matteo on 10/04/20.
 //
 
+
+#include "GameManager/DEFINITIONS.hpp"
 #include "Enemy.h"
 #include "Random.h"
-#include "GameManager/DEFINITIONS.hpp"
+#include "Collision.h"
+#include <cmath>
 
+
+///constructor
 Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
 
     auto enemyTexture = new sf::Texture;
     enemyTexture->loadFromFile("../Resources/Sprites/Enemy/orc(warhammer).png");
     setTexture(enemyTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
-    setOrigin(getPosition().x ,getPosition().y +getGlobalBounds().height / 10);
 
-    setScale(sf::Vector2f(5,5));
+    setScale(sf::Vector2f(ENEMY_SCALE,ENEMY_SCALE));
 
+    heroHitted=false;
 }
 
-void Enemy::movement(const std::vector<Tile>& tile_vector) {
 
+///destructor
+Enemy::~Enemy() = default;
+
+///functions
+
+void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector) {
+
+    auto d = hero.getPosition() - this->getPosition();
+    float distanza = std::sqrt((d.x*d.x) + (d.y*d.y));
+    d/=distanza;
+
+
+    if(this->getPosition().x!= hero.getPosition().x && distanza<600){ //enemy aggro
+        movementvect.x = getSpeed()*d.x;
+        movementvect.y = getSpeed()*d.y;
+        aggro(d);
+    }
     //make the enemy move in random direction for n steps
-    if(walkingRate==24)
-    {
-        direction=generateRandom(4);
-        walkingRate=0;
+    else if(walkingRate == 24){
+
+        direction = generateRandom(4);
+        walkingRate = 0;
     }else{
+        movementvect.x = getSpeed()*walkingDirection().x;
+        movementvect.y = getSpeed()*walkingDirection().y;
         walkingRate++;
     }
 
-    //setting direction
-    int x=0;
-    int y=0;
-    if(direction==1){//up
-        x=0;
-        y=-1;
-    }else if(direction==2){//left
-        x=-1;
-        y=0;
-    }else if(direction==3){//down
-        x=0;
-        y=1;
-    } else if(direction==4){//right
-        x=1;
-        y=0;
-    }
 
-    sf::Vector2f movement(getSpeed()*x,getSpeed()*y);
-    if(collisionLinker(tile_vector, x, y)){
-        movement.x=0;
-        movement.y=0;
-    }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*x) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*y)){//check collision
-        movement.x=0;
-        movement.y=0;
+    bool collided = false;
+    if(dead){
+        movementvect.x = 0;
+        movementvect.y = 0;
+    }else if(Collision::checkCollision( const_cast<std::vector<Tile> &>(tile_vector),this, walkingDirection().x, walkingDirection().y )){
+        movementvect.x = 0;
+        movementvect.y = 0;
+        collided = true;
+    }else if( getPosition().x == spawnposition.x + (ENEMY_WALK_DISTANCE*walkingDirection().x) && getPosition().y == spawnposition.y + (ENEMY_WALK_DISTANCE*walkingDirection().y)){//check collision
+        movementvect.x = 0;
+        movementvect.y = 0;
+        collided = true;
+    }else if(Collision::heroCollision( this, hero, walkingDirection().x, walkingDirection().y )){
+        movementvect.x = 0;
+        movementvect.y = 0;
+        hero.hit = true;
+        this->heroHitted = true;
+        collided = true;
     }else{
+
+        for( const Chest& i : chest_vector)
+            if(Collision::chestCollision( i, this, walkingDirection().x, walkingDirection().y )){
+                movementvect.x = 0;
+                movementvect.y = 0;
+                collided = true;
+                break;
+            }
+    }
+    if(!collided) {
+
         walkingAnimation();
     }
-    move(movement);
+
+
+    move(movementvect);
+
 
 }
 
@@ -66,9 +100,67 @@ void Enemy::walkingAnimation() {
         setTextureRect(sf::IntRect(64*counterWalking,64*d,64,64));
         counterWalking++;
     }else{
-        counterWalking=0;
+        counterWalking = 0;
     }
 
 }
 
-Enemy::~Enemy() = default;
+void Enemy::deathAnimation() {
+    setTextureRect(sf::IntRect(64*counterDeath,64*8,64,64));
+    counterDeath++;
+}
+
+sf::Vector2i Enemy::walkingDirection() {
+    sf::Vector2i walkingDirection;
+    switch(direction){
+        case 1: {
+            walkingDirection.x = 0;
+            walkingDirection.y = -1;
+            break;
+        }
+        case 2: {
+            walkingDirection.x = -1;
+            walkingDirection.y = 0;
+            break;
+        }
+        case 3: {
+            walkingDirection.x = 0;
+            walkingDirection.y = 1;
+            break;
+        }
+        case 4: {
+            walkingDirection.x = 1;
+            walkingDirection.y = 0;
+            break;
+        }
+    }
+
+    return walkingDirection;
+}
+
+void Enemy::aggro(sf::Vector2f d) {
+
+    if(d.x < 0){
+        direction = 2;
+    }else {
+        direction = 4;
+    }
+}
+
+void Enemy::update(std::unique_ptr<Hero> &hero, const std::vector<Tile> &tile_vector, const std::vector<Chest> &chest_vector) {
+    movement(tile_vector, *hero, chest_vector);
+    if(this->hit) {
+        if(hero->playerType == PlayerType::KNIGHT)
+            move(60*hero->direction().x,60*hero->direction().y);
+
+        takeDamage(hero->damage());
+        hit = false;
+    }
+    if(getLife()<=0){
+        dead = true;
+        deathAnimation();
+    }
+
+}
+
+

@@ -1,55 +1,40 @@
 //
 // Created by waris on 20/06/19.
 //
+#pragma once
+
 
 #ifndef EXAM_PROJECT_ITEM_H
-#define EXAM_PROJECT_ITEM_H
+#define EXAM_PROJECT_ITEM
 
-#include "GameCharacter.h"
+#include "Object.h"
 
-class Item{
+class Item : public Object{
 public:
-    void use(Item &item, GameCharacter* hero);
 
-    Item(bool S, bool M, bool arm, bool arw, bool HP, bool K);
+///constructor and destructor
+    Item(bool S, bool E, bool G, bool HP, bool P, bool K);
+    ~Item() override;
 
-    bool isStrenght() const;
+///functions
+    void use(Hero* hero, std::vector<Tile>* tile_vector) override;
 
-    void setStrenght(bool strenght);
-
-    bool isMana() const;
-
-    void setMana(bool mana);
-
-    bool isArmor() const;
-
-    void setArmor(bool armor);
-
-    bool isArrow() const;
-
-    void setArrow(bool arrow);
-
+///getters
+    bool isStrength() const;
+    bool isGeneric() const;
     bool isLife() const;
-
-    void setLife(bool life);
-
     bool isKey() const;
-
-    void setKey(bool key);
+    bool isExhaust() const;
+    bool isPoison() const;
 
 private:
-    bool Strenght;
-    bool Mana;
-    bool Armor;
-    bool Arrow;
-    bool Life;
-    bool Key;
-
-
-
-
-
-
+///attributes
+    bool strength;
+    bool exhaust;
+    bool generic;
+    bool poison;
+    bool life;
+    bool key;
 };
 
 #endif //EXAM_PROJECT_ITEM_H

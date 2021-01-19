@@ -31,13 +31,21 @@
 
 #define RETRY_BUTTON "../Resources/MainMenu/Retry Button.png"
 
+#define HEART_UI "../Resources/item/heart.png"
+
+#define MANA_UI "../Resources/item/mana.png"
+
+#define ARMOR_UI "../Resources/item/armor.png"
+
+#define ARROW_UI "../Resources/item/arrow_1.png"
+
 #define TIME_BEFORE_SHOWING_GAME_OVER 1
 
 #define STATE_WON 1
 
 #define STATE_LOSE 2
 
-#define  STATE_PLAYING 0
+#define STATE_PLAYING 0
 
 #define SCALE 3
 
@@ -45,6 +53,44 @@
 
 #define TILE_HEIGHT 32
 
+#define LEFT_FRONT_DOOR 17
+
+#define RIGHT_FRONT_DOOR 18
+
+#define LEFT_SIDE_DOOR 19
+
+#define RIGHT_SIDE_DOOR 20
+
 #define ENEMY_WALK_DISTANCE 320
+
+#define ENEMY_SCALE 2.5
+
+#define HERO_SCALE 1.75
+
+#define ENEMY_SIZE 64
+
+#define HERO_SIZE 64
+
+#define PROJECTILE_SIZE 64
+
+#define BOSS_PROJECTILE_WIDTH 64
+
+#define BOSS_PROJECTILE_HEIGTH 50
+
+#define BOSS_PROJECTILE_SCALE 2.f
+
+#define BOSS_SCALE 5
+
+#define BOSS_SIZE 64
+
+#define MAP_WIDTH 120*32
+
+#define MAP_HEIGHT 84*32
+
+#define CHEST_SIZE 32
+
+#define CHEST_SCALE 3
+
+
 
 

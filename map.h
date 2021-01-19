@@ -1,35 +1,47 @@
 //
 // Created by matteo on 10/03/20.
 //
+#pragma once
 
 #ifndef PROGETTO_PROVA_MAP_H
 #define PROGETTO_PROVA_MAP_H
 
-#include "Tile.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include "GameManager/Game.hpp"
+#include "Tile.h"
 #include "Enemy.h"
-
+#include "Boss.h"
+#include "Chest.h"
+#include "Projectile.h"
+#include "Hero.h"
 
 class map {
 
 public:
+    ///constructor, destructor
     map();
+    ~map();
 
-    //vettori di tile
+    ///vettori di tile
     std::vector<Tile> tile_vector;
-    //vettore dei nemici
+    ///vettore dei nemici
     std::vector<Enemy> enemy_vector;
+    ///vettore delle chest
+    std::vector<Chest> chest_vector;
 
-    //draw oggetti
+
+
+    ///draw oggetti
     void drawTile(const Alpha::GameDataRef& _data);
     void setTexture();
     void drawEnemy(const Alpha::GameDataRef& _data);
-
-    void update();// update level events
+    void drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef& _data);
+    void drawChest( const Alpha::GameDataRef& _data);
+    void update( std::unique_ptr<Hero> &hero, std::unique_ptr<Boss>& boss);// update level events
 
 private:
+    ///attributes
     int raws=84;
     int column=120;
     int floor=0;
@@ -54,8 +66,6 @@ private:
     int left_side_door=19;
     int right_side_door=20;
     int void_tile=21;
-
-
 
 };
 
