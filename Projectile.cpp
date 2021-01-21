@@ -15,14 +15,17 @@ Projectile::Projectile(PlayerType playerType) {
         case PlayerType ::ARCHER:
             projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
             setTexture(projectileTexture);
+            type = PlayerType::ARCHER;
             break;
         case PlayerType ::MAGE:
             projectileTexture->loadFromFile("../Resources/Sprites/item/fireball.png");
             setTexture(projectileTexture);
+            type = PlayerType::MAGE;
             break;
         case PlayerType ::BOSS:
             projectileTexture->loadFromFile("../Resources/Sprites/item/ice.png");
             setTexture(projectileTexture);
+            type = PlayerType::BOSS;
             break;
         case PlayerType ::KNIGHT:
             break;
@@ -73,7 +76,7 @@ void Projectile::init() {
     }
 }
 
-bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, Hero& hero) {
+bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, std::unique_ptr<Hero>& hero) {
     int x = 0;
     int y = 0;
     switch (direction) {
@@ -103,13 +106,15 @@ bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vec
     if (Collision::projectileCollision(this, tile_vector, x, y)) {
         collided = true;
 
-    } else if (Collision::projectileCollisionBoss(this, boss, x, y)) {
+    } else if (Collision::projectileCollisionBoss(this, boss, x, y) && this->type != PlayerType::BOSS) {
         boss.hit = true;
         collided = true;
 
-    } else if (Collision::projectileCollisionHero(this,hero,x,y)){
-        hero.hit = true;
+    } else if (Collision::projectileCollisionHero(this,*hero,x,y) && this->type == PlayerType::BOSS){
+        hero->hit = true;
         collided = true;
+        boss.heroHitted=true;
+
     }else{
         for (auto &i : *enemy_vector)
             if (Collision::projectileCollisionEnemy(this, i, x, y)) {

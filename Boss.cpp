@@ -40,7 +40,8 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
         direction = generateRandom(4);
         walkingRate = 0;
     }else{
-        movement.y = getSpeed()*walkingDirection().y;
+        movement.x = getSpeed() * walkingDirection().x;
+        movement.y = getSpeed() * walkingDirection().y;
         walkingRate++;
     }
 
@@ -84,16 +85,16 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
 
 
 
-void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector ) {
+void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector ) {
     auto d = hero->getPosition() - this->getPosition();
     float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
 
     this->movement(tile_vector, *hero, chest_vector);
 
     if(distance < 800)
-        if(attackRate==20){
+        if(attackRate==30){
             if (counterAttack == 11){
-                this->attack(*hero);
+                this->attack(hero);
                 this->counterAttack = 0;
                 this->attackRate=0;
             } else {
@@ -106,8 +107,18 @@ void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_ve
 
     //boss projectile update
     if(!projectile_vector.empty())
-        for(auto &i : projectile_vector)
+        for(auto & i : this->projectile_vector){
             i.updatePosition();
+
+        }
+
+    for(auto i = this->projectile_vector.begin(); i!= this->projectile_vector.end(); ++i){
+        if(i->checkCollision(&enemy_vector, tile_vector, *this, hero)){
+            this->projectile_vector.erase(i);
+            i--;
+        }
+    }
+
 
     //boss damage
     if(this->hit)
@@ -127,16 +138,24 @@ void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_ve
 
 
 //boss attack
-void Boss::attack(const Hero& hero) {
-   sf::Vector2f d;
-    d.x = hero.getPosition().x - (this->getPosition().x);
-    d.y = hero.getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
-    float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
-    d /= distance;
+void Boss::attack(const std::unique_ptr<Hero>& hero) {
+
+    sf::Vector2f d = this->distance(hero);
 
     Projectile newProjectile(PlayerType::BOSS);
-    newProjectile.projectile_start.x = getPosition().x;
-    newProjectile.projectile_start.y = getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE;
+
+    if(hero->getPosition().x < this->getPosition().x){
+        newProjectile.projectile_start.x = this->getPosition().x + this->getGlobalBounds().width/4;
+        newProjectile.projectile_start.y = this->getPosition().y + this->getGlobalBounds().height/10 * BOSS_SCALE;
+
+    } else{
+
+        newProjectile.projectile_start.x = this->getPosition().x + this->getGlobalBounds().width/2;
+        newProjectile.projectile_start.y = this->getPosition().y + this->getGlobalBounds().height/10 * BOSS_SCALE;
+    }
+
+
+
     newProjectile.direction = 4;
     newProjectile.directionVector.x = d.x;
     newProjectile.directionVector.y = d.y;
@@ -152,6 +171,25 @@ void Boss::aggro(sf::Vector2f d) {
     }
 }
 
+sf::Vector2f Boss::distance(const std::unique_ptr<Hero>& hero) {
+    sf::Vector2f d;
+    float distance;
+
+
+    if(hero->getPosition().x < this->getPosition().x){
+        d.x = hero->getPosition().x - (this->getPosition().x + getGlobalBounds().width/4);
+        d.y = hero->getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
+        distance = std::sqrt((d.x*d.x) + (d.y*d.y));
+        d /= distance;
+    }else{
+
+        d.x = hero->getPosition().x - (this->getPosition().x + getGlobalBounds().width/2);
+        d.y = hero->getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
+        distance = std::sqrt((d.x*d.x) + (d.y*d.y));
+        d /= distance;
+    }
+    return d;
+}
 
 
 ///destructor

@@ -326,7 +326,7 @@ void map::setTexture() {
     }
 }
 
-void map::update(std::unique_ptr<Hero> &hero, std::unique_ptr<Boss>& boss) {
+void map::update(std::unique_ptr<Hero>& hero, std::unique_ptr<Boss>& boss) {
     //enemy movement update
     if(!enemy_vector.empty())
         for(auto i=enemy_vector.begin(); i!=enemy_vector.end(); ++i){
@@ -338,8 +338,9 @@ void map::update(std::unique_ptr<Hero> &hero, std::unique_ptr<Boss>& boss) {
         }
 
 
-    boss->update(hero, tile_vector,chest_vector);
-    hero->update(tile_vector, enemy_vector, &chest_vector);
+    boss->update(hero, tile_vector, chest_vector, enemy_vector);
+
+    hero->update(tile_vector, enemy_vector, &chest_vector, boss);
 
     //check hero projectile collision
     if(!hero->projectile_vector.empty())
@@ -347,7 +348,7 @@ void map::update(std::unique_ptr<Hero> &hero, std::unique_ptr<Boss>& boss) {
         auto d = hero->getPosition() - i->getPosition();
         float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
 
-        if (i->checkCollision(&enemy_vector, tile_vector, *boss, *hero) || distance > hero->range) {//erase the projectile if there is a collision
+        if (i->checkCollision(&enemy_vector, tile_vector, *boss, hero) || distance > hero->range) {//erase the projectile if there is a collision
             hero->projectile_vector.erase(i);
             i--;
         }

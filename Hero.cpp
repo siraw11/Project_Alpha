@@ -18,7 +18,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
     mana=m;
     weapon= nullptr;
     hit=false;
-    setPosition(sf::Vector2f(300,300));
+    setPosition(sf::Vector2f(4500,3500));
 }
 
 ///destructor
@@ -175,7 +175,7 @@ int Hero::damage() {
 }
 
 
-void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector ) {
+void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss ) {
 
     //update attack animation
     if(this->counterAttack>0){
@@ -188,26 +188,30 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
     }
 
     //update hero life
+    if(this->hit) {
+        if (boss->heroHitted) {//boss projectile hit the hero
+            this->takeDamage(boss->getStrength());
+            boss->heroHitted=false;
+        } else {
+            for (auto &i: enemy_vector) {//enemy hit the hero
+                if (i.heroHitted) {
+                    if (this->playerType == PlayerType::KNIGHT && this->getArmor() > 0) {
+                        this->setArmor(this->getArmor() - i.getStrength());
 
-    if(this->hit)
-    {
-        for (auto &i: enemy_vector) {
-            if(i.heroHitted){
-                if(this->playerType==PlayerType::KNIGHT && this->getArmor()>0){
-                    this->setArmor(this->getArmor()-i.getStrength());
-
-                }else{
-                    this->takeDamage(i.getStrength());
+                    } else {
+                        this->takeDamage(i.getStrength());
+                    }
+                    this->bounce(i);
+                    i.heroHitted = false;
                 }
-
-                this->bounce(i);
-                i.heroHitted=false;
-
             }
+
         }
-        this->hit=false;
+        this->hit = false;
     }
-    for(auto & i: *chest_vector){//opening chest animation
+
+    //opening chest animation
+    for(auto & i: *chest_vector){
         if(!i.close && i.counterOpening<3){
             i.openingAnimation();
             break;}
