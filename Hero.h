@@ -18,11 +18,11 @@
 
 class Hero: public GameCharacter {
 public:
-///constructor,desctructor
+//constructor,desctructor
     Hero(int hp, int s,int sp, int a, int ar, int m);
     ~Hero() override;
 
-///function
+//function
     void heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector );
     void openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_vector );
     void attackAnimation();
@@ -32,20 +32,20 @@ public:
     void update( const std::vector<Tile>& tile_vector, std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss );
     void bounce(const Enemy& enemy);
 
-///attributi
-    int walkingDirection=2;//0=up, 1=left, 2=down, 3=right
-    int counterAttack=0;//attack rate
+//attributi
+    int walkingDirection = 2;//0=up, 1=left, 2=down, 3=right
+    int counterAttack = 0;//attack rate
     std::vector<Projectile> projectile_vector;
     PlayerType playerType;
     bool hit;
     int range = 0;
-///getters
+//getters
     Weapon *getWeapon() const;
     int getArmor() const;
     int getArrow() const;
     int getMana() const;
 
-///setters
+//setters
     void setWeapon(Weapon* weapon);
     void setArmor(int armor);
     void setArrow(int arrow);
@@ -53,7 +53,7 @@ public:
 
 
 protected:
-///attributes
+//attributes
     Weapon* weapon;
     int armor;
     int arrow;
@@ -63,10 +63,10 @@ protected:
 
 
 private:
-///attributes
-    int counterWalking=0;
+//attributes
+    int counterWalking = 0;
 
-///function
+//function
     void walkingAnimation();
 };
 

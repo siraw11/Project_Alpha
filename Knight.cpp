@@ -6,10 +6,10 @@
 #include "GameManager/DEFINITIONS.hpp"
 #include "Knight.h"
 
-///constructor
+//constructor
 Knight::Knight(int hp, int s, int sp, int a, int ar, int m) : Hero(hp ,s , sp, a, ar, m){
 
-    auto heroTexture= new sf::Texture;
+    auto heroTexture = new sf::Texture;
     heroTexture->loadFromFile("../Resources/Sprites/Hero/knight.png");
     setTexture(heroTexture);
     setTextureRect(sf::IntRect(0, 128, 64, 64));
@@ -19,6 +19,6 @@ Knight::Knight(int hp, int s, int sp, int a, int ar, int m) : Hero(hp ,s , sp, a
     playerType = PlayerType::KNIGHT;
 }
 
-///destructor
+//destructor
 Knight::~Knight() = default;
 

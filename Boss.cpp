@@ -9,7 +9,7 @@
 #include "Collision.h"
 #include <cmath>
 
-///cosntructor
+//cosntructor
 Boss::Boss(int hp, int s, int sp) : Enemy(hp, s, sp) {
 
     posx = (MAP_WIDTH/2)*SCALE;// centro della mappa
@@ -27,7 +27,7 @@ Boss::Boss(int hp, int s, int sp) : Enemy(hp, s, sp) {
     dead = false;
 }
 
-///functions
+//functions
 void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std::vector<Chest> &chest_vector) {
     auto d = hero.getPosition() - this->getPosition();
     float distanza = std::sqrt((d.x*d.x) + (d.y*d.y));
@@ -45,7 +45,7 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
         walkingRate++;
     }
 
-    bool collided=false;
+    bool collided = false;
     if(distanza < 800){ //the boss stop moving and start shooting projectile
         movement.x = 0;
         movement.y = 0;
@@ -96,7 +96,7 @@ void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_ve
             if (counterAttack == 11){
                 this->attack(hero);
                 this->counterAttack = 0;
-                this->attackRate=0;
+                this->attackRate = 0;
             } else {
                 this->aggro(d);
                 counterAttack++;
@@ -192,5 +192,5 @@ sf::Vector2f Boss::distance(const std::unique_ptr<Hero>& hero) {
 }
 
 
-///destructor
+//destructor
 Boss::~Boss() = default;

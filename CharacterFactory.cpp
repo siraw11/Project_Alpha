@@ -11,18 +11,16 @@
 #include "Mage.h"
 
 
-///constructor
+//constructor
 CharacterFactory::~CharacterFactory() = default;
 
-///destructor
+//destructor
 CharacterFactory::CharacterFactory() = default;
 
-
-///function
+//function
 std::unique_ptr<Hero> CharacterFactory::createCharacter(PlayerType type) {
 
     std::unique_ptr<Hero> result;
-
 
     switch(type) {
         case PlayerType::KNIGHT: {

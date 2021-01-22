@@ -12,7 +12,7 @@
 #include <cmath>
 
 
-///constructor
+//constructor
 Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
 
     auto enemyTexture = new sf::Texture;
@@ -22,20 +22,20 @@ Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
 
     setScale(sf::Vector2f(ENEMY_SCALE,ENEMY_SCALE));
 
-    heroHitted=false;
+    heroHitted = false;
 }
 
 
-///destructor
+//destructor
 Enemy::~Enemy() = default;
 
-///functions
+//functions
 
 void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector) {
 
     auto d = hero.getPosition() - this->getPosition();
     float distanza = std::sqrt((d.x*d.x) + (d.y*d.y));
-    d/=distanza;
+    d /= distanza;
 
 
     if(this->getPosition().x!= hero.getPosition().x && distanza<600){ //enemy aggro
@@ -84,10 +84,8 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
             }
     }
     if(!collided) {
-
         walkingAnimation();
     }
-
 
     move(movementvect);
 
@@ -95,8 +93,8 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
 }
 
 void Enemy::walkingAnimation() {
-    int d=direction-1;
-    if(counterWalking!=8){
+    int d = direction-1;
+    if(counterWalking != 8){
         setTextureRect(sf::IntRect(64*counterWalking,64*d,64,64));
         counterWalking++;
     }else{

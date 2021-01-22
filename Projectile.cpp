@@ -8,26 +8,26 @@
 #include "Collision.h"
 
 
-///constructor
+//constructor
 Projectile::Projectile(PlayerType playerType) {
-    auto projectileTexture= new sf::Texture;
+    auto projectileTexture = new sf::Texture;
     switch(playerType){
-        case PlayerType ::ARCHER:
+        case PlayerType::ARCHER:
             projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
             setTexture(projectileTexture);
             type = PlayerType::ARCHER;
             break;
-        case PlayerType ::MAGE:
+        case PlayerType::MAGE:
             projectileTexture->loadFromFile("../Resources/Sprites/item/fireball.png");
             setTexture(projectileTexture);
             type = PlayerType::MAGE;
             break;
-        case PlayerType ::BOSS:
+        case PlayerType::BOSS:
             projectileTexture->loadFromFile("../Resources/Sprites/item/ice.png");
             setTexture(projectileTexture);
             type = PlayerType::BOSS;
             break;
-        case PlayerType ::KNIGHT:
+        case PlayerType::KNIGHT:
             break;
 
     }
@@ -35,39 +35,38 @@ Projectile::Projectile(PlayerType playerType) {
     setSize(sf::Vector2f(64,64));
 }
 
-///destructor
+//destructor
 Projectile::~Projectile() = default;
 
-///functions
+//functions
 void Projectile::updatePosition() {
     switch(direction){
         case 0:{//up
             move(0,-projectile_speed);
             break;
         }
-   case 1:{//left
-        move(-projectile_speed,0);
-        break;
-   }
-   case 2:{//down
-        move(0,projectile_speed);
-        break;
-   }
-   case 3:{//right
-       move(projectile_speed,0);
-       break;
-   }
-   case 4:{
-       move(projectile_speed*directionVector.x,projectile_speed*directionVector.y);
-       break;
-
-   }
+        case 1:{//left
+            move(-projectile_speed,0);
+            break;
+        }
+        case 2:{//down
+            move(0,projectile_speed);
+            break;
+        }
+        case 3:{//right
+            move(projectile_speed,0);
+            break;
+        }
+        case 4:{
+            move(projectile_speed*directionVector.x,projectile_speed*directionVector.y);
+            break;
+        }
     }
 }
 
 void Projectile::init() {
     setPosition(projectile_start);
-    if(direction==4){
+    if(direction == 4){
         setTextureRect(sf::IntRect(0,0,BOSS_PROJECTILE_WIDTH,BOSS_PROJECTILE_HEIGTH));
         setScale(sf::Vector2f(BOSS_PROJECTILE_SCALE,BOSS_PROJECTILE_SCALE));
     }else{
@@ -113,7 +112,7 @@ bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vec
     } else if (Collision::projectileCollisionHero(this,*hero,x,y) && this->type == PlayerType::BOSS){
         hero->hit = true;
         collided = true;
-        boss.heroHitted=true;
+        boss.heroHitted = true;
 
     }else{
         for (auto &i : *enemy_vector)
@@ -123,11 +122,7 @@ bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vec
                 break;
             }
     }
-
-
-
-
-return collided;
+    return collided;
 }
 
 

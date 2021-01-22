@@ -8,25 +8,24 @@
 #include "Hero.h"
 
 
-///constructor
+//constructor
 Weapon::Weapon(int s) {
-    if(s<=0)
+    if(s <= 0)
         throw std::out_of_range("Negative value");
     else
-        strength=s;
+        strength = s;
 }
 
-///destructor
+//destructor
 Weapon::~Weapon() = default;
 
-///getters
+//getters
 int Weapon::getStrength() const {
     return strength;
 }
 
 void Weapon::use(Hero *hero, std::vector<Tile>* tile_vector) {
     std::cout<<"weapon"<<std::endl;
-
     hero->setWeapon(this);
     std::cout<<"forza arma subito dopo il set"<<std::endl;
     std::cout<<hero->getWeapon()->strength<<std::endl;
@@ -34,7 +33,7 @@ void Weapon::use(Hero *hero, std::vector<Tile>* tile_vector) {
 
 Weapon::Weapon(Weapon &w) {
 
-    strength= w.getStrength();
+    strength = w.getStrength();
 
 }
 

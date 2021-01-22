@@ -12,14 +12,14 @@
 class Item : public Object{
 public:
 
-///constructor and destructor
+//constructor and destructor
     Item(bool S, bool E, bool G, bool HP, bool P, bool K);
     ~Item() override;
 
-///functions
+//functions
     void use(Hero* hero, std::vector<Tile>* tile_vector) override;
 
-///getters
+//getters
     bool isStrength() const;
     bool isGeneric() const;
     bool isLife() const;
@@ -28,7 +28,7 @@ public:
     bool isPoison() const;
 
 private:
-///attributes
+//attributes
     bool strength;
     bool exhaust;
     bool generic;

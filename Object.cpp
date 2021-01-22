@@ -8,10 +8,10 @@
 #include "Object.h"
 
 
-///constructor
+//constructor
 Object::Object() = default;
 
-///destructor
+//destructor
 Object::~Object() = default;
 
 

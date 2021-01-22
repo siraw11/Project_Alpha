@@ -17,21 +17,21 @@
 class GameCharacter:public sf::RectangleShape {
 
 public:
-///constructor, destructor
+//constructor, destructor
     GameCharacter(int hp, int s, int sp);
     ~GameCharacter() override;
 
-///getters
+//getters
     int getLife() const;
     int getStrength() const;
     int getSpeed() const;
 
-///setters
+//setters
     void setLife(int life);
     void setStrength(int strength);
     void setSpeed(int speed);
 
-///funciton
+//funciton
     void takeDamage(int damage);
 
 

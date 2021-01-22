@@ -14,7 +14,7 @@ class Hero;
 class Object {
 public:
 
-///constructor and destructor
+//constructor and destructor
     Object();
     virtual ~Object();
 

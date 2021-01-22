@@ -5,7 +5,7 @@
 
 #include "GameCharacter.h"
 
-///constructor
+//constructor
 GameCharacter::GameCharacter(int hp, int s, int sp){
     if(hp <= 0 || s <= 0 || sp <= 0){
         throw std::out_of_range("Negative Value");
@@ -19,10 +19,10 @@ GameCharacter::GameCharacter(int hp, int s, int sp){
 
 }
 
-///destructor
+//destructor
 GameCharacter::~GameCharacter() = default;
 
-///getters
+//getters
 
 int GameCharacter::getLife() const {
     return life;
@@ -36,7 +36,7 @@ int GameCharacter::getStrength() const {
     return strength;
 }
 
-///setters
+//setters
 void GameCharacter::setLife(int life) {
     GameCharacter::life = life;
 }
@@ -49,10 +49,10 @@ void GameCharacter::setStrength(int strength) {
     GameCharacter::strength = strength;
 }
 
-///functions
+//functions
 
 void GameCharacter::takeDamage(int damage) {
-    life-=damage;
+    life -= damage;
 }
 
 

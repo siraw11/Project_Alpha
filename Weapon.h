@@ -12,26 +12,20 @@
 class Weapon : public Object {
 
 public:
-
-///constructor, destructor
+//constructor, destructor
     explicit Weapon(int s);
     ~Weapon() override;
     Weapon(Weapon &w);
 
-///getter
+//getter
     int getStrength() const;
 
-
-///functions
+//functions
     void use(Hero* hero, std::vector<Tile>* tile_vector) override;
 
-
-
 private:
-
-///attributes
+//attributes
     int strength;
-
 };
 
 

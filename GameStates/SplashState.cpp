@@ -36,7 +36,7 @@ namespace Alpha
 
 	void SplashState::Update()
 	{
-		if (this->_clock.getElapsedTime().asSeconds() >=SPLASH_STATE_SHOW_TIME)
+		if (this->_clock.getElapsedTime().asSeconds() >= SPLASH_STATE_SHOW_TIME)
 		{
 			// Switch To Main Menu
 			this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);

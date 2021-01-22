@@ -12,18 +12,18 @@
 
 class Tile: public sf::RectangleShape {
 public:
-    ///constructor, destructor
+//constructor, destructor
     explicit Tile(int type);
     ~Tile() override;
 
-    ///function
+//function
     void init(float xPos,float yPos);
     void openGate();
 
-    ///attributes
+//attributes
     int t;
-    int width=32;
-    int height=32;
+    int width = 32;
+    int height = 32;
     float posx{};
     float posy{};
 

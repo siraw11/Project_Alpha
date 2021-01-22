@@ -9,7 +9,7 @@
 #include "Weapon.h"
 
 
-///constructor
+//constructor
 Chest::Chest():close(true){
 
 
@@ -25,11 +25,11 @@ Chest::Chest():close(true){
 
 }
 
-///destructor
+//destructor
 Chest::~Chest() = default;
 
 
-///functions
+//functions
 void Chest::init(int counter) {
     //si setta la posizione all'interno della mappa e ci vengono inseriti i vari item
 
@@ -40,8 +40,8 @@ void Chest::init(int counter) {
 
             elements.push_back(generic);
 
-            posX=19*32*SCALE;
-            posY=0;
+            posX = 19*32*SCALE;
+            posY = 0;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -53,8 +53,8 @@ void Chest::init(int counter) {
             elements.push_back(strength);
             elements.push_back(poison);
 
-            posX=59*32*SCALE;
-            posY=0;
+            posX = 59*32*SCALE;
+            posY = 0;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -66,8 +66,8 @@ void Chest::init(int counter) {
             elements.push_back(generic);
             elements.push_back(weapon);
 
-            posX=99*32*SCALE;
-            posY=0;
+            posX = 99*32*SCALE;
+            posY = 0;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -81,8 +81,8 @@ void Chest::init(int counter) {
             elements.push_back(exhaust);
             elements.push_back(life);
 
-            posX=32*SCALE;
-            posY=(61/2)*32*SCALE;
+            posX = 32*SCALE;
+            posY = (61/2)*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -95,8 +95,8 @@ void Chest::init(int counter) {
             elements.push_back(exhaust);
             elements.push_back(poison);
 
-            posX=118*32*SCALE;
-            posY=(61/2)*32*SCALE;
+            posX = 118*32*SCALE;
+            posY = (61/2)*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -109,8 +109,8 @@ void Chest::init(int counter) {
             elements.push_back(generic);
             elements.push_back(weapon);
 
-            posX=20*32*SCALE;
-            posY=60*32*SCALE;
+            posX = 20*32*SCALE;
+            posY = 60*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -125,8 +125,8 @@ void Chest::init(int counter) {
             elements.push_back(life);
             elements.push_back(weapon);
 
-            posX=99*32*SCALE;
-            posY=60*32*SCALE;
+            posX = 99*32*SCALE;
+            posY = 60*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -140,8 +140,8 @@ void Chest::init(int counter) {
             elements.push_back(strength);
             elements.push_back(sword);
 
-            posX=59*32*SCALE;
-            posY=70*32*SCALE;
+            posX = 59*32*SCALE;
+            posY = 70*32*SCALE;
 
             setPosition(sf::Vector2f(posX,posY));
             break;
@@ -156,7 +156,7 @@ void Chest::open(Hero* hero, std::vector<Tile>* tile_vector) {
             i->use(hero, tile_vector);
         }
        if(!elements.empty())
-            for(auto i=elements.end(); i!=elements.end(); ++i)
+            for(auto i = elements.end(); i != elements.end(); ++i)
                 this->elements.erase(i);
 }
 

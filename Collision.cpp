@@ -169,7 +169,7 @@ bool Collision::meleeHeroAttak(Hero *hero, const Enemy &enemy, int x, int y) {
        position.y < enemy.getPosition().y + ENEMY_SIZE*ENEMY_SCALE && position.y + HERO_SIZE*HERO_SCALE > enemy.getPosition().y){
 
 
-        collided=true;
+        collided = true;
     }
     return collided;
 }

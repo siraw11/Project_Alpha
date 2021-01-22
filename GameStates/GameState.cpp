@@ -16,7 +16,7 @@
 
 namespace Alpha {
     GameState::GameState(GameDataRef data,PlayerType playertype) : _data(data) {
-        playerType=playertype;
+        playerType = playertype;
 
     }
 
@@ -59,15 +59,15 @@ namespace Alpha {
 
         CharacterFactory factory;
 
-        std::unique_ptr<Hero> hero =factory.createCharacter(playerType);
+        std::unique_ptr<Hero> hero = factory.createCharacter(playerType);
 
         auto heroWeapon = new Weapon(1);
         hero->setWeapon(heroWeapon);
 
-        std::unique_ptr<Boss> boss=std::unique_ptr<Boss>(new Boss(1, 1, 10));
+        std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(1, 1, 10));
 
 
-        ///View variable
+        //View variable
         sf::View view;
         this->_data->window.setFramerateLimit(60);
         view.reset(sf::FloatRect(0, 0, 1920.0, 1080.0));
@@ -90,32 +90,33 @@ namespace Alpha {
                     this->_data->window.setView(temp);
                 }
             }
-            ///hero movement
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){///up
+
+            //hero movement
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
                 hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
-                hero->walkingDirection=0;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){///left
+                hero->walkingDirection = 0;
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
                 hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-                hero->walkingDirection=1;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){///down
+                hero->walkingDirection = 1;
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
                 hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-                hero->walkingDirection=2;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){///right
+                hero->walkingDirection = 2;
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
                 hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-                hero->walkingDirection=3;
+                hero->walkingDirection = 3;
             }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){///attack
-                hero->counterAttack=1;
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){//attack
+                hero->counterAttack = 1;
             }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){///open chest
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){//open chest
                 hero->openChest(&level.chest_vector, &level.tile_vector);
             }
 
 
-            ///update level events
+            //update level events
             level.update(hero, boss);
 
-            ///camera settings
+            //camera settings
             position.x = hero->getPosition().x + 20 - (1920.0 / 2);
             position.y = hero->getPosition().y + 20 - (1080.0 / 2);
 
@@ -135,25 +136,24 @@ namespace Alpha {
             this->_heart.setScale(3,3);
             _heart.setPosition(hero->getPosition().x,hero->getPosition().y-30 );
 
-            if(playerType==PlayerType::ARCHER){
+            if(playerType == PlayerType::ARCHER){
                 this->_data->assets.LoadTexture("Arrow", ARROW_UI);
                 this->_arrow_1.setTexture(this->_data->assets.GetTexture("Arrow"));
                 this->_arrow_1.setScale(3,3);
-                _arrow_1.setPosition(hero->getPosition().x+80,hero->getPosition().y-30 );
-
+                _arrow_1.setPosition(hero->getPosition().x + 80,hero->getPosition().y-30 );
             }
 
             else if (playerType==PlayerType::MAGE){
                 this->_data->assets.LoadTexture("Mana", MANA_UI);
                 this->_mana.setTexture(this->_data->assets.GetTexture("Mana"));
                 this->_mana.setScale(3,3);
-                _mana.setPosition(hero->getPosition().x+80,hero->getPosition().y-30 );}
+                _mana.setPosition(hero->getPosition().x + 80,hero->getPosition().y-30 );}
 
             else if (playerType==PlayerType::KNIGHT){
                 this->_data->assets.LoadTexture("Armor", ARMOR_UI);
                 this->_armor.setTexture(this->_data->assets.GetTexture("Armor"));
                 this->_armor.setScale(2.7,2.7);
-                _armor.setPosition(hero->getPosition().x+80,hero->getPosition().y-30 );}
+                _armor.setPosition(hero->getPosition().x + 80,hero->getPosition().y-30 );}
 
             level.drawTile(_data);
             level.drawEnemy(_data);

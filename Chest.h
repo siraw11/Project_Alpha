@@ -17,23 +17,23 @@ class Hero;
 
 class Chest : public sf::RectangleShape{
 public:
-///constructor, destructor
+//constructor, destructor
     explicit Chest();
     ~Chest() override;
 
-///function
+//function
     void init(int counter);
     void open(Hero* hero, std::vector<Tile>* tile_vector);
     void openingAnimation();
     void setClose(bool close);
 
-///attributes
+//attributes
     bool close;
-    int counterOpening=0;
+    int counterOpening = 0;
 
 
 private:
-///attributes
+//attributes
     std::vector<Object*> elements;
 
     int posX{};

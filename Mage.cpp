@@ -6,10 +6,10 @@
 #include "GameManager/DEFINITIONS.hpp"
 #include "Mage.h"
 
-///constructor
+//constructor
 Mage::Mage(int hp, int s, int sp,int a, int ar, int m) : Hero(hp, s, sp, a, ar, m){
 
-    auto heroTexture= new sf::Texture ;
+    auto heroTexture = new sf::Texture ;
     heroTexture->loadFromFile("../Resources/Sprites/Hero/mage.png");
     setTexture(heroTexture);
     setTextureRect(sf::IntRect(0, 128, 64, 64));
@@ -22,7 +22,7 @@ Mage::Mage(int hp, int s, int sp,int a, int ar, int m) : Hero(hp, s, sp, a, ar, 
 
 }
 
-///destructor
+//destructor
 Mage::~Mage() = default;
 
 

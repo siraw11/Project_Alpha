@@ -18,20 +18,20 @@ class Enemy;
 
 class Projectile: public sf::RectangleShape {
 public:
-    ///constructor, destructor
+//constructor, destructor
     explicit Projectile(PlayerType playerType);
     ~Projectile() override;
 
-    ///functions
+//functions
     void init();
     bool checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, std::unique_ptr<Hero>& hero);
     void updatePosition();
 
-    ///attributes
+//attributes
     int direction{};//0=up,1=left,2=down,3=right,4=other
     sf::Vector2f directionVector;
 
-    int projectile_speed=40;
+    int projectile_speed = 40;
     sf::Vector2f projectile_start;
 
 private:

@@ -10,42 +10,42 @@
 #include <cmath>
 
 
-///constructor
+//constructor
 Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 
-    arrow=a;
-    armor=ar;
-    mana=m;
-    weapon= nullptr;
-    hit=false;
-    setPosition(sf::Vector2f(4500,3500));
+    arrow = a;
+    armor = ar;
+    mana = m;
+    weapon = nullptr;
+    hit = false;
+    setPosition(sf::Vector2f(300,300));
 }
 
-///destructor
+//destructor
 Hero::~Hero(){
 }
 
-///functions
+//functions
 void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector ) {
 
     sf::Vector2f movement(direction().x*speed,direction().y*speed);
-    bool collided=false;
+    bool collided = false;
 
     if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, direction().x, direction().y) || counterAttack != 0) {
-        movement.x=0;
-        movement.y=0;
+        movement.x = 0;
+        movement.y = 0;
         collided=true;
     }else if(Collision::enemyCollision(this, enemy_vector, direction().x, direction().y )){
-        movement.x=0;
-        movement.y=0;
-        this->hit=true;
-        collided=true;
+        movement.x = 0;
+        movement.y = 0;
+        this->hit = true;
+        collided = true;
     }else {
         for( const Chest& i : chest_vector)
             if(Collision::chestCollision( i, this, direction().x, direction().y )){
-                movement.x=0;
-                movement.y=0;
-                collided=true;
+                movement.x = 0;
+                movement.y = 0;
+                collided = true;
                 break;
             }
 
@@ -58,14 +58,13 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
 }
 
 void Hero::walkingAnimation() {
-    if(counterWalking!=8){
+    if(counterWalking != 8){
 
         setTextureRect(sf::IntRect(64*counterWalking,64*walkingDirection,64,64));
         counterWalking++;
     }else{
-        counterWalking=0;
+        counterWalking = 0;
     }
-
 }
 
 void Hero::attackAnimation() {
@@ -77,7 +76,7 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
 
     switch(playerType) {
         case PlayerType::ARCHER:{
-            if(this->arrow>0){
+            if(this->arrow > 0){
                 Projectile newProjectile(playerType);
 
                 newProjectile.projectile_start.x = getPosition().x;
@@ -93,7 +92,7 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
             break;
         }
         case PlayerType::MAGE:{
-            if(this->mana>0){
+            if(this->mana > 0){
                 Projectile newProjectile(playerType);
 
                 newProjectile.projectile_start.x = getPosition().x;
@@ -111,7 +110,7 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
         case PlayerType::KNIGHT:{
             for(auto &i: *enemy_vector)
                 if (Collision::meleeHeroAttak(this, i, direction().x, direction().y)){
-                    i.hit=true;
+                    i.hit = true;
                     break;
                 }
             break;
@@ -143,23 +142,23 @@ sf::Vector2i Hero::direction() {
     sf::Vector2i direction;
     switch(walkingDirection){
         case 0: {
-            direction.x=0;
-            direction.y=-1;
+            direction.x = 0;
+            direction.y = -1;
             break;
         }
         case 1: {
-            direction.x=-1;
-            direction.y=0;
+            direction.x = -1;
+            direction.y = 0;
             break;
         }
         case 2: {
-            direction.x=0;
-            direction.y=1;
+            direction.x = 0;
+            direction.y= 1;
             break;
         }
         case 3: {
-            direction.x=1;
-            direction.y=0;
+            direction.x = 1;
+            direction.y = 0;
             break;
         }
     }
@@ -168,9 +167,9 @@ sf::Vector2i Hero::direction() {
 }
 
 int Hero::damage() {
-    int damage=strength;
-    if(weapon!= nullptr)
-        damage+=weapon->getStrength();
+    int damage = strength;
+    if(weapon != nullptr)
+        damage += weapon->getStrength();
     return damage;
 }
 
@@ -178,12 +177,12 @@ int Hero::damage() {
 void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss ) {
 
     //update attack animation
-    if(this->counterAttack>0){
+    if(this->counterAttack > 0){
         this->attackAnimation();
         counterAttack++;
     }
-    if(this->counterAttack==11){
-        this->counterAttack=0;
+    if(this->counterAttack == 11){
+        this->counterAttack = 0;
         this->attack(&enemy_vector);
     }
 
@@ -191,7 +190,7 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
     if(this->hit) {
         if (boss->heroHitted) {//boss projectile hit the hero
             this->takeDamage(boss->getStrength());
-            boss->heroHitted=false;
+            boss->heroHitted = false;
         } else {
             for (auto &i: enemy_vector) {//enemy hit the hero
                 if (i.heroHitted) {
@@ -228,7 +227,7 @@ void Hero::bounce(const Enemy& enemy) {
 }
 
 
-///getters
+//getters
 Weapon *Hero::getWeapon() const {
     return weapon;
 }
@@ -245,9 +244,9 @@ int Hero::getMana() const {
     return mana;
 }
 
-///setters
+//setters
 void Hero::setWeapon(Weapon* weapon) {
-    this->weapon=weapon;
+    this->weapon = weapon;
 }
 
 void Hero::setArmor(int armor) {
@@ -261,8 +260,3 @@ void Hero::setMana(int mana) {
 void Hero::setArrow(int arrow) {
     Hero::arrow = arrow;
 }
-
-
-
-
-

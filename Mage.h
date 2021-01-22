@@ -13,7 +13,7 @@ class Mage: public Hero {
 
 public:
 
-///constructor, destructor
+//constructor, destructor
     Mage(int hp, int s,int sp,int a, int ar, int m);
     ~Mage() override;
 

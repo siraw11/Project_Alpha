@@ -6,7 +6,7 @@
 #include "GameManager/DEFINITIONS.hpp"
 #include "Archer.h"
 
-///constructor
+//constructor
 Archer::Archer(int hp, int s, int sp, int a, int ar, int m):Hero( hp, s, sp, a, ar, m) {
 
     auto heroTexture= new sf::Texture;
@@ -22,7 +22,7 @@ Archer::Archer(int hp, int s, int sp, int a, int ar, int m):Hero( hp, s, sp, a, 
 
 }
 
-///destructor
+//destructor
 Archer::~Archer() = default;
 
 

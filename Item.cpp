@@ -7,13 +7,13 @@
 #include "PlayerType.h"
 #include "Hero.h"
 
-///constructor
+//constructor
 Item::Item(bool S,bool E, bool G, bool HP, bool P, bool K):strength(S), exhaust(E), generic(G), life(HP), poison(P), key(K){}
 
-///destructor
+//destructor
 Item::~Item() = default;
 
-///getters
+//getters
 bool Item::isStrength() const {
     return strength;
 }
@@ -38,7 +38,7 @@ bool Item::isPoison() const {
     return poison;
 }
 
-///functions
+//functions
 void Item::use( Hero* hero, std::vector<Tile>* tile_vector) {
     std::cout<<"Item"<<std::endl;
 
@@ -73,10 +73,5 @@ void Item::use( Hero* hero, std::vector<Tile>* tile_vector) {
 
     }else if(isPoison()){
         hero->setLife(hero->getLife()-1);
-
     }
-
 }
-
-
-
