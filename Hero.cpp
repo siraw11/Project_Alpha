@@ -204,7 +204,6 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
                     i.heroHitted = false;
                 }
             }
-
         }
         this->hit = false;
     }

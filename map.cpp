@@ -345,7 +345,7 @@ void map::update(std::unique_ptr<Hero>& hero, std::unique_ptr<Boss>& boss) {
     //check hero projectile collision
     if(!hero->projectile_vector.empty())
     for(auto i = hero->projectile_vector.begin(); i!= hero->projectile_vector.end(); ++i) {
-        auto d = hero->getPosition() - i->getPosition();
+        auto d = i->projectile_start - i->getPosition();
         float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
 
         if (i->checkCollision(&enemy_vector, tile_vector, *boss, hero) || distance > hero->range) {//erase the projectile if there is a collision
