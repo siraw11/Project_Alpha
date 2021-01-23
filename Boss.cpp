@@ -191,6 +191,11 @@ sf::Vector2f Boss::distance(const std::unique_ptr<Hero>& hero) {
     return d;
 }
 
+void Boss::deathAnimation() {
+    setTextureRect(sf::IntRect(64*counterDeath,64*6,64,64));
+    counterDeath++;
+}
+
 
 //destructor
 Boss::~Boss() = default;

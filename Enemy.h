@@ -24,7 +24,7 @@ public:
 //functions
     virtual void movement( const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector);
     void walkingAnimation();
-    void deathAnimation();
+    virtual void deathAnimation();
     sf::Vector2i walkingDirection();
     virtual void aggro(sf::Vector2f d);
     void update(std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector);

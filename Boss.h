@@ -24,6 +24,7 @@ public:
     void attack(const std::unique_ptr<Hero>& hero);
     void aggro(sf::Vector2f d)override;
     sf::Vector2f distance(const std::unique_ptr<Hero>& hero);
+    void deathAnimation()override;
 
 //attributes
     std::vector<Projectile> projectile_vector;

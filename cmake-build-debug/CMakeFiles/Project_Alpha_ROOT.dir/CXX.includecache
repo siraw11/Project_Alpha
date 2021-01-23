@@ -38,6 +38,20 @@ Tile.h
 Hero.h
 /home/matteo/CLionProjects/Project_Alpha/Hero.h
 
+/home/matteo/CLionProjects/Project_Alpha/Enemy.cpp
+cmath
+-
+GameManager/DEFINITIONS.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+Enemy.h
+/home/matteo/CLionProjects/Project_Alpha/Enemy.h
+Random.h
+/home/matteo/CLionProjects/Project_Alpha/Random.h
+Collision.h
+/home/matteo/CLionProjects/Project_Alpha/Collision.h
+cmath
+-
+
 /home/matteo/CLionProjects/Project_Alpha/Enemy.h
 GameCharacter.h
 /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
