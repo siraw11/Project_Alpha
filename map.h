@@ -23,11 +23,11 @@ public:
     map();
     ~map();
 
-    //vettori di tile
+//vettori di tile
     std::vector<Tile> tile_vector;
-    //vettore dei nemici
+//vettore dei nemici
     std::vector<Enemy> enemy_vector;
-    //vettore delle chest
+//vettore delle chest
     std::vector<Chest> chest_vector;
 
 

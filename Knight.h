@@ -12,7 +12,7 @@
 
 class Knight : public Hero{
 public:
-    //constructor and destructor
+//constructor and destructor
     Knight(int hp, int s, int sp, int a, int ar, int m);
     ~Knight() override;
 
