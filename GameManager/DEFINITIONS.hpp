@@ -9,6 +9,8 @@
 
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
 
+#define FONT "../Resources/Font/Bebas-Regular.ttf"
+
 #define MAIN_MENU_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
 
 #define PAUSE_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"

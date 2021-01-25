@@ -8,7 +8,8 @@
 #include "Hero.h"
 #include "Collision.h"
 #include <cmath>
-
+#include "GameStates/MainMenuState.hpp"
+#include "GameStates/SelectClassState.h"
 
 //constructor
 Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
@@ -206,6 +207,13 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
             }
         }
         this->hit = false;
+        if (this->getLife() <= 0) {
+            this->dead = true;
+            if(this->dead){
+
+
+            }
+        }
     }
 
     //opening chest animation

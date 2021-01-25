@@ -39,6 +39,7 @@ public:
     PlayerType playerType;
     bool hit;
     int range = 0;
+    bool dead = false;
 //getters
     Weapon *getWeapon() const;
     int getArmor() const;
@@ -68,6 +69,8 @@ private:
 
 //function
     void walkingAnimation();
+
+
 };
 
 

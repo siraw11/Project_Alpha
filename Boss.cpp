@@ -8,6 +8,8 @@
 #include "Random.h"
 #include "Collision.h"
 #include <cmath>
+#include "GameStates/GameState.hpp"
+#include "GameStates/GameOverState.hpp"
 
 //cosntructor
 Boss::Boss(int hp, int s, int sp) : Enemy(hp, s, sp) {
@@ -87,13 +89,13 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
 
 void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector ) {
     auto d = hero->getPosition() - this->getPosition();
-    float distance = std::sqrt((d.x*d.x) + (d.y*d.y));
+    float distance = std::sqrt((d.x * d.x) + (d.y * d.y));
 
     this->movement(tile_vector, *hero, chest_vector);
 
-    if(distance < 800)
-        if(attackRate==30){
-            if (counterAttack == 11){
+    if (distance < 800)
+        if (attackRate == 30) {
+            if (counterAttack == 11) {
                 this->attack(hero);
                 this->counterAttack = 0;
                 this->attackRate = 0;
@@ -106,14 +108,14 @@ void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_ve
         }
 
     //boss projectile update
-    if(!projectile_vector.empty())
-        for(auto & i : this->projectile_vector){
+    if (!projectile_vector.empty())
+        for (auto &i : this->projectile_vector) {
             i.updatePosition();
 
         }
 
-    for(auto i = this->projectile_vector.begin(); i!= this->projectile_vector.end(); ++i){
-        if(i->checkCollision(&enemy_vector, tile_vector, *this, hero)){
+    for (auto i = this->projectile_vector.begin(); i != this->projectile_vector.end(); ++i) {
+        if (i->checkCollision(&enemy_vector, tile_vector, *this, hero)) {
             this->projectile_vector.erase(i);
             i--;
         }
@@ -121,20 +123,20 @@ void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_ve
 
 
     //boss damage
-    if(this->hit)
-    {
+    if (this->hit) {
         this->takeDamage(hero->damage());
         this->hit = false;
     }
+        if (this->getLife() <= 0) {
+            this->dead = true;
+            this->deathAnimation();
+            if (this->counterDeath == 11) {
 
-    if(this->getLife() <= 0){
-        this->dead = true;
-        this->deathAnimation();
-        if(this->counterDeath == 11){
-            //todo: si deve vincere
+            }
         }
     }
-}
+
+
 
 
 //boss attack

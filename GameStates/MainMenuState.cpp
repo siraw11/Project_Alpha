@@ -5,6 +5,7 @@
 #include "../GameManager/DEFINITIONS.hpp"
 #include "GameState.hpp"
 #include "SelectClassState.h"
+#include "GameOverState.hpp"
 
 #include <iostream>
 #include <ieee754.h>

@@ -1,6 +1,7 @@
 #include <sstream>
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
+#include "SelectClassState.h"
 #include "../GameManager/DEFINITIONS.hpp"
 #include "PauseState.hpp"
 #include "GameOverState.hpp"
@@ -11,7 +12,8 @@
 #include "../Weapon.h"
 #include "../Boss.h"
 #include <iostream>
-
+#include "sstream"
+#include "../Hud.h"
 
 
 namespace Alpha {
@@ -23,6 +25,8 @@ namespace Alpha {
 
     void GameState::Init() {
         gameState = STATE_PLAYING;
+
+
     }
 
     void GameState::HandleInput() {
@@ -35,21 +39,12 @@ namespace Alpha {
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
                 // Switch To Pause State
-                this->_data->machine.AddState(StateRef(new PauseState(_data)), false);
+                this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
             }
         }
     }
 
-    void GameState::Update() {
-        if (STATE_LOSE == gameState || STATE_WON == gameState) {
-            if (this->_clock.getElapsedTime().asSeconds() > TIME_BEFORE_SHOWING_GAME_OVER) {
 
-                // Switch To Game Over State
-
-                this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-            }
-        }
-    }
 
 
     void GameState::Draw() {
@@ -61,10 +56,17 @@ namespace Alpha {
 
         std::unique_ptr<Hero> hero = factory.createCharacter(playerType);
 
+
         auto heroWeapon = new Weapon(1);
         hero->setWeapon(heroWeapon);
 
         std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(1, 1, 10));
+
+
+
+        //Hud
+        Hud hud(hero,_data);
+
 
 
         //View variable
@@ -91,6 +93,7 @@ namespace Alpha {
                 }
             }
 
+
             //hero movement
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
                 hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
@@ -113,8 +116,12 @@ namespace Alpha {
             }
 
 
+
             //update level events
             level.update(hero, boss);
+            //Hud update
+           hud.update(hero);
+
 
             //camera settings
             position.x = hero->getPosition().x + 20 - (1920.0 / 2);
@@ -130,44 +137,51 @@ namespace Alpha {
             this->_data->window.setView(view);
             this->_data->window.setFramerateLimit(60);
 
-            //UI Elements
-            this->_data->assets.LoadTexture("Heart", HEART_UI);
-            this->_heart.setTexture(this->_data->assets.GetTexture("Heart"));
-            this->_heart.setScale(3,3);
-            _heart.setPosition(hero->getPosition().x,hero->getPosition().y-30 );
 
-            if(playerType == PlayerType::ARCHER){
-                this->_data->assets.LoadTexture("Arrow", ARROW_UI);
-                this->_arrow_1.setTexture(this->_data->assets.GetTexture("Arrow"));
-                this->_arrow_1.setScale(3,3);
-                _arrow_1.setPosition(hero->getPosition().x + 80,hero->getPosition().y-30 );
+
+            {
+                sf::Event event1;
+
+                while (this->_data->window.pollEvent(event1))
+                {
+                    if (sf::Event::Closed == event.type)
+                    {
+                        this->_data->window.close();
+                    }
+
+                        /*if (this->_data->input.IsSpriteClicked(this->_playButton, sf::Mouse::Left, this->_data->window))
+                        {
+                            // Switch To Game State
+                            this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::ARCHER)), true);
+                        }*/
+                    else if (hero->getLife()==0)
+                    {
+                        // Switch To Select Class State
+                        this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
+                    }
+                }
+
             }
-
-            else if (playerType==PlayerType::MAGE){
-                this->_data->assets.LoadTexture("Mana", MANA_UI);
-                this->_mana.setTexture(this->_data->assets.GetTexture("Mana"));
-                this->_mana.setScale(3,3);
-                _mana.setPosition(hero->getPosition().x + 80,hero->getPosition().y-30 );}
-
-            else if (playerType==PlayerType::KNIGHT){
-                this->_data->assets.LoadTexture("Armor", ARMOR_UI);
-                this->_armor.setTexture(this->_data->assets.GetTexture("Armor"));
-                this->_armor.setScale(2.7,2.7);
-                _armor.setPosition(hero->getPosition().x + 80,hero->getPosition().y-30 );}
-
             level.drawTile(_data);
             level.drawEnemy(_data);
             level.drawChest(_data);
             this->_data->window.draw(*hero);
-            this->_data->window.draw(this->_heart);
-            this->_data->window.draw(this->_arrow_1);
-            this->_data->window.draw(this->_mana);
-            this->_data->window.draw(this->_armor);
             this->_data->window.draw(*boss);
+            hud.draw(_data);
             level.drawProjectile(hero->projectile_vector,_data);
             level.drawProjectile(boss->projectile_vector,_data);
-
             this->_data->window.display();
         }
     }
+    void GameState::Update() {
+        {
+
+
+        }
+
+    }
+
+
+
+
 }
