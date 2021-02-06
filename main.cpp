@@ -1,8 +1,8 @@
-#include "GameManager/Game.hpp"
-#include "GameManager/DEFINITIONS.hpp"
+#include "Game.h"
 
-int main()
-{
-	Alpha::Game( "Alpha_Project");
+
+int main() {
+    Game();
+    Game::Run();
+    return 0;
 }
-

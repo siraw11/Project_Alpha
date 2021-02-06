@@ -1,77 +1,77 @@
 //
-// Created by waris on 20/06/19.
+// Created by Magna on 2019-06-07.
 //
 
-#include <iostream>
 #include "Item.h"
-#include "PlayerType.h"
-#include "Hero.h"
+#include <iostream>
 
-//constructor
-Item::Item(bool S,bool E, bool G, bool HP, bool P, bool K):strength(S), exhaust(E), generic(G), life(HP), poison(P), key(K){}
+#include <SFML/Graphics.hpp>
+#include "Box2D/Box2D.h"
 
-//destructor
-Item::~Item() = default;
+Item::Item(double _posX, double _posY, double _width, double _height, float _angle, std::string _texture) : posX(_posX),
+                                                                                                            posY(_posY),
+                                                                                                            width(_width),
+                                                                                                            height(_height),
+                                                                                                            texture(_texture),
+                                                                                                            angle(_angle) {}
 
-//getters
-bool Item::isStrength() const {
-    return strength;
+
+double Item::getPosX() const {
+    return posX;
 }
 
-bool Item::isLife() const {
-    return life;
+void Item::setPosX(double posX) {
+    Item::posX = posX;
 }
 
-bool Item::isKey() const {
-    return key;
+double Item::getPosY() const {
+    return posY;
 }
 
-bool Item::isGeneric() const {
-    return generic;
+void Item::setPosY(double posY) {
+    Item::posY = posY;
 }
 
-bool Item::isExhaust() const {
-    return exhaust;
+double Item::getWidth() const {
+    return width;
 }
 
-bool Item::isPoison() const {
-    return poison;
+void Item::setWidth(double width) {
+    Item::width = width;
 }
 
-//functions
-void Item::use( Hero* hero, std::vector<Tile>* tile_vector) {
-    std::cout<<"Item"<<std::endl;
-
-    if (isStrength()){
-    }else if(isGeneric()) {
-        switch(hero->playerType){
-            case PlayerType ::KNIGHT:{
-                hero->setArmor(hero->getArmor()+3);
-                break;
-            }
-            case PlayerType::MAGE:{
-                hero->setMana(hero->getMana()+10);
-                break;
-            }
-            case PlayerType::ARCHER:{
-                hero->setArrow(hero->getArrow()+10);
-            }
-        }
-    }else if (isLife()){
-        hero->setLife(hero->getLife() + 2);
-
-    }else if(isKey()){
-        std::cout<<" ok"<<std::endl;
-        //Todo:open the gate
-        for(auto &i: *tile_vector)
-            if(i.t == LEFT_FRONT_DOOR || i.t == RIGHT_FRONT_DOOR || i.t == LEFT_SIDE_DOOR || i.t == RIGHT_SIDE_DOOR){
-                i.openGate();
-            }
-
-    }else if(isExhaust()){
-        hero->setStrength(hero->getStrength()-1);
-
-    }else if(isPoison()){
-        hero->setLife(hero->getLife()-1);
-    }
+double Item::getHeight() const {
+    return height;
 }
+
+void Item::setHeight(double height) {
+    Item::height = height;
+}
+
+double Item::getAngle() const {
+    return angle;
+}
+
+void Item::setAngle(float angle) {
+    Item::angle = angle;
+}
+Item::~Item() {}
+
+void Item::doSpecial() {}
+
+const std::string &Item::getTexture() const {
+    return texture;
+}
+
+void Item::setTexture(const std::string &texture) {
+    Item::texture = texture;
+}
+
+bool Item::isTaken() const {
+    return taken;
+}
+
+void Item::setTaken(bool taken) {
+    Item::taken = taken;
+}
+

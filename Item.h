@@ -1,40 +1,63 @@
 //
-// Created by waris on 20/06/19.
+// Created by Magna on 2019-06-07.
 //
-#pragma once
 
+#ifndef MOTOCROSS2D_ITEM_H
+#define MOTOCROSS2D_ITEM_H
 
-#ifndef EXAM_PROJECT_ITEM_H
-#define EXAM_PROJECT_ITEM
+#include <iostream>
+#include "Observer.h"
 
-#include "Object.h"
-
-class Item : public Object{
+class Item {
 public:
+    explicit Item(double posX = 0, double posY = 0, double width = 0, double height = 0, float angle = 0,
+                  std::string texture = "");
 
-//constructor and destructor
-    Item(bool S, bool E, bool G, bool HP, bool P, bool K);
-    ~Item() override;
+    const std::string &getTexture() const;
 
-//functions
-    void use(Hero* hero, std::vector<Tile>* tile_vector) override;
+    void setTexture(const std::string &texture);
 
-//getters
-    bool isStrength() const;
-    bool isGeneric() const;
-    bool isLife() const;
-    bool isKey() const;
-    bool isExhaust() const;
-    bool isPoison() const;
+    ~Item();
+
+
+    double getPosX() const;
+
+    void setPosX(double posX);
+
+    double getPosY() const;
+
+    void setPosY(double posY);
+
+    double getWidth() const;
+
+    void setWidth(double width);
+
+    double getHeight() const;
+
+    void setHeight(double height);
+
+    double getAngle() const;
+
+    void setAngle(float angle);
+
+
+    bool isTaken() const;
+
+    void setTaken(bool taken);
+
+
+    virtual void doSpecial();
+
 
 private:
-//attributes
-    bool strength;
-    bool exhaust;
-    bool generic;
-    bool poison;
-    bool life;
-    bool key;
+    float posX;
+    float posY;
+    float angle;
+    float width;
+    float height;
+    bool taken = false;
+    std::string texture;
 };
 
-#endif //EXAM_PROJECT_ITEM_H
+
+#endif //MOTOCROSS2D_ITEM_H
