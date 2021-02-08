@@ -11,12 +11,10 @@
 
 class CharacterFactory {
 public:
-//constructor, destructor
-    CharacterFactory();
-    ~CharacterFactory();
+
 
 //function
-    virtual std::unique_ptr<Hero> createCharacter(PlayerType type);
+    static Hero* createCharacter(PlayerType type);
 
 };
 

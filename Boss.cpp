@@ -87,7 +87,7 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
 
 
 
-void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector ) {
+void Boss::update(std::unique_ptr<Hero>& hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector ) {
     auto d = hero->getPosition() - this->getPosition();
     float distance = std::sqrt((d.x * d.x) + (d.y * d.y));
 
@@ -96,7 +96,7 @@ void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_ve
     if (distance < 800)
         if (attackRate == 30) {
             if (counterAttack == 11) {
-                this->attack(hero);
+                this->attack(*hero);
                 this->counterAttack = 0;
                 this->attackRate = 0;
             } else {
@@ -140,13 +140,13 @@ void Boss::update( std::unique_ptr<Hero> &hero, const std::vector<Tile>& tile_ve
 
 
 //boss attack
-void Boss::attack(const std::unique_ptr<Hero>& hero) {
+void Boss::attack(const Hero& hero) {
 
     sf::Vector2f d = this->distance(hero);
 
     Projectile newProjectile(PlayerType::BOSS);
 
-    if(hero->getPosition().x < this->getPosition().x){
+    if(hero.getPosition().x < this->getPosition().x){
         newProjectile.projectile_start.x = this->getPosition().x + this->getGlobalBounds().width/4;
         newProjectile.projectile_start.y = this->getPosition().y + this->getGlobalBounds().height/10 * BOSS_SCALE;
 
@@ -173,20 +173,20 @@ void Boss::aggro(sf::Vector2f d) {
     }
 }
 
-sf::Vector2f Boss::distance(const std::unique_ptr<Hero>& hero) {
+sf::Vector2f Boss::distance(const Hero& hero) {
     sf::Vector2f d;
     float distance;
 
 
-    if(hero->getPosition().x < this->getPosition().x){
-        d.x = hero->getPosition().x - (this->getPosition().x + getGlobalBounds().width/4);
-        d.y = hero->getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
+    if(hero.getPosition().x < this->getPosition().x){
+        d.x = hero.getPosition().x - (this->getPosition().x + getGlobalBounds().width/4);
+        d.y = hero.getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
         distance = std::sqrt((d.x*d.x) + (d.y*d.y));
         d /= distance;
     }else{
 
-        d.x = hero->getPosition().x - (this->getPosition().x + getGlobalBounds().width/2);
-        d.y = hero->getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
+        d.x = hero.getPosition().x - (this->getPosition().x + getGlobalBounds().width/2);
+        d.y = hero.getPosition().y - (this->getPosition().y + getGlobalBounds().height/10 * BOSS_SCALE);
         distance = std::sqrt((d.x*d.x) + (d.y*d.y));
         d /= distance;
     }

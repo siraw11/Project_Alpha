@@ -16,7 +16,7 @@ namespace Alpha
 
 	void StateMachine::ProcessStateChanges()
 	{
-		if (this->_isRemoving && !this->_states.empty())
+		if (this->_isRemoving && !this->_states.empty())// toglie l'ultimo state e fa ripartire lo state successivo se il vect non è vuoto
 		{
 			this->_states.pop();
 
@@ -30,7 +30,7 @@ namespace Alpha
 
 		if (this->_isAdding)
 		{
-			if (!this->_states.empty())
+			if (!this->_states.empty())// se vogliamo toglierlo allora si setta true isReplacing, altrimenti si mette in pausa lo state
 			{
 				if (this->_isReplacing)
 				{
@@ -43,7 +43,7 @@ namespace Alpha
 			}
 
 			this->_states.push(std::move(this->_newState));
-			this->_states.top()->Init();
+			this->_states.top()->Init();// inizializza il nuovo state
 			this->_isAdding = false;
 		}
 	}

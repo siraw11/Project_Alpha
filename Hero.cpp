@@ -20,6 +20,8 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
     weapon = nullptr;
     hit = false;
     setPosition(sf::Vector2f(300,300));
+
+
 }
 
 //destructor
@@ -55,7 +57,7 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
         walkingAnimation();
     }
     move(movement);
-
+    std::cout<<movement.x<<" "<<movement.y<<std::endl;
 }
 
 void Hero::walkingAnimation() {
@@ -177,6 +179,11 @@ int Hero::damage() {
 
 void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss ) {
 
+    //update movement
+    if(this->isMoving){
+        this->heroMovement( tile_vector, enemy_vector, *chest_vector );
+        isMoving = false;
+    }
     //update attack animation
     if(this->counterAttack > 0){
         this->attackAnimation();

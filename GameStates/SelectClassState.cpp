@@ -50,20 +50,19 @@ namespace Alpha {
 
 
             if (this->_data->input.IsSpriteClicked(this->_archerButton, sf::Mouse::Left, this->_data->window)){
-                // Switch To Game State
+                Hero* hero= CharacterFactory::createCharacter(PlayerType::ARCHER);
 
-
-                this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::ARCHER)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
 
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
-                // Switch To Main Menu State
+                Hero* hero= CharacterFactory::createCharacter(PlayerType::KNIGHT);
 
-                this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::KNIGHT)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
-                // Switch To Main Menu State
+                Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);
 
-                this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::MAGE)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
             }
         }
 

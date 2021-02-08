@@ -40,6 +40,8 @@ public:
     bool hit;
     int range = 0;
     bool dead = false;
+    bool isMoving = false;
+
 //getters
     Weapon *getWeapon() const;
     int getArmor() const;
@@ -59,8 +61,6 @@ protected:
     int armor;
     int arrow;
     int mana;
-
-
 
 
 private:

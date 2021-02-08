@@ -11,28 +11,24 @@
 #include "Mage.h"
 
 
-//constructor
-CharacterFactory::~CharacterFactory() = default;
 
-//destructor
-CharacterFactory::CharacterFactory() = default;
 
 //function
-std::unique_ptr<Hero> CharacterFactory::createCharacter(PlayerType type) {
+Hero* CharacterFactory::createCharacter(PlayerType type) {
 
-    std::unique_ptr<Hero> result;
+    Hero *result = nullptr;
 
     switch(type) {
         case PlayerType::KNIGHT: {
-            result = std::unique_ptr<Hero>(new Knight(1, 1, 20, 0, 20, 0));
+            result = new Knight(10, 1, 20, 0, 20, 0);
             break;
         }
         case PlayerType::ARCHER: {
-            result = std::unique_ptr<Hero>(new Archer(1, 1, 50, 3, 0, 0));
+            result =new Archer(10, 1, 20, 20, 0, 0);
             break;
         }
         case PlayerType ::MAGE: {
-            result = std::unique_ptr<Hero>(new Mage(1, 1, 20, 0, 0, 10));
+            result = new Mage(10, 1, 20, 0, 0, 10);
             break;
         }
     }

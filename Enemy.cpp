@@ -145,7 +145,7 @@ void Enemy::aggro(sf::Vector2f d) {
     }
 }
 
-void Enemy::update(std::unique_ptr<Hero> &hero, const std::vector<Tile> &tile_vector, const std::vector<Chest> &chest_vector) {
+void Enemy::update(std::unique_ptr<Hero>& hero, const std::vector<Tile> &tile_vector, const std::vector<Chest> &chest_vector) {
     movement(tile_vector, *hero, chest_vector);
     if(this->hit) {
         if(hero->playerType == PlayerType::KNIGHT)

@@ -5,10 +5,8 @@
 #include "../GameManager/DEFINITIONS.hpp"
 #include "PauseState.hpp"
 #include "GameOverState.hpp"
-#include "../map.h"
 #include "../Hero.h"
 #include "../PlayerType.h"
-#include "../CharacterFactory.h"
 #include "../Weapon.h"
 #include "../Boss.h"
 #include <iostream>
@@ -17,8 +15,8 @@
 
 
 namespace Alpha {
-    GameState::GameState(GameDataRef data,PlayerType playertype) : _data(data) {
-        playerType = playertype;
+    GameState::GameState(GameDataRef data,Hero* hero) : _data(data), hero(hero) {
+
 
     }
 
@@ -26,10 +24,16 @@ namespace Alpha {
     void GameState::Init() {
         gameState = STATE_PLAYING;
 
-
+        //map sprite
+        level.setTexture();
+        //View variable
+        this->_data->window.setFramerateLimit(60);
+        view.reset(sf::FloatRect(0, 0, 1920.0, 1080.0));
+        view.setViewport(sf::FloatRect(0, 0, 1.0f, 1.0f));
     }
 
     void GameState::HandleInput() {
+
         sf::Event event{};
 
         while (this->_data->window.pollEvent(event)) {
@@ -41,146 +45,86 @@ namespace Alpha {
                 // Switch To Pause State
                 this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
             }
+
+
         }
     }
 
+    void GameState::Update() {
 
 
+        //hero movement
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
+            hero->walkingDirection = 0;
+            hero->isMoving = true;
+            //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
+        }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
+            hero->walkingDirection = 1;
+            hero->isMoving = true;
+            // hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
+        }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
+            hero->walkingDirection = 2;
+            hero->isMoving = true;
+            //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
+        }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
+            hero->walkingDirection = 3;
+            hero->isMoving = true;
+            //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){//attack
+            hero->counterAttack = 1;
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){//open chest
+            hero->openChest(&level.chest_vector, &level.tile_vector);
+        }
 
-    void GameState::Draw() {
-        srand(time(nullptr));
-
-        map level;
-
-        CharacterFactory factory;
-
-        std::unique_ptr<Hero> hero = factory.createCharacter(playerType);
-
-
-        auto heroWeapon = new Weapon(1);
-        hero->setWeapon(heroWeapon);
-
-        std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(1, 1, 10));
-
-
-
-        //Hud
-        Hud hud(hero,_data);
-
-
-
-        //View variable
-        sf::View view;
-        this->_data->window.setFramerateLimit(60);
-        view.reset(sf::FloatRect(0, 0, 1920.0, 1080.0));
-        view.setViewport(sf::FloatRect(0, 0, 1.0f, 1.0f));
-        sf::Vector2f position(0, 0);
-
-        //map sprite
-        level.setTexture();
-
-        while (this->_data->window.isOpen())
-        {
-            sf::Event event;
-            while (this->_data->window.pollEvent(event))
-            {
-                if (event.type == sf::Event::Closed)
-                    this->_data->window.close();
-                if (event.type == sf::Event::Resized) {
-                    sf::View temp = this->_data->window.getView();
-                    temp.setSize(this->_data->window.getSize().x,this->_data->window.getSize().y);
-                    this->_data->window.setView(temp);
-                }
-            }
-
-
-            //hero movement
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
-                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
-                hero->walkingDirection = 0;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
-                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-                hero->walkingDirection = 1;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
-                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-                hero->walkingDirection = 2;
-            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
-                hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-                hero->walkingDirection = 3;
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){//attack
-                hero->counterAttack = 1;
-            }
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){//open chest
-                hero->openChest(&level.chest_vector, &level.tile_vector);
-            }
-
-
-
+            srand(time(nullptr));
             //update level events
-            level.update(hero, boss);
+            level.update(this->hero, this->boss);
             //Hud update
-           hud.update(hero);
+            hud->update(*hero);
+
 
 
             //camera settings
-            position.x = hero->getPosition().x + 20 - (1920.0 / 2);
-            position.y = hero->getPosition().y + 20 - (1080.0 / 2);
+            positionView.x = hero->getPosition().x + 20 - (1920.0 / 2);
+            positionView.y = hero->getPosition().y + 20 - (1080.0 / 2);
 
-            if (position.x < 0)
-                position.x = 0;
-            if (position.y < 0)
-                position.y = 0;
+            if (positionView.x < 0)
+                positionView.x = 0;
+            if (positionView.y < 0)
+                positionView.y = 0;
 
-            view.reset(sf::FloatRect(position.x, position.y, 3840, 2160));
+            view.reset(sf::FloatRect(positionView.x, positionView.y, 3840, 2160));
 
             this->_data->window.setView(view);
-            this->_data->window.setFramerateLimit(60);
+         //Game Over
+        if (hero->dead){
+            // Switch To GameOverState
 
+            this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
+        }
+        if (boss->dead){
+            // Switch To WinState
 
-
-            {
-                sf::Event event1;
-
-                while (this->_data->window.pollEvent(event1))
-                {
-                    if (sf::Event::Closed == event.type)
-                    {
-                        this->_data->window.close();
-                    }
-
-                        /*if (this->_data->input.IsSpriteClicked(this->_playButton, sf::Mouse::Left, this->_data->window))
-                        {
-                            // Switch To Game State
-                            this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::ARCHER)), true);
-                        }*/
-                    else if (hero->getLife()==0)
-                    {
-                        // Switch To Select Class State
-                        this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
-                    }
-                }
-
-            }
-            level.drawTile(_data);
-            level.drawEnemy(_data);
-            level.drawChest(_data);
-            this->_data->window.draw(*hero);
-            this->_data->window.draw(*boss);
-            hud.draw(_data);
-            level.drawProjectile(hero->projectile_vector,_data);
-            level.drawProjectile(boss->projectile_vector,_data);
-            this->_data->window.display();
+            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
         }
     }
-    void GameState::Update() {
-        {
 
 
-        }
+    void GameState::Draw() {
+        //this->_data->window.setFramerateLimit(20);
 
+        level.drawTile(_data);
+        level.drawEnemy(_data);
+        level.drawChest(_data);
+        this->_data->window.draw(*hero);
+        this->_data->window.draw(*boss);
+        hud->draw(_data);
+        level.drawProjectile(hero->projectile_vector,_data);
+        level.drawProjectile(boss->projectile_vector,_data);
+        this->_data->window.display();
     }
-
 
 
 

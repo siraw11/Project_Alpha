@@ -8,7 +8,7 @@
 #include "sstream"
 
 
-Hud::Hud(const std::unique_ptr<Hero> &hero,const Alpha::GameDataRef &_data) {
+Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
 
     //sf::Font font;
 
@@ -89,36 +89,36 @@ Hud::Hud(const std::unique_ptr<Hero> &hero,const Alpha::GameDataRef &_data) {
     }
 }
 
-void Hud::update(const std::unique_ptr<Hero> &hero) {
-    this->_heart.setPosition(hero->getPosition().x - 25,hero->getPosition().y - 30 );
-    this->life.setPosition(hero->getPosition().x + 25,hero->getPosition().y - 30);
+void Hud::update(const Hero &hero) {
+    this->_heart.setPosition(hero.getPosition().x - 25,hero.getPosition().y - 30 );
+    this->life.setPosition(hero.getPosition().x + 25,hero.getPosition().y - 30);
     std::ostringstream oss;
-    oss << hero->getLife();
+    oss << hero.getLife();
     this->life.setString(oss.str());
 
 
-switch(hero->playerType){
+switch(hero.playerType){
     case PlayerType ::ARCHER:{
-        this->_arrow_1.setPosition(hero->getPosition().x + 55,hero->getPosition().y-30 );
-        this->arrow.setPosition(hero->getPosition().x+110,hero->getPosition().y-30);
+        this->_arrow_1.setPosition(hero.getPosition().x + 55,hero.getPosition().y-30 );
+        this->arrow.setPosition(hero.getPosition().x+110,hero.getPosition().y-30);
         std::ostringstream iss;
-        iss << hero->getArrow();
+        iss << hero.getArrow();
         this->arrow.setString(iss.str());
         break;
     }
     case PlayerType :: KNIGHT:{
-        this->_armor.setPosition(hero->getPosition().x + 55,hero->getPosition().y-30 );
-        this->armor.setPosition(hero->getPosition().x+110,hero->getPosition().y-30);
+        this->_armor.setPosition(hero.getPosition().x + 55,hero.getPosition().y-30 );
+        this->armor.setPosition(hero.getPosition().x+110,hero.getPosition().y-30);
         std::ostringstream ass;
-        ass << hero->getArmor();
+        ass << hero.getArmor();
         this->armor.setString(ass.str());
         break;
     }
     case PlayerType ::MAGE:{
-        this->_mana.setPosition(hero->getPosition().x + 55,hero->getPosition().y-30 );
-        this->mana.setPosition(hero->getPosition().x+110,hero->getPosition().y-30);
+        this->_mana.setPosition(hero.getPosition().x + 55,hero.getPosition().y-30 );
+        this->mana.setPosition(hero.getPosition().x+110,hero.getPosition().y-30);
         std::ostringstream ess;
-        ess << hero->getMana();
+        ess << hero.getMana();
         this->mana.setString(ess.str());
         break;
     }

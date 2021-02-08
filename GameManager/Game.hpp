@@ -11,7 +11,6 @@ namespace Alpha
 {
     struct GameData
     {
-
         StateMachine machine;
         sf::RenderWindow window;
         AssetManager assets;
@@ -26,12 +25,10 @@ namespace Alpha
         explicit Game( const std::string& title);
 
     private:
-        // Updates run at 60 per second.
-        const float dt = 1.0f / 60.0f;
-        sf::Clock _clock;
+        
 
-        GameDataRef _data = std::make_shared<GameData>();
+        GameDataRef _data = std::make_shared<GameData>();//si usa nei vari state per accedere ai vari pezzi di game data
 
-        void Run();
+        void Run();//fa iniziare il gioco
     };
 }

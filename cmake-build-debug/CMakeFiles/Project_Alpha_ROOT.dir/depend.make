@@ -17,6 +17,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Weapon.h
 
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Collision.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Enemy.h
@@ -30,12 +31,14 @@ CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/GameState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Hud.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../PlayerType.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Projectile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Random.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Tile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Weapon.h
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../map.h
 
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../Archer.h
 CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../Boss.h
@@ -97,18 +100,33 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o: ../GameManager/AssetManager.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o: ../GameManager/AssetManager.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameManager/AssetManager.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameManager/Game.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/SplashState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../Weapon.h
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o: ../GameManager/InputManager.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o: ../GameManager/InputManager.hpp
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../CharacterFactory.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameManager/Game.hpp
@@ -119,7 +137,14 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/MainMenuState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Hud.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Weapon.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../map.h
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../CharacterFactory.h
@@ -147,6 +172,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Tile.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../map.h
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../CharacterFactory.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameManager/Game.hpp
@@ -158,8 +188,20 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Hud.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Weapon.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../map.h
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../CharacterFactory.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameManager/Game.hpp
@@ -170,8 +212,20 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/Pau
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/PauseState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Hud.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Weapon.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../map.h
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../CharacterFactory.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameManager/Game.hpp
@@ -183,8 +237,19 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameStat
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Hud.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../Weapon.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../map.h
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameManager/Game.hpp
@@ -194,12 +259,27 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/Sp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/SplashState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../Weapon.h
 
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameCharacter.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameStates/StateMachine.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../Weapon.h
 
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Chest.h
@@ -323,13 +403,22 @@ CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o: ../Tile.h
 CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o: ../Weapon.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o: ../Weapon.h
 
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Boss.h
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Chest.h
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Enemy.h
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameCharacter.h
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../GameStates/StateMachine.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Hero.h
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Object.h
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../PlayerType.h
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Projectile.h
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Tile.h
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../Weapon.h
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../Boss.h

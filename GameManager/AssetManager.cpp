@@ -9,7 +9,7 @@ namespace Alpha
 
         if (tex.loadFromFile(fileName))
         {
-            this->_textures[name] = tex;
+            this->_textures[name] = tex;//da il nome alla texture
         }
     }
 

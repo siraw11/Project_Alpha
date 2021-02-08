@@ -12,11 +12,11 @@
 class Hud {
 public:
     //constructor and destructor
-    Hud(const std::unique_ptr<Hero> &hero, const Alpha::GameDataRef &_data);
+    Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data);
     ~Hud();
 
     //functions
-    void update(const std::unique_ptr<Hero> &hero);
+    void update(const Hero &hero);
 
     void draw(const Alpha::GameDataRef &_data);
 
