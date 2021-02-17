@@ -1,12 +1,13 @@
 #include "Game.hpp"
 #include "../GameStates/SplashState.hpp"
+#include "../GameStates/MainMenuState.hpp"
 
 namespace Alpha
 {
     Game::Game( const std::string& title)
     {
         _data->window.create(sf::VideoMode::getDesktopMode(), title);
-        _data->machine.AddState(StateRef(new SplashState(this->_data)));
+        _data->machine.AddState(StateRef(new MainMenuState(this->_data)));
 
         this->Run();
     }

@@ -1,3 +1,4 @@
+/*
 
 
 #include <sstream>
@@ -51,4 +52,4 @@ namespace Alpha
        this->_data->window.draw( this->_background );
        this->_data->window.display();
 	}
-}
+}*/

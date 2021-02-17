@@ -110,6 +110,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
  /home/waris/Project_Alpha/GameManager/Game.cpp
  /home/waris/Project_Alpha/GameManager/Game.hpp
  /home/waris/Project_Alpha/GameManager/InputManager.hpp
+ /home/waris/Project_Alpha/GameStates/MainMenuState.hpp
  /home/waris/Project_Alpha/GameStates/SplashState.hpp
  /home/waris/Project_Alpha/GameStates/State.hpp
  /home/waris/Project_Alpha/GameStates/StateMachine.hpp
@@ -136,6 +137,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
  /home/waris/Project_Alpha/GameStates/GameOverState.hpp
  /home/waris/Project_Alpha/GameStates/GameState.hpp
  /home/waris/Project_Alpha/GameStates/MainMenuState.hpp
+ /home/waris/Project_Alpha/GameStates/SelectClassState.h
  /home/waris/Project_Alpha/GameStates/State.hpp
  /home/waris/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/Project_Alpha/Hero.h

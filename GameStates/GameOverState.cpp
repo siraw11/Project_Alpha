@@ -4,6 +4,7 @@
 #include "../GameManager/DEFINITIONS.hpp"
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
+#include "SelectClassState.h"
 
 #include <iostream>
 
@@ -16,7 +17,6 @@ namespace Alpha
 
 	void GameOverState::Init()
 	{
-        std::cout <<"PENE" ;
 
 	    this->_data->assets.LoadTexture("Retry Button", RETRY_BUTTON);
 		this->_data->assets.LoadTexture("Home Button", HOME_BUTTON);
@@ -42,7 +42,7 @@ namespace Alpha
 			if (this->_data->input.IsSpriteClicked(this->_retryButton, sf::Mouse::Left, this->_data->window))
 			{
 				// Switch To Main Menu State By Replacing The Game Over State
-				//this->_data->machine.AddState(StateRef(new GameState(_data,PlayerType::ARCHER)), true);
+                this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_homeButton, sf::Mouse::Left, this->_data->window))
@@ -61,7 +61,7 @@ namespace Alpha
 
 	void GameOverState::Draw()
 	{
-		this->_data->window.clear(sf::Color::Red);
+		this->_data->window.clear(sf::Color::Blue);
 
 		this->_data->window.draw(this->_retryButton);
 		this->_data->window.draw(this->_homeButton);

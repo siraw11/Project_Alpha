@@ -21,6 +21,7 @@ namespace Alpha {
     }
 
     void SelectClassState::Init() {
+        std::cout <<"SelectClassState";
         this->_data->assets.LoadTexture("Background", MAIN_MENU_BACKGROUND_FILEPATH);
         this->_data->assets.LoadTexture("Archer", ARCHER_BUTTON_FILEPATH);
         this->_data->assets.LoadTexture("Knight", KNIGHT_BUTTON_FILEPATH);
@@ -44,6 +45,7 @@ namespace Alpha {
 
         sf::Event event{};
         while (this->_data->window.pollEvent(event)) {
+            std::cout <<"SelectClassState \n";
             if (sf::Event::Closed == event.type) {
                 this->_data->window.close();
             }
@@ -52,12 +54,18 @@ namespace Alpha {
             if (this->_data->input.IsSpriteClicked(this->_archerButton, sf::Mouse::Left, this->_data->window)){
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::ARCHER);
 
-                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+               // this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+
+               this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+
+
+
 
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::KNIGHT);
 
-                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                //this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);
@@ -74,7 +82,7 @@ namespace Alpha {
 
     void SelectClassState::Draw() {
 
-        this->_data->window.clear();
+
 
         this->_data->window.draw(this->_background);
         this->_data->window.draw(this->_archerButton);

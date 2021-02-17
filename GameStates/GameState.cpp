@@ -41,10 +41,7 @@ namespace Alpha {
                 this->_data->window.close();
             }
 
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-                // Switch To Pause State
-                this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-            }
+
 
 
         }
@@ -78,6 +75,9 @@ namespace Alpha {
             hero->openChest(&level.chest_vector, &level.tile_vector);
         }
 
+
+
+
             srand(time(nullptr));
             //update level events
             level.update(this->hero, this->boss);
@@ -99,10 +99,12 @@ namespace Alpha {
 
             this->_data->window.setView(view);
          //Game Over
+
         if (hero->dead){
             // Switch To GameOverState
+            this->_data->machine.RemoveState();
+            this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
 
-            this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
         }
         if (boss->dead){
             // Switch To WinState
@@ -124,6 +126,7 @@ namespace Alpha {
         level.drawProjectile(hero->projectile_vector,_data);
         level.drawProjectile(boss->projectile_vector,_data);
         this->_data->window.display();
+
     }
 
 

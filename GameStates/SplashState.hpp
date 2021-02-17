@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 #include <SFML/Graphics.hpp>
@@ -25,4 +26,4 @@ namespace Alpha
 		sf::Texture _backgroundTexture;
 		sf::Sprite _background;
 	};
-}
+}*/

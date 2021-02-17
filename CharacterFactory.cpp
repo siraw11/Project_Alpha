@@ -24,7 +24,7 @@ Hero* CharacterFactory::createCharacter(PlayerType type) {
             break;
         }
         case PlayerType::ARCHER: {
-            result =new Archer(10, 1, 20, 20, 0, 0);
+            result =new Archer(1, 1, 50, 20, 0, 0);
             break;
         }
         case PlayerType ::MAGE: {

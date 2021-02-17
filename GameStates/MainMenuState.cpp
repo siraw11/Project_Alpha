@@ -19,6 +19,7 @@ namespace Alpha
 
 	void MainMenuState::Init()
 	{
+	    std::cout << "mainmenustate \n";
 		this->_data->assets.LoadTexture("Background", MAIN_MENU_BACKGROUND_FILEPATH);
 		//this->_data->assets.LoadTexture("Play_Button", MAIN_MENU_PLAY_BUTTON);
 		this->_data->assets.LoadTexture("Select Class", SELECT_CLASS);
@@ -55,7 +56,9 @@ namespace Alpha
 		else if (this->_data->input.IsSpriteClicked(this->_selectClass, sf::Mouse::Left, this->_data->window))
             {
                 // Switch To Select Class State
+
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
+
             }
 		}
 
@@ -68,6 +71,7 @@ namespace Alpha
 
 	void MainMenuState::Draw()
 	{
+       ;
 		this->_data->window.draw(this->_background);
 		//this->_data->window.draw(this->_playButton);
         this->_data->window.draw(this->_selectClass);
