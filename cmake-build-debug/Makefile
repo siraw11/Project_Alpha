@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.3.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lucagraziotti/CLionProjects/TestM2D
+CMAKE_SOURCE_DIR = /home/waris/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug
+CMAKE_BINARY_DIR = /home/waris/Project_Alpha/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/Project_Alpha/cmake-build-debug/CMakeFiles /home/waris/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/Project_Alpha/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,231 +111,314 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Motocross2D
+# Target rules for targets named Project_Alpha_ROOT
 
 # Build rule for target.
-Motocross2D: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Motocross2D
-.PHONY : Motocross2D
+Project_Alpha_ROOT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Project_Alpha_ROOT
+.PHONY : Project_Alpha_ROOT
 
 # fast build rule for target.
-Motocross2D/fast:
-	$(MAKE) -f CMakeFiles/Motocross2D.dir/build.make CMakeFiles/Motocross2D.dir/build
-.PHONY : Motocross2D/fast
+Project_Alpha_ROOT/fast:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/build
+.PHONY : Project_Alpha_ROOT/fast
 
-#=============================================================================
-# Target rules for targets named core
+Archer.o: Archer.cpp.o
 
-# Build rule for target.
-core: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 core
-.PHONY : core
-
-# fast build rule for target.
-core/fast:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
-.PHONY : core/fast
-
-#=============================================================================
-# Target rules for targets named runTests
-
-# Build rule for target.
-runTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runTests
-.PHONY : runTests
-
-# fast build rule for target.
-runTests/fast:
-	$(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/build
-.PHONY : runTests/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-Bike.o: Bike.cpp.o
-
-.PHONY : Bike.o
+.PHONY : Archer.o
 
 # target to build an object file
-Bike.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Bike.cpp.o
-.PHONY : Bike.cpp.o
+Archer.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
+.PHONY : Archer.cpp.o
 
-Bike.i: Bike.cpp.i
+Archer.i: Archer.cpp.i
 
-.PHONY : Bike.i
+.PHONY : Archer.i
 
 # target to preprocess a source file
-Bike.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Bike.cpp.i
-.PHONY : Bike.cpp.i
+Archer.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i
+.PHONY : Archer.cpp.i
 
-Bike.s: Bike.cpp.s
+Archer.s: Archer.cpp.s
 
-.PHONY : Bike.s
+.PHONY : Archer.s
 
 # target to generate assembly for a file
-Bike.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Bike.cpp.s
-.PHONY : Bike.cpp.s
+Archer.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
+.PHONY : Archer.cpp.s
 
-Checkpoint.o: Checkpoint.cpp.o
+Boss.o: Boss.cpp.o
 
-.PHONY : Checkpoint.o
+.PHONY : Boss.o
 
 # target to build an object file
-Checkpoint.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Checkpoint.cpp.o
-.PHONY : Checkpoint.cpp.o
+Boss.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
+.PHONY : Boss.cpp.o
 
-Checkpoint.i: Checkpoint.cpp.i
+Boss.i: Boss.cpp.i
 
-.PHONY : Checkpoint.i
+.PHONY : Boss.i
 
 # target to preprocess a source file
-Checkpoint.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Checkpoint.cpp.i
-.PHONY : Checkpoint.cpp.i
+Boss.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i
+.PHONY : Boss.cpp.i
 
-Checkpoint.s: Checkpoint.cpp.s
+Boss.s: Boss.cpp.s
 
-.PHONY : Checkpoint.s
+.PHONY : Boss.s
 
 # target to generate assembly for a file
-Checkpoint.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Checkpoint.cpp.s
-.PHONY : Checkpoint.cpp.s
+Boss.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s
+.PHONY : Boss.cpp.s
 
-Coin.o: Coin.cpp.o
+CharacterFactory.o: CharacterFactory.cpp.o
 
-.PHONY : Coin.o
+.PHONY : CharacterFactory.o
 
 # target to build an object file
-Coin.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Coin.cpp.o
-.PHONY : Coin.cpp.o
+CharacterFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
+.PHONY : CharacterFactory.cpp.o
 
-Coin.i: Coin.cpp.i
+CharacterFactory.i: CharacterFactory.cpp.i
 
-.PHONY : Coin.i
+.PHONY : CharacterFactory.i
 
 # target to preprocess a source file
-Coin.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Coin.cpp.i
-.PHONY : Coin.cpp.i
+CharacterFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i
+.PHONY : CharacterFactory.cpp.i
 
-Coin.s: Coin.cpp.s
+CharacterFactory.s: CharacterFactory.cpp.s
 
-.PHONY : Coin.s
+.PHONY : CharacterFactory.s
 
 # target to generate assembly for a file
-Coin.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Coin.cpp.s
-.PHONY : Coin.cpp.s
+CharacterFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s
+.PHONY : CharacterFactory.cpp.s
 
-Game.o: Game.cpp.o
+Chest.o: Chest.cpp.o
 
-.PHONY : Game.o
+.PHONY : Chest.o
 
 # target to build an object file
-Game.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game.cpp.o
-.PHONY : Game.cpp.o
+Chest.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
+.PHONY : Chest.cpp.o
 
-Game.i: Game.cpp.i
+Chest.i: Chest.cpp.i
 
-.PHONY : Game.i
+.PHONY : Chest.i
 
 # target to preprocess a source file
-Game.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game.cpp.i
-.PHONY : Game.cpp.i
+Chest.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i
+.PHONY : Chest.cpp.i
 
-Game.s: Game.cpp.s
+Chest.s: Chest.cpp.s
 
-.PHONY : Game.s
+.PHONY : Chest.s
 
 # target to generate assembly for a file
-Game.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Game.cpp.s
-.PHONY : Game.cpp.s
+Chest.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s
+.PHONY : Chest.cpp.s
 
-GameEngine.o: GameEngine.cpp.o
+Collision.o: Collision.cpp.o
 
-.PHONY : GameEngine.o
+.PHONY : Collision.o
 
 # target to build an object file
-GameEngine.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameEngine.cpp.o
-.PHONY : GameEngine.cpp.o
+Collision.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
+.PHONY : Collision.cpp.o
 
-GameEngine.i: GameEngine.cpp.i
+Collision.i: Collision.cpp.i
 
-.PHONY : GameEngine.i
+.PHONY : Collision.i
 
 # target to preprocess a source file
-GameEngine.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameEngine.cpp.i
-.PHONY : GameEngine.cpp.i
+Collision.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i
+.PHONY : Collision.cpp.i
 
-GameEngine.s: GameEngine.cpp.s
+Collision.s: Collision.cpp.s
 
-.PHONY : GameEngine.s
+.PHONY : Collision.s
 
 # target to generate assembly for a file
-GameEngine.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameEngine.cpp.s
-.PHONY : GameEngine.cpp.s
+Collision.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s
+.PHONY : Collision.cpp.s
 
-GameStates/GameLostState.o: GameStates/GameLostState.cpp.o
+Enemy.o: Enemy.cpp.o
 
-.PHONY : GameStates/GameLostState.o
+.PHONY : Enemy.o
 
 # target to build an object file
-GameStates/GameLostState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameLostState.cpp.o
-.PHONY : GameStates/GameLostState.cpp.o
+Enemy.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
+.PHONY : Enemy.cpp.o
 
-GameStates/GameLostState.i: GameStates/GameLostState.cpp.i
+Enemy.i: Enemy.cpp.i
 
-.PHONY : GameStates/GameLostState.i
+.PHONY : Enemy.i
 
 # target to preprocess a source file
-GameStates/GameLostState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameLostState.cpp.i
-.PHONY : GameStates/GameLostState.cpp.i
+Enemy.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i
+.PHONY : Enemy.cpp.i
 
-GameStates/GameLostState.s: GameStates/GameLostState.cpp.s
+Enemy.s: Enemy.cpp.s
 
-.PHONY : GameStates/GameLostState.s
+.PHONY : Enemy.s
 
 # target to generate assembly for a file
-GameStates/GameLostState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameLostState.cpp.s
-.PHONY : GameStates/GameLostState.cpp.s
+Enemy.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s
+.PHONY : Enemy.cpp.s
+
+GameCharacter.o: GameCharacter.cpp.o
+
+.PHONY : GameCharacter.o
+
+# target to build an object file
+GameCharacter.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
+.PHONY : GameCharacter.cpp.o
+
+GameCharacter.i: GameCharacter.cpp.i
+
+.PHONY : GameCharacter.i
+
+# target to preprocess a source file
+GameCharacter.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i
+.PHONY : GameCharacter.cpp.i
+
+GameCharacter.s: GameCharacter.cpp.s
+
+.PHONY : GameCharacter.s
+
+# target to generate assembly for a file
+GameCharacter.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s
+.PHONY : GameCharacter.cpp.s
+
+GameManager/AssetManager.o: GameManager/AssetManager.cpp.o
+
+.PHONY : GameManager/AssetManager.o
+
+# target to build an object file
+GameManager/AssetManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
+.PHONY : GameManager/AssetManager.cpp.o
+
+GameManager/AssetManager.i: GameManager/AssetManager.cpp.i
+
+.PHONY : GameManager/AssetManager.i
+
+# target to preprocess a source file
+GameManager/AssetManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i
+.PHONY : GameManager/AssetManager.cpp.i
+
+GameManager/AssetManager.s: GameManager/AssetManager.cpp.s
+
+.PHONY : GameManager/AssetManager.s
+
+# target to generate assembly for a file
+GameManager/AssetManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s
+.PHONY : GameManager/AssetManager.cpp.s
+
+GameManager/Game.o: GameManager/Game.cpp.o
+
+.PHONY : GameManager/Game.o
+
+# target to build an object file
+GameManager/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
+.PHONY : GameManager/Game.cpp.o
+
+GameManager/Game.i: GameManager/Game.cpp.i
+
+.PHONY : GameManager/Game.i
+
+# target to preprocess a source file
+GameManager/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i
+.PHONY : GameManager/Game.cpp.i
+
+GameManager/Game.s: GameManager/Game.cpp.s
+
+.PHONY : GameManager/Game.s
+
+# target to generate assembly for a file
+GameManager/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s
+.PHONY : GameManager/Game.cpp.s
+
+GameManager/InputManager.o: GameManager/InputManager.cpp.o
+
+.PHONY : GameManager/InputManager.o
+
+# target to build an object file
+GameManager/InputManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o
+.PHONY : GameManager/InputManager.cpp.o
+
+GameManager/InputManager.i: GameManager/InputManager.cpp.i
+
+.PHONY : GameManager/InputManager.i
+
+# target to preprocess a source file
+GameManager/InputManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i
+.PHONY : GameManager/InputManager.cpp.i
+
+GameManager/InputManager.s: GameManager/InputManager.cpp.s
+
+.PHONY : GameManager/InputManager.s
+
+# target to generate assembly for a file
+GameManager/InputManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s
+.PHONY : GameManager/InputManager.cpp.s
+
+GameStates/GameOverState.o: GameStates/GameOverState.cpp.o
+
+.PHONY : GameStates/GameOverState.o
+
+# target to build an object file
+GameStates/GameOverState.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
+.PHONY : GameStates/GameOverState.cpp.o
+
+GameStates/GameOverState.i: GameStates/GameOverState.cpp.i
+
+.PHONY : GameStates/GameOverState.i
+
+# target to preprocess a source file
+GameStates/GameOverState.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i
+.PHONY : GameStates/GameOverState.cpp.i
+
+GameStates/GameOverState.s: GameStates/GameOverState.cpp.s
+
+.PHONY : GameStates/GameOverState.s
+
+# target to generate assembly for a file
+GameStates/GameOverState.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s
+.PHONY : GameStates/GameOverState.cpp.s
 
 GameStates/GameState.o: GameStates/GameState.cpp.o
 
@@ -343,7 +426,7 @@ GameStates/GameState.o: GameStates/GameState.cpp.o
 
 # target to build an object file
 GameStates/GameState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameState.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
 .PHONY : GameStates/GameState.cpp.o
 
 GameStates/GameState.i: GameStates/GameState.cpp.i
@@ -352,7 +435,7 @@ GameStates/GameState.i: GameStates/GameState.cpp.i
 
 # target to preprocess a source file
 GameStates/GameState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameState.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i
 .PHONY : GameStates/GameState.cpp.i
 
 GameStates/GameState.s: GameStates/GameState.cpp.s
@@ -361,170 +444,116 @@ GameStates/GameState.s: GameStates/GameState.cpp.s
 
 # target to generate assembly for a file
 GameStates/GameState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameState.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s
 .PHONY : GameStates/GameState.cpp.s
 
-GameStates/GameWinState.o: GameStates/GameWinState.cpp.o
+GameStates/MainMenuState.o: GameStates/MainMenuState.cpp.o
 
-.PHONY : GameStates/GameWinState.o
-
-# target to build an object file
-GameStates/GameWinState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameWinState.cpp.o
-.PHONY : GameStates/GameWinState.cpp.o
-
-GameStates/GameWinState.i: GameStates/GameWinState.cpp.i
-
-.PHONY : GameStates/GameWinState.i
-
-# target to preprocess a source file
-GameStates/GameWinState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameWinState.cpp.i
-.PHONY : GameStates/GameWinState.cpp.i
-
-GameStates/GameWinState.s: GameStates/GameWinState.cpp.s
-
-.PHONY : GameStates/GameWinState.s
-
-# target to generate assembly for a file
-GameStates/GameWinState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameWinState.cpp.s
-.PHONY : GameStates/GameWinState.cpp.s
-
-GameStates/MenuHomeState.o: GameStates/MenuHomeState.cpp.o
-
-.PHONY : GameStates/MenuHomeState.o
+.PHONY : GameStates/MainMenuState.o
 
 # target to build an object file
-GameStates/MenuHomeState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.o
-.PHONY : GameStates/MenuHomeState.cpp.o
+GameStates/MainMenuState.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o
+.PHONY : GameStates/MainMenuState.cpp.o
 
-GameStates/MenuHomeState.i: GameStates/MenuHomeState.cpp.i
+GameStates/MainMenuState.i: GameStates/MainMenuState.cpp.i
 
-.PHONY : GameStates/MenuHomeState.i
+.PHONY : GameStates/MainMenuState.i
 
 # target to preprocess a source file
-GameStates/MenuHomeState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.i
-.PHONY : GameStates/MenuHomeState.cpp.i
+GameStates/MainMenuState.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i
+.PHONY : GameStates/MainMenuState.cpp.i
 
-GameStates/MenuHomeState.s: GameStates/MenuHomeState.cpp.s
+GameStates/MainMenuState.s: GameStates/MainMenuState.cpp.s
 
-.PHONY : GameStates/MenuHomeState.s
+.PHONY : GameStates/MainMenuState.s
 
 # target to generate assembly for a file
-GameStates/MenuHomeState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MenuHomeState.cpp.s
-.PHONY : GameStates/MenuHomeState.cpp.s
+GameStates/MainMenuState.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s
+.PHONY : GameStates/MainMenuState.cpp.s
 
-GameStates/MenuPauseState.o: GameStates/MenuPauseState.cpp.o
+GameStates/PauseState.o: GameStates/PauseState.cpp.o
 
-.PHONY : GameStates/MenuPauseState.o
+.PHONY : GameStates/PauseState.o
 
 # target to build an object file
-GameStates/MenuPauseState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.o
-.PHONY : GameStates/MenuPauseState.cpp.o
+GameStates/PauseState.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o
+.PHONY : GameStates/PauseState.cpp.o
 
-GameStates/MenuPauseState.i: GameStates/MenuPauseState.cpp.i
+GameStates/PauseState.i: GameStates/PauseState.cpp.i
 
-.PHONY : GameStates/MenuPauseState.i
+.PHONY : GameStates/PauseState.i
 
 # target to preprocess a source file
-GameStates/MenuPauseState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.i
-.PHONY : GameStates/MenuPauseState.cpp.i
+GameStates/PauseState.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i
+.PHONY : GameStates/PauseState.cpp.i
 
-GameStates/MenuPauseState.s: GameStates/MenuPauseState.cpp.s
+GameStates/PauseState.s: GameStates/PauseState.cpp.s
 
-.PHONY : GameStates/MenuPauseState.s
+.PHONY : GameStates/PauseState.s
 
 # target to generate assembly for a file
-GameStates/MenuPauseState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MenuPauseState.cpp.s
-.PHONY : GameStates/MenuPauseState.cpp.s
+GameStates/PauseState.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s
+.PHONY : GameStates/PauseState.cpp.s
 
-GameStates/SelectBikeState.o: GameStates/SelectBikeState.cpp.o
+GameStates/SelectClassState.o: GameStates/SelectClassState.cpp.o
 
-.PHONY : GameStates/SelectBikeState.o
+.PHONY : GameStates/SelectClassState.o
 
 # target to build an object file
-GameStates/SelectBikeState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.o
-.PHONY : GameStates/SelectBikeState.cpp.o
+GameStates/SelectClassState.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
+.PHONY : GameStates/SelectClassState.cpp.o
 
-GameStates/SelectBikeState.i: GameStates/SelectBikeState.cpp.i
+GameStates/SelectClassState.i: GameStates/SelectClassState.cpp.i
 
-.PHONY : GameStates/SelectBikeState.i
+.PHONY : GameStates/SelectClassState.i
 
 # target to preprocess a source file
-GameStates/SelectBikeState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.i
-.PHONY : GameStates/SelectBikeState.cpp.i
+GameStates/SelectClassState.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i
+.PHONY : GameStates/SelectClassState.cpp.i
 
-GameStates/SelectBikeState.s: GameStates/SelectBikeState.cpp.s
+GameStates/SelectClassState.s: GameStates/SelectClassState.cpp.s
 
-.PHONY : GameStates/SelectBikeState.s
+.PHONY : GameStates/SelectClassState.s
 
 # target to generate assembly for a file
-GameStates/SelectBikeState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectBikeState.cpp.s
-.PHONY : GameStates/SelectBikeState.cpp.s
+GameStates/SelectClassState.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s
+.PHONY : GameStates/SelectClassState.cpp.s
 
-GameStates/SelectLevelState.o: GameStates/SelectLevelState.cpp.o
+GameStates/SplashState.o: GameStates/SplashState.cpp.o
 
-.PHONY : GameStates/SelectLevelState.o
+.PHONY : GameStates/SplashState.o
 
 # target to build an object file
-GameStates/SelectLevelState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.o
-.PHONY : GameStates/SelectLevelState.cpp.o
+GameStates/SplashState.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
+.PHONY : GameStates/SplashState.cpp.o
 
-GameStates/SelectLevelState.i: GameStates/SelectLevelState.cpp.i
+GameStates/SplashState.i: GameStates/SplashState.cpp.i
 
-.PHONY : GameStates/SelectLevelState.i
-
-# target to preprocess a source file
-GameStates/SelectLevelState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.i
-.PHONY : GameStates/SelectLevelState.cpp.i
-
-GameStates/SelectLevelState.s: GameStates/SelectLevelState.cpp.s
-
-.PHONY : GameStates/SelectLevelState.s
-
-# target to generate assembly for a file
-GameStates/SelectLevelState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectLevelState.cpp.s
-.PHONY : GameStates/SelectLevelState.cpp.s
-
-GameStates/ShopState.o: GameStates/ShopState.cpp.o
-
-.PHONY : GameStates/ShopState.o
-
-# target to build an object file
-GameStates/ShopState.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/ShopState.cpp.o
-.PHONY : GameStates/ShopState.cpp.o
-
-GameStates/ShopState.i: GameStates/ShopState.cpp.i
-
-.PHONY : GameStates/ShopState.i
+.PHONY : GameStates/SplashState.i
 
 # target to preprocess a source file
-GameStates/ShopState.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/ShopState.cpp.i
-.PHONY : GameStates/ShopState.cpp.i
+GameStates/SplashState.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i
+.PHONY : GameStates/SplashState.cpp.i
 
-GameStates/ShopState.s: GameStates/ShopState.cpp.s
+GameStates/SplashState.s: GameStates/SplashState.cpp.s
 
-.PHONY : GameStates/ShopState.s
+.PHONY : GameStates/SplashState.s
 
 # target to generate assembly for a file
-GameStates/ShopState.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/ShopState.cpp.s
-.PHONY : GameStates/ShopState.cpp.s
+GameStates/SplashState.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s
+.PHONY : GameStates/SplashState.cpp.s
 
 GameStates/StateMachine.o: GameStates/StateMachine.cpp.o
 
@@ -532,7 +561,7 @@ GameStates/StateMachine.o: GameStates/StateMachine.cpp.o
 
 # target to build an object file
 GameStates/StateMachine.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/StateMachine.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
 .PHONY : GameStates/StateMachine.cpp.o
 
 GameStates/StateMachine.i: GameStates/StateMachine.cpp.i
@@ -541,7 +570,7 @@ GameStates/StateMachine.i: GameStates/StateMachine.cpp.i
 
 # target to preprocess a source file
 GameStates/StateMachine.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/StateMachine.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i
 .PHONY : GameStates/StateMachine.cpp.i
 
 GameStates/StateMachine.s: GameStates/StateMachine.cpp.s
@@ -550,8 +579,62 @@ GameStates/StateMachine.s: GameStates/StateMachine.cpp.s
 
 # target to generate assembly for a file
 GameStates/StateMachine.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/StateMachine.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s
 .PHONY : GameStates/StateMachine.cpp.s
+
+Hero.o: Hero.cpp.o
+
+.PHONY : Hero.o
+
+# target to build an object file
+Hero.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
+.PHONY : Hero.cpp.o
+
+Hero.i: Hero.cpp.i
+
+.PHONY : Hero.i
+
+# target to preprocess a source file
+Hero.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i
+.PHONY : Hero.cpp.i
+
+Hero.s: Hero.cpp.s
+
+.PHONY : Hero.s
+
+# target to generate assembly for a file
+Hero.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s
+.PHONY : Hero.cpp.s
+
+Hud.o: Hud.cpp.o
+
+.PHONY : Hud.o
+
+# target to build an object file
+Hud.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
+.PHONY : Hud.cpp.o
+
+Hud.i: Hud.cpp.i
+
+.PHONY : Hud.i
+
+# target to preprocess a source file
+Hud.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i
+.PHONY : Hud.cpp.i
+
+Hud.s: Hud.cpp.s
+
+.PHONY : Hud.s
+
+# target to generate assembly for a file
+Hud.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s
+.PHONY : Hud.cpp.s
 
 Item.o: Item.cpp.o
 
@@ -559,7 +642,7 @@ Item.o: Item.cpp.o
 
 # target to build an object file
 Item.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Item.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
 .PHONY : Item.cpp.o
 
 Item.i: Item.cpp.i
@@ -568,7 +651,7 @@ Item.i: Item.cpp.i
 
 # target to preprocess a source file
 Item.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Item.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i
 .PHONY : Item.cpp.i
 
 Item.s: Item.cpp.s
@@ -577,521 +660,197 @@ Item.s: Item.cpp.s
 
 # target to generate assembly for a file
 Item.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Item.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
-Map.o: Map.cpp.o
+Knight.o: Knight.cpp.o
 
-.PHONY : Map.o
-
-# target to build an object file
-Map.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Map.cpp.o
-.PHONY : Map.cpp.o
-
-Map.i: Map.cpp.i
-
-.PHONY : Map.i
-
-# target to preprocess a source file
-Map.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Map.cpp.i
-.PHONY : Map.cpp.i
-
-Map.s: Map.cpp.s
-
-.PHONY : Map.s
-
-# target to generate assembly for a file
-Map.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Map.cpp.s
-.PHONY : Map.cpp.s
-
-Match.o: Match.cpp.o
-
-.PHONY : Match.o
+.PHONY : Knight.o
 
 # target to build an object file
-Match.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Match.cpp.o
-.PHONY : Match.cpp.o
+Knight.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
+.PHONY : Knight.cpp.o
 
-Match.i: Match.cpp.i
+Knight.i: Knight.cpp.i
 
-.PHONY : Match.i
+.PHONY : Knight.i
 
 # target to preprocess a source file
-Match.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Match.cpp.i
-.PHONY : Match.cpp.i
+Knight.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i
+.PHONY : Knight.cpp.i
 
-Match.s: Match.cpp.s
+Knight.s: Knight.cpp.s
 
-.PHONY : Match.s
+.PHONY : Knight.s
 
 # target to generate assembly for a file
-Match.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Match.cpp.s
-.PHONY : Match.cpp.s
+Knight.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s
+.PHONY : Knight.cpp.s
 
-Menu.o: Menu.cpp.o
+Mage.o: Mage.cpp.o
 
-.PHONY : Menu.o
+.PHONY : Mage.o
 
 # target to build an object file
-Menu.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Menu.cpp.o
-.PHONY : Menu.cpp.o
+Mage.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
+.PHONY : Mage.cpp.o
 
-Menu.i: Menu.cpp.i
+Mage.i: Mage.cpp.i
 
-.PHONY : Menu.i
+.PHONY : Mage.i
 
 # target to preprocess a source file
-Menu.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Menu.cpp.i
-.PHONY : Menu.cpp.i
+Mage.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i
+.PHONY : Mage.cpp.i
 
-Menu.s: Menu.cpp.s
+Mage.s: Mage.cpp.s
 
-.PHONY : Menu.s
+.PHONY : Mage.s
 
 # target to generate assembly for a file
-Menu.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Menu.cpp.s
-.PHONY : Menu.cpp.s
+Mage.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s
+.PHONY : Mage.cpp.s
 
-MenuOption.o: MenuOption.cpp.o
+Object.o: Object.cpp.o
 
-.PHONY : MenuOption.o
+.PHONY : Object.o
 
 # target to build an object file
-MenuOption.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/MenuOption.cpp.o
-.PHONY : MenuOption.cpp.o
+Object.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
+.PHONY : Object.cpp.o
 
-MenuOption.i: MenuOption.cpp.i
+Object.i: Object.cpp.i
 
-.PHONY : MenuOption.i
+.PHONY : Object.i
 
 # target to preprocess a source file
-MenuOption.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/MenuOption.cpp.i
-.PHONY : MenuOption.cpp.i
+Object.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i
+.PHONY : Object.cpp.i
 
-MenuOption.s: MenuOption.cpp.s
+Object.s: Object.cpp.s
 
-.PHONY : MenuOption.s
+.PHONY : Object.s
 
 # target to generate assembly for a file
-MenuOption.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/MenuOption.cpp.s
-.PHONY : MenuOption.cpp.s
+Object.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s
+.PHONY : Object.cpp.s
 
-Observer.o: Observer.cpp.o
+Projectile.o: Projectile.cpp.o
 
-.PHONY : Observer.o
+.PHONY : Projectile.o
 
 # target to build an object file
-Observer.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Observer.cpp.o
-.PHONY : Observer.cpp.o
+Projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
+.PHONY : Projectile.cpp.o
 
-Observer.i: Observer.cpp.i
+Projectile.i: Projectile.cpp.i
 
-.PHONY : Observer.i
+.PHONY : Projectile.i
 
 # target to preprocess a source file
-Observer.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Observer.cpp.i
-.PHONY : Observer.cpp.i
+Projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i
+.PHONY : Projectile.cpp.i
 
-Observer.s: Observer.cpp.s
+Projectile.s: Projectile.cpp.s
 
-.PHONY : Observer.s
+.PHONY : Projectile.s
 
 # target to generate assembly for a file
-Observer.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Observer.cpp.s
-.PHONY : Observer.cpp.s
+Projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s
+.PHONY : Projectile.cpp.s
 
-Player.o: Player.cpp.o
+Random.o: Random.cpp.o
 
-.PHONY : Player.o
+.PHONY : Random.o
 
 # target to build an object file
-Player.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Player.cpp.o
-.PHONY : Player.cpp.o
+Random.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
+.PHONY : Random.cpp.o
 
-Player.i: Player.cpp.i
+Random.i: Random.cpp.i
 
-.PHONY : Player.i
+.PHONY : Random.i
 
 # target to preprocess a source file
-Player.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Player.cpp.i
-.PHONY : Player.cpp.i
+Random.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i
+.PHONY : Random.cpp.i
 
-Player.s: Player.cpp.s
+Random.s: Random.cpp.s
 
-.PHONY : Player.s
+.PHONY : Random.s
 
 # target to generate assembly for a file
-Player.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Player.cpp.s
-.PHONY : Player.cpp.s
+Random.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s
+.PHONY : Random.cpp.s
 
-ResourceManager/BikeFactory.o: ResourceManager/BikeFactory.cpp.o
+Tile.o: Tile.cpp.o
 
-.PHONY : ResourceManager/BikeFactory.o
+.PHONY : Tile.o
 
 # target to build an object file
-ResourceManager/BikeFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.o
-.PHONY : ResourceManager/BikeFactory.cpp.o
+Tile.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
+.PHONY : Tile.cpp.o
 
-ResourceManager/BikeFactory.i: ResourceManager/BikeFactory.cpp.i
+Tile.i: Tile.cpp.i
 
-.PHONY : ResourceManager/BikeFactory.i
+.PHONY : Tile.i
 
 # target to preprocess a source file
-ResourceManager/BikeFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.i
-.PHONY : ResourceManager/BikeFactory.cpp.i
+Tile.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i
+.PHONY : Tile.cpp.i
 
-ResourceManager/BikeFactory.s: ResourceManager/BikeFactory.cpp.s
+Tile.s: Tile.cpp.s
 
-.PHONY : ResourceManager/BikeFactory.s
+.PHONY : Tile.s
 
 # target to generate assembly for a file
-ResourceManager/BikeFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/BikeFactory.cpp.s
-.PHONY : ResourceManager/BikeFactory.cpp.s
+Tile.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s
+.PHONY : Tile.cpp.s
 
-ResourceManager/LevelFactory.o: ResourceManager/LevelFactory.cpp.o
+Weapon.o: Weapon.cpp.o
 
-.PHONY : ResourceManager/LevelFactory.o
+.PHONY : Weapon.o
 
 # target to build an object file
-ResourceManager/LevelFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.o
-.PHONY : ResourceManager/LevelFactory.cpp.o
+Weapon.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
+.PHONY : Weapon.cpp.o
 
-ResourceManager/LevelFactory.i: ResourceManager/LevelFactory.cpp.i
+Weapon.i: Weapon.cpp.i
 
-.PHONY : ResourceManager/LevelFactory.i
-
-# target to preprocess a source file
-ResourceManager/LevelFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.i
-.PHONY : ResourceManager/LevelFactory.cpp.i
-
-ResourceManager/LevelFactory.s: ResourceManager/LevelFactory.cpp.s
-
-.PHONY : ResourceManager/LevelFactory.s
-
-# target to generate assembly for a file
-ResourceManager/LevelFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/LevelFactory.cpp.s
-.PHONY : ResourceManager/LevelFactory.cpp.s
-
-ResourceManager/Resource.o: ResourceManager/Resource.cpp.o
-
-.PHONY : ResourceManager/Resource.o
-
-# target to build an object file
-ResourceManager/Resource.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/Resource.cpp.o
-.PHONY : ResourceManager/Resource.cpp.o
-
-ResourceManager/Resource.i: ResourceManager/Resource.cpp.i
-
-.PHONY : ResourceManager/Resource.i
+.PHONY : Weapon.i
 
 # target to preprocess a source file
-ResourceManager/Resource.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/Resource.cpp.i
-.PHONY : ResourceManager/Resource.cpp.i
+Weapon.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i
+.PHONY : Weapon.cpp.i
 
-ResourceManager/Resource.s: ResourceManager/Resource.cpp.s
+Weapon.s: Weapon.cpp.s
 
-.PHONY : ResourceManager/Resource.s
-
-# target to generate assembly for a file
-ResourceManager/Resource.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/Resource.cpp.s
-.PHONY : ResourceManager/Resource.cpp.s
-
-ResourceManager/ResourceFont.o: ResourceManager/ResourceFont.cpp.o
-
-.PHONY : ResourceManager/ResourceFont.o
-
-# target to build an object file
-ResourceManager/ResourceFont.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.o
-.PHONY : ResourceManager/ResourceFont.cpp.o
-
-ResourceManager/ResourceFont.i: ResourceManager/ResourceFont.cpp.i
-
-.PHONY : ResourceManager/ResourceFont.i
-
-# target to preprocess a source file
-ResourceManager/ResourceFont.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.i
-.PHONY : ResourceManager/ResourceFont.cpp.i
-
-ResourceManager/ResourceFont.s: ResourceManager/ResourceFont.cpp.s
-
-.PHONY : ResourceManager/ResourceFont.s
+.PHONY : Weapon.s
 
 # target to generate assembly for a file
-ResourceManager/ResourceFont.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceFont.cpp.s
-.PHONY : ResourceManager/ResourceFont.cpp.s
-
-ResourceManager/ResourceManager.o: ResourceManager/ResourceManager.cpp.o
-
-.PHONY : ResourceManager/ResourceManager.o
-
-# target to build an object file
-ResourceManager/ResourceManager.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.o
-.PHONY : ResourceManager/ResourceManager.cpp.o
-
-ResourceManager/ResourceManager.i: ResourceManager/ResourceManager.cpp.i
-
-.PHONY : ResourceManager/ResourceManager.i
-
-# target to preprocess a source file
-ResourceManager/ResourceManager.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.i
-.PHONY : ResourceManager/ResourceManager.cpp.i
-
-ResourceManager/ResourceManager.s: ResourceManager/ResourceManager.cpp.s
-
-.PHONY : ResourceManager/ResourceManager.s
-
-# target to generate assembly for a file
-ResourceManager/ResourceManager.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManager.cpp.s
-.PHONY : ResourceManager/ResourceManager.cpp.s
-
-ResourceManager/ResourceManagerException.o: ResourceManager/ResourceManagerException.cpp.o
-
-.PHONY : ResourceManager/ResourceManagerException.o
-
-# target to build an object file
-ResourceManager/ResourceManagerException.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.o
-.PHONY : ResourceManager/ResourceManagerException.cpp.o
-
-ResourceManager/ResourceManagerException.i: ResourceManager/ResourceManagerException.cpp.i
-
-.PHONY : ResourceManager/ResourceManagerException.i
-
-# target to preprocess a source file
-ResourceManager/ResourceManagerException.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.i
-.PHONY : ResourceManager/ResourceManagerException.cpp.i
-
-ResourceManager/ResourceManagerException.s: ResourceManager/ResourceManagerException.cpp.s
-
-.PHONY : ResourceManager/ResourceManagerException.s
-
-# target to generate assembly for a file
-ResourceManager/ResourceManagerException.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceManagerException.cpp.s
-.PHONY : ResourceManager/ResourceManagerException.cpp.s
-
-ResourceManager/ResourceMap.o: ResourceManager/ResourceMap.cpp.o
-
-.PHONY : ResourceManager/ResourceMap.o
-
-# target to build an object file
-ResourceManager/ResourceMap.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceMap.cpp.o
-.PHONY : ResourceManager/ResourceMap.cpp.o
-
-ResourceManager/ResourceMap.i: ResourceManager/ResourceMap.cpp.i
-
-.PHONY : ResourceManager/ResourceMap.i
-
-# target to preprocess a source file
-ResourceManager/ResourceMap.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceMap.cpp.i
-.PHONY : ResourceManager/ResourceMap.cpp.i
-
-ResourceManager/ResourceMap.s: ResourceManager/ResourceMap.cpp.s
-
-.PHONY : ResourceManager/ResourceMap.s
-
-# target to generate assembly for a file
-ResourceManager/ResourceMap.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceMap.cpp.s
-.PHONY : ResourceManager/ResourceMap.cpp.s
-
-ResourceManager/ResourceTexture.o: ResourceManager/ResourceTexture.cpp.o
-
-.PHONY : ResourceManager/ResourceTexture.o
-
-# target to build an object file
-ResourceManager/ResourceTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.o
-.PHONY : ResourceManager/ResourceTexture.cpp.o
-
-ResourceManager/ResourceTexture.i: ResourceManager/ResourceTexture.cpp.i
-
-.PHONY : ResourceManager/ResourceTexture.i
-
-# target to preprocess a source file
-ResourceManager/ResourceTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.i
-.PHONY : ResourceManager/ResourceTexture.cpp.i
-
-ResourceManager/ResourceTexture.s: ResourceManager/ResourceTexture.cpp.s
-
-.PHONY : ResourceManager/ResourceTexture.s
-
-# target to generate assembly for a file
-ResourceManager/ResourceTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/ResourceManager/ResourceTexture.cpp.s
-.PHONY : ResourceManager/ResourceTexture.cpp.s
-
-SpeedBonus.o: SpeedBonus.cpp.o
-
-.PHONY : SpeedBonus.o
-
-# target to build an object file
-SpeedBonus.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/SpeedBonus.cpp.o
-.PHONY : SpeedBonus.cpp.o
-
-SpeedBonus.i: SpeedBonus.cpp.i
-
-.PHONY : SpeedBonus.i
-
-# target to preprocess a source file
-SpeedBonus.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/SpeedBonus.cpp.i
-.PHONY : SpeedBonus.cpp.i
-
-SpeedBonus.s: SpeedBonus.cpp.s
-
-.PHONY : SpeedBonus.s
-
-# target to generate assembly for a file
-SpeedBonus.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/SpeedBonus.cpp.s
-.PHONY : SpeedBonus.cpp.s
-
-SpeedMalus.o: SpeedMalus.cpp.o
-
-.PHONY : SpeedMalus.o
-
-# target to build an object file
-SpeedMalus.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/SpeedMalus.cpp.o
-.PHONY : SpeedMalus.cpp.o
-
-SpeedMalus.i: SpeedMalus.cpp.i
-
-.PHONY : SpeedMalus.i
-
-# target to preprocess a source file
-SpeedMalus.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/SpeedMalus.cpp.i
-.PHONY : SpeedMalus.cpp.i
-
-SpeedMalus.s: SpeedMalus.cpp.s
-
-.PHONY : SpeedMalus.s
-
-# target to generate assembly for a file
-SpeedMalus.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/SpeedMalus.cpp.s
-.PHONY : SpeedMalus.cpp.s
-
-Subject.o: Subject.cpp.o
-
-.PHONY : Subject.o
-
-# target to build an object file
-Subject.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Subject.cpp.o
-.PHONY : Subject.cpp.o
-
-Subject.i: Subject.cpp.i
-
-.PHONY : Subject.i
-
-# target to preprocess a source file
-Subject.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Subject.cpp.i
-.PHONY : Subject.cpp.i
-
-Subject.s: Subject.cpp.s
-
-.PHONY : Subject.s
-
-# target to generate assembly for a file
-Subject.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Subject.cpp.s
-.PHONY : Subject.cpp.s
-
-TimeBonus.o: TimeBonus.cpp.o
-
-.PHONY : TimeBonus.o
-
-# target to build an object file
-TimeBonus.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/TimeBonus.cpp.o
-.PHONY : TimeBonus.cpp.o
-
-TimeBonus.i: TimeBonus.cpp.i
-
-.PHONY : TimeBonus.i
-
-# target to preprocess a source file
-TimeBonus.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/TimeBonus.cpp.i
-.PHONY : TimeBonus.cpp.i
-
-TimeBonus.s: TimeBonus.cpp.s
-
-.PHONY : TimeBonus.s
-
-# target to generate assembly for a file
-TimeBonus.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/TimeBonus.cpp.s
-.PHONY : TimeBonus.cpp.s
-
-Timer.o: Timer.cpp.o
-
-.PHONY : Timer.o
-
-# target to build an object file
-Timer.cpp.o:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Timer.cpp.o
-.PHONY : Timer.cpp.o
-
-Timer.i: Timer.cpp.i
-
-.PHONY : Timer.i
-
-# target to preprocess a source file
-Timer.cpp.i:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Timer.cpp.i
-.PHONY : Timer.cpp.i
-
-Timer.s: Timer.cpp.s
-
-.PHONY : Timer.s
-
-# target to generate assembly for a file
-Timer.cpp.s:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Timer.cpp.s
-.PHONY : Timer.cpp.s
+Weapon.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s
+.PHONY : Weapon.cpp.s
 
 main.o: main.cpp.o
 
@@ -1099,7 +858,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Motocross2D.dir/build.make CMakeFiles/Motocross2D.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -1108,7 +867,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Motocross2D.dir/build.make CMakeFiles/Motocross2D.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -1117,8 +876,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Motocross2D.dir/build.make CMakeFiles/Motocross2D.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+map.o: map.cpp.o
+
+.PHONY : map.o
+
+# target to build an object file
+map.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
+.PHONY : map.cpp.o
+
+map.i: map.cpp.i
+
+.PHONY : map.i
+
+# target to preprocess a source file
+map.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i
+.PHONY : map.cpp.i
+
+map.s: map.cpp.s
+
+.PHONY : map.s
+
+# target to generate assembly for a file
+map.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s
+.PHONY : map.cpp.s
 
 # Help Target
 help:
@@ -1127,117 +913,95 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... Project_Alpha_ROOT"
 	@echo "... edit_cache"
-	@echo "... Motocross2D"
-	@echo "... core"
-	@echo "... runTests"
-	@echo "... gtest_main"
-	@echo "... gtest"
-	@echo "... Bike.o"
-	@echo "... Bike.i"
-	@echo "... Bike.s"
-	@echo "... Checkpoint.o"
-	@echo "... Checkpoint.i"
-	@echo "... Checkpoint.s"
-	@echo "... Coin.o"
-	@echo "... Coin.i"
-	@echo "... Coin.s"
-	@echo "... Game.o"
-	@echo "... Game.i"
-	@echo "... Game.s"
-	@echo "... GameEngine.o"
-	@echo "... GameEngine.i"
-	@echo "... GameEngine.s"
-	@echo "... GameStates/GameLostState.o"
-	@echo "... GameStates/GameLostState.i"
-	@echo "... GameStates/GameLostState.s"
+	@echo "... Archer.o"
+	@echo "... Archer.i"
+	@echo "... Archer.s"
+	@echo "... Boss.o"
+	@echo "... Boss.i"
+	@echo "... Boss.s"
+	@echo "... CharacterFactory.o"
+	@echo "... CharacterFactory.i"
+	@echo "... CharacterFactory.s"
+	@echo "... Chest.o"
+	@echo "... Chest.i"
+	@echo "... Chest.s"
+	@echo "... Collision.o"
+	@echo "... Collision.i"
+	@echo "... Collision.s"
+	@echo "... Enemy.o"
+	@echo "... Enemy.i"
+	@echo "... Enemy.s"
+	@echo "... GameCharacter.o"
+	@echo "... GameCharacter.i"
+	@echo "... GameCharacter.s"
+	@echo "... GameManager/AssetManager.o"
+	@echo "... GameManager/AssetManager.i"
+	@echo "... GameManager/AssetManager.s"
+	@echo "... GameManager/Game.o"
+	@echo "... GameManager/Game.i"
+	@echo "... GameManager/Game.s"
+	@echo "... GameManager/InputManager.o"
+	@echo "... GameManager/InputManager.i"
+	@echo "... GameManager/InputManager.s"
+	@echo "... GameStates/GameOverState.o"
+	@echo "... GameStates/GameOverState.i"
+	@echo "... GameStates/GameOverState.s"
 	@echo "... GameStates/GameState.o"
 	@echo "... GameStates/GameState.i"
 	@echo "... GameStates/GameState.s"
-	@echo "... GameStates/GameWinState.o"
-	@echo "... GameStates/GameWinState.i"
-	@echo "... GameStates/GameWinState.s"
-	@echo "... GameStates/MenuHomeState.o"
-	@echo "... GameStates/MenuHomeState.i"
-	@echo "... GameStates/MenuHomeState.s"
-	@echo "... GameStates/MenuPauseState.o"
-	@echo "... GameStates/MenuPauseState.i"
-	@echo "... GameStates/MenuPauseState.s"
-	@echo "... GameStates/SelectBikeState.o"
-	@echo "... GameStates/SelectBikeState.i"
-	@echo "... GameStates/SelectBikeState.s"
-	@echo "... GameStates/SelectLevelState.o"
-	@echo "... GameStates/SelectLevelState.i"
-	@echo "... GameStates/SelectLevelState.s"
-	@echo "... GameStates/ShopState.o"
-	@echo "... GameStates/ShopState.i"
-	@echo "... GameStates/ShopState.s"
+	@echo "... GameStates/MainMenuState.o"
+	@echo "... GameStates/MainMenuState.i"
+	@echo "... GameStates/MainMenuState.s"
+	@echo "... GameStates/PauseState.o"
+	@echo "... GameStates/PauseState.i"
+	@echo "... GameStates/PauseState.s"
+	@echo "... GameStates/SelectClassState.o"
+	@echo "... GameStates/SelectClassState.i"
+	@echo "... GameStates/SelectClassState.s"
+	@echo "... GameStates/SplashState.o"
+	@echo "... GameStates/SplashState.i"
+	@echo "... GameStates/SplashState.s"
 	@echo "... GameStates/StateMachine.o"
 	@echo "... GameStates/StateMachine.i"
 	@echo "... GameStates/StateMachine.s"
+	@echo "... Hero.o"
+	@echo "... Hero.i"
+	@echo "... Hero.s"
+	@echo "... Hud.o"
+	@echo "... Hud.i"
+	@echo "... Hud.s"
 	@echo "... Item.o"
 	@echo "... Item.i"
 	@echo "... Item.s"
-	@echo "... Map.o"
-	@echo "... Map.i"
-	@echo "... Map.s"
-	@echo "... Match.o"
-	@echo "... Match.i"
-	@echo "... Match.s"
-	@echo "... Menu.o"
-	@echo "... Menu.i"
-	@echo "... Menu.s"
-	@echo "... MenuOption.o"
-	@echo "... MenuOption.i"
-	@echo "... MenuOption.s"
-	@echo "... Observer.o"
-	@echo "... Observer.i"
-	@echo "... Observer.s"
-	@echo "... Player.o"
-	@echo "... Player.i"
-	@echo "... Player.s"
-	@echo "... ResourceManager/BikeFactory.o"
-	@echo "... ResourceManager/BikeFactory.i"
-	@echo "... ResourceManager/BikeFactory.s"
-	@echo "... ResourceManager/LevelFactory.o"
-	@echo "... ResourceManager/LevelFactory.i"
-	@echo "... ResourceManager/LevelFactory.s"
-	@echo "... ResourceManager/Resource.o"
-	@echo "... ResourceManager/Resource.i"
-	@echo "... ResourceManager/Resource.s"
-	@echo "... ResourceManager/ResourceFont.o"
-	@echo "... ResourceManager/ResourceFont.i"
-	@echo "... ResourceManager/ResourceFont.s"
-	@echo "... ResourceManager/ResourceManager.o"
-	@echo "... ResourceManager/ResourceManager.i"
-	@echo "... ResourceManager/ResourceManager.s"
-	@echo "... ResourceManager/ResourceManagerException.o"
-	@echo "... ResourceManager/ResourceManagerException.i"
-	@echo "... ResourceManager/ResourceManagerException.s"
-	@echo "... ResourceManager/ResourceMap.o"
-	@echo "... ResourceManager/ResourceMap.i"
-	@echo "... ResourceManager/ResourceMap.s"
-	@echo "... ResourceManager/ResourceTexture.o"
-	@echo "... ResourceManager/ResourceTexture.i"
-	@echo "... ResourceManager/ResourceTexture.s"
-	@echo "... SpeedBonus.o"
-	@echo "... SpeedBonus.i"
-	@echo "... SpeedBonus.s"
-	@echo "... SpeedMalus.o"
-	@echo "... SpeedMalus.i"
-	@echo "... SpeedMalus.s"
-	@echo "... Subject.o"
-	@echo "... Subject.i"
-	@echo "... Subject.s"
-	@echo "... TimeBonus.o"
-	@echo "... TimeBonus.i"
-	@echo "... TimeBonus.s"
-	@echo "... Timer.o"
-	@echo "... Timer.i"
-	@echo "... Timer.s"
+	@echo "... Knight.o"
+	@echo "... Knight.i"
+	@echo "... Knight.s"
+	@echo "... Mage.o"
+	@echo "... Mage.i"
+	@echo "... Mage.s"
+	@echo "... Object.o"
+	@echo "... Object.i"
+	@echo "... Object.s"
+	@echo "... Projectile.o"
+	@echo "... Projectile.i"
+	@echo "... Projectile.s"
+	@echo "... Random.o"
+	@echo "... Random.i"
+	@echo "... Random.s"
+	@echo "... Tile.o"
+	@echo "... Tile.i"
+	@echo "... Tile.s"
+	@echo "... Weapon.o"
+	@echo "... Weapon.i"
+	@echo "... Weapon.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... map.o"
+	@echo "... map.i"
+	@echo "... map.s"
 .PHONY : help
 
 

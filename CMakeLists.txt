@@ -1,34 +1,17 @@
-cmake_minimum_required(VERSION 3.5)
-project(Motocross2D)
+cmake_minimum_required(VERSION 3.12)
+project(Project_Alpha)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-include_directories(.)
+set(CMAKE_CXX_STANDARD 11)
 
-set(EXECUTABLE_NAME Motocross2D)
-
-set(SOURCE_FILES
-        Game.h Game.cpp Player.cpp Player.h Bike.cpp Bike.h GameEngine.h GameEngine.cpp Item.h Item.cpp Map.h Map.cpp Coin.cpp Coin.h SpeedBonus.cpp SpeedBonus.h Checkpoint.cpp Checkpoint.h TimeBonus.cpp TimeBonus.h Subject.cpp Subject.h Observer.cpp Observer.h Match.cpp Match.h Menu.cpp Menu.h MenuOption.h MenuOption.cpp Timer.cpp Timer.h SpeedMalus.cpp SpeedMalus.h
-        ResourceManager/ResourceManager.cpp ResourceManager/ResourceManager.h ResourceManager/ResourceManagerException.h ResourceManager/ResourceManagerException.cpp ResourceManager/Resource.cpp ResourceManager/Resource.h ResourceManager/ResourceTexture.cpp ResourceManager/ResourceTexture.h ResourceManager/ResourceFont.h ResourceManager/ResourceFont.cpp ResourceManager/LevelFactory.cpp ResourceManager/LevelFactory.h ResourceManager/BikeFactory.cpp ResourceManager/BikeFactory.h ResourceManager/ResourceMap.h ResourceManager/ResourceMap.cpp
-        GameStates/State.h GameStates/StateMachine.cpp GameStates/StateMachine.h GameStates/GameState.h GameStates/GameState.cpp GameStates/MenuHomeState.cpp GameStates/MenuHomeState.h GameStates/MenuPauseState.h GameStates/MenuPauseState.cpp GameStates/SelectLevelState.cpp GameStates/SelectLevelState.h GameStates/GameWinState.cpp GameStates/GameWinState.h GameStates/GameLostState.cpp GameStates/GameLostState.h GameStates/ShopState.cpp GameStates/ShopState.h GameStates/SelectBikeState.cpp GameStates/SelectBikeState.h)
-
-
-add_library(core ${SOURCE_FILES})
-
-add_executable(${EXECUTABLE_NAME} main.cpp)
-target_link_libraries(${EXECUTABLE_NAME} core)
-
-#Add Unit Testing
-add_subdirectory(test)
-
-#Add Box2D
-target_link_libraries(${EXECUTABLE_NAME} ${CMAKE_SOURCE_DIR}/Box2D/libBox2D.a)
-#--------------------
-
-#include SFML
+include_directories(Project_Alpha)
+set(SOURCE_FILE main.cpp  GameManager/AssetManager.hpp GameManager/AssetManager.cpp GameManager/DEFINITIONS.hpp GameManager/Game.hpp GameManager/Game.cpp GameManager/InputManager.cpp GameManager/InputManager.hpp
+        GameStates/GameOverState.cpp GameStates/GameOverState.hpp GameStates/GameState.cpp GameStates/GameState.hpp GameStates/MainMenuState.hpp GameStates/MainMenuState.cpp GameStates/PauseState.cpp
+        GameStates/PauseState.hpp GameStates/SelectClassState.cpp GameStates/SelectClassState.h GameStates/SplashState.cpp GameStates/SplashState.hpp GameStates/State.hpp GameStates/StateMachine.cpp
+        GameStates/StateMachine.hpp Tile.cpp Tile.h map.cpp map.h GameCharacter.cpp GameCharacter.h Hero.cpp Hero.h PlayerType.h  Collision.cpp Archer.cpp Archer.h Knight.cpp Knight.h CharacterFactory.cpp CharacterFactory.h Mage.cpp Mage.h
+        Collision.h Enemy.cpp Enemy.h Random.cpp Random.h Weapon.cpp Weapon.h Item.cpp Item.h Projectile.cpp Projectile.h Boss.cpp Boss.h Chest.h Object.cpp Object.h Chest.cpp Hud.cpp Hud.h)
+add_executable(Project_Alpha_ROOT ${SOURCE_FILE})
 find_package(SFML 2 COMPONENTS network audio graphics window system REQUIRED)
 if (SFML_FOUND)
-    include_directories(/usr/local/include)
-    target_link_libraries(${EXECUTABLE_NAME} sfml-graphics sfml-window sfml-system)
+    target_link_libraries(Project_Alpha_ROOT sfml-graphics sfml-window sfml-system)
+
 endif ()
-set(SFML_STATIC_LIBRARIES TRUE)
-#-----------

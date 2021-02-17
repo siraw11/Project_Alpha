@@ -1,63 +1,40 @@
 //
-// Created by Magna on 2019-06-07.
+// Created by waris on 20/06/19.
 //
+#pragma once
 
-#ifndef MOTOCROSS2D_ITEM_H
-#define MOTOCROSS2D_ITEM_H
 
-#include <iostream>
-#include "Observer.h"
+#ifndef EXAM_PROJECT_ITEM_H
+#define EXAM_PROJECT_ITEM
 
-class Item {
+#include "Object.h"
+
+class Item : public Object{
 public:
-    explicit Item(double posX = 0, double posY = 0, double width = 0, double height = 0, float angle = 0,
-                  std::string texture = "");
 
-    const std::string &getTexture() const;
+//constructor and destructor
+    Item(bool S, bool E, bool G, bool HP, bool P, bool K);
+    ~Item() override;
 
-    void setTexture(const std::string &texture);
+//functions
+    void use(Hero* hero, std::vector<Tile>* tile_vector) override;
 
-    ~Item();
-
-
-    double getPosX() const;
-
-    void setPosX(double posX);
-
-    double getPosY() const;
-
-    void setPosY(double posY);
-
-    double getWidth() const;
-
-    void setWidth(double width);
-
-    double getHeight() const;
-
-    void setHeight(double height);
-
-    double getAngle() const;
-
-    void setAngle(float angle);
-
-
-    bool isTaken() const;
-
-    void setTaken(bool taken);
-
-
-    virtual void doSpecial();
-
+//getters
+    bool isStrength() const;
+    bool isGeneric() const;
+    bool isLife() const;
+    bool isKey() const;
+    bool isExhaust() const;
+    bool isPoison() const;
 
 private:
-    float posX;
-    float posY;
-    float angle;
-    float width;
-    float height;
-    bool taken = false;
-    std::string texture;
+//attributes
+    bool strength;
+    bool exhaust;
+    bool generic;
+    bool poison;
+    bool life;
+    bool key;
 };
 
-
-#endif //MOTOCROSS2D_ITEM_H
+#endif //EXAM_PROJECT_ITEM_H

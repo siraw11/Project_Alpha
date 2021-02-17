@@ -35,218 +35,64 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.3.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lucagraziotti/CLionProjects/TestM2D
+CMAKE_SOURCE_DIR = /home/waris/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug
+CMAKE_BINARY_DIR = /home/waris/Project_Alpha/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Motocross2D.dir/all
-all: CMakeFiles/core.dir/all
-all: test/all
+all: CMakeFiles/Project_Alpha_ROOT.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Motocross2D.dir/clean
-clean: CMakeFiles/core.dir/clean
-clean: test/clean
+clean: CMakeFiles/Project_Alpha_ROOT.dir/clean
 
 .PHONY : clean
 
 # The main recursive "preinstall" target.
-preinstall: test/preinstall
+preinstall:
 
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/Motocross2D.dir
+# Target rules for target CMakeFiles/Project_Alpha_ROOT.dir
 
 # All Build rule for target.
-CMakeFiles/Motocross2D.dir/all: CMakeFiles/core.dir/all
-	$(MAKE) -f CMakeFiles/Motocross2D.dir/build.make CMakeFiles/Motocross2D.dir/depend
-	$(MAKE) -f CMakeFiles/Motocross2D.dir/build.make CMakeFiles/Motocross2D.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Motocross2D"
-.PHONY : CMakeFiles/Motocross2D.dir/all
+CMakeFiles/Project_Alpha_ROOT.dir/all:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/depend
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/waris/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target Project_Alpha_ROOT"
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Motocross2D.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 37
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Motocross2D.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Motocross2D.dir/rule
+CMakeFiles/Project_Alpha_ROOT.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/Project_Alpha/cmake-build-debug/CMakeFiles 30
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Project_Alpha_ROOT.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/Project_Alpha/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/rule
 
 # Convenience name for target.
-Motocross2D: CMakeFiles/Motocross2D.dir/rule
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/rule
 
-.PHONY : Motocross2D
-
-# clean rule for target.
-CMakeFiles/Motocross2D.dir/clean:
-	$(MAKE) -f CMakeFiles/Motocross2D.dir/build.make CMakeFiles/Motocross2D.dir/clean
-.PHONY : CMakeFiles/Motocross2D.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/core.dir
-
-# All Build rule for target.
-CMakeFiles/core.dir/all:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/depend
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37 "Built target core"
-.PHONY : CMakeFiles/core.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 35
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/core.dir/rule
-
-# Convenience name for target.
-core: CMakeFiles/core.dir/rule
-
-.PHONY : core
+.PHONY : Project_Alpha_ROOT
 
 # clean rule for target.
-CMakeFiles/core.dir/clean:
-	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/clean
-.PHONY : CMakeFiles/core.dir/clean
-
-#=============================================================================
-# Directory level rules for directory test
-
-# Recursive "all" directory target.
-test/all: test/CMakeFiles/runTests.dir/all
-test/all: test/lib/googletest/all
-
-.PHONY : test/all
-
-# Recursive "clean" directory target.
-test/clean: test/CMakeFiles/runTests.dir/clean
-test/clean: test/lib/googletest/clean
-
-.PHONY : test/clean
-
-# Recursive "preinstall" directory target.
-test/preinstall: test/lib/googletest/preinstall
-
-.PHONY : test/preinstall
-
-#=============================================================================
-# Target rules for target test/CMakeFiles/runTests.dir
-
-# All Build rule for target.
-test/CMakeFiles/runTests.dir/all: CMakeFiles/core.dir/all
-test/CMakeFiles/runTests.dir/all: test/lib/googletest/CMakeFiles/gtest_main.dir/all
-test/CMakeFiles/runTests.dir/all: test/lib/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/depend
-	$(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles --progress-num=42,43,44,45,46,47,48,49,50,51,52,53 "Built target runTests"
-.PHONY : test/CMakeFiles/runTests.dir/all
-
-# Build rule for subdir invocation for target.
-test/CMakeFiles/runTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 51
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 0
-.PHONY : test/CMakeFiles/runTests.dir/rule
-
-# Convenience name for target.
-runTests: test/CMakeFiles/runTests.dir/rule
-
-.PHONY : runTests
-
-# clean rule for target.
-test/CMakeFiles/runTests.dir/clean:
-	$(MAKE) -f test/CMakeFiles/runTests.dir/build.make test/CMakeFiles/runTests.dir/clean
-.PHONY : test/CMakeFiles/runTests.dir/clean
-
-#=============================================================================
-# Directory level rules for directory test/lib/googletest
-
-# Recursive "all" directory target.
-test/lib/googletest/all: test/lib/googletest/CMakeFiles/gtest_main.dir/all
-test/lib/googletest/all: test/lib/googletest/CMakeFiles/gtest.dir/all
-
-.PHONY : test/lib/googletest/all
-
-# Recursive "clean" directory target.
-test/lib/googletest/clean: test/lib/googletest/CMakeFiles/gtest_main.dir/clean
-test/lib/googletest/clean: test/lib/googletest/CMakeFiles/gtest.dir/clean
-
-.PHONY : test/lib/googletest/clean
-
-# Recursive "preinstall" directory target.
-test/lib/googletest/preinstall:
-
-.PHONY : test/lib/googletest/preinstall
-
-#=============================================================================
-# Target rules for target test/lib/googletest/CMakeFiles/gtest_main.dir
-
-# All Build rule for target.
-test/lib/googletest/CMakeFiles/gtest_main.dir/all: test/lib/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles --progress-num=40,41 "Built target gtest_main"
-.PHONY : test/lib/googletest/CMakeFiles/gtest_main.dir/all
-
-# Build rule for subdir invocation for target.
-test/lib/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 test/lib/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 0
-.PHONY : test/lib/googletest/CMakeFiles/gtest_main.dir/rule
-
-# Convenience name for target.
-gtest_main: test/lib/googletest/CMakeFiles/gtest_main.dir/rule
-
-.PHONY : gtest_main
-
-# clean rule for target.
-test/lib/googletest/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : test/lib/googletest/CMakeFiles/gtest_main.dir/clean
-
-#=============================================================================
-# Target rules for target test/lib/googletest/CMakeFiles/gtest.dir
-
-# All Build rule for target.
-test/lib/googletest/CMakeFiles/gtest.dir/all:
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/depend
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles --progress-num=38,39 "Built target gtest"
-.PHONY : test/lib/googletest/CMakeFiles/gtest.dir/all
-
-# Build rule for subdir invocation for target.
-test/lib/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 test/lib/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lucagraziotti/CLionProjects/TestM2D/cmake-build-debug/CMakeFiles 0
-.PHONY : test/lib/googletest/CMakeFiles/gtest.dir/rule
-
-# Convenience name for target.
-gtest: test/lib/googletest/CMakeFiles/gtest.dir/rule
-
-.PHONY : gtest
-
-# clean rule for target.
-test/lib/googletest/CMakeFiles/gtest.dir/clean:
-	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/clean
-.PHONY : test/lib/googletest/CMakeFiles/gtest.dir/clean
+CMakeFiles/Project_Alpha_ROOT.dir/clean:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/clean
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

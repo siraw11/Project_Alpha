@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++   -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/runAllTests.dir/runAllTests.cpp.o CMakeFiles/runAllTests.dir/PlayerTest.cpp.o CMakeFiles/runAllTests.dir/PlayerFixture.cpp.o  -o runAllTests ../libcore.a 

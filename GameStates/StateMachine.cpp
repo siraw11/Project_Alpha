@@ -1,36 +1,55 @@
-//
-// Created by Luca Graziotti on 2019-10-30.
-//
+#include "StateMachine.hpp"
 
-#include <iostream>
-#include "StateMachine.h"
+namespace Alpha
+{
+	void StateMachine::AddState(StateRef newState, bool isReplacing)
+	{
+		this->_isAdding = true;
+		this->_isReplacing = isReplacing;
+		this->_newState = std::move(newState);
+	}
 
-void StateMachine::push_state(const StateRef &state, bool replace) {
-    if (replace) {
-        while (!stack.empty()) {
-            stack.pop();
-        }
-    }
-    stack.push(state);
-}
+	void StateMachine::RemoveState()
+	{
+		this->_isRemoving = true;
+	}
 
-StateRef StateMachine::pop_state() {
-    auto state = get_current_state();
+	void StateMachine::ProcessStateChanges()
+	{
+		if (this->_isRemoving && !this->_states.empty())// toglie l'ultimo state e fa ripartire lo state successivo se il vect non è vuoto
+		{
+			this->_states.pop();
 
-    stack.pop();
+			if (!this->_states.empty())
+			{
+				this->_states.top()->Resume();
+			}
 
-    return state;
-}
+			this->_isRemoving = false;
+		}
 
-StateRef StateMachine::get_current_state() const {
-    return stack.top();
-}
+		if (this->_isAdding)
+		{
+			if (!this->_states.empty())// se vogliamo toglierlo allora si setta true isReplacing, altrimenti si mette in pausa lo state
+			{
+				if (this->_isReplacing)
+				{
+					this->_states.pop();
+				}
+				else
+				{
+					this->_states.top()->Pause();
+				}
+			}
 
-void StateMachine::update() {
-    if (!stack.empty()) {
-        auto state = get_current_state();
+			this->_states.push(std::move(this->_newState));
+			this->_states.top()->Init();// inizializza il nuovo state
+			this->_isAdding = false;
+		}
+	}
 
-        state->update();
-        state->draw();
-    }
+	StateRef &StateMachine::GetActiveState()
+	{
+		return this->_states.top();
+	}
 }
