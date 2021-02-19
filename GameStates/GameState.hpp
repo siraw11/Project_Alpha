@@ -14,7 +14,8 @@ namespace Alpha
     class GameState : public State
     {
     public:
-        explicit GameState(GameDataRef data,Hero *hero);
+        GameState(GameDataRef data,Hero *hero);
+        ~GameState();
 
         void Init() override;
 

@@ -12,7 +12,7 @@ namespace Alpha
     {
     public:
         explicit SelectClassState(GameDataRef data);
-
+        ~SelectClassState();
         void Init() override;
 
         void HandleInput() override;

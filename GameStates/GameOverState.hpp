@@ -10,6 +10,7 @@ namespace Alpha
 	{
 	public:
 		explicit GameOverState(GameDataRef data);
+        ~GameOverState();
 
 		void Init() override;
 
@@ -20,6 +21,7 @@ namespace Alpha
 	private:
 		GameDataRef _data;
 
+        sf::Sprite _background;
 		sf::Sprite _retryButton;
 		sf::Sprite _homeButton;
 

@@ -14,18 +14,12 @@ namespace Alpha
 {
 	MainMenuState::MainMenuState(GameDataRef data) : _data(data)
 	{
-
+std::cout<<"main menu"<<std::endl;
 	}
 
 	void MainMenuState::Init()
 	{
-	    std::cout << "mainmenustate \n";
-		this->_data->assets.LoadTexture("Background", MAIN_MENU_BACKGROUND_FILEPATH);
-		//this->_data->assets.LoadTexture("Play_Button", MAIN_MENU_PLAY_BUTTON);
-		this->_data->assets.LoadTexture("Select Class", SELECT_CLASS);
-		this->_data->assets.LoadTexture("Game Title", MAIN_MENU_TITLE_FILEPATH);
-
-		this->_background.setTexture(this->_data->assets.GetTexture("Background"));
+	    this->_background.setTexture(this->_data->assets.GetTexture("Background"));
 		//this->_playButton.setTexture(this->_data->assets.GetTexture("Play_Button"));
         this->_selectClass.setTexture(this->_data->assets.GetTexture("Select Class"));
 		this->_title.setTexture(this->_data->assets.GetTexture("Game Title"));
@@ -58,6 +52,7 @@ namespace Alpha
                 // Switch To Select Class State
 
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
+                std::cout<<"rimpiazza main menu"<<std::endl;
 
             }
 		}
@@ -71,11 +66,14 @@ namespace Alpha
 
 	void MainMenuState::Draw()
 	{
-       ;
+
+
 		this->_data->window.draw(this->_background);
 		//this->_data->window.draw(this->_playButton);
         this->_data->window.draw(this->_selectClass);
 		this->_data->window.draw(this->_title);
-		this->_data->window.display();
+
 	}
+
+    MainMenuState::~MainMenuState() = default;
 }

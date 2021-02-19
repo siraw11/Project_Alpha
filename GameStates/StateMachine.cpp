@@ -1,3 +1,4 @@
+#include <iostream>
 #include "StateMachine.hpp"
 
 namespace Alpha
@@ -33,7 +34,7 @@ namespace Alpha
 			if (!this->_states.empty())// se vogliamo toglierlo allora si setta true isReplacing, altrimenti si mette in pausa lo state
 			{
 				if (this->_isReplacing)
-				{
+				{std::cout<<"fa il pop "<<std::endl;
 					this->_states.pop();
 				}
 				else

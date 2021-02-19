@@ -1,3 +1,5 @@
+#include <utility>
+
 #include <sstream>
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
@@ -15,9 +17,9 @@
 
 
 namespace Alpha {
-    GameState::GameState(GameDataRef data,Hero* hero) : _data(data), hero(hero) {
+    GameState::GameState(GameDataRef data,Hero* hero) : _data(std::move(data)), hero(hero) {
 
-
+        std::cout<<"game state"<<std::endl;
     }
 
 
@@ -40,10 +42,6 @@ namespace Alpha {
             if (sf::Event::Closed == event.type) {
                 this->_data->window.close();
             }
-
-
-
-
         }
     }
 
@@ -102,9 +100,8 @@ namespace Alpha {
 
         if (hero->dead){
             // Switch To GameOverState
-            this->_data->machine.RemoveState();
-            this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-
+            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+            std::cout<<"rimpiazza game state"<<std::endl;
         }
         if (boss->dead){
             // Switch To WinState
@@ -117,6 +114,7 @@ namespace Alpha {
     void GameState::Draw() {
         //this->_data->window.setFramerateLimit(20);
 
+
         level.drawTile(_data);
         level.drawEnemy(_data);
         level.drawChest(_data);
@@ -125,10 +123,10 @@ namespace Alpha {
         hud->draw(_data);
         level.drawProjectile(hero->projectile_vector,_data);
         level.drawProjectile(boss->projectile_vector,_data);
-        this->_data->window.display();
 
     }
 
+    GameState::~GameState() = default;
 
 
 }

@@ -25,8 +25,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 }
 
 //destructor
-Hero::~Hero(){
-}
+Hero::~Hero()= default;
 
 //functions
 void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector ) {
@@ -57,7 +56,7 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
         walkingAnimation();
     }
     move(movement);
-    std::cout<<movement.x<<" "<<movement.y<<std::endl;
+
 }
 
 void Hero::walkingAnimation() {
