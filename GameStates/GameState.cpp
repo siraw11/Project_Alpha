@@ -103,6 +103,7 @@ namespace Alpha {
             this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
             camera.resetCamera(_data);
         }
+        std::cout << "rimpiazza game state" << std::endl;
     }
 
 
