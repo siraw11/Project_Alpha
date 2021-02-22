@@ -46,393 +46,406 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/matteo/CLionProjects/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
+CMAKE_BINARY_DIR = /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
 
 # Include any dependencies generated for this target.
-include //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/depend.make
+include CMakeFiles/Project_Alpha_ROOT.dir/depend.make
 
 # Include the progress variables for this target.
-include //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/progress.make
+include CMakeFiles/Project_Alpha_ROOT.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+include CMakeFiles/Project_Alpha_ROOT.dir/flags.make
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: /home/matteo/CLionProjects/Project_Alpha/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/main.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/main.cpp > CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/main.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o: ../GameManager/AssetManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameManager/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o: ../GameManager/InputManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameStates/GameOverState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/GameOverState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameStates/GameOverState.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameStates/GameOverState.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameStates/GameOverState.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/GameState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameStates/MainMenuState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/MainMenuState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameStates/MainMenuState.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameStates/MainMenuState.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameStates/MainMenuState.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameStates/PauseState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameStates/PauseState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameStates/PauseState.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameStates/PauseState.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameStates/PauseState.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameStates/SelectClassState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o: ../GameStates/SelectClassState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameStates/SelectClassState.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameStates/SelectClassState.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameStates/SelectClassState.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameStates/SplashState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/SplashState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameStates/SplashState.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameStates/SplashState.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameStates/SplashState.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o: ../GameStates/StateMachine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Tile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o: ../Tile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Tile.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Tile.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Tile.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: /home/matteo/CLionProjects/Project_Alpha/map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o: ../map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/map.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/map.cpp > CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/map.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: /home/matteo/CLionProjects/Project_Alpha/GameCharacter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o: ../GameCharacter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/GameCharacter.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/GameCharacter.cpp > CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/GameCharacter.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Hero.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o: ../Hero.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Hero.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Hero.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Hero.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o: ../Collision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Collision.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Collision.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Collision.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Archer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: ../Archer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Archer.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Archer.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Archer.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Knight.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o: ../Knight.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Knight.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Knight.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Knight.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: /home/matteo/CLionProjects/Project_Alpha/CharacterFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o: ../CharacterFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/CharacterFactory.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/CharacterFactory.cpp > CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/CharacterFactory.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Mage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o: ../Mage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Mage.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Mage.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Mage.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Enemy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o: ../Enemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Enemy.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Enemy.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Enemy.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Random.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o: ../Random.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Random.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Random.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Random.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Weapon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o: ../Weapon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Weapon.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Weapon.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Weapon.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o: ../Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Item.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Item.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Item.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Projectile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o: ../Projectile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Projectile.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Projectile.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Projectile.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Boss.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Boss.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Boss.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Boss.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o: ../Object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Object.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Object.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Object.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Chest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o: ../Chest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Chest.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Chest.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Chest.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/flags.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o: /home/matteo/CLionProjects/Project_Alpha/Hud.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o"
+CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o: ../Hud.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Hud.cpp
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Hud.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s: cmake_force
+CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Hud.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s
+
+CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o: ../Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o -c /home/matteo/CLionProjects/Project_Alpha/Camera.cpp
+
+CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/CLionProjects/Project_Alpha/Camera.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.i
+
+CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/CLionProjects/Project_Alpha/Camera.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.s
 
 # Object files for target Project_Alpha_ROOT
 Project_Alpha_ROOT_OBJECTS = \
@@ -464,58 +477,60 @@ Project_Alpha_ROOT_OBJECTS = \
 "CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o" \
-"CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o"
+"CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o" \
+"CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o"
 
 # External object files for target Project_Alpha_ROOT
 Project_Alpha_ROOT_EXTERNAL_OBJECTS =
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-graphics.so.2.5.1
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-window.so.2.5.1
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-system.so.2.5.1
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT"
-	$(CMAKE_COMMAND) -E cmake_link_script //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/link.txt --verbose=$(VERBOSE)
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/build.make
+Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-graphics.so.2.5.1
+Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-window.so.2.5.1
+Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-system.so.2.5.1
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable Project_Alpha_ROOT"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_Alpha_ROOT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT
+CMakeFiles/Project_Alpha_ROOT.dir/build: Project_Alpha_ROOT
 
-.PHONY : //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/build
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/clean:
-	$(CMAKE_COMMAND) -P //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/cmake_clean.cmake
-.PHONY : //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/clean
+CMakeFiles/Project_Alpha_ROOT.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/Project_Alpha_ROOT.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/clean
 
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/depend:
-	cd //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matteo/CLionProjects/Project_Alpha /home/matteo/CLionProjects/Project_Alpha //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/depend
+CMakeFiles/Project_Alpha_ROOT.dir/depend:
+	cd /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matteo/CLionProjects/Project_Alpha /home/matteo/CLionProjects/Project_Alpha /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/depend
 

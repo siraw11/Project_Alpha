@@ -28,8 +28,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o"
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT.pdb"
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT"
+  "CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o"
+  "Project_Alpha_ROOT.pdb"
+  "Project_Alpha_ROOT"
 )
 
 # Per-language clean rules from dependency scanning.

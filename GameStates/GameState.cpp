@@ -29,8 +29,6 @@ namespace Alpha {
         level.setTexture();
         //View variable
         this->_data->window.setFramerateLimit(60);
-        view.reset(sf::FloatRect(0, 0, 1920.0, 1080.0));
-        view.setViewport(sf::FloatRect(0, 0, 1.0f, 1.0f));
     }
 
     void GameState::HandleInput() {
@@ -43,6 +41,7 @@ namespace Alpha {
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
                 this->_data->machine.AddState(StateRef(new GameOverState(_data)),true);
+                std::cout << "rimpiazza game state" << std::endl;
             }
         }
     }
@@ -81,45 +80,29 @@ namespace Alpha {
             level.update(this->hero, this->boss);
             //Hud update
             hud->update(*hero);
+            camera.update(*hero, _data);
 
 
 
-            //camera settings
-            positionView.x = hero->getPosition().x + 20 - (1920.0 / 2);
-            positionView.y = hero->getPosition().y + 20 - (1080.0 / 2);
-
-            if (positionView.x < 0)
-                positionView.x = 0;
-            if (positionView.y < 0)
-                positionView.y = 0;
-
-            view.reset(sf::FloatRect(positionView.x, positionView.y, 3840, 2160));
-
-            this->_data->window.setView(view);
             //Game Over
-
             if (hero->dead) {
-
                 gameStatus = GameStatus::isGameOver;
-                // Switch To GameOverState
-                //this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 
             }
-
             if (boss->dead) {
-                // Switch To WinState
-
                 gameStatus = GameStatus::isWin;
-                //this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
             }
         }
         if (gameStatus == GameStatus::isGameOver){
             this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+            camera.resetCamera(_data);
             std::cout << "rimpiazza game state" << std::endl;
         }
 
-        if(gameStatus == GameStatus::isWin)
+        if(gameStatus == GameStatus::isWin){
             this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+            camera.resetCamera(_data);
+        }
     }
 
 

@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/matteo/CLionProjects/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
+CMAKE_BINARY_DIR = /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/all
-	$(CMAKE_COMMAND) -E cmake_progress_start //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -97,12 +97,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -120,7 +120,7 @@ Project_Alpha_ROOT: cmake_check_build_system
 
 # fast build rule for target.
 Project_Alpha_ROOT/fast:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/build
 .PHONY : Project_Alpha_ROOT/fast
 
 Archer.o: Archer.cpp.o
@@ -129,7 +129,7 @@ Archer.o: Archer.cpp.o
 
 # target to build an object file
 Archer.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
 .PHONY : Archer.cpp.o
 
 Archer.i: Archer.cpp.i
@@ -138,7 +138,7 @@ Archer.i: Archer.cpp.i
 
 # target to preprocess a source file
 Archer.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i
 .PHONY : Archer.cpp.i
 
 Archer.s: Archer.cpp.s
@@ -147,7 +147,7 @@ Archer.s: Archer.cpp.s
 
 # target to generate assembly for a file
 Archer.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
 .PHONY : Archer.cpp.s
 
 Boss.o: Boss.cpp.o
@@ -156,7 +156,7 @@ Boss.o: Boss.cpp.o
 
 # target to build an object file
 Boss.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
 .PHONY : Boss.cpp.o
 
 Boss.i: Boss.cpp.i
@@ -165,7 +165,7 @@ Boss.i: Boss.cpp.i
 
 # target to preprocess a source file
 Boss.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i
 .PHONY : Boss.cpp.i
 
 Boss.s: Boss.cpp.s
@@ -174,8 +174,35 @@ Boss.s: Boss.cpp.s
 
 # target to generate assembly for a file
 Boss.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s
 .PHONY : Boss.cpp.s
+
+Camera.o: Camera.cpp.o
+
+.PHONY : Camera.o
+
+# target to build an object file
+Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o
+.PHONY : Camera.cpp.o
+
+Camera.i: Camera.cpp.i
+
+.PHONY : Camera.i
+
+# target to preprocess a source file
+Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.i
+.PHONY : Camera.cpp.i
+
+Camera.s: Camera.cpp.s
+
+.PHONY : Camera.s
+
+# target to generate assembly for a file
+Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.s
+.PHONY : Camera.cpp.s
 
 CharacterFactory.o: CharacterFactory.cpp.o
 
@@ -183,7 +210,7 @@ CharacterFactory.o: CharacterFactory.cpp.o
 
 # target to build an object file
 CharacterFactory.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
 .PHONY : CharacterFactory.cpp.o
 
 CharacterFactory.i: CharacterFactory.cpp.i
@@ -192,7 +219,7 @@ CharacterFactory.i: CharacterFactory.cpp.i
 
 # target to preprocess a source file
 CharacterFactory.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i
 .PHONY : CharacterFactory.cpp.i
 
 CharacterFactory.s: CharacterFactory.cpp.s
@@ -201,7 +228,7 @@ CharacterFactory.s: CharacterFactory.cpp.s
 
 # target to generate assembly for a file
 CharacterFactory.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s
 .PHONY : CharacterFactory.cpp.s
 
 Chest.o: Chest.cpp.o
@@ -210,7 +237,7 @@ Chest.o: Chest.cpp.o
 
 # target to build an object file
 Chest.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
 .PHONY : Chest.cpp.o
 
 Chest.i: Chest.cpp.i
@@ -219,7 +246,7 @@ Chest.i: Chest.cpp.i
 
 # target to preprocess a source file
 Chest.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i
 .PHONY : Chest.cpp.i
 
 Chest.s: Chest.cpp.s
@@ -228,7 +255,7 @@ Chest.s: Chest.cpp.s
 
 # target to generate assembly for a file
 Chest.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s
 .PHONY : Chest.cpp.s
 
 Collision.o: Collision.cpp.o
@@ -237,7 +264,7 @@ Collision.o: Collision.cpp.o
 
 # target to build an object file
 Collision.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
 .PHONY : Collision.cpp.o
 
 Collision.i: Collision.cpp.i
@@ -246,7 +273,7 @@ Collision.i: Collision.cpp.i
 
 # target to preprocess a source file
 Collision.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i
 .PHONY : Collision.cpp.i
 
 Collision.s: Collision.cpp.s
@@ -255,7 +282,7 @@ Collision.s: Collision.cpp.s
 
 # target to generate assembly for a file
 Collision.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s
 .PHONY : Collision.cpp.s
 
 Enemy.o: Enemy.cpp.o
@@ -264,7 +291,7 @@ Enemy.o: Enemy.cpp.o
 
 # target to build an object file
 Enemy.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
 .PHONY : Enemy.cpp.o
 
 Enemy.i: Enemy.cpp.i
@@ -273,7 +300,7 @@ Enemy.i: Enemy.cpp.i
 
 # target to preprocess a source file
 Enemy.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i
 .PHONY : Enemy.cpp.i
 
 Enemy.s: Enemy.cpp.s
@@ -282,7 +309,7 @@ Enemy.s: Enemy.cpp.s
 
 # target to generate assembly for a file
 Enemy.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s
 .PHONY : Enemy.cpp.s
 
 GameCharacter.o: GameCharacter.cpp.o
@@ -291,7 +318,7 @@ GameCharacter.o: GameCharacter.cpp.o
 
 # target to build an object file
 GameCharacter.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
 .PHONY : GameCharacter.cpp.o
 
 GameCharacter.i: GameCharacter.cpp.i
@@ -300,7 +327,7 @@ GameCharacter.i: GameCharacter.cpp.i
 
 # target to preprocess a source file
 GameCharacter.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i
 .PHONY : GameCharacter.cpp.i
 
 GameCharacter.s: GameCharacter.cpp.s
@@ -309,7 +336,7 @@ GameCharacter.s: GameCharacter.cpp.s
 
 # target to generate assembly for a file
 GameCharacter.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s
 .PHONY : GameCharacter.cpp.s
 
 GameManager/AssetManager.o: GameManager/AssetManager.cpp.o
@@ -318,7 +345,7 @@ GameManager/AssetManager.o: GameManager/AssetManager.cpp.o
 
 # target to build an object file
 GameManager/AssetManager.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
 .PHONY : GameManager/AssetManager.cpp.o
 
 GameManager/AssetManager.i: GameManager/AssetManager.cpp.i
@@ -327,7 +354,7 @@ GameManager/AssetManager.i: GameManager/AssetManager.cpp.i
 
 # target to preprocess a source file
 GameManager/AssetManager.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i
 .PHONY : GameManager/AssetManager.cpp.i
 
 GameManager/AssetManager.s: GameManager/AssetManager.cpp.s
@@ -336,7 +363,7 @@ GameManager/AssetManager.s: GameManager/AssetManager.cpp.s
 
 # target to generate assembly for a file
 GameManager/AssetManager.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s
 .PHONY : GameManager/AssetManager.cpp.s
 
 GameManager/Game.o: GameManager/Game.cpp.o
@@ -345,7 +372,7 @@ GameManager/Game.o: GameManager/Game.cpp.o
 
 # target to build an object file
 GameManager/Game.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
 .PHONY : GameManager/Game.cpp.o
 
 GameManager/Game.i: GameManager/Game.cpp.i
@@ -354,7 +381,7 @@ GameManager/Game.i: GameManager/Game.cpp.i
 
 # target to preprocess a source file
 GameManager/Game.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i
 .PHONY : GameManager/Game.cpp.i
 
 GameManager/Game.s: GameManager/Game.cpp.s
@@ -363,7 +390,7 @@ GameManager/Game.s: GameManager/Game.cpp.s
 
 # target to generate assembly for a file
 GameManager/Game.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s
 .PHONY : GameManager/Game.cpp.s
 
 GameManager/InputManager.o: GameManager/InputManager.cpp.o
@@ -372,7 +399,7 @@ GameManager/InputManager.o: GameManager/InputManager.cpp.o
 
 # target to build an object file
 GameManager/InputManager.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o
 .PHONY : GameManager/InputManager.cpp.o
 
 GameManager/InputManager.i: GameManager/InputManager.cpp.i
@@ -381,7 +408,7 @@ GameManager/InputManager.i: GameManager/InputManager.cpp.i
 
 # target to preprocess a source file
 GameManager/InputManager.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i
 .PHONY : GameManager/InputManager.cpp.i
 
 GameManager/InputManager.s: GameManager/InputManager.cpp.s
@@ -390,7 +417,7 @@ GameManager/InputManager.s: GameManager/InputManager.cpp.s
 
 # target to generate assembly for a file
 GameManager/InputManager.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s
 .PHONY : GameManager/InputManager.cpp.s
 
 GameStates/GameOverState.o: GameStates/GameOverState.cpp.o
@@ -399,7 +426,7 @@ GameStates/GameOverState.o: GameStates/GameOverState.cpp.o
 
 # target to build an object file
 GameStates/GameOverState.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
 .PHONY : GameStates/GameOverState.cpp.o
 
 GameStates/GameOverState.i: GameStates/GameOverState.cpp.i
@@ -408,7 +435,7 @@ GameStates/GameOverState.i: GameStates/GameOverState.cpp.i
 
 # target to preprocess a source file
 GameStates/GameOverState.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i
 .PHONY : GameStates/GameOverState.cpp.i
 
 GameStates/GameOverState.s: GameStates/GameOverState.cpp.s
@@ -417,7 +444,7 @@ GameStates/GameOverState.s: GameStates/GameOverState.cpp.s
 
 # target to generate assembly for a file
 GameStates/GameOverState.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s
 .PHONY : GameStates/GameOverState.cpp.s
 
 GameStates/GameState.o: GameStates/GameState.cpp.o
@@ -426,7 +453,7 @@ GameStates/GameState.o: GameStates/GameState.cpp.o
 
 # target to build an object file
 GameStates/GameState.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
 .PHONY : GameStates/GameState.cpp.o
 
 GameStates/GameState.i: GameStates/GameState.cpp.i
@@ -435,7 +462,7 @@ GameStates/GameState.i: GameStates/GameState.cpp.i
 
 # target to preprocess a source file
 GameStates/GameState.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i
 .PHONY : GameStates/GameState.cpp.i
 
 GameStates/GameState.s: GameStates/GameState.cpp.s
@@ -444,7 +471,7 @@ GameStates/GameState.s: GameStates/GameState.cpp.s
 
 # target to generate assembly for a file
 GameStates/GameState.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s
 .PHONY : GameStates/GameState.cpp.s
 
 GameStates/MainMenuState.o: GameStates/MainMenuState.cpp.o
@@ -453,7 +480,7 @@ GameStates/MainMenuState.o: GameStates/MainMenuState.cpp.o
 
 # target to build an object file
 GameStates/MainMenuState.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o
 .PHONY : GameStates/MainMenuState.cpp.o
 
 GameStates/MainMenuState.i: GameStates/MainMenuState.cpp.i
@@ -462,7 +489,7 @@ GameStates/MainMenuState.i: GameStates/MainMenuState.cpp.i
 
 # target to preprocess a source file
 GameStates/MainMenuState.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i
 .PHONY : GameStates/MainMenuState.cpp.i
 
 GameStates/MainMenuState.s: GameStates/MainMenuState.cpp.s
@@ -471,7 +498,7 @@ GameStates/MainMenuState.s: GameStates/MainMenuState.cpp.s
 
 # target to generate assembly for a file
 GameStates/MainMenuState.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s
 .PHONY : GameStates/MainMenuState.cpp.s
 
 GameStates/PauseState.o: GameStates/PauseState.cpp.o
@@ -480,7 +507,7 @@ GameStates/PauseState.o: GameStates/PauseState.cpp.o
 
 # target to build an object file
 GameStates/PauseState.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o
 .PHONY : GameStates/PauseState.cpp.o
 
 GameStates/PauseState.i: GameStates/PauseState.cpp.i
@@ -489,7 +516,7 @@ GameStates/PauseState.i: GameStates/PauseState.cpp.i
 
 # target to preprocess a source file
 GameStates/PauseState.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i
 .PHONY : GameStates/PauseState.cpp.i
 
 GameStates/PauseState.s: GameStates/PauseState.cpp.s
@@ -498,7 +525,7 @@ GameStates/PauseState.s: GameStates/PauseState.cpp.s
 
 # target to generate assembly for a file
 GameStates/PauseState.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s
 .PHONY : GameStates/PauseState.cpp.s
 
 GameStates/SelectClassState.o: GameStates/SelectClassState.cpp.o
@@ -507,7 +534,7 @@ GameStates/SelectClassState.o: GameStates/SelectClassState.cpp.o
 
 # target to build an object file
 GameStates/SelectClassState.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
 .PHONY : GameStates/SelectClassState.cpp.o
 
 GameStates/SelectClassState.i: GameStates/SelectClassState.cpp.i
@@ -516,7 +543,7 @@ GameStates/SelectClassState.i: GameStates/SelectClassState.cpp.i
 
 # target to preprocess a source file
 GameStates/SelectClassState.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i
 .PHONY : GameStates/SelectClassState.cpp.i
 
 GameStates/SelectClassState.s: GameStates/SelectClassState.cpp.s
@@ -525,7 +552,7 @@ GameStates/SelectClassState.s: GameStates/SelectClassState.cpp.s
 
 # target to generate assembly for a file
 GameStates/SelectClassState.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s
 .PHONY : GameStates/SelectClassState.cpp.s
 
 GameStates/SplashState.o: GameStates/SplashState.cpp.o
@@ -534,7 +561,7 @@ GameStates/SplashState.o: GameStates/SplashState.cpp.o
 
 # target to build an object file
 GameStates/SplashState.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
 .PHONY : GameStates/SplashState.cpp.o
 
 GameStates/SplashState.i: GameStates/SplashState.cpp.i
@@ -543,7 +570,7 @@ GameStates/SplashState.i: GameStates/SplashState.cpp.i
 
 # target to preprocess a source file
 GameStates/SplashState.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i
 .PHONY : GameStates/SplashState.cpp.i
 
 GameStates/SplashState.s: GameStates/SplashState.cpp.s
@@ -552,7 +579,7 @@ GameStates/SplashState.s: GameStates/SplashState.cpp.s
 
 # target to generate assembly for a file
 GameStates/SplashState.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s
 .PHONY : GameStates/SplashState.cpp.s
 
 GameStates/StateMachine.o: GameStates/StateMachine.cpp.o
@@ -561,7 +588,7 @@ GameStates/StateMachine.o: GameStates/StateMachine.cpp.o
 
 # target to build an object file
 GameStates/StateMachine.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
 .PHONY : GameStates/StateMachine.cpp.o
 
 GameStates/StateMachine.i: GameStates/StateMachine.cpp.i
@@ -570,7 +597,7 @@ GameStates/StateMachine.i: GameStates/StateMachine.cpp.i
 
 # target to preprocess a source file
 GameStates/StateMachine.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i
 .PHONY : GameStates/StateMachine.cpp.i
 
 GameStates/StateMachine.s: GameStates/StateMachine.cpp.s
@@ -579,7 +606,7 @@ GameStates/StateMachine.s: GameStates/StateMachine.cpp.s
 
 # target to generate assembly for a file
 GameStates/StateMachine.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s
 .PHONY : GameStates/StateMachine.cpp.s
 
 Hero.o: Hero.cpp.o
@@ -588,7 +615,7 @@ Hero.o: Hero.cpp.o
 
 # target to build an object file
 Hero.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
 .PHONY : Hero.cpp.o
 
 Hero.i: Hero.cpp.i
@@ -597,7 +624,7 @@ Hero.i: Hero.cpp.i
 
 # target to preprocess a source file
 Hero.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i
 .PHONY : Hero.cpp.i
 
 Hero.s: Hero.cpp.s
@@ -606,7 +633,7 @@ Hero.s: Hero.cpp.s
 
 # target to generate assembly for a file
 Hero.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s
 .PHONY : Hero.cpp.s
 
 Hud.o: Hud.cpp.o
@@ -615,7 +642,7 @@ Hud.o: Hud.cpp.o
 
 # target to build an object file
 Hud.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
 .PHONY : Hud.cpp.o
 
 Hud.i: Hud.cpp.i
@@ -624,7 +651,7 @@ Hud.i: Hud.cpp.i
 
 # target to preprocess a source file
 Hud.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i
 .PHONY : Hud.cpp.i
 
 Hud.s: Hud.cpp.s
@@ -633,7 +660,7 @@ Hud.s: Hud.cpp.s
 
 # target to generate assembly for a file
 Hud.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s
 .PHONY : Hud.cpp.s
 
 Item.o: Item.cpp.o
@@ -642,7 +669,7 @@ Item.o: Item.cpp.o
 
 # target to build an object file
 Item.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
 .PHONY : Item.cpp.o
 
 Item.i: Item.cpp.i
@@ -651,7 +678,7 @@ Item.i: Item.cpp.i
 
 # target to preprocess a source file
 Item.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i
 .PHONY : Item.cpp.i
 
 Item.s: Item.cpp.s
@@ -660,7 +687,7 @@ Item.s: Item.cpp.s
 
 # target to generate assembly for a file
 Item.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
 Knight.o: Knight.cpp.o
@@ -669,7 +696,7 @@ Knight.o: Knight.cpp.o
 
 # target to build an object file
 Knight.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
 .PHONY : Knight.cpp.o
 
 Knight.i: Knight.cpp.i
@@ -678,7 +705,7 @@ Knight.i: Knight.cpp.i
 
 # target to preprocess a source file
 Knight.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i
 .PHONY : Knight.cpp.i
 
 Knight.s: Knight.cpp.s
@@ -687,7 +714,7 @@ Knight.s: Knight.cpp.s
 
 # target to generate assembly for a file
 Knight.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s
 .PHONY : Knight.cpp.s
 
 Mage.o: Mage.cpp.o
@@ -696,7 +723,7 @@ Mage.o: Mage.cpp.o
 
 # target to build an object file
 Mage.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
 .PHONY : Mage.cpp.o
 
 Mage.i: Mage.cpp.i
@@ -705,7 +732,7 @@ Mage.i: Mage.cpp.i
 
 # target to preprocess a source file
 Mage.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i
 .PHONY : Mage.cpp.i
 
 Mage.s: Mage.cpp.s
@@ -714,7 +741,7 @@ Mage.s: Mage.cpp.s
 
 # target to generate assembly for a file
 Mage.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s
 .PHONY : Mage.cpp.s
 
 Object.o: Object.cpp.o
@@ -723,7 +750,7 @@ Object.o: Object.cpp.o
 
 # target to build an object file
 Object.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
 .PHONY : Object.cpp.o
 
 Object.i: Object.cpp.i
@@ -732,7 +759,7 @@ Object.i: Object.cpp.i
 
 # target to preprocess a source file
 Object.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i
 .PHONY : Object.cpp.i
 
 Object.s: Object.cpp.s
@@ -741,7 +768,7 @@ Object.s: Object.cpp.s
 
 # target to generate assembly for a file
 Object.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s
 .PHONY : Object.cpp.s
 
 Projectile.o: Projectile.cpp.o
@@ -750,7 +777,7 @@ Projectile.o: Projectile.cpp.o
 
 # target to build an object file
 Projectile.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
 .PHONY : Projectile.cpp.o
 
 Projectile.i: Projectile.cpp.i
@@ -759,7 +786,7 @@ Projectile.i: Projectile.cpp.i
 
 # target to preprocess a source file
 Projectile.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i
 .PHONY : Projectile.cpp.i
 
 Projectile.s: Projectile.cpp.s
@@ -768,7 +795,7 @@ Projectile.s: Projectile.cpp.s
 
 # target to generate assembly for a file
 Projectile.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s
 .PHONY : Projectile.cpp.s
 
 Random.o: Random.cpp.o
@@ -777,7 +804,7 @@ Random.o: Random.cpp.o
 
 # target to build an object file
 Random.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
 .PHONY : Random.cpp.o
 
 Random.i: Random.cpp.i
@@ -786,7 +813,7 @@ Random.i: Random.cpp.i
 
 # target to preprocess a source file
 Random.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i
 .PHONY : Random.cpp.i
 
 Random.s: Random.cpp.s
@@ -795,7 +822,7 @@ Random.s: Random.cpp.s
 
 # target to generate assembly for a file
 Random.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s
 .PHONY : Random.cpp.s
 
 Tile.o: Tile.cpp.o
@@ -804,7 +831,7 @@ Tile.o: Tile.cpp.o
 
 # target to build an object file
 Tile.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
 .PHONY : Tile.cpp.o
 
 Tile.i: Tile.cpp.i
@@ -813,7 +840,7 @@ Tile.i: Tile.cpp.i
 
 # target to preprocess a source file
 Tile.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i
 .PHONY : Tile.cpp.i
 
 Tile.s: Tile.cpp.s
@@ -822,7 +849,7 @@ Tile.s: Tile.cpp.s
 
 # target to generate assembly for a file
 Tile.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s
 .PHONY : Tile.cpp.s
 
 Weapon.o: Weapon.cpp.o
@@ -831,7 +858,7 @@ Weapon.o: Weapon.cpp.o
 
 # target to build an object file
 Weapon.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
 .PHONY : Weapon.cpp.o
 
 Weapon.i: Weapon.cpp.i
@@ -840,7 +867,7 @@ Weapon.i: Weapon.cpp.i
 
 # target to preprocess a source file
 Weapon.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i
 .PHONY : Weapon.cpp.i
 
 Weapon.s: Weapon.cpp.s
@@ -849,7 +876,7 @@ Weapon.s: Weapon.cpp.s
 
 # target to generate assembly for a file
 Weapon.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s
 .PHONY : Weapon.cpp.s
 
 main.o: main.cpp.o
@@ -858,7 +885,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -867,7 +894,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -876,7 +903,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 map.o: map.cpp.o
@@ -885,7 +912,7 @@ map.o: map.cpp.o
 
 # target to build an object file
 map.cpp.o:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
 .PHONY : map.cpp.o
 
 map.i: map.cpp.i
@@ -894,7 +921,7 @@ map.i: map.cpp.i
 
 # target to preprocess a source file
 map.cpp.i:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i
 .PHONY : map.cpp.i
 
 map.s: map.cpp.s
@@ -903,7 +930,7 @@ map.s: map.cpp.s
 
 # target to generate assembly for a file
 map.cpp.s:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s
 .PHONY : map.cpp.s
 
 # Help Target
@@ -921,6 +948,9 @@ help:
 	@echo "... Boss.o"
 	@echo "... Boss.i"
 	@echo "... Boss.s"
+	@echo "... Camera.o"
+	@echo "... Camera.i"
+	@echo "... Camera.s"
 	@echo "... CharacterFactory.o"
 	@echo "... CharacterFactory.i"
 	@echo "... CharacterFactory.s"

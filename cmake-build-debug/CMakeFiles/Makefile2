@@ -62,42 +62,42 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/matteo/CLionProjects/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
+CMAKE_BINARY_DIR = /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
 
 #=============================================================================
-# Target rules for target //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir
+# Target rules for target CMakeFiles/Project_Alpha_ROOT.dir
 
 # All Build rule for target.
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/all:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/depend
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target Project_Alpha_ROOT"
-.PHONY : //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/all
+CMakeFiles/Project_Alpha_ROOT.dir/all:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/depend
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target Project_Alpha_ROOT"
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/all
 
 # Include target in all.
-all: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/all
+all: CMakeFiles/Project_Alpha_ROOT.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 30
-	$(MAKE) -f CMakeFiles/Makefile2 //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
-.PHONY : //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/rule
+CMakeFiles/Project_Alpha_ROOT.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 31
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Project_Alpha_ROOT.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/rule
 
 # Convenience name for target.
-Project_Alpha_ROOT: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/rule
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/rule
 
 .PHONY : Project_Alpha_ROOT
 
 # clean rule for target.
-//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/clean:
-	$(MAKE) -f //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/build.make //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/clean
-.PHONY : //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/clean
+CMakeFiles/Project_Alpha_ROOT.dir/clean:
+	$(MAKE) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/clean
+.PHONY : CMakeFiles/Project_Alpha_ROOT.dir/clean
 
 # clean rule for target.
-clean: //home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/clean
+clean: CMakeFiles/Project_Alpha_ROOT.dir/clean
 
 .PHONY : clean
 

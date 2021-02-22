@@ -7,6 +7,7 @@
 #include "../map.h"
 #include "../CharacterFactory.h"
 #include "../Hud.h"
+#include "../Camera.h"
 
 
 namespace Alpha
@@ -39,7 +40,7 @@ namespace Alpha
 
         //Hud
         Hud* hud= new Hud(this->hero, this->_data);
-        sf::View view;
+        Camera camera;
         sf::Vector2f positionView;
 
     };

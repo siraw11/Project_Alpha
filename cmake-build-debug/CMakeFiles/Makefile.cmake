@@ -7,10 +7,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/3.14.3/CMakeCCompiler.cmake"
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake"
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/3.14.3/CMakeSystem.cmake"
-  "/home/matteo/CLionProjects/Project_Alpha/CMakeLists.txt"
+  "../CMakeLists.txt"
+  "CMakeFiles/3.14.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.14.3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.14.3/CMakeSystem.cmake"
   "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake"
   "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake"
   "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake"
@@ -42,16 +42,16 @@ set(CMAKE_MAKEFILE_DEPENDS
 
 # The corresponding makefile is:
 set(CMAKE_MAKEFILE_OUTPUTS
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/Makefile"
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/cmake.check_cache"
+  "Makefile"
+  "CMakeFiles/cmake.check_cache"
   )
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "//home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/DependInfo.cmake"
+  "CMakeFiles/Project_Alpha_ROOT.dir/DependInfo.cmake"
   )
