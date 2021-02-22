@@ -24,8 +24,7 @@ namespace Alpha {
 
 
     void GameState::Init() {
-        gameState = STATE_PLAYING;
-
+        gameStatus = GameStatus::isPlaying;
         //map sprite
         level.setTexture();
         //View variable
@@ -42,38 +41,39 @@ namespace Alpha {
             if (sf::Event::Closed == event.type) {
                 this->_data->window.close();
             }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+                this->_data->machine.AddState(StateRef(new GameOverState(_data)),true);
+            }
         }
     }
 
     void GameState::Update() {
 
-
-        //hero movement
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){//up
-            hero->walkingDirection = 0;
-            hero->isMoving = true;
-            //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
-        }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){//left
-            hero->walkingDirection = 1;
-            hero->isMoving = true;
-            // hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-        }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){//down
-            hero->walkingDirection = 2;
-            hero->isMoving = true;
-            //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-        }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){//right
-            hero->walkingDirection = 3;
-            hero->isMoving = true;
-            //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
-        }
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){//attack
-            hero->counterAttack = 1;
-        }
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::E)){//open chest
-            hero->openChest(&level.chest_vector, &level.tile_vector);
-        }
-
-
+        if (gameStatus == GameStatus::isPlaying) {
+            //hero movement
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {//up
+                hero->walkingDirection = 0;
+                hero->isMoving = true;
+                //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
+            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {//left
+                hero->walkingDirection = 1;
+                hero->isMoving = true;
+                // hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
+            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {//down
+                hero->walkingDirection = 2;
+                hero->isMoving = true;
+                //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
+            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {//right
+                hero->walkingDirection = 3;
+                hero->isMoving = true;
+                //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {//attack
+                hero->counterAttack = 1;
+            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {//open chest
+                hero->openChest(&level.chest_vector, &level.tile_vector);
+            }
 
 
             srand(time(nullptr));
@@ -96,23 +96,34 @@ namespace Alpha {
             view.reset(sf::FloatRect(positionView.x, positionView.y, 3840, 2160));
 
             this->_data->window.setView(view);
-         //Game Over
+            //Game Over
 
-        if (hero->dead){
-            // Switch To GameOverState
-            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-            std::cout<<"rimpiazza game state"<<std::endl;
-        }
-        if (boss->dead){
-            // Switch To WinState
+            if (hero->dead) {
 
-            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+                gameStatus = GameStatus::isGameOver;
+                // Switch To GameOverState
+                //this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+
+            }
+
+            if (boss->dead) {
+                // Switch To WinState
+
+                gameStatus = GameStatus::isWin;
+                //this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+            }
         }
+        if (gameStatus == GameStatus::isGameOver){
+            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+            std::cout << "rimpiazza game state" << std::endl;
+        }
+
+        if(gameStatus == GameStatus::isWin)
+            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
     }
 
 
     void GameState::Draw() {
-        //this->_data->window.setFramerateLimit(20);
 
 
         level.drawTile(_data);

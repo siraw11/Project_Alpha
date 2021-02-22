@@ -215,10 +215,6 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
         this->hit = false;
         if (this->getLife() <= 0) {
             this->dead = true;
-            if(this->dead){
-
-
-            }
         }
     }
 
@@ -236,7 +232,8 @@ void Hero::bounce(const Enemy& enemy) {
     float distanza = std::sqrt((d.x*d.x) + (d.y*d.y));
     d/=distanza;
 
-    this->move(sf::Vector2f(30*(d.x),30*(d.y)));
+    if(!this->dead)
+        this->move(sf::Vector2f(30*(d.x),30*(d.y)));
 }
 
 

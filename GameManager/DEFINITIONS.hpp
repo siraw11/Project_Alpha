@@ -1,4 +1,4 @@
-//#include "../PlayerType.h"
+#pragma once
 
 
 #define SCREEN_WIDTH 1920
@@ -92,6 +92,53 @@
 #define CHEST_SIZE 32
 
 #define CHEST_SCALE 3
+
+enum GameStatus{
+    isPlaying, isGameOver, isWin
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

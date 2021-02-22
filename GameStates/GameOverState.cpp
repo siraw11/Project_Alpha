@@ -1,3 +1,5 @@
+#include <utility>
+
 
 #include <sstream>
 #include "GameOverState.hpp"
@@ -10,9 +12,9 @@
 
 namespace Alpha
 {
-	GameOverState::GameOverState(GameDataRef data) : _data(data)
+	GameOverState::GameOverState(GameDataRef data) : _data(std::move(data))
 	{
-
+        std::cout<<"GameOverState"<<std::endl;
 	}
 
 	void GameOverState::Init()
@@ -30,7 +32,7 @@ namespace Alpha
 
 	void GameOverState::HandleInput()
 	{
-		sf::Event event;
+		sf::Event event{};
 
 		while (this->_data->window.pollEvent(event))
 		{
@@ -43,6 +45,7 @@ namespace Alpha
 			{
 				// Switch To Main Menu State By Replacing The Game Over State
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
+                std::cout<<"rimpiazza GameOverState"<<std::endl;
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_homeButton, sf::Mouse::Left, this->_data->window))

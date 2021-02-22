@@ -58,12 +58,14 @@ namespace Alpha {
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::KNIGHT);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                std::cout<<"rimpiazza select class"<<std::endl;
                 //this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                std::cout<<"rimpiazza select class"<<std::endl;
             }
         }
 

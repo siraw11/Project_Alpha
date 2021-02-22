@@ -25,26 +25,20 @@ namespace Alpha
 
 
     private:
+        GameStatus gameStatus;
+
         PlayerType playerType;
 
         GameDataRef _data;
 
-        int gameState{};
-
         sf::Clock _clock;
 
-
-
         map level;
-
         std::unique_ptr<Hero> hero = nullptr;
-
-
         std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(1, 1, 10));
 
         //Hud
         Hud* hud= new Hud(this->hero, this->_data);
-
         sf::View view;
         sf::Vector2f positionView;
 

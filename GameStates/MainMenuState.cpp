@@ -1,3 +1,5 @@
+#include <utility>
+
 
 
 #include <sstream>
@@ -12,9 +14,9 @@
 
 namespace Alpha
 {
-	MainMenuState::MainMenuState(GameDataRef data) : _data(data)
+	MainMenuState::MainMenuState(GameDataRef data) : _data(std::move(data))
 	{
-std::cout<<"main menu"<<std::endl;
+    std::cout<<"main menu"<<std::endl;
 	}
 
 	void MainMenuState::Init()
