@@ -7,6 +7,7 @@
 #include "../map.h"
 #include "../CharacterFactory.h"
 #include "../Hud.h"
+#include "../Camera.h"
 
 
 namespace Alpha
@@ -14,7 +15,8 @@ namespace Alpha
     class GameState : public State
     {
     public:
-        explicit GameState(GameDataRef data,Hero *hero);
+        GameState(GameDataRef data,Hero *hero);
+        ~GameState();
 
         void Init() override;
 
@@ -24,27 +26,21 @@ namespace Alpha
 
 
     private:
+        GameStatus gameStatus;
+
         PlayerType playerType;
 
         GameDataRef _data;
 
-        int gameState{};
-
         sf::Clock _clock;
 
-
-
         map level;
-
         std::unique_ptr<Hero> hero = nullptr;
-
-
         std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(1, 1, 10));
 
         //Hud
         Hud* hud= new Hud(this->hero, this->_data);
-
-        sf::View view;
+        Camera camera;
         sf::Vector2f positionView;
 
     };

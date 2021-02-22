@@ -30,5 +30,6 @@ namespace Alpha
         GameDataRef _data = std::make_shared<GameData>();//si usa nei vari state per accedere ai vari pezzi di game data
 
         void Run();//fa iniziare il gioco
+        void Load();
     };
 }

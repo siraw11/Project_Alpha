@@ -48,10 +48,10 @@ RM = /opt/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/waris/CLionProjects/Project_Alpha
+CMAKE_SOURCE_DIR = /home/matteo/CLionProjects/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/waris/CLionProjects/Project_Alpha
+CMAKE_BINARY_DIR = /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/CMakeFiles /home/matteo/CLionProjects/Project_Alpha/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

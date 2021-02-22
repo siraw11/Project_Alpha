@@ -10,6 +10,7 @@ namespace Alpha
 	{
 	public:
 		explicit MainMenuState(GameDataRef data);
+        ~MainMenuState();
 
 		void Init() override;
 
