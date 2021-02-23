@@ -20,15 +20,13 @@ void Camera::update(const Hero& hero, const Alpha::GameDataRef& _data) {
     if (position.y < 0)
         position.y = 0;
 
-    reset(sf::FloatRect(position.x, position.y, 3840, 2160));
+    reset(sf::FloatRect(position.x, position.y, _data->window.getSize().x, _data->window.getSize().y));
     _data->window.setView(*this);
 }
 
 void Camera::resetCamera(const Alpha::GameDataRef& _data) {
-    position.x = 0;
-    position.y = 0;
 
-    reset(sf::FloatRect(position.x, position.y, 3840, 2160));
+    reset(sf::FloatRect(0, 0,_data->window.getSize().x,_data->window.getSize().y));
     _data->window.setView(*this);
 
 }

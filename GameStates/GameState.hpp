@@ -5,9 +5,13 @@
 #include "../GameManager/Game.hpp"
 #include "../PlayerType.h"
 #include "../map.h"
-#include "../CharacterFactory.h"
 #include "../Hud.h"
 #include "../Camera.h"
+#include "../Hero.h"
+#include "../Weapon.h"
+#include "../Boss.h"
+#include "../GameManager/DEFINITIONS.hpp"
+#include "PauseState.hpp"
 
 
 namespace Alpha
@@ -41,7 +45,6 @@ namespace Alpha
         //Hud
         Hud* hud= new Hud(this->hero, this->_data);
         Camera camera;
-        sf::Vector2f positionView;
 
     };
 }

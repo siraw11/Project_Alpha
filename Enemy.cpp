@@ -56,7 +56,11 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
 
 
     bool collided = false;
-    if(dead){
+    if(hero.getLife()<=0){
+        movementvect.x = 0;
+        movementvect.y = 0;
+        collided = true;
+    }else if(dead){
         movementvect.x = 0;
         movementvect.y = 0;
     }else if(Collision::checkCollision( const_cast<std::vector<Tile> &>(tile_vector),this, walkingDirection().x, walkingDirection().y )){
@@ -74,7 +78,6 @@ void Enemy::movement(const std::vector<Tile>& tile_vector, Hero &hero, const std
         this->heroHitted = true;
         collided = true;
     }else{
-
         for( const Chest& i : chest_vector)
             if(Collision::chestCollision( i, this, walkingDirection().x, walkingDirection().y )){
                 movementvect.x = 0;

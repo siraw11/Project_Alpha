@@ -33,7 +33,11 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
     sf::Vector2f movement(direction().x*speed,direction().y*speed);
     bool collided = false;
 
-    if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, direction().x, direction().y) || counterAttack != 0) {
+    if(this->getLife()<=0){
+        movement.x = 0;
+        movement.y = 0;
+        collided = true;
+    }else if(Collision::checkCollision(const_cast<std::vector<Tile> &>(tile_vector), this, direction().x, direction().y) || counterAttack != 0) {
         movement.x = 0;
         movement.y = 0;
         collided=true;
@@ -71,7 +75,11 @@ void Hero::walkingAnimation() {
 
 void Hero::attackAnimation() {
     int k = counterAttack - 1;
-    setTextureRect(sf::IntRect(64 * k, 64 *(walkingDirection+4), 64, 64));
+    setTextureRect(sf::IntRect(64 * k, 64 *(walkingDirection + 4), 64, 64));
+}
+
+void Hero::deathAnimation() {
+    setTextureRect(sf::IntRect(64*counterDeath, 64*8, 64, 64));
 }
 
 void Hero::attack( std::vector<Enemy>* enemy_vector) {
@@ -123,6 +131,7 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
     }
 }
 
+
 void Hero::openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_vector) {
 
     for(auto &i: *chest_vector) {
@@ -131,14 +140,11 @@ void Hero::openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_
             if(i.close){
                 i.open(this, tile_vector);
             }
-
-
             break;
         }
     }
 
 }
-
 
 sf::Vector2i Hero::direction() {
     sf::Vector2i direction;
@@ -168,14 +174,13 @@ sf::Vector2i Hero::direction() {
     return direction;
 }
 
+
 int Hero::damage() {
     int damage = strength;
     if(weapon != nullptr)
         damage += weapon->getStrength();
     return damage;
 }
-
-
 void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss ) {
 
     //update movement
@@ -203,7 +208,6 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
                 if (i.heroHitted) {
                     if (this->playerType == PlayerType::KNIGHT && this->getArmor() > 0) {
                         this->setArmor(this->getArmor() - i.getStrength());
-
                     } else {
                         this->takeDamage(i.getStrength());
                     }
@@ -213,8 +217,14 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
             }
         }
         this->hit = false;
-        if (this->getLife() <= 0) {
+    }
+    //death animation
+    if (this->getLife() <= 0) {
+        if(counterDeath == 11){
             this->dead = true;
+        }else{
+            this->deathAnimation();
+            counterDeath++;
         }
     }
 
@@ -225,7 +235,11 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
             break;}
     }
 
+
+
 }
+
+
 void Hero::bounce(const Enemy& enemy) {
 
     auto d = this->getPosition() - enemy.getPosition();
@@ -235,7 +249,6 @@ void Hero::bounce(const Enemy& enemy) {
     if(!this->dead)
         this->move(sf::Vector2f(30*(d.x),30*(d.y)));
 }
-
 
 //getters
 Weapon *Hero::getWeapon() const {

@@ -51,7 +51,10 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
     if(distanza < 800){ //the boss stop moving and start shooting projectile
         movement.x = 0;
         movement.y = 0;
-
+        collided = true;
+    }if(hero.dead){
+        movementvect.x = 0;
+        movementvect.y = 0;
         collided = true;
     }else if(dead){
         movement.x = 0;
@@ -60,7 +63,7 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
         movement.x = 0;
         movement.y = 0;
         collided = true;
-    }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*walkingDirection().x ) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*walkingDirection().y )){//check collision
+    }else if( getPosition().x == spawnposition.x + (ENEMY_WALK_DISTANCE*walkingDirection().x ) && getPosition().y == spawnposition.y + (ENEMY_WALK_DISTANCE*walkingDirection().y )){//check collision
         movement.x = 0;
         movement.y = 0;
         collided = true;

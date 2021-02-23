@@ -26,6 +26,7 @@ public:
     void heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector );
     void openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_vector );
     void attackAnimation();
+    void deathAnimation();
     void attack( std::vector<Enemy>* enemy_vector );
     int damage();
     sf::Vector2i direction();
@@ -35,6 +36,7 @@ public:
 //attributi
     int walkingDirection = 2;//0=up, 1=left, 2=down, 3=right
     int counterAttack = 0;//attack rate
+    int counterDeath = 0;
     std::vector<Projectile> projectile_vector;
     PlayerType playerType;
     bool hit;

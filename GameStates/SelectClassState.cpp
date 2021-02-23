@@ -8,6 +8,7 @@
 #include "GameState.hpp"
 #include "PauseState.hpp"
 #include "../GameManager/DEFINITIONS.hpp"
+#include "../CharacterFactory.h"
 //#include "../PlayerType.h"
 
 
@@ -33,6 +34,8 @@ namespace Alpha {
         this->_knightButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_knightButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 2) - (this->_knightButton.getGlobalBounds().height / 2));
         this->_mageButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_mageButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 1.5) - (this->_mageButton.getGlobalBounds().height / 2));
         this->_title.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
+
+        this->_background.setScale(sf::Vector2f(GAME_BACKGROUND_SCALE,GAME_BACKGROUND_SCALE));
     }
 
     void SelectClassState::HandleInput() {
@@ -49,9 +52,7 @@ namespace Alpha {
             if (this->_data->input.IsSpriteClicked(this->_archerButton, sf::Mouse::Left, this->_data->window)){
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::ARCHER);
 
-               // this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-
-               this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
                 std::cout<<"rimpiazza select class"<<std::endl;
 
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
@@ -59,7 +60,6 @@ namespace Alpha {
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
                 std::cout<<"rimpiazza select class"<<std::endl;
-                //this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);
