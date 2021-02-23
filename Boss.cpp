@@ -60,7 +60,7 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
         movement.x = 0;
         movement.y = 0;
         collided = true;
-    }else if( getPosition().x==spawnposition.x+(ENEMY_WALK_DISTANCE*walkingDirection().x ) && getPosition().y==spawnposition.y+(ENEMY_WALK_DISTANCE*walkingDirection().y )){//check collision
+    }else if( getPosition().x == spawnposition.x + (ENEMY_WALK_DISTANCE*walkingDirection().x ) && getPosition().y == spawnposition.y + (ENEMY_WALK_DISTANCE*walkingDirection().y )){//check collision
         movement.x = 0;
         movement.y = 0;
         collided = true;

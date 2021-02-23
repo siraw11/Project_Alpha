@@ -49,10 +49,8 @@ namespace Alpha
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_exitButton, sf::Mouse::Left, this->_data->window))
-			{      this->_data->window.close();
-				// Switch To Main Menu State By Replacing The Game Over State
-				//this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-
+			{
+			    this->_data->window.close();
 			}
 		}
 	}
@@ -64,12 +62,9 @@ namespace Alpha
 
 	void GameOverState::Draw()
 	{
-
-        this->_data->window.draw(this->_background);
+	    this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_retryButton);
 		this->_data->window.draw(this->_exitButton);
-
-
 	}
 
     GameOverState::~GameOverState() = default;

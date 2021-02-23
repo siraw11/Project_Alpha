@@ -8,6 +8,7 @@
 #include "GameState.hpp"
 #include "PauseState.hpp"
 #include "../GameManager/DEFINITIONS.hpp"
+#include "../CharacterFactory.h"
 //#include "../PlayerType.h"
 
 
@@ -49,9 +50,7 @@ namespace Alpha {
             if (this->_data->input.IsSpriteClicked(this->_archerButton, sf::Mouse::Left, this->_data->window)){
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::ARCHER);
 
-               // this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-
-               this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
                 std::cout<<"rimpiazza select class"<<std::endl;
 
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
@@ -59,7 +58,6 @@ namespace Alpha {
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
                 std::cout<<"rimpiazza select class"<<std::endl;
-                //this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);

@@ -92,7 +92,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o: /opt/SFML-2.5.1/include/SFML/Win
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Camera.h
-CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Collision.h
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Enemy.h
@@ -103,6 +102,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/GameOverState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/GameState.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/PauseState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o: ../Hero.h
@@ -959,7 +959,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o: /opt/SFML-2.5.
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Camera.h
-CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameCharacter.h
@@ -971,6 +970,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/GameOverState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/GameState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/MainMenuState.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/PauseState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: ../GameStates/StateMachine.hpp
@@ -1059,7 +1059,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o: /opt/SFML-2.5.
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Camera.h
-CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameCharacter.h
@@ -1073,7 +1072,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/Game
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/GameWinState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/MainMenuState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/PauseState.hpp
-CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: ../Hero.h
@@ -1161,7 +1159,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o: /opt/SFML-2.5.1/in
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../Camera.h
-CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameCharacter.h
@@ -1174,6 +1171,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/G
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/GameWinState.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/GameWinState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/MainMenuState.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/PauseState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: ../GameStates/StateMachine.hpp
@@ -1262,7 +1260,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o: /opt/SFML-2.5.1
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Camera.h
-CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameCharacter.h
@@ -1274,6 +1271,7 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/GameState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/MainMenuState.cpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/MainMenuState.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/PauseState.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: ../GameStates/StateMachine.hpp
@@ -1362,7 +1360,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o: /opt/SFML-2.5.
 
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Boss.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Camera.h
-CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../CharacterFactory.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Chest.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../Enemy.h
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o: ../GameCharacter.h

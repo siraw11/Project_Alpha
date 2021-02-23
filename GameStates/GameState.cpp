@@ -1,19 +1,9 @@
+#pragma once
 #include <utility>
-
-#include <sstream>
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
-#include "SelectClassState.h"
-#include "../GameManager/DEFINITIONS.hpp"
-#include "PauseState.hpp"
 #include "GameOverState.hpp"
-#include "../Hero.h"
-#include "../PlayerType.h"
-#include "../Weapon.h"
-#include "../Boss.h"
 #include <iostream>
-#include "sstream"
-#include "../Hud.h"
 #include "GameWinState.h"
 
 
@@ -54,19 +44,15 @@ namespace Alpha {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {//up
                 hero->walkingDirection = 0;
                 hero->isMoving = true;
-                //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector );
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {//left
                 hero->walkingDirection = 1;
                 hero->isMoving = true;
-                // hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {//down
                 hero->walkingDirection = 2;
                 hero->isMoving = true;
-                //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
             } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {//right
                 hero->walkingDirection = 3;
                 hero->isMoving = true;
-                //hero->heroMovement( level.tile_vector, level.enemy_vector, level.chest_vector);
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {//attack
                 hero->counterAttack = 1;
@@ -83,28 +69,29 @@ namespace Alpha {
             hud->update(*hero);
             camera.update(*hero, _data);
 
-
-
             //Game Over
             if (hero->dead) {
                 gameStatus = GameStatus::isGameOver;
 
             }
+            //Win
             if (boss->dead) {
                 gameStatus = GameStatus::isWin;
             }
         }
+        //Switch to GameOverState
         if (gameStatus == GameStatus::isGameOver){
             this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
             camera.resetCamera(_data);
             std::cout << "rimpiazza game state" << std::endl;
         }
-
+        //Switch to GameWinState
         if(gameStatus == GameStatus::isWin){
             this->_data->machine.AddState(StateRef(new GameWinState(_data)), true);
             camera.resetCamera(_data);
+            std::cout << "rimpiazza game state" << std::endl;
         }
-        std::cout << "rimpiazza game state" << std::endl;
+
     }
 
 
