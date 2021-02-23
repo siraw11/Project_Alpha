@@ -6,7 +6,7 @@
 #include "Camera.h"
 
 Camera::Camera() {
-    reset(sf::FloatRect(position.x, position.y, 1920, 1080));
+    reset(sf::FloatRect(position.x, position.y, 3840, 2160));
     setViewport(sf::FloatRect(0, 0, 1.0f, 1.0f));
 
 }

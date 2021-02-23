@@ -45,13 +45,13 @@ namespace Alpha
 			{
 				// Switch To Main Menu State By Replacing The Game Over State
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
-                std::cout<<"rimpiazza GameOverState"<<std::endl;
+
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_exitButton, sf::Mouse::Left, this->_data->window))
-			{
+			{      this->_data->window.close();
 				// Switch To Main Menu State By Replacing The Game Over State
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				//this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
 
 			}
 		}
