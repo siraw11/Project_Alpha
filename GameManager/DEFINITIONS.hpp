@@ -21,6 +21,14 @@
 
 #define MAGE_BUTTON_FILEPATH "../Resources/MainMenu/Mage_Button.png"
 
+#define RETRY_BUTTON_FILEPATH "../Resources/MainMenu/RetryButton.png"
+
+#define EXIT_BUTTON_FILEPATH "../Resources/MainMenu/ExitButton.png"
+
+#define GAMEWIN_BACKGROUND_FILEPATH "../Resources/MainMenu/GameWin.jpg"
+
+#define GAMEOVER_BACKGROUND_FILEPATH "../Resources/MainMenu/GameOver.jpg"
+
 #define MAIN_MENU_TITLE_FILEPATH "../Resources/MainMenu/Game Title.png"
 
 #define MAIN_MENU_PLAY_BUTTON "../Resources/MainMenu/Play_Button.png"

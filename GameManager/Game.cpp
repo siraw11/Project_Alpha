@@ -44,5 +44,11 @@ namespace Alpha
         this->_data->assets.LoadTexture("Mage", MAGE_BUTTON_FILEPATH);
         this->_data->assets.LoadTexture("Game Title", MAIN_MENU_TITLE_FILEPATH);
 
+        this->_data->assets.LoadTexture("GameOverBackground",GAMEOVER_BACKGROUND_FILEPATH);
+        this->_data->assets.LoadTexture("GameWinBackground",GAMEWIN_BACKGROUND_FILEPATH );
+        this->_data->assets.LoadTexture("ExitButton", EXIT_BUTTON_FILEPATH);
+        this->_data->assets.LoadTexture("RetryButton",RETRY_BUTTON_FILEPATH);
+
+
     }
 }
