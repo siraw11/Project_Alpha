@@ -28,6 +28,8 @@ namespace Alpha
 
         this->_retryButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_retryButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 3) - (this->_retryButton.getGlobalBounds().height / 2));
 		this->_exitButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_exitButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3.0 * 2.0) - (this->_exitButton.getLocalBounds().height / 2.0));
+
+		this->_background.setScale(sf::Vector2f(GAME_ENDING_BACKGROUND_SCALE,GAME_ENDING_BACKGROUND_SCALE));
 	}
 
 	void GameOverState::HandleInput()

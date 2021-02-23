@@ -34,6 +34,8 @@ namespace Alpha {
         this->_knightButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_knightButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 2) - (this->_knightButton.getGlobalBounds().height / 2));
         this->_mageButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_mageButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 1.5) - (this->_mageButton.getGlobalBounds().height / 2));
         this->_title.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
+
+        this->_background.setScale(sf::Vector2f(GAME_BACKGROUND_SCALE,GAME_BACKGROUND_SCALE));
     }
 
     void SelectClassState::HandleInput() {

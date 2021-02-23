@@ -39,7 +39,7 @@
 
 #define SELECT_CLASS "../Resources/MainMenu/SelectClass_Button.png"
 
-#define RETRY_BUTTON "../Resources/MainMenu/Retry Button.png"
+#define RETRY_BUTTON "../Resources/MainMenu/RetryButton.png"
 
 #define HEART_UI "../Resources/Sprites/item/heart.png"
 
@@ -49,13 +49,9 @@
 
 #define ARROW_UI "../Resources/Sprites/item/arrow_1.png"
 
-#define TIME_BEFORE_SHOWING_GAME_OVER 1
+#define GAME_ENDING_BACKGROUND_SCALE 3.75
 
-#define STATE_WON 1
-
-#define STATE_LOSE 2
-
-#define STATE_PLAYING 0
+#define GAME_BACKGROUND_SCALE 2
 
 #define SCALE 3
 
