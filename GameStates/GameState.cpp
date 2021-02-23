@@ -14,6 +14,7 @@
 #include <iostream>
 #include "sstream"
 #include "../Hud.h"
+#include "GameWinState.h"
 
 
 namespace Alpha {
@@ -100,7 +101,7 @@ namespace Alpha {
         }
 
         if(gameStatus == GameStatus::isWin){
-            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+            this->_data->machine.AddState(StateRef(new GameWinState(_data)), true);
             camera.resetCamera(_data);
         }
         std::cout << "rimpiazza game state" << std::endl;

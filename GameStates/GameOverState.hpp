@@ -23,7 +23,7 @@ namespace Alpha
 
         sf::Sprite _background;
 		sf::Sprite _retryButton;
-		sf::Sprite _homeButton;
+		sf::Sprite _exitButton;
 
 	};
 }

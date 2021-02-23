@@ -21,13 +21,13 @@ namespace Alpha
 	{
 
 
-        this->_background.setTexture(this->_data->assets.GetTexture("Background"));
-		this->_retryButton.setTexture(this->_data->assets.GetTexture("Retry Button"));
-		this->_homeButton.setTexture(this->_data->assets.GetTexture("Home Button"));
+        this->_background.setTexture(this->_data->assets.GetTexture("GameOverBackground"));
+		this->_retryButton.setTexture(this->_data->assets.GetTexture("RetryButton"));
+		this->_exitButton.setTexture(this->_data->assets.GetTexture("ExitButton"));
 
 
-		this->_retryButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_retryButton.getGlobalBounds().width / 2.0), (this->_data->window.getSize().y/ 2.0) - (this->_retryButton.getGlobalBounds().height / 2.0));
-		this->_homeButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_homeButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3.0 * 2.0) - (this->_homeButton.getLocalBounds().height / 2.0));
+        this->_retryButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_retryButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 3) - (this->_retryButton.getGlobalBounds().height / 2));
+		this->_exitButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_exitButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3.0 * 2.0) - (this->_exitButton.getLocalBounds().height / 2.0));
 	}
 
 	void GameOverState::HandleInput()
@@ -45,13 +45,13 @@ namespace Alpha
 			{
 				// Switch To Main Menu State By Replacing The Game Over State
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
-                std::cout<<"rimpiazza GameOverState"<<std::endl;
+
 			}
 
-			if (this->_data->input.IsSpriteClicked(this->_homeButton, sf::Mouse::Left, this->_data->window))
-			{
+			if (this->_data->input.IsSpriteClicked(this->_exitButton, sf::Mouse::Left, this->_data->window))
+			{      this->_data->window.close();
 				// Switch To Main Menu State By Replacing The Game Over State
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				//this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
 
 			}
 		}
@@ -67,7 +67,7 @@ namespace Alpha
 
         this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_retryButton);
-		this->_data->window.draw(this->_homeButton);
+		this->_data->window.draw(this->_exitButton);
 
 
 	}
