@@ -28,12 +28,13 @@ namespace Alpha
         this->_background.setTexture(this->_data->assets.GetTexture("GameWinBackground"));
         this->_retryButton.setTexture(this->_data->assets.GetTexture("RetryButton"));
         this->_exitButton.setTexture(this->_data->assets.GetTexture("ExitButton"));
-
+        this->_WinTitle.setTexture(this->_data->assets.GetTexture("Win Title"));
+        this->_exitButton.setScale(0.5,0.5);
+        this->_retryButton.setScale(0.5,0.5);
 
         this->_retryButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_retryButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 3) - (this->_retryButton.getGlobalBounds().height / 2));
-        this->_exitButton.setPosition((this->_data->window.getSize().x / 2.0) - (this->_exitButton.getLocalBounds().width / 2), (this->_data->window.getSize().y / 3.0 * 2.0) - (this->_exitButton.getLocalBounds().height / 2.0));
-
-        this->_background.setScale(sf::Vector2f(GAME_ENDING_BACKGROUND_SCALE,GAME_ENDING_BACKGROUND_SCALE));
+        this->_exitButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_exitButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 2) - (this->_exitButton.getGlobalBounds().height / 2));
+        this->_WinTitle.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_WinTitle.getGlobalBounds().width / 2), this->_WinTitle.getGlobalBounds().height * 0.5);
     }
 
     void GameWinState:: HandleInput()
@@ -74,6 +75,8 @@ namespace Alpha
         this->_data->window.draw(this->_background);
         this->_data->window.draw(this->_retryButton);
         this->_data->window.draw(this->_exitButton);
+        this->_data->window.draw(this->_WinTitle);
+
 
 
     }

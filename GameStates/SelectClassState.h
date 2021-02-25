@@ -30,6 +30,12 @@ namespace Alpha
 
         sf::Sprite _mageButton;
 
+        sf::Sprite _archerMenu;
+
+        sf::Sprite _knightMenu;
+
+        sf::Sprite _mageMenu;
+
         sf::Sprite _title;
 
 

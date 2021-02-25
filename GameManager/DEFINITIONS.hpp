@@ -17,9 +17,15 @@
 
 #define ARCHER_BUTTON_FILEPATH "../Resources/MainMenu/Archer_Button.png"
 
+#define ARCHER_MENU_FILEPATH "../Resources/MainMenu/archer_menu.png"
+
 #define KNIGHT_BUTTON_FILEPATH "../Resources/MainMenu/Knight_Button.png"
 
+#define KNIGHT_MENU_FILEPATH "../Resources/MainMenu/knight_menu.png"
+
 #define MAGE_BUTTON_FILEPATH "../Resources/MainMenu/Mage_Button.png"
+
+#define MAGE_MENU_FILEPATH "../Resources/MainMenu/mage_menu.png"
 
 #define RETRY_BUTTON_FILEPATH "../Resources/MainMenu/RetryButton.png"
 
@@ -31,11 +37,16 @@
 
 #define MAIN_MENU_TITLE_FILEPATH "../Resources/MainMenu/Game Title.png"
 
+#define WIN_TITLE_FILEPATH "../Resources/MainMenu/WinState_title.png"
+
+#define GAME_OVER_TITLE_FILEPATH "../Resources/MainMenu/GameOver_title.png"
+
+
 #define MAIN_MENU_PLAY_BUTTON "../Resources/MainMenu/Play_Button.png"
 
 #define RESUME_BUTTON "../Resources/MainMenu/Resume Button.png"
 
-#define HOME_BUTTON "../Resources/MainMenu/Home Button.png"
+//#define HOME_BUTTON "../Resources/MainMenu/Home Button.png"
 
 #define SELECT_CLASS "../Resources/MainMenu/SelectClass_Button.png"
 
@@ -49,7 +60,7 @@
 
 #define ARROW_UI "../Resources/Sprites/item/arrow_1.png"
 
-#define GAME_ENDING_BACKGROUND_SCALE 3.75
+//#define GAME_ENDING_BACKGROUND_SCALE 3.75
 
 #define GAME_BACKGROUND_SCALE 2
 

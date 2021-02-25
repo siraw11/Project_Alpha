@@ -2,7 +2,7 @@
 // Created by matteo on 22/02/21.
 //
 
-#include <iostream>
+
 #include "Camera.h"
 
 Camera::Camera() {
@@ -20,7 +20,7 @@ void Camera::update(const Hero& hero, const Alpha::GameDataRef& _data) {
     if (position.y < 0)
         position.y = 0;
 
-    reset(sf::FloatRect(position.x, position.y, _data->window.getSize().x, _data->window.getSize().y));
+    reset(sf::FloatRect(position.x, position.y, 3840, 2160));
     _data->window.setView(*this);
 }
 

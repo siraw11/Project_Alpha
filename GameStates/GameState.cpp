@@ -1,4 +1,4 @@
-#pragma once
+
 #include <utility>
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
@@ -71,7 +71,7 @@ namespace Alpha {
 
             //Game Over
             if (hero->dead) {
-                gameStatus = GameStatus::isGameOver;
+            gameStatus = GameStatus::isWin;
 
             }
             //Win

@@ -24,6 +24,7 @@ namespace Alpha
         sf::Sprite _background;
         sf::Sprite _retryButton;
         sf::Sprite _exitButton;
+        sf::Sprite _WinTitle;
 
     };
 }

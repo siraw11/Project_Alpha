@@ -24,11 +24,12 @@ namespace Alpha
 	    this->_background.setTexture(this->_data->assets.GetTexture("Background"));
         this->_selectClass.setTexture(this->_data->assets.GetTexture("Select Class"));
 		this->_title.setTexture(this->_data->assets.GetTexture("Game Title"));
+        this->_selectClass.setScale(0.5,0.5);
 
         this->_selectClass.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_selectClass.getGlobalBounds().width / 2), ((int)(this->_data->window.getSize().y/ 2)) - (this->_selectClass.getGlobalBounds().height / 2));
         this->_title.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_title.getGlobalBounds().width / 2), this->_title.getGlobalBounds().height * 0.5);
 
-        this->_background.setScale(sf::Vector2f(GAME_BACKGROUND_SCALE,GAME_BACKGROUND_SCALE));
+        //this->_background.setScale(sf::Vector2f(GAME_BACKGROUND_SCALE,GAME_BACKGROUND_SCALE));
 	}
 
 

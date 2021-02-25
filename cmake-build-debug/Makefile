@@ -68,10 +68,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matteo/CLionProjects/Project_Alpha
+CMAKE_SOURCE_DIR = /home/waris/CLionProjects/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
+CMAKE_BINARY_DIR = /home/waris/CLionProjects/Project_Alpha/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -547,33 +547,6 @@ GameStates/MainMenuState.s: GameStates/MainMenuState.cpp.s
 GameStates/MainMenuState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s
 .PHONY : GameStates/MainMenuState.cpp.s
-
-GameStates/PauseState.o: GameStates/PauseState.cpp.o
-
-.PHONY : GameStates/PauseState.o
-
-# target to build an object file
-GameStates/PauseState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.o
-.PHONY : GameStates/PauseState.cpp.o
-
-GameStates/PauseState.i: GameStates/PauseState.cpp.i
-
-.PHONY : GameStates/PauseState.i
-
-# target to preprocess a source file
-GameStates/PauseState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.i
-.PHONY : GameStates/PauseState.cpp.i
-
-GameStates/PauseState.s: GameStates/PauseState.cpp.s
-
-.PHONY : GameStates/PauseState.s
-
-# target to generate assembly for a file
-GameStates/PauseState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/PauseState.cpp.s
-.PHONY : GameStates/PauseState.cpp.s
 
 GameStates/SelectClassState.o: GameStates/SelectClassState.cpp.o
 
@@ -1034,9 +1007,6 @@ help:
 	@echo "... GameStates/MainMenuState.o"
 	@echo "... GameStates/MainMenuState.i"
 	@echo "... GameStates/MainMenuState.s"
-	@echo "... GameStates/PauseState.o"
-	@echo "... GameStates/PauseState.i"
-	@echo "... GameStates/PauseState.s"
 	@echo "... GameStates/SelectClassState.o"
 	@echo "... GameStates/SelectClassState.i"
 	@echo "... GameStates/SelectClassState.s"
