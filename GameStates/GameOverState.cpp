@@ -24,7 +24,7 @@ namespace Alpha
         this->_background.setTexture(this->_data->assets.GetTexture("GameOverBackground"));
 		this->_retryButton.setTexture(this->_data->assets.GetTexture("RetryButton"));
 		this->_exitButton.setTexture(this->_data->assets.GetTexture("ExitButton"));
-        this->_LostTitle.setTexture(this->_data->assets.GetTexture("Win Title"));
+        this->_LostTitle.setTexture(this->_data->assets.GetTexture("Lost Title"));
 		this->_exitButton.setScale(0.5,0.5);
         this->_retryButton.setScale(0.5,0.5);
 

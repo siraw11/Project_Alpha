@@ -71,7 +71,7 @@ namespace Alpha {
 
             //Game Over
             if (hero->dead) {
-            gameStatus = GameStatus::isWin;
+            gameStatus = GameStatus::isGameOver;
 
             }
             //Win
