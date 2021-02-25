@@ -27,11 +27,12 @@ public:
     void openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_vector );
     void attackAnimation();
     void deathAnimation();
-    void attack( std::vector<Enemy>* enemy_vector );
+    void attack( std::vector<Enemy>* enemy_vector, std::unique_ptr<Boss>& boss );
     int damage();
-    sf::Vector2i direction();
+    sf::Vector2i direction() const;
     void update( const std::vector<Tile>& tile_vector, std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss );
     void bounce(const Enemy& enemy);
+    void initSound(const Alpha::GameDataRef &_data);
 
 //attributi
     int walkingDirection = 2;//0=up, 1=left, 2=down, 3=right
@@ -63,6 +64,13 @@ protected:
     int armor;
     int arrow;
     int mana;
+    sf::Sound arrowSound;
+    sf::Sound swordSound;
+    sf::Sound fireSound;
+    sf::Sound femaleHitSound;
+    sf::Sound maleHitSound;
+    sf::Sound owSound;
+    sf::Sound scream;
 
 
 private:

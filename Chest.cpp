@@ -19,10 +19,6 @@ Chest::Chest():close(true){
     setTextureRect(sf::IntRect(0,0,32,32));
     setSize(sf::Vector2f(32,32));
     setScale(SCALE*2,SCALE*2);
-
-
-
-
 }
 
 //destructor
@@ -165,8 +161,18 @@ void Chest::setClose(bool close) {
 }
 
 void Chest::openingAnimation() {
+
+    //if(counterOpening == 0)
+       // openingSound.play();
     counterOpening++;
     setTextureRect(sf::IntRect(0,32*counterOpening,32,32));
+}
+
+void Chest::initSound(const Alpha::GameDataRef &_data) {
+    std::cout<<"init chest"<<std::endl;
+    //openingSound.setBuffer(_data->assets.GetSound("Chest"));
+    std::cout<<"end chest"<<std::endl;
+
 }
 
 

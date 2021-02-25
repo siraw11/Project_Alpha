@@ -221,5 +221,21 @@ bool Collision::projectileCollisionHero(Projectile *projectile, const Hero &hero
     return collided;
 }
 
+bool Collision::meleeHeroAttackBoss(Hero *hero, const Boss &boss, int x, int y) {
+    bool collided = false;
+    sf::Vector2f position(hero->getPosition());
+
+    position.x += hero->getSpeed()*x+10;//next position right or left but +10 to avoid the collision with the enemy
+    position.y += hero->getSpeed()*y+10;//next position up or down
+
+    if(position.x + HERO_SIZE*HERO_SCALE > boss.getPosition().x && position.x < boss.getPosition().x + BOSS_SIZE*BOSS_SCALE &&
+       position.y < boss.getPosition().y + BOSS_SIZE*BOSS_SCALE && position.y + HERO_SIZE*HERO_SCALE > boss.getPosition().y){
+
+
+        collided = true;
+    }
+    return collided;
+}
+
 
 

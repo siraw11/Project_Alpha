@@ -18,6 +18,12 @@ namespace Alpha {
         gameStatus = GameStatus::isPlaying;
         //map sprite
         level.setTexture();
+        std::cout<<"inizio"<<std::endl;
+        level.initSound(_data);
+        std::cout<<"ni mezzzo"<<std::endl;
+        hero->initSound(_data);
+        std::cout<<"fine"<<std::endl;
+
         //View variable
         this->_data->window.setFramerateLimit(60);
     }

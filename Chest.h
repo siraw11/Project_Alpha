@@ -9,7 +9,9 @@
 
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio/Sound.hpp>
 #include "GameManager/DEFINITIONS.hpp"
+#include "GameManager/Game.hpp"
 #include "Object.h"
 
 
@@ -26,6 +28,7 @@ public:
     void open(Hero* hero, std::vector<Tile>* tile_vector);
     void openingAnimation();
     void setClose(bool close);
+    void initSound(const Alpha::GameDataRef &_data);
 
 //attributes
     bool close;
@@ -35,6 +38,8 @@ public:
 private:
 //attributes
     std::vector<Object*> elements;
+
+    //sf::Sound openingSound;
 
     int posX{};
     int posY{};

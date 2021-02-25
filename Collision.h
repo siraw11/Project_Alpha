@@ -24,6 +24,7 @@ public:
     static bool projectileCollisionHero( Projectile *projectile, const Hero &hero, int x, int y);
     static bool projectileCollision( Projectile *projectile,const std::vector<Tile>& tile_vector, int x, int y);//projectile collision with walls
     static bool meleeHeroAttak( Hero *hero, const Enemy &enemy, int x, int y);
+    static bool meleeHeroAttackBoss( Hero *hero, const Boss &boss, int x, int y);
     static bool chestCollision(const Chest& chest, Enemy *enemy, int x, int y );//enemy collision with chests
     static bool chestCollision(const Chest& chest, Hero *hero, int x, int y );//hero collision with item chests
 

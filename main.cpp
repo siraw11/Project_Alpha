@@ -1,5 +1,4 @@
 #include "GameManager/Game.hpp"
-#include "GameManager/DEFINITIONS.hpp"
 
 int main()
 {

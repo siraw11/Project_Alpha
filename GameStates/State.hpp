@@ -1,7 +1,6 @@
 #pragma once
 
-#include "../PlayerType.h"
-#include "../Hero.h"
+
 
 
 namespace Alpha

@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/matteo/CLionProjects/Project_Alpha/Boss.cpp
+GameManager/DEFINITIONS.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+Boss.h
+/home/matteo/CLionProjects/Project_Alpha/Boss.h
+Random.h
+/home/matteo/CLionProjects/Project_Alpha/Random.h
+Collision.h
+/home/matteo/CLionProjects/Project_Alpha/Collision.h
+cmath
+-
+GameStates/GameState.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.hpp
+GameStates/GameOverState.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
+
 /home/matteo/CLionProjects/Project_Alpha/Boss.h
 Enemy.h
 /home/matteo/CLionProjects/Project_Alpha/Enemy.h
@@ -21,10 +37,44 @@ GameManager/Game.hpp
 /home/matteo/CLionProjects/Project_Alpha/Chest.h
 SFML/Graphics.hpp
 -
+SFML/Audio/Sound.hpp
+-
 GameManager/DEFINITIONS.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+GameManager/Game.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
 Object.h
 /home/matteo/CLionProjects/Project_Alpha/Object.h
+
+/home/matteo/CLionProjects/Project_Alpha/Collision.cpp
+iostream
+-
+GameManager/DEFINITIONS.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+Collision.h
+/home/matteo/CLionProjects/Project_Alpha/Collision.h
+
+/home/matteo/CLionProjects/Project_Alpha/Collision.h
+SFML/Graphics.hpp
+-
+Tile.h
+/home/matteo/CLionProjects/Project_Alpha/Tile.h
+Hero.h
+/home/matteo/CLionProjects/Project_Alpha/Hero.h
+
+/home/matteo/CLionProjects/Project_Alpha/Enemy.cpp
+cmath
+-
+GameManager/DEFINITIONS.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+Enemy.h
+/home/matteo/CLionProjects/Project_Alpha/Enemy.h
+Random.h
+/home/matteo/CLionProjects/Project_Alpha/Random.h
+Collision.h
+/home/matteo/CLionProjects/Project_Alpha/Collision.h
+cmath
+-
 
 /home/matteo/CLionProjects/Project_Alpha/Enemy.h
 GameCharacter.h
@@ -37,11 +87,15 @@ Chest.h
 /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
 SFML/Graphics.hpp
 -
+GameManager/Game.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
 
 /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
 map
 -
 SFML/Graphics.hpp
+-
+SFML/Audio/SoundBuffer.hpp
 -
 
 /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
@@ -59,6 +113,8 @@ AssetManager.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
 InputManager.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+DEFINITIONS.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
 
 /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
 SFML/Graphics/RenderWindow.hpp
@@ -75,20 +131,6 @@ State.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
 ../GameManager/Game.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
-
-/home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.cpp
-utility
--
-GameState.hpp
-/home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.hpp
-MainMenuState.hpp
-/home/matteo/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
-GameOverState.hpp
-/home/matteo/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
-iostream
--
-GameWinState.h
-/home/matteo/CLionProjects/Project_Alpha/GameStates/GameWinState.h
 
 /home/matteo/CLionProjects/Project_Alpha/GameStates/GameState.hpp
 SFML/Graphics.hpp
@@ -114,14 +156,6 @@ State.hpp
 ../GameManager/DEFINITIONS.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
 
-/home/matteo/CLionProjects/Project_Alpha/GameStates/GameWinState.h
-SFML/Graphics.hpp
--
-State.hpp
-/home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
-../GameManager/Game.hpp
-/home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
-
 /home/matteo/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
 SFML/Graphics.hpp
 -
@@ -130,11 +164,15 @@ State.hpp
 ../GameManager/Game.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
 
+/home/matteo/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
+SFML/Graphics.hpp
+-
+State.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
-../PlayerType.h
-/home/matteo/CLionProjects/Project_Alpha/PlayerType.h
-../Hero.h
-/home/matteo/CLionProjects/Project_Alpha/Hero.h
+../GameManager/Game.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+
+/home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
 
 /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
 memory
@@ -143,6 +181,22 @@ stack
 -
 State.hpp
 /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+
+/home/matteo/CLionProjects/Project_Alpha/Hero.cpp
+iostream
+-
+GameManager/DEFINITIONS.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+Hero.h
+/home/matteo/CLionProjects/Project_Alpha/Hero.h
+Collision.h
+/home/matteo/CLionProjects/Project_Alpha/Collision.h
+cmath
+-
+GameStates/MainMenuState.hpp
+/home/matteo/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
+GameStates/SelectClassState.h
+/home/matteo/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
 
 /home/matteo/CLionProjects/Project_Alpha/Hero.h
 GameCharacter.h
@@ -172,6 +226,16 @@ Tile.h
 
 /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
 
+/home/matteo/CLionProjects/Project_Alpha/Projectile.cpp
+SFML/Graphics/Texture.hpp
+-
+iostream
+-
+Projectile.h
+/home/matteo/CLionProjects/Project_Alpha/Projectile.h
+Collision.h
+/home/matteo/CLionProjects/Project_Alpha/Collision.h
+
 /home/matteo/CLionProjects/Project_Alpha/Projectile.h
 SFML/Graphics/RectangleShape.hpp
 -
@@ -181,6 +245,18 @@ Tile.h
 /home/matteo/CLionProjects/Project_Alpha/Tile.h
 Boss.h
 /home/matteo/CLionProjects/Project_Alpha/Boss.h
+
+/home/matteo/CLionProjects/Project_Alpha/Random.h
+cstdlib
+-
+SFML/System.hpp
+-
+iostream
+-
+ctime
+-
+Tile.h
+/home/matteo/CLionProjects/Project_Alpha/Tile.h
 
 /home/matteo/CLionProjects/Project_Alpha/Tile.h
 SFML/Graphics.hpp
@@ -209,6 +285,46 @@ Projectile.h
 /home/matteo/CLionProjects/Project_Alpha/Projectile.h
 Hero.h
 /home/matteo/CLionProjects/Project_Alpha/Hero.h
+
+/opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+SFML/Audio/Export.hpp
+-
+
+/opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+SFML/Config.hpp
+-
+
+/opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/SoundSource.hpp
+-
+SFML/System/Time.hpp
+-
+cstdlib
+-
+
+/opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Time.hpp
+-
+string
+-
+vector
+-
+set
+-
+
+/opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
+SFML/Audio/Export.hpp
+-
+SFML/Audio/AlResource.hpp
+-
+SFML/System/Vector3.hpp
+-
 
 /opt/SFML-2.5.1/include/SFML/Config.hpp
 TargetConditionals.h

@@ -6,6 +6,7 @@
 #include "../GameStates/StateMachine.hpp"
 #include "AssetManager.hpp"
 #include "InputManager.hpp"
+#include "DEFINITIONS.hpp"
 
 namespace Alpha
 {

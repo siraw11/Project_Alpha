@@ -8,13 +8,23 @@ CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Object.h
  /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -114,6 +124,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/map.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -207,6 +222,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -289,7 +309,12 @@ CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Knight.h
  /home/matteo/CLionProjects/Project_Alpha/Mage.h
@@ -298,6 +323,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -375,11 +405,21 @@ CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
 CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Chest.cpp
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Item.h
  /home/matteo/CLionProjects/Project_Alpha/Object.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -461,13 +501,23 @@ CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Collision.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Object.h
  /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -549,7 +599,12 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Enemy.cpp
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Object.h
  /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
@@ -557,6 +612,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Random.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -634,6 +694,15 @@ CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
 CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.cpp
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -711,6 +780,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -786,10 +858,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
- /home/matteo/CLionProjects/Project_Alpha/Boss.h
- /home/matteo/CLionProjects/Project_Alpha/Chest.h
- /home/matteo/CLionProjects/Project_Alpha/Enemy.h
- /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
  /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.cpp
@@ -799,12 +867,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/GameStates/SplashState.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
- /home/matteo/CLionProjects/Project_Alpha/Hero.h
- /home/matteo/CLionProjects/Project_Alpha/Object.h
- /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
- /home/matteo/CLionProjects/Project_Alpha/Projectile.h
- /home/matteo/CLionProjects/Project_Alpha/Tile.h
- /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -981,6 +1046,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/map.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1080,6 +1150,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/map.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1180,6 +1255,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/map.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1279,6 +1359,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/map.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1378,6 +1463,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/map.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1453,10 +1543,6 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
- /home/matteo/CLionProjects/Project_Alpha/Boss.h
- /home/matteo/CLionProjects/Project_Alpha/Chest.h
- /home/matteo/CLionProjects/Project_Alpha/Enemy.h
- /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
  /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
@@ -1466,12 +1552,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/GameStates/SplashState.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
- /home/matteo/CLionProjects/Project_Alpha/Hero.h
- /home/matteo/CLionProjects/Project_Alpha/Object.h
- /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
- /home/matteo/CLionProjects/Project_Alpha/Projectile.h
- /home/matteo/CLionProjects/Project_Alpha/Tile.h
- /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1547,94 +1630,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
- /home/matteo/CLionProjects/Project_Alpha/Boss.h
- /home/matteo/CLionProjects/Project_Alpha/Chest.h
- /home/matteo/CLionProjects/Project_Alpha/Enemy.h
- /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
- /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
- /home/matteo/CLionProjects/Project_Alpha/Hero.h
- /home/matteo/CLionProjects/Project_Alpha/Object.h
- /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
- /home/matteo/CLionProjects/Project_Alpha/Projectile.h
- /home/matteo/CLionProjects/Project_Alpha/Tile.h
- /home/matteo/CLionProjects/Project_Alpha/Weapon.h
- /opt/SFML-2.5.1/include/SFML/Config.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Color.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Export.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Font.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Glsl.inl
- /opt/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Image.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Rect.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Rect.inl
- /opt/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Shader.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Shape.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Text.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Texture.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Transform.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp
- /opt/SFML-2.5.1/include/SFML/Graphics/View.hpp
- /opt/SFML-2.5.1/include/SFML/System.hpp
- /opt/SFML-2.5.1/include/SFML/System/Clock.hpp
- /opt/SFML-2.5.1/include/SFML/System/Err.hpp
- /opt/SFML-2.5.1/include/SFML/System/Export.hpp
- /opt/SFML-2.5.1/include/SFML/System/FileInputStream.hpp
- /opt/SFML-2.5.1/include/SFML/System/InputStream.hpp
- /opt/SFML-2.5.1/include/SFML/System/Lock.hpp
- /opt/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp
- /opt/SFML-2.5.1/include/SFML/System/Mutex.hpp
- /opt/SFML-2.5.1/include/SFML/System/NonCopyable.hpp
- /opt/SFML-2.5.1/include/SFML/System/Sleep.hpp
- /opt/SFML-2.5.1/include/SFML/System/String.hpp
- /opt/SFML-2.5.1/include/SFML/System/String.inl
- /opt/SFML-2.5.1/include/SFML/System/Thread.hpp
- /opt/SFML-2.5.1/include/SFML/System/Thread.inl
- /opt/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp
- /opt/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp
- /opt/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl
- /opt/SFML-2.5.1/include/SFML/System/Time.hpp
- /opt/SFML-2.5.1/include/SFML/System/Utf.hpp
- /opt/SFML-2.5.1/include/SFML/System/Utf.inl
- /opt/SFML-2.5.1/include/SFML/System/Vector2.hpp
- /opt/SFML-2.5.1/include/SFML/System/Vector2.inl
- /opt/SFML-2.5.1/include/SFML/System/Vector3.hpp
- /opt/SFML-2.5.1/include/SFML/System/Vector3.inl
- /opt/SFML-2.5.1/include/SFML/Window.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Clipboard.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Context.hpp
- /opt/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Cursor.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Event.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Export.hpp
- /opt/SFML-2.5.1/include/SFML/Window/GlResource.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Joystick.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Keyboard.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Mouse.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Sensor.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Touch.hpp
- /opt/SFML-2.5.1/include/SFML/Window/VideoMode.hpp
- /opt/SFML-2.5.1/include/SFML/Window/Window.hpp
- /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
- /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Boss.h
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
@@ -1656,6 +1654,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1749,6 +1752,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1828,7 +1836,12 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Item.cpp
  /home/matteo/CLionProjects/Project_Alpha/Item.h
@@ -1837,6 +1850,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1916,7 +1934,12 @@ CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Knight.cpp
  /home/matteo/CLionProjects/Project_Alpha/Knight.h
@@ -1925,6 +1948,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -2004,7 +2032,12 @@ CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Mage.cpp
  /home/matteo/CLionProjects/Project_Alpha/Mage.h
@@ -2013,6 +2046,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -2171,7 +2209,12 @@ CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Collision.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Object.h
  /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
@@ -2179,6 +2222,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Projectile.h
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -2415,7 +2463,12 @@ CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Chest.h
  /home/matteo/CLionProjects/Project_Alpha/Enemy.h
  /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/matteo/CLionProjects/Project_Alpha/Hero.h
  /home/matteo/CLionProjects/Project_Alpha/Object.h
  /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
@@ -2423,6 +2476,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Tile.h
  /home/matteo/CLionProjects/Project_Alpha/Weapon.cpp
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -2498,23 +2556,16 @@ CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
  /opt/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  /opt/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o
- /home/matteo/CLionProjects/Project_Alpha/Boss.h
- /home/matteo/CLionProjects/Project_Alpha/Chest.h
- /home/matteo/CLionProjects/Project_Alpha/Enemy.h
- /home/matteo/CLionProjects/Project_Alpha/GameCharacter.h
  /home/matteo/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/Game.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/State.hpp
  /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
- /home/matteo/CLionProjects/Project_Alpha/Hero.h
- /home/matteo/CLionProjects/Project_Alpha/Object.h
- /home/matteo/CLionProjects/Project_Alpha/PlayerType.h
- /home/matteo/CLionProjects/Project_Alpha/Projectile.h
- /home/matteo/CLionProjects/Project_Alpha/Tile.h
- /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/main.cpp
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -2609,6 +2660,11 @@ CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/Weapon.h
  /home/matteo/CLionProjects/Project_Alpha/map.cpp
  /home/matteo/CLionProjects/Project_Alpha/map.h
+ /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp

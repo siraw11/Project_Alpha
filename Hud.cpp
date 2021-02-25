@@ -9,24 +9,12 @@
 
 
 Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
-
-    //sf::Font font;
-
-
     _data->assets.LoadFont("font",FONT);
 
-//    if (!font.loadFromFile(FONT)) {
-//        // error...
-//    }
-
-    //UI Elements
-
-    //Life
-    _data->assets.LoadTexture("Heart", HEART_UI);
+     //life
     this->_heart.setTexture(_data->assets.GetTexture("Heart"));
     this->_heart.setScale(3, 3);
     _heart.setPosition(hero->getPosition().x - 25, hero->getPosition().y - 30);
-
     std::ostringstream oss;
     oss << hero->getLife();
     this->life.setFont(_data->assets.GetFont("font"));
@@ -39,7 +27,6 @@ Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
     switch (hero->playerType) {
         case PlayerType::ARCHER : {
             //Arrow
-            _data->assets.LoadTexture("Arrow", ARROW_UI);
             this->_arrow_1.setTexture(_data->assets.GetTexture("Arrow"));
             this->_arrow_1.setScale(3, 3);
             _arrow_1.setPosition(hero->getPosition().x + 55, hero->getPosition().y - 30);
@@ -57,7 +44,6 @@ Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
         case  PlayerType::MAGE:
         {
             //Mana
-            _data->assets.LoadTexture("Mana", MANA_UI);
             this->_mana.setTexture(_data->assets.GetTexture("Mana"));
             this->_mana.setScale(3, 3);
             _mana.setPosition(hero->getPosition().x + 55, hero->getPosition().y - 30);
@@ -73,7 +59,6 @@ Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
 
         case PlayerType::KNIGHT : {
             //Armor
-            _data->assets.LoadTexture("Armor", ARMOR_UI);
             this->_armor.setTexture(_data->assets.GetTexture("Armor"));
             this->_armor.setScale(2.7, 2.7);
             _armor.setPosition(hero->getPosition().x + 55, hero->getPosition().y - 30);
