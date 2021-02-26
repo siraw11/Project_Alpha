@@ -40,7 +40,7 @@
 
 #define ARROW_SOUND "../Resources/Sound/arrow-whoosh.wav"
 
-#define CHEST_OPENING "../Resources/Sound/Chest-opening.wav"
+#define CHEST_OPENING "../Resources/Sound/Chest_Opening.wav"
 
 #define SWORD_SOUND "../Resources/Sound/dagger-woosh.wav"
 
@@ -55,6 +55,16 @@
 #define OW_SOUND "../Resources/Sound/ow-exclamation.wav"
 
 #define SCREAM_SOUND "../Resources/Sound/scream-pain.wav"
+
+#define BONE_SOUND "../Resources/Sound/bone-crack.wav"
+
+#define CLICK_SOUND "../Resources/Sound/click.wav"
+
+#define YOU_LOSE_SOUND "../Resources/Sound/you-lose.wav"
+
+#define YOU_WIN_SOUND "../Resources/Sound/you-win.wav"
+
+#define BACKGROUND_SOUND "../Resources/Sound/outlast.wav"
 
 #define SCALE 3
 

@@ -868,7 +868,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/State.hp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1553,7 +1555,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/St
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics.hpp
 CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o: /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp

@@ -28,10 +28,13 @@ namespace Alpha
 		this->_exitButton.setScale(0.5,0.5);
         this->_retryButton.setScale(0.5,0.5);
 
-
         this->_retryButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_retryButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 3) - (this->_retryButton.getGlobalBounds().height / 2));
         this->_exitButton.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_exitButton.getGlobalBounds().width / 2), (this->_data->window.getSize().y/ 2) - (this->_exitButton.getGlobalBounds().height / 2));
         this->_LostTitle.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_LostTitle.getGlobalBounds().width / 2), this->_LostTitle.getGlobalBounds().height * 0.5);
+
+        click.setBuffer(this->_data->assets.GetSound("Click"));
+        youLose.setBuffer(this->_data->assets.GetSound("Lose"));
+        youLose.play();
 	}
 
 	void GameOverState::HandleInput()
@@ -47,6 +50,7 @@ namespace Alpha
 
 			if (this->_data->input.IsSpriteClicked(this->_retryButton, sf::Mouse::Left, this->_data->window))
 			{
+                click.play();
 				// Switch To Main Menu State By Replacing The Game Over State
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
 
@@ -54,6 +58,7 @@ namespace Alpha
 
 			if (this->_data->input.IsSpriteClicked(this->_exitButton, sf::Mouse::Left, this->_data->window))
 			{
+                click.play();
 			    this->_data->window.close();
 			}
 		}

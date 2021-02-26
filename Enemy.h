@@ -37,7 +37,7 @@ class Hero;
         void update(std::unique_ptr<Hero> &hero, const std::vector<Tile> &tile_vector,
                     const std::vector<Chest> &chest_vector);
 
-        void initSound(const Alpha::GameDataRef &_data);
+        virtual void initSound(const Alpha::GameDataRef &_data);
 
 
 //attributes

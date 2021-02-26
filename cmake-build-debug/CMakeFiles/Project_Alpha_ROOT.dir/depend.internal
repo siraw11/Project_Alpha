@@ -869,7 +869,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
  /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
  /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp
@@ -1554,7 +1556,9 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
  /home/matteo/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /opt/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
  /opt/SFML-2.5.1/include/SFML/Audio/Export.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/Sound.hpp
  /opt/SFML-2.5.1/include/SFML/Audio/SoundBuffer.hpp
+ /opt/SFML-2.5.1/include/SFML/Audio/SoundSource.hpp
  /opt/SFML-2.5.1/include/SFML/Config.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics.hpp
  /opt/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp

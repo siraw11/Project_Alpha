@@ -66,9 +66,11 @@ namespace Alpha
             this->_data->assets.LoadSound("MonsterHit", MONSTER_HIT_SOUND);
             this->_data->assets.LoadSound("Ow", OW_SOUND);
             this->_data->assets.LoadSound("Scream", SCREAM_SOUND);
-
-
-
+            this->_data->assets.LoadSound("Bone", BONE_SOUND);
+            this->_data->assets.LoadSound("Click", CLICK_SOUND);
+            this->_data->assets.LoadSound("Lose", YOU_LOSE_SOUND);
+            this->_data->assets.LoadSound("Win", YOU_WIN_SOUND);
+            this->_data->assets.LoadSound("Background", BACKGROUND_SOUND);
         }catch(const std::exception& exception) {
             std::cerr << exception.what() << std::endl;
         }

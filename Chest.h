@@ -39,7 +39,7 @@ private:
 //attributes
     std::vector<Object*> elements;
 
-    //sf::Sound openingSound;
+    sf::Sound openingSound;
 
     int posX{};
     int posY{};

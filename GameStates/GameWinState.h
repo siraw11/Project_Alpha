@@ -24,7 +24,10 @@ namespace Alpha
         sf::Sprite _background;
         sf::Sprite _retryButton;
         sf::Sprite _exitButton;
-        sf::Sprite _WinTitle;
+        sf::Sprite _winTitle;
+
+        sf::Sound click;
+        sf::Sound youWin;
 
     };
 }

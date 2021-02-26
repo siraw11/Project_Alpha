@@ -25,6 +25,7 @@ public:
     void aggro(sf::Vector2f d)override;
     sf::Vector2f distance(const Hero& hero);
     void deathAnimation()override;
+    void initSound(const Alpha::GameDataRef &_data) override;
 
 //attributes
     std::vector<Projectile> projectile_vector;
@@ -35,7 +36,7 @@ private:
     int posx;
     int posy;
 
-
+    sf::Sound bone;
 };
 
 

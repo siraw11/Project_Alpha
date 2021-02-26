@@ -40,11 +40,13 @@ namespace Alpha
 
         map level;
         std::unique_ptr<Hero> hero = nullptr;
-        std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(1, 1, 10));
+        std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(20, 3, 10));
 
         //Hud
         Hud* hud= new Hud(this->hero, this->_data);
         Camera camera;
+
+        sf::Sound background;
 
     };
 }
