@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="18">
     <extensionMap>
+      <mapping pattern="Game_test" type="AUTO_DETECTED" />
       <mapping pattern="Project_Alpha_ROOT" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
