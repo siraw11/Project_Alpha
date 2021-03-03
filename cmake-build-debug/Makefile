@@ -76,16 +76,51 @@ CMAKE_BINARY_DIR = /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -97,6 +132,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -143,6 +189,84 @@ Project_Alpha_ROOT/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/build
 .PHONY : Project_Alpha_ROOT/fast
 
+#=============================================================================
+# Target rules for targets named core
+
+# Build rule for target.
+core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 core
+.PHONY : core
+
+# fast build rule for target.
+core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
+# Target rules for targets named Game_test
+
+# Build rule for target.
+Game_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Game_test
+.PHONY : Game_test
+
+# fast build rule for target.
+Game_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/build
+.PHONY : Game_test/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f test/lib/googlemock/CMakeFiles/gmock_main.dir/build.make test/lib/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f test/lib/googlemock/CMakeFiles/gmock.dir/build.make test/lib/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
 Archer.o: Archer.cpp.o
 
 .PHONY : Archer.o
@@ -150,6 +274,7 @@ Archer.o: Archer.cpp.o
 # target to build an object file
 Archer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Archer.cpp.o
 .PHONY : Archer.cpp.o
 
 Archer.i: Archer.cpp.i
@@ -159,6 +284,7 @@ Archer.i: Archer.cpp.i
 # target to preprocess a source file
 Archer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Archer.cpp.i
 .PHONY : Archer.cpp.i
 
 Archer.s: Archer.cpp.s
@@ -168,6 +294,7 @@ Archer.s: Archer.cpp.s
 # target to generate assembly for a file
 Archer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Archer.cpp.s
 .PHONY : Archer.cpp.s
 
 Boss.o: Boss.cpp.o
@@ -177,6 +304,7 @@ Boss.o: Boss.cpp.o
 # target to build an object file
 Boss.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Boss.cpp.o
 .PHONY : Boss.cpp.o
 
 Boss.i: Boss.cpp.i
@@ -186,6 +314,7 @@ Boss.i: Boss.cpp.i
 # target to preprocess a source file
 Boss.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Boss.cpp.i
 .PHONY : Boss.cpp.i
 
 Boss.s: Boss.cpp.s
@@ -195,6 +324,7 @@ Boss.s: Boss.cpp.s
 # target to generate assembly for a file
 Boss.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Boss.cpp.s
 .PHONY : Boss.cpp.s
 
 Camera.o: Camera.cpp.o
@@ -204,6 +334,7 @@ Camera.o: Camera.cpp.o
 # target to build an object file
 Camera.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Camera.cpp.o
 .PHONY : Camera.cpp.o
 
 Camera.i: Camera.cpp.i
@@ -213,6 +344,7 @@ Camera.i: Camera.cpp.i
 # target to preprocess a source file
 Camera.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Camera.cpp.i
 .PHONY : Camera.cpp.i
 
 Camera.s: Camera.cpp.s
@@ -222,6 +354,7 @@ Camera.s: Camera.cpp.s
 # target to generate assembly for a file
 Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Camera.cpp.s
 .PHONY : Camera.cpp.s
 
 CharacterFactory.o: CharacterFactory.cpp.o
@@ -231,6 +364,7 @@ CharacterFactory.o: CharacterFactory.cpp.o
 # target to build an object file
 CharacterFactory.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/CharacterFactory.cpp.o
 .PHONY : CharacterFactory.cpp.o
 
 CharacterFactory.i: CharacterFactory.cpp.i
@@ -240,6 +374,7 @@ CharacterFactory.i: CharacterFactory.cpp.i
 # target to preprocess a source file
 CharacterFactory.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/CharacterFactory.cpp.i
 .PHONY : CharacterFactory.cpp.i
 
 CharacterFactory.s: CharacterFactory.cpp.s
@@ -249,6 +384,7 @@ CharacterFactory.s: CharacterFactory.cpp.s
 # target to generate assembly for a file
 CharacterFactory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/CharacterFactory.cpp.s
 .PHONY : CharacterFactory.cpp.s
 
 Chest.o: Chest.cpp.o
@@ -258,6 +394,7 @@ Chest.o: Chest.cpp.o
 # target to build an object file
 Chest.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Chest.cpp.o
 .PHONY : Chest.cpp.o
 
 Chest.i: Chest.cpp.i
@@ -267,6 +404,7 @@ Chest.i: Chest.cpp.i
 # target to preprocess a source file
 Chest.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Chest.cpp.i
 .PHONY : Chest.cpp.i
 
 Chest.s: Chest.cpp.s
@@ -276,6 +414,7 @@ Chest.s: Chest.cpp.s
 # target to generate assembly for a file
 Chest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Chest.cpp.s
 .PHONY : Chest.cpp.s
 
 Collision.o: Collision.cpp.o
@@ -285,6 +424,7 @@ Collision.o: Collision.cpp.o
 # target to build an object file
 Collision.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Collision.cpp.o
 .PHONY : Collision.cpp.o
 
 Collision.i: Collision.cpp.i
@@ -294,6 +434,7 @@ Collision.i: Collision.cpp.i
 # target to preprocess a source file
 Collision.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Collision.cpp.i
 .PHONY : Collision.cpp.i
 
 Collision.s: Collision.cpp.s
@@ -303,6 +444,7 @@ Collision.s: Collision.cpp.s
 # target to generate assembly for a file
 Collision.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Collision.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Collision.cpp.s
 .PHONY : Collision.cpp.s
 
 Enemy.o: Enemy.cpp.o
@@ -312,6 +454,7 @@ Enemy.o: Enemy.cpp.o
 # target to build an object file
 Enemy.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Enemy.cpp.o
 .PHONY : Enemy.cpp.o
 
 Enemy.i: Enemy.cpp.i
@@ -321,6 +464,7 @@ Enemy.i: Enemy.cpp.i
 # target to preprocess a source file
 Enemy.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Enemy.cpp.i
 .PHONY : Enemy.cpp.i
 
 Enemy.s: Enemy.cpp.s
@@ -330,6 +474,7 @@ Enemy.s: Enemy.cpp.s
 # target to generate assembly for a file
 Enemy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Enemy.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Enemy.cpp.s
 .PHONY : Enemy.cpp.s
 
 GameCharacter.o: GameCharacter.cpp.o
@@ -339,6 +484,7 @@ GameCharacter.o: GameCharacter.cpp.o
 # target to build an object file
 GameCharacter.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameCharacter.cpp.o
 .PHONY : GameCharacter.cpp.o
 
 GameCharacter.i: GameCharacter.cpp.i
@@ -348,6 +494,7 @@ GameCharacter.i: GameCharacter.cpp.i
 # target to preprocess a source file
 GameCharacter.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameCharacter.cpp.i
 .PHONY : GameCharacter.cpp.i
 
 GameCharacter.s: GameCharacter.cpp.s
@@ -357,6 +504,7 @@ GameCharacter.s: GameCharacter.cpp.s
 # target to generate assembly for a file
 GameCharacter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameCharacter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameCharacter.cpp.s
 .PHONY : GameCharacter.cpp.s
 
 GameManager/AssetManager.o: GameManager/AssetManager.cpp.o
@@ -366,6 +514,7 @@ GameManager/AssetManager.o: GameManager/AssetManager.cpp.o
 # target to build an object file
 GameManager/AssetManager.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.o
 .PHONY : GameManager/AssetManager.cpp.o
 
 GameManager/AssetManager.i: GameManager/AssetManager.cpp.i
@@ -375,6 +524,7 @@ GameManager/AssetManager.i: GameManager/AssetManager.cpp.i
 # target to preprocess a source file
 GameManager/AssetManager.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.i
 .PHONY : GameManager/AssetManager.cpp.i
 
 GameManager/AssetManager.s: GameManager/AssetManager.cpp.s
@@ -384,6 +534,7 @@ GameManager/AssetManager.s: GameManager/AssetManager.cpp.s
 # target to generate assembly for a file
 GameManager/AssetManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/AssetManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/AssetManager.cpp.s
 .PHONY : GameManager/AssetManager.cpp.s
 
 GameManager/Game.o: GameManager/Game.cpp.o
@@ -393,6 +544,7 @@ GameManager/Game.o: GameManager/Game.cpp.o
 # target to build an object file
 GameManager/Game.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/Game.cpp.o
 .PHONY : GameManager/Game.cpp.o
 
 GameManager/Game.i: GameManager/Game.cpp.i
@@ -402,6 +554,7 @@ GameManager/Game.i: GameManager/Game.cpp.i
 # target to preprocess a source file
 GameManager/Game.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/Game.cpp.i
 .PHONY : GameManager/Game.cpp.i
 
 GameManager/Game.s: GameManager/Game.cpp.s
@@ -411,6 +564,7 @@ GameManager/Game.s: GameManager/Game.cpp.s
 # target to generate assembly for a file
 GameManager/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/Game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/Game.cpp.s
 .PHONY : GameManager/Game.cpp.s
 
 GameManager/InputManager.o: GameManager/InputManager.cpp.o
@@ -420,6 +574,7 @@ GameManager/InputManager.o: GameManager/InputManager.cpp.o
 # target to build an object file
 GameManager/InputManager.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/InputManager.cpp.o
 .PHONY : GameManager/InputManager.cpp.o
 
 GameManager/InputManager.i: GameManager/InputManager.cpp.i
@@ -429,6 +584,7 @@ GameManager/InputManager.i: GameManager/InputManager.cpp.i
 # target to preprocess a source file
 GameManager/InputManager.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/InputManager.cpp.i
 .PHONY : GameManager/InputManager.cpp.i
 
 GameManager/InputManager.s: GameManager/InputManager.cpp.s
@@ -438,6 +594,7 @@ GameManager/InputManager.s: GameManager/InputManager.cpp.s
 # target to generate assembly for a file
 GameManager/InputManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameManager/InputManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameManager/InputManager.cpp.s
 .PHONY : GameManager/InputManager.cpp.s
 
 GameStates/GameOverState.o: GameStates/GameOverState.cpp.o
@@ -447,6 +604,7 @@ GameStates/GameOverState.o: GameStates/GameOverState.cpp.o
 # target to build an object file
 GameStates/GameOverState.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameOverState.cpp.o
 .PHONY : GameStates/GameOverState.cpp.o
 
 GameStates/GameOverState.i: GameStates/GameOverState.cpp.i
@@ -456,6 +614,7 @@ GameStates/GameOverState.i: GameStates/GameOverState.cpp.i
 # target to preprocess a source file
 GameStates/GameOverState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameOverState.cpp.i
 .PHONY : GameStates/GameOverState.cpp.i
 
 GameStates/GameOverState.s: GameStates/GameOverState.cpp.s
@@ -465,6 +624,7 @@ GameStates/GameOverState.s: GameStates/GameOverState.cpp.s
 # target to generate assembly for a file
 GameStates/GameOverState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameOverState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameOverState.cpp.s
 .PHONY : GameStates/GameOverState.cpp.s
 
 GameStates/GameState.o: GameStates/GameState.cpp.o
@@ -474,6 +634,7 @@ GameStates/GameState.o: GameStates/GameState.cpp.o
 # target to build an object file
 GameStates/GameState.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameState.cpp.o
 .PHONY : GameStates/GameState.cpp.o
 
 GameStates/GameState.i: GameStates/GameState.cpp.i
@@ -483,6 +644,7 @@ GameStates/GameState.i: GameStates/GameState.cpp.i
 # target to preprocess a source file
 GameStates/GameState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameState.cpp.i
 .PHONY : GameStates/GameState.cpp.i
 
 GameStates/GameState.s: GameStates/GameState.cpp.s
@@ -492,6 +654,7 @@ GameStates/GameState.s: GameStates/GameState.cpp.s
 # target to generate assembly for a file
 GameStates/GameState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameState.cpp.s
 .PHONY : GameStates/GameState.cpp.s
 
 GameStates/GameWinState.o: GameStates/GameWinState.cpp.o
@@ -501,6 +664,7 @@ GameStates/GameWinState.o: GameStates/GameWinState.cpp.o
 # target to build an object file
 GameStates/GameWinState.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameWinState.cpp.o
 .PHONY : GameStates/GameWinState.cpp.o
 
 GameStates/GameWinState.i: GameStates/GameWinState.cpp.i
@@ -510,6 +674,7 @@ GameStates/GameWinState.i: GameStates/GameWinState.cpp.i
 # target to preprocess a source file
 GameStates/GameWinState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameWinState.cpp.i
 .PHONY : GameStates/GameWinState.cpp.i
 
 GameStates/GameWinState.s: GameStates/GameWinState.cpp.s
@@ -519,6 +684,7 @@ GameStates/GameWinState.s: GameStates/GameWinState.cpp.s
 # target to generate assembly for a file
 GameStates/GameWinState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/GameWinState.cpp.s
 .PHONY : GameStates/GameWinState.cpp.s
 
 GameStates/MainMenuState.o: GameStates/MainMenuState.cpp.o
@@ -528,6 +694,7 @@ GameStates/MainMenuState.o: GameStates/MainMenuState.cpp.o
 # target to build an object file
 GameStates/MainMenuState.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o
 .PHONY : GameStates/MainMenuState.cpp.o
 
 GameStates/MainMenuState.i: GameStates/MainMenuState.cpp.i
@@ -537,6 +704,7 @@ GameStates/MainMenuState.i: GameStates/MainMenuState.cpp.i
 # target to preprocess a source file
 GameStates/MainMenuState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MainMenuState.cpp.i
 .PHONY : GameStates/MainMenuState.cpp.i
 
 GameStates/MainMenuState.s: GameStates/MainMenuState.cpp.s
@@ -546,6 +714,7 @@ GameStates/MainMenuState.s: GameStates/MainMenuState.cpp.s
 # target to generate assembly for a file
 GameStates/MainMenuState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/MainMenuState.cpp.s
 .PHONY : GameStates/MainMenuState.cpp.s
 
 GameStates/SelectClassState.o: GameStates/SelectClassState.cpp.o
@@ -555,6 +724,7 @@ GameStates/SelectClassState.o: GameStates/SelectClassState.cpp.o
 # target to build an object file
 GameStates/SelectClassState.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o
 .PHONY : GameStates/SelectClassState.cpp.o
 
 GameStates/SelectClassState.i: GameStates/SelectClassState.cpp.i
@@ -564,6 +734,7 @@ GameStates/SelectClassState.i: GameStates/SelectClassState.cpp.i
 # target to preprocess a source file
 GameStates/SelectClassState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectClassState.cpp.i
 .PHONY : GameStates/SelectClassState.cpp.i
 
 GameStates/SelectClassState.s: GameStates/SelectClassState.cpp.s
@@ -573,6 +744,7 @@ GameStates/SelectClassState.s: GameStates/SelectClassState.cpp.s
 # target to generate assembly for a file
 GameStates/SelectClassState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectClassState.cpp.s
 .PHONY : GameStates/SelectClassState.cpp.s
 
 GameStates/SplashState.o: GameStates/SplashState.cpp.o
@@ -582,6 +754,7 @@ GameStates/SplashState.o: GameStates/SplashState.cpp.o
 # target to build an object file
 GameStates/SplashState.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SplashState.cpp.o
 .PHONY : GameStates/SplashState.cpp.o
 
 GameStates/SplashState.i: GameStates/SplashState.cpp.i
@@ -591,6 +764,7 @@ GameStates/SplashState.i: GameStates/SplashState.cpp.i
 # target to preprocess a source file
 GameStates/SplashState.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SplashState.cpp.i
 .PHONY : GameStates/SplashState.cpp.i
 
 GameStates/SplashState.s: GameStates/SplashState.cpp.s
@@ -600,6 +774,7 @@ GameStates/SplashState.s: GameStates/SplashState.cpp.s
 # target to generate assembly for a file
 GameStates/SplashState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SplashState.cpp.s
 .PHONY : GameStates/SplashState.cpp.s
 
 GameStates/StateMachine.o: GameStates/StateMachine.cpp.o
@@ -609,6 +784,7 @@ GameStates/StateMachine.o: GameStates/StateMachine.cpp.o
 # target to build an object file
 GameStates/StateMachine.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/StateMachine.cpp.o
 .PHONY : GameStates/StateMachine.cpp.o
 
 GameStates/StateMachine.i: GameStates/StateMachine.cpp.i
@@ -618,6 +794,7 @@ GameStates/StateMachine.i: GameStates/StateMachine.cpp.i
 # target to preprocess a source file
 GameStates/StateMachine.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/StateMachine.cpp.i
 .PHONY : GameStates/StateMachine.cpp.i
 
 GameStates/StateMachine.s: GameStates/StateMachine.cpp.s
@@ -627,6 +804,7 @@ GameStates/StateMachine.s: GameStates/StateMachine.cpp.s
 # target to generate assembly for a file
 GameStates/StateMachine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/StateMachine.cpp.s
 .PHONY : GameStates/StateMachine.cpp.s
 
 Hero.o: Hero.cpp.o
@@ -636,6 +814,7 @@ Hero.o: Hero.cpp.o
 # target to build an object file
 Hero.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hero.cpp.o
 .PHONY : Hero.cpp.o
 
 Hero.i: Hero.cpp.i
@@ -645,6 +824,7 @@ Hero.i: Hero.cpp.i
 # target to preprocess a source file
 Hero.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hero.cpp.i
 .PHONY : Hero.cpp.i
 
 Hero.s: Hero.cpp.s
@@ -654,6 +834,7 @@ Hero.s: Hero.cpp.s
 # target to generate assembly for a file
 Hero.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hero.cpp.s
 .PHONY : Hero.cpp.s
 
 Hud.o: Hud.cpp.o
@@ -663,6 +844,7 @@ Hud.o: Hud.cpp.o
 # target to build an object file
 Hud.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hud.cpp.o
 .PHONY : Hud.cpp.o
 
 Hud.i: Hud.cpp.i
@@ -672,6 +854,7 @@ Hud.i: Hud.cpp.i
 # target to preprocess a source file
 Hud.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hud.cpp.i
 .PHONY : Hud.cpp.i
 
 Hud.s: Hud.cpp.s
@@ -681,6 +864,7 @@ Hud.s: Hud.cpp.s
 # target to generate assembly for a file
 Hud.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Hud.cpp.s
 .PHONY : Hud.cpp.s
 
 Item.o: Item.cpp.o
@@ -690,6 +874,7 @@ Item.o: Item.cpp.o
 # target to build an object file
 Item.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Item.cpp.o
 .PHONY : Item.cpp.o
 
 Item.i: Item.cpp.i
@@ -699,6 +884,7 @@ Item.i: Item.cpp.i
 # target to preprocess a source file
 Item.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Item.cpp.i
 .PHONY : Item.cpp.i
 
 Item.s: Item.cpp.s
@@ -708,6 +894,7 @@ Item.s: Item.cpp.s
 # target to generate assembly for a file
 Item.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
 Knight.o: Knight.cpp.o
@@ -717,6 +904,7 @@ Knight.o: Knight.cpp.o
 # target to build an object file
 Knight.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Knight.cpp.o
 .PHONY : Knight.cpp.o
 
 Knight.i: Knight.cpp.i
@@ -726,6 +914,7 @@ Knight.i: Knight.cpp.i
 # target to preprocess a source file
 Knight.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Knight.cpp.i
 .PHONY : Knight.cpp.i
 
 Knight.s: Knight.cpp.s
@@ -735,6 +924,7 @@ Knight.s: Knight.cpp.s
 # target to generate assembly for a file
 Knight.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Knight.cpp.s
 .PHONY : Knight.cpp.s
 
 Mage.o: Mage.cpp.o
@@ -744,6 +934,7 @@ Mage.o: Mage.cpp.o
 # target to build an object file
 Mage.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Mage.cpp.o
 .PHONY : Mage.cpp.o
 
 Mage.i: Mage.cpp.i
@@ -753,6 +944,7 @@ Mage.i: Mage.cpp.i
 # target to preprocess a source file
 Mage.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Mage.cpp.i
 .PHONY : Mage.cpp.i
 
 Mage.s: Mage.cpp.s
@@ -762,6 +954,7 @@ Mage.s: Mage.cpp.s
 # target to generate assembly for a file
 Mage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Mage.cpp.s
 .PHONY : Mage.cpp.s
 
 Object.o: Object.cpp.o
@@ -771,6 +964,7 @@ Object.o: Object.cpp.o
 # target to build an object file
 Object.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Object.cpp.o
 .PHONY : Object.cpp.o
 
 Object.i: Object.cpp.i
@@ -780,6 +974,7 @@ Object.i: Object.cpp.i
 # target to preprocess a source file
 Object.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Object.cpp.i
 .PHONY : Object.cpp.i
 
 Object.s: Object.cpp.s
@@ -789,6 +984,7 @@ Object.s: Object.cpp.s
 # target to generate assembly for a file
 Object.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Object.cpp.s
 .PHONY : Object.cpp.s
 
 Projectile.o: Projectile.cpp.o
@@ -798,6 +994,7 @@ Projectile.o: Projectile.cpp.o
 # target to build an object file
 Projectile.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Projectile.cpp.o
 .PHONY : Projectile.cpp.o
 
 Projectile.i: Projectile.cpp.i
@@ -807,6 +1004,7 @@ Projectile.i: Projectile.cpp.i
 # target to preprocess a source file
 Projectile.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Projectile.cpp.i
 .PHONY : Projectile.cpp.i
 
 Projectile.s: Projectile.cpp.s
@@ -816,6 +1014,7 @@ Projectile.s: Projectile.cpp.s
 # target to generate assembly for a file
 Projectile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Projectile.cpp.s
 .PHONY : Projectile.cpp.s
 
 Random.o: Random.cpp.o
@@ -825,6 +1024,7 @@ Random.o: Random.cpp.o
 # target to build an object file
 Random.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Random.cpp.o
 .PHONY : Random.cpp.o
 
 Random.i: Random.cpp.i
@@ -834,6 +1034,7 @@ Random.i: Random.cpp.i
 # target to preprocess a source file
 Random.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Random.cpp.i
 .PHONY : Random.cpp.i
 
 Random.s: Random.cpp.s
@@ -843,6 +1044,7 @@ Random.s: Random.cpp.s
 # target to generate assembly for a file
 Random.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Random.cpp.s
 .PHONY : Random.cpp.s
 
 Tile.o: Tile.cpp.o
@@ -852,6 +1054,7 @@ Tile.o: Tile.cpp.o
 # target to build an object file
 Tile.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Tile.cpp.o
 .PHONY : Tile.cpp.o
 
 Tile.i: Tile.cpp.i
@@ -861,6 +1064,7 @@ Tile.i: Tile.cpp.i
 # target to preprocess a source file
 Tile.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Tile.cpp.i
 .PHONY : Tile.cpp.i
 
 Tile.s: Tile.cpp.s
@@ -870,6 +1074,7 @@ Tile.s: Tile.cpp.s
 # target to generate assembly for a file
 Tile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Tile.cpp.s
 .PHONY : Tile.cpp.s
 
 Weapon.o: Weapon.cpp.o
@@ -879,6 +1084,7 @@ Weapon.o: Weapon.cpp.o
 # target to build an object file
 Weapon.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Weapon.cpp.o
 .PHONY : Weapon.cpp.o
 
 Weapon.i: Weapon.cpp.i
@@ -888,6 +1094,7 @@ Weapon.i: Weapon.cpp.i
 # target to preprocess a source file
 Weapon.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Weapon.cpp.i
 .PHONY : Weapon.cpp.i
 
 Weapon.s: Weapon.cpp.s
@@ -897,6 +1104,7 @@ Weapon.s: Weapon.cpp.s
 # target to generate assembly for a file
 Weapon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Weapon.cpp.s
 .PHONY : Weapon.cpp.s
 
 main.o: main.cpp.o
@@ -933,6 +1141,7 @@ map.o: map.cpp.o
 # target to build an object file
 map.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/map.cpp.o
 .PHONY : map.cpp.o
 
 map.i: map.cpp.i
@@ -942,6 +1151,7 @@ map.i: map.cpp.i
 # target to preprocess a source file
 map.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/map.cpp.i
 .PHONY : map.cpp.i
 
 map.s: map.cpp.s
@@ -951,6 +1161,7 @@ map.s: map.cpp.s
 # target to generate assembly for a file
 map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/map.cpp.s
 .PHONY : map.cpp.s
 
 # Help Target
@@ -960,8 +1171,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... Game_test"
 	@echo "... Project_Alpha_ROOT"
+	@echo "... core"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... Archer.o"
 	@echo "... Archer.i"
 	@echo "... Archer.s"
