@@ -151,6 +151,7 @@ void Enemy::aggro(sf::Vector2f d) {
 void Enemy::update(std::unique_ptr<Hero>& hero, const std::vector<Tile> &tile_vector, const std::vector<Chest> &chest_vector) {
     movement(tile_vector, *hero, chest_vector);
     if(this->hit) {
+        monsterHitSound.play();
         if(hero->playerType == PlayerType::KNIGHT)
             move(60*hero->direction().x,60*hero->direction().y);
 
@@ -162,6 +163,12 @@ void Enemy::update(std::unique_ptr<Hero>& hero, const std::vector<Tile> &tile_ve
         deathAnimation();
     }
 
+}
+
+void Enemy::initSound(const Alpha::GameDataRef &_data) {
+    std::cout<<" init enemyene"<<std::endl;
+    monsterHitSound.setBuffer(_data->assets.GetSound("MonsterHit"));
+    std::cout<<"end enemy"<<std::endl;
 }
 
 

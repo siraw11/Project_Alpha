@@ -27,6 +27,19 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 //destructor
 Hero::~Hero()= default;
 
+void Hero::initSound(const Alpha::GameDataRef &_data) {
+    std::cout<<"init hero"<<std::endl;
+    arrowSound.setBuffer(_data->assets.GetSound("Arrow"));
+    swordSound.setBuffer(_data->assets.GetSound("Sword"));
+    fireSound.setBuffer(_data->assets.GetSound("Fireball"));
+    femaleHitSound.setBuffer(_data->assets.GetSound("FemaleHit"));
+    maleHitSound.setBuffer(_data->assets.GetSound("ManHit"));
+    owSound.setBuffer(_data->assets.GetSound("Ow"));
+    scream.setBuffer(_data->assets.GetSound("Scream"));
+    std::cout<<"end hero"<<std::endl;
+
+}
+
 //functions
 void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector ) {
 
@@ -82,7 +95,8 @@ void Hero::deathAnimation() {
     setTextureRect(sf::IntRect(64*counterDeath, 64*8, 64, 64));
 }
 
-void Hero::attack( std::vector<Enemy>* enemy_vector) {
+
+void Hero::attack( std::vector<Enemy>* enemy_vector, std::unique_ptr<Boss>& boss) {
 
     switch(playerType) {
         case PlayerType::ARCHER:{
@@ -98,6 +112,7 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
                 projectile_vector.push_back(newProjectile);
 
                 this->arrow--;
+                arrowSound.play();
             }
             break;
         }
@@ -114,15 +129,20 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
                 projectile_vector.push_back(newProjectile);
 
                 this->mana--;
+                fireSound.play();
             }
             break;
         }
         case PlayerType::KNIGHT:{
+            swordSound.play();
+            if(Collision::meleeHeroAttackBoss( this, *boss, direction().x, direction().y))
+                boss->hit = true;
             for(auto &i: *enemy_vector)
                 if (Collision::meleeHeroAttak(this, i, direction().x, direction().y)){
                     i.hit = true;
                     break;
                 }
+
             break;
         }
         case PlayerType::BOSS:{
@@ -130,7 +150,6 @@ void Hero::attack( std::vector<Enemy>* enemy_vector) {
         }
     }
 }
-
 
 void Hero::openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_vector) {
 
@@ -146,7 +165,8 @@ void Hero::openChest( std::vector<Chest> *chest_vector, std::vector<Tile>* tile_
 
 }
 
-sf::Vector2i Hero::direction() {
+
+sf::Vector2i Hero::direction() const {
     sf::Vector2i direction;
     switch(walkingDirection){
         case 0: {
@@ -173,14 +193,14 @@ sf::Vector2i Hero::direction() {
 
     return direction;
 }
-
-
 int Hero::damage() {
     int damage = strength;
     if(weapon != nullptr)
         damage += weapon->getStrength();
     return damage;
 }
+
+
 void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss ) {
 
     //update movement
@@ -195,11 +215,12 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
     }
     if(this->counterAttack == 11){
         this->counterAttack = 0;
-        this->attack(&enemy_vector);
+        this->attack(&enemy_vector, boss);
     }
 
     //update hero life
     if(this->hit) {
+
         if (boss->heroHitted) {//boss projectile hit the hero
             this->takeDamage(boss->getStrength());
             boss->heroHitted = false;
@@ -216,10 +237,31 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
                 }
             }
         }
+        if(this->getLife() > 0)
+            switch(playerType){
+                case PlayerType::ARCHER:{
+                    femaleHitSound.play();
+                    break;
+                }
+                case PlayerType::KNIGHT:{
+                    owSound.play();
+                    break;
+                }
+                case PlayerType::MAGE:{
+                    maleHitSound.play();
+                    break;
+                }
+                case PlayerType::BOSS:{
+                    break;
+                }
+            }
         this->hit = false;
     }
     //death animation
     if (this->getLife() <= 0) {
+        if(counterDeath == 0){
+            scream.play();
+        }
         if(counterDeath == 11){
             this->dead = true;
         }else{
@@ -238,7 +280,6 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
 
 
 }
-
 
 void Hero::bounce(const Enemy& enemy) {
 

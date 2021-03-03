@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio/Sound.hpp>
 #include "State.hpp"
 #include "../GameManager/Game.hpp"
 
@@ -25,6 +26,9 @@ namespace Alpha
         sf::Sprite _LostTitle;
 		sf::Sprite _retryButton;
 		sf::Sprite _exitButton;
+
+		sf::Sound click;
+		sf::Sound youLose;
 
 	};
 }

@@ -386,5 +386,16 @@ void map::drawChest(const Alpha::GameDataRef &_data) {
         _data->window.draw(i);
 }
 
+void map::initSound(const Alpha::GameDataRef &_data) {
+
+    for(auto &i : enemy_vector){
+        i.initSound(_data);
+    }
+    for(auto &i : chest_vector){
+        i.initSound(_data);
+    }
+
+}
+
 
 

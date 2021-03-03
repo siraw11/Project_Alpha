@@ -1,19 +1,8 @@
 #pragma once
 
-
-#define SCREEN_WIDTH 1920
-
-#define SCREEN_HEIGHT 1080
-
-#define SPLASH_STATE_SHOW_TIME 0.1
-
-#define SPLASH_SCENE_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
-
 #define FONT "../Resources/Font/Bebas-Regular.ttf"
 
 #define MAIN_MENU_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
-
-#define PAUSE_BACKGROUND_FILEPATH "../Resources/MainMenu/background.jpg"
 
 #define ARCHER_BUTTON_FILEPATH "../Resources/MainMenu/Archer_Button.png"
 
@@ -31,22 +20,11 @@
 
 #define EXIT_BUTTON_FILEPATH "../Resources/MainMenu/ExitButton.png"
 
-#define GAMEWIN_BACKGROUND_FILEPATH "../Resources/MainMenu/GameWin.jpg"
-
-#define GAMEOVER_BACKGROUND_FILEPATH "../Resources/MainMenu/GameOver.jpg"
-
 #define MAIN_MENU_TITLE_FILEPATH "../Resources/MainMenu/Game Title.png"
 
 #define WIN_TITLE_FILEPATH "../Resources/MainMenu/WinState_title.png"
 
 #define GAME_OVER_TITLE_FILEPATH "../Resources/MainMenu/GameOver_title.png"
-
-
-#define MAIN_MENU_PLAY_BUTTON "../Resources/MainMenu/Play_Button.png"
-
-#define RESUME_BUTTON "../Resources/MainMenu/Resume Button.png"
-
-//#define HOME_BUTTON "../Resources/MainMenu/Home Button.png"
 
 #define SELECT_CLASS "../Resources/MainMenu/SelectClass_Button.png"
 
@@ -60,9 +38,33 @@
 
 #define ARROW_UI "../Resources/Sprites/item/arrow_1.png"
 
-//#define GAME_ENDING_BACKGROUND_SCALE 3.75
+#define ARROW_SOUND "../Resources/Sound/arrow-whoosh.wav"
 
-#define GAME_BACKGROUND_SCALE 2
+#define CHEST_OPENING "../Resources/Sound/Chest_Opening.wav"
+
+#define SWORD_SOUND "../Resources/Sound/dagger-woosh.wav"
+
+#define FEMALE_HIT_SOUND "../Resources/Sound/female-pain.wav"
+
+#define FIREBALL_SOUND "../Resources/Sound/fire-woosh.wav"
+
+#define MAN_HIT_SOUND "../Resources/Sound/man-pain.wav"
+
+#define MONSTER_HIT_SOUND "../Resources/Sound/monster-pain.wav"
+
+#define OW_SOUND "../Resources/Sound/ow-exclamation.wav"
+
+#define SCREAM_SOUND "../Resources/Sound/scream-pain.wav"
+
+#define BONE_SOUND "../Resources/Sound/bone-crack.wav"
+
+#define CLICK_SOUND "../Resources/Sound/click.wav"
+
+#define YOU_LOSE_SOUND "../Resources/Sound/you-lose.wav"
+
+#define YOU_WIN_SOUND "../Resources/Sound/you-win.wav"
+
+#define BACKGROUND_SOUND "../Resources/Sound/outlast.wav"
 
 #define SCALE 3
 

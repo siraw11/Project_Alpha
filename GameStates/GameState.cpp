@@ -18,8 +18,15 @@ namespace Alpha {
         gameStatus = GameStatus::isPlaying;
         //map sprite
         level.setTexture();
+        level.initSound(_data);
+        hero->initSound(_data);
+        boss->initSound(_data);
+        background.setBuffer(this->_data->assets.GetSound("Background"));
+
         //View variable
         this->_data->window.setFramerateLimit(60);
+        background.play();
+        background.setLoop(true);
     }
 
     void GameState::HandleInput() {
@@ -71,7 +78,7 @@ namespace Alpha {
 
             //Game Over
             if (hero->dead) {
-            gameStatus = GameStatus::isWin;
+            gameStatus = GameStatus::isGameOver;
 
             }
             //Win
@@ -83,13 +90,13 @@ namespace Alpha {
         if (gameStatus == GameStatus::isGameOver){
             this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
             camera.resetCamera(_data);
-            std::cout << "rimpiazza game state" << std::endl;
+            background.pause();
         }
         //Switch to GameWinState
         if(gameStatus == GameStatus::isWin){
             this->_data->machine.AddState(StateRef(new GameWinState(_data)), true);
             camera.resetCamera(_data);
-            std::cout << "rimpiazza game state" << std::endl;
+            background.pause();
         }
 
     }

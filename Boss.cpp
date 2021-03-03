@@ -127,6 +127,7 @@ void Boss::update(std::unique_ptr<Hero>& hero, const std::vector<Tile>& tile_vec
 
     //boss damage
     if (this->hit) {
+        bone.play();
         this->takeDamage(hero->damage());
         this->hit = false;
     }
@@ -199,6 +200,10 @@ sf::Vector2f Boss::distance(const Hero& hero) {
 void Boss::deathAnimation() {
     setTextureRect(sf::IntRect(64*counterDeath,64*6,64,64));
     counterDeath++;
+}
+
+void Boss::initSound(const Alpha::GameDataRef &_data) {
+    bone.setBuffer(_data->assets.GetSound("Bone"));
 }
 
 

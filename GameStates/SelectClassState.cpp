@@ -53,7 +53,7 @@ namespace Alpha {
         this->_mageMenu.setPosition((this->_data->window.getSize().x/ 2.0) - (this->_mageMenu.getGlobalBounds().width / 2)+(164), (this->_data->window.getSize().y/ 1.5) - (this->_mageMenu.getGlobalBounds().height / 2));
 
 
-        //this->_background.setScale(sf::Vector2f(GAME_BACKGROUND_SCALE,GAME_BACKGROUND_SCALE));
+        click.setBuffer(this->_data->assets.GetSound("Click"));
     }
 
     void SelectClassState::HandleInput() {
@@ -68,18 +68,21 @@ namespace Alpha {
 
 
             if (this->_data->input.IsSpriteClicked(this->_archerButton, sf::Mouse::Left, this->_data->window)){
+                click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::ARCHER);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
                 std::cout<<"rimpiazza select class"<<std::endl;
 
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
+                click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::KNIGHT);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
                 std::cout<<"rimpiazza select class"<<std::endl;
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
+                click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);

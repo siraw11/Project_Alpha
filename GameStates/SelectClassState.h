@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio/Sound.hpp>
 #include "State.hpp"
 #include "../GameManager/Game.hpp"
 
@@ -23,20 +24,15 @@ namespace Alpha
         GameDataRef _data;
 
         sf::Sprite _background;
-
         sf::Sprite _archerButton;
-
         sf::Sprite _knightButton;
-
         sf::Sprite _mageButton;
-
         sf::Sprite _archerMenu;
-
         sf::Sprite _knightMenu;
-
         sf::Sprite _mageMenu;
-
         sf::Sprite _title;
+
+        sf::Sound click;
 
 
     };

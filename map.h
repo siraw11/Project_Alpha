@@ -30,6 +30,8 @@ public:
 //vettore delle chest
     std::vector<Chest> chest_vector;
 
+    //funzioni
+    void initSound(const Alpha::GameDataRef& _data);
 
 
 //draw oggetti
