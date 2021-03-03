@@ -4,4 +4,6 @@ add_subdirectory(lib)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 add_executable(Game_test RunAllTest.cpp)
-target_link_libraries(Game_test gtest gtest_main core sfml-graphics sfml-system sfml-audio)
+target_link_libraries(Game_test gtest gtest_main core sfml-graphics sfml-system sfml-audio sfml-window)
+
+
