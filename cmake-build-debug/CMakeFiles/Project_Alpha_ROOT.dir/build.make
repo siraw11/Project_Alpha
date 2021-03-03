@@ -538,6 +538,7 @@ Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-graphics.so.2.5.1
 Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-audio.so.2.5.1
 Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-window.so.2.5.1
 Project_Alpha_ROOT: /opt/SFML-2.5.1/lib/libsfml-system.so.2.5.1
+Project_Alpha_ROOT: libcore.a
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable Project_Alpha_ROOT"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_Alpha_ROOT.dir/link.txt --verbose=$(VERBOSE)

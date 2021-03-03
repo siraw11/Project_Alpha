@@ -465,3 +465,31 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0754e/fast && /usr/bin/make  -f CMakeFiles/cmTC_0754e.dir/build.make CMakeFiles/cmTC_0754e.dir/build
+make[1]: ingresso nella directory "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeTmp"
+Building C object CMakeFiles/cmTC_0754e.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0754e.dir/CheckIncludeFile.c.o   -c /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0754e
+/snap/clion/139/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0754e.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0754e.dir/CheckIncludeFile.c.o  -o cmTC_0754e 
+make[1]: uscita dalla directory "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeTmp"
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_aacaf/fast && /usr/bin/make  -f CMakeFiles/cmTC_aacaf.dir/build.make CMakeFiles/cmTC_aacaf.dir/build
+make[1]: ingresso nella directory "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeTmp"
+Building C object CMakeFiles/cmTC_aacaf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_aacaf.dir/CheckFunctionExists.c.o   -c /snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aacaf
+/snap/clion/139/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aacaf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_aacaf.dir/CheckFunctionExists.c.o  -o cmTC_aacaf  -lpthread 
+make[1]: uscita dalla directory "/home/matteo/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/CMakeTmp"
+
+
+
