@@ -1,0 +1,757 @@
+Index: test/RunAllTest.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n#include \"gtest/gtest.h\"\n\nTEST(test_suite_name,tette){\n    ASSERT_EQ(2,3);\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/RunAllTest.cpp b/test/RunAllTest.cpp
+--- a/test/RunAllTest.cpp	(revision f1adbc2bd622686e168ee96f1b1191170aae65de)
++++ b/test/RunAllTest.cpp	(date 1614861631619)
+@@ -1,8 +1,21 @@
+ 
+ #include "gtest/gtest.h"
+ 
+-TEST(test_suite_name,tette){
+-    ASSERT_EQ(2,3);
++#include "../Hero.h"
++#include "../Collision.h"
++
++
++
++
++TEST(Hero, wallCollision){
++    Hero *hero;
++    // = new Archer(1,1,30,1,1,1);
++    Tile tile(0);
++    sf::Vector2f position(412, 300);
++    tile.setPosition(position);
++    std::vector<Tile> tile_vector;
++    tile_vector.push_back(tile);
++    ASSERT_FALSE(Collision::checkCollision(tile_vector, hero, hero->direction().x, hero->direction().y));
+ }
+ 
+ 
+Index: Archer.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//\n// Created by matteo on 31/03/20.\n//\n\n\n#include \"GameManager/DEFINITIONS.hpp\"\n#include \"Archer.h\"\n\n//constructor\nArcher::Archer(int hp, int s, int sp, int a, int ar, int m):Hero( hp, s, sp, a, ar, m) {\n\n    auto heroTexture= new sf::Texture;\n    heroTexture->loadFromFile(\"../Resources/Sprites/Hero/archer.png\");\n    setTexture(heroTexture);\n    setTextureRect(sf::IntRect(0, 128, 64, 64));\n\n    setScale(sf::Vector2f(HERO_SCALE,HERO_SCALE));\n\n    range = 700;\n\n    playerType = PlayerType::ARCHER;\n\n}\n\n//destructor\nArcher::~Archer() = default;\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Archer.cpp b/Archer.cpp
+--- a/Archer.cpp	(revision f1adbc2bd622686e168ee96f1b1191170aae65de)
++++ b/Archer.cpp	(date 1614792232352)
+@@ -27,3 +27,5 @@
+ 
+ 
+ 
++
++
+Index: cmake-build-debug/CMakeFiles/core.dir/CXX.includecache
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#IncludeRegexLine: ^[ \t]*[#%][ \t]*(include|import)[ \t]*[<\"]([^\">]+)([\">])\n\n#IncludeRegexScan: ^.*$\n\n#IncludeRegexComplain: ^$\n\n#IncludeRegexTransform: \n\n/home/waris/CLionProjects/Project_Alpha/Archer.cpp\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nArcher.h\n/home/waris/CLionProjects/Project_Alpha/Archer.h\n\n/home/waris/CLionProjects/Project_Alpha/Archer.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Boss.h\nEnemy.h\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\n\n/home/waris/CLionProjects/Project_Alpha/Chest.h\nSFML/Graphics.hpp\n-\nSFML/Audio/Sound.hpp\n-\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\nObject.h\n/home/waris/CLionProjects/Project_Alpha/Object.h\n\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\nGameCharacter.h\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nChest.h\n/home/waris/CLionProjects/Project_Alpha/Chest.h\n\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.h\nSFML/Graphics.hpp\n-\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp\nmap\n-\nSFML/Graphics.hpp\n-\nSFML/Audio/SoundBuffer.hpp\n-\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\nmemory\n-\nstring\n-\nSFML/Graphics.hpp\n-\n../GameStates/StateMachine.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp\nAssetManager.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp\nInputManager.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp\nDEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp\nSFML/Graphics/RenderWindow.hpp\n-\nSFML/Window/Mouse.hpp\n-\nSFML/Graphics.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/SFML/Graphics.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp\nmemory\n-\nstack\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n\n/home/waris/CLionProjects/Project_Alpha/Hero.h\nGameCharacter.h\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nEnemy.h\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\nChest.h\n/home/waris/CLionProjects/Project_Alpha/Chest.h\nProjectile.h\n/home/waris/CLionProjects/Project_Alpha/Projectile.h\nWeapon.h\n/home/waris/CLionProjects/Project_Alpha/Weapon.h\nPlayerType.h\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\n\n/home/waris/CLionProjects/Project_Alpha/Object.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\n\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\n\n/home/waris/CLionProjects/Project_Alpha/Projectile.h\nSFML/Graphics/RectangleShape.hpp\n-\nPlayerType.h\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nBoss.h\n/home/waris/CLionProjects/Project_Alpha/Boss.h\n\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nSFML/Graphics.hpp\n-\n\n/home/waris/CLionProjects/Project_Alpha/Weapon.h\nObject.h\n/home/waris/CLionProjects/Project_Alpha/Object.h\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache b/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache
+--- a/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache	(revision f1adbc2bd622686e168ee96f1b1191170aae65de)
++++ b/cmake-build-debug/CMakeFiles/core.dir/CXX.includecache	(date 1614794384790)
+@@ -6,20 +6,34 @@
+ 
+ #IncludeRegexTransform: 
+ 
+-/home/waris/CLionProjects/Project_Alpha/Archer.cpp
++/home/waris/CLionProjects/Project_Alpha/Boss.cpp
+ GameManager/DEFINITIONS.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Archer.h
+-/home/waris/CLionProjects/Project_Alpha/Archer.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Archer.h
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
++Boss.h
++/home/waris/CLionProjects/Project_Alpha/Boss.h
++Random.h
++/home/waris/CLionProjects/Project_Alpha/Random.h
++Collision.h
++/home/waris/CLionProjects/Project_Alpha/Collision.h
++cmath
++-
++GameStates/GameState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp
++GameStates/GameOverState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
+ 
+ /home/waris/CLionProjects/Project_Alpha/Boss.h
+ Enemy.h
+ /home/waris/CLionProjects/Project_Alpha/Enemy.h
+ 
++/home/waris/CLionProjects/Project_Alpha/Camera.h
++SFML/Graphics/View.hpp
++-
++Hero.h
++/home/waris/CLionProjects/Project_Alpha/Hero.h
++GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++
+ /home/waris/CLionProjects/Project_Alpha/Chest.h
+ SFML/Graphics.hpp
+ -
+@@ -32,6 +46,14 @@
+ Object.h
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ 
++/home/waris/CLionProjects/Project_Alpha/Collision.h
++SFML/Graphics.hpp
++-
++Tile.h
++/home/waris/CLionProjects/Project_Alpha/Tile.h
++Hero.h
++/home/waris/CLionProjects/Project_Alpha/Hero.h
++
+ /home/waris/CLionProjects/Project_Alpha/Enemy.h
+ GameCharacter.h
+ /home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+@@ -80,6 +102,144 @@
+ SFML/Graphics.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/SFML/Graphics.hpp
+ 
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.cpp
++utility
++-
++sstream
++-
++GameOverState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
++../GameManager/DEFINITIONS.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
++GameState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp
++MainMenuState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
++SelectClassState.h
++/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
++iostream
++-
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
++SFML/Graphics.hpp
++-
++SFML/Audio/Sound.hpp
++-
++State.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
++../GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.cpp
++utility
++-
++GameState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp
++MainMenuState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
++GameOverState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
++iostream
++-
++GameWinState.h
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.h
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp
++SFML/Graphics.hpp
++-
++State.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
++../GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++../PlayerType.h
++/home/waris/CLionProjects/Project_Alpha/PlayerType.h
++../map.h
++/home/waris/CLionProjects/Project_Alpha/map.h
++../Hud.h
++/home/waris/CLionProjects/Project_Alpha/Hud.h
++../Camera.h
++/home/waris/CLionProjects/Project_Alpha/Camera.h
++../Hero.h
++/home/waris/CLionProjects/Project_Alpha/Hero.h
++../Weapon.h
++/home/waris/CLionProjects/Project_Alpha/Weapon.h
++../Boss.h
++/home/waris/CLionProjects/Project_Alpha/Boss.h
++../GameManager/DEFINITIONS.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.cpp
++utility
++-
++sstream
++-
++GameOverState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
++../GameManager/DEFINITIONS.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
++GameState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp
++MainMenuState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
++SelectClassState.h
++/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
++iostream
++-
++GameWinState.h
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.h
++iostream
++-
++SFML/Window/Event.hpp
++-
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.h
++SFML/Graphics.hpp
++-
++State.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
++../GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.cpp
++utility
++-
++sstream
++-
++MainMenuState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
++../GameManager/DEFINITIONS.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
++GameState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp
++SelectClassState.h
++/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
++GameOverState.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp
++iostream
++-
++ieee754.h
++-
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
++SFML/Graphics.hpp
++-
++SFML/Audio/Sound.hpp
++-
++State.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
++../GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++
++/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
++SFML/Graphics.hpp
++-
++SFML/Audio/Sound.hpp
++-
++State.hpp
++/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
++../GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++
+ /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
+ 
+ /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
+@@ -106,6 +266,12 @@
+ PlayerType.h
+ /home/waris/CLionProjects/Project_Alpha/PlayerType.h
+ 
++/home/waris/CLionProjects/Project_Alpha/Hud.h
++Hero.h
++/home/waris/CLionProjects/Project_Alpha/Hero.h
++GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ Tile.h
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+@@ -122,6 +288,18 @@
+ Boss.h
+ /home/waris/CLionProjects/Project_Alpha/Boss.h
+ 
++/home/waris/CLionProjects/Project_Alpha/Random.h
++cstdlib
++-
++SFML/System.hpp
++-
++iostream
++-
++ctime
++-
++Tile.h
++/home/waris/CLionProjects/Project_Alpha/Tile.h
++
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+ SFML/Graphics.hpp
+ -
+@@ -130,3 +308,23 @@
+ Object.h
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ 
++/home/waris/CLionProjects/Project_Alpha/map.h
++SFML/Graphics.hpp
++-
++SFML/Window.hpp
++-
++GameManager/Game.hpp
++/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
++Tile.h
++/home/waris/CLionProjects/Project_Alpha/Tile.h
++Enemy.h
++/home/waris/CLionProjects/Project_Alpha/Enemy.h
++Boss.h
++/home/waris/CLionProjects/Project_Alpha/Boss.h
++Chest.h
++/home/waris/CLionProjects/Project_Alpha/Chest.h
++Projectile.h
++/home/waris/CLionProjects/Project_Alpha/Projectile.h
++Hero.h
++/home/waris/CLionProjects/Project_Alpha/Hero.h
++
+Index: cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CXX.includecache
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#IncludeRegexLine: ^[ \t]*[#%][ \t]*(include|import)[ \t]*[<\"]([^\">]+)([\">])\n\n#IncludeRegexScan: ^.*$\n\n#IncludeRegexComplain: ^$\n\n#IncludeRegexTransform: \n\n/home/waris/CLionProjects/Project_Alpha/Archer.cpp\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nArcher.h\n/home/waris/CLionProjects/Project_Alpha/Archer.h\n\n/home/waris/CLionProjects/Project_Alpha/Archer.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Boss.cpp\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nBoss.h\n/home/waris/CLionProjects/Project_Alpha/Boss.h\nRandom.h\n/home/waris/CLionProjects/Project_Alpha/Random.h\nCollision.h\n/home/waris/CLionProjects/Project_Alpha/Collision.h\ncmath\n-\nGameStates/GameState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp\nGameStates/GameOverState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp\n\n/home/waris/CLionProjects/Project_Alpha/Boss.h\nEnemy.h\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\n\n/home/waris/CLionProjects/Project_Alpha/Camera.cpp\nCamera.h\n/home/waris/CLionProjects/Project_Alpha/Camera.h\n\n/home/waris/CLionProjects/Project_Alpha/Camera.h\nSFML/Graphics/View.hpp\n-\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/CharacterFactory.cpp\nbits/unique_ptr.h\n-\nCharacterFactory.h\n/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h\nKnight.h\n/home/waris/CLionProjects/Project_Alpha/Knight.h\nArcher.h\n/home/waris/CLionProjects/Project_Alpha/Archer.h\nMage.h\n/home/waris/CLionProjects/Project_Alpha/Mage.h\n\n/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Chest.cpp\niostream\n-\nChest.h\n/home/waris/CLionProjects/Project_Alpha/Chest.h\nItem.h\n/home/waris/CLionProjects/Project_Alpha/Item.h\nWeapon.h\n/home/waris/CLionProjects/Project_Alpha/Weapon.h\n\n/home/waris/CLionProjects/Project_Alpha/Chest.h\nSFML/Graphics.hpp\n-\nSFML/Audio/Sound.hpp\n-\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\nObject.h\n/home/waris/CLionProjects/Project_Alpha/Object.h\n\n/home/waris/CLionProjects/Project_Alpha/Collision.cpp\niostream\n-\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nCollision.h\n/home/waris/CLionProjects/Project_Alpha/Collision.h\n\n/home/waris/CLionProjects/Project_Alpha/Collision.h\nSFML/Graphics.hpp\n-\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Enemy.cpp\ncmath\n-\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nEnemy.h\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\nRandom.h\n/home/waris/CLionProjects/Project_Alpha/Random.h\nCollision.h\n/home/waris/CLionProjects/Project_Alpha/Collision.h\ncmath\n-\n\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\nGameCharacter.h\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nChest.h\n/home/waris/CLionProjects/Project_Alpha/Chest.h\n\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.cpp\nGameCharacter.h\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.h\n\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.h\nSFML/Graphics.hpp\n-\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp\nSFML/Graphics.hpp\n-\nAssetManager.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp\nmap\n-\nSFML/Graphics.hpp\n-\nSFML/Audio/SoundBuffer.hpp\n-\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.cpp\niostream\n-\nGame.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n../GameStates/SplashState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.hpp\n../GameStates/MainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\nmemory\n-\nstring\n-\nSFML/Graphics.hpp\n-\n../GameStates/StateMachine.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp\nAssetManager.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp\nInputManager.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp\nDEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.cpp\nInputManager.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp\nSFML/Graphics/RenderWindow.hpp\n-\nSFML/Window/Mouse.hpp\n-\nSFML/Graphics.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/SFML/Graphics.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.cpp\nutility\n-\nsstream\n-\nGameOverState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp\n../GameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nGameState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp\nMainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\nSelectClassState.h\n/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h\niostream\n-\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp\nSFML/Graphics.hpp\n-\nSFML/Audio/Sound.hpp\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n../GameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.cpp\nutility\n-\nGameState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp\nMainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\nGameOverState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp\niostream\n-\nGameWinState.h\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.h\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp\nSFML/Graphics.hpp\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n../GameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n../PlayerType.h\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\n../map.h\n/home/waris/CLionProjects/Project_Alpha/map.h\n../Hud.h\n/home/waris/CLionProjects/Project_Alpha/Hud.h\n../Camera.h\n/home/waris/CLionProjects/Project_Alpha/Camera.h\n../Hero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n../Weapon.h\n/home/waris/CLionProjects/Project_Alpha/Weapon.h\n../Boss.h\n/home/waris/CLionProjects/Project_Alpha/Boss.h\n../GameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.cpp\nutility\n-\nsstream\n-\nGameOverState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp\n../GameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nGameState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp\nMainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\nSelectClassState.h\n/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h\niostream\n-\nGameWinState.h\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.h\niostream\n-\nSFML/Window/Event.hpp\n-\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.h\nSFML/Graphics.hpp\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n../GameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.cpp\nutility\n-\nsstream\n-\nMainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\n../GameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nGameState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp\nSelectClassState.h\n/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h\nGameOverState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp\niostream\n-\nieee754.h\n-\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\nSFML/Graphics.hpp\n-\nSFML/Audio/Sound.hpp\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n../GameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.cpp\nutility\n-\nsstream\n-\nMainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\nSelectClassState.h\n/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h\nGameState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp\n../GameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\n../CharacterFactory.h\n/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h\niostream\n-\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h\nSFML/Graphics.hpp\n-\nSFML/Audio/Sound.hpp\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n../GameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.cpp\nsstream\n-\nSplashState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.hpp\nMainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\n../GameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\niostream\n-\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.hpp\nSFML/Graphics.hpp\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n../GameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp\niostream\n-\nStateMachine.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp\n\n/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp\nmemory\n-\nstack\n-\nState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp\n\n/home/waris/CLionProjects/Project_Alpha/Hero.cpp\niostream\n-\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\nCollision.h\n/home/waris/CLionProjects/Project_Alpha/Collision.h\ncmath\n-\nGameStates/MainMenuState.hpp\n/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp\nGameStates/SelectClassState.h\n/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h\n\n/home/waris/CLionProjects/Project_Alpha/Hero.h\nGameCharacter.h\n/home/waris/CLionProjects/Project_Alpha/GameCharacter.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nEnemy.h\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\nChest.h\n/home/waris/CLionProjects/Project_Alpha/Chest.h\nProjectile.h\n/home/waris/CLionProjects/Project_Alpha/Projectile.h\nWeapon.h\n/home/waris/CLionProjects/Project_Alpha/Weapon.h\nPlayerType.h\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\n\n/home/waris/CLionProjects/Project_Alpha/Hud.cpp\niostream\n-\nHud.h\n/home/waris/CLionProjects/Project_Alpha/Hud.h\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nsstream\n/home/waris/CLionProjects/Project_Alpha/sstream\n\n/home/waris/CLionProjects/Project_Alpha/Hud.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/Item.cpp\niostream\n-\nItem.h\n/home/waris/CLionProjects/Project_Alpha/Item.h\nPlayerType.h\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Item.h\nObject.h\n/home/waris/CLionProjects/Project_Alpha/Object.h\n\n/home/waris/CLionProjects/Project_Alpha/Knight.cpp\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nKnight.h\n/home/waris/CLionProjects/Project_Alpha/Knight.h\n\n/home/waris/CLionProjects/Project_Alpha/Knight.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Mage.cpp\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nMage.h\n/home/waris/CLionProjects/Project_Alpha/Mage.h\n\n/home/waris/CLionProjects/Project_Alpha/Mage.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Object.cpp\niostream\n-\nObject.h\n/home/waris/CLionProjects/Project_Alpha/Object.h\n\n/home/waris/CLionProjects/Project_Alpha/Object.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\n\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\n\n/home/waris/CLionProjects/Project_Alpha/Projectile.cpp\nSFML/Graphics/Texture.hpp\n-\niostream\n-\nProjectile.h\n/home/waris/CLionProjects/Project_Alpha/Projectile.h\nCollision.h\n/home/waris/CLionProjects/Project_Alpha/Collision.h\n\n/home/waris/CLionProjects/Project_Alpha/Projectile.h\nSFML/Graphics/RectangleShape.hpp\n-\nPlayerType.h\n/home/waris/CLionProjects/Project_Alpha/PlayerType.h\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nBoss.h\n/home/waris/CLionProjects/Project_Alpha/Boss.h\n\n/home/waris/CLionProjects/Project_Alpha/Random.cpp\ncstdlib\n-\nSFML/System.hpp\n-\nRandom.h\n/home/waris/CLionProjects/Project_Alpha/Random.h\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nctime\n-\n\n/home/waris/CLionProjects/Project_Alpha/Random.h\ncstdlib\n-\nSFML/System.hpp\n-\niostream\n-\nctime\n-\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\n\n/home/waris/CLionProjects/Project_Alpha/Tile.cpp\niostream\n-\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\n\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nSFML/Graphics.hpp\n-\n\n/home/waris/CLionProjects/Project_Alpha/Weapon.cpp\nstdexcept\n-\niostream\n-\nWeapon.h\n/home/waris/CLionProjects/Project_Alpha/Weapon.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n/home/waris/CLionProjects/Project_Alpha/Weapon.h\nObject.h\n/home/waris/CLionProjects/Project_Alpha/Object.h\n\n/home/waris/CLionProjects/Project_Alpha/main.cpp\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\n\n/home/waris/CLionProjects/Project_Alpha/map.cpp\nfstream\n-\niostream\n-\nGameManager/DEFINITIONS.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp\nmap.h\n/home/waris/CLionProjects/Project_Alpha/map.h\nRandom.h\n/home/waris/CLionProjects/Project_Alpha/Random.h\ncmath\n-\n\n/home/waris/CLionProjects/Project_Alpha/map.h\nSFML/Graphics.hpp\n-\nSFML/Window.hpp\n-\nGameManager/Game.hpp\n/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp\nTile.h\n/home/waris/CLionProjects/Project_Alpha/Tile.h\nEnemy.h\n/home/waris/CLionProjects/Project_Alpha/Enemy.h\nBoss.h\n/home/waris/CLionProjects/Project_Alpha/Boss.h\nChest.h\n/home/waris/CLionProjects/Project_Alpha/Chest.h\nProjectile.h\n/home/waris/CLionProjects/Project_Alpha/Projectile.h\nHero.h\n/home/waris/CLionProjects/Project_Alpha/Hero.h\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CXX.includecache b/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CXX.includecache
+--- a/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CXX.includecache	(revision f1adbc2bd622686e168ee96f1b1191170aae65de)
++++ b/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CXX.includecache	(date 1614794385838)
+@@ -6,16 +6,6 @@
+ 
+ #IncludeRegexTransform: 
+ 
+-/home/waris/CLionProjects/Project_Alpha/Archer.cpp
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Archer.h
+-/home/waris/CLionProjects/Project_Alpha/Archer.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Archer.h
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Boss.cpp
+ GameManager/DEFINITIONS.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+@@ -36,10 +26,6 @@
+ Enemy.h
+ /home/waris/CLionProjects/Project_Alpha/Enemy.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/Camera.cpp
+-Camera.h
+-/home/waris/CLionProjects/Project_Alpha/Camera.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Camera.h
+ SFML/Graphics/View.hpp
+ -
+@@ -48,32 +34,6 @@
+ GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/CharacterFactory.cpp
+-bits/unique_ptr.h
+--
+-CharacterFactory.h
+-/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h
+-Knight.h
+-/home/waris/CLionProjects/Project_Alpha/Knight.h
+-Archer.h
+-/home/waris/CLionProjects/Project_Alpha/Archer.h
+-Mage.h
+-/home/waris/CLionProjects/Project_Alpha/Mage.h
+-
+-/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Chest.cpp
+-iostream
+--
+-Chest.h
+-/home/waris/CLionProjects/Project_Alpha/Chest.h
+-Item.h
+-/home/waris/CLionProjects/Project_Alpha/Item.h
+-Weapon.h
+-/home/waris/CLionProjects/Project_Alpha/Weapon.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Chest.h
+ SFML/Graphics.hpp
+ -
+@@ -86,14 +46,6 @@
+ Object.h
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/Collision.cpp
+-iostream
+--
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Collision.h
+-/home/waris/CLionProjects/Project_Alpha/Collision.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Collision.h
+ SFML/Graphics.hpp
+ -
+@@ -102,20 +54,6 @@
+ Hero.h
+ /home/waris/CLionProjects/Project_Alpha/Hero.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/Enemy.cpp
+-cmath
+--
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Enemy.h
+-/home/waris/CLionProjects/Project_Alpha/Enemy.h
+-Random.h
+-/home/waris/CLionProjects/Project_Alpha/Random.h
+-Collision.h
+-/home/waris/CLionProjects/Project_Alpha/Collision.h
+-cmath
+--
+-
+ /home/waris/CLionProjects/Project_Alpha/Enemy.h
+ GameCharacter.h
+ /home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+@@ -124,22 +62,12 @@
+ Chest.h
+ /home/waris/CLionProjects/Project_Alpha/Chest.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/GameCharacter.cpp
+-GameCharacter.h
+-/home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+-
+ /home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+ SFML/Graphics.hpp
+ -
+ GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp
+-SFML/Graphics.hpp
+--
+-AssetManager.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
+-
+ /home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
+ map
+ -
+@@ -150,16 +78,6 @@
+ 
+ /home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/GameManager/Game.cpp
+-iostream
+--
+-Game.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+-../GameStates/SplashState.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.hpp
+-../GameStates/MainMenuState.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
+-
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ memory
+ -
+@@ -176,10 +94,6 @@
+ DEFINITIONS.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.cpp
+-InputManager.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+-
+ /home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ SFML/Graphics/RenderWindow.hpp
+ -
+@@ -316,24 +230,6 @@
+ ../GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.cpp
+-utility
+--
+-sstream
+--
+-MainMenuState.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
+-SelectClassState.h
+-/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
+-GameState.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp
+-../GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-../CharacterFactory.h
+-/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h
+-iostream
+--
+-
+ /home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
+ SFML/Graphics.hpp
+ -
+@@ -344,33 +240,7 @@
+ ../GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.cpp
+-sstream
+--
+-SplashState.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.hpp
+-MainMenuState.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
+-../GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-iostream
+--
+-
+-/home/waris/CLionProjects/Project_Alpha/GameStates/SplashState.hpp
+-SFML/Graphics.hpp
+--
+-State.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
+-../GameManager/Game.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+-
+-/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
+-
+-/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp
+-iostream
+--
+-StateMachine.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
+ 
+ /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
+ memory
+@@ -380,22 +250,6 @@
+ State.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/Hero.cpp
+-iostream
+--
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
+-Collision.h
+-/home/waris/CLionProjects/Project_Alpha/Collision.h
+-cmath
+--
+-GameStates/MainMenuState.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
+-GameStates/SelectClassState.h
+-/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Hero.h
+ GameCharacter.h
+ /home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+@@ -412,78 +266,18 @@
+ PlayerType.h
+ /home/waris/CLionProjects/Project_Alpha/PlayerType.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/Hud.cpp
+-iostream
+--
+-Hud.h
+-/home/waris/CLionProjects/Project_Alpha/Hud.h
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-sstream
+-/home/waris/CLionProjects/Project_Alpha/sstream
+-
+ /home/waris/CLionProjects/Project_Alpha/Hud.h
+ Hero.h
+ /home/waris/CLionProjects/Project_Alpha/Hero.h
+ GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ 
+-/home/waris/CLionProjects/Project_Alpha/Item.cpp
+-iostream
+--
+-Item.h
+-/home/waris/CLionProjects/Project_Alpha/Item.h
+-PlayerType.h
+-/home/waris/CLionProjects/Project_Alpha/PlayerType.h
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Item.h
+-Object.h
+-/home/waris/CLionProjects/Project_Alpha/Object.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Knight.cpp
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Knight.h
+-/home/waris/CLionProjects/Project_Alpha/Knight.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Knight.h
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Mage.cpp
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Mage.h
+-/home/waris/CLionProjects/Project_Alpha/Mage.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Mage.h
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
+-
+-/home/waris/CLionProjects/Project_Alpha/Object.cpp
+-iostream
+--
+-Object.h
+-/home/waris/CLionProjects/Project_Alpha/Object.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ Tile.h
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+ 
+ /home/waris/CLionProjects/Project_Alpha/PlayerType.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/Projectile.cpp
+-SFML/Graphics/Texture.hpp
+--
+-iostream
+--
+-Projectile.h
+-/home/waris/CLionProjects/Project_Alpha/Projectile.h
+-Collision.h
+-/home/waris/CLionProjects/Project_Alpha/Collision.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ SFML/Graphics/RectangleShape.hpp
+ -
+@@ -494,18 +288,6 @@
+ Boss.h
+ /home/waris/CLionProjects/Project_Alpha/Boss.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/Random.cpp
+-cstdlib
+--
+-SFML/System.hpp
+--
+-Random.h
+-/home/waris/CLionProjects/Project_Alpha/Random.h
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-ctime
+--
+-
+ /home/waris/CLionProjects/Project_Alpha/Random.h
+ cstdlib
+ -
+@@ -518,50 +300,14 @@
+ Tile.h
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/Tile.cpp
+-iostream
+--
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-Tile.h
+-/home/waris/CLionProjects/Project_Alpha/Tile.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+ SFML/Graphics.hpp
+ -
+ 
+-/home/waris/CLionProjects/Project_Alpha/Weapon.cpp
+-stdexcept
+--
+-iostream
+--
+-Weapon.h
+-/home/waris/CLionProjects/Project_Alpha/Weapon.h
+-Hero.h
+-/home/waris/CLionProjects/Project_Alpha/Hero.h
+-
+ /home/waris/CLionProjects/Project_Alpha/Weapon.h
+ Object.h
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ 
+-/home/waris/CLionProjects/Project_Alpha/main.cpp
+-GameManager/Game.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+-
+-/home/waris/CLionProjects/Project_Alpha/map.cpp
+-fstream
+--
+-iostream
+--
+-GameManager/DEFINITIONS.hpp
+-/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+-map.h
+-/home/waris/CLionProjects/Project_Alpha/map.h
+-Random.h
+-/home/waris/CLionProjects/Project_Alpha/Random.h
+-cmath
+--
+-
+ /home/waris/CLionProjects/Project_Alpha/map.h
+ SFML/Graphics.hpp
+ -
+Index: cmake-build-debug/Testing/Temporary/LastTest.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Start testing: Mar 03 18:22 CET\n----------------------------------------------------------\nEnd testing: Mar 03 18:22 CET\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/Testing/Temporary/LastTest.log b/cmake-build-debug/Testing/Temporary/LastTest.log
+--- a/cmake-build-debug/Testing/Temporary/LastTest.log	(revision f1adbc2bd622686e168ee96f1b1191170aae65de)
++++ b/cmake-build-debug/Testing/Temporary/LastTest.log	(date 1614861604687)
+@@ -1,3 +1,3 @@
+-Start testing: Mar 03 18:22 CET
++Start testing: Mar 04 13:40 CET
+ ----------------------------------------------------------
+-End testing: Mar 03 18:22 CET
++End testing: Mar 04 13:40 CET
+Index: cmake-build-debug/test/CMakeFiles/Game_test.dir/depend.make
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 3.17\n\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-death-test.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-matchers.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-message.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-param-test.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-printers.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-test-part.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest-typed-test.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest_pred_impl.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/gtest_prod.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/custom/gtest-port.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/custom/gtest-printers.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-death-test-internal.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-filepath.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-internal.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-param-util.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-port-arch.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-port.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-string.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-type-util.h\ntest/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/RunAllTest.cpp\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/test/CMakeFiles/Game_test.dir/depend.make b/cmake-build-debug/test/CMakeFiles/Game_test.dir/depend.make
+--- a/cmake-build-debug/test/CMakeFiles/Game_test.dir/depend.make	(revision f1adbc2bd622686e168ee96f1b1191170aae65de)
++++ b/cmake-build-debug/test/CMakeFiles/Game_test.dir/depend.make	(date 1614802983015)
+@@ -21,5 +21,23 @@
+ test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-port.h
+ test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-string.h
+ test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/lib/googletest/include/gtest/internal/gtest-type-util.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Archer.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Boss.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Chest.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Collision.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Enemy.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../GameCharacter.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../GameManager/AssetManager.hpp
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../GameManager/DEFINITIONS.hpp
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../GameManager/Game.hpp
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../GameManager/InputManager.hpp
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../GameStates/State.hpp
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../GameStates/StateMachine.hpp
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Hero.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Object.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../PlayerType.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Projectile.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Tile.h
++test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../Weapon.h
+ test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o: ../test/RunAllTest.cpp
+ 

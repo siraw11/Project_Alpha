@@ -20,15 +20,15 @@ Hero* CharacterFactory::createCharacter(PlayerType type) {
 
     switch(type) {
         case PlayerType::KNIGHT: {
-            result = new Knight(10, 3, 50, 0, 20, 0);
+            result = new Knight(10, 3, 30, 0, 20, 0);
             break;
         }
         case PlayerType::ARCHER: {
-            result =new Archer(10, 1, 50, 20, 0, 0);
+            result =new Archer(10, 1, 30, 20, 0, 0);
             break;
         }
         case PlayerType ::MAGE: {
-            result = new Mage(10, 2, 50, 0, 0, 10);
+            result = new Mage(10, 2, 30, 0, 0, 10);
             break;
         }
     }
