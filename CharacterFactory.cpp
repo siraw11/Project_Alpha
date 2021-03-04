@@ -35,3 +35,5 @@ Hero* CharacterFactory::createCharacter(PlayerType type) {
 
     return result;
 }
+
+
