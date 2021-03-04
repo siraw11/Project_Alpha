@@ -436,7 +436,3 @@ gtest/gtest.h
 ../Archer.h
 /home/waris/CLionProjects/Project_Alpha/Archer.h
 
-/home/waris/CLionProjects/Project_Alpha/test/RunAllTest.cpp
-gtest/gtest.h
-/home/waris/CLionProjects/Project_Alpha/test/gtest/gtest.h
-
