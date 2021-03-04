@@ -23,7 +23,7 @@ namespace Alpha
 		GameDataRef _data;
 
         sf::Sprite _background;
-        sf::Sprite _LostTitle;
+        sf::Sprite _lostTitle;
 		sf::Sprite _retryButton;
 		sf::Sprite _exitButton;
 

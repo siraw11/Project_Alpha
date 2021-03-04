@@ -169,9 +169,9 @@ void Chest::openingAnimation() {
 }
 
 void Chest::initSound(const Alpha::GameDataRef &_data) {
-    std::cout<<"init chest"<<std::endl;
+
     openingSound.setBuffer(_data->assets.GetSound("Chest"));
-    std::cout<<"end chest"<<std::endl;
+
 
 }
 

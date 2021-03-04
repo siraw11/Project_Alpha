@@ -36,8 +36,6 @@ namespace Alpha
 
         GameDataRef _data;
 
-        sf::Clock _clock;
-
         map level;
         std::unique_ptr<Hero> hero = nullptr;
         std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(20, 3, 10));

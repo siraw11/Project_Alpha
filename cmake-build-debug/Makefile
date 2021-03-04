@@ -68,10 +68,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/waris/CLionProjects/Project_Alpha
+CMAKE_SOURCE_DIR = /home/matteo/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/waris/CLionProjects/Project_Alpha/cmake-build-debug
+CMAKE_BINARY_DIR = /home/matteo/Project_Alpha/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,9 +146,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles /home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -747,36 +747,6 @@ GameStates/SelectClassState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SelectClassState.cpp.s
 .PHONY : GameStates/SelectClassState.cpp.s
 
-GameStates/SplashState.o: GameStates/SplashState.cpp.o
-
-.PHONY : GameStates/SplashState.o
-
-# target to build an object file
-GameStates/SplashState.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SplashState.cpp.o
-.PHONY : GameStates/SplashState.cpp.o
-
-GameStates/SplashState.i: GameStates/SplashState.cpp.i
-
-.PHONY : GameStates/SplashState.i
-
-# target to preprocess a source file
-GameStates/SplashState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SplashState.cpp.i
-.PHONY : GameStates/SplashState.cpp.i
-
-GameStates/SplashState.s: GameStates/SplashState.cpp.s
-
-.PHONY : GameStates/SplashState.s
-
-# target to generate assembly for a file
-GameStates/SplashState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/GameStates/SplashState.cpp.s
-.PHONY : GameStates/SplashState.cpp.s
-
 GameStates/StateMachine.o: GameStates/StateMachine.cpp.o
 
 .PHONY : GameStates/StateMachine.o
@@ -1231,9 +1201,6 @@ help:
 	@echo "... GameStates/SelectClassState.o"
 	@echo "... GameStates/SelectClassState.i"
 	@echo "... GameStates/SelectClassState.s"
-	@echo "... GameStates/SplashState.o"
-	@echo "... GameStates/SplashState.i"
-	@echo "... GameStates/SplashState.s"
 	@echo "... GameStates/StateMachine.o"
 	@echo "... GameStates/StateMachine.i"
 	@echo "... GameStates/StateMachine.s"

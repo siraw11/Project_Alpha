@@ -15,7 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/GameStates/MainMenuState.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SelectClassState.cpp.o"
-  "CMakeFiles/Project_Alpha_ROOT.dir/GameStates/SplashState.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/GameStates/StateMachine.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o"
   "CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o"

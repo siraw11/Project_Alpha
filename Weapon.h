@@ -15,7 +15,7 @@ public:
 //constructor, destructor
     explicit Weapon(int s);
     ~Weapon() override;
-    Weapon(Weapon &w);
+    //Weapon(Weapon &w);
 
 //getter
     int getStrength() const;

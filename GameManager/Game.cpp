@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Game.hpp"
-#include "../GameStates/SplashState.hpp"
 #include "../GameStates/MainMenuState.hpp"
 
 namespace Alpha

@@ -10,7 +10,7 @@
 namespace Alpha {
     GameState::GameState(GameDataRef data,Hero* hero) : _data(std::move(data)), hero(hero) {
 
-        std::cout<<"game state"<<std::endl;
+
     }
 
 

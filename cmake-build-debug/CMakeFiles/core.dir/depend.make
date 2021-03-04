@@ -156,37 +156,22 @@ CMakeFiles/core.dir/GameManager/Game.cpp.o: ../GameManager/Game.cpp
 CMakeFiles/core.dir/GameManager/Game.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/core.dir/GameManager/Game.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/core.dir/GameManager/Game.cpp.o: ../GameStates/MainMenuState.hpp
-CMakeFiles/core.dir/GameManager/Game.cpp.o: ../GameStates/SplashState.hpp
 CMakeFiles/core.dir/GameManager/Game.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameManager/Game.cpp.o: ../GameStates/StateMachine.hpp
 
 CMakeFiles/core.dir/GameManager/InputManager.cpp.o: ../GameManager/InputManager.cpp
 CMakeFiles/core.dir/GameManager/InputManager.cpp.o: ../GameManager/InputManager.hpp
 
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Boss.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Camera.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Chest.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Enemy.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameCharacter.h
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/GameOverState.cpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/GameOverState.hpp
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/GameState.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/MainMenuState.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/StateMachine.hpp
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Hero.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Hud.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Object.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../PlayerType.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Projectile.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Tile.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../Weapon.h
-CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../map.h
 
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Boss.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Camera.h
@@ -213,56 +198,26 @@ CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Tile.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Weapon.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../map.h
 
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Boss.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Camera.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Chest.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Enemy.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameCharacter.h
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/GameOverState.hpp
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/GameState.hpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/GameWinState.cpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/GameWinState.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/MainMenuState.hpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../GameStates/StateMachine.hpp
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Hero.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Hud.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Object.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../PlayerType.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Projectile.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Tile.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../Weapon.h
-CMakeFiles/core.dir/GameStates/GameWinState.cpp.o: ../map.h
 
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Boss.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Camera.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Chest.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Enemy.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameCharacter.h
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameManager/AssetManager.hpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameManager/InputManager.hpp
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/GameOverState.hpp
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/GameState.hpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/MainMenuState.cpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/MainMenuState.hpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/StateMachine.hpp
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Hero.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Hud.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Object.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../PlayerType.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Projectile.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Tile.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../Weapon.h
-CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../map.h
 
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Boss.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Camera.h
@@ -288,16 +243,6 @@ CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Projectile.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Tile.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Weapon.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../map.h
-
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameManager/AssetManager.hpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameManager/DEFINITIONS.hpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameManager/Game.hpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameManager/InputManager.hpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameStates/MainMenuState.hpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameStates/SplashState.cpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameStates/SplashState.hpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameStates/State.hpp
-CMakeFiles/core.dir/GameStates/SplashState.cpp.o: ../GameStates/StateMachine.hpp
 
 CMakeFiles/core.dir/GameStates/StateMachine.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/StateMachine.cpp.o: ../GameStates/StateMachine.cpp

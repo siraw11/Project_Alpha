@@ -25,17 +25,14 @@ int Weapon::getStrength() const {
 }
 
 void Weapon::use(Hero *hero, std::vector<Tile>* tile_vector) {
-    std::cout<<"weapon"<<std::endl;
     hero->setWeapon(this);
-    std::cout<<"forza arma subito dopo il set"<<std::endl;
-    std::cout<<hero->getWeapon()->strength<<std::endl;
 }
 
-Weapon::Weapon(Weapon &w) {
+/*Weapon::Weapon(Weapon &w) {
 
     strength = w.getStrength();
 
-}
+}*/
 
 
 

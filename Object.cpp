@@ -16,6 +16,5 @@ Object::~Object() = default;
 
 
 void Object::use(Hero* hero, std::vector<Tile>* tile_vector) {
-    std::cout<<"object"<<std::endl;
 
 }

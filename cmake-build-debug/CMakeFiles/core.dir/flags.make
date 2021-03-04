@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/waris/CLionProjects/Project_Alpha/Project_Alpha 
+CXX_INCLUDES = -I/home/matteo/Project_Alpha/Project_Alpha 
 

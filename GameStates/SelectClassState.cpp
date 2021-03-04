@@ -2,14 +2,12 @@
 
 
 
-#include <sstream>
+
 #include "MainMenuState.hpp"
 #include "SelectClassState.h"
 #include "GameState.hpp"
-
-#include "../GameManager/DEFINITIONS.hpp"
 #include "../CharacterFactory.h"
-//#include "../PlayerType.h"
+
 
 
 
@@ -18,7 +16,7 @@
 
 namespace Alpha {
     SelectClassState::SelectClassState(GameDataRef data) : _data(std::move(data)) {
-        std::cout<<"select class"<<std::endl;
+
     }
 
     void SelectClassState::Init() {
@@ -72,21 +70,18 @@ namespace Alpha {
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::ARCHER);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
-                std::cout<<"rimpiazza select class"<<std::endl;
 
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
                 click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::KNIGHT);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
-                std::cout<<"rimpiazza select class"<<std::endl;
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
                 click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);
 
                 this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
-                std::cout<<"rimpiazza select class"<<std::endl;
             }
         }
 

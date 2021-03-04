@@ -166,9 +166,8 @@ void Enemy::update(std::unique_ptr<Hero>& hero, const std::vector<Tile> &tile_ve
 }
 
 void Enemy::initSound(const Alpha::GameDataRef &_data) {
-    std::cout<<" init enemyene"<<std::endl;
     monsterHitSound.setBuffer(_data->assets.GetSound("MonsterHit"));
-    std::cout<<"end enemy"<<std::endl;
+
 }
 
 

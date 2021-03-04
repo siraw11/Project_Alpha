@@ -12,7 +12,7 @@ namespace Alpha
         InputManager() = default;
         ~InputManager() = default;
 
-        bool IsSpriteClicked(const sf::Sprite& object, sf::Mouse::Button button, sf::RenderWindow &window);//controlla se una sprite viene cliccata
+        bool IsSpriteClicked(const sf::Sprite& object, sf::Mouse::Button button, sf::RenderWindow &window);
 
 
     };

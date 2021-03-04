@@ -1,17 +1,11 @@
 #include <utility>
 
 
-#include <sstream>
-#include "GameOverState.hpp"
-#include "../GameManager/DEFINITIONS.hpp"
-#include "GameState.hpp"
-#include "MainMenuState.hpp"
-#include "SelectClassState.h"
 
+#include "GameOverState.hpp"
+#include "SelectClassState.h"
 #include <iostream>
 #include "GameWinState.h"
-
-#include <iostream>
 #include <SFML/Window/Event.hpp>
 
 namespace Alpha

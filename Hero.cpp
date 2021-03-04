@@ -28,7 +28,7 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 Hero::~Hero()= default;
 
 void Hero::initSound(const Alpha::GameDataRef &_data) {
-    std::cout<<"init hero"<<std::endl;
+
     arrowSound.setBuffer(_data->assets.GetSound("Arrow"));
     swordSound.setBuffer(_data->assets.GetSound("Sword"));
     fireSound.setBuffer(_data->assets.GetSound("Fireball"));
@@ -36,7 +36,7 @@ void Hero::initSound(const Alpha::GameDataRef &_data) {
     maleHitSound.setBuffer(_data->assets.GetSound("ManHit"));
     owSound.setBuffer(_data->assets.GetSound("Ow"));
     scream.setBuffer(_data->assets.GetSound("Scream"));
-    std::cout<<"end hero"<<std::endl;
+
 
 }
 

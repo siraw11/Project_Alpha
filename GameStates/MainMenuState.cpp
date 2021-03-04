@@ -2,21 +2,16 @@
 
 
 
-#include <sstream>
 #include "MainMenuState.hpp"
-#include "../GameManager/DEFINITIONS.hpp"
-#include "GameState.hpp"
 #include "SelectClassState.h"
-#include "GameOverState.hpp"
-
 #include <iostream>
-#include <ieee754.h>
+
 
 namespace Alpha
 {
 	MainMenuState::MainMenuState(GameDataRef data) : _data(std::move(data))
 	{
-    std::cout<<"main menu"<<std::endl;
+
 	}
 
 	void MainMenuState::Init()
@@ -48,9 +43,8 @@ namespace Alpha
             {
 		        click.play();
                 // Switch To Select Class State
-
                 this->_data->machine.AddState(StateRef(new SelectClassState(_data)), true);
-                std::cout<<"rimpiazza main menu"<<std::endl;
+
 
             }
 		}
@@ -67,7 +61,6 @@ namespace Alpha
 
 
 		this->_data->window.draw(this->_background);
-		//this->_data->window.draw(this->_playButton);
         this->_data->window.draw(this->_selectClass);
 		this->_data->window.draw(this->_title);
 

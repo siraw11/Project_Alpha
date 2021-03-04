@@ -7,16 +7,16 @@
 
 namespace Alpha
 {
-    class AssetManager//serve per caricare font e background
+    class AssetManager
     {
     public:
         AssetManager() { }
         ~AssetManager() { }
 
-        void LoadTexture(std::string name, std::string fileName);//carica una texture sulla rispettiva map
-        sf::Texture &GetTexture(std::string name);//restituisce una texture caricata
+        void LoadTexture(std::string name, std::string fileName);
+        sf::Texture &GetTexture(std::string name);
 
-        void LoadFont(std::string name, std::string fileName);//idem rispetto alle texture
+        void LoadFont(std::string name, std::string fileName);
         sf::Font &GetFont(std::string name);
 
         void LoadSound(std::string name, std::string fileName);
