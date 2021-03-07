@@ -14,7 +14,7 @@ Chest::Chest():close(true){
 
 
     auto chestTexture = new sf::Texture;
-    chestTexture->loadFromFile("../Resources/Sprites/item/chest.png");
+    chestTexture->loadFromFile("./Resources/Sprites/item/chest.png");
     setTexture(chestTexture);
     setTextureRect(sf::IntRect(0,0,32,32));
     setSize(sf::Vector2f(32,32));

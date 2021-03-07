@@ -289,6 +289,12 @@
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/CollisionTest.cpp">
 			<Option target="Game_test"/>
 		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/EnemyTest.cpp">
+			<Option target="Game_test"/>
+		</Unit>
+		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp">
+			<Option target="Game_test"/>
+		</Unit>
 		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/RunAllTest.cpp">
 			<Option target="Game_test"/>
 		</Unit>

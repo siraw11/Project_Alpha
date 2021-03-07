@@ -16,7 +16,7 @@
 Enemy::Enemy(int hp, int s, int sp) : GameCharacter(hp, s, sp) {
 
     auto enemyTexture = new sf::Texture;
-    enemyTexture->loadFromFile("../Resources/Sprites/Enemy/orc(warhammer).png");
+    enemyTexture->loadFromFile("./Resources/Sprites/Enemy/orc(warhammer).png");
     setTexture(enemyTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
 

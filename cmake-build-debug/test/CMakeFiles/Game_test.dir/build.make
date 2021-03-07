@@ -103,16 +103,46 @@ test/CMakeFiles/Game_test.dir/CollisionTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_test.dir/CollisionTest.cpp.s"
 	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waris/CLionProjects/Project_Alpha/test/CollisionTest.cpp -o CMakeFiles/Game_test.dir/CollisionTest.cpp.s
 
+test/CMakeFiles/Game_test.dir/HeroTest.cpp.o: test/CMakeFiles/Game_test.dir/flags.make
+test/CMakeFiles/Game_test.dir/HeroTest.cpp.o: ../test/HeroTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/Game_test.dir/HeroTest.cpp.o"
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_test.dir/HeroTest.cpp.o -c /home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp
+
+test/CMakeFiles/Game_test.dir/HeroTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_test.dir/HeroTest.cpp.i"
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp > CMakeFiles/Game_test.dir/HeroTest.cpp.i
+
+test/CMakeFiles/Game_test.dir/HeroTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_test.dir/HeroTest.cpp.s"
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp -o CMakeFiles/Game_test.dir/HeroTest.cpp.s
+
+test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o: test/CMakeFiles/Game_test.dir/flags.make
+test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o: ../test/EnemyTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o"
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_test.dir/EnemyTest.cpp.o -c /home/waris/CLionProjects/Project_Alpha/test/EnemyTest.cpp
+
+test/CMakeFiles/Game_test.dir/EnemyTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_test.dir/EnemyTest.cpp.i"
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waris/CLionProjects/Project_Alpha/test/EnemyTest.cpp > CMakeFiles/Game_test.dir/EnemyTest.cpp.i
+
+test/CMakeFiles/Game_test.dir/EnemyTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_test.dir/EnemyTest.cpp.s"
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waris/CLionProjects/Project_Alpha/test/EnemyTest.cpp -o CMakeFiles/Game_test.dir/EnemyTest.cpp.s
+
 # Object files for target Game_test
 Game_test_OBJECTS = \
 "CMakeFiles/Game_test.dir/RunAllTest.cpp.o" \
-"CMakeFiles/Game_test.dir/CollisionTest.cpp.o"
+"CMakeFiles/Game_test.dir/CollisionTest.cpp.o" \
+"CMakeFiles/Game_test.dir/HeroTest.cpp.o" \
+"CMakeFiles/Game_test.dir/EnemyTest.cpp.o"
 
 # External object files for target Game_test
 Game_test_EXTERNAL_OBJECTS =
 
 test/Game_test: test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o
 test/Game_test: test/CMakeFiles/Game_test.dir/CollisionTest.cpp.o
+test/Game_test: test/CMakeFiles/Game_test.dir/HeroTest.cpp.o
+test/Game_test: test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o
 test/Game_test: test/CMakeFiles/Game_test.dir/build.make
 test/Game_test: lib/libgtestd.a
 test/Game_test: lib/libgtest_maind.a
@@ -123,7 +153,7 @@ test/Game_test: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 test/Game_test: lib/libgtestd.a
 test/Game_test: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 test/Game_test: test/CMakeFiles/Game_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Game_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Game_test"
 	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Game_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

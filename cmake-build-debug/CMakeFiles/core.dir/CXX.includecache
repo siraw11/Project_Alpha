@@ -6,29 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/waris/CLionProjects/Project_Alpha/Archer.h
-Hero.h
-/home/waris/CLionProjects/Project_Alpha/Hero.h
-
 /home/waris/CLionProjects/Project_Alpha/Boss.h
 Enemy.h
 /home/waris/CLionProjects/Project_Alpha/Enemy.h
-
-/home/waris/CLionProjects/Project_Alpha/CharacterFactory.cpp
-bits/unique_ptr.h
--
-CharacterFactory.h
-/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h
-Knight.h
-/home/waris/CLionProjects/Project_Alpha/Knight.h
-Archer.h
-/home/waris/CLionProjects/Project_Alpha/Archer.h
-Mage.h
-/home/waris/CLionProjects/Project_Alpha/Mage.h
-
-/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h
-Hero.h
-/home/waris/CLionProjects/Project_Alpha/Hero.h
 
 /home/waris/CLionProjects/Project_Alpha/Chest.h
 SFML/Graphics.hpp
@@ -116,13 +96,19 @@ Weapon.h
 PlayerType.h
 /home/waris/CLionProjects/Project_Alpha/PlayerType.h
 
-/home/waris/CLionProjects/Project_Alpha/Knight.h
+/home/waris/CLionProjects/Project_Alpha/Item.cpp
+iostream
+-
+Item.h
+/home/waris/CLionProjects/Project_Alpha/Item.h
+PlayerType.h
+/home/waris/CLionProjects/Project_Alpha/PlayerType.h
 Hero.h
 /home/waris/CLionProjects/Project_Alpha/Hero.h
 
-/home/waris/CLionProjects/Project_Alpha/Mage.h
-Hero.h
-/home/waris/CLionProjects/Project_Alpha/Hero.h
+/home/waris/CLionProjects/Project_Alpha/Item.h
+Object.h
+/home/waris/CLionProjects/Project_Alpha/Object.h
 
 /home/waris/CLionProjects/Project_Alpha/Object.h
 Tile.h
