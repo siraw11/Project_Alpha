@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/waris/CLionProjects/Project_Alpha/test/CollisionTest.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/CMakeFiles/Game_test.dir/CollisionTest.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/test/EnemyTest.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/CMakeFiles/Game_test.dir/HeroTest.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/test/RunAllTest.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

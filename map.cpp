@@ -15,7 +15,7 @@ map::map() {
     int *level = new int[raws * column];
 
     //load map from Resources
-    std::fstream fin("../Resources/Map/map.txt", std::fstream::in);
+    std::fstream fin("./Resources/Map/map.txt", std::fstream::in);
     char c;
     std::string tmp;
     int k = 0;
@@ -193,133 +193,133 @@ void map::setTexture() {
 
         if (i.t == floor) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(0, 0, 32, 32));
         }
         if (i.t == up_wall) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32, 0, 32, 32));
         }
         if (i.t == right_wall) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 2, 0, 32, 32));
         }
         if (i.t == left_wall) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 3, 0, 32, 32));
         }
         if (i.t == down_wall) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 4, 0, 32, 32));
         }
         if (i.t == down_left_corner) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 5, 0, 32, 32));
         }
         if (i.t == down_right_corner) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 6, 0, 32, 32));
         }
         if (i.t == up_left_corner) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 7, 0, 32, 32));
         }
         if (i.t == up_right_corner) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 8, 0, 32, 32));
         }
         if (i.t == key_wall) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 9, 0, 32, 32));
         }
         if (i.t == left_corridor) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 10, 0, 32, 32));
         }
         if (i.t == torch_wall) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 11, 0, 32, 32));
         }
         if (i.t == right_corridor) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 12, 0, 32, 32));
         }
         if (i.t == bones) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 13, 0, 32, 32));
         }
         if (i.t == web) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 14, 0, 32, 32));
         }
         if (i.t == skull) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 15, 0, 32, 32));
         }
         if (i.t == torch) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 16, 0, 32, 32));
         }
         if (i.t == left_front_door) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 17, 0, 32, 32));
         }
         if (i.t == right_front_door) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 18, 0, 32, 32));
         }
         if (i.t == left_side_door) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 19, 0, 32, 32));
         }
         if (i.t == right_side_door) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 20, 0, 32, 32));
         }
         if (i.t == void_tile) {
             auto newTexture = new sf::Texture ;
-            newTexture->loadFromFile("../Resources/Map/map.png");
+            newTexture->loadFromFile("./Resources/Map/map.png");
             i.setTexture(newTexture);
             i.setTextureRect(sf::IntRect(32 * 21, 0, 32, 32));
         }

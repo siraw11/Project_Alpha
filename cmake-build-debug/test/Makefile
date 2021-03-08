@@ -218,6 +218,60 @@ CollisionTest.cpp.s:
 	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/CollisionTest.cpp.s
 .PHONY : CollisionTest.cpp.s
 
+EnemyTest.o: EnemyTest.cpp.o
+
+.PHONY : EnemyTest.o
+
+# target to build an object file
+EnemyTest.cpp.o:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o
+.PHONY : EnemyTest.cpp.o
+
+EnemyTest.i: EnemyTest.cpp.i
+
+.PHONY : EnemyTest.i
+
+# target to preprocess a source file
+EnemyTest.cpp.i:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.i
+.PHONY : EnemyTest.cpp.i
+
+EnemyTest.s: EnemyTest.cpp.s
+
+.PHONY : EnemyTest.s
+
+# target to generate assembly for a file
+EnemyTest.cpp.s:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.s
+.PHONY : EnemyTest.cpp.s
+
+HeroTest.o: HeroTest.cpp.o
+
+.PHONY : HeroTest.o
+
+# target to build an object file
+HeroTest.cpp.o:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.o
+.PHONY : HeroTest.cpp.o
+
+HeroTest.i: HeroTest.cpp.i
+
+.PHONY : HeroTest.i
+
+# target to preprocess a source file
+HeroTest.cpp.i:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.i
+.PHONY : HeroTest.cpp.i
+
+HeroTest.s: HeroTest.cpp.s
+
+.PHONY : HeroTest.s
+
+# target to generate assembly for a file
+HeroTest.cpp.s:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.s
+.PHONY : HeroTest.cpp.s
+
 RunAllTest.o: RunAllTest.cpp.o
 
 .PHONY : RunAllTest.o
@@ -261,6 +315,12 @@ help:
 	@echo "... CollisionTest.o"
 	@echo "... CollisionTest.i"
 	@echo "... CollisionTest.s"
+	@echo "... EnemyTest.o"
+	@echo "... EnemyTest.i"
+	@echo "... EnemyTest.s"
+	@echo "... HeroTest.o"
+	@echo "... HeroTest.i"
+	@echo "... HeroTest.s"
 	@echo "... RunAllTest.o"
 	@echo "... RunAllTest.i"
 	@echo "... RunAllTest.s"

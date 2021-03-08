@@ -20,7 +20,7 @@ Boss::Boss(int hp, int s, int sp) : Enemy(hp, s, sp) {
     setPosition(posx,posy);
 
     auto bossTexture = new sf::Texture;
-    bossTexture->loadFromFile("../Resources/Sprites/Enemy/boss.png");
+    bossTexture->loadFromFile("./Resources/Sprites/Enemy/boss.png");
     setTexture(bossTexture);
     setTextureRect(sf::IntRect(0,64*3,64,64));
 

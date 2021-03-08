@@ -402,6 +402,10 @@ Weapon.h
 PlayerType.h
 /home/waris/CLionProjects/Project_Alpha/PlayerType.h
 
+/home/waris/CLionProjects/Project_Alpha/Item.h
+Object.h
+/home/waris/CLionProjects/Project_Alpha/Object.h
+
 /home/waris/CLionProjects/Project_Alpha/Object.h
 Tile.h
 /home/waris/CLionProjects/Project_Alpha/Tile.h
@@ -426,7 +430,7 @@ SFML/Graphics.hpp
 Object.h
 /home/waris/CLionProjects/Project_Alpha/Object.h
 
-/home/waris/CLionProjects/Project_Alpha/test/CollisionTest.cpp
+/home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp
 gtest/gtest.h
 /home/waris/CLionProjects/Project_Alpha/test/gtest/gtest.h
 ../Hero.h
@@ -435,4 +439,6 @@ gtest/gtest.h
 /home/waris/CLionProjects/Project_Alpha/Collision.h
 ../Archer.h
 /home/waris/CLionProjects/Project_Alpha/Archer.h
+../Item.h
+/home/waris/CLionProjects/Project_Alpha/Item.h
 

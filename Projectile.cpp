@@ -13,17 +13,17 @@ Projectile::Projectile(PlayerType playerType) {
     auto projectileTexture = new sf::Texture;
     switch(playerType){
         case PlayerType::ARCHER:
-            projectileTexture->loadFromFile("../Resources/Sprites/item/arrow.png");
+            projectileTexture->loadFromFile("./Resources/Sprites/item/arrow.png");
             setTexture(projectileTexture);
             type = PlayerType::ARCHER;
             break;
         case PlayerType::MAGE:
-            projectileTexture->loadFromFile("../Resources/Sprites/item/fireball.png");
+            projectileTexture->loadFromFile("./Resources/Sprites/item/fireball.png");
             setTexture(projectileTexture);
             type = PlayerType::MAGE;
             break;
         case PlayerType::BOSS:
-            projectileTexture->loadFromFile("../Resources/Sprites/item/ice.png");
+            projectileTexture->loadFromFile("./Resources/Sprites/item/ice.png");
             setTexture(projectileTexture);
             type = PlayerType::BOSS;
             break;
