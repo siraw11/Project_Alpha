@@ -110,10 +110,25 @@ const int  CHEST_SIZE = 32;
 
 const int CHEST_SCALE = 3;
 
+const int BADGE_WIDTH = 120;
+
+const int BADGE_HEIGHT = 60;
+
+const int BADGE_SCALE = 3;
+
+const int TEXT_BADGE_WIDTH = 180;
+
+const int TEXT_BADGE_HEIGHT = 20;
+
+const float TEXT_SCALE = 1.5;
+
 enum GameStatus{
     isPlaying, isGameOver, isWin
 };
 
+enum class BadgeType{
+    walker, killer
+};
 
 
 

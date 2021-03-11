@@ -8,7 +8,7 @@
 #include "sstream"
 
 
-Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
+Hud::Hud(Hero* hero, const Alpha::GameDataRef &_data) {
     _data->assets.LoadFont("font",FONT);
 
      //life

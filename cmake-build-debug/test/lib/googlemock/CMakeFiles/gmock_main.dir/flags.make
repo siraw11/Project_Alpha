@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTH
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/waris/CLionProjects/Project_Alpha/Project_Alpha -isystem /home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/include -isystem /home/waris/CLionProjects/Project_Alpha/test/lib/googlemock -isystem /home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include -isystem /home/waris/CLionProjects/Project_Alpha/test/lib/googletest 
+CXX_INCLUDES = -I/home/matteo/Project_Alpha/Project_Alpha -isystem /home/matteo/Project_Alpha/test/lib/googlemock/include -isystem /home/matteo/Project_Alpha/test/lib/googlemock -isystem /home/matteo/Project_Alpha/test/lib/googletest/include -isystem /home/matteo/Project_Alpha/test/lib/googletest 
 

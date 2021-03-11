@@ -69,19 +69,19 @@ namespace Alpha {
                 click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::ARCHER);
 
-                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data, hero)), true);
 
             } else if (this->_data->input.IsSpriteClicked(this->_knightButton, sf::Mouse::Left, this->_data->window)) {
                 click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::KNIGHT);
 
-                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data, hero)), true);
             }
             else if (this->_data->input.IsSpriteClicked(this->_mageButton, sf::Mouse::Left, this->_data->window)) {
                 click.play();
                 Hero* hero= CharacterFactory::createCharacter(PlayerType::MAGE);
 
-                this->_data->machine.AddState(StateRef(new GameState(_data,hero)), true);
+                this->_data->machine.AddState(StateRef(new GameState(_data, hero)), true);
             }
         }
 

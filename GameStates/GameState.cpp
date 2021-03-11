@@ -7,9 +7,9 @@
 #include "GameWinState.h"
 
 
+
 namespace Alpha {
     GameState::GameState(GameDataRef data,Hero* hero) : _data(std::move(data)), hero(hero) {
-
 
     }
 
@@ -27,6 +27,11 @@ namespace Alpha {
         this->_data->window.setFramerateLimit(60);
         background.play();
         background.setLoop(true);
+
+        killAchievement = new KillAchievement(hero, &badge);
+        walkingAchievement = new WalkingAchievement(hero, &badge);
+
+        badge.init(_data);
     }
 
     void GameState::HandleInput() {
@@ -71,10 +76,13 @@ namespace Alpha {
 
             srand(time(nullptr));
             //update level events
-            level.update(this->hero, this->boss);
+
+            level.update(*this->hero, this->boss);
             //Hud update
             hud->update(*hero);
             camera.update(*hero, _data);
+            badge.update(_data, camera);
+
 
             //Game Over
             if (hero->dead) {
@@ -111,6 +119,7 @@ namespace Alpha {
         this->_data->window.draw(*hero);
         this->_data->window.draw(*boss);
         hud->draw(_data);
+        badge.drawBadge(_data);
         level.drawProjectile(hero->projectile_vector,_data);
         level.drawProjectile(boss->projectile_vector,_data);
 

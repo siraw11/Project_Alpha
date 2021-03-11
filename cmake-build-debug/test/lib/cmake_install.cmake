@@ -1,4 +1,4 @@
-# Install script for directory: /home/waris/CLionProjects/Project_Alpha/test/lib
+# Install script for directory: /home/matteo/Project_Alpha/test/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/cmake_install.cmake")
+  include("/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/cmake_install.cmake")
 
 endif()
 

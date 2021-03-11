@@ -148,17 +148,18 @@ void Enemy::aggro(sf::Vector2f d) {
     }
 }
 
-void Enemy::update(std::unique_ptr<Hero>& hero, const std::vector<Tile> &tile_vector, const std::vector<Chest> &chest_vector) {
-    movement(tile_vector, *hero, chest_vector);
+void Enemy::update(Hero& hero, const std::vector<Tile> &tile_vector, const std::vector<Chest> &chest_vector) {
+    movement(tile_vector, hero, chest_vector);
     if(this->hit) {
         monsterHitSound.play();
-        if(hero->playerType == PlayerType::KNIGHT)
-            move(60*hero->direction().x,60*hero->direction().y);
+        if(hero.playerType == PlayerType::KNIGHT)
+            move(60*hero.direction().x,60*hero.direction().y);
 
-        takeDamage(hero->damage());
+        takeDamage(hero.damage());
         hit = false;
     }
     if(getLife()<=0){
+
         dead = true;
         deathAnimation();
     }

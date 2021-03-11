@@ -24,7 +24,7 @@ public:
 
 //functions
     void init();
-    bool checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, std::unique_ptr<Hero>& hero);
+    bool checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, Hero& hero);
     void updatePosition();
 
 //attributes

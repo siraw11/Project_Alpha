@@ -34,7 +34,7 @@ class Hero;
 
         virtual void aggro(sf::Vector2f d);
 
-        void update(std::unique_ptr<Hero> &hero, const std::vector<Tile> &tile_vector,
+        void update(Hero &hero, const std::vector<Tile> &tile_vector,
                     const std::vector<Chest> &chest_vector);
 
         virtual void initSound(const Alpha::GameDataRef &_data);

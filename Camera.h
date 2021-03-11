@@ -21,9 +21,11 @@ public:
     void update(const Hero& hero, const Alpha::GameDataRef& _data);
     void resetCamera(const Alpha::GameDataRef& _data);
 
+    bool isMoving = false;
+
+    const sf::Vector2f &getPosition() const;
 
 private:
-
     sf::Vector2f position = sf::Vector2f(0,0);
 
 

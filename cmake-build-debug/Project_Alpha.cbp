@@ -5,752 +5,780 @@
 		<Option title="Project_Alpha"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\;CMake Files\test\;CMake Files\test\lib\;CMake Files\test\lib\googlemock\;CMake Files\test\lib\googlemock\cmake\;CMake Files\test\lib\googletest\;CMake Files\test\lib\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\opt\;CMake Files\..\..\..\opt\SFML-2.5.1\;CMake Files\..\..\..\opt\SFML-2.5.1\lib\;CMake Files\..\..\..\opt\SFML-2.5.1\lib\cmake\;CMake Files\..\..\..\opt\SFML-2.5.1\lib\cmake\SFML\;CMake Files\test\;CMake Files\test\lib\;CMake Files\test\lib\googlemock\;CMake Files\test\lib\googlemock\cmake\;CMake Files\test\lib\googletest\;CMake Files\test\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_Alpha_ROOT">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/opt/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_Alpha_ROOT"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_Alpha_ROOT"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project_Alpha_ROOT/fast">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/Project_Alpha_ROOT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/opt/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_Alpha_ROOT/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project_Alpha_ROOT/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="core">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 core"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 core"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="core/fast">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/libcore.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 core/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 core/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game_test">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Game_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/test/Game_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/opt/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 Game_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 Game_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game_test/fast">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Game_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/test/Game_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/opt/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 Game_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 Game_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googlemock"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
+				<Option output="/home/matteo/Project_Alpha/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/Project_Alpha"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include"/>
-					<Add directory="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/matteo/Project_Alpha/Project_Alpha"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest/include"/>
+					<Add directory="/home/matteo/Project_Alpha/test/lib/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/matteo/Project_Alpha/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Archer.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Archer.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Archer.h">
+		<Unit filename="/home/matteo/Project_Alpha/Archer.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Boss.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Badge.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Badge.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Boss.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Boss.h">
+		<Unit filename="/home/matteo/Project_Alpha/Boss.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Camera.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Camera.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Camera.h">
+		<Unit filename="/home/matteo/Project_Alpha/Camera.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/CharacterFactory.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/CharacterFactory.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/CharacterFactory.h">
+		<Unit filename="/home/matteo/Project_Alpha/CharacterFactory.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Chest.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Chest.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Chest.h">
+		<Unit filename="/home/matteo/Project_Alpha/Chest.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Collision.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Collision.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Collision.h">
+		<Unit filename="/home/matteo/Project_Alpha/Collision.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Enemy.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Enemy.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Enemy.h">
+		<Unit filename="/home/matteo/Project_Alpha/Enemy.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameCharacter.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameCharacter.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameCharacter.h">
+		<Unit filename="/home/matteo/Project_Alpha/GameCharacter.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameManager/AssetManager.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameManager/AssetManager.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameManager/DEFINITIONS.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameManager/Game.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameManager/Game.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameManager/Game.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameManager/InputManager.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameManager/InputManager.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/GameOverState.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/GameOverState.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/GameOverState.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/GameState.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/GameState.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/GameState.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/GameWinState.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.h">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/GameWinState.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/MainMenuState.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/MainMenuState.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/SelectClassState.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/SelectClassState.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/State.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/StateMachine.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp">
+		<Unit filename="/home/matteo/Project_Alpha/GameStates/StateMachine.hpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Hero.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Hero.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Hero.h">
+		<Unit filename="/home/matteo/Project_Alpha/Hero.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Hud.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Hud.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Hud.h">
+		<Unit filename="/home/matteo/Project_Alpha/Hud.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Item.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Item.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Item.h">
+		<Unit filename="/home/matteo/Project_Alpha/Item.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Knight.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/KillAchievement.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/KillAchievement.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Knight.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Knight.h">
+		<Unit filename="/home/matteo/Project_Alpha/Knight.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Mage.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Mage.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Mage.h">
+		<Unit filename="/home/matteo/Project_Alpha/Mage.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Object.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Object.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Object.h">
+		<Unit filename="/home/matteo/Project_Alpha/Object.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/PlayerType.h">
+		<Unit filename="/home/matteo/Project_Alpha/Observer.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/PlayerType.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Projectile.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Projectile.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Projectile.h">
+		<Unit filename="/home/matteo/Project_Alpha/Projectile.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Random.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Random.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Random.h">
+		<Unit filename="/home/matteo/Project_Alpha/Random.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Tile.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/Subject.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Tile.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Tile.h">
+		<Unit filename="/home/matteo/Project_Alpha/Tile.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Weapon.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/WalkingAchievement.cpp">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/WalkingAchievement.h">
+			<Option target="Project_Alpha_ROOT"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/Weapon.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/Weapon.h">
+		<Unit filename="/home/matteo/Project_Alpha/Weapon.h">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/main.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/main.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/map.cpp">
-			<Option target="Project_Alpha_ROOT"/>
-			<Option target="core"/>
-		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/map.h">
+		<Unit filename="/home/matteo/Project_Alpha/map.cpp">
 			<Option target="Project_Alpha_ROOT"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/CollisionTest.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/map.h">
+			<Option target="Project_Alpha_ROOT"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/matteo/Project_Alpha/test/CollisionTest.cpp">
 			<Option target="Game_test"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/EnemyTest.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/test/EnemyTest.cpp">
 			<Option target="Game_test"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/test/HeroTest.cpp">
 			<Option target="Game_test"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/RunAllTest.cpp">
+		<Unit filename="/home/matteo/Project_Alpha/test/RunAllTest.cpp">
 			<Option target="Game_test"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/src/gmock-all.cc">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/src/gmock_main.cc">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/src/gtest-all.cc">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/src/gtest_main.cc">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/CMakeLists.txt">
+		<Unit filename="/home/matteo/Project_Alpha/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/matteo/Project_Alpha/../../../opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\SFML-2.5.1\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/matteo/Project_Alpha/../../../opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\SFML-2.5.1\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/matteo/Project_Alpha/../../../opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\SFML-2.5.1\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/matteo/Project_Alpha/../../../opt/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\SFML-2.5.1\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/matteo/Project_Alpha/../../../opt/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\SFML-2.5.1\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/CMakeLists.txt">
+		<Unit filename="/home/matteo/Project_Alpha/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/CMakeLists.txt">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\lib\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/CMakeLists.txt">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\lib\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\test\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\test\lib\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/CMakeLists.txt">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\lib\googletest\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/cmake/Config.cmake.in">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/waris/CLionProjects/Project_Alpha/test/lib/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/matteo/Project_Alpha/test/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
 		</Unit>
 	</Project>

@@ -40,7 +40,7 @@ public:
     void drawEnemy(const Alpha::GameDataRef& _data);
     void drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef& _data);
     void drawChest( const Alpha::GameDataRef& _data);
-    void update(std::unique_ptr<Hero>& hero, std::unique_ptr<Boss>& boss);// update level events
+    void update(Hero& hero, std::unique_ptr<Boss>& boss);// update level events
 
 private:
 //attributes
