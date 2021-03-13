@@ -18,8 +18,8 @@ public:
     ~Camera();
 
     //functions
-    void update(const Hero& hero, const Alpha::GameDataRef& _data);
-    void resetCamera(const Alpha::GameDataRef& _data);
+    void update(const Hero& hero, const Alpha::GameDataRef& data);
+    void resetCamera(const Alpha::GameDataRef& data);
 
     bool isMoving = false;
 

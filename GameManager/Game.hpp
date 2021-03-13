@@ -28,7 +28,7 @@ namespace Alpha
     private:
         
 
-        GameDataRef _data = std::make_shared<GameData>();
+        GameDataRef data = std::make_shared<GameData>();
 
         void Run();
         void Load();

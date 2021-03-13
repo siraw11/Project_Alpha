@@ -11,21 +11,22 @@
 #include "Hero.h"
 #include "Camera.h"
 
-class Badge : public sf::RectangleShape{
+class Badge {
 public:
     Badge();
 
-    void init(const Alpha::GameDataRef& _data);
-    void update(const Alpha::GameDataRef& _data, Camera& camera);
-    void drawBadge(const Alpha::GameDataRef& _data);
+    void init(const Alpha::GameDataRef& data);
+    void update(const Alpha::GameDataRef& data, Camera& camera);
+    void drawBadge(const Alpha::GameDataRef& data);
 
     bool start = false;
     BadgeType type;
 private:
 
     void setText();
+    sf::Sprite trophy;
     sf::Vector2f position;
-    sf::Time duration = sf::seconds( 3);
+    sf::Time duration = sf::seconds(4);
     sf::Clock clock;
     sf::Text text;
 

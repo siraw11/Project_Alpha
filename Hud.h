@@ -12,13 +12,13 @@
 class Hud {
 public:
     //constructor and destructor
-    Hud( Hero* hero, const Alpha::GameDataRef &_data);
+    Hud( Hero* hero, const Alpha::GameDataRef &data);
     ~Hud();
 
     //functions
     void update(const Hero &hero);
 
-    void draw(const Alpha::GameDataRef &_data);
+    void draw(const Alpha::GameDataRef &data);
 
 private:
 

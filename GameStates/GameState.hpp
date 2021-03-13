@@ -36,14 +36,14 @@ namespace Alpha
 
         PlayerType playerType;
 
-        GameDataRef _data;
+        GameDataRef data;
 
         map level;
         Hero* hero = nullptr;
         std::unique_ptr<Boss> boss = std::unique_ptr<Boss>(new Boss(20, 3, 10));
 
         //Hud
-        Hud* hud= new Hud(hero, this->_data);
+        Hud* hud= new Hud(hero, this->data);
         Camera camera;
 
         sf::Sound background;

@@ -22,7 +22,7 @@ void KillAchievement::detach() {
 
 void KillAchievement::update() {
 
-    if(subject->counterKill == 10){
+    if(subject->counterKill == 5){
         badge->start = true;
         badge->type = BadgeType::killer;
         this->done = true;

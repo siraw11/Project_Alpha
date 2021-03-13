@@ -362,38 +362,38 @@ void map::update(Hero& hero, std::unique_ptr<Boss>& boss) {
 
 
 //draw objects
-void map::drawTile(const Alpha::GameDataRef& _data) {
+void map::drawTile(const Alpha::GameDataRef& data) {
 
     for (auto &i :tile_vector)
-        _data->window.draw(i);
+        data->window.draw(i);
 }
 
-void map::drawEnemy(const Alpha::GameDataRef &_data) {
+void map::drawEnemy(const Alpha::GameDataRef &data) {
 
     for(auto &i : enemy_vector)
-        _data->window.draw(i);
+        data->window.draw(i);
 }
 
-void map::drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef &_data) {
+void map::drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef &data) {
 
     if(!projectile_vector.empty()) {
         for (auto &i : projectile_vector)
-            _data->window.draw(i);
+            data->window.draw(i);
     }
 }
 
-void map::drawChest(const Alpha::GameDataRef &_data) {
+void map::drawChest(const Alpha::GameDataRef &data) {
     for(auto &i: chest_vector)
-        _data->window.draw(i);
+        data->window.draw(i);
 }
 
-void map::initSound(const Alpha::GameDataRef &_data) {
+void map::initSound(const Alpha::GameDataRef &data) {
 
     for(auto &i : enemy_vector){
-        i.initSound(_data);
+        i.initSound(data);
     }
     for(auto &i : chest_vector){
-        i.initSound(_data);
+        i.initSound(data);
     }
 
 }

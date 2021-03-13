@@ -27,15 +27,15 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 //destructor
 Hero::~Hero()= default;
 
-void Hero::initSound(const Alpha::GameDataRef &_data) {
+void Hero::initSound(const Alpha::GameDataRef &data) {
 
-    arrowSound.setBuffer(_data->assets.GetSound("Arrow"));
-    swordSound.setBuffer(_data->assets.GetSound("Sword"));
-    fireSound.setBuffer(_data->assets.GetSound("Fireball"));
-    femaleHitSound.setBuffer(_data->assets.GetSound("FemaleHit"));
-    maleHitSound.setBuffer(_data->assets.GetSound("ManHit"));
-    owSound.setBuffer(_data->assets.GetSound("Ow"));
-    scream.setBuffer(_data->assets.GetSound("Scream"));
+    arrowSound.setBuffer(data->assets.GetSound("Arrow"));
+    swordSound.setBuffer(data->assets.GetSound("Sword"));
+    fireSound.setBuffer(data->assets.GetSound("Fireball"));
+    femaleHitSound.setBuffer(data->assets.GetSound("FemaleHit"));
+    maleHitSound.setBuffer(data->assets.GetSound("ManHit"));
+    owSound.setBuffer(data->assets.GetSound("Ow"));
+    scream.setBuffer(data->assets.GetSound("Scream"));
 
 
 }

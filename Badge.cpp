@@ -9,35 +9,40 @@
 
 Badge::Badge() {
 
-    setSize(sf::Vector2f(120,60));
-    setFillColor(sf::Color::Blue);
-    setScale(BADGE_SCALE, BADGE_SCALE);
 }
 
-void Badge::init(const Alpha::GameDataRef& _data) {
-    position.x = _data->window.getSize().x - BADGE_WIDTH*BADGE_SCALE;
+void Badge::init(const Alpha::GameDataRef& data) {
+
+    trophy.setTexture(data->assets.GetTexture("Trophy"));
+    trophy.setPosition(3800,20);
+    trophy.setScale(TROPHY_TEXTURE_SCALEX,TROPHY_TEXTURE_SCALEY);
+    position.x = TEXT_POSX - BADGE_WIDTH*BADGE_SCALE;
     position.y = 0;
-    setPosition(position);
-    text.setFont(_data->assets.GetFont("font"));
+    text.setPosition(position);
+    text.setFont(data->assets.GetFont("font"));
+    text.setFillColor(sf::Color::Cyan);
     text.setScale(TEXT_SCALE,TEXT_SCALE);
 
 }
 
-void Badge::update(const Alpha::GameDataRef& _data, Camera& camera) {
-   setPosition(camera.getPosition().x + _data->window.getSize().x - BADGE_WIDTH*BADGE_SCALE, camera.getPosition().y);
-   text.setPosition(camera.getPosition().x +_data->window.getSize().x - TEXT_BADGE_WIDTH*TEXT_SCALE, camera.getPosition().y + TEXT_BADGE_HEIGHT*BADGE_SCALE);
+void Badge::update(const Alpha::GameDataRef& data, Camera& camera) {
+
+   text.setPosition(camera.getPosition().x +TEXT_POSX - TEXT_BADGE_WIDTH*TEXT_SCALE, camera.getPosition().y + TEXT_BADGE_HEIGHT*BADGE_SCALE);
    if(start)
         setText();
+   trophy.setPosition(camera.getPosition().x +TROPHY_POSX - TEXT_BADGE_WIDTH*TEXT_SCALE, camera.getPosition().y + TROPHY_POSY*TROPHY_SCALE);
 }
 
-void Badge::drawBadge(const Alpha::GameDataRef& _data) {
+void Badge::drawBadge(const Alpha::GameDataRef& data) {
     if(start){
          clock.restart();
          start = false;
     }
     if(clock.getElapsedTime() < duration){
-        _data->window.draw(*this);
-        _data->window.draw(text);
+
+        data->window.draw(text);
+        data->window.draw(trophy);
+
     }
 
 }
@@ -45,11 +50,11 @@ void Badge::drawBadge(const Alpha::GameDataRef& _data) {
 void Badge::setText() {
     switch(type){
         case BadgeType::walker:{
-            text.setString("first 10 steps");
+            text.setString(" Adventurer : \nfirst 10 steps");
             break;
         }
         case BadgeType::killer:{
-            text.setString("10 kills");
+            text.setString("Killer : \n5 kills");
             break;
         }
     }

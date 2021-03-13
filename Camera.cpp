@@ -11,9 +11,9 @@ Camera::Camera() {
 
 }
 
-void Camera::update(const Hero& hero, const Alpha::GameDataRef& _data) {
-    position.x = hero.getPosition().x + 20 - (_data->window.getSize().x / 2.0);
-    position.y = hero.getPosition().y + 20 - (_data->window.getSize().y / 2.0);
+void Camera::update(const Hero& hero, const Alpha::GameDataRef& data) {
+    position.x = hero.getPosition().x + 20 - (data->window.getSize().x / 2.0);
+    position.y = hero.getPosition().y + 20 - (data->window.getSize().y / 2.0);
 
     if (position.x < 0){
         position.x = 0;
@@ -27,13 +27,13 @@ void Camera::update(const Hero& hero, const Alpha::GameDataRef& _data) {
     }
 
     reset(sf::FloatRect(position.x, position.y, 3840, 2160));
-    _data->window.setView(*this);
+    data->window.setView(*this);
 }
 
-void Camera::resetCamera(const Alpha::GameDataRef& _data) {
+void Camera::resetCamera(const Alpha::GameDataRef& data) {
 
-    reset(sf::FloatRect(0, 0,_data->window.getSize().x,_data->window.getSize().y));
-    _data->window.setView(*this);
+    reset(sf::FloatRect(0, 0,data->window.getSize().x,data->window.getSize().y));
+    data->window.setView(*this);
 
 }
 

@@ -21,11 +21,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../test/lib/googletest/cmake/gtest.pc.in"
   "../test/lib/googletest/cmake/gtest_main.pc.in"
   "../test/lib/googletest/cmake/internal_utils.cmake"
-  "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake"
-  "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake"
-  "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake"
-  "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
-  "/opt/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets.cmake"
   "/snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
@@ -60,6 +55,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/Platform/UnixPaths.cmake"
   "/snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/ProcessorCount.cmake"
   "/snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/WriteBasicConfigVersionFile.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake"
   )
 
 # The corresponding makefile is:

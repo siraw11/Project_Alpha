@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/matteo/Project_Alpha/Project_Alpha -isystem /home/matteo/Project_Alpha/test/lib/googletest/include -isystem /home/matteo/Project_Alpha/test/lib/googletest -isystem /opt/SFML-2.5.1/include 
+CXX_INCLUDES = -I/home/waris/CLionProjects/Project_Alpha/Project_Alpha -isystem /home/waris/CLionProjects/Project_Alpha/test/lib/googletest/include -isystem /home/waris/CLionProjects/Project_Alpha/test/lib/googletest 
 

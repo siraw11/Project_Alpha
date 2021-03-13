@@ -28,7 +28,7 @@ public:
     void open(Hero* hero, std::vector<Tile>* tile_vector);
     void openingAnimation();
     void setClose(bool close);
-    void initSound(const Alpha::GameDataRef &_data);
+    void initSound(const Alpha::GameDataRef &data);
 
 //attributes
     bool close;

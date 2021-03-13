@@ -202,8 +202,8 @@ void Boss::deathAnimation() {
     counterDeath++;
 }
 
-void Boss::initSound(const Alpha::GameDataRef &_data) {
-    bone.setBuffer(_data->assets.GetSound("Bone"));
+void Boss::initSound(const Alpha::GameDataRef &data) {
+    bone.setBuffer(data->assets.GetSound("Bone"));
 }
 
 

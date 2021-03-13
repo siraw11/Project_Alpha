@@ -68,10 +68,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matteo/Project_Alpha
+CMAKE_SOURCE_DIR = /home/waris/CLionProjects/Project_Alpha
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matteo/Project_Alpha/cmake-build-debug
+CMAKE_BINARY_DIR = /home/waris/CLionProjects/Project_Alpha/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles /home/matteo/Project_Alpha/cmake-build-debug/test/CMakeFiles/progress.marks
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matteo/Project_Alpha/cmake-build-debug/CMakeFiles 0
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/test/CMakeFiles/progress.marks
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/Game_test.dir/rule:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/Game_test.dir/rule
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/Game_test.dir/rule
 .PHONY : test/CMakeFiles/Game_test.dir/rule
 
 # Convenience name for target.
@@ -188,7 +188,7 @@ Game_test: test/CMakeFiles/Game_test.dir/rule
 
 # fast build rule for target.
 Game_test/fast:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/build
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/build
 .PHONY : Game_test/fast
 
 CollisionTest.o: CollisionTest.cpp.o
@@ -197,7 +197,7 @@ CollisionTest.o: CollisionTest.cpp.o
 
 # target to build an object file
 CollisionTest.cpp.o:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/CollisionTest.cpp.o
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/CollisionTest.cpp.o
 .PHONY : CollisionTest.cpp.o
 
 CollisionTest.i: CollisionTest.cpp.i
@@ -206,7 +206,7 @@ CollisionTest.i: CollisionTest.cpp.i
 
 # target to preprocess a source file
 CollisionTest.cpp.i:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/CollisionTest.cpp.i
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/CollisionTest.cpp.i
 .PHONY : CollisionTest.cpp.i
 
 CollisionTest.s: CollisionTest.cpp.s
@@ -215,7 +215,7 @@ CollisionTest.s: CollisionTest.cpp.s
 
 # target to generate assembly for a file
 CollisionTest.cpp.s:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/CollisionTest.cpp.s
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/CollisionTest.cpp.s
 .PHONY : CollisionTest.cpp.s
 
 EnemyTest.o: EnemyTest.cpp.o
@@ -224,7 +224,7 @@ EnemyTest.o: EnemyTest.cpp.o
 
 # target to build an object file
 EnemyTest.cpp.o:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o
 .PHONY : EnemyTest.cpp.o
 
 EnemyTest.i: EnemyTest.cpp.i
@@ -233,7 +233,7 @@ EnemyTest.i: EnemyTest.cpp.i
 
 # target to preprocess a source file
 EnemyTest.cpp.i:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.i
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.i
 .PHONY : EnemyTest.cpp.i
 
 EnemyTest.s: EnemyTest.cpp.s
@@ -242,7 +242,7 @@ EnemyTest.s: EnemyTest.cpp.s
 
 # target to generate assembly for a file
 EnemyTest.cpp.s:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.s
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/EnemyTest.cpp.s
 .PHONY : EnemyTest.cpp.s
 
 HeroTest.o: HeroTest.cpp.o
@@ -251,7 +251,7 @@ HeroTest.o: HeroTest.cpp.o
 
 # target to build an object file
 HeroTest.cpp.o:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.o
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.o
 .PHONY : HeroTest.cpp.o
 
 HeroTest.i: HeroTest.cpp.i
@@ -260,7 +260,7 @@ HeroTest.i: HeroTest.cpp.i
 
 # target to preprocess a source file
 HeroTest.cpp.i:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.i
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.i
 .PHONY : HeroTest.cpp.i
 
 HeroTest.s: HeroTest.cpp.s
@@ -269,8 +269,35 @@ HeroTest.s: HeroTest.cpp.s
 
 # target to generate assembly for a file
 HeroTest.cpp.s:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.s
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.s
 .PHONY : HeroTest.cpp.s
+
+ItemTest.o: ItemTest.cpp.o
+
+.PHONY : ItemTest.o
+
+# target to build an object file
+ItemTest.cpp.o:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/ItemTest.cpp.o
+.PHONY : ItemTest.cpp.o
+
+ItemTest.i: ItemTest.cpp.i
+
+.PHONY : ItemTest.i
+
+# target to preprocess a source file
+ItemTest.cpp.i:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/ItemTest.cpp.i
+.PHONY : ItemTest.cpp.i
+
+ItemTest.s: ItemTest.cpp.s
+
+.PHONY : ItemTest.s
+
+# target to generate assembly for a file
+ItemTest.cpp.s:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/ItemTest.cpp.s
+.PHONY : ItemTest.cpp.s
 
 RunAllTest.o: RunAllTest.cpp.o
 
@@ -278,7 +305,7 @@ RunAllTest.o: RunAllTest.cpp.o
 
 # target to build an object file
 RunAllTest.cpp.o:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o
 .PHONY : RunAllTest.cpp.o
 
 RunAllTest.i: RunAllTest.cpp.i
@@ -287,7 +314,7 @@ RunAllTest.i: RunAllTest.cpp.i
 
 # target to preprocess a source file
 RunAllTest.cpp.i:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/RunAllTest.cpp.i
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/RunAllTest.cpp.i
 .PHONY : RunAllTest.cpp.i
 
 RunAllTest.s: RunAllTest.cpp.s
@@ -296,7 +323,7 @@ RunAllTest.s: RunAllTest.cpp.s
 
 # target to generate assembly for a file
 RunAllTest.cpp.s:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/RunAllTest.cpp.s
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/RunAllTest.cpp.s
 .PHONY : RunAllTest.cpp.s
 
 # Help Target
@@ -321,6 +348,9 @@ help:
 	@echo "... HeroTest.o"
 	@echo "... HeroTest.i"
 	@echo "... HeroTest.s"
+	@echo "... ItemTest.o"
+	@echo "... ItemTest.i"
+	@echo "... ItemTest.s"
 	@echo "... RunAllTest.o"
 	@echo "... RunAllTest.i"
 	@echo "... RunAllTest.s"
@@ -335,6 +365,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/matteo/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

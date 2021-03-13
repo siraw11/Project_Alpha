@@ -34,7 +34,7 @@ public:
     sf::Vector2i direction() const;
     void update( const std::vector<Tile>& tile_vector, std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss );
     void bounce(const Enemy& enemy);
-    void initSound(const Alpha::GameDataRef &_data);
+    void initSound(const Alpha::GameDataRef &data);
 
 //attributi
     int walkingDirection = 2;//0=up, 1=left, 2=down, 3=right
