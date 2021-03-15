@@ -1,6 +1,3 @@
-//
-// Created by matteo on 09/03/21.
-//
 
 #include "WalkingAchievement.h"
 #include <iostream>

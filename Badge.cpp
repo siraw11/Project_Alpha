@@ -54,7 +54,7 @@ void Badge::setText() {
             break;
         }
         case BadgeType::killer:{
-            text.setString("Killer : \n5 kills");
+            text.setString("  Killer : \n  5 kills");
             break;
         }
     }

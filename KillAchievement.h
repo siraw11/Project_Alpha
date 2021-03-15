@@ -1,7 +1,4 @@
-//
-//
-// Created by matteo on 10/03/21.
-//
+
 
 #ifndef PROJECT_ALPHA_KILLACHIEVEMENT_H
 #define PROJECT_ALPHA_KILLACHIEVEMENT_H

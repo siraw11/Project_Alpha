@@ -1,6 +1,4 @@
-//
-// Created by matteo on 09/03/21.
-//
+
 
 #ifndef PROJECT_ALPHA_OBSERVER_H
 #define PROJECT_ALPHA_OBSERVER_H

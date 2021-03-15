@@ -1,8 +1,6 @@
-//
-// Created by matteo on 10/03/21.
-//
 
-#include <iostream>
+
+
 #include "KillAchievement.h"
 KillAchievement::KillAchievement(Hero *hero, Badge* badge) : subject(hero), badge(badge) {
 
