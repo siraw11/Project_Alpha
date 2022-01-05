@@ -50,29 +50,39 @@ TEST(Hero,enemyCollision){
     ASSERT_TRUE(Collision::enemyCollision(hero,enemy_vector,1,0));
 }
 
-TEST(Projectile,enemyCollision){
-    Projectile projectile(PlayerType::ARCHER);
-    projectile.setPosition(300,300);
-    Enemy *enemy = new Enemy (1,1,10);
-    enemy->setPosition(350,300);
-    ASSERT_TRUE(Collision::projectileCollisionEnemy(&projectile,*enemy,1,0));
-
-}
-
 TEST(Projectile, wallCollision){
     Projectile projectile(PlayerType::ARCHER);
     projectile.setPosition(300,300);
     Tile tile(0);
-    sf::Vector2f position(412, 300);
-    tile.setPosition(position);
+    tile.init(412,300);
     std::vector<Tile> tile_vector;
     tile_vector.push_back(tile);
 
     ASSERT_FALSE(Collision::projectileCollision(&projectile,tile_vector,1,0));
-
+projectile.setPosition(300,300);
     Tile tile1(1);
-    tile1.init(350,300);
+    tile1.init(600,300);
     tile_vector.push_back(tile1);
+
+    while(!Collision::projectileCollision(&projectile,tile_vector,1,0)){
+
+        projectile.move(projectile.projectile_speed,0);
+    }
     ASSERT_TRUE(Collision::projectileCollision(&projectile,tile_vector,1,0));
 
+}
+
+
+TEST(Projectile,enemyCollision){
+    Projectile projectile(PlayerType::ARCHER);
+    projectile.setPosition(300, 300);
+    Enemy *enemy = new Enemy(5, 1, 10);
+    enemy->setPosition(500, 300);
+    while (!Collision::projectileCollisionEnemy(&projectile, *enemy, 1, 0)){
+
+        projectile.move(projectile.projectile_speed,0);
+
+    }
+
+    ASSERT_TRUE(Collision::projectileCollisionEnemy(&projectile, *enemy, 1, 0));
 }

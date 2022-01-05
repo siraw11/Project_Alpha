@@ -20,12 +20,12 @@ public:
 
 //functions
     void movement(const std::vector<Tile>& tile_vector, Hero &hero, const std::vector<Chest>& chest_vector)override;
-    void update(std::unique_ptr<Hero>& hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector);
+    void update(Hero& hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector);
     void attack(const Hero& hero);
     void aggro(sf::Vector2f d)override;
     sf::Vector2f distance(const Hero& hero);
     void deathAnimation()override;
-    void initSound(const Alpha::GameDataRef &_data) override;
+    void initSound(const Alpha::GameDataRef &data) override;
 
 //attributes
     std::vector<Projectile> projectile_vector;

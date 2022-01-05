@@ -297,6 +297,33 @@ Archer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Archer.cpp.s
 .PHONY : Archer.cpp.s
 
+Badge.o: Badge.cpp.o
+
+.PHONY : Badge.o
+
+# target to build an object file
+Badge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o
+.PHONY : Badge.cpp.o
+
+Badge.i: Badge.cpp.i
+
+.PHONY : Badge.i
+
+# target to preprocess a source file
+Badge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.i
+.PHONY : Badge.cpp.i
+
+Badge.s: Badge.cpp.s
+
+.PHONY : Badge.s
+
+# target to generate assembly for a file
+Badge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.s
+.PHONY : Badge.cpp.s
+
 Boss.o: Boss.cpp.o
 
 .PHONY : Boss.o
@@ -867,6 +894,33 @@ Item.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
+KillAchievement.o: KillAchievement.cpp.o
+
+.PHONY : KillAchievement.o
+
+# target to build an object file
+KillAchievement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o
+.PHONY : KillAchievement.cpp.o
+
+KillAchievement.i: KillAchievement.cpp.i
+
+.PHONY : KillAchievement.i
+
+# target to preprocess a source file
+KillAchievement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.i
+.PHONY : KillAchievement.cpp.i
+
+KillAchievement.s: KillAchievement.cpp.s
+
+.PHONY : KillAchievement.s
+
+# target to generate assembly for a file
+KillAchievement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.s
+.PHONY : KillAchievement.cpp.s
+
 Knight.o: Knight.cpp.o
 
 .PHONY : Knight.o
@@ -1047,6 +1101,33 @@ Tile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/Tile.cpp.s
 .PHONY : Tile.cpp.s
 
+WalkingAchievement.o: WalkingAchievement.cpp.o
+
+.PHONY : WalkingAchievement.o
+
+# target to build an object file
+WalkingAchievement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o
+.PHONY : WalkingAchievement.cpp.o
+
+WalkingAchievement.i: WalkingAchievement.cpp.i
+
+.PHONY : WalkingAchievement.i
+
+# target to preprocess a source file
+WalkingAchievement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.i
+.PHONY : WalkingAchievement.cpp.i
+
+WalkingAchievement.s: WalkingAchievement.cpp.s
+
+.PHONY : WalkingAchievement.s
+
+# target to generate assembly for a file
+WalkingAchievement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_Alpha_ROOT.dir/build.make CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.s
+.PHONY : WalkingAchievement.cpp.s
+
 Weapon.o: Weapon.cpp.o
 
 .PHONY : Weapon.o
@@ -1156,6 +1237,9 @@ help:
 	@echo "... Archer.o"
 	@echo "... Archer.i"
 	@echo "... Archer.s"
+	@echo "... Badge.o"
+	@echo "... Badge.i"
+	@echo "... Badge.s"
 	@echo "... Boss.o"
 	@echo "... Boss.i"
 	@echo "... Boss.s"
@@ -1213,6 +1297,9 @@ help:
 	@echo "... Item.o"
 	@echo "... Item.i"
 	@echo "... Item.s"
+	@echo "... KillAchievement.o"
+	@echo "... KillAchievement.i"
+	@echo "... KillAchievement.s"
 	@echo "... Knight.o"
 	@echo "... Knight.i"
 	@echo "... Knight.s"
@@ -1231,6 +1318,9 @@ help:
 	@echo "... Tile.o"
 	@echo "... Tile.i"
 	@echo "... Tile.s"
+	@echo "... WalkingAchievement.o"
+	@echo "... WalkingAchievement.i"
+	@echo "... WalkingAchievement.s"
 	@echo "... Weapon.o"
 	@echo "... Weapon.i"
 	@echo "... Weapon.s"

@@ -454,6 +454,45 @@ CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waris/CLionProjects/Project_Alpha/GameStates/GameWinState.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.s
 
+CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o: ../WalkingAchievement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o -c /home/waris/CLionProjects/Project_Alpha/WalkingAchievement.cpp
+
+CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waris/CLionProjects/Project_Alpha/WalkingAchievement.cpp > CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.i
+
+CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waris/CLionProjects/Project_Alpha/WalkingAchievement.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.s
+
+CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o: ../Badge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o -c /home/waris/CLionProjects/Project_Alpha/Badge.cpp
+
+CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waris/CLionProjects/Project_Alpha/Badge.cpp > CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.i
+
+CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waris/CLionProjects/Project_Alpha/Badge.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.s
+
+CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o: CMakeFiles/Project_Alpha_ROOT.dir/flags.make
+CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o: ../KillAchievement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o -c /home/waris/CLionProjects/Project_Alpha/KillAchievement.cpp
+
+CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/waris/CLionProjects/Project_Alpha/KillAchievement.cpp > CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.i
+
+CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/waris/CLionProjects/Project_Alpha/KillAchievement.cpp -o CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.s
+
 # Object files for target Project_Alpha_ROOT
 Project_Alpha_ROOT_OBJECTS = \
 "CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o" \
@@ -484,7 +523,10 @@ Project_Alpha_ROOT_OBJECTS = \
 "CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o" \
 "CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o" \
-"CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o"
+"CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o" \
+"CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o" \
+"CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o" \
+"CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o"
 
 # External object files for target Project_Alpha_ROOT
 Project_Alpha_ROOT_EXTERNAL_OBJECTS =
@@ -518,6 +560,9 @@ Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Chest.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/GameStates/GameWinState.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o
+Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/build.make
 Project_Alpha_ROOT: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 Project_Alpha_ROOT: /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1
@@ -525,7 +570,7 @@ Project_Alpha_ROOT: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 Project_Alpha_ROOT: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
 Project_Alpha_ROOT: libcore.a
 Project_Alpha_ROOT: CMakeFiles/Project_Alpha_ROOT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable Project_Alpha_ROOT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable Project_Alpha_ROOT"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_Alpha_ROOT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

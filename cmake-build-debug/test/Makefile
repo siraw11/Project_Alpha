@@ -272,6 +272,33 @@ HeroTest.cpp.s:
 	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/HeroTest.cpp.s
 .PHONY : HeroTest.cpp.s
 
+ItemTest.o: ItemTest.cpp.o
+
+.PHONY : ItemTest.o
+
+# target to build an object file
+ItemTest.cpp.o:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/ItemTest.cpp.o
+.PHONY : ItemTest.cpp.o
+
+ItemTest.i: ItemTest.cpp.i
+
+.PHONY : ItemTest.i
+
+# target to preprocess a source file
+ItemTest.cpp.i:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/ItemTest.cpp.i
+.PHONY : ItemTest.cpp.i
+
+ItemTest.s: ItemTest.cpp.s
+
+.PHONY : ItemTest.s
+
+# target to generate assembly for a file
+ItemTest.cpp.s:
+	cd /home/waris/CLionProjects/Project_Alpha/cmake-build-debug && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Game_test.dir/build.make test/CMakeFiles/Game_test.dir/ItemTest.cpp.s
+.PHONY : ItemTest.cpp.s
+
 RunAllTest.o: RunAllTest.cpp.o
 
 .PHONY : RunAllTest.o
@@ -321,6 +348,9 @@ help:
 	@echo "... HeroTest.o"
 	@echo "... HeroTest.i"
 	@echo "... HeroTest.s"
+	@echo "... ItemTest.o"
+	@echo "... ItemTest.i"
+	@echo "... ItemTest.s"
 	@echo "... RunAllTest.o"
 	@echo "... RunAllTest.i"
 	@echo "... RunAllTest.s"

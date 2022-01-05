@@ -9,7 +9,7 @@
 #include "Collision.h"
 #include <cmath>
 #include "GameStates/MainMenuState.hpp"
-#include "GameStates/SelectClassState.h"
+
 
 //constructor
 Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
@@ -27,15 +27,15 @@ Hero::Hero(int hp, int s, int sp, int a, int ar, int m):GameCharacter(hp,s,sp){
 //destructor
 Hero::~Hero()= default;
 
-void Hero::initSound(const Alpha::GameDataRef &_data) {
+void Hero::initSound(const Alpha::GameDataRef &data) {
 
-    arrowSound.setBuffer(_data->assets.GetSound("Arrow"));
-    swordSound.setBuffer(_data->assets.GetSound("Sword"));
-    fireSound.setBuffer(_data->assets.GetSound("Fireball"));
-    femaleHitSound.setBuffer(_data->assets.GetSound("FemaleHit"));
-    maleHitSound.setBuffer(_data->assets.GetSound("ManHit"));
-    owSound.setBuffer(_data->assets.GetSound("Ow"));
-    scream.setBuffer(_data->assets.GetSound("Scream"));
+    arrowSound.setBuffer(data->assets.GetSound("Arrow"));
+    swordSound.setBuffer(data->assets.GetSound("Sword"));
+    fireSound.setBuffer(data->assets.GetSound("Fireball"));
+    femaleHitSound.setBuffer(data->assets.GetSound("FemaleHit"));
+    maleHitSound.setBuffer(data->assets.GetSound("ManHit"));
+    owSound.setBuffer(data->assets.GetSound("Ow"));
+    scream.setBuffer(data->assets.GetSound("Scream"));
 
 
 }
@@ -43,7 +43,7 @@ void Hero::initSound(const Alpha::GameDataRef &_data) {
 //functions
 void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector<Enemy>& enemy_vector, const std::vector<Chest>& chest_vector ) {
 
-    sf::Vector2f movement(direction().x*speed,direction().y*speed);
+     movement = sf::Vector2f (direction().x*speed,direction().y*speed);
     bool collided = false;
 
     if(this->getLife()<=0){
@@ -77,6 +77,10 @@ void Hero::heroMovement( const std::vector<Tile>& tile_vector, const std::vector
 }
 
 void Hero::walkingAnimation() {
+    if((counterWalking+1)%3 == 0){
+        counterStep++;
+    }
+
     if(counterWalking != 8){
 
         setTextureRect(sf::IntRect(64*counterWalking,64*walkingDirection,64,64));
@@ -222,7 +226,11 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
     if(this->hit) {
 
         if (boss->heroHitted) {//boss projectile hit the hero
-            this->takeDamage(boss->getStrength());
+            if (this->playerType == PlayerType::KNIGHT && this->getArmor() > 0) {
+                this->setArmor(this->getArmor() - boss->getStrength());
+            } else {
+                this->takeDamage(boss->getStrength());
+            }
             boss->heroHitted = false;
         } else {
             for (auto &i: enemy_vector) {//enemy hit the hero
@@ -278,7 +286,7 @@ void Hero::update( const std::vector<Tile>& tile_vector,  std::vector<Enemy>& en
     }
 
 
-
+ notify();
 }
 
 void Hero::bounce(const Enemy& enemy) {
@@ -290,6 +298,30 @@ void Hero::bounce(const Enemy& enemy) {
     if(!this->dead)
         this->move(sf::Vector2f(30*(d.x),30*(d.y)));
 }
+
+void Hero::subscribe(Observer *o) {
+    observers.push_back(o);
+
+}
+
+void Hero::unsubscribe(Observer *o) {
+    observers.remove(o);
+}
+void Hero::notify() {
+
+    auto itr = observers.begin();
+    while (itr != observers.end()) {
+        if (!observers.empty() && !(*itr)->done) {
+            (*itr)->update();
+            itr++;
+        } else {
+
+            (*itr)->detach();
+            itr = observers.begin();
+        }
+    }
+}
+
 
 //getters
 Weapon *Hero::getWeapon() const {

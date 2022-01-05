@@ -16,11 +16,14 @@ CMakeFiles/core.dir/Archer.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Boss.cpp.o
+ /home/waris/CLionProjects/Project_Alpha/Badge.h
  /home/waris/CLionProjects/Project_Alpha/Boss.cpp
  /home/waris/CLionProjects/Project_Alpha/Boss.h
  /home/waris/CLionProjects/Project_Alpha/Camera.h
@@ -38,11 +41,15 @@ CMakeFiles/core.dir/Boss.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Hud.h
+ /home/waris/CLionProjects/Project_Alpha/KillAchievement.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
  /home/waris/CLionProjects/Project_Alpha/Random.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
+ /home/waris/CLionProjects/Project_Alpha/WalkingAchievement.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
  /home/waris/CLionProjects/Project_Alpha/map.h
 CMakeFiles/core.dir/Camera.cpp.o
@@ -60,8 +67,10 @@ CMakeFiles/core.dir/Camera.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o
@@ -82,8 +91,10 @@ CMakeFiles/core.dir/CharacterFactory.cpp.o
  /home/waris/CLionProjects/Project_Alpha/Knight.h
  /home/waris/CLionProjects/Project_Alpha/Mage.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Chest.cpp.o
@@ -114,8 +125,10 @@ CMakeFiles/core.dir/Collision.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Enemy.cpp.o
@@ -133,9 +146,11 @@ CMakeFiles/core.dir/Enemy.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
  /home/waris/CLionProjects/Project_Alpha/Random.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/GameCharacter.cpp.o
@@ -174,6 +189,7 @@ CMakeFiles/core.dir/GameStates/GameOverState.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
 CMakeFiles/core.dir/GameStates/GameState.cpp.o
+ /home/waris/CLionProjects/Project_Alpha/Badge.h
  /home/waris/CLionProjects/Project_Alpha/Boss.h
  /home/waris/CLionProjects/Project_Alpha/Camera.h
  /home/waris/CLionProjects/Project_Alpha/Chest.h
@@ -192,10 +208,14 @@ CMakeFiles/core.dir/GameStates/GameState.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Hud.h
+ /home/waris/CLionProjects/Project_Alpha/KillAchievement.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
+ /home/waris/CLionProjects/Project_Alpha/WalkingAchievement.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
  /home/waris/CLionProjects/Project_Alpha/map.h
 CMakeFiles/core.dir/GameStates/GameWinState.cpp.o
@@ -220,6 +240,7 @@ CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o
+ /home/waris/CLionProjects/Project_Alpha/Badge.h
  /home/waris/CLionProjects/Project_Alpha/Boss.h
  /home/waris/CLionProjects/Project_Alpha/Camera.h
  /home/waris/CLionProjects/Project_Alpha/CharacterFactory.h
@@ -238,10 +259,14 @@ CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Hud.h
+ /home/waris/CLionProjects/Project_Alpha/KillAchievement.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
+ /home/waris/CLionProjects/Project_Alpha/WalkingAchievement.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
  /home/waris/CLionProjects/Project_Alpha/map.h
 CMakeFiles/core.dir/GameStates/StateMachine.cpp.o
@@ -259,14 +284,15 @@ CMakeFiles/core.dir/Hero.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
  /home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
  /home/waris/CLionProjects/Project_Alpha/GameStates/MainMenuState.hpp
- /home/waris/CLionProjects/Project_Alpha/GameStates/SelectClassState.h
  /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.cpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Hud.cpp.o
@@ -284,8 +310,10 @@ CMakeFiles/core.dir/Hud.cpp.o
  /home/waris/CLionProjects/Project_Alpha/Hud.cpp
  /home/waris/CLionProjects/Project_Alpha/Hud.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Item.cpp.o
@@ -303,8 +331,10 @@ CMakeFiles/core.dir/Item.cpp.o
  /home/waris/CLionProjects/Project_Alpha/Item.cpp
  /home/waris/CLionProjects/Project_Alpha/Item.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Knight.cpp.o
@@ -322,8 +352,10 @@ CMakeFiles/core.dir/Knight.cpp.o
  /home/waris/CLionProjects/Project_Alpha/Knight.cpp
  /home/waris/CLionProjects/Project_Alpha/Knight.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Mage.cpp.o
@@ -341,8 +373,10 @@ CMakeFiles/core.dir/Mage.cpp.o
  /home/waris/CLionProjects/Project_Alpha/Mage.cpp
  /home/waris/CLionProjects/Project_Alpha/Mage.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Object.cpp.o
@@ -363,9 +397,11 @@ CMakeFiles/core.dir/Projectile.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.cpp
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
 CMakeFiles/core.dir/Random.cpp.o
@@ -390,8 +426,10 @@ CMakeFiles/core.dir/Weapon.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.cpp
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
@@ -408,9 +446,11 @@ CMakeFiles/core.dir/map.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
  /home/waris/CLionProjects/Project_Alpha/Random.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
  /home/waris/CLionProjects/Project_Alpha/map.cpp

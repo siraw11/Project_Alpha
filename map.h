@@ -31,16 +31,16 @@ public:
     std::vector<Chest> chest_vector;
 
     //funzioni
-    void initSound(const Alpha::GameDataRef& _data);
+    void initSound(const Alpha::GameDataRef& data);
 
 
 //draw oggetti
-    void drawTile(const Alpha::GameDataRef& _data);
+    void drawTile(const Alpha::GameDataRef& data);
     void setTexture();
-    void drawEnemy(const Alpha::GameDataRef& _data);
-    void drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef& _data);
-    void drawChest( const Alpha::GameDataRef& _data);
-    void update(std::unique_ptr<Hero>& hero, std::unique_ptr<Boss>& boss);// update level events
+    void drawEnemy(const Alpha::GameDataRef& data);
+    void drawProjectile(const std::vector<Projectile>& projectile_vector, const Alpha::GameDataRef& data);
+    void drawChest( const Alpha::GameDataRef& data);
+    void update(Hero& hero, std::unique_ptr<Boss>& boss);// update level events
 
 private:
 //attributes

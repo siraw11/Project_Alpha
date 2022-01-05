@@ -8,16 +8,16 @@
 #include "sstream"
 
 
-Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
-    _data->assets.LoadFont("font",FONT);
+Hud::Hud(Hero* hero, const Alpha::GameDataRef &data) {
+    data->assets.LoadFont("font",FONT);
 
      //life
-    this->_heart.setTexture(_data->assets.GetTexture("Heart"));
+    this->_heart.setTexture(data->assets.GetTexture("Heart"));
     this->_heart.setScale(3, 3);
     _heart.setPosition(hero->getPosition().x - 25, hero->getPosition().y - 30);
     std::ostringstream oss;
     oss << hero->getLife();
-    this->life.setFont(_data->assets.GetFont("font"));
+    this->life.setFont(data->assets.GetFont("font"));
     this->life.setString(oss.str());
     this->life.setFillColor(sf::Color::White);
     this->life.setPosition(hero->getPosition().x + 25, hero->getPosition().y - 30);
@@ -27,13 +27,13 @@ Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
     switch (hero->playerType) {
         case PlayerType::ARCHER : {
             //Arrow
-            this->_arrow_1.setTexture(_data->assets.GetTexture("Arrow"));
+            this->_arrow_1.setTexture(data->assets.GetTexture("Arrow"));
             this->_arrow_1.setScale(3, 3);
             _arrow_1.setPosition(hero->getPosition().x + 55, hero->getPosition().y - 30);
 
             std::ostringstream iss;
             iss << hero->getArrow();
-            this->arrow.setFont(_data->assets.GetFont("font"));
+            this->arrow.setFont(data->assets.GetFont("font"));
             this->arrow.setString(iss.str());
             this->arrow.setFillColor(sf::Color::White);
             this->arrow.setPosition(hero->getPosition().x + 110, hero->getPosition().y - 30);
@@ -44,13 +44,13 @@ Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
         case  PlayerType::MAGE:
         {
             //Mana
-            this->_mana.setTexture(_data->assets.GetTexture("Mana"));
+            this->_mana.setTexture(data->assets.GetTexture("Mana"));
             this->_mana.setScale(3, 3);
             _mana.setPosition(hero->getPosition().x + 55, hero->getPosition().y - 30);
 
             std::ostringstream ess;
             ess << hero->getMana();
-            this->mana.setFont(_data->assets.GetFont("font"));
+            this->mana.setFont(data->assets.GetFont("font"));
             this->mana.setString(ess.str());
             this->mana.setFillColor(sf::Color::White);
             this->mana.setPosition(hero->getPosition().x + 110, hero->getPosition().y - 30);
@@ -59,13 +59,13 @@ Hud::Hud(const std::unique_ptr<Hero>& hero, const Alpha::GameDataRef &_data) {
 
         case PlayerType::KNIGHT : {
             //Armor
-            this->_armor.setTexture(_data->assets.GetTexture("Armor"));
+            this->_armor.setTexture(data->assets.GetTexture("Armor"));
             this->_armor.setScale(2.7, 2.7);
             _armor.setPosition(hero->getPosition().x + 55, hero->getPosition().y - 30);
 
             std::ostringstream ass;
             ass << hero->getArmor();
-            this->armor.setFont(_data->assets.GetFont("font"));
+            this->armor.setFont(data->assets.GetFont("font"));
             this->armor.setString(ass.str());
             this->armor.setFillColor(sf::Color::White);
             this->armor.setPosition(hero->getPosition().x + 110, hero->getPosition().y - 30);
@@ -112,16 +112,16 @@ switch(hero.playerType){
 
 }
 
-void Hud::draw(const Alpha::GameDataRef &_data) {
+void Hud::draw(const Alpha::GameDataRef &data) {
 
-    _data->window.draw(_heart);
-    _data->window.draw(_arrow_1);
-    _data->window.draw(_mana);
-    _data->window.draw(_armor);
-    _data->window.draw(life);
-    _data->window.draw(arrow);
-    _data->window.draw(mana);
-    _data->window.draw(armor);
+    data->window.draw(_heart);
+    data->window.draw(_arrow_1);
+    data->window.draw(_mana);
+    data->window.draw(_armor);
+    data->window.draw(life);
+    data->window.draw(arrow);
+    data->window.draw(mana);
+    data->window.draw(armor);
 
 }
 

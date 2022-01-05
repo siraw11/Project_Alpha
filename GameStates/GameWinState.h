@@ -19,7 +19,7 @@ namespace Alpha
         void Draw() override;
 
     private:
-        GameDataRef _data;
+        GameDataRef data;
 
         sf::Sprite _background;
         sf::Sprite _retryButton;

@@ -7,9 +7,9 @@
 #include "GameWinState.h"
 
 
-namespace Alpha {
-    GameState::GameState(GameDataRef data,Hero* hero) : _data(std::move(data)), hero(hero) {
 
+namespace Alpha {
+    GameState::GameState(GameDataRef data,Hero* hero) : data(std::move(data)), hero(hero) {
 
     }
 
@@ -18,28 +18,33 @@ namespace Alpha {
         gameStatus = GameStatus::isPlaying;
         //map sprite
         level.setTexture();
-        level.initSound(_data);
-        hero->initSound(_data);
-        boss->initSound(_data);
-        background.setBuffer(this->_data->assets.GetSound("Background"));
+        level.initSound(data);
+        hero->initSound(data);
+        boss->initSound(data);
+        background.setBuffer(this->data->assets.GetSound("Background"));
 
         //View variable
-        this->_data->window.setFramerateLimit(60);
+        this->data->window.setFramerateLimit(60);
         background.play();
         background.setLoop(true);
+
+        killAchievement = new KillAchievement(hero, &badge);
+        walkingAchievement = new WalkingAchievement(hero, &badge);
+
+        badge.init(data);
     }
 
     void GameState::HandleInput() {
 
         sf::Event event{};
 
-        while (this->_data->window.pollEvent(event)) {
+        while (this->data->window.pollEvent(event)) {
             if (sf::Event::Closed == event.type) {
-                this->_data->window.close();
+                this->data->window.close();
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
-                this->_data->machine.AddState(StateRef(new GameOverState(_data)),true);
-                std::cout << "rimpiazza game state" << std::endl;
+                this->data->machine.AddState(StateRef(new GameOverState(data)),true);
+               ;
             }
         }
     }
@@ -71,10 +76,13 @@ namespace Alpha {
 
             srand(time(nullptr));
             //update level events
-            level.update(this->hero, this->boss);
+
+            level.update(*this->hero, this->boss);
             //Hud update
             hud->update(*hero);
-            camera.update(*hero, _data);
+            camera.update(*hero, data);
+            badge.update(data, camera);
+
 
             //Game Over
             if (hero->dead) {
@@ -88,14 +96,14 @@ namespace Alpha {
         }
         //Switch to GameOverState
         if (gameStatus == GameStatus::isGameOver){
-            this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-            camera.resetCamera(_data);
+            this->data->machine.AddState(StateRef(new GameOverState(data)), true);
+            camera.resetCamera(data);
             background.pause();
         }
         //Switch to GameWinState
         if(gameStatus == GameStatus::isWin){
-            this->_data->machine.AddState(StateRef(new GameWinState(_data)), true);
-            camera.resetCamera(_data);
+            this->data->machine.AddState(StateRef(new GameWinState(data)), true);
+            camera.resetCamera(data);
             background.pause();
         }
 
@@ -105,14 +113,15 @@ namespace Alpha {
     void GameState::Draw() {
 
 
-        level.drawTile(_data);
-        level.drawEnemy(_data);
-        level.drawChest(_data);
-        this->_data->window.draw(*hero);
-        this->_data->window.draw(*boss);
-        hud->draw(_data);
-        level.drawProjectile(hero->projectile_vector,_data);
-        level.drawProjectile(boss->projectile_vector,_data);
+        level.drawTile(data);
+        level.drawEnemy(data);
+        level.drawChest(data);
+        this->data->window.draw(*hero);
+        this->data->window.draw(*boss);
+        hud->draw(data);
+        badge.drawBadge(data);
+        level.drawProjectile(hero->projectile_vector,data);
+        level.drawProjectile(boss->projectile_vector,data);
 
     }
 

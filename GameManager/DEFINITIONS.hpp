@@ -38,6 +38,8 @@
 
 #define ARROW_UI "./Resources/Sprites/item/arrow_1.png"
 
+#define TROPHY_FILEPATH "./Resources/Sprites/item/trophy.png"
+
 #define ARROW_SOUND "./Resources/Sound/arrow-whoosh.wav"
 
 #define CHEST_OPENING "./Resources/Sound/Chest_Opening.wav"
@@ -65,6 +67,7 @@
 #define YOU_WIN_SOUND "./Resources/Sound/you-win.wav"
 
 #define BACKGROUND_SOUND "./Resources/Sound/outlast.wav"
+
 
 const int SCALE=3;
 
@@ -110,10 +113,36 @@ const int  CHEST_SIZE = 32;
 
 const int CHEST_SCALE = 3;
 
+const int BADGE_WIDTH = 120;
+
+const int BADGE_SCALE = 3;
+
+const int TEXT_BADGE_WIDTH = 180;
+
+const int TEXT_BADGE_HEIGHT = 20;
+
+const float TEXT_SCALE = 1.5;
+
+const int TEXT_POSX = 3830;
+
+const int TROPHY_TEXTURE_SCALEX = 2;
+
+const int TROPHY_TEXTURE_SCALEY = 2;
+
+const float TROPHY_SCALE = 3.5;
+
+
+const int TROPHY_POSY = 20;
+
+const int TROPHY_POSX = 3775;
+
 enum GameStatus{
     isPlaying, isGameOver, isWin
 };
 
+enum class BadgeType{
+    walker, killer
+};
 
 
 

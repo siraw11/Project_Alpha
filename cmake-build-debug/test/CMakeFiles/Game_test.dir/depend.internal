@@ -36,11 +36,139 @@ test/CMakeFiles/Game_test.dir/CollisionTest.cpp.o
  /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
  /home/waris/CLionProjects/Project_Alpha/Hero.h
  /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
  /home/waris/CLionProjects/Project_Alpha/PlayerType.h
  /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
  /home/waris/CLionProjects/Project_Alpha/Tile.h
  /home/waris/CLionProjects/Project_Alpha/Weapon.h
  /home/waris/CLionProjects/Project_Alpha/test/CollisionTest.cpp
+test/CMakeFiles/Game_test.dir/EnemyTest.cpp.o
+ ../test/lib/googletest/include/gtest/gtest-death-test.h
+ ../test/lib/googletest/include/gtest/gtest-matchers.h
+ ../test/lib/googletest/include/gtest/gtest-message.h
+ ../test/lib/googletest/include/gtest/gtest-param-test.h
+ ../test/lib/googletest/include/gtest/gtest-printers.h
+ ../test/lib/googletest/include/gtest/gtest-test-part.h
+ ../test/lib/googletest/include/gtest/gtest-typed-test.h
+ ../test/lib/googletest/include/gtest/gtest.h
+ ../test/lib/googletest/include/gtest/gtest_pred_impl.h
+ ../test/lib/googletest/include/gtest/gtest_prod.h
+ ../test/lib/googletest/include/gtest/internal/custom/gtest-port.h
+ ../test/lib/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../test/lib/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../test/lib/googletest/include/gtest/internal/gtest-filepath.h
+ ../test/lib/googletest/include/gtest/internal/gtest-internal.h
+ ../test/lib/googletest/include/gtest/internal/gtest-param-util.h
+ ../test/lib/googletest/include/gtest/internal/gtest-port-arch.h
+ ../test/lib/googletest/include/gtest/internal/gtest-port.h
+ ../test/lib/googletest/include/gtest/internal/gtest-string.h
+ ../test/lib/googletest/include/gtest/internal/gtest-type-util.h
+ /home/waris/CLionProjects/Project_Alpha/Boss.h
+ /home/waris/CLionProjects/Project_Alpha/Chest.h
+ /home/waris/CLionProjects/Project_Alpha/Collision.h
+ /home/waris/CLionProjects/Project_Alpha/Enemy.h
+ /home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
+ /home/waris/CLionProjects/Project_Alpha/Hero.h
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
+ /home/waris/CLionProjects/Project_Alpha/PlayerType.h
+ /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+ /home/waris/CLionProjects/Project_Alpha/Weapon.h
+ /home/waris/CLionProjects/Project_Alpha/test/EnemyTest.cpp
+test/CMakeFiles/Game_test.dir/HeroTest.cpp.o
+ ../test/lib/googletest/include/gtest/gtest-death-test.h
+ ../test/lib/googletest/include/gtest/gtest-matchers.h
+ ../test/lib/googletest/include/gtest/gtest-message.h
+ ../test/lib/googletest/include/gtest/gtest-param-test.h
+ ../test/lib/googletest/include/gtest/gtest-printers.h
+ ../test/lib/googletest/include/gtest/gtest-test-part.h
+ ../test/lib/googletest/include/gtest/gtest-typed-test.h
+ ../test/lib/googletest/include/gtest/gtest.h
+ ../test/lib/googletest/include/gtest/gtest_pred_impl.h
+ ../test/lib/googletest/include/gtest/gtest_prod.h
+ ../test/lib/googletest/include/gtest/internal/custom/gtest-port.h
+ ../test/lib/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../test/lib/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../test/lib/googletest/include/gtest/internal/gtest-filepath.h
+ ../test/lib/googletest/include/gtest/internal/gtest-internal.h
+ ../test/lib/googletest/include/gtest/internal/gtest-param-util.h
+ ../test/lib/googletest/include/gtest/internal/gtest-port-arch.h
+ ../test/lib/googletest/include/gtest/internal/gtest-port.h
+ ../test/lib/googletest/include/gtest/internal/gtest-string.h
+ ../test/lib/googletest/include/gtest/internal/gtest-type-util.h
+ /home/waris/CLionProjects/Project_Alpha/Archer.h
+ /home/waris/CLionProjects/Project_Alpha/Boss.h
+ /home/waris/CLionProjects/Project_Alpha/Chest.h
+ /home/waris/CLionProjects/Project_Alpha/Collision.h
+ /home/waris/CLionProjects/Project_Alpha/Enemy.h
+ /home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
+ /home/waris/CLionProjects/Project_Alpha/Hero.h
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
+ /home/waris/CLionProjects/Project_Alpha/PlayerType.h
+ /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+ /home/waris/CLionProjects/Project_Alpha/Weapon.h
+ /home/waris/CLionProjects/Project_Alpha/test/HeroTest.cpp
+test/CMakeFiles/Game_test.dir/ItemTest.cpp.o
+ ../test/lib/googletest/include/gtest/gtest-death-test.h
+ ../test/lib/googletest/include/gtest/gtest-matchers.h
+ ../test/lib/googletest/include/gtest/gtest-message.h
+ ../test/lib/googletest/include/gtest/gtest-param-test.h
+ ../test/lib/googletest/include/gtest/gtest-printers.h
+ ../test/lib/googletest/include/gtest/gtest-test-part.h
+ ../test/lib/googletest/include/gtest/gtest-typed-test.h
+ ../test/lib/googletest/include/gtest/gtest.h
+ ../test/lib/googletest/include/gtest/gtest_pred_impl.h
+ ../test/lib/googletest/include/gtest/gtest_prod.h
+ ../test/lib/googletest/include/gtest/internal/custom/gtest-port.h
+ ../test/lib/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../test/lib/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../test/lib/googletest/include/gtest/internal/gtest-filepath.h
+ ../test/lib/googletest/include/gtest/internal/gtest-internal.h
+ ../test/lib/googletest/include/gtest/internal/gtest-param-util.h
+ ../test/lib/googletest/include/gtest/internal/gtest-port-arch.h
+ ../test/lib/googletest/include/gtest/internal/gtest-port.h
+ ../test/lib/googletest/include/gtest/internal/gtest-string.h
+ ../test/lib/googletest/include/gtest/internal/gtest-type-util.h
+ /home/waris/CLionProjects/Project_Alpha/Archer.h
+ /home/waris/CLionProjects/Project_Alpha/Boss.h
+ /home/waris/CLionProjects/Project_Alpha/Chest.h
+ /home/waris/CLionProjects/Project_Alpha/Collision.h
+ /home/waris/CLionProjects/Project_Alpha/Enemy.h
+ /home/waris/CLionProjects/Project_Alpha/GameCharacter.h
+ /home/waris/CLionProjects/Project_Alpha/GameManager/AssetManager.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/DEFINITIONS.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/Game.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameManager/InputManager.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/State.hpp
+ /home/waris/CLionProjects/Project_Alpha/GameStates/StateMachine.hpp
+ /home/waris/CLionProjects/Project_Alpha/Hero.h
+ /home/waris/CLionProjects/Project_Alpha/Item.h
+ /home/waris/CLionProjects/Project_Alpha/Object.h
+ /home/waris/CLionProjects/Project_Alpha/Observer.h
+ /home/waris/CLionProjects/Project_Alpha/PlayerType.h
+ /home/waris/CLionProjects/Project_Alpha/Projectile.h
+ /home/waris/CLionProjects/Project_Alpha/Subject.h
+ /home/waris/CLionProjects/Project_Alpha/Tile.h
+ /home/waris/CLionProjects/Project_Alpha/Weapon.h
+ /home/waris/CLionProjects/Project_Alpha/test/ItemTest.cpp
 test/CMakeFiles/Game_test.dir/RunAllTest.cpp.o
  ../test/lib/googletest/include/gtest/gtest-death-test.h
  ../test/lib/googletest/include/gtest/gtest-matchers.h

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/waris/CLionProjects/Project_Alpha/Archer.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Archer.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/Badge.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Badge.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Boss.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Boss.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Camera.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Camera.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/CharacterFactory.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/CharacterFactory.cpp.o"
@@ -24,12 +25,14 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/waris/CLionProjects/Project_Alpha/Hero.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hero.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Hud.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Hud.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Item.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Item.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/KillAchievement.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/KillAchievement.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Knight.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Knight.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Mage.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Mage.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Object.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Object.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Projectile.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Projectile.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Random.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Random.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Tile.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Tile.cpp.o"
+  "/home/waris/CLionProjects/Project_Alpha/WalkingAchievement.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/WalkingAchievement.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/Weapon.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/Weapon.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/main.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/main.cpp.o"
   "/home/waris/CLionProjects/Project_Alpha/map.cpp" "/home/waris/CLionProjects/Project_Alpha/cmake-build-debug/CMakeFiles/Project_Alpha_ROOT.dir/map.cpp.o"

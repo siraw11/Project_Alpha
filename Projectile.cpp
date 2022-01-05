@@ -75,7 +75,7 @@ void Projectile::init() {
     }
 }
 
-bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, std::unique_ptr<Hero>& hero) {
+bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vector<Tile> &tile_vector, Boss& boss, Hero& hero) {
     int x = 0;
     int y = 0;
     switch (direction) {
@@ -109,8 +109,8 @@ bool Projectile::checkCollision(std::vector<Enemy> *enemy_vector, const std::vec
         boss.hit = true;
         collided = true;
 
-    } else if (Collision::projectileCollisionHero(this,*hero,x,y) && this->type == PlayerType::BOSS){
-        hero->hit = true;
+    } else if (Collision::projectileCollisionHero(this, hero, x, y) && this->type == PlayerType::BOSS){
+        hero.hit = true;
         collided = true;
         boss.heroHitted = true;
 

@@ -8,6 +8,7 @@
 #define PROGETTO_PROVA_HERO_H
 
 
+#include <list>
 #include "GameCharacter.h"
 #include "Tile.h"
 #include "Enemy.h"
@@ -15,8 +16,9 @@
 #include "Projectile.h"
 #include "Weapon.h"
 #include "PlayerType.h"
+#include "Subject.h"
 
-class Hero: public GameCharacter {
+class Hero: public GameCharacter , public Subject{
 public:
 //constructor,desctructor
     Hero(int hp, int s,int sp, int a, int ar, int m);
@@ -32,7 +34,7 @@ public:
     sf::Vector2i direction() const;
     void update( const std::vector<Tile>& tile_vector, std::vector<Enemy>& enemy_vector, std::vector<Chest>* chest_vector, std::unique_ptr<Boss>& boss );
     void bounce(const Enemy& enemy);
-    void initSound(const Alpha::GameDataRef &_data);
+    void initSound(const Alpha::GameDataRef &data);
 
 //attributi
     int walkingDirection = 2;//0=up, 1=left, 2=down, 3=right
@@ -44,6 +46,9 @@ public:
     int range = 0;
     bool dead = false;
     bool isMoving = false;
+    int counterStep = 0;
+    int counterKill = 0;
+    sf::Vector2f movement;
 
 //getters
     Weapon *getWeapon() const;
@@ -56,6 +61,12 @@ public:
     void setArmor(int armor);
     void setArrow(int arrow);
     void setMana(int mana);
+
+//Subject functions
+    void subscribe(Observer *o) override;
+    void unsubscribe(Observer *o) override;
+    void notify() override;
+
 
 
 protected:
@@ -76,6 +87,7 @@ protected:
 private:
 //attributes
     int counterWalking = 0;
+    std::list<Observer*> observers;
 
 //function
     void walkingAnimation();

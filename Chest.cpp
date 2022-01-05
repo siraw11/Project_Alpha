@@ -168,9 +168,9 @@ void Chest::openingAnimation() {
     setTextureRect(sf::IntRect(0,32*counterOpening,32,32));
 }
 
-void Chest::initSound(const Alpha::GameDataRef &_data) {
+void Chest::initSound(const Alpha::GameDataRef &data) {
 
-    openingSound.setBuffer(_data->assets.GetSound("Chest"));
+    openingSound.setBuffer(data->assets.GetSound("Chest"));
 
 
 }

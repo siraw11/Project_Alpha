@@ -15,11 +15,14 @@ CMakeFiles/core.dir/Archer.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Archer.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Archer.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Archer.cpp.o: ../Object.h
+CMakeFiles/core.dir/Archer.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Archer.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Archer.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Archer.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Archer.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Archer.cpp.o: ../Weapon.h
 
+CMakeFiles/core.dir/Boss.cpp.o: ../Badge.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Boss.cpp
 CMakeFiles/core.dir/Boss.cpp.o: ../Boss.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Camera.h
@@ -37,11 +40,15 @@ CMakeFiles/core.dir/Boss.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Boss.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Boss.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Hud.h
+CMakeFiles/core.dir/Boss.cpp.o: ../KillAchievement.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Object.h
+CMakeFiles/core.dir/Boss.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Boss.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Projectile.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Random.h
+CMakeFiles/core.dir/Boss.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Tile.h
+CMakeFiles/core.dir/Boss.cpp.o: ../WalkingAchievement.h
 CMakeFiles/core.dir/Boss.cpp.o: ../Weapon.h
 CMakeFiles/core.dir/Boss.cpp.o: ../map.h
 
@@ -59,8 +66,10 @@ CMakeFiles/core.dir/Camera.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Camera.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Camera.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Camera.cpp.o: ../Object.h
+CMakeFiles/core.dir/Camera.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Camera.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Camera.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Camera.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Camera.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Camera.cpp.o: ../Weapon.h
 
@@ -81,8 +90,10 @@ CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Hero.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Knight.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Mage.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Object.h
+CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Observer.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Subject.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Tile.h
 CMakeFiles/core.dir/CharacterFactory.cpp.o: ../Weapon.h
 
@@ -113,8 +124,10 @@ CMakeFiles/core.dir/Collision.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Collision.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Collision.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Collision.cpp.o: ../Object.h
+CMakeFiles/core.dir/Collision.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Collision.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Collision.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Collision.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Collision.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Collision.cpp.o: ../Weapon.h
 
@@ -132,9 +145,11 @@ CMakeFiles/core.dir/Enemy.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Enemy.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Enemy.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Enemy.cpp.o: ../Object.h
+CMakeFiles/core.dir/Enemy.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Enemy.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Enemy.cpp.o: ../Projectile.h
 CMakeFiles/core.dir/Enemy.cpp.o: ../Random.h
+CMakeFiles/core.dir/Enemy.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Enemy.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Enemy.cpp.o: ../Weapon.h
 
@@ -173,6 +188,7 @@ CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/SelectClassSta
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/GameOverState.cpp.o: ../GameStates/StateMachine.hpp
 
+CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Badge.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Boss.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Camera.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Chest.h
@@ -191,10 +207,14 @@ CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Hero.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Hud.h
+CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../KillAchievement.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Object.h
+CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Observer.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Subject.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Tile.h
+CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../WalkingAchievement.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../Weapon.h
 CMakeFiles/core.dir/GameStates/GameState.cpp.o: ../map.h
 
@@ -219,6 +239,7 @@ CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/SelectClassSta
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/MainMenuState.cpp.o: ../GameStates/StateMachine.hpp
 
+CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Badge.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Boss.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Camera.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../CharacterFactory.h
@@ -237,10 +258,14 @@ CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Hero.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Hud.h
+CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../KillAchievement.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Object.h
+CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Observer.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Subject.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Tile.h
+CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../WalkingAchievement.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../Weapon.h
 CMakeFiles/core.dir/GameStates/SelectClassState.cpp.o: ../map.h
 
@@ -258,14 +283,15 @@ CMakeFiles/core.dir/Hero.cpp.o: ../GameManager/DEFINITIONS.hpp
 CMakeFiles/core.dir/Hero.cpp.o: ../GameManager/Game.hpp
 CMakeFiles/core.dir/Hero.cpp.o: ../GameManager/InputManager.hpp
 CMakeFiles/core.dir/Hero.cpp.o: ../GameStates/MainMenuState.hpp
-CMakeFiles/core.dir/Hero.cpp.o: ../GameStates/SelectClassState.h
 CMakeFiles/core.dir/Hero.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Hero.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Hero.cpp.o: ../Hero.cpp
 CMakeFiles/core.dir/Hero.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Hero.cpp.o: ../Object.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Hero.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Hero.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Hero.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Hero.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Hero.cpp.o: ../Weapon.h
 
@@ -283,8 +309,10 @@ CMakeFiles/core.dir/Hud.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Hud.cpp.o: ../Hud.cpp
 CMakeFiles/core.dir/Hud.cpp.o: ../Hud.h
 CMakeFiles/core.dir/Hud.cpp.o: ../Object.h
+CMakeFiles/core.dir/Hud.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Hud.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Hud.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Hud.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Hud.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Hud.cpp.o: ../Weapon.h
 
@@ -302,8 +330,10 @@ CMakeFiles/core.dir/Item.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Item.cpp.o: ../Item.cpp
 CMakeFiles/core.dir/Item.cpp.o: ../Item.h
 CMakeFiles/core.dir/Item.cpp.o: ../Object.h
+CMakeFiles/core.dir/Item.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Item.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Item.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Item.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Item.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Item.cpp.o: ../Weapon.h
 
@@ -321,8 +351,10 @@ CMakeFiles/core.dir/Knight.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Knight.cpp.o: ../Knight.cpp
 CMakeFiles/core.dir/Knight.cpp.o: ../Knight.h
 CMakeFiles/core.dir/Knight.cpp.o: ../Object.h
+CMakeFiles/core.dir/Knight.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Knight.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Knight.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Knight.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Knight.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Knight.cpp.o: ../Weapon.h
 
@@ -340,8 +372,10 @@ CMakeFiles/core.dir/Mage.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Mage.cpp.o: ../Mage.cpp
 CMakeFiles/core.dir/Mage.cpp.o: ../Mage.h
 CMakeFiles/core.dir/Mage.cpp.o: ../Object.h
+CMakeFiles/core.dir/Mage.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Mage.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Mage.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Mage.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Mage.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Mage.cpp.o: ../Weapon.h
 
@@ -362,9 +396,11 @@ CMakeFiles/core.dir/Projectile.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Projectile.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Projectile.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Projectile.cpp.o: ../Object.h
+CMakeFiles/core.dir/Projectile.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Projectile.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Projectile.cpp.o: ../Projectile.cpp
 CMakeFiles/core.dir/Projectile.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Projectile.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Projectile.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Projectile.cpp.o: ../Weapon.h
 
@@ -389,8 +425,10 @@ CMakeFiles/core.dir/Weapon.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/Weapon.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/Weapon.cpp.o: ../Hero.h
 CMakeFiles/core.dir/Weapon.cpp.o: ../Object.h
+CMakeFiles/core.dir/Weapon.cpp.o: ../Observer.h
 CMakeFiles/core.dir/Weapon.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/Weapon.cpp.o: ../Projectile.h
+CMakeFiles/core.dir/Weapon.cpp.o: ../Subject.h
 CMakeFiles/core.dir/Weapon.cpp.o: ../Tile.h
 CMakeFiles/core.dir/Weapon.cpp.o: ../Weapon.cpp
 CMakeFiles/core.dir/Weapon.cpp.o: ../Weapon.h
@@ -407,9 +445,11 @@ CMakeFiles/core.dir/map.cpp.o: ../GameStates/State.hpp
 CMakeFiles/core.dir/map.cpp.o: ../GameStates/StateMachine.hpp
 CMakeFiles/core.dir/map.cpp.o: ../Hero.h
 CMakeFiles/core.dir/map.cpp.o: ../Object.h
+CMakeFiles/core.dir/map.cpp.o: ../Observer.h
 CMakeFiles/core.dir/map.cpp.o: ../PlayerType.h
 CMakeFiles/core.dir/map.cpp.o: ../Projectile.h
 CMakeFiles/core.dir/map.cpp.o: ../Random.h
+CMakeFiles/core.dir/map.cpp.o: ../Subject.h
 CMakeFiles/core.dir/map.cpp.o: ../Tile.h
 CMakeFiles/core.dir/map.cpp.o: ../Weapon.h
 CMakeFiles/core.dir/map.cpp.o: ../map.cpp

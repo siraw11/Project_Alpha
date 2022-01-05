@@ -90,16 +90,16 @@ void Boss::movement(const std::vector<Tile> &tile_vector, Hero &hero, const std:
 
 
 
-void Boss::update(std::unique_ptr<Hero>& hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector ) {
-    auto d = hero->getPosition() - this->getPosition();
+void Boss::update(Hero& hero, const std::vector<Tile>& tile_vector, const std::vector<Chest>& chest_vector, std::vector<Enemy>& enemy_vector ) {
+    auto d = hero.getPosition() - this->getPosition();
     float distance = std::sqrt((d.x * d.x) + (d.y * d.y));
 
-    this->movement(tile_vector, *hero, chest_vector);
+    this->movement(tile_vector, hero, chest_vector);
 
     if (distance < 800)
         if (attackRate == 30) {
             if (counterAttack == 11) {
-                this->attack(*hero);
+                this->attack(hero);
                 this->counterAttack = 0;
                 this->attackRate = 0;
             } else {
@@ -128,7 +128,7 @@ void Boss::update(std::unique_ptr<Hero>& hero, const std::vector<Tile>& tile_vec
     //boss damage
     if (this->hit) {
         bone.play();
-        this->takeDamage(hero->damage());
+        this->takeDamage(hero.damage());
         this->hit = false;
     }
         if (this->getLife() <= 0) {
@@ -202,8 +202,8 @@ void Boss::deathAnimation() {
     counterDeath++;
 }
 
-void Boss::initSound(const Alpha::GameDataRef &_data) {
-    bone.setBuffer(_data->assets.GetSound("Bone"));
+void Boss::initSound(const Alpha::GameDataRef &data) {
+    bone.setBuffer(data->assets.GetSound("Bone"));
 }
 
 
